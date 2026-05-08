@@ -10,9 +10,7 @@ export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
-  const isDarkIntroPage = pathname === '/contact' || pathname === '/blog';
   const useTransparentHeader = isHomePage && !scrolled && !isOpen;
-  const useDarkHeader = isDarkIntroPage && !scrolled && !isOpen;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,8 +45,6 @@ export const Header = () => {
   let headerBackgroundClass = 'bg-white border-b border-slate-blue/10 shadow-[0_10px_32px_rgba(10,10,43,0.08)]';
   if (useTransparentHeader) {
     headerBackgroundClass = 'bg-transparent';
-  } else if (useDarkHeader) {
-    headerBackgroundClass = 'bg-dark-bg';
   }
 
   return (
@@ -61,7 +57,7 @@ export const Header = () => {
           <Link
             href="/"
             className={`font-poppins text-2xl font-extrabold tracking-tight transition-all duration-300 hover:tracking-normal ${
-              useTransparentHeader || useDarkHeader ? 'text-white' : 'text-primary-black'
+              useTransparentHeader ? 'text-white' : 'text-primary-black'
             }`}
           >
             Traceability
@@ -75,7 +71,7 @@ export const Header = () => {
                   <button
                     onClick={() => handleNavClick(item.href)}
                     className={`text-sm font-semibold transition-colors hover:text-accent-blue ${
-                      useTransparentHeader || useDarkHeader ? 'text-white' : 'text-primary-black'
+                      useTransparentHeader ? 'text-white' : 'text-primary-black'
                     }`}
                   >
                     {item.label}
@@ -84,7 +80,7 @@ export const Header = () => {
                   <Link
                     href={item.href}
                     className={`text-sm font-semibold transition-colors hover:text-accent-blue ${
-                      useTransparentHeader || useDarkHeader ? 'text-white' : 'text-primary-black'
+                      useTransparentHeader ? 'text-white' : 'text-primary-black'
                     }`}
                   >
                     {item.label}
@@ -98,7 +94,7 @@ export const Header = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              useTransparentHeader || useDarkHeader ? 'text-white' : 'text-primary-black'
+              useTransparentHeader ? 'text-white' : 'text-primary-black'
             }`}
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}

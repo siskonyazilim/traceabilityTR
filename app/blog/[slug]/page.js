@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Container from '../../../components/ui/Container';
 import BlogCard from '../../../components/ui/BlogCard';
 import Button from '../../../components/ui/Button';
 import { blogPosts } from '../../../data/blogPosts';
 import { FiArrowLeft, FiTwitter, FiLinkedin, FiFacebook } from 'react-icons/fi';
+/* eslint-disable react/prop-types */
 
 export default function BlogDetailPage({ params }) {
   const { slug } = params;
@@ -94,10 +96,14 @@ export default function BlogDetailPage({ params }) {
 
           {/* Feature Image */}
           <div className="w-full h-96 bg-gradient-to-br from-accent-blue to-accent-green rounded-2xl flex items-center justify-center mb-8 text-white text-6xl overflow-hidden relative">
-            <img
+            <Image
               src={post.image}
               alt={post.title}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              quality={82}
+              priority
             />
           </div>
 

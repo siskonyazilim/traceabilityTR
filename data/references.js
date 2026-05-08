@@ -27,25 +27,40 @@ export const referenceProjects = [
   {
     id: 2,
     title: "Abalıoğlu Yağ - Trasabilitate",
-    slug: "abalıoglu-yag",
-    logo: "/Logos/abalıoglu.svg",
+    slug: "abalioglu-yag",
+    logo: "/Logos/abalioglu.svg",
     sector: "Alimente",
     image: "/Logos/abalıoglu.svg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
-    technologies: ["Barcode", "Lot Tracking", "Quality Management"],
+    heroImage: "/resmi/Group-Atlantic-2.jpg",
+    gallery: [
+      "/resmi/Group-Atlantic-2.jpg",
+      "/resmi/Factory.jpg",
+      "/resmi/PIC1970.jpg",
+      "/resmi/shutterstock_98753879.jpg",
+    ],
+    description: "Pentru Abalıoğlu Yağ, unul dintre cei mai importanți producători de ulei din Turcia, am dezvoltat o soluție integrată care asigură trasabilitatea paleților și etichetarea automată a cutiilor de carton pe parcursul operațiunilor de producție și logistică.",
+    technologies: ["Pallet Traceability", "Automatic Label Printing", "ERP Integration", "Real-time Data Collection"],
     results: {
       efficiency: "45%",
       defects: "75%",
       productivity: "50%",
     },
     content: `
-      <h2>Trasabilitate în industria alimentară</h2>
-      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.</p>
-      <h3>Rezultate</h3>
+      <h2>Soluție integrată de trasabilitate pentru Abalıoğlu Yağ</h2>
+      <p>Pentru Abalıoğlu Yağ, unul dintre cei mai importanți producători de ulei din Turcia, am dezvoltat o soluție integrată care asigură trasabilitatea paleților și etichetarea automată a cutiilor de carton pe parcursul operațiunilor de producție și logistică.</p>
+      <h3>În cadrul proiectului</h3>
       <ul>
-        <li>Eficiență +45%</li>
-        <li>Erori -75%</li>
-        <li>Productivitate +50%</li>
+        <li>A fost implementat un sistem de trasabilitate bazat pe paleți, etichetând fiecare palet cu un ID unic pentru a permite urmărirea de la producție până la expediere.</li>
+        <li>Transferul automat al ordinelor de producție către imprimantele de etichete a asigurat imprimarea etichetei corecte pe cutia de carton corectă, fără intervenția operatorului.</li>
+        <li>Colectarea datelor în timp real a permis monitorizarea centralizată a liniei de producție și a proceselor de expediere.</li>
+        <li>Integrarea ERP a asigurat sincronizarea completă între datele comenzilor, producției și expedierilor.</li>
+      </ul>
+      <h3>Cu această soluție</h3>
+      <ul>
+        <li>Trasabilitate 100% a paleților.</li>
+        <li>Proces de etichetare rapid și fără erori.</li>
+        <li>Eficiență operațională sporită.</li>
+        <li>Vizibilitate în timp real a stocurilor și expedierilor în ERP.</li>
       </ul>
     `,
   },

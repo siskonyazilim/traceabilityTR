@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const slides = [
@@ -9,8 +8,6 @@ const slides = [
     id: 1,
     title: 'Soluții de Trasabilitate End-to-End pentru Fabrici Inteligente',
     subtitle: 'Controlul complet al producției cu tehnologie avansată. Urmărire în timp real, calitate garantată și eficiență maximă cu sistemele noastre inovatoare.',
-    ctaText: 'Descoperiți Soluția Noastră',
-    ctaLink: '/trasabilitate-end-to-end',
     color: 'from-accent-blue',
     video: '/videos/hero-slide-1.mp4',
   },
@@ -18,8 +15,6 @@ const slides = [
     id: 2,
     title: 'Control în Timp Real, Zero Defecțiuni',
     subtitle: 'Monitorizare constantă cu inteligență artificială. Detectare automată a erorilor, raportare instantanee și prevenire proactivă pentru calitate maximă în fiecare produs.',
-    ctaText: 'Explorați Tehnologia',
-    ctaLink: '/trasabilitate-end-to-end',
     color: 'from-accent-green',
     video: '/videos/hero-slide-2.mp4',
   },
@@ -27,8 +22,6 @@ const slides = [
     id: 3,
     title: 'POKA YOKE - Sistem de Prevenire a Erorilor',
     subtitle: 'Eliminate defectele înainte ca acestea să apară. Metodă revoluționară de control calității care asigură 99.9% acuratețe și reduce costurile de remaniere până la 80%.',
-    ctaText: 'Aflați Detaliile',
-    ctaLink: '/trasabilitate-end-to-end',
     color: 'from-accent-yellow',
     video: '/video/DisliDonus.mp4',
   },
@@ -79,10 +72,10 @@ export const HeroSlider = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary-black/45 via-primary-black/20 to-primary-black/55"></div>
 
           {/* Content */}
-          <div className="relative h-full flex items-end px-4 sm:px-6 lg:px-8 pb-24 sm:pb-28">
-            <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-end">
+          <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
+            <div className="w-full max-w-5xl mx-auto text-center">
               <motion.h1
-                className="lg:col-span-7 text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.95] tracking-tight uppercase drop-shadow-lg"
+                className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.98] tracking-tight uppercase drop-shadow-lg"
                 style={{ fontFamily: 'var(--font-poppins)' }}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
@@ -92,23 +85,14 @@ export const HeroSlider = () => {
               </motion.h1>
 
               <motion.div
-                className="lg:col-span-5 text-white lg:pb-4"
+                className="text-white mt-6 sm:mt-7"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
                 transition={{ delay: 0.4, duration: 0.7 }}
               >
-                <p className="text-lg sm:text-xl lg:text-[1.02rem] font-semibold leading-tight sm:leading-snug drop-shadow-md max-w-lg ml-0 lg:ml-auto text-left">
+                <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md max-w-3xl mx-auto">
                   {slide.subtitle}
                 </p>
-
-                <div className="mt-7 lg:mt-8 lg:flex lg:justify-end">
-                  <Link
-                    href={slide.ctaLink}
-                    className="inline-flex items-center justify-center h-14 px-10 sm:px-12 rounded-full border-2 border-white text-white text-xl sm:text-2xl font-semibold tracking-tight bg-transparent hover:bg-white/10 transition-colors"
-                  >
-                    {slide.ctaText}
-                  </Link>
-                </div>
               </motion.div>
             </div>
           </div>

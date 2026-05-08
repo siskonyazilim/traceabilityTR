@@ -1,8 +1,10 @@
 'use client';
 
+import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import SectionHeader from '../../components/ui/SectionHeader';
 import ProjectCard from '../../components/ui/ProjectCard';
+import Button from '../../components/ui/Button';
 import { referenceProjects } from '../../data/references';
 
 export default function ProjectsPage() {
@@ -32,6 +34,22 @@ export default function ProjectsPage() {
         {/* Results Count */}
         <div className="mt-12 text-center text-gray-text">
           <p>Total: {referenceProjects.length} proiecte</p>
+        </div>
+
+        <div className="mt-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-4">
+            Vrei un proiect similar pentru compania ta?
+          </h2>
+          <p className="text-gray-text text-lg mb-8 max-w-2xl mx-auto">
+            Putem adapta soluțiile din aceste referințe la procesele și obiectivele tale operaționale.
+          </p>
+          <div className="flex gap-5 justify-center flex-wrap">
+            <Link href="/contact">
+              <Button variant="solid" size="lg">
+                Cere Ofertă
+              </Button>
+            </Link>
+          </div>
         </div>
       </Container>
     </div>

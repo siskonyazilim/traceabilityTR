@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import HeroSlider from '../components/home/HeroSlider';
+import HomeCta from '../components/home/HomeCta';
 
 const DeferredSection = () => (
   <section className="py-12" aria-hidden="true" />
@@ -51,6 +52,7 @@ export default function Home() {
       <StrategicPartners />
       <PerformanceMetrics />
       <BlogPreview />
+      <HomeCta />
     </>
   );
 }

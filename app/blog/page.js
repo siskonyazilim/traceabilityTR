@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import BlogCard from '../../components/ui/BlogCard';
+import Button from '../../components/ui/Button';
 import { blogPosts } from '../../data/blogPosts';
 import { motion } from 'framer-motion';
 
@@ -76,6 +78,27 @@ export default function BlogPage() {
               </p>
             </div>
           )}
+
+          <div className="mt-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-4">
+              Vrei să discutăm despre trasabilitate?
+            </h2>
+            <p className="text-gray-text text-lg mb-8 max-w-2xl mx-auto">
+              Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.
+            </p>
+            <div className="flex gap-5 justify-center flex-wrap">
+              <Link href="/contact">
+                <Button variant="solid" size="lg">
+                  Cere Ofertă
+                </Button>
+              </Link>
+              <Link href="/proiecte-de-referinta">
+                <Button variant="outline" size="lg">
+                  Vezi Proiectele
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </Container>
       </div>

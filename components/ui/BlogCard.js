@@ -1,9 +1,14 @@
 'use client';
+/* eslint-disable react/prop-types */
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export const BlogCard = ({ post }) => {
+  const [imageError, setImageError] = useState(false);
+
   const date = new Date(post.date).toLocaleDateString('ro-RO', {
     year: 'numeric',
     month: 'long',
@@ -21,23 +26,30 @@ export const BlogCard = ({ post }) => {
     >
       {/* Blog Image */}
       <div className="aspect-video bg-gradient-to-br from-slate-blue to-primary-black flex items-center justify-center overflow-hidden relative">
-        <img
-          src="/images/blog/traceability_icon_top_left.png"
+        <Image
+          src="/resmi/TRACEABILITY-logo.svg"
           alt="Traceability icon"
+          width={32}
+          height={32}
           className="absolute top-3 left-3 h-8 w-8 object-contain z-10"
+          loading="lazy"
         />
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.parentElement.querySelector('.fallback-blog-icon')?.classList.remove('hidden');
-          }}
-        />
-        <div className="fallback-blog-icon hidden absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-blue to-accent-green">
-          <div className="text-white text-4xl">📝</div>
-        </div>
+        {imageError ? (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-blue to-accent-green">
+            <div className="text-white text-lg font-semibold tracking-wide">BLOG</div>
+          </div>
+        ) : (
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+            className="object-cover"
+            loading="lazy"
+            quality={78}
+            onError={() => setImageError(true)}
+          />
+        )}
       </div>
       
       <div className="p-6">

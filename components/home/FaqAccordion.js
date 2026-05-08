@@ -35,9 +35,14 @@ export const FaqAccordion = () => {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start lg:items-stretch">
           <div className="lg:col-span-4 lg:self-stretch flex items-center">
-            <h2 className="text-primary-black text-4xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.08] tracking-tight max-w-sm">
-              Perspectivele noastre asupra trasabilității
-            </h2>
+            <div className="pl-6 md:pl-7 border-l-4 border-secondary-blue">
+              <p className="text-secondary-blue text-xs md:text-sm uppercase tracking-[0.18em] font-semibold mb-3">
+                FAQ
+              </p>
+              <h2 className="text-primary-black text-4xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.08] tracking-tight max-w-sm">
+                Perspectivele noastre asupra trasabilității
+              </h2>
+            </div>
           </div>
 
           <div className="lg:col-span-8 border-t border-slate-200">
