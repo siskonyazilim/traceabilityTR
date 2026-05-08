@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Background -->
+  <circle cx="50" cy="50" r="48" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Barcode lines (bottom half area) -->
+  <rect x="22" y="52" width="3" height="22" rx="0.5" fill="#A3E635"/>
+  <rect x="27" y="52" width="1.5" height="22" rx="0.5" fill="#A3E635" opacity="0.7"/>
+  <rect x="30.5" y="52" width="4" height="22" rx="0.5" fill="#A3E635"/>
+  <rect x="36.5" y="52" width="1.5" height="22" rx="0.5" fill="#A3E635" opacity="0.7"/>
+  <rect x="40" y="52" width="3" height="22" rx="0.5" fill="#A3E635"/>
+  <rect x="45" y="52" width="2" height="22" rx="0.5" fill="#A3E635" opacity="0.7"/>
+  <rect x="49" y="52" width="4" height="22" rx="0.5" fill="#A3E635"/>
+  <rect x="55" y="52" width="1.5" height="22" rx="0.5" fill="#A3E635" opacity="0.7"/>
+  <rect x="58.5" y="52" width="3.5" height="22" rx="0.5" fill="#A3E635"/>
+  <rect x="64" y="52" width="2" height="22" rx="0.5" fill="#A3E635" opacity="0.7"/>
+  <rect x="68" y="52" width="4" height="22" rx="0.5" fill="#A3E635"/>
+  <rect x="74" y="52" width="2.5" height="22" rx="0.5" fill="#A3E635" opacity="0.7"/>
+
+  <!-- Scan line -->
+  <line x1="18" y1="51" x2="82" y2="51" stroke="#F0FDF4" stroke-width="1" opacity="0.9"/>
+  <line x1="18" y1="51" x2="82" y2="51" stroke="#A3E635" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- RFID signal arcs (top) -->
+  <path d="M50 42 Q50 42 50 42" stroke="#A3E635" stroke-width="1.5"/>
+  <!-- Arc 1 -->
+  <path d="M41 45 Q50 36 59 45" stroke="#A3E635" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <!-- Arc 2 -->
+  <path d="M35 40 Q50 27 65 40" stroke="#A3E635" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+  <!-- Arc 3 -->
+  <path d="M29 35 Q50 18 71 35" stroke="#A3E635" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Center dot -->
+  <circle cx="50" cy="46" r="3" fill="#A3E635"/>
+  <circle cx="50" cy="46" r="1.2" fill="#0F172A"/>
+
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="47" stroke="#A3E635" stroke-width="0.5" opacity="0.2" stroke-dasharray="4 8"/>
+</svg>

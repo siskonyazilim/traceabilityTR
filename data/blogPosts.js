@@ -8,7 +8,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2025-01-29',
     author: 'Admin',
-    image: '/images/blog/CHESTNY-ZNAK-Track-and-Trace-System-of-Russia.png',
+    image: '/images/blog/photos/chestny-znak-russia.png',
     excerpt: 'Procedura Chestny ZNAK explica modul in care sistemul digital obligatoriu din Rusia creste controlul, autenticitatea si increderea in lantul logistic.',
     content: `
       <h2>Introducere</h2>
@@ -26,7 +26,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2024-11-25',
     author: 'Admin',
-    image: '/images/blog/Gida-Izlenebilirlik.png',
+    image: '/images/blog/photos/food-traceability-consumers.jpg',
     excerpt: 'Food traceability helps end consumers make safer and better-informed choices through transparency, quality control and rapid recall capabilities.',
     content: `
       <h2>Overview</h2>
@@ -44,7 +44,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2024-10-08',
     author: 'Admin',
-    image: '/images/blog/Yumurta_izlenebilirlik.png',
+    image: '/images/blog/photos/product-traceability-quality.jpg',
     excerpt: 'Trasabilitatea produselor sustine performanta operationala si protejeaza increderea consumatorilor prin control, conformitate si date verificabile.',
     content: `
       <h2>Context</h2>
@@ -66,7 +66,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2024-07-30',
     author: 'Admin',
-    image: '/images/blog/Product-Box-Pallet-Traceability.png',
+    image: '/images/blog/photos/food-standards-pallet.jpg',
     excerpt: 'A practical perspective on food traceability standards across product, carton and pallet levels for full logistics visibility.',
     content: `
       <h2>Standards in practice</h2>
@@ -88,7 +88,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2024-07-23',
     author: 'Admin',
-    image: '/images/blog/Traceability-Barcode-Systems-Used.png',
+    image: '/images/blog/photos/barcode-systems-industrial.jpg',
     excerpt: 'Barcode technologies such as 1D, 2D and Data Matrix remain core building blocks for reliable and scalable traceability.',
     content: `
       <p>In today's rapidly digitalizing world, barcode systems have become indispensable for enhancing efficiency in production and logistics processes, ensuring product traceability, and streamlining operations. Barcodes enable the tracking and management of products at every stage from production to consumption.</p>
@@ -250,7 +250,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2021-10-05',
     author: 'Admin',
-    image: '/images/blog/what_is_traceability.png',
+    image: '/images/blog/photos/implement-individual-traceability.jpg',
     excerpt: 'Pasii esentiali pentru implementarea trasabilitatii individuale, de la identificare unica pana la monitorizare operationala in timp real.',
     content: `
       <p>Vreau sa urmaresc produsele in mod individual.</p>
@@ -281,7 +281,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2021-10-04',
     author: 'Admin',
-    image: '/images/blog/benefits_of_the_traceability_system_siskon.png',
+    image: '/images/blog/photos/benefits-traceability-systems.jpg',
     excerpt: 'Sistemele de trasabilitate aduc beneficii clare: eficienta, calitate, conformitate si transparenta pe intregul flux operational.',
     content: `
       <h2>Beneficii</h2>
@@ -297,7 +297,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2021-10-02',
     author: 'Admin',
-    image: '/images/blog/Single_Product_Tracking_Siskon.png',
+    image: '/images/blog/photos/traceability-data-definition.jpg',
     excerpt: 'Traceability data includes production, logistics and quality events that make each product journey auditable and measurable.',
     content: `
       <p>Traceability data is, at its core, quite simple. Traceability involves recording all events that affect a product. This data is collected throughout the entire production process, including materials added (BOM and critical components), tools used, process steps performed, and test results, all recorded based on serial numbers.</p>
@@ -322,7 +322,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2020-06-08',
     author: 'Admin',
-    image: '/images/blog/BOMI_Siskon.png',
+    image: '/images/blog/photos/bomi-camera-system.jpg',
     excerpt: 'A camera-based multi-code reading implementation by BOMI Group to improve speed and reliability in industrial identification workflows.',
     content: `
       <p>With this goal in mind, we designed a new product for visualization in the logistics and warehousing sector.</p>
@@ -345,7 +345,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2019-09-12',
     author: 'Admin',
-    image: '/images/blog/TUSIADSD-2019.png',
+    image: '/images/blog/photos/tusiad-sd2.jpg',
     excerpt: 'Highlights from TUSIAD SD2 and the role of traceability-driven data platforms in accelerating industrial digital transformation.',
     content: `
       <p>As the first comprehensive program focused on digital transformation in industry, <strong>TUSIAD SD2</strong> brought together 18 leading technology user companies with SME-scale technology suppliers.</p>
@@ -400,7 +400,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2018-12-18',
     author: 'Admin',
-    image: '/images/blog/FIT2.png',
+    image: '/images/blog/photos/future-industrial-fair.jpg',
     excerpt: 'Siskon presented traceability and smart factory capabilities focused on operational visibility and quality assurance.',
     content: `
       <h2>Fair Participation</h2>
@@ -416,7 +416,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2018-11-22',
     author: 'Admin',
-    image: '/images/blog/Siskon_Endustri40_traceability_SICK.png',
+    image: '/images/blog/photos/industry40-presentation.jpg',
     excerpt: 'O prezentare dedicata arhitecturilor de trasabilitate pentru Industrie 4.0 si rolului datelor in optimizarea productiei.',
     content: `
       <p>Va invitam la prezentarea intitulata <strong>Un pas catre 4.0: Trasabilitate</strong> sustinuta de Managerul de Vanzari Siskon <strong>Cemal Tezcan</strong> si de Managerul de Produs SICK pentru Sisteme de Identificare Automata <strong>Berk Boyaci</strong>.</p>
@@ -431,7 +431,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2018-11-09',
     author: 'Admin',
-    image: '/images/blog/IoT_Dashboard_and_Traceability_Solutions_at_Logistics_Seminar.png',
+    image: '/images/blog/photos/iot-dashboard-logistics.jpg',
     excerpt: 'Seminarul a demonstrat cum dashboard-urile IoT si trasabilitatea unificata imbunatatesc deciziile logistice.',
     content: `
       <p>Am prezentat <strong>Tabloul de bord IoT</strong>, solutiile noastre de transformare digitala si trasabilitate la <strong>cel de-al 7-lea Seminar de Tehnologii de Automatizare in Logistica</strong>, organizat de Asociatia de Logistica <strong>LODER</strong> si <strong>SICK</strong>.</p>

@@ -56,7 +56,7 @@ export const StrategicPartners = () => {
   };
 
   return (
-    <section id="our-strategic-solution-partners" className="py-16 md:py-24 bg-[#f8f8f2]">
+    <section id="our-strategic-solution-partners" className="py-16 md:py-24 bg-[#f6f7f8]">
       <Container>
         <SectionHeader
           title="Partenerii noștri strategici de soluții"
@@ -68,7 +68,7 @@ export const StrategicPartners = () => {
             <button
               onClick={handlePrev}
               aria-label="Partener anterior"
-              className="h-11 w-11 rounded-full bg-white border border-gray-light shadow-md text-primary-black hover:bg-primary-black hover:text-white transition-colors flex items-center justify-center"
+              className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <FiChevronLeft size={20} />
             </button>
@@ -78,7 +78,7 @@ export const StrategicPartners = () => {
             <button
               onClick={handleNext}
               aria-label="Partener următor"
-              className="h-11 w-11 rounded-full bg-white border border-gray-light shadow-md text-primary-black hover:bg-primary-black hover:text-white transition-colors flex items-center justify-center"
+              className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <FiChevronRight size={20} />
             </button>
@@ -88,17 +88,17 @@ export const StrategicPartners = () => {
             {visiblePartners.map((partner, index) => (
               <Link key={`${partner.id}-${currentIndex}`} href={`/solution-partners/${partner.slug}`}>
                 <motion.article
-                  className="h-full rounded-2xl bg-white border border-gray-light shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                  className="h-full rounded-2xl bg-white/95 backdrop-blur-sm border border-slate-200 shadow-sm hover:shadow-xl hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: index * 0.08 }}
                   whileHover={{ y: -4 }}
                 >
-                  <div className="h-36 bg-[#f4f6f8] flex items-center justify-center p-6">
+                  <div className="h-36 flex items-center justify-center p-6">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-14 w-full object-contain"
+                      className="max-h-14 w-full object-contain transition-transform duration-300 group-hover:scale-105"
                       onError={(e) => {
                         e.target.style.display = 'none';
                       }}
@@ -112,7 +112,7 @@ export const StrategicPartners = () => {
                     <p className="text-sm text-gray-text leading-relaxed min-h-[3.5rem]">
                       {partner.description}
                     </p>
-                    <span className="inline-block mt-4 text-accent-blue font-semibold text-sm">
+                    <span className="inline-block mt-4 text-accent-blue font-semibold text-sm group-hover:translate-x-1 transition-transform">
                       Detalii →
                     </span>
                   </div>
@@ -122,13 +122,13 @@ export const StrategicPartners = () => {
           </div>
 
           <div className="flex justify-center gap-2">
-            {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+            {Array.from({ length: maxIndex + 1 }, (_, page) => page).map((page) => (
               <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                aria-label={`Mergi la setul ${index + 1}`}
+                key={`partners-page-${page}`}
+                onClick={() => setCurrentIndex(page)}
+                aria-label={`Mergi la setul ${page + 1}`}
                 className={`h-2.5 rounded-full transition-all ${
-                  currentIndex === index ? 'w-7 bg-accent-blue' : 'w-2.5 bg-gray-light hover:bg-gray-text'
+                  currentIndex === page ? 'w-7 bg-slate-blue' : 'w-2.5 bg-inactive-gray hover:bg-accent-blue'
                 }`}
               />
             ))}

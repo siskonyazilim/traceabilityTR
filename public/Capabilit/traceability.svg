@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Connecting path lines -->
+  <line x1="25" y1="25" x2="50" y2="50" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+  <line x1="75" y1="25" x2="50" y2="50" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+  <line x1="25" y1="75" x2="50" y2="50" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+  <line x1="75" y1="75" x2="50" y2="50" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+
+  <!-- Corner nodes -->
+  <circle cx="25" cy="25" r="7" fill="#0EA5E9" opacity="0.85"/>
+  <circle cx="25" cy="25" r="3.5" fill="#E0F2FE"/>
+
+  <circle cx="75" cy="25" r="7" fill="#0EA5E9" opacity="0.85"/>
+  <circle cx="75" cy="25" r="3.5" fill="#E0F2FE"/>
+
+  <circle cx="25" cy="75" r="7" fill="#0EA5E9" opacity="0.85"/>
+  <circle cx="25" cy="75" r="3.5" fill="#E0F2FE"/>
+
+  <circle cx="75" cy="75" r="7" fill="#0EA5E9" opacity="0.85"/>
+  <circle cx="75" cy="75" r="3.5" fill="#E0F2FE"/>
+
+  <!-- Center node (hub) -->
+  <circle cx="50" cy="50" r="11" fill="#0284C7"/>
+  <circle cx="50" cy="50" r="6" fill="#BAE6FD"/>
+  <circle cx="50" cy="50" r="2.5" fill="#0F172A"/>
+
+  <!-- Outer ring accent -->
+  <circle cx="50" cy="50" r="47" stroke="#38BDF8" stroke-width="0.5" opacity="0.3" stroke-dasharray="4 6"/>
+</svg>

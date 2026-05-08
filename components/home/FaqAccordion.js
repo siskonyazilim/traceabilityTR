@@ -2,9 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiChevronDown } from 'react-icons/fi';
+import { FiPlus } from 'react-icons/fi';
 import Container from '../ui/Container';
-import SectionHeader from '../ui/SectionHeader';
 
 const faqs = [
   {
@@ -32,54 +31,64 @@ export const FaqAccordion = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white font-sans">
       <Container>
-        <SectionHeader
-          title="Întrebări Frecvente"
-          subtitle="Perspectivele noastre asupra trasabilității"
-        />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start lg:items-stretch">
+          <div className="lg:col-span-4 lg:self-stretch flex items-center">
+            <h2 className="text-primary-black text-4xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.08] tracking-tight max-w-sm">
+              Perspectivele noastre asupra trasabilității
+            </h2>
+          </div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq) => (
+          <div className="lg:col-span-8 border-t border-slate-200">
+            {faqs.map((faq) => (
             <motion.div
               key={faq.id}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className="border-2 border-gray-light rounded-2xl overflow-hidden"
+              className="border-b border-slate-200"
             >
               <button
+                type="button"
                 onClick={() => toggleAccordion(faq.id)}
-                className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-light transition-colors"
+                aria-expanded={openId === faq.id}
+                aria-controls={`faq-panel-${faq.id}`}
+                id={`faq-trigger-${faq.id}`}
+                className="w-full py-5 md:py-6 flex items-center justify-between gap-5 text-left"
               >
-                <h3 className="text-left font-semibold text-primary-black">
+                <h3 className={`text-2xl md:text-3xl font-semibold tracking-[-0.01em] leading-tight ${openId === faq.id ? 'text-secondary-blue' : 'text-primary-black'}`}>
                   {faq.question}
                 </h3>
                 <motion.div
-                  animate={{ rotate: openId === faq.id ? 180 : 0 }}
+                  animate={{ rotate: openId === faq.id ? 45 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-accent-blue flex-shrink-0 ml-4"
+                  className={`${openId === faq.id ? 'text-secondary-blue' : 'text-slate-500'} flex-shrink-0`}
                 >
-                  <FiChevronDown size={24} />
+                  <FiPlus size={28} />
                 </motion.div>
               </button>
 
               <motion.div
+                id={`faq-panel-${faq.id}`}
+                role="region"
+                aria-labelledby={`faq-trigger-${faq.id}`}
                 initial={{ height: 0, opacity: 0 }}
                 animate={{
                   height: openId === faq.id ? 'auto' : 0,
                   opacity: openId === faq.id ? 1 : 0,
                 }}
                 transition={{ duration: 0.3 }}
-                className="overflow-hidden bg-gray-light bg-opacity-50"
+                className="overflow-hidden"
               >
-                <p className="px-6 py-4 text-gray-text">
+                <p className="pb-6 md:pb-7 pr-10 text-gray-text leading-relaxed text-sm md:text-base max-w-4xl">
                   {faq.answer}
                 </p>
               </motion.div>
             </motion.div>
           ))}
+          </div>
         </div>
       </Container>
     </section>

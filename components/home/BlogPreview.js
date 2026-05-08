@@ -69,7 +69,7 @@ export const BlogPreview = () => {
           <button
             onClick={handlePrev}
             aria-label="Articol anterior"
-            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-primary-black hover:text-white transition-colors flex items-center justify-center"
+            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
           >
             <FiChevronLeft size={20} />
           </button>
@@ -77,7 +77,7 @@ export const BlogPreview = () => {
           <button
             onClick={handleNext}
             aria-label="Articol următor"
-            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-primary-black hover:text-white transition-colors flex items-center justify-center"
+            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
           >
             <FiChevronRight size={20} />
           </button>

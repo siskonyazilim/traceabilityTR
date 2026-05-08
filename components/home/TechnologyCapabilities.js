@@ -2,26 +2,25 @@
 
 import { motion } from 'framer-motion';
 import Container from '../ui/Container';
-import { FiRefreshCw, FiBox, FiImage } from 'react-icons/fi';
 
 const capabilities = [
   {
     title: 'POKA YOKE',
     description: 'Trasabilitatea este soluția permanentă la erorile umane, ale mașinilor sau legate de proiectare care apar în timpul producției cu metode simple și ieftine.',
-    icon: FiRefreshCw,
-    color: 'text-accent-blue',
+    image: '/Capabilit/traceability.svg',
+    fallback: '🔁',
   },
   {
     title: 'RFID și coduri de bare',
     description: 'Tehnologia RFID și a codurilor de bare este utilizată în multe aplicații care necesită identificare automată și trasabilitate în automatizarea proceselor și a fabricilor.',
-    icon: FiBox,
-    color: 'text-accent-green',
+    image: '/Capabilit/rfid_barcode.svg',
+    fallback: '📦',
   },
   {
     title: 'Procesare de imagini',
     description: 'Detectarea defectelor în produsele fabricate cu sisteme de control vizual oferă superioritate față de oameni.',
-    icon: FiImage,
-    color: 'text-accent-yellow',
+    image: '/Capabilit/image_processing.svg',
+    fallback: '🖼️',
   },
 ];
 
@@ -46,18 +45,26 @@ export default function TechnologyCapabilities() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {capabilities.map((capability, index) => {
-            const Icon = capability.icon;
             return (
               <motion.div
-                key={index}
+                key={capability.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-light rounded-2xl p-8 hover:shadow-xl transition-all group"
+                className="bg-white rounded-2xl p-8 border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all group"
               >
-                <div className={`text-5xl mb-6 ${capability.color} group-hover:scale-110 transition-transform`}>
-                  <Icon />
+                <div className="h-28 mb-6 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={capability.image}
+                    alt={capability.title}
+                    className="h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentElement.querySelector('.fallback-capability-icon')?.classList.remove('hidden');
+                    }}
+                  />
+                  <span className="fallback-capability-icon hidden text-3xl">{capability.fallback}</span>
                 </div>
                 <h3 className="text-2xl font-bold text-primary-black mb-4">
                   {capability.title}

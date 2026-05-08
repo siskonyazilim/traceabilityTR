@@ -78,13 +78,13 @@ export const ReferenceProjects = () => {
               >
                 <Link
                   href={`/portfolio/${project.slug}`}
-                  className="group h-full block rounded-2xl border border-gray-light bg-primary-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  className="group h-full block rounded-2xl border border-gray-light bg-primary-white shadow-sm hover:shadow-xl hover:border-accent-blue transition-all duration-300 overflow-hidden"
                 >
-                  <div className="h-40 bg-gradient-to-br from-gray-light to-primary-white flex items-center justify-center p-6">
+                  <div className="h-44 bg-[#f7f8fa] border-b border-gray-200 flex items-center justify-center overflow-hidden relative">
                     <img
-                      src={project.logo}
+                      src={project.logo || project.image}
                       alt={project.title}
-                      className="max-h-20 w-full object-contain"
+                      className="h-full w-full object-contain p-6 transition-transform duration-300 group-hover:scale-105"
                       onError={(e) => {
                         e.target.style.display = 'none';
                       }}
@@ -92,9 +92,6 @@ export const ReferenceProjects = () => {
                   </div>
 
                   <div className="p-5">
-                    <span className="inline-flex text-xs font-semibold px-3 py-1 rounded-full bg-primary-black text-white mb-3">
-                      {project.sector}
-                    </span>
                     <h3 className="text-lg font-bold text-primary-black mb-2 group-hover:text-accent-blue transition-colors">
                       {project.title}
                     </h3>
@@ -110,28 +107,28 @@ export const ReferenceProjects = () => {
           <div className="flex items-center justify-between mt-8 gap-3">
             <button
               onClick={handlePrev}
-              className="h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-primary-black hover:text-white transition-colors flex items-center justify-center"
+              className="h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
               aria-label="Proiect anterior"
             >
               <FiChevronLeft size={20} />
             </button>
 
             <div className="flex items-center gap-2">
-              {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+              {Array.from({ length: maxIndex + 1 }, (_, page) => page).map((page) => (
                 <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  key={`projects-page-${page}`}
+                  onClick={() => setCurrentIndex(page)}
                   className={`h-2.5 rounded-full transition-all ${
-                    currentIndex === index ? 'w-7 bg-accent-blue' : 'w-2.5 bg-gray-light hover:bg-gray-text'
+                    currentIndex === page ? 'w-7 bg-slate-blue' : 'w-2.5 bg-inactive-gray hover:bg-accent-blue'
                   }`}
-                  aria-label={`Mergi la pagina ${index + 1}`}
+                  aria-label={`Mergi la pagina ${page + 1}`}
                 />
               ))}
             </div>
 
             <button
               onClick={handleNext}
-              className="h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-primary-black hover:text-white transition-colors flex items-center justify-center"
+              className="h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
               aria-label="Proiect următor"
             >
               <FiChevronRight size={20} />

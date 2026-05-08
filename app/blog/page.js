@@ -22,41 +22,12 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="relative h-80 bg-gradient-to-r from-dark-bg via-primary-black to-dark-bg overflow-hidden mt-0"
-      >
-        <div className="relative h-full flex items-center">
-          <Container>
-            <div className="text-white">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-5xl md:text-6xl font-bold mb-4"
-              >
-                Știri
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-xl text-gray-light max-w-2xl"
-              >
-                Ultimele noutăți și articole despre trasabilitate, automatizare industrială și inovație
-              </motion.p>
-            </div>
-          </Container>
-        </div>
-      </motion.section>
+    <div className="min-h-screen bg-dark-bg">
+      <div className="pt-24 md:pt-28 bg-white rounded-t-3xl">
 
       {/* Main Content */}
       <Container>
-        <div className="py-16">
+        <div className="py-10 md:py-14">
           {paginatedPosts.length > 0 ? (
             <>
               <motion.div
@@ -107,6 +78,7 @@ export default function BlogPage() {
           )}
         </div>
       </Container>
+      </div>
     </div>
   );
 }

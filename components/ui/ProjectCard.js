@@ -1,19 +1,13 @@
 'use client';
+/* eslint-disable react/prop-types */
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export const ProjectCard = ({ project }) => {
-  const sectorColors = {
-    'Automotive': 'bg-accent-blue',
-    'Gıda': 'bg-accent-green',
-    'Beyaz Eşya': 'bg-accent-yellow',
-    'İlaç': 'bg-accent-red',
-  };
-
   return (
     <motion.div
-      className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden h-full flex flex-col"
+      className="bg-white rounded-2xl border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full flex flex-col"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -21,35 +15,35 @@ export const ProjectCard = ({ project }) => {
       whileHover={{ y: -5 }}
     >
       {/* Project Image */}
-      <div className={`h-40 ${sectorColors[project.sector] || 'bg-accent-blue'} flex items-center justify-center overflow-hidden relative`}>
+      <div className="h-44 bg-[#f7f8fa] border-b border-gray-200 flex items-center justify-center overflow-hidden relative">
         <img
-          src={project.image}
+          src={project.logo || project.image}
           alt={project.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain p-5"
           onError={(e) => {
             e.target.style.display = 'none';
             e.target.parentElement.querySelector('.fallback-project-icon')?.classList.remove('hidden');
           }}
         />
-        <div className={`fallback-project-icon hidden absolute inset-0 flex items-center justify-center ${sectorColors[project.sector] || 'bg-accent-blue'}`}>
-          <div className="text-white text-4xl">🏭</div>
+        <div className="fallback-project-icon hidden absolute inset-0 flex items-center justify-center bg-[#f7f8fa]">
+          <div className="text-primary-black text-4xl">🏭</div>
         </div>
       </div>
       
-      <div className="p-6 flex-1 flex flex-col">
+      <div className="p-6 md:p-7 flex-1 flex flex-col">
         <div className="mb-3">
-          <span className={`text-xs font-semibold text-white px-3 py-1 rounded-full ${sectorColors[project.sector] || 'bg-accent-blue'}`}>
+          <span className="text-xs font-semibold text-white px-3 py-1 rounded-full bg-slate-blue">
             {project.sector}
           </span>
         </div>
         
-        <h3 className="text-lg font-bold text-primary-black mb-3 line-clamp-2 hover:text-accent-blue transition-colors">
+        <h3 className="text-lg md:text-xl font-bold text-primary-black mb-3 hover:text-accent-blue transition-colors">
           <Link href={`/portfolio/${project.slug}`}>
             {project.title}
           </Link>
         </h3>
         
-        <p className="text-gray-text text-sm mb-4 flex-1 line-clamp-3">
+        <p className="text-gray-text text-sm md:text-base leading-relaxed mb-5 flex-1">
           {project.description}
         </p>
         
@@ -70,7 +64,7 @@ export const ProjectCard = ({ project }) => {
         
         <Link 
           href={`/portfolio/${project.slug}`}
-          className="text-accent-blue font-semibold text-sm hover:underline"
+          className="text-secondary-blue font-semibold text-sm hover:text-accent-blue"
         >
           Detalii proiect →
         </Link>

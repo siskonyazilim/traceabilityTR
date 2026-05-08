@@ -51,37 +51,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="relative h-80 bg-gradient-to-r from-dark-bg via-primary-black to-dark-bg overflow-hidden mt-0"
-      >
-        <div className="relative h-full flex items-center">
-          <Container>
-            <div className="text-white">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-5xl md:text-6xl font-bold mb-4"
-              >
-                Contact
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-xl text-gray-light max-w-2xl"
-              >
-                Contactează-ne pentru mai multe informații despre soluțiile noastre de trasabilitate
-              </motion.p>
-            </div>
-          </Container>
-        </div>
-      </motion.section>
+    <div className="min-h-screen bg-dark-bg">
+      <div className="pt-24 md:pt-28 bg-white rounded-t-3xl">
 
       {/* Office Cards Section */}
       <Container>
@@ -90,13 +61,13 @@ export default function ContactPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="py-16"
+          className="pt-4 md:pt-6 pb-14 md:pb-20"
         >
-          <h2 className="text-4xl font-bold text-primary-black mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-10 md:mb-12 text-center">
             Birourile Noastre
           </h2>
 
-          <div className="grid grid-cols-1 gap-10 mb-16">
+          <div className="grid grid-cols-1 gap-8 md:gap-10 mb-12 md:mb-16">
             {offices.map((office, index) => (
               <motion.div
                 key={office.id}
@@ -104,19 +75,19 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.3 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-1 lg:grid-cols-2 border border-gray-200 shadow-sm bg-white overflow-hidden"
+                className="grid grid-cols-1 lg:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-2xl overflow-hidden"
               >
-                <div className="min-h-[320px] lg:min-h-[380px] bg-white p-8 md:p-10 flex flex-col">
-                    <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
+                <div className="min-h-[320px] lg:min-h-[380px] bg-white p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+                    <h3 className="text-3xl md:text-4xl font-bold text-primary-black mb-5 md:mb-6">
                       {office.name}
                     </h3>
 
-                    <div className="w-full border-t border-primary-black border-opacity-20 mb-8" />
+                    <div className="w-full border-t border-primary-black border-opacity-20 mb-6 md:mb-8" />
 
-                    <div className="space-y-5 text-primary-black">
+                    <div className="space-y-4 md:space-y-5 text-primary-black">
                       <div className="flex gap-3">
                         <FiMapPin className="text-accent-blue flex-shrink-0 mt-1" size={20} />
-                        <p className="text-lg leading-relaxed whitespace-pre-line">
+                        <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
                           {office.address}
                         </p>
                       </div>
@@ -163,26 +134,28 @@ export default function ContactPage() {
 
       {/* Contact Form Section */}
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="py-16 bg-gray-light rounded-2xl p-8 md:p-12"
-        >
-          <h2 className="text-4xl font-bold text-primary-black mb-8 text-center">
-            Trimitere Mesaj
-          </h2>
+        <div className="pb-16 md:pb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-2xl p-6 md:p-10 lg:p-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-8 text-center">
+              Trimitere Mesaj
+            </h2>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="max-w-3xl mx-auto space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="max-w-3xl mx-auto space-y-6">
             {/* Name Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* First Name */}
               <div>
-                <label className="block text-sm font-semibold text-primary-black mb-2">
+                <label htmlFor="firstName" className="block text-sm font-semibold text-primary-black mb-2">
                   Prenume *
                 </label>
                 <input
+                  id="firstName"
                   {...register('firstName', {
                     required: 'Prenumele este necesar',
                     minLength: { value: 2, message: 'Min 2 caractere' },
@@ -198,10 +171,11 @@ export default function ContactPage() {
 
               {/* Last Name */}
               <div>
-                <label className="block text-sm font-semibold text-primary-black mb-2">
+                <label htmlFor="lastName" className="block text-sm font-semibold text-primary-black mb-2">
                   Nume *
                 </label>
                 <input
+                  id="lastName"
                   {...register('lastName', {
                     required: 'Numele este necesar',
                     minLength: { value: 2, message: 'Min 2 caractere' },
@@ -218,10 +192,11 @@ export default function ContactPage() {
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-semibold text-primary-black mb-2">
+              <label htmlFor="email" className="block text-sm font-semibold text-primary-black mb-2">
                 Email *
               </label>
               <input
+                id="email"
                 {...register('email', {
                   required: 'Email-ul este necesar',
                   pattern: {
@@ -240,13 +215,14 @@ export default function ContactPage() {
 
             {/* Website (Optional) */}
             <div>
-              <label className="block text-sm font-semibold text-primary-black mb-2">
+              <label htmlFor="website" className="block text-sm font-semibold text-primary-black mb-2">
                 Website (opțional)
               </label>
               <input
+                id="website"
                 {...register('website', {
                   pattern: {
-                    value: /^(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
+                    value: /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/[\w\-./?%&=]*)?$/,
                     message: 'URL invalid',
                   },
                 })}
@@ -261,10 +237,11 @@ export default function ContactPage() {
 
             {/* Message */}
             <div>
-              <label className="block text-sm font-semibold text-primary-black mb-2">
+              <label htmlFor="message" className="block text-sm font-semibold text-primary-black mb-2">
                 Mesaj *
               </label>
               <textarea
+                id="message"
                 {...register('message', {
                   required: 'Mesajul este necesar',
                   minLength: { value: 10, message: 'Min 10 caractere' },
@@ -281,15 +258,16 @@ export default function ContactPage() {
             {/* Privacy Checkbox */}
             <div className="flex items-start gap-3">
               <input
+                id="privacy"
                 {...register('privacy', {
                   required: 'Trebuie să accepti politica de confidențialitate',
                 })}
                 type="checkbox"
                 className="mt-1"
               />
-              <label className="text-sm text-gray-text">
+              <label htmlFor="privacy" className="text-sm text-gray-text">
                 Sunt de acord cu{' '}
-                <a href="#" className="text-accent-blue font-semibold hover:underline">
+                <a href="/" className="text-accent-blue font-semibold hover:underline">
                   politica de confidențialitate
                 </a>
                 {' '}*
@@ -316,9 +294,11 @@ export default function ContactPage() {
                 ✓ Mesajul dvs. a fost trimis cu succes!
               </motion.div>
             )}
-          </form>
-        </motion.div>
+            </form>
+          </motion.div>
+        </div>
       </Container>
+      </div>
     </div>
   );
 }

@@ -4,9 +4,9 @@ export const referenceProjects = [
     title: "Maxion İnci Çelik - Trasabilitatea paleților",
     slug: "maxion-inci-celik",
     logo: "/Logos/maxion_inci.svg",
-    sector: "Automotive · 145",
+    sector: "Industria auto",
     image: "/Logos/maxion_inci.svg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produsului a prevenit introducerile incorecte. În plus, deoarece sistemul a oferit cunoștințe avansate despre ce produse ajungeau la ce linie de ambalare, aprovizionarea a fost optimizată.",
+    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produsului a prevenit introducerile incorecte. În plus, deoarece sistemul a oferit cunoștințe avansate despre ce produse ajungeau la ce linie de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -15,7 +15,7 @@ export const referenceProjects = [
     },
     content: `
       <h2>Trasabilitatea paleților</h2>
-      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produsului a prevenit introducerile incorecte. În plus, deoarece sistemul a oferit cunoștințe avansate despre ce produse ajungeau la ce linie de ambalare, aprovizionarea a fost optimizată semnificativ.</p>
+      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produsului a prevenit introducerile incorecte. În plus, deoarece sistemul a oferit cunoștințe avansate despre ce produse ajungeau la ce linie de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.</p>
       <h3>Rezultate</h3>
       <ul>
         <li>Eficiență +35%</li>
@@ -29,9 +29,9 @@ export const referenceProjects = [
     title: "Abalıoğlu Yağ - Trasabilitate",
     slug: "abalıoglu-yag",
     logo: "/Logos/abalıoglu.svg",
-    sector: "Hrană · 143",
+    sector: "Alimente",
     image: "/Logos/abalıoglu.svg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, fluxul operațional a fost îmbunătățit.",
+    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
     technologies: ["Barcode", "Lot Tracking", "Quality Management"],
     results: {
       efficiency: "45%",
@@ -40,7 +40,7 @@ export const referenceProjects = [
     },
     content: `
       <h2>Trasabilitate în industria alimentară</h2>
-      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, controlul calității s-a îmbunătățit considerabil.</p>
+      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.</p>
       <h3>Rezultate</h3>
       <ul>
         <li>Eficiență +45%</li>
@@ -54,9 +54,9 @@ export const referenceProjects = [
     title: "Nuh'un Ankara - Trasabilitate",
     slug: "nuhun-ankara",
     logo: "/Logos/nuhun_ankara.svg",
-    sector: "Hrană · 143",
+    sector: "Alimente",
     image: "/Logos/nuhun_ankara.svg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, analiza procesului a devenit mai precisă.",
+    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
     technologies: ["RFID", "GPS Tracking", "Blockchain"],
     results: {
       efficiency: "40%",
@@ -65,7 +65,7 @@ export const referenceProjects = [
     },
     content: `
       <h2>Trasabilitate end-to-end</h2>
-      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, trasabilitatea s-a îmbunătățit semnificativ.</p>
+      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.</p>
       <h3>Rezultate</h3>
       <ul>
         <li>Eficiență +40%</li>
@@ -79,9 +79,9 @@ export const referenceProjects = [
     title: "Delphi Technologies - Managementul Depozitelor",
     slug: "delphi-technologies",
     logo: "/Logos/delphi.svg",
-    sector: "Automotive · 145",
+    sector: "Industria auto",
     image: "/Logos/delphi.svg",
-    description: "În cadrul proiectului, popularea automată a informațiilor despre rețete specifice produselor a prevenit introducerea de date incorecte. În plus, deoarece sistemul a oferit informații anticipate despre ce produse soseau la ce linie de ambalare, aprovizionarea materialelor a fost îmbunătățită.",
+    description: "În cadrul proiectului, popularea automată a informațiilor despre rețete specifice produselor a prevenit introducerea de date incorecte. În plus, deoarece sistemul a oferit informații anticipate despre ce produse soseau la ce linie de ambalare, aprovizionarea necesară cu materiale pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniilor.",
     technologies: ["Barcode", "Vision Systems", "IoT Integration"],
     results: {
       efficiency: "50%",
@@ -90,7 +90,7 @@ export const referenceProjects = [
     },
     content: `
       <h2>Managementul inteligent al depozitelor</h2>
-      <p>În cadrul proiectului, popularea automată a informațiilor despre rețete specifice produselor a prevenit introducerea de date incorecte. În plus, deoarece sistemul a oferit informații anticipate despre ce produse soseau la ce linie de ambalare, aprovizionarea s-a optimizat la maximum.</p>
+      <p>În cadrul proiectului, popularea automată a informațiilor despre rețete specifice produselor a prevenit introducerea de date incorecte. În plus, deoarece sistemul a oferit informații anticipate despre ce produse soseau la ce linie de ambalare, aprovizionarea necesară cu materiale pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniilor.</p>
       <h3>Rezultate</h3>
       <ul>
         <li>Eficiență +50%</li>
@@ -103,10 +103,10 @@ export const referenceProjects = [
     id: 5,
     title: "PMI - RFID pentru ștanțare",
     slug: "pmi-rfid",
-    logo: "/Logos/philip_morris_sa.svg",
-    sector: "Tutun · 165",
-    image: "/Logos/philip_morris_sa.svg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, pregătirea pentru ștanțare a devenit mai eficientă.",
+    logo: "/Logos/pmi.svg",
+    sector: "Tutun",
+    image: "/Logos/pmi.svg",
+    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
     technologies: ["RFID", "Marking Systems", "Real-time Tracking"],
     results: {
       efficiency: "38%",
@@ -115,12 +115,87 @@ export const referenceProjects = [
     },
     content: `
       <h2>Sistem RFID pentru ștanțare și autentificare</h2>
-      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, controlul autentificării s-a îmbunătățit dramatic.</p>
+      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.</p>
       <h3>Rezultate</h3>
       <ul>
         <li>Eficiență +38%</li>
         <li>Erori -65%</li>
         <li>Productivitate +42%</li>
+      </ul>
+    `,
+  },
+  {
+    id: 6,
+    title: "Delphi Technologies - Monitorizarea individuală a produselor pe linia de asamblare a rampelor de injecție",
+    slug: "delphi-monitorizare-individuala-rampa-injectie",
+    logo: "/Logos/delphi.svg",
+    sector: "Industria auto",
+    image: "/Logos/delphi.svg",
+    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerile incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajungeau la liniile de ambalare, aprovizionarea necesară cu materiale pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniilor.",
+    technologies: ["Barcode", "Assembly Tracking", "MES Integration"],
+    results: {
+      efficiency: "44%",
+      defects: "68%",
+      productivity: "41%",
+    },
+    content: `
+      <h2>Monitorizarea individuală a produselor pe linia de asamblare</h2>
+      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerile incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajungeau la liniile de ambalare, aprovizionarea necesară cu materiale pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniilor.</p>
+      <h3>Rezultate</h3>
+      <ul>
+        <li>Eficiență +44%</li>
+        <li>Defecte -68%</li>
+        <li>Productivitate +41%</li>
+      </ul>
+    `,
+  },
+  {
+    id: 7,
+    title: "Mey Diageo - Sistem de control al camerei pentru etichete",
+    slug: "mey-diageo-control-camera-etichete",
+    logo: "/Logos/mey-diageo.svg",
+    sector: "Alimente",
+    image: "/Logos/mey-diageo.svg",
+    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    technologies: ["Vision Systems", "Label Inspection", "Quality Control"],
+    results: {
+      efficiency: "39%",
+      defects: "63%",
+      productivity: "37%",
+    },
+    content: `
+      <h2>Sistem de control al camerei pentru etichete</h2>
+      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.</p>
+      <h3>Rezultate</h3>
+      <ul>
+        <li>Eficiență +39%</li>
+        <li>Defecte -63%</li>
+        <li>Productivitate +37%</li>
+      </ul>
+    `,
+  },
+  {
+    id: 8,
+    title: "PMI - Urmărirea filtrelor",
+    slug: "pmi-urmarirea-filtrelor",
+    logo: "/Logos/pmi.svg",
+    sector: "Tutun",
+    image: "/Logos/pmi.svg",
+    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    technologies: ["Filter Tracking", "RFID", "Process Monitoring"],
+    results: {
+      efficiency: "36%",
+      defects: "59%",
+      productivity: "34%",
+    },
+    content: `
+      <h2>Urmărirea filtrelor</h2>
+      <p>În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.</p>
+      <h3>Rezultate</h3>
+      <ul>
+        <li>Eficiență +36%</li>
+        <li>Defecte -59%</li>
+        <li>Productivitate +34%</li>
       </ul>
     `,
   },

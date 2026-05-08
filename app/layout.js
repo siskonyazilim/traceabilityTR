@@ -1,6 +1,6 @@
 import './globals.css'
 import { Layout } from '../components/layout/Layout'
-import { Inter, Nunito } from 'next/font/google'
+import { Inter, Nunito, Poppins } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,6 +13,13 @@ const nunito = Nunito({
   subsets: ['latin'],
   weight: ['400', '600', '700', '800'],
   variable: '--font-nunito',
+  display: 'swap',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['500', '600', '700', '800'],
+  variable: '--font-poppins',
   display: 'swap',
 })
 
@@ -39,7 +46,7 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.variable} ${nunito.variable}`}>
+      <body className={`${inter.variable} ${nunito.variable} ${poppins.variable}`}>
         <Layout>
           {children}
         </Layout>

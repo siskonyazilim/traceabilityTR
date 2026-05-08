@@ -19,8 +19,7 @@ export default function EndToEndTracePage() {
         'Real-time analytics',
         'Machine learning capabilities',
       ],
-      icon: '🏭',
-      image: '/images/services/smart-factories.png',
+      image: '/resmi/Factory.jpg',
     },
     {
       id: 'zero-failure',
@@ -33,8 +32,7 @@ export default function EndToEndTracePage() {
         'Detecție automată anomalii',
         'Alert și notificări',
       ],
-      icon: '✓',
-      image: '/images/services/zero-failure.png',
+      image: '/resmi/G2015-1134.jpg',
     },
     {
       id: 'poka-yoke',
@@ -47,8 +45,7 @@ export default function EndToEndTracePage() {
         'Zero tolerance pentru erori',
         'Conformitate 100%',
       ],
-      icon: '🎯',
-      image: '/images/services/poka-yoke.png',
+      image: '/resmi/Pick_to_Light_P2L_Siskon.jpg',
     },
     {
       id: 'smart-tracking',
@@ -61,8 +58,25 @@ export default function EndToEndTracePage() {
         'Anomaly detection',
         'Optimization suggestions',
       ],
-      icon: '🔍',
-      image: '/images/services/smart-tracking.png',
+      image: '/resmi/shutterstock_272671019.jpg',
+    },
+  ];
+
+  const benefits = [
+    {
+      title: 'Vedere Completă',
+      description: 'Vizibilitate totală asupra proceselor de producție în timp real.',
+      image: '/resmi/what_is_traceability-1288x724-1.jpg',
+    },
+    {
+      title: 'Eficiență Maximă',
+      description: 'Optimizare automată a proceselor pentru productivitate ridicată.',
+      image: '/resmi/shutterstock_459829051.jpg',
+    },
+    {
+      title: 'Calitate Garantată',
+      description: 'Sistem fail-safe care previne erorile și asigură zero defecțiuni.',
+      image: '/resmi/PIC1970.jpg',
     },
   ];
 
@@ -73,6 +87,46 @@ export default function EndToEndTracePage() {
           title="Trasabilitate End-to-End"
           subtitle="Soluții complete și integrate pentru controlul total al producției"
         />
+
+        <div className="flex flex-wrap gap-4 justify-center mb-14">
+          <Link href="#architecture-flow">
+            <Button variant="solid" size="lg">Vezi Fluxul Arhitectural</Button>
+          </Link>
+          <Link href="#benefits-section">
+            <Button variant="outline" size="lg">Beneficii și Conținut Relevat</Button>
+          </Link>
+        </div>
+
+        <motion.section
+          id="architecture-flow"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-16 rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="p-8 lg:p-10">
+              <h2 className="text-3xl font-bold text-primary-black mb-4">Arhitectură End-to-End pentru Trasabilitate</h2>
+              <p className="text-gray-text mb-6 leading-relaxed">
+                Platforma conectează echipamentele de producție, punctele de control al calității și sistemele ERP/MES
+                într-un flux unificat de date. Fiecare lot, componentă și operație este urmărită cap-coadă.
+              </p>
+              <div className="space-y-3 text-gray-text">
+                <div className="flex items-start gap-3"><span className="text-accent-blue font-bold">01</span><span>Captură date din linie: senzori, scanere, terminale operator.</span></div>
+                <div className="flex items-start gap-3"><span className="text-accent-blue font-bold">02</span><span>Validare și reguli Poka-Yoke la fiecare etapă critică.</span></div>
+                <div className="flex items-start gap-3"><span className="text-accent-blue font-bold">03</span><span>Analiză în timp real pentru alerte, rapoarte și decizii rapide.</span></div>
+              </div>
+            </div>
+            <div className="min-h-[300px] lg:min-h-full bg-slate-100">
+              <img
+                src="/resmi/shutterstock_98753879.jpg"
+                alt="Arhitectură digitală pentru trasabilitate industrială"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </motion.section>
 
         {/* Main Sections */}
         <div className="space-y-16">
@@ -90,11 +144,8 @@ export default function EndToEndTracePage() {
             >
               {/* Content */}
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="text-4xl">{section.icon}</div>
-                  <h2 className="text-3xl font-bold text-primary-black">
-                    {section.title}
-                  </h2>
+                <div className="mb-4">
+                  <h2 className="text-3xl font-bold text-primary-black">{section.title}</h2>
                 </div>
 
                 <p className="text-gray-text text-lg mb-6 leading-relaxed">
@@ -102,8 +153,8 @@ export default function EndToEndTracePage() {
                 </p>
 
                 <div className="space-y-3 mb-8">
-                  {section.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
+                  {section.features.map((feature) => (
+                    <div key={`${section.id}-${feature}`} className="flex items-center gap-3">
                       <span className="text-accent-blue font-bold">✓</span>
                       <span className="text-gray-text">{feature}</span>
                     </div>
@@ -128,11 +179,11 @@ export default function EndToEndTracePage() {
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.target.style.display = 'none';
-                    e.target.parentElement.querySelector('.fallback-service-icon')?.classList.remove('hidden');
+                    e.target.parentElement.querySelector('.fallback-service-image')?.classList.remove('hidden');
                   }}
                 />
-                <div className="fallback-service-icon hidden absolute inset-0 bg-gradient-to-br from-accent-blue to-accent-green flex items-center justify-center text-8xl">
-                  {section.icon}
+                <div className="fallback-service-image hidden absolute inset-0 bg-slate-100 text-slate-600 flex items-center justify-center text-base font-medium px-4 text-center">
+                  Imagine relevantă indisponibilă
                 </div>
               </motion.div>
             </motion.section>
@@ -141,40 +192,27 @@ export default function EndToEndTracePage() {
 
         {/* Benefits Section */}
         <motion.section
+          id="benefits-section"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mt-24 bg-gradient-to-r from-accent-blue to-accent-green rounded-2xl p-12 text-white"
+          className="mt-24"
         >
-          <h2 className="text-4xl font-bold mb-8 text-center">
-            De ce alegi Traceability?
-          </h2>
+          <h2 className="text-4xl font-bold mb-8 text-center text-primary-black">Conținut Relevat pentru Implementare</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-6xl mb-4">📊</div>
-              <h3 className="text-2xl font-bold mb-2">Vedere Completă</h3>
-              <p className="text-white text-opacity-90">
-                Vizibilitate totală asupra proceselor de producție în timp real
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold mb-2">Eficiență Maximă</h3>
-              <p className="text-white text-opacity-90">
-                Optimizare automată a proceselor pentru productivitate ridicată
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-6xl mb-4">🔒</div>
-              <h3 className="text-2xl font-bold mb-2">Calitate Garantată</h3>
-              <p className="text-white text-opacity-90">
-                Sistem fail-safe care previne erorile și asigură zero defecțiuni
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {benefits.map((item) => (
+              <article key={item.title} className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-44 bg-slate-100">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-2 text-primary-black">{item.title}</h3>
+                  <p className="text-gray-text">{item.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </motion.section>
 

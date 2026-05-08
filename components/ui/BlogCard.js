@@ -12,7 +12,7 @@ export const BlogCard = ({ post }) => {
 
   return (
     <motion.div
-      className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden h-full"
+      className="bg-white rounded-2xl border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -20,7 +20,7 @@ export const BlogCard = ({ post }) => {
       whileHover={{ y: -5 }}
     >
       {/* Blog Image */}
-      <div className="aspect-video bg-gradient-to-br from-accent-blue to-accent-green flex items-center justify-center overflow-hidden relative">
+      <div className="aspect-video bg-gradient-to-br from-slate-blue to-primary-black flex items-center justify-center overflow-hidden relative">
         <img
           src="/images/blog/traceability_icon_top_left.png"
           alt="Traceability icon"
@@ -42,10 +42,10 @@ export const BlogCard = ({ post }) => {
       
       <div className="p-6">
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-xs font-semibold text-accent-blue uppercase">
+          <span className="text-xs font-semibold text-secondary-blue uppercase">
             {post.category}
           </span>
-          <span className="text-xs text-gray-text">{date}</span>
+          <span className="text-xs text-inactive-gray">{date}</span>
         </div>
         
         <h3 className="text-lg font-bold text-primary-black mb-3 line-clamp-2 hover:text-accent-blue transition-colors">
@@ -60,7 +60,7 @@ export const BlogCard = ({ post }) => {
         
         <Link 
           href={`/blog/${post.slug}`}
-          className="text-accent-blue font-semibold text-sm hover:underline"
+          className="text-secondary-blue font-semibold text-sm hover:text-accent-blue"
         >
           Citește mai mult →
         </Link>

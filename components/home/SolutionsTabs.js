@@ -15,15 +15,17 @@ const iconMap = {
   'link': '🔗',
 };
 
+const solutionIconMap = {
+  'qr-code': '/solution/single_product_tracking.svg',
+  'boxes': '/solution/batch_tracking.svg',
+  'lightbulb': '/solution/data_flow_traceability.svg',
+  'map-pin': '/solution/rtls_tracking.svg',
+  'warehouse': '/solution/warehouse_management.svg',
+  'link': '/solution/integration.svg',
+};
+
 export const SolutionsTabs = () => {
   const [activeTab, setActiveTab] = useState('solutions');
-
-  const colorMap = {
-    'accent-blue': 'bg-accent-blue',
-    'accent-green': 'bg-accent-green',
-    'accent-yellow': 'bg-accent-yellow',
-    'accent-red': 'bg-accent-red',
-  };
 
   return (
     <section id="traceability-solutions" className="py-16 md:py-24 bg-white">
@@ -39,8 +41,8 @@ export const SolutionsTabs = () => {
             onClick={() => setActiveTab('solutions')}
             className={`px-8 py-3 rounded-full font-semibold transition-all ${
               activeTab === 'solutions'
-                ? 'bg-accent-blue text-white'
-                : 'bg-gray-light text-primary-black hover:bg-opacity-80'
+                ? 'bg-secondary-blue text-white shadow-lg'
+                : 'bg-white border border-gray-light text-inactive-gray hover:text-secondary-blue hover:border-secondary-blue'
             }`}
           >
             Soluții
@@ -49,8 +51,8 @@ export const SolutionsTabs = () => {
             onClick={() => setActiveTab('products')}
             className={`px-8 py-3 rounded-full font-semibold transition-all ${
               activeTab === 'products'
-                ? 'bg-accent-green text-white'
-                : 'bg-gray-light text-primary-black hover:bg-opacity-80'
+                ? 'bg-accent-blue text-white shadow-lg'
+                : 'bg-white border border-gray-light text-inactive-gray hover:text-accent-blue hover:border-accent-blue'
             }`}
           >
             Produse
@@ -68,14 +70,27 @@ export const SolutionsTabs = () => {
             {solutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                className="bg-gradient-to-br from-gray-light to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl p-6 border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.3 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <div className="text-4xl mb-4">{iconMap[solution.icon]}</div>
+                <div className="mb-4 h-14 w-14 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center overflow-hidden">
+                  {solutionIconMap[solution.icon] ? (
+                    <img
+                      src={solutionIconMap[solution.icon]}
+                      alt={solution.title}
+                      className="h-9 w-9 object-contain"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.parentElement.querySelector('.fallback-solution-icon')?.classList.remove('hidden');
+                      }}
+                    />
+                  ) : null}
+                  <span className="fallback-solution-icon hidden text-2xl text-slate-blue">{iconMap[solution.icon]}</span>
+                </div>
                 <h3 className="text-lg font-bold text-primary-black mb-2">
                   {solution.title}
                 </h3>
@@ -98,7 +113,7 @@ export const SolutionsTabs = () => {
             {products.map((product, index) => (
               <motion.div
                 key={product.id}
-                className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                className="rounded-2xl overflow-hidden border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all bg-white"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.3 }}
@@ -106,17 +121,17 @@ export const SolutionsTabs = () => {
                 whileHover={{ y: -5 }}
               >
                 {/* Product Image */}
-                <div className={`${colorMap[product.color]} h-32 flex items-center justify-center overflow-hidden relative`}>
+                <div className="h-32 flex items-center justify-center overflow-hidden relative bg-[#eceff1] border-b border-slate-200">
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-4"
                     onError={(e) => {
                       e.target.style.display = 'none';
                       e.target.parentElement.querySelector('.fallback-product-icon')?.classList.remove('hidden');
                     }}
                   />
-                  <div className={`fallback-product-icon hidden absolute inset-0 ${colorMap[product.color]} flex items-center justify-center text-4xl`}>
+                  <div className="fallback-product-icon hidden absolute inset-0 bg-[#eceff1] flex items-center justify-center text-4xl">
                     🎯
                   </div>
                 </div>
@@ -127,9 +142,6 @@ export const SolutionsTabs = () => {
                   <p className="text-gray-text text-sm mb-4">
                     {product.description}
                   </p>
-                  <button className={`w-full ${colorMap[product.color]} text-white font-semibold py-2 rounded-full hover:opacity-90 transition-all`}>
-                    {product.buttonText || 'Mai multe informații'}
-                  </button>
                 </div>
               </motion.div>
             ))}

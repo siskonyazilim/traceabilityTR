@@ -8,9 +8,9 @@ export const Button = ({
   const baseStyles = 'font-semibold transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-lg hover:shadow-xl';
   
   const variants = {
-    solid: 'bg-accent-blue text-white hover:bg-opacity-90 hover:scale-110 hover:shadow-2xl focus:ring-accent-blue',
-    outline: 'border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white hover:scale-105 focus:ring-accent-blue',
-    text: 'text-accent-blue underline hover:text-opacity-80 focus:ring-accent-blue',
+    solid: 'bg-secondary-blue text-white hover:bg-accent-blue hover:scale-110 hover:shadow-2xl focus:ring-secondary-blue',
+    outline: 'border-2 border-secondary-blue text-secondary-blue hover:bg-secondary-blue hover:text-white hover:scale-105 focus:ring-secondary-blue',
+    text: 'text-secondary-blue underline hover:text-accent-blue focus:ring-secondary-blue',
     secondary: 'bg-accent-green text-white hover:bg-opacity-90 hover:scale-110 hover:shadow-2xl focus:ring-accent-green',
   };
 
