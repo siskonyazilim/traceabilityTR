@@ -1,0 +1,61 @@
+const sharedLeadershipText = `Inteligența senzorilor, independența, inovația și leadership-ul sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre trecut și viitor. Idealul dumneavoastră își găsește locul în mijlocul zilei de ieri și de astăzi. Aceasta include putere, dorință, cerere și viziune. Aici se construiește o cultură corporativă prosperă și se preconizează un design de viitor care inspiră responsabilitate și motivație.
+
+În conformitate cu idealurile sale corporative, SICK își bazează operațiunile interne pe valorile de bază ale independenței, inovației și leadership-ului. Acest lucru este demonstrat de angajamentul companiei de a-și menține independența juridică și financiară, de a gândi și de a acționa în mod durabil și de a-și asuma responsabilitatea socială adecvată. Succesul SICK se bazează pe încrederea acordată de clienții, furnizorii, angajații și publicul nostru și acest lucru ar trebui să rămână același și în viitor.`;
+
+export const strategicPartners = [
+  {
+    id: 1,
+    name: "SICK",
+    logo: "/Logos/sick-logo.svg",
+    detailLogo: "/Logos/sick-logo.svg",
+    slug: "sick",
+    breadcrumbLabel: "SICK",
+    description: "Lider global în tehnologii de senzori și automatizare industrială.",
+    website: "https://www.sick.com",
+    fullDescription: sharedLeadershipText,
+  },
+  {
+    id: 2,
+    name: "Universal Robots",
+    logo: "/Logos/universal_robots.svg",
+    detailLogo: "/Logos/universal-robots-logo.svg",
+    slug: "universal-robots",
+    breadcrumbLabel: "UNIVERSAL ROBOTS",
+    description: "Lider mondial în roboți colaborativi (coboți) pentru producție.",
+    website: "https://www.universalrobots.com",
+    fullDescription: sharedLeadershipText,
+  },
+  {
+    id: 3,
+    name: "Markem-Imaje",
+    logo: "/Logos/markem-imaje-logo.svg",
+    detailLogo: "/Logos/markem-imaje-logo.svg",
+    slug: "markem-imaje",
+    breadcrumbLabel: "Proiectul A.Ş.",
+    description: "Soluții avansate de codare, marcare și serializare industrială.",
+    website: "https://www.markem-imaje.com",
+    fullDescription: sharedLeadershipText,
+  },
+  {
+    id: 4,
+    name: "Interroll",
+    logo: "/Logos/interroll-logo.svg",
+    detailLogo: "/Logos/Interroll.svg",
+    slug: "interroll",
+    breadcrumbLabel: "INTERROLL",
+    description: "Expert global în sisteme transportoare și echipamente logistice.",
+    website: "https://www.interroll.com",
+    fullDescription: sharedLeadershipText,
+  },
+  {
+    id: 5,
+    name: "Sewio",
+    logo: "/Logos/sewio-logo.svg",
+    detailLogo: "/Logos/sewio-logo.svg",
+    slug: "sewio",
+    breadcrumbLabel: "SEWIO",
+    description: "Specialist RTLS și IoT pentru localizare și urmărire în timp real.",
+    website: "https://www.sewio.net",
+    fullDescription: sharedLeadershipText,
+  },
+];
