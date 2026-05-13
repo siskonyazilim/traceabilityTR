@@ -45,13 +45,13 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
-      <FaqAccordion />
       <SolutionsTabs />
       <TechnologyCapabilities />
       <ReferenceProjects />
       <StrategicPartners />
       <PerformanceMetrics />
       <BlogPreview />
+      <FaqAccordion />
       <HomeCta />
     </>
   );

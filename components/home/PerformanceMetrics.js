@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable react/prop-types */
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -51,7 +52,7 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
       className="text-center"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
       viewport={{ once: true }}
     >
       <div className="text-5xl md:text-6xl font-bold text-accent-blue mb-2">
@@ -84,7 +85,7 @@ export const PerformanceMetrics = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -97,9 +98,9 @@ export const PerformanceMetrics = () => {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          {metrics.map((metric, index) => (
+          {metrics.map((metric) => (
             <Counter
-              key={index}
+              key={metric.label}
               end={metric.end}
               duration={2}
               label={metric.label}
@@ -111,7 +112,7 @@ export const PerformanceMetrics = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.12 }}
           viewport={{ once: true }}
           className="text-center"
         >

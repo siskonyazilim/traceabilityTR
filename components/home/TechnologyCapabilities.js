@@ -31,7 +31,7 @@ export default function TechnologyCapabilities() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -50,7 +50,7 @@ export default function TechnologyCapabilities() {
                 key={capability.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.06 }}
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl p-8 border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all group"
               >
@@ -58,7 +58,7 @@ export default function TechnologyCapabilities() {
                   <img
                     src={capability.image}
                     alt={capability.title}
-                    className="h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="h-14 w-14 object-contain transition-transform duration-200 group-hover:scale-[1.03]"
                     onError={(e) => {
                       e.target.style.display = 'none';
                       e.target.parentElement.querySelector('.fallback-capability-icon')?.classList.remove('hidden');

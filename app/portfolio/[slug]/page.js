@@ -38,16 +38,16 @@ export default function PortfolioDetailPage({ params }) {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-24 pb-16">
+    <div className="min-h-screen bg-[#f8fafc] pt-24 pb-16">
       <Container>
         {/* Back Button */}
-        <Link href="/proiecte-de-referinta" className="inline-flex items-center gap-2 text-accent-blue hover:underline mb-8">
+        <Link href="/proiecte-de-referinta" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
           <FiArrowLeft /> Înapoi la Proiecte
         </Link>
 
         <article className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="mb-10">
+          <div className="mb-10 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_14px_36px_rgba(10,10,43,0.08)]">
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_320px] gap-8 items-start mb-4">
               <div>
                 <div className="flex items-center gap-3 mb-4">
@@ -78,7 +78,7 @@ export default function PortfolioDetailPage({ params }) {
           </div>
 
           {/* Featured Image */}
-          <div className={`w-full h-72 md:h-96 bg-gradient-to-br ${sectorColors[project.sector] || 'from-accent-blue'} to-dark-bg rounded-2xl flex items-center justify-center mb-8 text-white text-6xl overflow-hidden relative`}>
+          <div className={`w-full h-72 md:h-96 bg-gradient-to-br ${sectorColors[project.sector] || 'from-accent-blue'} to-dark-bg rounded-2xl flex items-center justify-center mb-8 text-white text-6xl overflow-hidden relative border border-slate-200`}>
             <img
               src={featuredImage}
               alt={project.title}
@@ -87,7 +87,7 @@ export default function PortfolioDetailPage({ params }) {
           </div>
 
           {/* Technologies */}
-          <div className="mb-8 pb-8 border-b border-gray-light">
+          <div className="mb-8 pb-8 border-b border-gray-light rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
             <h2 className="text-2xl font-bold text-primary-black mb-4">
               Tehnologii Utilizate
             </h2>
@@ -104,7 +104,7 @@ export default function PortfolioDetailPage({ params }) {
           </div>
 
           {/* Content */}
-          <div className="prose prose-lg max-w-none mb-12">
+          <div className="prose prose-lg max-w-none mb-12 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_10px_28px_rgba(10,10,43,0.06)]">
             <div
               dangerouslySetInnerHTML={{ __html: project.content }}
               className="text-gray-text leading-relaxed space-y-4"
@@ -125,7 +125,7 @@ export default function PortfolioDetailPage({ params }) {
           )}
 
           {/* Results */}
-          <div className="bg-gradient-to-r from-accent-blue to-accent-green rounded-2xl p-8 text-white mb-12">
+          <div className="bg-gradient-to-r from-accent-blue to-accent-green rounded-2xl p-8 text-white mb-12 shadow-[0_14px_34px_rgba(0,130,210,0.24)]">
             <h2 className="text-2xl font-bold mb-6">Rezultate</h2>
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
@@ -181,16 +181,12 @@ export default function PortfolioDetailPage({ params }) {
               Contactează-ne pentru a discuta cum putem implementa o soluție similară în afacerea ta.
             </p>
             <div className="flex gap-5 justify-center flex-wrap">
-              <Link href="/contact">
-                <Button variant="solid" size="lg">
-                  Cere Ofertă
-                </Button>
-              </Link>
-              <Link href="/proiecte-de-referinta">
-                <Button variant="outline" size="lg">
-                  Vezi Toate Referințele
-                </Button>
-              </Link>
+              <Button as={Link} href="/contact" variant="solid" size="lg">
+                Cere Ofertă
+              </Button>
+              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg">
+                Vezi Toate Referințele
+              </Button>
             </div>
           </div>
         </article>

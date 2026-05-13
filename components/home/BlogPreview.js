@@ -92,11 +92,15 @@ export const BlogPreview = () => {
         </div>
 
         <div className="flex justify-center">
-          <Link href="/blog">
-            <Button variant="outline" size="lg" className="border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
-              MERGI LA BLOG
-            </Button>
-          </Link>
+          <Button
+            as={Link}
+            href="/blog"
+            variant="outline"
+            size="lg"
+            className="border-primary-black text-primary-black hover:bg-primary-black hover:text-white"
+          >
+            MERGI LA BLOG
+          </Button>
         </div>
       </Container>
     </section>

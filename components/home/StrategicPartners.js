@@ -91,14 +91,14 @@ export const StrategicPartners = () => {
                   className="h-full rounded-2xl bg-white/95 backdrop-blur-sm border border-slate-200 shadow-sm hover:shadow-xl hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: index * 0.08 }}
-                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.45, delay: index * 0.06 }}
+                  whileHover={{ y: -2 }}
                 >
                   <div className="h-36 flex items-center justify-center p-6">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-14 w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                      className="max-h-14 w-full object-contain transition-transform duration-200 group-hover:scale-[1.02]"
                       onError={(e) => {
                         e.target.style.display = 'none';
                       }}
@@ -112,7 +112,7 @@ export const StrategicPartners = () => {
                     <p className="text-sm text-gray-text leading-relaxed min-h-[3.5rem]">
                       {partner.description}
                     </p>
-                    <span className="inline-block mt-4 text-accent-blue font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                    <span className="inline-block mt-4 text-accent-blue font-semibold text-sm group-hover:translate-x-0.5 transition-transform duration-200">
                       Detalii →
                     </span>
                   </div>

@@ -55,7 +55,7 @@ export const HeroSlider = () => {
           className="absolute inset-0 w-full h-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: current === index ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.35 }}
         >
           {/* Background Video */}
           <video
@@ -68,18 +68,19 @@ export const HeroSlider = () => {
             <source src={slide.video} type="video/mp4" />
           </video>
 
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-black/45 via-primary-black/20 to-primary-black/55"></div>
+          {/* Fixed and gradient overlays keep contrast stable across slides. */}
+          <div className="absolute inset-0 bg-primary-black/58"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-black/58 via-primary-black/34 to-primary-black/62"></div>
 
           {/* Content */}
           <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
             <div className="w-full max-w-5xl mx-auto text-center">
               <motion.h1
-                className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.98] tracking-tight uppercase drop-shadow-lg"
+                className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.98] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
                 style={{ fontFamily: 'var(--font-poppins)' }}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
-                transition={{ delay: 0.2, duration: 0.7 }}
+                transition={{ delay: 0.12, duration: 0.45 }}
               >
                 {slide.title}
               </motion.h1>
@@ -88,9 +89,9 @@ export const HeroSlider = () => {
                 className="text-white mt-6 sm:mt-7"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
-                transition={{ delay: 0.4, duration: 0.7 }}
+                transition={{ delay: 0.2, duration: 0.45 }}
               >
-                <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl mx-auto">
                   {slide.subtitle}
                 </p>
               </motion.div>
@@ -105,7 +106,7 @@ export const HeroSlider = () => {
           <button
             key={`hero-dot-${slide.id}`}
             onClick={() => goToSlide(index)}
-            className={`h-3 rounded-full transition-all ${
+            className={`h-3 rounded-full transition-all duration-200 ${
               current === index
                 ? 'bg-slate-blue w-8'
                 : 'bg-inactive-gray bg-opacity-70 w-3 hover:bg-accent-blue'

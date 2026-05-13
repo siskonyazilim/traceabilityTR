@@ -32,17 +32,17 @@ export default function BlogDetailPage({ params }) {
   const shareText = `Citez: ${post.title}`;
 
   return (
-    <div className="min-h-screen bg-white pb-16">
+    <div className="min-h-screen bg-[#f8fafc] pb-16">
       <Container>
         <div className="py-12">
           {/* Back Button */}
-          <Link href="/blog" className="inline-flex items-center gap-2 text-accent-blue hover:underline mb-8">
+          <Link href="/blog" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
             <FiArrowLeft /> Înapoi la Blog
           </Link>
 
-          <article className="max-w-3xl mx-auto">
+          <article className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="mb-8">
+          <div className="mb-8 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_14px_36px_rgba(10,10,43,0.08)]">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-xs font-semibold text-accent-blue uppercase bg-accent-blue bg-opacity-20 px-3 py-1 rounded-full">
                 {post.category}
@@ -50,7 +50,7 @@ export default function BlogDetailPage({ params }) {
               <span className="text-sm text-gray-text">{date}</span>
             </div>
 
-            <h1 className="text-5xl font-bold text-primary-black mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-primary-black mb-4 leading-[1.08]">
               {post.title}
             </h1>
 
@@ -95,7 +95,7 @@ export default function BlogDetailPage({ params }) {
           </div>
 
           {/* Feature Image */}
-          <div className="w-full h-96 bg-gradient-to-br from-accent-blue to-accent-green rounded-2xl flex items-center justify-center mb-8 text-white text-6xl overflow-hidden relative">
+          <div className="w-full h-72 md:h-96 bg-gradient-to-br from-accent-blue to-accent-green rounded-2xl flex items-center justify-center mb-8 text-white text-6xl overflow-hidden relative border border-slate-200">
             <Image
               src={post.image}
               alt={post.title}
@@ -108,7 +108,7 @@ export default function BlogDetailPage({ params }) {
           </div>
 
           {/* Content */}
-          <div className="prose prose-lg max-w-none mb-12">
+          <div className="prose prose-lg max-w-none mb-12 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_10px_28px_rgba(10,10,43,0.06)]">
             <div
               dangerouslySetInnerHTML={{ __html: post.content }}
               className="text-gray-text leading-relaxed space-y-4"
@@ -130,18 +130,16 @@ export default function BlogDetailPage({ params }) {
           )}
 
           {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-accent-blue to-accent-green rounded-2xl p-8 text-white text-center">
+          <div className="mt-16 bg-gradient-to-r from-accent-blue to-accent-green rounded-2xl p-8 text-white text-center shadow-[0_14px_34px_rgba(0,130,210,0.24)]">
             <h3 className="text-2xl font-bold mb-4">
               Ai nevoie de o soluție de trasabilitate?
             </h3>
             <p className="mb-6 text-white text-opacity-90">
               Contactează-ne pentru a afla cum putem ajuta afacerea ta.
             </p>
-            <Link href="/contact">
-              <Button variant="solid" size="lg" className="bg-white text-accent-blue hover:bg-opacity-90">
-                Contactează-ne
-              </Button>
-            </Link>
+            <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-white text-accent-blue hover:bg-opacity-90">
+              Contactează-ne
+            </Button>
           </div>
           </article>
         </div>

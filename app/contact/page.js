@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import Button from '../../components/ui/Button';
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
@@ -59,10 +60,16 @@ export default function ContactPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           viewport={{ once: true }}
           className="pt-4 md:pt-6 pb-14 md:pb-20"
         >
+          <div className="mb-10 md:mb-12 rounded-3xl border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
+            <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">Contact</p>
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.08] mb-4">Discutam despre procesul tau de trasabilitate</h1>
+            <p className="text-base md:text-lg text-white/90 max-w-3xl">Alege biroul potrivit sau trimite-ne un mesaj. Revenim rapid cu o propunere adaptata fluxurilor tale operationale.</p>
+          </div>
+
           <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-10 md:mb-12 text-center">
             Birourile Noastre
           </h2>
@@ -73,7 +80,7 @@ export default function ContactPage() {
                 key={office.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.3 }}
+                transition={{ delay: index * 0.06, duration: 0.25 }}
                 viewport={{ once: true }}
                 className="grid grid-cols-1 lg:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-2xl overflow-hidden"
               >
@@ -138,9 +145,9 @@ export default function ContactPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-2xl p-6 md:p-10 lg:p-12"
+            className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-2xl p-6 md:p-10 lg:p-12 shadow-[0_14px_34px_rgba(10,10,43,0.08)]"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-8 text-center">
               Trimitere Mesaj
@@ -267,9 +274,9 @@ export default function ContactPage() {
               />
               <label htmlFor="privacy" className="text-sm text-gray-text">
                 Sunt de acord cu{' '}
-                <a href="/" className="text-accent-blue font-semibold hover:underline">
+                <Link href="/" className="text-accent-blue font-semibold hover:underline">
                   politica de confidențialitate
-                </a>
+                </Link>
                 {' '}*
               </label>
             </div>

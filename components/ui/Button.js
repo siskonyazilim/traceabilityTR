@@ -1,17 +1,26 @@
-export const Button = ({ 
-  children, 
-  variant = 'solid', 
+/* eslint-disable react/prop-types */
+
+export const Button = ({
+  children,
+  variant = 'solid',
   size = 'md',
   className = '',
-  ...props 
+  as: Component = 'button',
+  type,
+  ...props
 }) => {
-  const baseStyles = 'font-semibold transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-lg hover:shadow-xl';
-  
+  const isNativeButton = Component === 'button';
+  const resolvedType = isNativeButton ? (type || 'button') : undefined;
+
+  const baseStyles = 'inline-flex items-center justify-center rounded-full font-semibold transition-[background-color,color,border-color,box-shadow,transform] duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60';
+  const stateStyles = 'shadow-[var(--shadow-btn-rest)] hover:shadow-[var(--shadow-btn-hover)] active:shadow-[var(--shadow-btn-active)] hover:-translate-y-px active:translate-y-0';
+
+  // UI state matrix: default -> hover -> focus-visible -> active -> disabled.
   const variants = {
-    solid: 'bg-secondary-blue text-white hover:bg-accent-blue hover:scale-110 hover:shadow-2xl focus:ring-secondary-blue',
-    outline: 'border-2 border-secondary-blue text-secondary-blue hover:bg-secondary-blue hover:text-white hover:scale-105 focus:ring-secondary-blue',
-    text: 'text-secondary-blue underline hover:text-accent-blue focus:ring-secondary-blue',
-    secondary: 'bg-accent-green text-white hover:bg-opacity-90 hover:scale-110 hover:shadow-2xl focus:ring-accent-green',
+    solid: 'bg-secondary-blue text-white hover:bg-accent-blue focus-visible:ring-[var(--ring-focus)]',
+    outline: 'border-2 border-secondary-blue text-secondary-blue bg-white hover:bg-secondary-blue hover:text-white focus-visible:ring-[var(--ring-focus)]',
+    text: 'text-secondary-blue underline underline-offset-4 shadow-none hover:text-accent-blue hover:shadow-none active:shadow-none',
+    secondary: 'bg-accent-green text-white hover:bg-[#0b7f3d] focus-visible:ring-[var(--ring-focus)]',
   };
 
   const sizes = {
@@ -21,12 +30,13 @@ export const Button = ({
   };
 
   return (
-    <button 
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+    <Component
+      type={resolvedType}
+      className={`${baseStyles} ${stateStyles} ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 };
 

@@ -9,31 +9,31 @@ const faqs = [
   {
     id: 1,
     question: 'Ce este trasabilitatea industrială?',
-    answer: 'Trasabilitatea este capacitatea de a urmări un produs sau serviciu. Aceasta permite fabricilor să urmărească cu ușurință datele produsului de la materia primă până la distribuție. Astfel, atunci când se întâmpină o problemă de producție, toate informațiile, cum ar fi parametrii materiei prime, parametrii de calitate, rezultatele testelor, linia de producție sau operatorul din producție, pot fi accesate prin intermediul sistemului de trasabilitate.',
+    answer: 'Trasabilitatea urmărește produsul de la materia primă la livrare. Când apare o problemă, găsești rapid lotul, parametrii de proces, linia și operatorul implicat.',
   },
   {
     id: 2,
     question: 'De ce urmărim produsul?',
-    answer: 'Atunci când se întâmpină o problemă la produs, ar trebui să fie posibilă accesarea tuturor proceselor, de la parametrii de calitate la materiale și de la mașina pe care este produs până la operator. În același timp, este esențial să se găsească cauza acestei probleme cât mai curând posibil. Sursa problemei poate fi detectată cu ușurință datorită datelor colectate prin sistemul de trasabilitate.',
+    answer: 'Pentru a reduce rebuturile, costurile și timpul de intervenție. Sistemul identifică rapid cauza, limitează impactul și accelerează acțiunile corective.',
   },
   {
     id: 3,
     question: 'Cum urmărim produsul?',
-    answer: 'În funcție de producție, pot fi utilizate diferite metode. Numărul lotului, numărul de serie, data de producție sunt utilizate pentru identificarea automată. Datele de trasabilitate sunt adăugate automat de cititoare pe măsură ce produsul urmează traseul. Etichetele de pe produse pot fi coduri de bare, Data Matrix sau RFID. Datele colectate pot fi stocate atât pe servere fizice, cât și în sisteme cloud.',
+    answer: 'Prin coduri de bare, Data Matrix sau RFID, în funcție de fluxul de producție. Datele sunt colectate automat pe traseu și stocate local sau în cloud.',
   },
 ];
 
 export const FaqAccordion = () => {
-  const [openId, setOpenId] = useState(1);
+  const [openId, setOpenId] = useState(null);
 
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white font-sans">
+    <section id="faq" className="py-14 md:py-20 bg-[#f8fafc] font-sans">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start lg:items-stretch">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start lg:items-stretch">
           <div className="lg:col-span-4 lg:self-stretch flex items-center">
             <div className="pl-6 md:pl-7 border-l-4 border-secondary-blue">
               <p className="text-secondary-blue text-xs md:text-sm uppercase tracking-[0.18em] font-semibold mb-3">
@@ -45,13 +45,13 @@ export const FaqAccordion = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-8 border-t border-slate-200">
+          <div className="lg:col-span-8 border-t border-slate-200 bg-white rounded-2xl px-5 md:px-7 shadow-sm">
             {faqs.map((faq) => (
             <motion.div
               key={faq.id}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
               viewport={{ once: true }}
               className="border-b border-slate-200"
             >
@@ -68,7 +68,7 @@ export const FaqAccordion = () => {
                 </h3>
                 <motion.div
                   animate={{ rotate: openId === faq.id ? 45 : 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                   className={`${openId === faq.id ? 'text-secondary-blue' : 'text-slate-500'} flex-shrink-0`}
                 >
                   <FiPlus size={28} />
@@ -84,10 +84,10 @@ export const FaqAccordion = () => {
                   height: openId === faq.id ? 'auto' : 0,
                   opacity: openId === faq.id ? 1 : 0,
                 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.2 }}
                 className="overflow-hidden"
               >
-                <p className="pb-6 md:pb-7 pr-10 text-gray-text leading-relaxed text-sm md:text-base max-w-4xl">
+                <p className="pb-6 md:pb-7 pr-10 text-gray-text leading-relaxed text-sm md:text-base max-w-3xl">
                   {faq.answer}
                 </p>
               </motion.div>

@@ -138,11 +138,9 @@ export const ReferenceProjects = () => {
 
         {/* View All Button */}
         <div className="flex justify-center">
-          <Link href="/proiecte-de-referinta">
-            <Button variant="outline" size="lg">
-              TOATE PROIECTELE NOASTRE
-            </Button>
-          </Link>
+          <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg">
+            TOATE PROIECTELE NOASTRE
+          </Button>
         </div>
       </Container>
     </section>

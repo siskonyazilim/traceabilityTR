@@ -15,12 +15,8 @@ export default function NotFound() {
             Continutul pentru aceasta adresa nu este disponibil momentan.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Link href="/">
-              <Button variant="solid" size="lg">Inapoi la Acasa</Button>
-            </Link>
-            <Link href="/contact">
-              <Button variant="outline" size="lg">Contact</Button>
-            </Link>
+            <Button as={Link} href="/" variant="solid" size="lg">Inapoi la Acasa</Button>
+            <Button as={Link} href="/contact" variant="outline" size="lg">Contact</Button>
           </div>
         </div>
       </Container>

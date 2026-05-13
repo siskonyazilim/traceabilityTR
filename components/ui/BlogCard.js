@@ -20,9 +20,9 @@ export const BlogCard = ({ post }) => {
       className="bg-white rounded-2xl border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
       viewport={{ once: true }}
-      whileHover={{ y: -5 }}
+      whileHover={{ y: -2 }}
     >
       {/* Blog Image */}
       <div className="aspect-video bg-gradient-to-br from-slate-blue to-primary-black flex items-center justify-center overflow-hidden relative">

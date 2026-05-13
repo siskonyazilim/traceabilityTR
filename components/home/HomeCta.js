@@ -14,16 +14,12 @@ export const HomeCta = () => {
             Planificăm împreună o soluție de trasabilitate adaptată fluxurilor tale operaționale.
           </p>
           <div className="flex gap-5 justify-center flex-wrap">
-            <Link href="/contact">
-              <Button variant="solid" size="lg">
-                Cere Ofertă
-              </Button>
-            </Link>
-            <Link href="/proiecte-de-referinta">
-              <Button variant="outline" size="lg">
-                Vezi Referințele
-              </Button>
-            </Link>
+            <Button as={Link} href="/contact" variant="solid" size="lg">
+              Cere Ofertă
+            </Button>
+            <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg">
+              Vezi Referințele
+            </Button>
           </div>
         </div>
       </Container>
