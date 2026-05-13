@@ -5,6 +5,7 @@ import Container from '../../../components/ui/Container';
 import BlogCard from '../../../components/ui/BlogCard';
 import Button from '../../../components/ui/Button';
 import { blogPosts } from '../../../data/blogPosts';
+import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { FiArrowLeft, FiTwitter, FiLinkedin, FiFacebook } from 'react-icons/fi';
 /* eslint-disable react/prop-types */
 
@@ -30,6 +31,7 @@ export default function BlogDetailPage({ params }) {
 
   const shareUrl = `https://traceability.ro/blog/${post.slug}`;
   const shareText = `Citez: ${post.title}`;
+  const safeContent = sanitizeRichText(post.content);
 
   return (
     <div className="min-h-screen bg-[#f8fafc] pb-16">
@@ -110,7 +112,7 @@ export default function BlogDetailPage({ params }) {
           {/* Content */}
           <div className="prose prose-lg max-w-none mb-12 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_10px_28px_rgba(10,10,43,0.06)]">
             <div
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={{ __html: safeContent }}
               className="text-gray-text leading-relaxed space-y-4"
             />
           </div>

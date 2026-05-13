@@ -43,7 +43,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#traceability-solutions" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href="/#traceability-solutions" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   Soluții
                 </Link>
               </li>

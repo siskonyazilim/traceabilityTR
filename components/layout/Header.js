@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const isHomePage = pathname === '/';
   const useTransparentHeader = isHomePage && !scrolled && !isOpen;
 
@@ -31,7 +32,8 @@ export const Header = () => {
     }
 
     // If section is not on the current page, go to homepage anchor.
-    globalThis.location.href = `/${id}`;
+    router.push(`/${id}`);
+    setIsOpen(false);
   };
 
   const navItems = [
@@ -44,7 +46,7 @@ export const Header = () => {
 
   let headerBackgroundClass = 'bg-white border-b border-slate-blue/10 shadow-[0_10px_32px_rgba(10,10,43,0.08)]';
   if (useTransparentHeader) {
-    headerBackgroundClass = 'bg-transparent';
+    headerBackgroundClass = 'bg-primary-black/32 backdrop-blur-[2px]';
   }
 
   return (
@@ -109,14 +111,14 @@ export const Header = () => {
                 {item.href.startsWith('#') ? (
                   <button
                     onClick={() => handleNavClick(item.href)}
-                    className="w-full text-left px-3 py-2 text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
+                    className="w-full text-left px-4 py-3 text-base text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
                   >
                     {item.label}
                   </button>
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-3 py-2 text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
+                    className="block px-4 py-3 text-base text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
                   >
                     {item.label}
                   </Link>

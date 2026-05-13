@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { referenceProjects } from '../../../data/references';
+import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { FiArrowLeft } from 'react-icons/fi';
 /* eslint-disable react/prop-types */
 
@@ -26,6 +27,7 @@ export default function PortfolioDetailPage({ params }) {
   const relatedProjects = referenceProjects
     .filter((p) => p.sector === project.sector && p.id !== project.id)
     .slice(0, 3);
+  const safeContent = sanitizeRichText(project.content);
 
   const featuredImage = project.heroImage
     || (project.image?.includes('/Logos/') ? '/resmi/Factory.jpg' : project.image);
@@ -106,7 +108,7 @@ export default function PortfolioDetailPage({ params }) {
           {/* Content */}
           <div className="prose prose-lg max-w-none mb-12 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_10px_28px_rgba(10,10,43,0.06)]">
             <div
-              dangerouslySetInnerHTML={{ __html: project.content }}
+              dangerouslySetInnerHTML={{ __html: safeContent }}
               className="text-gray-text leading-relaxed space-y-4"
             />
           </div>
