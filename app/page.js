@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 import HeroSlider from '../components/home/HeroSlider';
 import HomeCta from '../components/home/HomeCta';
