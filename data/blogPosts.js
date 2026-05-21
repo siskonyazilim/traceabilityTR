@@ -4,7 +4,7 @@ export const blogPosts = [
     title: 'Procedura Chestny ZNAK: Sistemul digital de trasabilitate al Rusiei',
     titleTr: "Chestny ZNAK Proseduru: Rusya'nin Dijital Izlenebilirlik Sistemi",
     slug: 'chestny-znak-russia-traceability-system',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2025-01-29',
     author: 'Admin',
@@ -19,20 +19,20 @@ export const blogPosts = [
   },
   {
     id: 2,
-    title: 'The Importance of Food Traceability for End Consumers',
+    title: 'Importanța Trasabilității Alimentare pentru Consumatorii Finali',
     titleTr: 'Gida Izlenebilirliginin Son Tuketiciler Icin Onemi',
     slug: 'the-importance-of-food-traceability-for-end-consumers',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2024-11-25',
     author: 'Admin',
     image: '/images/blog/photos/food-traceability-consumers.jpg',
-    excerpt: 'Food traceability helps end consumers make safer and better-informed choices through transparency, quality control and rapid recall capabilities.',
+    excerpt: 'Trasabilitatea alimentară ajută consumatorii finali să facă alegeri mai sigure și mai informate prin transparență, control al calității și capacități rapide de retragere.',
     content: `
-      <h2>Overview</h2>
-      <p>Food traceability provides visibility across sourcing, production and distribution. It helps consumers access trusted information about food origin and safety.</p>
-      <h2>Consumer Impact</h2>
-      <p>With stronger traceability, brands respond faster during incidents and build long-term trust through verifiable data.</p>
+      <h2>Prezentare Generală</h2>
+      <p>Trasabilitatea alimentară oferă vizibilitate completă de la aprovizionare, producție până la distribuție. Ajută consumatorii să acceseze informații de încredere despre originea și siguranța alimentelor.</p>
+      <h2>Impact asupra Consumatorilor</h2>
+      <p>Cu o trasabilitate mai puternică, mărcile răspund mai rapid în timpul incidentelor și construiesc încredere pe termen lung prin date verificabile.</p>
     `,
   },
   {
@@ -40,14 +40,14 @@ export const blogPosts = [
     title: 'Trasabilitatea Produselor: De ce este esentiala pentru Calitate, Incredere si Durabilitate?',
     titleTr: 'Urun Izlenebilirligi: Kalite, Guven ve Surdurulebilirlik Icin Neden Esansiyeldir?',
     slug: 'product-traceability-why-is-it-essential-for-quality-trust-and-sustainability',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2024-10-08',
     author: 'Admin',
     image: '/images/blog/photos/product-traceability-quality.jpg',
     excerpt: 'Trasabilitatea produselor sustine performanta operationala si protejeaza increderea consumatorilor prin control, conformitate si date verificabile.',
     content: `
-      <h2>Context</h2>
+      <h2>Context General</h2>
       <p>Trasabilitatea produselor este un element-cheie pentru organizatiile care urmaresc calitate constanta si operatiuni sustenabile.</p>
       <h2>Beneficii principale</h2>
       <ul>
@@ -59,185 +59,185 @@ export const blogPosts = [
   },
   {
     id: 4,
-    title: 'Food Traceability and Standards: The Importance of Product, Carton, and Pallet Traceability',
+    title: 'Trasabilitatea Alimentară și Standarde: Importanța Trasabilității Produselor, Cutiilor și Paleților',
     titleTr: 'Gida Izlenebilirligi ve Standartlar: Urun, Koli ve Palet Izlenebilirliginin Onemi',
     slug: 'food-traceability-and-standards-the-importance-of-product-carton-and-pallet-traceability',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2024-07-30',
     author: 'Admin',
     image: '/images/blog/photos/food-standards-pallet.jpg',
-    excerpt: 'A practical perspective on food traceability standards across product, carton and pallet levels for full logistics visibility.',
+    excerpt: 'O perspectivă practică asupra standardelor de trasabilitate alimentară la nivel de produs, cutie și palet pentru vizibilitate completă logistică.',
     content: `
-      <h2>Standards in practice</h2>
-      <p>Implementing traceability at multiple packaging levels enables better warehouse, transport and recall performance.</p>
-      <h2>Tracking levels</h2>
+      <h2>Standarde în Practică</h2>
+      <p>Implementarea trasabilității la mai multe niveluri de ambalare permite performanțe mai bune în depozitare, transport și retragere de produse.</p>
+      <h2>Niveluri de Urmărire</h2>
       <ul>
-        <li>Product level</li>
-        <li>Carton level</li>
-        <li>Pallet level</li>
+        <li>Nivel produs</li>
+        <li>Nivel cutie</li>
+        <li>Nivel palet</li>
       </ul>
     `,
   },
   {
     id: 5,
-    title: 'Barcode Systems Used in Traceability',
+    title: 'Sisteme de Coduri de Bare Utilizate în Trasabilitate',
     titleTr: 'Izlenebilirlikte Kullanilan Barkod Sistemleri',
     slug: 'barcode-systems-used-in-traceability',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2024-07-23',
     author: 'Admin',
     image: '/images/blog/photos/barcode-systems-industrial.jpg',
-    excerpt: 'Barcode technologies such as 1D, 2D and Data Matrix remain core building blocks for reliable and scalable traceability.',
+    excerpt: 'Tehnologiile de coduri de bare precum 1D, 2D și Data Matrix rămân componente esențiale pentru trasabilitate fiabilă și scalabilă.',
     content: `
-      <p>In today's rapidly digitalizing world, barcode systems have become indispensable for enhancing efficiency in production and logistics processes, ensuring product traceability, and streamlining operations. Barcodes enable the tracking and management of products at every stage from production to consumption.</p>
-      <p>The history of barcode technology began in 1948 with the development of the first optical scanning system by Norman Joseph Woodland and Bernard Silver. The first barcode scanner was used in a U.S. supermarket in 1974, marking the beginning of the widespread commercial adoption of barcode technology. In Turkey, barcode technology was first implemented in 1988, a significant milestone in the modernization of the retail sector.</p>
-      <p>The barcode technologies we extensively use in our traceability solutions are critical for ensuring products are traceable at every step from production to consumption.</p>
-      <h2><strong>Commonly Used Barcode Systems Worldwide</strong></h2>
+      <p>În lumea actuală în rapid proces de digitalizare, sistemele de coduri de bare au devenit indispensabile pentru creșterea eficienței în procesele de producție și logistică, asigurând trasabilitatea produselor și simplificarea operațiunilor. Codurile de bare permit urmărirea și gestionarea produselor în fiecare etapă, de la producție până la consum.</p>
+      <p>Istoria tehnologiei codurilor de bare a început în 1948 cu dezvoltarea primului sistem de scanare optică de către Norman Joseph Woodland și Bernard Silver. Primul scaner de coduri de bare a fost folosit într-un supermarket din SUA în 1974, marcând începutul adoptării comerciale pe scară largă a tehnologiei codurilor de bare. În Turcia, tehnologia codurilor de bare a fost implementată pentru prima dată în 1988, un moment semnificativ în modernizarea sectorului de retail.</p>
+      <p>Tehnologiile de coduri de bare pe care le folosim extensiv în soluțiile noastre de trasabilitate sunt critice pentru asigurarea că produsele sunt trasabile în fiecare etapă, de la producție până la consum.</p>
+      <h2><strong>Sisteme de Coduri de Bare Utilizate Frecvent la Nivel Global</strong></h2>
       <h3><strong>EAN-8</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Small products</li>
-        <li><strong>Structure</strong>: 7 data digits and 1 check digit</li>
-        <li><strong>Features</strong>: Similar to EAN-13 but designed for smaller products due to its compact size.</li>
+        <li><strong>Caz de Utilizare</strong>: Produse mici</li>
+        <li><strong>Structură</strong>: 7 cifre de date și 1 cifră de verificare</li>
+        <li><strong>Caracteristici</strong>: Similar cu EAN-13, dar conceput pentru produse mai mici datorită dimensiunii sale compacte.</li>
       </ul>
       <h3><strong>EAN-13 (European Article Number)</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Retail products</li>
-        <li><strong>Structure</strong>: 12 data digits and 1 check digit</li>
-        <li><strong>Features</strong>: Globally used for product identification, providing a unique identifier for each product.</li>
+        <li><strong>Caz de Utilizare</strong>: Produse de retail</li>
+        <li><strong>Structură</strong>: 12 cifre de date și 1 cifră de verificare</li>
+        <li><strong>Caracteristici</strong>: Utilizat global pentru identificarea produselor, oferind un identificator unic pentru fiecare produs.</li>
       </ul>
       <h3><strong>UPC-A (Universal Product Code)</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Retail products</li>
-        <li><strong>Structure</strong>: 11 data digits and 1 check digit</li>
-        <li><strong>Features</strong>: Similar to EAN-13, widely used in the United States for product identification.</li>
+        <li><strong>Caz de Utilizare</strong>: Produse de retail</li>
+        <li><strong>Structură</strong>: 11 cifre de date și 1 cifră de verificare</li>
+        <li><strong>Caracteristici</strong>: Similar cu EAN-13, utilizat pe scară largă în Statele Unite pentru identificarea produselor.</li>
       </ul>
       <h3><strong>UPC-E</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Small products</li>
-        <li><strong>Structure</strong>: 6 data digits and 1 check digit</li>
-        <li><strong>Features</strong>: A compact version of UPC-A, offering the same functionality with less space.</li>
+        <li><strong>Caz de Utilizare</strong>: Produse mici</li>
+        <li><strong>Structură</strong>: 6 cifre de date și 1 cifră de verificare</li>
+        <li><strong>Caracteristici</strong>: O versiune compactă a UPC-A, oferind aceeași funcționalitate cu mai puțin spațiu.</li>
       </ul>
       <h3><strong>Code 39</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Industrial applications, logistics</li>
-        <li><strong>Structure</strong>: Variable-length character string</li>
-        <li><strong>Features</strong>: Supports alphanumeric characters, widely used in manufacturing and warehouse management.</li>
+        <li><strong>Caz de Utilizare</strong>: Aplicații industriale, logistică</li>
+        <li><strong>Structură</strong>: Șir de caractere de lungime variabilă</li>
+        <li><strong>Caracteristici</strong>: Suportă caractere alfanumerice, utilizat pe scară largă în producție și gestionarea depozitelor.</li>
       </ul>
       <h3><strong>Code 128</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Logistics, transportation</li>
-        <li><strong>Structure</strong>: Variable-length character string</li>
-        <li><strong>Features</strong>: High data capacity, supports various character sets.</li>
+        <li><strong>Caz de Utilizare</strong>: Logistică, transport</li>
+        <li><strong>Structură</strong>: Șir de caractere de lungime variabilă</li>
+        <li><strong>Caracteristici</strong>: Capacitate mare de date, suportă diverse seturi de caractere.</li>
       </ul>
       <h3><strong>QR Code (Quick Response Code)</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Mobile payments, product information, websites</li>
-        <li><strong>Structure</strong>: Alphanumeric characters in a square module array</li>
-        <li><strong>Features</strong>: Offers fast reading and high data capacity, widely used in mobile apps and marketing campaigns.</li>
+        <li><strong>Caz de Utilizare</strong>: Plăți mobile, informații despre produse, site-uri web</li>
+        <li><strong>Structură</strong>: Caractere alfanumerice într-o matrice pătrată de module</li>
+        <li><strong>Caracteristici</strong>: Oferă citire rapidă și capacitate mare de date, utilizat pe scară largă în aplicații mobile și campanii de marketing.</li>
       </ul>
       <h3><strong>Data Matrix</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Electronic components, pharmaceuticals</li>
-        <li><strong>Structure</strong>: Alphanumeric characters in square or rectangular modules</li>
-        <li><strong>Features</strong>: Stores large amounts of data in small spaces with high error correction capability.</li>
+        <li><strong>Caz de Utilizare</strong>: Componente electronice, produse farmaceutice</li>
+        <li><strong>Structură</strong>: Caractere alfanumerice în module pătrate sau rectangulare</li>
+        <li><strong>Caracteristici</strong>: Stochează cantități mari de date în spații mici cu capabilitate ridicată de corectare a erorilor.</li>
       </ul>
       <h3><strong>PDF417</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Identification cards, travel documents</li>
-        <li><strong>Structure</strong>: Code consisting of multiple rows and columns</li>
-        <li><strong>Features</strong>: Capable of encoding large datasets, used in a wide range of applications.</li>
+        <li><strong>Caz de Utilizare</strong>: Cărți de identitate, documente de călătorie</li>
+        <li><strong>Structură</strong>: Cod format din mai multe rânduri și coloane</li>
+        <li><strong>Caracteristici</strong>: Capabil să codifice seturi mari de date, utilizat într-o gamă largă de aplicații.</li>
       </ul>
       <h3><strong>ITF (Interleaved 2 of 5)</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Carton boxes, logistics</li>
-        <li><strong>Structure</strong>: Encodes pairs of digits</li>
-        <li><strong>Features</strong>: Provides high reading speed and accuracy, widely used in logistics.</li>
+        <li><strong>Caz de Utilizare</strong>: Cutii de carton, logistică</li>
+        <li><strong>Structură</strong>: Codifică perechi de cifre</li>
+        <li><strong>Caracteristici</strong>: Oferă viteză mare de citire și acuratețe, utilizat pe scară largă în logistică.</li>
       </ul>
       <h3><strong>Codabar</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Libraries, blood banks, healthcare</li>
-        <li><strong>Structure</strong>: Consists of 16 symbols, including four start and four stop characters</li>
-        <li><strong>Features</strong>: Simple and flexible, suitable for small datasets.</li>
+        <li><strong>Caz de Utilizare</strong>: Biblioteci, bănci de sânge, sănătate</li>
+        <li><strong>Structură</strong>: Constă din 16 simboluri, incluzând patru caractere de start și patru de stop</li>
+        <li><strong>Caracteristici</strong>: Simplu și flexibil, potrivit pentru seturi mici de date.</li>
       </ul>
       <h3><strong>MSI (Modified Plessey)</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Warehousing, retail</li>
-        <li><strong>Structure</strong>: Numeric data only</li>
-        <li><strong>Features</strong>: Variable-length data with a check digit, commonly used in retail and storage.</li>
+        <li><strong>Caz de Utilizare</strong>: Depozitare, retail</li>
+        <li><strong>Structură</strong>: Doar date numerice</li>
+        <li><strong>Caracteristici</strong>: Date de lungime variabilă cu o cifră de verificare, utilizat frecvent în retail și stocare.</li>
       </ul>
       <h3><strong>Aztec Code</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Travel documents, mobile ticketing</li>
-        <li><strong>Structure</strong>: Square modules</li>
-        <li><strong>Features</strong>: High data capacity, fast reading, and robust error correction.</li>
+        <li><strong>Caz de Utilizare</strong>: Documente de călătorie, bilete mobile</li>
+        <li><strong>Structură</strong>: Module pătrate</li>
+        <li><strong>Caracteristici</strong>: Capacitate mare de date, citire rapidă și corectare robustă a erorilor.</li>
       </ul>
       <h3><strong>MaxiCode</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Package tracking, logistics</li>
-        <li><strong>Structure</strong>: Hexagonal cells around a central target point</li>
-        <li><strong>Features</strong>: Fast reading and high data capacity, primarily used by UPS.</li>
+        <li><strong>Caz de Utilizare</strong>: Urmărire pachete, logistică</li>
+        <li><strong>Structură</strong>: Celule hexagonale în jurul unui punct central țintă</li>
+        <li><strong>Caracteristici</strong>: Citire rapidă și capacitate mare de date, utilizat în principal de UPS.</li>
       </ul>
       <h3><strong>GS1 DataBar</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Retail, small products</li>
-        <li><strong>Structure</strong>: Contains 14-digit GTIN (Global Trade Item Number)</li>
-        <li><strong>Features</strong>: Compact, capable of encoding extensive data for small products.</li>
+        <li><strong>Caz de Utilizare</strong>: Retail, produse mici</li>
+        <li><strong>Structură</strong>: Conține GTIN de 14 cifre (Global Trade Item Number)</li>
+        <li><strong>Caracteristici</strong>: Compact, capabil să codifice date extensive pentru produse mici.</li>
       </ul>
       <h3><strong>Code 93</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Industrial applications, logistics</li>
-        <li><strong>Structure</strong>: Variable-length character string</li>
-        <li><strong>Features</strong>: More compact and secure than Code 39, offering higher data density.</li>
+        <li><strong>Caz de Utilizare</strong>: Aplicații industriale, logistică</li>
+        <li><strong>Structură</strong>: Șir de caractere de lungime variabilă</li>
+        <li><strong>Caracteristici</strong>: Mai compact și sigur decât Code 39, oferind densitate mai mare de date.</li>
       </ul>
       <h3><strong>Micro QR Code</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Electronic components, small products</li>
-        <li><strong>Structure</strong>: Small square modules</li>
-        <li><strong>Features</strong>: High reading capacity in small spaces.</li>
+        <li><strong>Caz de Utilizare</strong>: Componente electronice, produse mici</li>
+        <li><strong>Structură</strong>: Module pătrate mici</li>
+        <li><strong>Caracteristici</strong>: Capacitate mare de citire în spații mici.</li>
       </ul>
       <h3><strong>MicroPDF417</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Identification cards, small labels</li>
-        <li><strong>Structure</strong>: Compact row and column arrangement</li>
-        <li><strong>Features</strong>: Encodes large amounts of data in small spaces.</li>
+        <li><strong>Caz de Utilizare</strong>: Cărți de identitate, etichete mici</li>
+        <li><strong>Structură</strong>: Aranjament compact de rânduri și coloane</li>
+        <li><strong>Caracteristici</strong>: Codifică cantități mari de date în spații mici.</li>
       </ul>
-      <h3><strong>GS1-128 (formerly UCC/EAN-128)</strong></h3>
+      <h3><strong>GS1-128 (fost UCC/EAN-128)</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Logistics, transportation, warehousing</li>
-        <li><strong>Structure</strong>: Variable-length alphanumeric characters</li>
-        <li><strong>Features</strong>: High data capacity, supports various application identifiers.</li>
+        <li><strong>Caz de Utilizare</strong>: Logistică, transport, depozitare</li>
+        <li><strong>Structură</strong>: Caractere alfanumerice de lungime variabilă</li>
+        <li><strong>Caracteristici</strong>: Capacitate mare de date, suportă diverse identificatori de aplicație.</li>
       </ul>
       <h3><strong>Plessey Code</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Libraries, retail</li>
-        <li><strong>Structure</strong>: Numeric data</li>
-        <li><strong>Features</strong>: Commonly used in small businesses and libraries.</li>
+        <li><strong>Caz de Utilizare</strong>: Biblioteci, retail</li>
+        <li><strong>Structură</strong>: Date numerice</li>
+        <li><strong>Caracteristici</strong>: Utilizat frecvent în afaceri mici și biblioteci.</li>
       </ul>
       <h3><strong>Code 11</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Telecommunications</li>
-        <li><strong>Structure</strong>: Numeric data and dash character</li>
-        <li><strong>Features</strong>: Includes one or two check digits for error correction.</li>
+        <li><strong>Caz de Utilizare</strong>: Telecomunicații</li>
+        <li><strong>Structură</strong>: Date numerice și caracter linie</li>
+        <li><strong>Caracteristici</strong>: Include una sau două cifre de verificare pentru corectarea erorilor.</li>
       </ul>
       <h3><strong>GS1 DataBar Expanded</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Fresh produce, variable-weight products</li>
-        <li><strong>Structure</strong>: 14-digit GTIN and additional data</li>
-        <li><strong>Features</strong>: Can encode additional elements like serial numbers, lot numbers, and expiration dates.</li>
+        <li><strong>Caz de Utilizare</strong>: Produse proaspete, produse cu greutate variabilă</li>
+        <li><strong>Structură</strong>: GTIN de 14 cifre și date suplimentare</li>
+        <li><strong>Caracteristici</strong>: Poate codifica elemente suplimentare precum numere de serie, numere de lot și date de expirare.</li>
       </ul>
       <h3><strong>Pharmacode</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Pharmaceutical industry</li>
-        <li><strong>Structure</strong>: Numeric data only</li>
-        <li><strong>Features</strong>: Used for error detection and accuracy in drug packaging.</li>
+        <li><strong>Caz de Utilizare</strong>: Industria farmaceutică</li>
+        <li><strong>Structură</strong>: Doar date numerice</li>
+        <li><strong>Caracteristici</strong>: Utilizat pentru detectarea erorilor și acuratețe în ambalarea medicamentelor.</li>
       </ul>
       <h3><strong>Han Xin Code</strong></h3>
       <ul>
-        <li><strong>Use Case</strong>: Chinese market, general use</li>
-        <li><strong>Structure</strong>: Square or rectangular matrix</li>
-        <li><strong>Features</strong>: High data density, supports both numeric and alphanumeric data.</li>
+        <li><strong>Caz de Utilizare</strong>: Piața chineză, utilizare generală</li>
+        <li><strong>Structură</strong>: Matrice pătrată sau rectangulară</li>
+        <li><strong>Caracteristici</strong>: Densitate mare de date, suportă atât date numerice, cât și alfanumerice.</li>
       </ul>
     `,
   },
@@ -246,7 +246,7 @@ export const blogPosts = [
     title: 'Cum se implementeaza trasabilitatea individuala a produselor?',
     titleTr: 'Bireysel Urun Izlenebilirligi Nasil Uygulanir?',
     slug: 'how-to-implement-individual-product-traceability',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2021-10-05',
     author: 'Admin',
@@ -277,7 +277,7 @@ export const blogPosts = [
     title: 'Care sunt beneficiile sistemelor de trasabilitate?',
     titleTr: 'Izlenebilirlik Sistemlerinin Faydalari Nelerdir?',
     slug: 'what-are-the-benefits-of-traceability-systems',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2021-10-04',
     author: 'Admin',
@@ -290,121 +290,121 @@ export const blogPosts = [
   },
   {
     id: 8,
-    title: 'What Are Traceability Data? Definition of Traceability',
+    title: 'Ce Sunt Datele de Trasabilitate? Definiția Trasabilității',
     titleTr: 'Izlenebilirlik Verileri Nedir? Izlenebilirlik Tanimi',
     slug: 'what-are-traceability-data-definition-of-traceability',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2021-10-02',
     author: 'Admin',
     image: '/images/blog/photos/traceability-data-definition.jpg',
-    excerpt: 'Traceability data includes production, logistics and quality events that make each product journey auditable and measurable.',
+    excerpt: 'Datele de trasabilitate includ evenimente de producție, logistică și calitate care fac fiecare parcurs al produsului auditabil și măsurabil.',
     content: `
-      <p>Traceability data is, at its core, quite simple. Traceability involves recording all events that affect a product. This data is collected throughout the entire production process, including materials added (BOM and critical components), tools used, process steps performed, and test results, all recorded based on serial numbers.</p>
-      <p>It is common to see traceability data collected and compiled manually. Any data collection process involving human intervention raises concerns about reliability. Manually collected data on paper is highly prone to errors. Additionally, assigning operators, who should focus solely on value-added production tasks, with extra responsibilities for data recording and processing creates hidden costs for businesses.</p>
-      <h2><strong>Values of Traceability: Active Quality Management</strong></h2>
-      <p>Rather than focusing solely on traceability data for product recall scenarios, something businesses never want to face, it is far more valuable to view traceability data as a real-time quality management tool. Consider a scenario where a single defect is recorded in a batch of a thousand products. Typically, pinpointing the exact cause of such one-off defects is nearly impossible, as they appear random. With reliable and detailed traceability data, a root cause analysis can be conducted to identify the conditions and events leading to the defect. As part of a Quality Management System, corrective actions can be defined and implemented to ensure the error never recurs. To amplify the benefits, similar actions can be applied to other products in comparable processes. Digital traceability enables businesses to achieve real and continuous improvement toward zero-defect production operations.</p>
-      <h2><strong>Values of Traceability: Compliance</strong></h2>
-      <p>As electronics have become a critical component in industries such as automotive, white goods, and aerospace, the reliability of electronic products is paramount. In cases of potential failures in final products, determining responsibility for the failure must be assessed quickly. Suppliers are often seen as the source of such errors. Compliance with agreed-upon rules and procedures protects suppliers by proving that no errors or deviations occurred in the production of a defective product. Traceability data meets these requirements instantly, safeguarding suppliers from costly legal disputes.</p>
-      <h2><strong>How Do I Track a Product? SISKON Traceability Solutions</strong></h2>
-      <p><strong>Siskon Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
-      <p><strong>Siskon Traceability Products</strong> electronically link test results, measurements, materials used, set and actual process data, visual inspections, repairs, and data from sampling stations to individual products based on serial numbers. This enables real-time monitoring of production processes, historical reporting, and analytical measurements. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
-      <p>With the motto <strong>Continuous Control, Zero Errors</strong>, we ensure end-to-end digital traceability for your business.</p>
-      <p><strong>Keywords</strong>: Industry 4.0, Traceability, What is Traceability?, Traceability Definition</p>
+      <p>Datele de trasabilitate sunt, în esența lor, destul de simple. Trasabilitatea implică înregistrarea tuturor evenimentelor care afectează un produs. Aceste date sunt colectate pe parcursul întregului proces de producție, inclusiv materiale adăugate (BOM și componente critice), unelte utilizate, etapele procesului efectuate și rezultatele testelor, toate înregistrate pe bază de numere de serie.</p>
+      <p>Este obișnuit să vedem date de trasabilitate colectate și compilate manual. Orice proces de colectare a datelor care implică intervenție umană ridică îngrijorări cu privire la fiabilitate. Datele colectate manual pe hârtie sunt extrem de susceptibile la erori. În plus, atribuirea operatorilor, care ar trebui să se concentreze doar pe sarcinile de producție cu valoare adăugată, cu responsabilități suplimentare pentru înregistrarea și prelucrarea datelor creează costuri ascunse pentru afaceri.</p>
+      <h2><strong>Valorile Trasabilității: Managementul Activ al Calității</strong></h2>
+      <p>În loc să ne concentrăm doar pe datele de trasabilitate pentru scenarii de retragere a produselor, ceva ce afacerile nu doresc niciodată să înfrunte, este mult mai valoros să vedem datele de trasabilitate ca pe un instrument de management al calității în timp real. Luați în considerare un scenariu în care un singur defect este înregistrat într-un lot de o mie de produse. De obicei, identificarea exactă a cauzei unor astfel de defecte unice este aproape imposibilă, deoarece acestea par aleatorii. Cu date de trasabilitate fiabile și detaliate, poate fi efectuată o analiză a cauzei primare pentru a identifica condițiile și evenimentele care au dus la defect. Ca parte a unui Sistem de Management al Calității, pot fi definite și implementate acțiuni corective pentru a asigura că eroarea nu se repetă niciodată. Pentru a amplifica beneficiile, acțiuni similare pot fi aplicate altor produse în procese comparabile. Trasabilitatea digitală permite afacerilor să realizeze îmbunătățiri reale și continue către operațiuni de producție fără defecte.</p>
+      <h2><strong>Valorile Trasabilității: Conformitate</strong></h2>
+      <p>Pe măsură ce electronicele au devenit o componentă critică în industrii precum automotivă, electrocasnice și aerospațială, fiabilitatea produselor electronice este primordială. În cazul potențialelor defecțiuni în produsele finale, determinarea responsabilității pentru defecțiune trebuie evaluată rapid. Furnizorii sunt adesea văzuți ca sursa unor astfel de erori. Conformitatea cu regulile și procedurile convenite protejează furnizorii, dovedind că nu au apărut erori sau abateri în producția unui produs defect. Datele de trasabilitate îndeplinesc aceste cerințe instantaneu, protejând furnizorii de dispute legale costisitoare.</p>
+      <h2><strong>Cum Urmăresc un Produs? Soluții de Trasabilitate SISKON</strong></h2>
+      <p><strong>Soluțiile de Trasabilitate Siskon</strong> vă permit să gestionați toate procesele de producție de pe o singură platformă.</p>
+      <p><strong>Produsele de Trasabilitate Siskon</strong> leagă electronic rezultatele testelor, măsurătorile, materialele utilizate, datele de proces setate și reale, inspecțiile vizuale, reparațiile și datele de la stațiile de eșantionare la produse individuale pe bază de numere de serie. Acest lucru permite monitorizarea în timp real a proceselor de producție, raportarea istorică și măsurători analitice. Acestea susțin procesele operaționale precum fluxul de materiale, comenzile de lucru, gestionarea uneltelor și utilizarea energiei, asigurând colectarea digitală a informațiilor critice dincolo de procesele automatizate. Prin integrări orizontale și verticale, toate procesele de producție pot fi vizualizate și gestionate digital.</p>
+      <p>Cu motto-ul <strong>Control Continuu, Zero Erori</strong>, asigurăm trasabilitate digitală completă, de la un capăt la altul, pentru afacerea dumneavoastră.</p>
+      <p><strong>Cuvinte cheie</strong>: Industrie 4.0, Trasabilitate, Ce este Trasabilitatea?, Definiția Trasabilității</p>
     `,
   },
   {
     id: 9,
-    title: 'BOMI Group Camera-Based Multi-Code Reading System',
+    title: 'Sistem de Citire Multi-Cod Bazat pe Camere BOMI Group',
     titleTr: 'BOMI Group Kamera Tabanli Coklu Kod Okuma Sistemi',
     slug: 'bomi-group-camera-based-multi-code-reading-system',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2020-06-08',
     author: 'Admin',
     image: '/images/blog/photos/bomi-camera-system.jpg',
-    excerpt: 'A camera-based multi-code reading implementation by BOMI Group to improve speed and reliability in industrial identification workflows.',
+    excerpt: 'O implementare de citire multi-cod bazată pe camere de către BOMI Group pentru a îmbunătăți viteza și fiabilitatea în fluxurile de identificare industrială.',
     content: `
-      <p>With this goal in mind, we designed a new product for visualization in the logistics and warehousing sector.</p>
-      <p>For the Turkey warehouse of BOMI Group, a global leader in pharmaceutical logistics, we developed a <strong>Camera-Based Multi-Code Reading System</strong>, automating processes previously performed manually.</p>
-      <p>The line, tailored to BOMI's needs, consists of a 3-meter conveyor, 6 SICK cameras, an operator screen, and a handheld terminal.</p>
-      <p>This system enables automatic verification of products on the order list, speeding up the process and eliminating human errors. In the system we designed, an operator places a box containing 50 products on the conveyor. The box enters an enclosed area, where cameras begin capturing images. Within seconds, Data Matrix codes are read and displayed on the system and operator screen. The codes are compared with the order list to ensure compliance with BOMI standards. Non-compliant codes are highlighted in red, prompting error correction and re-scanning. Once approved by the operator, the order is finalized.</p>
-      <p>If needed, products can be added manually using the handheld terminal.</p>
-      <p>With our Camera-Based Multi-Code Reading System, Siskon has supported our solution partner BOMI in achieving significant advancements in warehouse management.</p>
-      <p>This system, adaptable to various industries and applications, can add value to your business processes. Introduce your brand to us and confidently advance toward Industry 4.0.</p>
-      <p>Siskon continues to code the future.</p>
-      <p><strong>Keywords</strong>: Barcode, BOMI Group, Industry 4.0, Scanning, Siskon</p>
+      <p>Cu acest obiectiv în minte, am proiectat un nou produs pentru vizualizare în sectorul logistic și de depozitare.</p>
+      <p>Pentru depozitul din Turcia al BOMI Group, un lider global în logistica farmaceutică, am dezvoltat un <strong>Sistem de Citire Multi-Cod Bazat pe Camere</strong>, automatizând procesele efectuate anterior manual.</p>
+      <p>Linia, adaptată nevoilor BOMI, constă dintr-o bandă transportoare de 3 metri, 6 camere SICK, un ecran pentru operator și un terminal portabil.</p>
+      <p>Acest sistem permite verificarea automată a produselor din lista de comenzi, accelerând procesul și eliminând erorile umane. În sistemul pe care l-am proiectat, un operator plasează o cutie care conține 50 de produse pe banda transportoare. Cutia intră într-o zonă închisă, unde camerele încep să captureze imagini. În câteva secunde, codurile Data Matrix sunt citite și afișate pe sistem și pe ecranul operatorului. Codurile sunt comparate cu lista de comenzi pentru a asigura conformitatea cu standardele BOMI. Codurile neconforme sunt evidențiate în roșu, solicitând corectarea erorii și re-scanarea. Odată aprobată de operator, comanda este finalizată.</p>
+      <p>Dacă este necesar, produsele pot fi adăugate manual folosind terminalul portabil.</p>
+      <p>Cu Sistemul nostru de Citire Multi-Cod Bazat pe Camere, Siskon a sprijinit partenerul nostru de soluții BOMI în realizarea unor progrese semnificative în gestionarea depozitelor.</p>
+      <p>Acest sistem, adaptabil la diverse industrii și aplicații, poate adăuga valoare proceselor dumneavoastră de afaceri. Prezentați-ne marca dumneavoastră și avansați cu încredere către Industria 4.0.</p>
+      <p>Siskon continuă să codifice viitorul.</p>
+      <p><strong>Cuvinte cheie</strong>: Cod de bare, BOMI Group, Industrie 4.0, Scanare, Siskon</p>
     `,
   },
   {
     id: 10,
-    title: 'TUSIAD SD2: Pioneering Digital Transformation in Industry',
+    title: 'TUSIAD SD2: Pionier în Transformarea Digitală Industrială',
     titleTr: 'TUSIAD SD2: Endustride Dijital Donusume Onculuk Etmek',
     slug: 'tusiad-sd2-pioneering-digital-transformation-in-industry',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2019-09-12',
     author: 'Admin',
     image: '/images/blog/photos/tusiad-sd2.jpg',
-    excerpt: 'Highlights from TUSIAD SD2 and the role of traceability-driven data platforms in accelerating industrial digital transformation.',
+    excerpt: 'Aspecte importante din TUSIAD SD2 și rolul platformelor de date bazate pe trasabilitate în accelerarea transformării digitale industriale.',
     content: `
-      <p>As the first comprehensive program focused on digital transformation in industry, <strong>TUSIAD SD2</strong> brought together 18 leading technology user companies with SME-scale technology suppliers.</p>
-      <p>Matched companies collaborated to develop joint solution dossiers. Success stories from the program were shared with the public at the <strong>Digital Transformation Success Stories Ceremony</strong> held at the end of the year.</p>
-      <p>The second year of TUSIAD's SD2 program, aimed at supporting digital transformation in industry, connected technology user companies seeking digital transformation with the right solution partners while providing technology suppliers with a platform to showcase their solutions and validate them with customers.</p>
-      <p>Following application and pre-selection phases, technology user companies and shortlisted micro, small, and medium-sized technology suppliers came together at the <strong>Industry-Technology Integration Program (STEP)</strong>. During the STEP event, matches were made between technology users and pre-selected technology suppliers. Over the following period, matched companies worked together to prepare solution dossiers. The resulting success stories were shared at the Digital Transformation Success Stories Ceremony at year-end. The event also featured panels with experts discussing topics ranging from public support to digital transformation tools.</p>
-      <p>The opening speech highlighted increasing uncertainties decision-makers face with the Fourth Industrial Revolution and emphasized that SD2 was launched to address this challenge by creating collaboration opportunities to advance Turkey's innovation ecosystem.</p>
-      <p>Another keynote emphasized the intense competitive environment driven by digital transformation and underlined that collaboration between companies, governments, universities, and other stakeholders plays a vital role in competitiveness. It also highlighted new leadership and management skills required in digital transformation.</p>
-      <p>The program details underlined that TUSIAD SD2 was created to address the need for a platform connecting technology users with suppliers. The program strengthens the technology user and supplier ecosystem, addresses user needs, supports SME technology production, and showcases best practices in digital transformation.</p>
-      <p>In the closing remarks, the message was clear: there are no winners or losers in this program, and even unmatched suppliers remain part of a growing network that supports industrial momentum and future success stories.</p>
-      <h2><strong>TUSIAD SD2 Program STEP Event by the Numbers</strong></h2>
+      <p>Ca prim program cuprinzător axat pe transformarea digitală în industrie, <strong>TUSIAD SD2</strong> a reunit 18 companii lider utilizatoare de tehnologie cu furnizori de tehnologie la scară IMM.</p>
+      <p>Companiile potrivite au colaborat pentru a dezvolta dosare de soluții comune. Poveștile de succes din program au fost împărtășite cu publicul la <strong>Ceremonia Poveștilor de Succes în Transformarea Digitală</strong> organizată la sfârșitul anului.</p>
+      <p>Al doilea an al programului SD2 al TUSIAD, menit să sprijine transformarea digitală în industrie, a conectat companiile utilizatoare de tehnologie care caută transformarea digitală cu partenerii de soluții potriviți, oferind în același timp furnizorilor de tehnologie o platformă pentru a-și prezenta soluțiile și pentru a le valida cu clienții.</p>
+      <p>După fazele de aplicare și pre-selecție, companiile utilizatoare de tehnologie și furnizorii micro, mici și mijlocii de tehnologie pre-selectați s-au întâlnit la <strong>Programul de Integrare Industrie-Tehnologie (STEP)</strong>. În timpul evenimentului STEP, au fost făcute potriviri între utilizatorii de tehnologie și furnizorii de tehnologie pre-selectați. Pe parcursul perioadei următoare, companiile potrivite au lucrat împreună pentru a pregăti dosare de soluții. Poveștile de succes rezultate au fost împărtășite la Ceremonia Poveștilor de Succes în Transformarea Digitală la sfârșitul anului. Evenimentul a prezentat, de asemenea, paneluri cu experți care au discutat subiecte care variază de la sprijinul public la instrumentele de transformare digitală.</p>
+      <p>Discursul de deschidere a evidențiat incertitudinile crescânde cu care se confruntă factorii de decizie odată cu a Patra Revoluție Industrială și a subliniat că SD2 a fost lansat pentru a aborda această provocare prin crearea de oportunități de colaborare pentru a avansa ecosistemul de inovare al Turciei.</p>
+      <p>Un alt discurs principal a subliniat mediul competitiv intens determinat de transformarea digitală și a subliniat că colaborarea între companii, guverne, universități și alte părți interesate joacă un rol vital în competitivitate. De asemenea, a evidențiat noile abilități de leadership și management necesare în transformarea digitală.</p>
+      <p>Detaliile programului au subliniat că TUSIAD SD2 a fost creat pentru a răspunde nevoii unei platforme care conectează utilizatorii de tehnologie cu furnizorii. Programul consolidează ecosistemul utilizatorilor și furnizorilor de tehnologie, răspunde nevoilor utilizatorilor, sprijină producția de tehnologie IMM și prezintă cele mai bune practici în transformarea digitală.</p>
+      <p>În observațiile finale, mesajul a fost clar: nu există câștigători sau perdanți în acest program, iar chiar și furnizorii nepotriviți rămân parte dintr-o rețea în creștere care sprijină impulsul industrial și viitoarele povești de succes.</p>
+      <h2><strong>Evenimentul STEP al Programului TUSIAD SD2 în Cifre</strong></h2>
       <ul>
-        <li><strong>Number of Technology User Companies</strong>: 18</li>
-        <li><strong>Number of Technology Suppliers Submitting Solutions for Calls</strong>: 274</li>
-        <li><strong>Number of Shortlisted Suppliers Invited to STEP</strong>: 100</li>
-        <li><strong>Number of High-Potential Suppliers Following the Shortlist</strong>: 100</li>
-        <li><strong>Number of Panelists</strong>: 21</li>
-        <li><strong>Number of Technology User Companies Participating in Both Periods</strong>: 3</li>
-        <li><strong>Number of Suppliers Applying in Both Periods</strong>: 52</li>
-        <li><strong>Number of STEP Event Participants</strong>: 329</li>
+        <li><strong>Număr de Companii Utilizatoare de Tehnologie</strong>: 18</li>
+        <li><strong>Număr de Furnizori de Tehnologie care au Trimis Soluții pentru Apeluri</strong>: 274</li>
+        <li><strong>Număr de Furnizori Pre-selectați Invitați la STEP</strong>: 100</li>
+        <li><strong>Număr de Furnizori cu Potențial Ridicat Urmărind Lista Scurtă</strong>: 100</li>
+        <li><strong>Număr de Paneliști</strong>: 21</li>
+        <li><strong>Număr de Companii Utilizatoare de Tehnologie Participante în Ambele Perioade</strong>: 3</li>
+        <li><strong>Număr de Furnizori care au Aplicat în Ambele Perioade</strong>: 52</li>
+        <li><strong>Număr de Participanți la Evenimentul STEP</strong>: 329</li>
       </ul>
-      <h2><strong>Matches:</strong></h2>
+      <h2><strong>Potriviri:</strong></h2>
       <ul>
-        <li>Assan Hanil Otomotiv Sanayi with Armolis Bilisim and Kesit Bilisim</li>
-        <li>Bayer Turk Kimya Sanayi with Pedudi Bilisim Teknolojileri</li>
-        <li>Brisa Bridgestone with Golive Bilisim</li>
-        <li>Cimsa with Mobirob ARGE</li>
-        <li>Ditas with Konzek Teknoloji</li>
-        <li>Ekoten with Eliar Elektronik</li>
-        <li>Enerjisa Enerji with T4E Enerji</li>
-        <li>Kastamonu Entegre with Buyutech</li>
-        <li>Kordsa with Siskon</li>
-        <li>Migros with AI Labs</li>
-        <li>Nobel Ilac with Simsoft</li>
-        <li>Norm Civata with Alp Otomasyon</li>
-        <li>Organik Kimya with Hareket Kontrol Servis Merkezi</li>
-        <li>Securitas Guvenlik with Arikovani Yazilim</li>
-        <li>TFI TAB Gida Yatirimlari with TUBU ARGE</li>
-        <li>Tofas with B2Metrik Yazilim ve Bilisim</li>
-        <li>Umur Basim Sanayi with Obase Bilgisayar ve Danismanlik</li>
+        <li>Assan Hanil Otomotiv Sanayi cu Armolis Bilisim și Kesit Bilisim</li>
+        <li>Bayer Turk Kimya Sanayi cu Pedudi Bilisim Teknolojileri</li>
+        <li>Brisa Bridgestone cu Golive Bilisim</li>
+        <li>Cimsa cu Mobirob ARGE</li>
+        <li>Ditas cu Konzek Teknoloji</li>
+        <li>Ekoten cu Eliar Elektronik</li>
+        <li>Enerjisa Enerji cu T4E Enerji</li>
+        <li>Kastamonu Entegre cu Buyutech</li>
+        <li>Kordsa cu Siskon</li>
+        <li>Migros cu AI Labs</li>
+        <li>Nobel Ilac cu Simsoft</li>
+        <li>Norm Civata cu Alp Otomasyon</li>
+        <li>Organik Kimya cu Hareket Kontrol Servis Merkezi</li>
+        <li>Securitas Guvenlik cu Arikovani Yazilim</li>
+        <li>TFI TAB Gida Yatirimlari cu TUBU ARGE</li>
+        <li>Tofas cu B2Metrik Yazilim ve Bilisim</li>
+        <li>Umur Basim Sanayi cu Obase Bilgisayar ve Danismanlik</li>
       </ul>
-      <p><strong>Source</strong>: <a href="https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html">https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html</a></p>
-      <p><strong>Keywords</strong>: Industry 4.0, Industrial Transformation, Siskon, TUSIAD SD2</p>
+      <p><strong>Sursă</strong>: <a href="https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html">https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html</a></p>
+      <p><strong>Cuvinte cheie</strong>: Industrie 4.0, Transformare Industrială, Siskon, TUSIAD SD2</p>
     `,
   },
   {
     id: 11,
-    title: 'Siskon at the Future Industrial Technology Fair',
+    title: 'Siskon la Târgul Viitorului Tehnologiilor Industriale',
     titleTr: "Siskon Gelecegin Endustri Teknolojileri Fuari'nda",
     slug: 'siskon-at-the-future-industrial-technology-fair',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2018-12-18',
     author: 'Admin',
     image: '/images/blog/photos/future-industrial-fair.jpg',
-    excerpt: 'Siskon presented traceability and smart factory capabilities focused on operational visibility and quality assurance.',
+    excerpt: 'Siskon a prezentat capabilități de trasabilitate și fabrică inteligentă axate pe vizibilitate operațională și asigurarea calității.',
     content: `
-      <h2>Fair Participation</h2>
-      <p>At FIT, Siskon showcased end-to-end traceability scenarios for high-volume industrial lines.</p>
+      <h2>Participare la Târg</h2>
+      <p>La FIT, Siskon a prezentat scenarii de trasabilitate end-to-end pentru linii industriale de mare volum.</p>
     `,
   },
   {
@@ -412,7 +412,7 @@ export const blogPosts = [
     title: 'Prezentare despre trasabilitate la Evenimentul Industrie 4.0',
     titleTr: 'Endustri 4.0 Etkinliginde Izlenebilirlik Sunumu',
     slug: 'traceability-presentation-at-industry-4-0-event',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2018-11-22',
     author: 'Admin',
@@ -427,7 +427,7 @@ export const blogPosts = [
     title: 'Tablou de bord IoT si Solutii de Trasabilitate la Seminarul de Logistica',
     titleTr: 'Lojistik Seminerinde IoT Panosu ve Izlenebilirlik Cozumleri',
     slug: 'iot-dashboard-and-traceability-solutions-at-logistics-seminar',
-    category: 'News',
+    category: 'Știri',
     categoryEn: 'News',
     date: '2018-11-09',
     author: 'Admin',

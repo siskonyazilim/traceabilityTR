@@ -34,20 +34,20 @@ export default function PortfolioDetailPage({ params }) {
 
   const sectorColors = {
     'Automotive': 'from-accent-blue',
-    'Gıda': 'from-accent-green',
-    'Beyaz Eşya': 'from-accent-yellow',
-    'İlaç': 'from-accent-red',
+    'Alimentar': 'from-accent-green',
+    'Electronice': 'from-accent-yellow',
+    'Farmaceutic': 'from-accent-red',
   };
 
   return (
     <div className="min-h-screen bg-[#f8fafc] pt-24 pb-16">
-      <Container>
+      <Container size="xl">
         {/* Back Button */}
         <Link href="/proiecte-de-referinta" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
           <FiArrowLeft /> Înapoi la Proiecte
         </Link>
 
-        <article className="max-w-5xl mx-auto">
+        <article className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-10 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_14px_36px_rgba(10,10,43,0.08)]">
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_320px] gap-8 items-start mb-4">
@@ -127,7 +127,7 @@ export default function PortfolioDetailPage({ params }) {
           )}
 
           {/* Results */}
-          <div className="bg-gradient-to-r from-accent-blue to-accent-green rounded-2xl p-8 text-white mb-12 shadow-[0_14px_34px_rgba(0,130,210,0.24)]">
+          <div className="bg-primary-black rounded-2xl p-8 text-white mb-12 shadow-[0_14px_34px_rgba(10,10,43,0.3)]">
             <h2 className="text-2xl font-bold mb-6">Rezultate</h2>
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
@@ -176,17 +176,17 @@ export default function PortfolioDetailPage({ params }) {
 
           {/* CTA */}
           <div className="mt-20 text-center">
-            <h3 className="text-4xl font-bold text-primary-black mb-5">
+            <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
               Vrei să transformi și tu procesele de producție?
             </h3>
-            <p className="text-gray-text text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
               Contactează-ne pentru a discuta cum putem implementa o soluție similară în afacerea ta.
             </p>
-            <div className="flex gap-5 justify-center flex-wrap">
-              <Button as={Link} href="/contact" variant="solid" size="lg">
+            <div className="flex gap-6 justify-center flex-wrap">
+              <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
                 Cere Ofertă
               </Button>
-              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg">
+              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
                 Vezi Toate Referințele
               </Button>
             </div>

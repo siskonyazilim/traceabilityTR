@@ -23,6 +23,7 @@ const TechnologyCapabilities = dynamic(() => import('../components/home/Technolo
   loading: () => <DeferredSection />,
 });
 
+
 const ReferenceProjects = dynamic(() => import('../components/home/ReferenceProjects'), {
   ssr: false,
   loading: () => <DeferredSection />,
@@ -47,13 +48,13 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
+      <FaqAccordion />
       <SolutionsTabs />
       <TechnologyCapabilities />
       <ReferenceProjects />
       <StrategicPartners />
       <PerformanceMetrics />
       <BlogPreview />
-      <FaqAccordion />
       <HomeCta />
     </>
   );

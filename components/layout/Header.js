@@ -39,7 +39,6 @@ export const Header = () => {
   const navItems = [
     { label: 'Soluțiile Noastre', href: '#traceability-solutions' },
     { label: 'Parteneri de Soluții', href: '#our-strategic-solution-partners' },
-    { label: 'Industrii', href: '#reference-projects' },
     { label: 'Contact', href: '/contact' },
     { label: 'Știri', href: '/blog' },
   ];
@@ -53,7 +52,7 @@ export const Header = () => {
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${headerBackgroundClass}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Brand text */}
           <Link

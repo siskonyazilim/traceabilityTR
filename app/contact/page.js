@@ -6,32 +6,24 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import Button from '../../components/ui/Button';
-import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiMail, FiPhone } from 'react-icons/fi';
 
 const offices = [
   {
     id: 1,
-    name: 'Turcia - İzmir',
-    address: 'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi\nDepark Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir',
-    phone: '+90 232 245 00 76',
-    email: 'info@izlenebilirlik.com.tr',
-    coords: { lat: 38.3661068, lng: 27.2074696 },
-  },
-  {
-    id: 2,
     name: 'România - Brașov',
     address: 'Punct de lucru: Str. Turnului Nr.5\nCladira M.U.M. Scara 3, Etajul 2, Biroul 5\n500152 Brașov, Romania',
-    phone: '+40 XXX XXX XXX',
+    phone: null,
     email: 'info@traceability.ro',
     coords: { lat: 45.66462, lng: 25.61252 },
   },
   {
-    id: 3,
-    name: 'Estonia - Tallinn',
-    address: 'Viru väljak 2\n10111 Tallinn, Estonia',
-    phone: '+372 XXX XXX',
-    email: 'info@traceability.ee',
-    coords: { lat: 59.43681, lng: 24.74673 },
+    id: 2,
+    name: 'Turcia - İzmir',
+    address: 'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi\nDepark Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir',
+    phone: '+90 232 245 00 76',
+    email: 'info@traceability.ro',
+    coords: { lat: 38.3661068, lng: 27.2074696 },
   },
 ];
 
@@ -56,7 +48,7 @@ export default function ContactPage() {
       <div className="pt-24 md:pt-28 bg-white rounded-t-3xl">
 
       {/* Office Cards Section */}
-      <Container>
+      <Container size="xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,8 +58,8 @@ export default function ContactPage() {
         >
           <div className="mb-10 md:mb-12 rounded-3xl border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
             <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">Contact</p>
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.08] mb-4">Discutam despre procesul tau de trasabilitate</h1>
-            <p className="text-base md:text-lg text-white/90 max-w-3xl">Alege biroul potrivit sau trimite-ne un mesaj. Revenim rapid cu o propunere adaptata fluxurilor tale operationale.</p>
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.08] mb-4">Să discutăm despre procesul tău de trasabilitate</h1>
+            <p className="text-base md:text-lg text-white/90 max-w-3xl">Alege biroul potrivit sau trimite-ne un mesaj. Revenim rapid cu o propunere adaptată fluxurilor tale operaționale.</p>
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-10 md:mb-12 text-center">
@@ -93,21 +85,27 @@ export default function ContactPage() {
 
                     <div className="space-y-4 md:space-y-5 text-primary-black">
                       <div className="flex gap-3">
-                        <FiMapPin className="text-accent-blue flex-shrink-0 mt-1" size={20} />
+                        <img
+                          src="/icon/icon-map-pin.svg"
+                          alt="Location"
+                          className="w-5 h-5 flex-shrink-0 mt-1"
+                        />
                         <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
                           {office.address}
                         </p>
                       </div>
 
-                      <div className="flex gap-3 items-center">
-                        <FiPhone className="text-accent-blue flex-shrink-0" size={20} />
-                        <a
-                          href={`tel:${office.phone}`}
-                          className="text-base hover:text-accent-blue transition-colors"
-                        >
-                          {office.phone}
-                        </a>
-                      </div>
+                      {office.phone && (
+                        <div className="flex gap-3 items-center">
+                          <FiPhone className="text-accent-blue flex-shrink-0" size={20} />
+                          <a
+                            href={`tel:${office.phone}`}
+                            className="text-base hover:text-accent-blue transition-colors"
+                          >
+                            {office.phone}
+                          </a>
+                        </div>
+                      )}
 
                       <div className="flex gap-3 items-center">
                         <FiMail className="text-accent-blue flex-shrink-0" size={20} />
@@ -140,7 +138,7 @@ export default function ContactPage() {
       </Container>
 
       {/* Contact Form Section */}
-      <Container>
+      <Container size="xl">
         <div className="pb-16 md:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -284,9 +282,8 @@ export default function ContactPage() {
               <span className="text-accent-red text-sm block">{errors.privacy.message}</span>
             )}
 
-            {/* Submit Button */}
-            <div className="flex gap-4">
-              <Button type="submit" variant="solid" size="lg" className="flex-1">
+            <div className="flex justify-center">
+              <Button type="submit" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
                 Trimite Mesaj
               </Button>
             </div>

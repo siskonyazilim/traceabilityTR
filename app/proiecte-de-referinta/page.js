@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import Container from '../../components/ui/Container';
 import SectionHeader from '../../components/ui/SectionHeader';
 import ProjectCard from '../../components/ui/ProjectCard';
@@ -9,13 +10,24 @@ import { referenceProjects } from '../../data/references';
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-white pt-24 pb-16">
-      <Container>
-        <div className="mb-10 md:mb-12 rounded-3xl border border-slate-200 bg-[radial-gradient(circle_at_80%_20%,_rgba(0,181,247,0.18)_0%,_rgba(0,181,247,0)_35%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_60%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_42px_rgba(10,10,43,0.18)]">
-          <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">Studii de caz</p>
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.08] mb-4">Proiecte de referinta cu impact masurabil</h1>
-          <p className="text-base md:text-lg text-white/90 max-w-3xl">Implementari reale in automotive, alimentar si productie industriala, cu indicatori clari de eficienta si calitate.</p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+      <Container size="xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 md:mb-16 rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-primary-black via-secondary-blue to-accent-blue px-8 py-12 md:px-12 md:py-16 text-white shadow-2xl relative overflow-hidden"
+        >
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-blue/20 rounded-full blur-2xl"></div>
+
+          <div className="relative z-10">
+            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-white/80 font-bold mb-4">Studii de caz</p>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">Proiecte de referință cu impact măsurabil</h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl">Implementări reale în automotive, alimentar și producție industrială, cu indicatori clari de eficiență și calitate.</p>
+          </div>
+        </motion.div>
 
         <SectionHeader
           title="Selecție Proiecte"
@@ -42,15 +54,15 @@ export default function ProjectsPage() {
           <p>Total: {referenceProjects.length} proiecte</p>
         </div>
 
-        <div className="mt-12 text-center rounded-3xl border border-slate-200 bg-[#f8fafc] p-7 md:p-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-4">
+        <div className="mt-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
             Vrei un proiect similar pentru compania ta?
           </h2>
-          <p className="text-gray-text text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
             Putem adapta soluțiile din aceste referințe la procesele și obiectivele tale operaționale.
           </p>
-          <div className="flex gap-5 justify-center flex-wrap">
-            <Button as={Link} href="/contact" variant="solid" size="lg">
+          <div className="flex gap-6 justify-center flex-wrap">
+            <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
               Cere Ofertă
             </Button>
           </div>

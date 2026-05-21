@@ -49,17 +49,18 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
   return (
     <motion.div
       ref={ref}
-      className="text-center"
+      className="text-center group"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       viewport={{ once: true }}
+      whileHover={{ scale: 1.05 }}
     >
-      <div className="text-5xl md:text-6xl font-bold text-accent-blue mb-2">
+      <div className="text-5xl md:text-6xl font-bold text-accent-blue mb-2 transition-all duration-300">
         {count}
         <span>{suffix}</span>
       </div>
-      <p className="text-lg text-gray-light">{label}</p>
+      <p className="text-lg text-gray-light group-hover:text-white transition-colors duration-300">{label}</p>
     </motion.div>
   );
 };
@@ -80,8 +81,13 @@ export const PerformanceMetrics = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-r from-primary-black to-dark-bg">
-      <Container>
+    <section className="py-16 md:py-24 bg-gradient-to-br from-primary-black via-dark-bg to-primary-black relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 pattern-dots opacity-10"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-blue/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+
+      <Container size="xl" className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +126,7 @@ export const PerformanceMetrics = () => {
             variant="solid"
             size="lg"
             onClick={handleScroll}
-            className="bg-accent-blue hover:bg-opacity-90"
+            className="bg-secondary-blue hover:bg-accent-blue text-white"
           >
             Proiectele noastre de referință
           </Button>

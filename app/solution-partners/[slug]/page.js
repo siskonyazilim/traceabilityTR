@@ -22,12 +22,12 @@ export default function PartnerDetailPage({ params }) {
 
   return (
     <div className="min-h-screen bg-[#f5f7fa] pt-24 pb-16">
-      <Container>
+      <Container size="xl">
         <Link href="/" className="inline-flex items-center gap-2 text-accent-blue hover:underline mb-6 font-medium">
           <FiArrowLeft /> Înapoi la Acasă
         </Link>
 
-        <article className="max-w-4xl mx-auto">
+        <article className="max-w-6xl mx-auto">
           <div className="mb-6 text-sm text-gray-text font-medium">
             <span>Acasă / {partner.breadcrumbLabel || partner.name.toUpperCase()}</span>
           </div>
@@ -129,18 +129,16 @@ export default function PartnerDetailPage({ params }) {
             </div>
           )}
 
-          <div className="mt-12 text-center bg-white border border-gray-light rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-primary-black mb-3">
+          <div className="mt-20 text-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
               Hai să construim împreună următorul proiect
             </h3>
-            <p className="text-gray-text mb-6">
+            <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
               Contactează-ne pentru a adapta această expertiză la procesele companiei tale.
             </p>
-            <Link href="/contact">
-              <Button variant="solid" size="lg">
-                Contactează-ne
-              </Button>
-            </Link>
+            <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
+              Contactează-ne
+            </Button>
           </div>
         </article>
       </Container>

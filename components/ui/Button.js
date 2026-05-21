@@ -26,7 +26,7 @@ export const Button = ({
   const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-10 py-5 text-lg font-bold',
+    lg: 'px-10 py-4 text-base font-bold min-w-[200px]', // Standardized CTA button size
   };
 
   return (

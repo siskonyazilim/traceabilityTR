@@ -24,17 +24,28 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-bg">
-      <div className="pt-24 md:pt-28 bg-white rounded-t-3xl">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <div className="pt-24 md:pt-28">
 
       {/* Main Content */}
-      <Container>
+      <Container size="xl">
         <div className="py-10 md:py-14">
-          <div className="mb-10 md:mb-12 rounded-3xl border border-slate-200 bg-[linear-gradient(140deg,_rgba(10,10,43,0.98)_0%,_rgba(0,25,210,0.94)_55%,_rgba(0,181,247,0.84)_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
-            <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">Resurse</p>
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.08] mb-4">Noutati, ghiduri si tendinte in trasabilitate</h1>
-            <p className="text-base md:text-lg text-white/90 max-w-3xl">Continut orientat pe decizii: implementare, optimizare operationala si bune practici pentru productia moderna.</p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-12 md:mb-16 rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-primary-black via-secondary-blue to-accent-blue px-8 py-12 md:px-12 md:py-16 text-white shadow-2xl relative overflow-hidden"
+          >
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-blue/20 rounded-full blur-2xl"></div>
+
+            <div className="relative z-10">
+              <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-white/80 font-bold mb-4">Resurse</p>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">Noutăți, ghiduri și tendințe în trasabilitate</h1>
+              <p className="text-lg md:text-xl text-white/90 max-w-3xl">Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.</p>
+            </div>
+          </motion.div>
 
           {paginatedPosts.length > 0 ? (
             <>
@@ -85,18 +96,18 @@ export default function BlogPage() {
             </div>
           )}
 
-          <div className="mt-12 text-center rounded-3xl border border-slate-200 bg-[#f8fafc] p-7 md:p-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-4">
+          <div className="mt-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
               Vrei să discutăm despre trasabilitate?
             </h2>
-            <p className="text-gray-text text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
               Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.
             </p>
-            <div className="flex gap-5 justify-center flex-wrap">
-              <Button as={Link} href="/contact" variant="solid" size="lg">
+            <div className="flex gap-6 justify-center flex-wrap">
+              <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
                 Cere Ofertă
               </Button>
-              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg">
+              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
                 Vezi Proiectele
               </Button>
             </div>

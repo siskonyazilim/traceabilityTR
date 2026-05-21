@@ -21,7 +21,7 @@ export const SectionHeader = ({
         {title}
       </h2>
       {subtitle && (
-        <p className="text-body text-gray-text max-w-2xl mx-auto">
+        <p className="text-body text-gray-text max-w-4xl mx-auto">
           {subtitle}
         </p>
       )}

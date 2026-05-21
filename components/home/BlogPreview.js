@@ -57,8 +57,11 @@ export const BlogPreview = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <Container>
+    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-slate-50/30 to-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 pattern-grid opacity-30"></div>
+
+      <Container size="xl" className="relative z-10">
         <SectionHeader
           title="BLOG"
           subtitle="Accesați blogul nostru și obțineți cele mai recente actualizări din industrie și tendințele viitoare."
@@ -69,7 +72,7 @@ export const BlogPreview = () => {
           <button
             onClick={handlePrev}
             aria-label="Articol anterior"
-            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
+            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110"
           >
             <FiChevronLeft size={20} />
           </button>
@@ -77,7 +80,7 @@ export const BlogPreview = () => {
           <button
             onClick={handleNext}
             aria-label="Articol următor"
-            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
+            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110"
           >
             <FiChevronRight size={20} />
           </button>
@@ -97,7 +100,7 @@ export const BlogPreview = () => {
             href="/blog"
             variant="outline"
             size="lg"
-            className="border-primary-black text-primary-black hover:bg-primary-black hover:text-white"
+            className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"
           >
             MERGI LA BLOG
           </Button>

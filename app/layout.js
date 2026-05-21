@@ -24,18 +24,22 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Traceability - Soluții de Trasabilitate End-to-End',
-  description: 'Soluții innovative de trasabilitate și automatizare pentru fabrici inteligente. Controlul complet al producției cu tehnologie avansată.',
-  keywords: 'trasabilitate, automatizare, industrie 4.0, RFID, izlenebilirlik',
+  title: 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability',
+  description: 'Sisteme complete de trasabilitate industrială, MES și Industrie 4.0 pentru automotive, alimentar, farmaceutic. RFID, RTLS, WMS, POKA YOKE - implementări cu ROI măsurabil.',
+  keywords: 'trasabilitate industrială, MES, industrie 4.0, RFID, RTLS, WMS, POKA YOKE, fabrici inteligente, automotive, alimentar, farmaceutic, quality control, warehouse management',
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Traceability - Soluții de Trasabilitate End-to-End',
-    description: 'Soluții innovative de trasabilitate și automatizare pentru fabrici inteligente.',
+    title: 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability',
+    description: 'Sisteme complete de trasabilitate industrială, MES și Industrie 4.0 pentru automotive, alimentar, farmaceutic.',
     type: 'website',
+    locale: 'ro_RO',
+  },
+  alternates: {
+    canonical: 'https://traceability.ro',
   },
 }
 

@@ -35,14 +35,14 @@ export default function BlogDetailPage({ params }) {
 
   return (
     <div className="min-h-screen bg-[#f8fafc] pb-16">
-      <Container>
+      <Container size="xl">
         <div className="py-12">
           {/* Back Button */}
           <Link href="/blog" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
             <FiArrowLeft /> Înapoi la Blog
           </Link>
 
-          <article className="max-w-4xl mx-auto">
+          <article className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-8 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_14px_36px_rgba(10,10,43,0.08)]">
             <div className="flex items-center gap-3 mb-4">
@@ -70,7 +70,7 @@ export default function BlogDetailPage({ params }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
-                  title="Share on Twitter"
+                  title="Distribuie pe Twitter"
                 >
                   <FiTwitter size={20} />
                 </a>
@@ -79,7 +79,7 @@ export default function BlogDetailPage({ params }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
-                  title="Share on LinkedIn"
+                  title="Distribuie pe LinkedIn"
                 >
                   <FiLinkedin size={20} />
                 </a>
@@ -88,7 +88,7 @@ export default function BlogDetailPage({ params }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
-                  title="Share on Facebook"
+                  title="Distribuie pe Facebook"
                 >
                   <FiFacebook size={20} />
                 </a>
@@ -132,14 +132,14 @@ export default function BlogDetailPage({ params }) {
           )}
 
           {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-accent-blue to-accent-green rounded-2xl p-8 text-white text-center shadow-[0_14px_34px_rgba(0,130,210,0.24)]">
-            <h3 className="text-2xl font-bold mb-4">
+          <div className="mt-20 text-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
               Ai nevoie de o soluție de trasabilitate?
             </h3>
-            <p className="mb-6 text-white text-opacity-90">
+            <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
               Contactează-ne pentru a afla cum putem ajuta afacerea ta.
             </p>
-            <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-white text-accent-blue hover:bg-opacity-90">
+            <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
               Contactează-ne
             </Button>
           </div>

@@ -2,26 +2,28 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Button from '../ui/Button';
 
 const slides = [
   {
     id: 1,
     title: 'Soluții de Trasabilitate End-to-End pentru Fabrici Inteligente',
-    subtitle: 'Controlul complet al producției cu tehnologie avansată. Urmărire în timp real, calitate garantată și eficiență maximă cu sistemele noastre inovatoare.',
+    subtitle: 'Procesul metodic de investiții echilibrează gestionarea riscurilor cu identificarea oportunităților, creând portofolii rezistente, concepute pentru a performa în ciclurile pieței.',
     color: 'from-accent-blue',
     video: '/videos/hero-slide-1.mp4',
   },
   {
     id: 2,
     title: 'Control în Timp Real, Zero Defecțiuni',
-    subtitle: 'Monitorizare constantă cu inteligență artificială. Detectare automată a erorilor, raportare instantanee și prevenire proactivă pentru calitate maximă în fiecare produs.',
+    subtitle: 'Abordarea noastră adaptivă transformă provocările în oportunități, oferind valoare durabilă și rezultate excepționale pentru clienții noștri în diverse condiții economice.',
     color: 'from-accent-green',
     video: '/videos/hero-slide-2.mp4',
   },
   {
     id: 3,
-    title: 'POKA YOKE - Sistem de Prevenire a Erorilor',
-    subtitle: 'Eliminate defectele înainte ca acestea să apară. Metodă revoluționară de control calității care asigură 99.9% acuratețe și reduce costurile de remaniere până la 80%.',
+    title: 'POKA YOKE',
+    subtitle: 'Lucrăm îndeaproape cu investitorii pentru a înțelege obiectivele acestora, creând soluții personalizate care abordează nevoile specifice, menținând în același timp angajamentul nostru față de excelență.',
     color: 'from-accent-yellow',
     video: '/video/DisliDonus.mp4',
   },
@@ -36,7 +38,7 @@ export const HeroSlider = () => {
 
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000); // Increased from 5000ms to 8000ms for better readability
 
     return () => clearInterval(timer);
   }, [isAutoPlay]);
@@ -68,9 +70,9 @@ export const HeroSlider = () => {
             <source src={slide.video} type="video/mp4" />
           </video>
 
-          {/* Fixed and gradient overlays keep contrast stable across slides. */}
-          <div className="absolute inset-0 bg-primary-black/58"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-black/58 via-primary-black/34 to-primary-black/62"></div>
+          {/* Video overlays */}
+          <div className="absolute inset-0 bg-primary-black/35"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
 
           {/* Content */}
           <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
@@ -94,6 +96,23 @@ export const HeroSlider = () => {
                 <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl mx-auto">
                   {slide.subtitle}
                 </p>
+              </motion.div>
+
+              <motion.div
+                className="mt-10"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
+                transition={{ delay: 0.3, duration: 0.45 }}
+              >
+                <Button
+                  as={Link}
+                  href="/contact"
+                  variant="solid"
+                  size="lg"
+                  className="bg-secondary-blue hover:bg-accent-blue text-white shadow-2xl"
+                >
+                  Cere Ofertă
+                </Button>
               </motion.div>
             </div>
           </div>
