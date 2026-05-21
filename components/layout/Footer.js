@@ -1,7 +1,45 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FiLinkedin, FiTwitter, FiInstagram, FiFacebook } from 'react-icons/fi';
 
 export const Footer = () => {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  const handleSectionClick = (e, href) => {
+    // Only handle if we're on homepage and it's a hash link
+    if (isHomePage && href.startsWith('/#')) {
+      e.preventDefault();
+      const id = href.substring(1); // Remove the leading /
+
+      // Special handling for products tab
+      if (id === '#products-tab') {
+        const section = document.querySelector('#traceability-solutions');
+        if (section) {
+          const y = section.getBoundingClientRect().top + window.scrollY - 92;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+          window.history.pushState(null, '', id);
+          setTimeout(() => {
+            const productsButton = document.getElementById('products-tab-button');
+            if (productsButton) {
+              productsButton.click();
+            }
+          }, 500);
+          return;
+        }
+      }
+
+      const element = document.querySelector(id);
+      if (element) {
+        const y = element.getBoundingClientRect().top + window.scrollY - 92;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        window.history.pushState(null, '', id);
+      }
+    }
+  };
+
   return (
     <footer className="bg-[radial-gradient(circle_at_top_right,_rgba(0,181,247,0.14)_0%,_rgba(10,10,43,0)_30%),linear-gradient(180deg,_#0a0a2b_0%,_#070720_100%)] text-white pt-14 pb-8 border-t border-slate-blue/30">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
@@ -45,23 +83,49 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/#traceability-solutions" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  Soluții
+                <Link
+                  href="/#traceability-solutions"
+                  onClick={(e) => handleSectionClick(e, '/#traceability-solutions')}
+                  className="text-gray-light hover:text-accent-blue transition-colors text-sm"
+                >
+                  Soluțiile Noastre
                 </Link>
               </li>
               <li>
-                <Link href="/proiecte-de-referinta" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  Proiecte
+                <Link
+                  href="/#products-tab"
+                  onClick={(e) => handleSectionClick(e, '/#products-tab')}
+                  className="text-gray-light hover:text-accent-blue transition-colors text-sm"
+                >
+                  Industrii
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  Știri
+                <Link
+                  href="/#our-strategic-solution-partners"
+                  onClick={(e) => handleSectionClick(e, '/#our-strategic-solution-partners')}
+                  className="text-gray-light hover:text-accent-blue transition-colors text-sm"
+                >
+                  Parteneri de Soluții
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#faq"
+                  onClick={(e) => handleSectionClick(e, '/#faq')}
+                  className="text-gray-light hover:text-accent-blue transition-colors text-sm"
+                >
+                  Întrebări Frecvente
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                  Știri
                 </Link>
               </li>
             </ul>

@@ -29,6 +29,8 @@ export const Header = () => {
       if (section) {
         const y = section.getBoundingClientRect().top + window.scrollY - 92;
         window.scrollTo({ top: y, behavior: 'smooth' });
+        // Update URL hash
+        window.history.pushState(null, '', id);
         // Wait for scroll then click products tab button
         setTimeout(() => {
           const productsButton = document.getElementById('products-tab-button');
@@ -48,6 +50,8 @@ export const Header = () => {
     if (element) {
       const y = element.getBoundingClientRect().top + window.scrollY - 92;
       window.scrollTo({ top: y, behavior: 'smooth' });
+      // Update URL hash
+      window.history.pushState(null, '', id);
       setIsOpen(false);
       return;
     }
