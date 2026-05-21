@@ -23,6 +23,27 @@ export const Header = () => {
   }, []);
 
   const handleNavClick = (id) => {
+    // Special handling for products tab
+    if (id === '#products-tab') {
+      const section = document.querySelector('#traceability-solutions');
+      if (section) {
+        const y = section.getBoundingClientRect().top + window.scrollY - 92;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        // Wait for scroll then click products tab button
+        setTimeout(() => {
+          const productsButton = document.getElementById('products-tab-button');
+          if (productsButton) {
+            productsButton.click();
+          }
+        }, 500);
+        setIsOpen(false);
+        return;
+      }
+      router.push('/#traceability-solutions');
+      setIsOpen(false);
+      return;
+    }
+
     const element = document.querySelector(id);
     if (element) {
       const y = element.getBoundingClientRect().top + window.scrollY - 92;
@@ -38,6 +59,7 @@ export const Header = () => {
 
   const navItems = [
     { label: 'Soluțiile Noastre', href: '#traceability-solutions' },
+    { label: 'Industrii', href: '#products-tab' },
     { label: 'Parteneri de Soluții', href: '#our-strategic-solution-partners' },
     { label: 'Contact', href: '/contact' },
     { label: 'Știri', href: '/blog' },

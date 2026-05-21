@@ -51,6 +51,7 @@ export const SolutionsTabs = () => {
             Soluții
           </button>
           <button
+            id="products-tab-button"
             onClick={() => setActiveTab('products')}
             className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 transform ${
               activeTab === 'products'
