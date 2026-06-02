@@ -223,29 +223,6 @@ export const Header = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
-            <div className="mb-4 pb-4 border-b border-slate-100">
-              <p className="text-xs uppercase tracking-wide text-gray-500 mb-2">{t('language.label', 'Limbă')}</p>
-              <div className="grid grid-cols-2 gap-2">
-                {languageOptions.map((option) => (
-                  <button
-                    key={`mobile-${option.code}`}
-                    onClick={() => {
-                      setLocale(option.code);
-                      setIsOpen(false);
-                    }}
-                    className={`flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm border ${
-                      locale === option.code
-                        ? 'bg-slate-100 border-slate-300 font-semibold text-primary-black'
-                        : 'border-slate-200 text-gray-700'
-                    }`}
-                  >
-                    <img src={option.flagSrc} alt={option.label} className="h-4 w-5 rounded-[2px] object-cover" />
-                    <span>{option.label}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
             {navItems.map((item) => (
               <div key={item.label} className="mb-3">
                 {item.href.startsWith('#') ? (
