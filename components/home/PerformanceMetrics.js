@@ -57,11 +57,11 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
       transition={{ duration: 0.3 }}
       viewport={{ once: true }}
     >
-      <div className="text-5xl md:text-6xl font-bold text-accent-blue mb-2 transition-all duration-300">
+      <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent-blue mb-2 transition-all duration-300">
         {count}
         <span>{suffix}</span>
       </div>
-      <p className="text-lg text-gray-light group-hover:text-white transition-colors duration-300">{label}</p>
+      <p className="text-base sm:text-lg text-gray-light group-hover:text-white transition-colors duration-300">{label}</p>
     </motion.div>
   );
 };
@@ -105,10 +105,10 @@ export const PerformanceMetrics = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             {t('sections.performanceTitle', 'Performanță și indicatori cuprinzători')}
           </h2>
-          <p className="text-xl text-gray-light max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-light max-w-2xl mx-auto">
             {t('sections.performanceSubtitle', 'Rezultatele noastre vorbesc pentru ei înșiși')}
           </p>
         </motion.div>

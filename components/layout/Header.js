@@ -102,6 +102,8 @@ export const Header = () => {
   ];
 
   const currentLanguage = languageOptions.find((option) => option.code === locale) || languageOptions[0];
+  const nextLanguage = locale === 'ro' ? 'en' : 'ro';
+  const mobileNextLanguage = languageOptions.find((option) => option.code === nextLanguage) || languageOptions[1];
 
   let headerBackgroundClass = 'bg-white border-b border-slate-blue/10 shadow-[0_10px_32px_rgba(10,10,43,0.08)]';
   if (useTransparentHeader) {
@@ -192,6 +194,19 @@ export const Header = () => {
                 </div>
               )}
             </div>
+
+            <button
+              onClick={() => setLocale(nextLanguage)}
+              aria-label={t('language.switchAria', 'Schimbă limba')}
+              className={`md:hidden h-10 px-2.5 rounded-lg border flex items-center gap-2 text-xs font-bold transition-colors ${
+                useTransparentHeader
+                  ? 'text-white border-white/40 hover:bg-white/10'
+                  : 'text-primary-black border-slate-200 hover:bg-slate-50'
+              }`}
+            >
+              <img src={mobileNextLanguage.flagSrc} alt={mobileNextLanguage.label} className="h-4 w-5 rounded-[2px] object-cover" />
+              <span>{mobileNextLanguage.label}</span>
+            </button>
 
             {/* Mobile Menu Button */}
             <button

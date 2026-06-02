@@ -34,15 +34,15 @@ export default function CookieBanner() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.95 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-6 right-6 z-50 w-full max-w-lg"
+          className="fixed bottom-3 left-3 right-3 md:bottom-6 md:left-auto md:right-6 z-50 md:w-full md:max-w-lg"
         >
           <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
             {/* Header with Logo and Close Button */}
-            <div className="px-6 pt-6 pb-4 flex items-start justify-between">
+            <div className="px-4 md:px-6 pt-4 md:pt-6 pb-3 md:pb-4 flex items-start justify-between gap-3">
               <img
                 src="/siskon-logo-header.svg"
                 alt="Siskon"
-                className="h-10 object-contain"
+                className="h-8 md:h-10 object-contain"
               />
               <button
                 onClick={declineCookies}
@@ -54,28 +54,28 @@ export default function CookieBanner() {
             </div>
 
             {/* Content */}
-            <div className="px-6 pb-6">
-              <p className="text-gray-700 text-sm leading-relaxed mb-5">
+            <div className="px-4 md:px-6 pb-4 md:pb-6">
+              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-4 md:mb-5">
                 {t('cookie.message', 'Folosim cookie-uri pentru a îmbunătăți experiența ta pe OnSuite. Prin utilizarea site-ului, ești de acord cu politica noastră de cookie-uri.')}
               </p>
 
               {/* Buttons */}
-              <div className="flex gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                 <button
                   onClick={acceptCookies}
-                  className="flex-1 bg-secondary-blue hover:bg-accent-blue text-white font-semibold py-3 px-5 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
+                  className="bg-secondary-blue hover:bg-accent-blue text-white font-semibold py-2.5 md:py-3 px-4 md:px-5 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg text-sm"
                 >
                   {t('cookie.accept', 'Acceptă')}
                 </button>
                 <button
                   onClick={declineCookies}
-                  className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-5 rounded-xl transition-all duration-300"
+                  className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2.5 md:py-3 px-4 md:px-5 rounded-xl transition-all duration-300 text-sm"
                 >
                   {t('cookie.decline', 'Respinge')}
                 </button>
                 <button
                   onClick={() => globalThis.open('/privacy', '_blank')}
-                  className="flex-1 bg-white hover:bg-gray-50 text-accent-blue font-semibold py-3 px-5 rounded-xl transition-all duration-300 border-2 border-accent-blue"
+                  className="bg-white hover:bg-gray-50 text-accent-blue font-semibold py-2.5 md:py-3 px-4 md:px-5 rounded-xl transition-all duration-300 border-2 border-accent-blue text-sm"
                 >
                   {t('cookie.learnMore', 'Află mai multe')}
                 </button>

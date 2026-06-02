@@ -82,8 +82,8 @@ export const HeroSlider = () => {
           <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
             <div className="w-full max-w-5xl mx-auto text-center">
               <motion.h1
-                className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.98] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
-                style={{ fontFamily: 'var(--font-poppins)' }}
+                className="text-white text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] sm:leading-[0.98] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
+                style={{ fontFamily: 'var(--font-kanit)' }}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
                 transition={{ delay: 0.12, duration: 0.45 }}

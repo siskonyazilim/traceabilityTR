@@ -77,7 +77,7 @@ export const FaqAccordion = () => {
           <p className="text-secondary-blue text-xs md:text-sm uppercase tracking-[0.18em] font-semibold mb-4">
             {faqBundle.eyebrow}
           </p>
-          <h2 className="text-primary-black text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] tracking-tight mb-6">
+          <h2 className="text-primary-black text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] tracking-tight mb-6">
             {faqBundle.title}
           </h2>
           <div className="w-24 h-1 bg-accent-blue mx-auto"></div>
