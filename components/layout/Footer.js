@@ -2,11 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FiLinkedin, FiTwitter, FiInstagram, FiFacebook } from 'react-icons/fi';
+import { FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer = () => {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const { t } = useLanguage();
 
   const handleSectionClick = (e, href) => {
     // Only handle if we're on homepage and it's a hash link
@@ -18,9 +20,9 @@ export const Footer = () => {
       if (id === '#products-tab') {
         const section = document.querySelector('#traceability-solutions');
         if (section) {
-          const y = section.getBoundingClientRect().top + window.scrollY - 92;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-          window.history.pushState(null, '', id);
+          const y = section.getBoundingClientRect().top + globalThis.scrollY - 92;
+          globalThis.scrollTo({ top: y, behavior: 'smooth' });
+          globalThis.history.pushState(null, '', id);
           setTimeout(() => {
             const productsButton = document.getElementById('products-tab-button');
             if (productsButton) {
@@ -33,9 +35,9 @@ export const Footer = () => {
 
       const element = document.querySelector(id);
       if (element) {
-        const y = element.getBoundingClientRect().top + window.scrollY - 92;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-        window.history.pushState(null, '', id);
+        const y = element.getBoundingClientRect().top + globalThis.scrollY - 92;
+        globalThis.scrollTo({ top: y, behavior: 'smooth' });
+        globalThis.history.pushState(null, '', id);
       }
     }
   };
@@ -53,21 +55,21 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-light text-sm mb-5 leading-relaxed max-w-sm">
-              Soluții innovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.
+              {t('footer.brandDescription', 'Soluții innovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.')}
             </p>
             <div className="flex items-center gap-3">
-              <a href="https://www.linkedin.com/company/siskonyazilimveotomasyon" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+              <a href="https://www.linkedin.com/company/siskonyazilimveotomasyon" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <FiLinkedin size={18} />
               </a>
-              <a href="https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+              <a href="https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                 </svg>
               </a>
-              <a href="https://x.com/siskonsoftware" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+              <a href="https://x.com/siskonsoftware" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <FiTwitter size={18} />
               </a>
-              <a href="https://www.instagram.com/siskonyazilimveotomasyon" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+              <a href="https://www.instagram.com/siskonyazilimveotomasyon" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <FiInstagram size={18} />
               </a>
             </div>
@@ -75,11 +77,11 @@ export const Footer = () => {
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-white">Navigare</h4>
+            <h4 className="text-lg font-bold mb-4 text-white">{t('footer.navigation', 'Navigare')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  Pagina Principală
+                  {t('footer.home', 'Pagina Principală')}
                 </Link>
               </li>
               <li>
@@ -88,7 +90,7 @@ export const Footer = () => {
                   onClick={(e) => handleSectionClick(e, '/#traceability-solutions')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
-                  Soluțiile Noastre
+                  {t('footer.solutions', 'Soluțiile Noastre')}
                 </Link>
               </li>
               <li>
@@ -97,7 +99,7 @@ export const Footer = () => {
                   onClick={(e) => handleSectionClick(e, '/#products-tab')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
-                  Industrii
+                  {t('footer.industries', 'Industrii')}
                 </Link>
               </li>
               <li>
@@ -106,7 +108,7 @@ export const Footer = () => {
                   onClick={(e) => handleSectionClick(e, '/#our-strategic-solution-partners')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
-                  Parteneri de Soluții
+                  {t('footer.partners', 'Parteneri de Soluții')}
                 </Link>
               </li>
               <li>
@@ -115,17 +117,17 @@ export const Footer = () => {
                   onClick={(e) => handleSectionClick(e, '/#faq')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
-                  Întrebări Frecvente
+                  {t('footer.faq', 'Întrebări Frecvente')}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  Contact
+                  {t('footer.contact', 'Contact')}
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  Știri
+                  {t('footer.news', 'Știri')}
                 </Link>
               </li>
             </ul>
@@ -133,16 +135,16 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-white">Contact</h4>
+            <h4 className="text-lg font-bold mb-4 text-white">{t('footer.contactTitle', 'Contact')}</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="tel:+902322450076" className="text-gray-light hover:text-accent-blue transition-colors">
-                  <span className="font-semibold">Telefon:</span> +90 232 245 00 76
+                  <span className="font-semibold">{t('footer.phone', 'Telefon')}:</span> +90 232 245 00 76
                 </a>
               </li>
               <li>
                 <a href="mailto:info@traceability.ro" className="text-gray-light hover:text-accent-blue transition-colors">
-                  <span className="font-semibold">Email:</span> info@traceability.ro
+                  <span className="font-semibold">{t('footer.email', 'Email')}:</span> info@traceability.ro
                 </a>
               </li>
             </ul>
@@ -155,7 +157,7 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-light">
           <div>
-            <p>© 2026 Traceability. Toate drepturile rezervate.</p>
+            <p>{t('footer.copyright', '© 2026 Traceability. Toate drepturile rezervate.')}</p>
           </div>
         </div>
       </div>

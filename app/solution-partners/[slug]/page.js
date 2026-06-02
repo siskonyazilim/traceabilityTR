@@ -4,19 +4,25 @@ import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { strategicPartners } from '../../../data/partners';
 import { FiArrowLeft } from 'react-icons/fi';
+import { cookies } from 'next/headers';
+import { localizePartners } from '../../../lib/i18n/contentLocalization';
+/* eslint-disable react/prop-types, react/no-array-index-key */
 
-export default function PartnerDetailPage({ params }) {
-  const { slug: rawSlug } = params;
+export default async function PartnerDetailPage({ params }) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localizedPartners = localizePartners(strategicPartners, locale);
+  const { slug: rawSlug } = await params;
   const legacySlugMap = {
     'proiectul-a-s': 'markem-imaje',
   };
 
   const slug = legacySlugMap[rawSlug] || rawSlug;
-  const partner = strategicPartners.find((p) => p.slug === slug);
+  const partner = localizedPartners.find((p) => p.slug === slug);
 
   if (!partner) notFound();
 
-  const otherPartners = strategicPartners
+  const otherPartners = localizedPartners
     .filter((p) => p.id !== partner.id)
     .slice(0, 4);
 
@@ -24,12 +30,12 @@ export default function PartnerDetailPage({ params }) {
     <div className="min-h-screen bg-[#f5f7fa] pt-24 pb-16">
       <Container size="xl">
         <Link href="/" className="inline-flex items-center gap-2 text-accent-blue hover:underline mb-6 font-medium">
-          <FiArrowLeft /> Înapoi la Acasă
+          <FiArrowLeft /> {locale === 'en' ? 'Back to Home' : 'Inapoi la Acasa'}
         </Link>
 
         <article className="max-w-6xl mx-auto">
           <div className="mb-6 text-sm text-gray-text font-medium">
-            <span>Acasă / {partner.breadcrumbLabel || partner.name.toUpperCase()}</span>
+            <span>{locale === 'en' ? 'Home' : 'Acasa'} / {partner.breadcrumbLabel || partner.name.toUpperCase()}</span>
           </div>
 
           <div className="bg-white border border-gray-light rounded-3xl shadow-sm overflow-hidden mb-8">
@@ -39,7 +45,7 @@ export default function PartnerDetailPage({ params }) {
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
                 <div className="lg:col-span-3">
                   <h1 className="text-4xl md:text-5xl font-bold text-primary-black mb-4 leading-tight">
-                    Inovație și leadership
+                    {locale === 'en' ? 'Innovation and leadership' : 'Inovatie si leadership'}
                   </h1>
                   <h2 className="text-xl md:text-2xl font-semibold text-gray-text">
                     {partner.name}
@@ -72,23 +78,23 @@ export default function PartnerDetailPage({ params }) {
             </div>
 
             <aside className="bg-white border border-gray-light rounded-2xl p-6 md:p-8 h-fit">
-              <h3 className="text-lg font-bold text-primary-black mb-4">Valori fundamentale</h3>
+              <h3 className="text-lg font-bold text-primary-black mb-4">{locale === 'en' ? 'Core values' : 'Valori fundamentale'}</h3>
               <ul className="space-y-3 text-gray-text">
                 <li className="flex items-start gap-2">
                   <span className="text-accent-blue font-bold">•</span>
-                  <span>Independență operațională și financiară</span>
+                  <span>{locale === 'en' ? 'Operational and financial independence' : 'Independenta operationala si financiara'}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-blue font-bold">•</span>
-                  <span>Inovație continuă și orientare spre viitor</span>
+                  <span>{locale === 'en' ? 'Continuous innovation and future orientation' : 'Inovatie continua si orientare spre viitor'}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-blue font-bold">•</span>
-                  <span>Leadership responsabil și cultură corporativă</span>
+                  <span>{locale === 'en' ? 'Responsible leadership and corporate culture' : 'Leadership responsabil si cultura corporativa'}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-blue font-bold">•</span>
-                  <span>Parteneriate bazate pe încredere pe termen lung</span>
+                  <span>{locale === 'en' ? 'Long-term trust-based partnerships' : 'Parteneriate bazate pe incredere pe termen lung'}</span>
                 </li>
               </ul>
             </aside>
@@ -98,7 +104,7 @@ export default function PartnerDetailPage({ params }) {
           {otherPartners.length > 0 && (
             <div className="mt-16 pt-12 border-t border-gray-light">
               <h2 className="text-3xl font-bold text-primary-black mb-8">
-                Alți Parteneri Strategici
+                {locale === 'en' ? 'Other Strategic Partners' : 'Alti Parteneri Strategici'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {otherPartners.map((otherPartner) => (
@@ -120,7 +126,7 @@ export default function PartnerDetailPage({ params }) {
                         {otherPartner.description}
                       </p>
                       <span className="text-accent-blue font-semibold text-sm hover:underline">
-                        Detalii →
+                        {locale === 'en' ? 'Details ->' : 'Detalii ->'}
                       </span>
                     </div>
                   </Link>
@@ -131,13 +137,13 @@ export default function PartnerDetailPage({ params }) {
 
           <div className="mt-20 text-center">
             <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
-              Hai să construim împreună următorul proiect
+              {locale === 'en' ? 'Let us build the next project together' : 'Hai sa construim impreuna urmatorul proiect'}
             </h3>
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              Contactează-ne pentru a adapta această expertiză la procesele companiei tale.
+              {locale === 'en' ? 'Contact us to adapt this expertise to your company operations.' : 'Contacteaza-ne pentru a adapta aceasta expertiza la procesele companiei tale.'}
             </p>
             <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-              Contactează-ne
+              {locale === 'en' ? 'Contact us' : 'Contacteaza-ne'}
             </Button>
           </div>
         </article>

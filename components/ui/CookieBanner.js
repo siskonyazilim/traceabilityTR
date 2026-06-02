@@ -3,9 +3,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const cookieConsent = localStorage.getItem('cookieConsent');
@@ -45,7 +47,7 @@ export default function CookieBanner() {
               <button
                 onClick={declineCookies}
                 className="text-gray-400 hover:text-gray-600 transition-colors p-2 hover:bg-gray-100 rounded-full"
-                aria-label="Închide"
+                aria-label={t('cookie.close', 'Închide')}
               >
                 <FiX size={20} />
               </button>
@@ -54,7 +56,7 @@ export default function CookieBanner() {
             {/* Content */}
             <div className="px-6 pb-6">
               <p className="text-gray-700 text-sm leading-relaxed mb-5">
-                Folosim cookie-uri pentru a îmbunătăți experiența ta pe OnSuite. Prin utilizarea site-ului, ești de acord cu politica noastră de cookie-uri.
+                {t('cookie.message', 'Folosim cookie-uri pentru a îmbunătăți experiența ta pe OnSuite. Prin utilizarea site-ului, ești de acord cu politica noastră de cookie-uri.')}
               </p>
 
               {/* Buttons */}
@@ -63,19 +65,19 @@ export default function CookieBanner() {
                   onClick={acceptCookies}
                   className="flex-1 bg-secondary-blue hover:bg-accent-blue text-white font-semibold py-3 px-5 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
                 >
-                  Acceptă
+                  {t('cookie.accept', 'Acceptă')}
                 </button>
                 <button
                   onClick={declineCookies}
                   className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-5 rounded-xl transition-all duration-300"
                 >
-                  Respinge
+                  {t('cookie.decline', 'Respinge')}
                 </button>
                 <button
-                  onClick={() => window.open('/privacy', '_blank')}
+                  onClick={() => globalThis.open('/privacy', '_blank')}
                   className="flex-1 bg-white hover:bg-gray-50 text-accent-blue font-semibold py-3 px-5 rounded-xl transition-all duration-300 border-2 border-accent-blue"
                 >
-                  Află mai multe
+                  {t('cookie.learnMore', 'Află mai multe')}
                 </button>
               </div>
             </div>

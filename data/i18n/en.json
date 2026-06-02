@@ -1,0 +1,146 @@
+{
+  "language": {
+    "label": "Language",
+    "ro": "Romanian",
+    "en": "English",
+    "switchAria": "Switch language"
+  },
+  "header": {
+    "solutions": "Our Solutions",
+    "industries": "Industries",
+    "partners": "Solution Partners",
+    "contact": "Contact",
+    "news": "News"
+  },
+  "footer": {
+    "brandDescription": "Innovative traceability solutions for smart factories and sustainable production.",
+    "navigation": "Navigation",
+    "home": "Home",
+    "solutions": "Our Solutions",
+    "industries": "Industries",
+    "partners": "Solution Partners",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "news": "News",
+    "contactTitle": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "copyright": "© 2026 Traceability. All rights reserved."
+  },
+  "cookie": {
+    "close": "Close",
+    "message": "We use cookies to improve your OnSuite experience. By using this website, you agree to our cookie policy.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn more"
+  },
+  "homeCta": {
+    "title": "Ready to transform your production processes?",
+    "subtitle": "Let us design a traceability solution tailored to your operational flows.",
+    "primary": "Request an Offer",
+    "secondary": "View References"
+  },
+  "hero": {
+    "cta": "Request Proposal"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The content for this address is currently unavailable.",
+    "home": "Back to Home",
+    "contact": "Contact"
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "heroTitle": "Let us discuss your traceability process",
+    "heroSubtitle": "Choose the right office or send us a message. We will quickly return with a proposal tailored to your operational flows.",
+    "officesTitle": "Our Offices",
+    "formTitle": "Send Message",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "website": "Website (optional)",
+    "message": "Message",
+    "privacyText": "I agree with the",
+    "privacyPolicy": "privacy policy",
+    "submit": "Send Message",
+    "success": "✓ Your message has been sent successfully!",
+    "locationAlt": "Location",
+    "mapTitleSuffix": "map",
+    "errors": {
+      "firstNameRequired": "First name is required",
+      "firstNameMin": "Minimum 2 characters",
+      "lastNameRequired": "Last name is required",
+      "lastNameMin": "Minimum 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "urlInvalid": "Invalid URL",
+      "messageRequired": "Message is required",
+      "messageMin": "Minimum 10 characters",
+      "privacyRequired": "You must accept the privacy policy"
+    },
+    "placeholders": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "email@example.com",
+      "website": "https://www.example.com",
+      "message": "Write your message here..."
+    }
+  },
+  "blogPage": {
+    "eyebrow": "Resources",
+    "heroTitle": "News, guides and trends in traceability",
+    "heroSubtitle": "Decision-focused content: implementation, operational optimization and best practices for modern manufacturing.",
+    "empty": "No articles found.",
+    "ctaTitle": "Want to discuss traceability?",
+    "ctaSubtitle": "Our team can help you turn article insights into clear steps for your factory.",
+    "ctaPrimary": "Request an Offer",
+    "ctaSecondary": "View Projects"
+  },
+  "projectsPage": {
+    "eyebrow": "Case studies",
+    "heroTitle": "Reference projects with measurable impact",
+    "heroSubtitle": "Real implementations in automotive, food and industrial manufacturing, with clear efficiency and quality indicators.",
+    "sectionTitle": "Project Selection",
+    "sectionSubtitle": "Successfully delivered projects for clients across multiple industries",
+    "empty": "No projects found.",
+    "total": "Total: {{count}} projects",
+    "ctaTitle": "Want a similar project for your company?",
+    "ctaSubtitle": "We can adapt these reference solutions to your processes and operational goals.",
+    "ctaPrimary": "Request an Offer"
+  },
+  "cards": {
+    "projectDetails": "Project details →",
+    "readMore": "Read more →",
+    "efficiency": "Efficiency",
+    "defects": "Defects",
+    "productivity": "Productivity"
+  },
+  "sections": {
+    "solutionsProductsTitle": "Solutions and Products",
+    "solutionsProductsSubtitle": "Our complete range of services and products for traceability",
+    "solutionsTab": "Solutions",
+    "productsTab": "Products",
+    "details": "Details",
+    "referenceProjectsTitle": "Reference Projects",
+    "referenceProjectsSubtitle": "Real implementation examples across industries",
+    "allProjects": "ALL OUR PROJECTS",
+    "strategicPartnersTitle": "Our strategic solution partners",
+    "strategicPartnersSubtitle": "Our trusted solution partners are leaders in their domains with proven global success.",
+    "blogPreviewTitle": "From the Blog",
+    "blogPreviewSubtitle": "Visit our blog for the latest industry updates and future trends.",
+    "allArticles": "ALL ARTICLES",
+    "technologyTitle": "Technology Capabilities and Competencies",
+    "technologySubtitle": "Advanced traceability solutions for modern manufacturing",
+    "referenceProjectsPrev": "Previous project",
+    "referenceProjectsNext": "Next project",
+    "referenceProjectsGoTo": "Go to page {{page}}",
+    "partnerPrev": "Previous partner",
+    "partnerNext": "Next partner",
+    "partnerSet": "Go to set {{page}}",
+    "blogPrev": "Previous article",
+    "blogNext": "Next article",
+    "performanceTitle": "Performance and key metrics",
+    "performanceSubtitle": "Our results speak for themselves",
+    "performanceCta": "Our reference projects"
+  }
+}

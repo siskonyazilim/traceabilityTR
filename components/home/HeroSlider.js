@@ -1,9 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Button from '../ui/Button';
+import { useLanguage } from '../i18n/LanguageProvider';
+import { getHeroSlides } from '../../lib/i18n/contentLocalization';
 
 const slides = [
   {
@@ -32,16 +34,18 @@ const slides = [
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const { locale, t } = useLanguage();
+  const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
 
   useEffect(() => {
     if (!isAutoPlay) return;
 
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
+      setCurrent((prev) => (prev + 1) % localizedSlides.length);
     }, 8000); // Increased from 5000ms to 8000ms for better readability
 
     return () => clearInterval(timer);
-  }, [isAutoPlay]);
+  }, [isAutoPlay, localizedSlides.length]);
 
   const goToSlide = (index) => {
     setCurrent(index);
@@ -51,7 +55,7 @@ export const HeroSlider = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Slides */}
-      {slides.map((slide, index) => (
+      {localizedSlides.map((slide, index) => (
         <motion.div
           key={slide.id}
           className="absolute inset-0 w-full h-full"
@@ -111,7 +115,7 @@ export const HeroSlider = () => {
                   size="lg"
                   className="bg-secondary-blue hover:bg-accent-blue text-white shadow-2xl"
                 >
-                  Cere Ofertă
+                  {t('hero.cta', 'Cere Oferta')}
                 </Button>
               </motion.div>
             </div>
@@ -121,7 +125,7 @@ export const HeroSlider = () => {
 
       {/* Navigation Dots */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
-        {slides.map((slide, index) => (
+        {localizedSlides.map((slide, index) => (
           <button
             key={`hero-dot-${slide.id}`}
             onClick={() => goToSlide(index)}

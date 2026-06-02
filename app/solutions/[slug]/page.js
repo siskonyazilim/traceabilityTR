@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { cookies } from 'next/headers';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { FiArrowLeft, FiCheck } from 'react-icons/fi';
+import { localizeSolutionDetail } from '../../../lib/i18n/contentLocalization';
+/* eslint-disable react/prop-types, react/no-array-index-key */
 
 const solutions = {
   'rfid-trasabilitate': {
@@ -230,7 +233,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const solution = solutions[params.slug];
+  const { slug } = await params;
+  const solution = solutions[slug];
 
   if (!solution) {
     return {
@@ -250,12 +254,68 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function SolutionDetailPage({ params }) {
-  const solution = solutions[params.slug];
+export default async function SolutionDetailPage({ params }) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const { slug } = await params;
+  const baseSolution = solutions[slug];
+  const solution = localizeSolutionDetail(slug, baseSolution, locale);
 
   if (!solution) {
     notFound();
   }
+
+  const labels = locale === 'en'
+    ? {
+        back: 'Back to Solutions',
+        catalog: 'Traceability Solutions',
+        benefits: 'Key Benefits',
+        useCases: 'Use Cases',
+        technologies: 'Technologies Used',
+        ctaTitle: 'We implement the right solution for your business',
+        ctaSubtitle: 'Contact us for a free consultation and a tailored proposal.',
+        ctaPrimary: 'Request Proposal',
+        ctaSecondary: 'View Similar Projects',
+        roi: {
+          efficiency: 'efficiency',
+          errors: 'errors',
+          time: 'time',
+          utilization: 'utilization',
+          space: 'space',
+          defects: 'defects',
+          rework: 'rework',
+          claims: 'claims',
+          quality: 'quality',
+          speed: 'speed',
+          labor: 'labor',
+          visibility: 'visibility',
+        },
+      }
+    : {
+        back: 'Inapoi la Solutii',
+        catalog: 'Solutii de Trasabilitate',
+        benefits: 'Beneficii Cheie',
+        useCases: 'Cazuri de Utilizare',
+        technologies: 'Tehnologii Utilizate',
+        ctaTitle: 'Implementam solutia potrivita pentru afacerea ta',
+        ctaSubtitle: 'Contacteaza-ne pentru o consultatie gratuita si o oferta personalizata.',
+        ctaPrimary: 'Cere Oferta',
+        ctaSecondary: 'Vezi Proiecte Similare',
+        roi: {
+          efficiency: 'eficienta',
+          errors: 'erori',
+          time: 'timp',
+          utilization: 'utilizare',
+          space: 'spatiu',
+          defects: 'defecte',
+          rework: 'remanieri',
+          claims: 'reclamatii',
+          quality: 'calitate',
+          speed: 'viteza',
+          labor: 'munca',
+          visibility: 'vizibilitate',
+        },
+      };
 
   // Schema.org markup
   const schemaData = {
@@ -271,7 +331,7 @@ export default function SolutionDetailPage({ params }) {
     areaServed: 'RO',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Soluții de Trasabilitate',
+      name: labels.catalog,
       itemListElement: solution.useCases.map((useCase, index) => ({
         '@type': 'Offer',
         itemOffered: {
@@ -292,7 +352,7 @@ export default function SolutionDetailPage({ params }) {
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
         <Container size="xl">
           <Link href="/#traceability-solutions" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
-            <FiArrowLeft /> Înapoi la Soluții
+            <FiArrowLeft /> {labels.back}
           </Link>
 
           <article className="max-w-6xl mx-auto">
@@ -312,14 +372,14 @@ export default function SolutionDetailPage({ params }) {
               {Object.entries(solution.roi).map(([key, value]) => (
                 <div key={key} className="text-center">
                   <div className="text-4xl font-bold mb-2">{value}</div>
-                  <div className="text-sm text-white/80 capitalize">{key}</div>
+                  <div className="text-sm text-white/80 capitalize">{labels.roi[key] || key}</div>
                 </div>
               ))}
             </div>
 
             {/* Benefits */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-primary-black mb-8">Beneficii Cheie</h2>
+              <h2 className="text-3xl font-bold text-primary-black mb-8">{labels.benefits}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {solution.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-gray-200">
@@ -332,7 +392,7 @@ export default function SolutionDetailPage({ params }) {
 
             {/* Use Cases */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-primary-black mb-8">Cazuri de Utilizare</h2>
+              <h2 className="text-3xl font-bold text-primary-black mb-8">{labels.useCases}</h2>
               <div className="space-y-6">
                 {solution.useCases.map((useCase, index) => (
                   <div key={index} className="bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-accent-blue transition-colors">
@@ -345,7 +405,7 @@ export default function SolutionDetailPage({ params }) {
 
             {/* Technologies */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-primary-black mb-8">Tehnologii Utilizate</h2>
+              <h2 className="text-3xl font-bold text-primary-black mb-8">{labels.technologies}</h2>
               <div className="flex flex-wrap gap-3">
                 {solution.technologies.map((tech, index) => (
                   <span key={index} className="px-6 py-3 bg-accent-blue/10 text-accent-blue rounded-full font-semibold">
@@ -358,17 +418,17 @@ export default function SolutionDetailPage({ params }) {
             {/* CTA */}
             <div className="text-center bg-gradient-to-br from-slate-50 to-white p-12 rounded-3xl border-2 border-gray-200">
               <h3 className="text-3xl font-bold text-primary-black mb-4">
-                Implementăm soluția potrivită pentru afacerea ta
+                {labels.ctaTitle}
               </h3>
               <p className="text-gray-text text-lg mb-8 max-w-2xl mx-auto">
-                Contactează-ne pentru o consultație gratuită și o ofertă personalizată.
+                {labels.ctaSubtitle}
               </p>
               <div className="flex gap-6 justify-center flex-wrap">
                 <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                  Cere Ofertă
+                  {labels.ctaPrimary}
                 </Button>
                 <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
-                  Vezi Proiecte Similare
+                  {labels.ctaSecondary}
                 </Button>
               </div>
             </div>

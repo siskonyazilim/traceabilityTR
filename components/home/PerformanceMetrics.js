@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import { useLanguage } from '../i18n/LanguageProvider';
+import { getPerformanceMetricLabels } from '../../lib/i18n/contentLocalization';
 
 const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
   const [count, setCount] = useState(0);
@@ -54,7 +56,6 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       viewport={{ once: true }}
-      whileHover={{ scale: 1.05 }}
     >
       <div className="text-5xl md:text-6xl font-bold text-accent-blue mb-2 transition-all duration-300">
         {count}
@@ -66,11 +67,20 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
 };
 
 export const PerformanceMetrics = () => {
+  const { locale, t } = useLanguage();
+
+  const labels = getPerformanceMetricLabels([
+    'Clienti multumiti',
+    'Tari',
+    'Proiecte globale',
+    'Colegi',
+  ], locale);
+
   const metrics = [
-    { end: 500, label: 'Clienți mulțumiți', suffix: '+' },
-    { end: 40, label: 'Țări', suffix: '+' },
-    { end: 4, label: 'Proiecte globale', suffix: '' },
-    { end: 80, label: 'Colegi', suffix: '+' },
+    { end: 500, label: labels[0], suffix: '+' },
+    { end: 40, label: labels[1], suffix: '+' },
+    { end: 4, label: labels[2], suffix: '' },
+    { end: 80, label: labels[3], suffix: '+' },
   ];
 
   const handleScroll = () => {
@@ -96,10 +106,10 @@ export const PerformanceMetrics = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Performanță și indicatori cuprinzători
+            {t('sections.performanceTitle', 'Performanță și indicatori cuprinzători')}
           </h2>
           <p className="text-xl text-gray-light max-w-2xl mx-auto">
-            Rezultatele noastre vorbesc pentru ei înșiși
+            {t('sections.performanceSubtitle', 'Rezultatele noastre vorbesc pentru ei înșiși')}
           </p>
         </motion.div>
 
@@ -128,7 +138,7 @@ export const PerformanceMetrics = () => {
             onClick={handleScroll}
             className="bg-secondary-blue hover:bg-accent-blue text-white"
           >
-            Proiectele noastre de referință
+            {t('sections.performanceCta', 'Proiectele noastre de referință')}
           </Button>
         </motion.div>
       </Container>

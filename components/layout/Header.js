@@ -1,57 +1,89 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const langMenuRef = useRef(null);
   const pathname = usePathname();
   const router = useRouter();
+  const { locale, setLocale, t } = useLanguage();
   const isHomePage = pathname === '/';
   const useTransparentHeader = isHomePage && !scrolled && !isOpen;
 
+  const languageOptions = [
+    { code: 'ro', flagSrc: '/romania.svg', label: 'RO' },
+    { code: 'en', flagSrc: '/england.svg', label: 'EN' },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(globalThis.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    globalThis.addEventListener('scroll', handleScroll);
+    return () => globalThis.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleOutside = (event) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
+        setIsLangOpen(false);
+      }
+    };
+
+    globalThis.addEventListener('click', handleOutside);
+    return () => globalThis.removeEventListener('click', handleOutside);
   }, []);
 
   const handleNavClick = (id) => {
-    // Special handling for products tab
-    if (id === '#products-tab') {
+    const syncSolutionsTab = (tab) => {
+      const tabValue = tab === 'products' ? 'products' : 'solutions';
       const section = document.querySelector('#traceability-solutions');
+
       if (section) {
-        const y = section.getBoundingClientRect().top + window.scrollY - 92;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-        // Update URL hash
-        window.history.pushState(null, '', id);
-        // Wait for scroll then click products tab button
-        setTimeout(() => {
-          const productsButton = document.getElementById('products-tab-button');
-          if (productsButton) {
-            productsButton.click();
-          }
-        }, 500);
+        const y = section.getBoundingClientRect().top + globalThis.scrollY - 92;
+        globalThis.scrollTo({ top: y, behavior: 'smooth' });
+
+        const url = new URL(globalThis.location.href);
+        url.searchParams.set('tab', tabValue);
+        url.hash = 'traceability-solutions';
+        globalThis.history.pushState(null, '', url.toString());
+
+        globalThis.dispatchEvent(new CustomEvent('open-solutions-tab', { detail: { tab: tabValue } }));
         setIsOpen(false);
+        return true;
+      }
+
+      router.push(`/?tab=${tabValue}#traceability-solutions`);
+      setIsOpen(false);
+      return true;
+    };
+
+    if (id === '#solutions-tab') {
+      if (syncSolutionsTab('solutions')) {
         return;
       }
-      router.push('/#traceability-solutions');
-      setIsOpen(false);
-      return;
+    }
+
+    if (id === '#products-tab') {
+      if (syncSolutionsTab('products')) {
+        return;
+      }
     }
 
     const element = document.querySelector(id);
     if (element) {
-      const y = element.getBoundingClientRect().top + window.scrollY - 92;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      const y = element.getBoundingClientRect().top + globalThis.scrollY - 92;
+      globalThis.scrollTo({ top: y, behavior: 'smooth' });
       // Update URL hash
-      window.history.pushState(null, '', id);
+      globalThis.history.pushState(null, '', id);
       setIsOpen(false);
       return;
     }
@@ -62,12 +94,14 @@ export const Header = () => {
   };
 
   const navItems = [
-    { label: 'Soluțiile Noastre', href: '#traceability-solutions' },
-    { label: 'Industrii', href: '#products-tab' },
-    { label: 'Parteneri de Soluții', href: '#our-strategic-solution-partners' },
-    { label: 'Contact', href: '/contact' },
-    { label: 'Știri', href: '/blog' },
+    { label: t('header.solutions', 'Soluțiile Noastre'), href: '#solutions-tab' },
+    { label: t('header.industries', 'Industrii'), href: '#products-tab' },
+    { label: t('header.partners', 'Parteneri de Soluții'), href: '#our-strategic-solution-partners' },
+    { label: t('header.contact', 'Contact'), href: '/contact' },
+    { label: t('header.news', 'Știri'), href: '/blog' },
   ];
+
+  const currentLanguage = languageOptions.find((option) => option.code === locale) || languageOptions[0];
 
   let headerBackgroundClass = 'bg-white border-b border-slate-blue/10 shadow-[0_10px_32px_rgba(10,10,43,0.08)]';
   if (useTransparentHeader) {
@@ -117,20 +151,86 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              useTransparentHeader ? 'text-white' : 'text-primary-black'
-            }`}
-          >
-            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-          </button>
+          <div className="flex items-center gap-3">
+            <div ref={langMenuRef} className="relative hidden md:block w-[116px]">
+              <button
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setIsLangOpen((prev) => !prev);
+                }}
+                aria-label={t('language.switchAria', 'Schimbă limba')}
+                className={`w-full h-10 flex items-center justify-between rounded-lg px-3 text-xs font-bold border transition-colors ${
+                  useTransparentHeader
+                    ? 'text-white border-white/40 hover:bg-white/10'
+                    : 'text-primary-black border-slate-200 hover:bg-slate-50'
+                }`}
+              >
+                <span className="flex items-center gap-2">
+                  <img src={currentLanguage.flagSrc} alt={currentLanguage.label} className="h-4 w-5 rounded-[2px] object-cover" />
+                  <span>{currentLanguage.label}</span>
+                </span>
+                <FiChevronDown size={14} className={`transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-full rounded-xl border border-slate-200 bg-white shadow-lg overflow-hidden z-50">
+                  {languageOptions.map((option) => (
+                    <button
+                      key={option.code}
+                      onClick={() => {
+                        setLocale(option.code);
+                        setIsLangOpen(false);
+                      }}
+                      className={`w-full h-10 flex items-center gap-2 px-3 text-sm text-left transition-colors ${
+                        locale === option.code ? 'bg-slate-100 text-primary-black font-semibold' : 'text-gray-700 hover:bg-slate-50'
+                      }`}
+                    >
+                      <img src={option.flagSrc} alt={option.label} className="h-4 w-5 rounded-[2px] object-cover" />
+                      <span>{option.label}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className={`md:hidden p-2 rounded-lg transition-colors ${
+                useTransparentHeader ? 'text-white' : 'text-primary-black'
+              }`}
+            >
+              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
+            <div className="mb-4 pb-4 border-b border-slate-100">
+              <p className="text-xs uppercase tracking-wide text-gray-500 mb-2">{t('language.label', 'Limbă')}</p>
+              <div className="grid grid-cols-2 gap-2">
+                {languageOptions.map((option) => (
+                  <button
+                    key={`mobile-${option.code}`}
+                    onClick={() => {
+                      setLocale(option.code);
+                      setIsOpen(false);
+                    }}
+                    className={`flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm border ${
+                      locale === option.code
+                        ? 'bg-slate-100 border-slate-300 font-semibold text-primary-black'
+                        : 'border-slate-200 text-gray-700'
+                    }`}
+                  >
+                    <img src={option.flagSrc} alt={option.label} className="h-4 w-5 rounded-[2px] object-cover" />
+                    <span>{option.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {navItems.map((item) => (
               <div key={item.label} className="mb-3">
                 {item.href.startsWith('#') ? (

@@ -6,27 +6,34 @@ import Link from 'next/link';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
+import { useLanguage } from '../i18n/LanguageProvider';
 import { strategicPartners } from '../../data/partners';
+import { localizePartners } from '../../lib/i18n/contentLocalization';
 
 export const StrategicPartners = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
+  const [pauseUntil, setPauseUntil] = useState(0);
+  const { locale, t } = useLanguage();
+  const localizedPartners = useMemo(() => localizePartners(strategicPartners, locale), [locale]);
 
   useEffect(() => {
     const updateItemsPerView = () => {
-      if (window.innerWidth < 768) {
+      if (globalThis.innerWidth < 768) {
         setItemsPerView(1);
+      } else if (globalThis.innerWidth < 1024) {
+        setItemsPerView(2);
       } else {
         setItemsPerView(3);
       }
     };
 
     updateItemsPerView();
-    window.addEventListener('resize', updateItemsPerView);
-    return () => window.removeEventListener('resize', updateItemsPerView);
+    globalThis.addEventListener('resize', updateItemsPerView);
+    return () => globalThis.removeEventListener('resize', updateItemsPerView);
   }, []);
 
-  const maxIndex = Math.max(0, strategicPartners.length - itemsPerView);
+  const maxIndex = Math.max(0, localizedPartners.length - itemsPerView);
 
   useEffect(() => {
     if (currentIndex > maxIndex) {
@@ -36,22 +43,34 @@ export const StrategicPartners = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 3000);
+      setCurrentIndex((prev) => {
+        if (Date.now() < pauseUntil) {
+          return prev;
+        }
+
+        return prev >= maxIndex ? 0 : prev + 1;
+      });
+    }, 4800);
 
     return () => clearInterval(timer);
-  }, [maxIndex]);
+  }, [maxIndex, pauseUntil]);
+
+  const pauseAutoPlay = () => {
+    setPauseUntil(Date.now() + 8000);
+  };
 
   const visiblePartners = useMemo(
-    () => strategicPartners.slice(currentIndex, currentIndex + itemsPerView),
-    [currentIndex, itemsPerView]
+    () => localizedPartners.slice(currentIndex, currentIndex + itemsPerView),
+    [currentIndex, itemsPerView, localizedPartners]
   );
 
   const handlePrev = () => {
+    pauseAutoPlay();
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
   const handleNext = () => {
+    pauseAutoPlay();
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
 
@@ -63,15 +82,15 @@ export const StrategicPartners = () => {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title="Partenerii noștri strategici de soluții"
-          subtitle="Partenerii noștri valoroși de soluții, care sunt lideri în domeniile lor și și-au dovedit succesul la nivel global."
+          title={t('sections.strategicPartnersTitle', 'Partenerii noștri strategici de soluții')}
+          subtitle={t('sections.strategicPartnersSubtitle', 'Partenerii noștri valoroși de soluții, care sunt lideri în domeniile lor și și-au dovedit succesul la nivel global.')}
         />
 
         <div className="relative">
           <div className="hidden md:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10">
             <button
               onClick={handlePrev}
-              aria-label="Partener anterior"
+              aria-label={t('sections.partnerPrev', 'Partener anterior')}
               className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <FiChevronLeft size={20} />
@@ -81,7 +100,7 @@ export const StrategicPartners = () => {
           <div className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10">
             <button
               onClick={handleNext}
-              aria-label="Partener următor"
+              aria-label={t('sections.partnerNext', 'Partener următor')}
               className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <FiChevronRight size={20} />
@@ -90,22 +109,18 @@ export const StrategicPartners = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {visiblePartners.map((partner, index) => (
-              <Link key={`${partner.id}-${currentIndex}`} href={`/solution-partners/${partner.slug}`}>
+              <Link key={partner.id} href={`/solution-partners/${partner.slug}`}>
                 <motion.article
                   className="h-full rounded-2xl bg-white border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.45, delay: index * 0.06 }}
-                  whileHover={{ y: -6, scale: 1.02 }}
                 >
-                  {/* Uniform Logo Container - Fixed Height */}
-                  <div className="h-40 flex items-center justify-center p-8 bg-white relative overflow-hidden border-b border-slate-100">
+                  {/* Logo */}
+                  <div className="h-40 flex items-center justify-center p-6 bg-white relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10 w-full h-full flex items-center justify-center">
                       <img
                         src={partner.logo}
                         alt={partner.name}
-                        className="max-h-16 max-w-[80%] object-contain transition-all duration-300 group-hover:scale-105"
+                        className="max-h-24 max-w-[92%] object-contain"
                         style={{ objectFit: 'contain' }}
                         onError={(e) => {
                           e.target.style.display = 'none';
@@ -121,9 +136,9 @@ export const StrategicPartners = () => {
                     <p className="text-sm text-gray-text leading-relaxed min-h-[4.5rem]">
                       {partner.description}
                     </p>
-                    <span className="inline-flex items-center mt-4 text-accent-blue font-semibold text-sm group-hover:translate-x-1 transition-transform duration-300">
-                      Detalii
-                      <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="inline-flex items-center mt-4 text-accent-blue font-semibold text-sm">
+                      {t('sections.details', 'Detalii')}
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </span>
@@ -137,8 +152,11 @@ export const StrategicPartners = () => {
             {Array.from({ length: maxIndex + 1 }, (_, page) => page).map((page) => (
               <button
                 key={`partners-page-${page}`}
-                onClick={() => setCurrentIndex(page)}
-                aria-label={`Mergi la setul ${page + 1}`}
+                onClick={() => {
+                  pauseAutoPlay();
+                  setCurrentIndex(page);
+                }}
+                aria-label={t('sections.partnerSet', `Mergi la setul ${page + 1}`, { page: page + 1 })}
                 className={`h-2.5 rounded-full transition-all ${
                   currentIndex === page ? 'w-7 bg-slate-blue' : 'w-2.5 bg-inactive-gray hover:bg-accent-blue'
                 }`}

@@ -52,7 +52,7 @@ export default function Industries() {
             >
               <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-accent-blue transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 {/* Icon */}
-                <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300 text-center flex justify-center">
+                <div className="mb-6 text-center flex justify-center">
                   <img
                     src={industry.icon}
                     alt={industry.name}

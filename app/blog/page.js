@@ -7,20 +7,24 @@ import BlogCard from '../../components/ui/BlogCard';
 import Button from '../../components/ui/Button';
 import { blogPosts } from '../../data/blogPosts';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../components/i18n/LanguageProvider';
+import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
 
 const ITEMS_PER_PAGE = 6;
 
 export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
+  const { locale, t } = useLanguage();
+  const localizedPosts = localizeBlogPosts(blogPosts, locale);
 
   // Pagination
-  const totalPages = Math.ceil(blogPosts.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(localizedPosts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const paginatedPosts = blogPosts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const paginatedPosts = localizedPosts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 300, behavior: 'smooth' });
+    globalThis.scrollTo({ top: 300, behavior: 'smooth' });
   };
 
   return (
@@ -41,9 +45,9 @@ export default function BlogPage() {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-blue/20 rounded-full blur-2xl"></div>
 
             <div className="relative z-10">
-              <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-white/80 font-bold mb-4">Resurse</p>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">Noutăți, ghiduri și tendințe în trasabilitate</h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-3xl">Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.</p>
+              <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-white/80 font-bold mb-4">{t('blogPage.eyebrow', 'Resurse')}</p>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">{t('blogPage.heroTitle', 'Noutăți, ghiduri și tendințe în trasabilitate')}</h1>
+              <p className="text-lg md:text-xl text-white/90 max-w-3xl">{t('blogPage.heroSubtitle', 'Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.')}</p>
             </div>
           </motion.div>
 
@@ -91,24 +95,24 @@ export default function BlogPage() {
           ) : (
             <div className="text-center py-16">
               <p className="text-gray-text text-lg">
-                Nu au fost găsite articole.
+                {t('blogPage.empty', 'Nu au fost găsite articole.')}
               </p>
             </div>
           )}
 
           <div className="mt-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
-              Vrei să discutăm despre trasabilitate?
+              {t('blogPage.ctaTitle', 'Vrei să discutăm despre trasabilitate?')}
             </h2>
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.
+              {t('blogPage.ctaSubtitle', 'Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.')}
             </p>
             <div className="flex gap-6 justify-center flex-wrap">
               <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                Cere Ofertă
+                {t('blogPage.ctaPrimary', 'Cere Ofertă')}
               </Button>
               <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
-                Vezi Proiectele
+                {t('blogPage.ctaSecondary', 'Vezi Proiectele')}
               </Button>
             </div>
           </div>

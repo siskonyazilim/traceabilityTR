@@ -1,0 +1,146 @@
+{
+  "language": {
+    "label": "Limbă",
+    "ro": "Română",
+    "en": "English",
+    "switchAria": "Schimbă limba"
+  },
+  "header": {
+    "solutions": "Soluțiile Noastre",
+    "industries": "Industrii",
+    "partners": "Parteneri de Soluții",
+    "contact": "Contact",
+    "news": "Știri"
+  },
+  "footer": {
+    "brandDescription": "Soluții innovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.",
+    "navigation": "Navigare",
+    "home": "Pagina Principală",
+    "solutions": "Soluțiile Noastre",
+    "industries": "Industrii",
+    "partners": "Parteneri de Soluții",
+    "faq": "Întrebări Frecvente",
+    "contact": "Contact",
+    "news": "Știri",
+    "contactTitle": "Contact",
+    "phone": "Telefon",
+    "email": "Email",
+    "copyright": "© 2026 Traceability. Toate drepturile rezervate."
+  },
+  "cookie": {
+    "close": "Închide",
+    "message": "Folosim cookie-uri pentru a îmbunătăți experiența ta pe OnSuite. Prin utilizarea site-ului, ești de acord cu politica noastră de cookie-uri.",
+    "accept": "Acceptă",
+    "decline": "Respinge",
+    "learnMore": "Află mai multe"
+  },
+  "homeCta": {
+    "title": "Vrei să transformi procesele tale de producție?",
+    "subtitle": "Planificăm împreună o soluție de trasabilitate adaptată fluxurilor tale operaționale.",
+    "primary": "Cere Ofertă",
+    "secondary": "Vezi Referințele"
+  },
+  "hero": {
+    "cta": "Cere Ofertă"
+  },
+  "notFound": {
+    "title": "Pagina nu a fost găsită",
+    "description": "Conținutul pentru această adresă nu este disponibil momentan.",
+    "home": "Înapoi la Acasă",
+    "contact": "Contact"
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "heroTitle": "Să discutăm despre procesul tău de trasabilitate",
+    "heroSubtitle": "Alege biroul potrivit sau trimite-ne un mesaj. Revenim rapid cu o propunere adaptată fluxurilor tale operaționale.",
+    "officesTitle": "Birourile Noastre",
+    "formTitle": "Trimitere Mesaj",
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "email": "Email",
+    "website": "Website (opțional)",
+    "message": "Mesaj",
+    "privacyText": "Sunt de acord cu",
+    "privacyPolicy": "politica de confidențialitate",
+    "submit": "Trimite Mesaj",
+    "success": "✓ Mesajul dvs. a fost trimis cu succes!",
+    "locationAlt": "Locație",
+    "mapTitleSuffix": "hartă",
+    "errors": {
+      "firstNameRequired": "Prenumele este necesar",
+      "firstNameMin": "Min 2 caractere",
+      "lastNameRequired": "Numele este necesar",
+      "lastNameMin": "Min 2 caractere",
+      "emailRequired": "Email-ul este necesar",
+      "emailInvalid": "Email invalid",
+      "urlInvalid": "URL invalid",
+      "messageRequired": "Mesajul este necesar",
+      "messageMin": "Min 10 caractere",
+      "privacyRequired": "Trebuie să accepti politica de confidențialitate"
+    },
+    "placeholders": {
+      "firstName": "Ion",
+      "lastName": "Popescu",
+      "email": "email@example.com",
+      "website": "https://www.example.com",
+      "message": "Scrie-ți mesajul aici..."
+    }
+  },
+  "blogPage": {
+    "eyebrow": "Resurse",
+    "heroTitle": "Noutăți, ghiduri și tendințe în trasabilitate",
+    "heroSubtitle": "Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.",
+    "empty": "Nu au fost găsite articole.",
+    "ctaTitle": "Vrei să discutăm despre trasabilitate?",
+    "ctaSubtitle": "Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.",
+    "ctaPrimary": "Cere Ofertă",
+    "ctaSecondary": "Vezi Proiectele"
+  },
+  "projectsPage": {
+    "eyebrow": "Studii de caz",
+    "heroTitle": "Proiecte de referință cu impact măsurabil",
+    "heroSubtitle": "Implementări reale în automotive, alimentar și producție industrială, cu indicatori clari de eficiență și calitate.",
+    "sectionTitle": "Selecție Proiecte",
+    "sectionSubtitle": "Proiecte realizate cu succes pentru clienți din diverse industrii",
+    "empty": "Nu am găsit proiecte.",
+    "total": "Total: {{count}} proiecte",
+    "ctaTitle": "Vrei un proiect similar pentru compania ta?",
+    "ctaSubtitle": "Putem adapta soluțiile din aceste referințe la procesele și obiectivele tale operaționale.",
+    "ctaPrimary": "Cere Ofertă"
+  },
+  "cards": {
+    "projectDetails": "Detalii proiect →",
+    "readMore": "Citește mai mult →",
+    "efficiency": "Eficiență",
+    "defects": "Defecte",
+    "productivity": "Productivitate"
+  },
+  "sections": {
+    "solutionsProductsTitle": "Soluții și Produse",
+    "solutionsProductsSubtitle": "Gama completă de servicii și produse pentru trasabilitate",
+    "solutionsTab": "Soluții",
+    "productsTab": "Produse",
+    "details": "Detalii",
+    "referenceProjectsTitle": "Proiecte de referință",
+    "referenceProjectsSubtitle": "Exemple reale de implementare pentru industrii diferite",
+    "allProjects": "TOATE PROIECTELE NOASTRE",
+    "strategicPartnersTitle": "Partenerii noștri strategici de soluții",
+    "strategicPartnersSubtitle": "Partenerii noștri valoroși de soluții, care sunt lideri în domeniile lor și și-au dovedit succesul la nivel global.",
+    "blogPreviewTitle": "Din Blog",
+    "blogPreviewSubtitle": "Accesați blogul nostru și obțineți cele mai recente actualizări din industrie și tendințele viitoare.",
+    "allArticles": "TOATE ARTICOLELE",
+    "technologyTitle": "Capabilități și Competențe Tehnologice",
+    "technologySubtitle": "Soluții avansate de trasabilitate pentru producția modernă",
+    "referenceProjectsPrev": "Proiect anterior",
+    "referenceProjectsNext": "Proiect următor",
+    "referenceProjectsGoTo": "Mergi la pagina {{page}}",
+    "partnerPrev": "Partener anterior",
+    "partnerNext": "Partener următor",
+    "partnerSet": "Mergi la setul {{page}}",
+    "blogPrev": "Articol anterior",
+    "blogNext": "Articol următor",
+    "performanceTitle": "Performanță și indicatori cuprinzători",
+    "performanceSubtitle": "Rezultatele noastre vorbesc pentru ei înșiși",
+    "performanceCta": "Proiectele noastre de referință"
+  }
+}

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import Button from '../../components/ui/Button';
 import { FiMail, FiPhone } from 'react-icons/fi';
+import { useLanguage } from '../../components/i18n/LanguageProvider';
 
 const offices = [
   {
@@ -28,6 +29,8 @@ const offices = [
 ];
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+
   const {
     register,
     handleSubmit,
@@ -57,13 +60,13 @@ export default function ContactPage() {
           className="pt-4 md:pt-6 pb-14 md:pb-20"
         >
           <div className="mb-10 md:mb-12 rounded-3xl border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
-            <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">Contact</p>
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.08] mb-4">Să discutăm despre procesul tău de trasabilitate</h1>
-            <p className="text-base md:text-lg text-white/90 max-w-3xl">Alege biroul potrivit sau trimite-ne un mesaj. Revenim rapid cu o propunere adaptată fluxurilor tale operaționale.</p>
+            <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">{t('contactPage.eyebrow', 'Contact')}</p>
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.08] mb-4">{t('contactPage.heroTitle', 'Să discutăm despre procesul tău de trasabilitate')}</h1>
+            <p className="text-base md:text-lg text-white/90 max-w-3xl">{t('contactPage.heroSubtitle', 'Alege biroul potrivit sau trimite-ne un mesaj. Revenim rapid cu o propunere adaptată fluxurilor tale operaționale.')}</p>
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-10 md:mb-12 text-center">
-            Birourile Noastre
+            {t('contactPage.officesTitle', 'Birourile Noastre')}
           </h2>
 
           <div className="grid grid-cols-1 gap-8 md:gap-10 mb-12 md:mb-16">
@@ -87,7 +90,7 @@ export default function ContactPage() {
                       <div className="flex gap-3">
                         <img
                           src="/icon/icon-map-pin.svg"
-                          alt="Location"
+                          alt={t('contactPage.locationAlt', 'Locație')}
                           className="w-5 h-5 flex-shrink-0 mt-1"
                         />
                         <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
@@ -122,7 +125,7 @@ export default function ContactPage() {
                 {/* Google Maps */}
                 <div className="h-[320px] lg:h-[380px] bg-gray-light">
                   <iframe
-                    title={`${office.name} haritası`}
+                    title={`${office.name} ${t('contactPage.mapTitleSuffix', 'hartă')}`}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -148,7 +151,7 @@ export default function ContactPage() {
             className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-2xl p-6 md:p-10 lg:p-12 shadow-[0_14px_34px_rgba(10,10,43,0.08)]"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-8 text-center">
-              Trimitere Mesaj
+              {t('contactPage.formTitle', 'Trimitere Mesaj')}
             </h2>
 
             <form onSubmit={handleSubmit(onSubmit)} className="max-w-3xl mx-auto space-y-6">
@@ -157,17 +160,17 @@ export default function ContactPage() {
               {/* First Name */}
               <div>
                 <label htmlFor="firstName" className="block text-sm font-semibold text-primary-black mb-2">
-                  Prenume *
+                  {t('contactPage.firstName', 'Prenume')} *
                 </label>
                 <input
                   id="firstName"
                   {...register('firstName', {
-                    required: 'Prenumele este necesar',
-                    minLength: { value: 2, message: 'Min 2 caractere' },
+                    required: t('contactPage.errors.firstNameRequired', 'Prenumele este necesar'),
+                    minLength: { value: 2, message: t('contactPage.errors.firstNameMin', 'Min 2 caractere') },
                   })}
                   type="text"
                   className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
-                  placeholder="Ion"
+                  placeholder={t('contactPage.placeholders.firstName', 'Ion')}
                 />
                 {errors.firstName && (
                   <span className="text-accent-red text-sm">{errors.firstName.message}</span>
@@ -177,17 +180,17 @@ export default function ContactPage() {
               {/* Last Name */}
               <div>
                 <label htmlFor="lastName" className="block text-sm font-semibold text-primary-black mb-2">
-                  Nume *
+                  {t('contactPage.lastName', 'Nume')} *
                 </label>
                 <input
                   id="lastName"
                   {...register('lastName', {
-                    required: 'Numele este necesar',
-                    minLength: { value: 2, message: 'Min 2 caractere' },
+                    required: t('contactPage.errors.lastNameRequired', 'Numele este necesar'),
+                    minLength: { value: 2, message: t('contactPage.errors.lastNameMin', 'Min 2 caractere') },
                   })}
                   type="text"
                   className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
-                  placeholder="Popescu"
+                  placeholder={t('contactPage.placeholders.lastName', 'Popescu')}
                 />
                 {errors.lastName && (
                   <span className="text-accent-red text-sm">{errors.lastName.message}</span>
@@ -198,20 +201,20 @@ export default function ContactPage() {
             {/* Email */}
             <div>
               <label htmlFor="email" className="block text-sm font-semibold text-primary-black mb-2">
-                Email *
+                {t('contactPage.email', 'Email')} *
               </label>
               <input
                 id="email"
                 {...register('email', {
-                  required: 'Email-ul este necesar',
+                  required: t('contactPage.errors.emailRequired', 'Email-ul este necesar'),
                   pattern: {
                     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: 'Email invalid',
+                    message: t('contactPage.errors.emailInvalid', 'Email invalid'),
                   },
                 })}
                 type="email"
                 className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
-                placeholder="email@example.com"
+                placeholder={t('contactPage.placeholders.email', 'email@example.com')}
               />
               {errors.email && (
                 <span className="text-accent-red text-sm">{errors.email.message}</span>
@@ -221,19 +224,19 @@ export default function ContactPage() {
             {/* Website (Optional) */}
             <div>
               <label htmlFor="website" className="block text-sm font-semibold text-primary-black mb-2">
-                Website (opțional)
+                {t('contactPage.website', 'Website (opțional)')}
               </label>
               <input
                 id="website"
                 {...register('website', {
                   pattern: {
                     value: /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/[\w\-./?%&=]*)?$/,
-                    message: 'URL invalid',
+                    message: t('contactPage.errors.urlInvalid', 'URL invalid'),
                   },
                 })}
                 type="text"
                 className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
-                placeholder="https://www.example.com"
+                placeholder={t('contactPage.placeholders.website', 'https://www.example.com')}
               />
               {errors.website && (
                 <span className="text-accent-red text-sm">{errors.website.message}</span>
@@ -243,17 +246,17 @@ export default function ContactPage() {
             {/* Message */}
             <div>
               <label htmlFor="message" className="block text-sm font-semibold text-primary-black mb-2">
-                Mesaj *
+                {t('contactPage.message', 'Mesaj')} *
               </label>
               <textarea
                 id="message"
                 {...register('message', {
-                  required: 'Mesajul este necesar',
-                  minLength: { value: 10, message: 'Min 10 caractere' },
+                  required: t('contactPage.errors.messageRequired', 'Mesajul este necesar'),
+                  minLength: { value: 10, message: t('contactPage.errors.messageMin', 'Min 10 caractere') },
                 })}
                 rows="6"
                 className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white resize-none"
-                placeholder="Scrie-ți mesajul aici..."
+                placeholder={t('contactPage.placeholders.message', 'Scrie-ți mesajul aici...')}
               />
               {errors.message && (
                 <span className="text-accent-red text-sm">{errors.message.message}</span>
@@ -265,15 +268,15 @@ export default function ContactPage() {
               <input
                 id="privacy"
                 {...register('privacy', {
-                  required: 'Trebuie să accepti politica de confidențialitate',
+                  required: t('contactPage.errors.privacyRequired', 'Trebuie să accepti politica de confidențialitate'),
                 })}
                 type="checkbox"
                 className="mt-1"
               />
               <label htmlFor="privacy" className="text-sm text-gray-text">
-                Sunt de acord cu{' '}
+                {t('contactPage.privacyText', 'Sunt de acord cu')} {' '}
                 <Link href="/" className="text-accent-blue font-semibold hover:underline">
-                  politica de confidențialitate
+                  {t('contactPage.privacyPolicy', 'politica de confidențialitate')}
                 </Link>
                 {' '}*
               </label>
@@ -284,7 +287,7 @@ export default function ContactPage() {
 
             <div className="flex justify-center">
               <Button type="submit" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                Trimite Mesaj
+                {t('contactPage.submit', 'Trimite Mesaj')}
               </Button>
             </div>
 
@@ -295,7 +298,7 @@ export default function ContactPage() {
                 animate={{ opacity: 1, y: 0 }}
                 className="bg-accent-green bg-opacity-20 border-2 border-accent-green text-accent-green px-4 py-3 rounded-lg text-center font-semibold"
               >
-                ✓ Mesajul dvs. a fost trimis cu succes!
+                {t('contactPage.success', '✓ Mesajul dvs. a fost trimis cu succes!')}
               </motion.div>
             )}
             </form>

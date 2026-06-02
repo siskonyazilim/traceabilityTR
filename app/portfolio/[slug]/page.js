@@ -5,10 +5,15 @@ import Button from '../../../components/ui/Button';
 import { referenceProjects } from '../../../data/references';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { FiArrowLeft } from 'react-icons/fi';
+import { cookies } from 'next/headers';
+import { localizeReferenceProjects } from '../../../lib/i18n/contentLocalization';
 /* eslint-disable react/prop-types */
 
-export default function PortfolioDetailPage({ params }) {
-  const { slug: rawSlug } = params;
+export default async function PortfolioDetailPage({ params }) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localizedProjects = localizeReferenceProjects(referenceProjects, locale);
+  const { slug: rawSlug } = await params;
   const legacySlugMap = {
     'maxion-inci-celik-trasabilitatea-paletilor': 'maxion-inci-celik',
     'abalioglu-yag-trasabilitate': 'abalioglu-yag',
@@ -20,11 +25,11 @@ export default function PortfolioDetailPage({ params }) {
   };
 
   const slug = legacySlugMap[rawSlug] || rawSlug;
-  const project = referenceProjects.find((p) => p.slug === slug);
+  const project = localizedProjects.find((p) => p.slug === slug);
 
   if (!project) notFound();
 
-  const relatedProjects = referenceProjects
+  const relatedProjects = localizedProjects
     .filter((p) => p.sector === project.sector && p.id !== project.id)
     .slice(0, 3);
   const safeContent = sanitizeRichText(project.content);
@@ -33,10 +38,14 @@ export default function PortfolioDetailPage({ params }) {
     || (project.image?.includes('/Logos/') ? '/resmi/Factory.jpg' : project.image);
 
   const sectorColors = {
+    'Industria auto': 'from-accent-blue',
     'Automotive': 'from-accent-blue',
-    'Alimentar': 'from-accent-green',
+    'Alimente': 'from-accent-green',
+    'Food': 'from-accent-green',
     'Electronice': 'from-accent-yellow',
     'Farmaceutic': 'from-accent-red',
+    'Tobacco': 'from-accent-red',
+    'Tutun': 'from-accent-red',
   };
 
   return (
@@ -44,7 +53,7 @@ export default function PortfolioDetailPage({ params }) {
       <Container size="xl">
         {/* Back Button */}
         <Link href="/proiecte-de-referinta" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
-          <FiArrowLeft /> Înapoi la Proiecte
+          <FiArrowLeft /> {locale === 'en' ? 'Back to Projects' : 'Inapoi la Proiecte'}
         </Link>
 
         <article className="max-w-6xl mx-auto">
@@ -90,9 +99,7 @@ export default function PortfolioDetailPage({ params }) {
 
           {/* Technologies */}
           <div className="mb-8 pb-8 border-b border-gray-light rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-            <h2 className="text-2xl font-bold text-primary-black mb-4">
-              Tehnologii Utilizate
-            </h2>
+              <h2 className="text-2xl font-bold text-primary-black mb-4">{locale === 'en' ? 'Technologies Used' : 'Tehnologii Utilizate'}</h2>
             <div className="flex flex-wrap gap-3">
               {project.technologies.map((tech, index) => (
                 <span
@@ -115,7 +122,7 @@ export default function PortfolioDetailPage({ params }) {
 
           {Array.isArray(project.gallery) && project.gallery.length > 0 && (
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-primary-black mb-4">Galerie Proiect</h2>
+              <h2 className="text-2xl font-bold text-primary-black mb-4">{locale === 'en' ? 'Project Gallery' : 'Galerie Proiect'}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {project.gallery.map((image) => (
                   <div key={`${project.id}-${image}`} className="h-56 md:h-64 rounded-xl overflow-hidden border border-gray-200 bg-slate-100">
@@ -128,19 +135,19 @@ export default function PortfolioDetailPage({ params }) {
 
           {/* Results */}
           <div className="bg-primary-black rounded-2xl p-8 text-white mb-12 shadow-[0_14px_34px_rgba(10,10,43,0.3)]">
-            <h2 className="text-2xl font-bold mb-6">Rezultate</h2>
+            <h2 className="text-2xl font-bold mb-6">{locale === 'en' ? 'Results' : 'Rezultate'}</h2>
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">+{project.results.efficiency}</div>
-                <p className="text-white text-opacity-90">Eficiență</p>
+                <p className="text-white text-opacity-90">{locale === 'en' ? 'Efficiency' : 'Eficienta'}</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">-{project.results.defects}</div>
-                <p className="text-white text-opacity-90">Defecte</p>
+                <p className="text-white text-opacity-90">{locale === 'en' ? 'Defects' : 'Defecte'}</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">+{project.results.productivity}</div>
-                <p className="text-white text-opacity-90">Productivitate</p>
+                <p className="text-white text-opacity-90">{locale === 'en' ? 'Productivity' : 'Productivitate'}</p>
               </div>
             </div>
           </div>
@@ -149,7 +156,7 @@ export default function PortfolioDetailPage({ params }) {
           {relatedProjects.length > 0 && (
             <div className="mt-16 pt-12 border-t border-gray-light">
               <h2 className="text-3xl font-bold text-primary-black mb-8">
-                Proiecte Înrudite
+                {locale === 'en' ? 'Related Projects' : 'Proiecte Inrudite'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedProjects.map((relatedProject) => (
@@ -177,17 +184,17 @@ export default function PortfolioDetailPage({ params }) {
           {/* CTA */}
           <div className="mt-20 text-center">
             <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
-              Vrei să transformi și tu procesele de producție?
+              {locale === 'en' ? 'Want to transform your production processes too?' : 'Vrei sa transformi si tu procesele de productie?'}
             </h3>
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              Contactează-ne pentru a discuta cum putem implementa o soluție similară în afacerea ta.
+              {locale === 'en' ? 'Contact us to discuss how we can implement a similar solution in your business.' : 'Contacteaza-ne pentru a discuta cum putem implementa o solutie similara in afacerea ta.'}
             </p>
             <div className="flex gap-6 justify-center flex-wrap">
               <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                Cere Ofertă
+                {locale === 'en' ? 'Request Proposal' : 'Cere Oferta'}
               </Button>
               <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
-                Vezi Toate Referințele
+                {locale === 'en' ? 'View All References' : 'Vezi Toate Referintele'}
               </Button>
             </div>
           </div>

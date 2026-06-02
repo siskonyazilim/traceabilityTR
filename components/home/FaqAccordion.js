@@ -1,9 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiPlus } from 'react-icons/fi';
 import Container from '../ui/Container';
+import { useLanguage } from '../i18n/LanguageProvider';
+import { getFaqBundle } from '../../lib/i18n/contentLocalization';
 
 const faqs = [
   {
@@ -50,6 +52,8 @@ const faqs = [
 
 export const FaqAccordion = () => {
   const [openId, setOpenId] = useState(null);
+  const { locale } = useLanguage();
+  const faqBundle = useMemo(() => getFaqBundle(faqs, locale), [locale]);
 
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);
@@ -71,10 +75,10 @@ export const FaqAccordion = () => {
           viewport={{ once: true }}
         >
           <p className="text-secondary-blue text-xs md:text-sm uppercase tracking-[0.18em] font-semibold mb-4">
-            FAQ
+            {faqBundle.eyebrow}
           </p>
           <h2 className="text-primary-black text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] tracking-tight mb-6">
-            Perspectivele noastre asupra trasabilității
+            {faqBundle.title}
           </h2>
           <div className="w-24 h-1 bg-accent-blue mx-auto"></div>
         </motion.div>
@@ -83,7 +87,7 @@ export const FaqAccordion = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Column - First 4 questions */}
           <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
-            {faqs.slice(0, 4).map((faq, index) => (
+            {faqBundle.items.slice(0, 4).map((faq, index) => (
               <motion.div
                 key={faq.id}
                 initial={{ opacity: 0, x: -20 }}
@@ -137,7 +141,7 @@ export const FaqAccordion = () => {
 
           {/* Right Column - Last 4 questions */}
           <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
-            {faqs.slice(4, 8).map((faq, index) => (
+            {faqBundle.items.slice(4, 8).map((faq, index) => (
               <motion.div
                 key={faq.id}
                 initial={{ opacity: 0, x: 20 }}

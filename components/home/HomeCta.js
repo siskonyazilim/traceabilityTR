@@ -4,8 +4,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 export const HomeCta = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 md:py-28 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
       {/* Background Elements */}
@@ -28,7 +31,7 @@ export const HomeCta = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bold text-primary-black mb-8 leading-tight"
           >
-            Vrei să transformi procesele tale de producție?
+            {t('homeCta.title', 'Vrei să transformi procesele tale de producție?')}
           </motion.h2>
 
           {/* Subtitle */}
@@ -39,7 +42,7 @@ export const HomeCta = () => {
             viewport={{ once: true }}
             className="text-gray-text text-xl md:text-2xl mb-12 leading-relaxed"
           >
-            Planificăm împreună o soluție de trasabilitate adaptată fluxurilor tale operaționale.
+            {t('homeCta.subtitle', 'Planificăm împreună o soluție de trasabilitate adaptată fluxurilor tale operaționale.')}
           </motion.p>
 
           {/* CTA Buttons - Standardized */}
@@ -57,7 +60,7 @@ export const HomeCta = () => {
               size="lg"
               className="bg-secondary-blue hover:bg-accent-blue text-white"
             >
-              Cere Ofertă
+              {t('homeCta.primary', 'Cere Ofertă')}
             </Button>
             <Button
               as={Link}
@@ -66,7 +69,7 @@ export const HomeCta = () => {
               size="lg"
               className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"
             >
-              Vezi Referințele
+              {t('homeCta.secondary', 'Vezi Referințele')}
             </Button>
           </motion.div>
         </motion.div>

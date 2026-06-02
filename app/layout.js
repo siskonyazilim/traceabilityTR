@@ -1,25 +1,15 @@
 import './globals.css'
 import { Layout } from '../components/layout/Layout'
-import { Inter, Nunito, Poppins } from 'next/font/google'
+import { LanguageProvider } from '../components/i18n/LanguageProvider'
+import { cookies } from 'next/headers'
+import { Kanit } from 'next/font/google'
+import { DEFAULT_LOCALE, isSupportedLocale } from '../lib/i18n/dictionaries'
+/* eslint-disable react/prop-types */
 
-const inter = Inter({
+const kanit = Kanit({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
-const nunito = Nunito({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-  variable: '--font-nunito',
-  display: 'swap',
-})
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['500', '600', '700', '800'],
-  variable: '--font-poppins',
+  variable: '--font-kanit',
   display: 'swap',
 })
 
@@ -43,17 +33,28 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }) {
+// eslint-disable-next-line react/prop-types
+export default async function RootLayout({ children }) {
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get('locale')?.value;
+  const locale = isSupportedLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+
   return (
-    <html lang="ro">
+    <html lang={locale}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
       </head>
-      <body className={`${inter.variable} ${nunito.variable} ${poppins.variable}`}>
-        <Layout>
-          {children}
-        </Layout>
+      <body className={kanit.variable}>
+        <LanguageProvider initialLocale={locale}>
+          <Layout>
+            {children}
+          </Layout>
+        </LanguageProvider>
       </body>
     </html>
   )

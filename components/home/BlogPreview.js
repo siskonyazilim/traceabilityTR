@@ -7,15 +7,19 @@ import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import BlogCard from '../ui/BlogCard';
 import Button from '../ui/Button';
+import { useLanguage } from '../i18n/LanguageProvider';
 import { blogPosts } from '../../data/blogPosts';
+import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
 
 export const BlogPreview = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(2);
+  const { locale, t } = useLanguage();
+  const localizedPosts = useMemo(() => localizeBlogPosts(blogPosts, locale), [locale]);
 
   useEffect(() => {
     const updateItemsPerView = () => {
-      if (window.innerWidth < 768) {
+      if (globalThis.innerWidth < 768) {
         setItemsPerView(1);
       } else {
         setItemsPerView(2);
@@ -23,11 +27,11 @@ export const BlogPreview = () => {
     };
 
     updateItemsPerView();
-    window.addEventListener('resize', updateItemsPerView);
-    return () => window.removeEventListener('resize', updateItemsPerView);
+    globalThis.addEventListener('resize', updateItemsPerView);
+    return () => globalThis.removeEventListener('resize', updateItemsPerView);
   }, []);
 
-  const maxIndex = Math.max(0, blogPosts.length - itemsPerView);
+  const maxIndex = Math.max(0, localizedPosts.length - itemsPerView);
 
   useEffect(() => {
     if (currentIndex > maxIndex) {
@@ -44,8 +48,8 @@ export const BlogPreview = () => {
   }, [maxIndex]);
 
   const visiblePosts = useMemo(
-    () => blogPosts.slice(currentIndex, currentIndex + itemsPerView),
-    [currentIndex, itemsPerView]
+    () => localizedPosts.slice(currentIndex, currentIndex + itemsPerView),
+    [currentIndex, itemsPerView, localizedPosts]
   );
 
   const handlePrev = () => {
@@ -63,24 +67,24 @@ export const BlogPreview = () => {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title="BLOG"
-          subtitle="Accesați blogul nostru și obțineți cele mai recente actualizări din industrie și tendințele viitoare."
+          title={t('sections.blogPreviewTitle', 'Din Blog')}
+          subtitle={t('sections.blogPreviewSubtitle', 'Accesați blogul nostru și obțineți cele mai recente actualizări din industrie și tendințele viitoare.')}
           className="text-primary-black"
         />
 
         <div className="relative mb-12">
           <button
             onClick={handlePrev}
-            aria-label="Articol anterior"
-            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110"
+            aria-label={t('sections.blogPrev', 'Articol anterior')}
+            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
           >
             <FiChevronLeft size={20} />
           </button>
 
           <button
             onClick={handleNext}
-            aria-label="Articol următor"
-            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110"
+            aria-label={t('sections.blogNext', 'Articol următor')}
+            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
           >
             <FiChevronRight size={20} />
           </button>
@@ -102,7 +106,7 @@ export const BlogPreview = () => {
             size="lg"
             className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"
           >
-            MERGI LA BLOG
+            {t('sections.allArticles', 'TOATE ARTICOLELE')}
           </Button>
         </div>
       </Container>
