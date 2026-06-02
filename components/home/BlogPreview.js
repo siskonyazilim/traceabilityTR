@@ -98,15 +98,18 @@ export const BlogPreview = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="px-2 sm:px-4 py-2 text-center">
+          <p className="text-primary-black text-lg sm:text-2xl font-semibold leading-relaxed mb-6 max-w-4xl mx-auto">
+            {t('sections.blogPreviewSubtitle', 'Accesați blogul nostru și obțineți cele mai recente actualizări din industrie și tendințele viitoare.')}
+          </p>
           <Button
             as={Link}
             href="/blog"
             variant="outline"
             size="lg"
-            className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"
+            className="border-2 border-primary-black text-primary-black bg-transparent hover:bg-primary-black hover:text-white"
           >
-            {t('sections.allArticles', 'TOATE ARTICOLELE')}
+            {t('sections.blogPreviewCta', 'MERGI LA BLOG')}
           </Button>
         </div>
       </Container>
