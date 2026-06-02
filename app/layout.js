@@ -13,24 +13,45 @@ const kanit = Kanit({
   display: 'swap',
 })
 
-export const metadata = {
-  title: 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability',
-  description: 'Sisteme complete de trasabilitate industrială, MES și Industrie 4.0 pentru automotive, alimentar, farmaceutic. RFID, RTLS, WMS, POKA YOKE - implementări cu ROI măsurabil.',
-  keywords: 'trasabilitate industrială, MES, industrie 4.0, RFID, RTLS, WMS, POKA YOKE, fabrici inteligente, automotive, alimentar, farmaceutic, quality control, warehouse management',
-  icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
-  },
-  openGraph: {
-    title: 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability',
-    description: 'Sisteme complete de trasabilitate industrială, MES și Industrie 4.0 pentru automotive, alimentar, farmaceutic.',
-    type: 'website',
-    locale: 'ro_RO',
-  },
-  alternates: {
-    canonical: 'https://traceability.ro',
-  },
+export async function generateMetadata() {
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get('locale')?.value;
+  const locale = isSupportedLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+
+  const isEn = locale === 'en';
+  const title = isEn
+    ? 'Industrial Traceability & MES Solutions for Smart Factories | Traceability'
+    : 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability';
+  const description = isEn
+    ? 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.'
+    : 'Traceability.ro livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
+
+  return {
+    title,
+    description,
+    keywords: 'trasabilitate industrială, MES, industrie 4.0, RFID, RTLS, WMS, POKA YOKE, fabrici inteligente, automotive, alimentar, farmaceutic, quality control, warehouse management',
+    metadataBase: new URL('https://traceability.ro'),
+    icons: {
+      icon: '/favicon.svg',
+      shortcut: '/favicon.svg',
+      apple: '/favicon.svg',
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: 'https://traceability.ro',
+      locale: isEn ? 'en_US' : 'ro_RO',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: 'https://traceability.ro',
+    },
+  };
 }
 
 // eslint-disable-next-line react/prop-types

@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiX } from 'react-icons/fi';
+import { IconX } from './Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 
 export default function CookieBanner() {
@@ -27,21 +26,16 @@ export default function CookieBanner() {
   };
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: 50, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 50, scale: 0.95 }}
-          transition={{ duration: 0.3 }}
-          className="fixed bottom-3 left-3 right-3 md:bottom-6 md:left-auto md:right-6 z-50 md:w-full md:max-w-lg"
-        >
+    isVisible ? (
+      <div className="fixed bottom-3 left-3 right-3 md:bottom-6 md:left-auto md:right-6 z-50 md:w-full md:max-w-lg">
           <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
             {/* Header with Logo and Close Button */}
             <div className="px-4 md:px-6 pt-4 md:pt-6 pb-3 md:pb-4 flex items-start justify-between gap-3">
               <img
                 src="/siskon-logo-header.svg"
                 alt="Siskon"
+                width="140"
+                height="40"
                 className="h-8 md:h-10 object-contain"
               />
               <button
@@ -49,7 +43,7 @@ export default function CookieBanner() {
                 className="text-gray-400 hover:text-gray-600 transition-colors p-2 hover:bg-gray-100 rounded-full"
                 aria-label={t('cookie.close', 'Închide')}
               >
-                <FiX size={20} />
+                <IconX size={20} />
               </button>
             </div>
 
@@ -82,8 +76,7 @@ export default function CookieBanner() {
               </div>
             </div>
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+      </div>
+    ) : null
   );
 }

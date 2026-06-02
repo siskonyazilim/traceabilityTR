@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { IconInstagram, IconLinkedIn, IconTwitter } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer = () => {
@@ -59,7 +59,7 @@ export const Footer = () => {
             </p>
             <div className="flex items-center gap-3">
               <a href="https://www.linkedin.com/company/siskonyazilimveotomasyon" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <FiLinkedin size={18} />
+                <IconLinkedIn size={18} />
               </a>
               <a href="https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
@@ -67,10 +67,10 @@ export const Footer = () => {
                 </svg>
               </a>
               <a href="https://x.com/siskonsoftware" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <FiTwitter size={18} />
+                <IconTwitter size={18} />
               </a>
               <a href="https://www.instagram.com/siskonyazilimveotomasyon" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <FiInstagram size={18} />
+                <IconInstagram size={18} />
               </a>
             </div>
           </div>

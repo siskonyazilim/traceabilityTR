@@ -1,55 +1,39 @@
-'use client';
+import { cookies } from 'next/headers';
+import HomePageClient from './HomePageClient';
 
-import dynamic from 'next/dynamic';
-import HeroSlider from '../components/home/HeroSlider';
-import HomeCta from '../components/home/HomeCta';
+export async function generateMetadata() {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const isEn = locale === 'en';
 
-const DeferredSection = () => (
-  <section className="py-12" aria-hidden="true" />
-);
+  const title = isEn
+    ? 'Industrial Traceability & MES Solutions for Smart Factories | Traceability'
+    : 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability';
+  const description = isEn
+    ? 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.'
+    : 'Traceability.ro livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
 
-const FaqAccordion = dynamic(() => import('../components/home/FaqAccordion'), {
-  loading: () => <DeferredSection />,
-});
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: 'https://traceability.ro/',
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: 'https://traceability.ro/',
+      locale: isEn ? 'en_US' : 'ro_RO',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  };
+}
 
-const SolutionsTabs = dynamic(() => import('../components/home/SolutionsTabs'), {
-  loading: () => <DeferredSection />,
-});
-
-const TechnologyCapabilities = dynamic(() => import('../components/home/TechnologyCapabilities'), {
-  ssr: false,
-  loading: () => <DeferredSection />,
-});
-
-
-const ReferenceProjects = dynamic(() => import('../components/home/ReferenceProjects'), {
-  loading: () => <DeferredSection />,
-});
-
-const StrategicPartners = dynamic(() => import('../components/home/StrategicPartners'), {
-  loading: () => <DeferredSection />,
-});
-
-const PerformanceMetrics = dynamic(() => import('../components/home/PerformanceMetrics'), {
-  loading: () => <DeferredSection />,
-});
-
-const BlogPreview = dynamic(() => import('../components/home/BlogPreview'), {
-  loading: () => <DeferredSection />,
-});
-
-export default function Home() {
-  return (
-    <>
-      <HeroSlider />
-      <FaqAccordion />
-      <SolutionsTabs />
-      <TechnologyCapabilities />
-      <ReferenceProjects />
-      <StrategicPartners />
-      <PerformanceMetrics />
-      <BlogPreview />
-      <HomeCta />
-    </>
-  );
+export default function HomePage() {
+  return <HomePageClient />;
 }

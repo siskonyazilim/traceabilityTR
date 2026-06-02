@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -49,20 +48,13 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
   }, [isVisible, end, duration]);
 
   return (
-    <motion.div
-      ref={ref}
-      className="text-center group"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      viewport={{ once: true }}
-    >
+    <div ref={ref} className="text-center group">
       <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent-blue mb-2 transition-all duration-300">
         {count}
         <span>{suffix}</span>
       </div>
       <p className="text-base sm:text-lg text-gray-light group-hover:text-white transition-colors duration-300">{label}</p>
-    </motion.div>
+    </div>
   );
 };
 
@@ -98,20 +90,14 @@ export const PerformanceMetrics = () => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-blue/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
 
       <Container size="xl" className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             {t('sections.performanceTitle', 'Performanță și indicatori cuprinzători')}
           </h2>
           <p className="text-base sm:text-xl text-gray-light max-w-2xl mx-auto">
             {t('sections.performanceSubtitle', 'Rezultatele noastre vorbesc pentru ei înșiși')}
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {metrics.map((metric) => (
@@ -125,13 +111,7 @@ export const PerformanceMetrics = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.12 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <div className="text-center">
           <Button
             variant="solid"
             size="lg"
@@ -140,7 +120,7 @@ export const PerformanceMetrics = () => {
           >
             {t('sections.performanceCta', 'Proiectele noastre de referință')}
           </Button>
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

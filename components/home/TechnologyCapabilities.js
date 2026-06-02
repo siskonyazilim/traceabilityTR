@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo } from 'react';
-import { motion } from 'framer-motion';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -44,12 +43,8 @@ export default function TechnologyCapabilities() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
           {localizedCapabilities.map((capability, index) => (
-            <motion.div
+            <div
               key={capability.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.08 }}
-              viewport={{ once: true }}
               className={`px-6 md:px-10 text-center ${index < localizedCapabilities.length - 1 ? 'md:border-r md:border-slate-300' : ''}`}
             >
               <div className="mb-6 text-slate-blue leading-none flex justify-center">
@@ -63,7 +58,7 @@ export default function TechnologyCapabilities() {
               <p className="text-gray-text text-base leading-relaxed text-center">
                 {capability.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </Container>

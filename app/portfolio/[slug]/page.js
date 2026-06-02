@@ -4,10 +4,64 @@ import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { referenceProjects } from '../../../data/references';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
-import { FiArrowLeft } from 'react-icons/fi';
+import { IconArrowLeft } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizeReferenceProjects } from '../../../lib/i18n/contentLocalization';
 /* eslint-disable react/prop-types */
+
+export async function generateMetadata({ params }) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const isEn = locale === 'en';
+  const localizedProjects = localizeReferenceProjects(referenceProjects, locale);
+  const { slug: rawSlug } = await params;
+
+  const legacySlugMap = {
+    'maxion-inci-celik-trasabilitatea-paletilor': 'maxion-inci-celik',
+    'abalioglu-yag-trasabilitate': 'abalioglu-yag',
+    'abalıoglu-yag-trasabilitate': 'abalioglu-yag',
+    'abalıoglu-yag': 'abalioglu-yag',
+    'nuhun-ankara-trasabilitate': 'nuhun-ankara',
+    'delphi-technologies-managementul-depozitelor': 'delphi-technologies',
+    'pmi-rfid-pentru-stantare': 'pmi-rfid',
+  };
+
+  const slug = legacySlugMap[rawSlug] || rawSlug;
+  const project = localizedProjects.find((entry) => entry.slug === slug);
+
+  if (!project) {
+    return {
+      title: isEn ? 'Project Not Found | Traceability' : 'Proiect Negăsit | Traceability',
+      description: isEn
+        ? 'The requested reference project could not be found. Browse other industrial traceability implementations by Traceability.'
+        : 'Proiectul de referință solicitat nu a fost găsit. Descoperă alte implementări industriale de trasabilitate realizate de Traceability.',
+    };
+  }
+
+  const title = `${project.title} | ${isEn ? 'Reference Project' : 'Proiect de Referință'} | Traceability`;
+  const description = project.description;
+  const pageUrl = `https://traceability.ro/portfolio/${project.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      url: pageUrl,
+      locale: isEn ? 'en_US' : 'ro_RO',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  };
+}
 
 export default async function PortfolioDetailPage({ params }) {
   const cookieStore = await cookies();
@@ -53,7 +107,7 @@ export default async function PortfolioDetailPage({ params }) {
       <Container size="xl">
         {/* Back Button */}
         <Link href="/proiecte-de-referinta" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
-          <FiArrowLeft /> {locale === 'en' ? 'Back to Projects' : 'Inapoi la Proiecte'}
+          <IconArrowLeft /> {locale === 'en' ? 'Back to Projects' : 'Inapoi la Proiecte'}
         </Link>
 
         <article className="max-w-6xl mx-auto">
@@ -126,7 +180,7 @@ export default async function PortfolioDetailPage({ params }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {project.gallery.map((image) => (
                   <div key={`${project.id}-${image}`} className="h-56 md:h-64 rounded-xl overflow-hidden border border-gray-200 bg-slate-100">
-                    <img src={image} alt={`${project.title} galerie`} className="w-full h-full object-cover" />
+                    <img src={image} alt={`${project.title} galerie`} width="1200" height="700" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
@@ -169,6 +223,8 @@ export default async function PortfolioDetailPage({ params }) {
                       <img
                         src={relatedProject.logo || relatedProject.image}
                         alt={relatedProject.title}
+                        width="320"
+                        height="128"
                         className="w-full h-full object-contain"
                       />
                     </div>

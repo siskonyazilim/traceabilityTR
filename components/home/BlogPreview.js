@@ -2,11 +2,11 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import BlogCard from '../ui/BlogCard';
 import Button from '../ui/Button';
+import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { blogPosts } from '../../data/blogPosts';
 import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
@@ -78,7 +78,7 @@ export const BlogPreview = () => {
             aria-label={t('sections.blogPrev', 'Articol anterior')}
             className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
           >
-            <FiChevronLeft size={20} />
+            <IconChevronLeft size={20} />
           </button>
 
           <button
@@ -86,7 +86,7 @@ export const BlogPreview = () => {
             aria-label={t('sections.blogNext', 'Articol următor')}
             className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
           >
-            <FiChevronRight size={20} />
+            <IconChevronRight size={20} />
           </button>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-8">

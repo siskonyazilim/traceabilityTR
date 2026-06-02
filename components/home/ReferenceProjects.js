@@ -2,11 +2,10 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import Button from '../ui/Button';
+import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { referenceProjects } from '../../data/references';
 import { localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
@@ -95,7 +94,7 @@ export const ReferenceProjects = () => {
               className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl group"
               aria-label={t('sections.referenceProjectsPrev', 'Proiect anterior')}
             >
-              <FiChevronLeft size={24} className="group-hover:text-accent-blue transition-colors" />
+              <IconChevronLeft size={24} className="group-hover:text-accent-blue transition-colors" />
             </button>
           </div>
 
@@ -105,14 +104,14 @@ export const ReferenceProjects = () => {
               className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl group"
               aria-label={t('sections.referenceProjectsNext', 'Proiect următor')}
             >
-              <FiChevronRight size={24} className="group-hover:text-accent-blue transition-colors" />
+              <IconChevronRight size={24} className="group-hover:text-accent-blue transition-colors" />
             </button>
           </div>
 
           {/* Grid with Featured Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
             {visibleProjects.map((project, index) => (
-              <motion.article
+              <article
                 key={project.id}
                 className="h-full group"
               >
@@ -127,6 +126,8 @@ export const ReferenceProjects = () => {
                       <img
                         src={project.logo || project.image}
                         alt={project.title}
+                        width="320"
+                        height="128"
                         className="max-h-32 w-auto object-contain"
                         onError={(e) => {
                           e.target.style.display = 'none';
@@ -154,7 +155,7 @@ export const ReferenceProjects = () => {
                     </div>
                   </div>
                 </Link>
-              </motion.article>
+              </article>
             ))}
           </div>
 

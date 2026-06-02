@@ -3,7 +3,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useLanguage } from '../i18n/LanguageProvider';
 
@@ -19,13 +18,7 @@ export const BlogCard = ({ post }) => {
   });
 
   return (
-    <motion.article
-      className="h-full"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      viewport={{ once: true }}
-    >
+    <article className="h-full">
       <Link
         href={`/blog/${post.slug}`}
         className="group block bg-white rounded-2xl border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full"
@@ -79,7 +72,7 @@ export const BlogCard = ({ post }) => {
           </span>
         </div>
         </Link>
-    </motion.article>
+    </article>
   );
 };
 

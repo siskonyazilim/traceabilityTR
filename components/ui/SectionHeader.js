@@ -1,8 +1,6 @@
 'use client';
 /* eslint-disable react/prop-types */
 
-import { motion } from 'framer-motion';
-
 export const SectionHeader = ({ 
   title, 
   subtitle, 
@@ -10,12 +8,8 @@ export const SectionHeader = ({
   className = ''
 }) => {
   return (
-    <motion.div 
+    <div 
       className={`${centered ? 'text-center' : ''} mb-12 ${className}`}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      viewport={{ once: true }}
     >
       <h2 className="text-section font-bold text-primary-black mb-4">
         {title}
@@ -25,7 +19,7 @@ export const SectionHeader = ({
           {subtitle}
         </p>
       )}
-    </motion.div>
+    </div>
   );
 };
 

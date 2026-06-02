@@ -3,10 +3,56 @@ import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { strategicPartners } from '../../../data/partners';
-import { FiArrowLeft } from 'react-icons/fi';
+import { IconArrowLeft } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizePartners } from '../../../lib/i18n/contentLocalization';
 /* eslint-disable react/prop-types, react/no-array-index-key */
+
+export async function generateMetadata({ params }) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const isEn = locale === 'en';
+  const localizedPartners = localizePartners(strategicPartners, locale);
+  const { slug: rawSlug } = await params;
+  const legacySlugMap = {
+    'proiectul-a-s': 'markem-imaje',
+  };
+  const slug = legacySlugMap[rawSlug] || rawSlug;
+  const partner = localizedPartners.find((entry) => entry.slug === slug);
+
+  if (!partner) {
+    return {
+      title: isEn ? 'Partner Not Found | Traceability' : 'Partener Negăsit | Traceability',
+      description: isEn
+        ? 'The requested strategic partner page could not be found. Explore our global solution partners and integration ecosystem.'
+        : 'Pagina partenerului strategic solicitat nu a fost găsită. Explorează partenerii noștri globali și ecosistemul de integrare.',
+    };
+  }
+
+  const title = `${partner.name} | ${isEn ? 'Strategic Solution Partner' : 'Partener Strategic de Soluții'} | Traceability`;
+  const description = partner.description;
+  const pageUrl = `https://traceability.ro/solution-partners/${partner.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      url: pageUrl,
+      locale: isEn ? 'en_US' : 'ro_RO',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  };
+}
 
 export default async function PartnerDetailPage({ params }) {
   const cookieStore = await cookies();
@@ -30,7 +76,7 @@ export default async function PartnerDetailPage({ params }) {
     <div className="min-h-screen bg-[#f5f7fa] pt-24 pb-16">
       <Container size="xl">
         <Link href="/" className="inline-flex items-center gap-2 text-accent-blue hover:underline mb-6 font-medium">
-          <FiArrowLeft /> {locale === 'en' ? 'Back to Home' : 'Inapoi la Acasa'}
+          <IconArrowLeft /> {locale === 'en' ? 'Back to Home' : 'Inapoi la Acasa'}
         </Link>
 
         <article className="max-w-6xl mx-auto">

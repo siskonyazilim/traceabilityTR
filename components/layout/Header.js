@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
+import { IconChevronDown, IconMenu, IconX } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Header = () => {
@@ -168,10 +168,10 @@ export const Header = () => {
                 }`}
               >
                 <span className="flex items-center gap-2">
-                  <img src={currentLanguage.flagSrc} alt={currentLanguage.label} className="h-4 w-5 rounded-[2px] object-cover" />
+                  <img src={currentLanguage.flagSrc} alt={currentLanguage.label} width="20" height="16" className="h-4 w-5 rounded-[2px] object-cover" />
                   <span>{currentLanguage.label}</span>
                 </span>
-                <FiChevronDown size={14} className={`transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
+                <IconChevronDown size={14} className={`transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {isLangOpen && (
@@ -187,7 +187,7 @@ export const Header = () => {
                         locale === option.code ? 'bg-slate-100 text-primary-black font-semibold' : 'text-gray-700 hover:bg-slate-50'
                       }`}
                     >
-                      <img src={option.flagSrc} alt={option.label} className="h-4 w-5 rounded-[2px] object-cover" />
+                      <img src={option.flagSrc} alt={option.label} width="20" height="16" className="h-4 w-5 rounded-[2px] object-cover" />
                       <span>{option.label}</span>
                     </button>
                   ))}
@@ -204,7 +204,7 @@ export const Header = () => {
                   : 'text-primary-black border-slate-200 hover:bg-slate-50'
               }`}
             >
-              <img src={mobileNextLanguage.flagSrc} alt={mobileNextLanguage.label} className="h-4 w-5 rounded-[2px] object-cover" />
+              <img src={mobileNextLanguage.flagSrc} alt={mobileNextLanguage.label} width="20" height="16" className="h-4 w-5 rounded-[2px] object-cover" />
               <span>{mobileNextLanguage.label}</span>
             </button>
 
@@ -215,7 +215,7 @@ export const Header = () => {
                 useTransparentHeader ? 'text-white' : 'text-primary-black'
               }`}
             >
-              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {isOpen ? <IconX size={24} /> : <IconMenu size={24} />}
             </button>
           </div>
         </div>

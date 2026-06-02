@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { cookies } from 'next/headers';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
-import { FiArrowLeft, FiCheck } from 'react-icons/fi';
+import { IconArrowLeft, IconCheck } from '../../../components/ui/Icons';
 import { localizeSolutionDetail } from '../../../lib/i18n/contentLocalization';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
@@ -233,23 +233,44 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const isEn = locale === 'en';
   const { slug } = await params;
-  const solution = solutions[slug];
+  const baseSolution = solutions[slug];
+  const solution = localizeSolutionDetail(slug, baseSolution, locale);
 
   if (!solution) {
     return {
-      title: 'Soluție Negăsită',
+      title: isEn ? 'Solution Not Found | Traceability' : 'Soluție Negăsită | Traceability',
+      description: isEn
+        ? 'The requested solution page could not be found. Explore Traceability industrial solutions for production and logistics.'
+        : 'Pagina soluției solicitate nu a fost găsită. Explorează soluțiile de trasabilitate Traceability pentru producție și logistică.',
     };
   }
 
+  const metaDescription = solution.metaDescription || solution.description;
+  const pageTitle = `${solution.title} | Traceability`;
+  const pageUrl = `https://traceability.ro/solutions/${slug}`;
+
   return {
-    title: `${solution.title} | Traceability`,
-    description: solution.metaDescription,
+    title: pageTitle,
+    description: metaDescription,
     keywords: solution.keywords,
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
-      title: `${solution.title} | Traceability`,
-      description: solution.metaDescription,
+      title: pageTitle,
+      description: metaDescription,
       type: 'website',
+      url: pageUrl,
+      locale: isEn ? 'en_US' : 'ro_RO',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: metaDescription,
     },
   };
 }
@@ -352,7 +373,7 @@ export default async function SolutionDetailPage({ params }) {
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
         <Container size="xl">
           <Link href="/#traceability-solutions" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
-            <FiArrowLeft /> {labels.back}
+            <IconArrowLeft /> {labels.back}
           </Link>
 
           <article className="max-w-6xl mx-auto">
@@ -383,7 +404,7 @@ export default async function SolutionDetailPage({ params }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {solution.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-gray-200">
-                    <FiCheck className="text-accent-blue flex-shrink-0 mt-1" size={20} />
+                    <IconCheck className="text-accent-blue flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-text">{benefit}</span>
                   </div>
                 ))}

@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -36,6 +35,7 @@ export const HeroSlider = () => {
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const { locale, t } = useLanguage();
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
+  const activeSlide = localizedSlides[current];
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -54,74 +54,51 @@ export const HeroSlider = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Slides */}
-      {localizedSlides.map((slide, index) => (
-        <motion.div
-          key={slide.id}
-          className="absolute inset-0 w-full h-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: current === index ? 1 : 0 }}
-          transition={{ duration: 0.35 }}
+      {/* Active slide only for reduced network and CPU */}
+      <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
         >
-          {/* Background Video */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src={slide.video} type="video/mp4" />
-          </video>
+          <source src={activeSlide.video} type="video/mp4" />
+        </video>
 
-          {/* Video overlays */}
-          <div className="absolute inset-0 bg-primary-black/35"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
+        <div className="absolute inset-0 bg-primary-black/35"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
 
-          {/* Content */}
-          <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
-            <div className="w-full max-w-5xl mx-auto text-center">
-              <motion.h1
-                className="text-white text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] sm:leading-[0.98] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
-                style={{ fontFamily: 'var(--font-kanit)' }}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
-                transition={{ delay: 0.12, duration: 0.45 }}
+        <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
+          <div className="w-full max-w-5xl mx-auto text-center">
+            <h1
+              className="text-white text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] sm:leading-[0.98] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
+              style={{ fontFamily: 'var(--font-kanit)' }}
+            >
+              {activeSlide.title}
+            </h1>
+
+            <div className="text-white mt-6 sm:mt-7">
+              <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl mx-auto">
+                {activeSlide.subtitle}
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <Button
+                as={Link}
+                href="/contact"
+                variant="solid"
+                size="lg"
+                className="bg-secondary-blue hover:bg-accent-blue text-white shadow-2xl"
               >
-                {slide.title}
-              </motion.h1>
-
-              <motion.div
-                className="text-white mt-6 sm:mt-7"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
-                transition={{ delay: 0.2, duration: 0.45 }}
-              >
-                <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl mx-auto">
-                  {slide.subtitle}
-                </p>
-              </motion.div>
-
-              <motion.div
-                className="mt-10"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: current === index ? 1 : 0, y: current === index ? 0 : 30 }}
-                transition={{ delay: 0.3, duration: 0.45 }}
-              >
-                <Button
-                  as={Link}
-                  href="/contact"
-                  variant="solid"
-                  size="lg"
-                  className="bg-secondary-blue hover:bg-accent-blue text-white shadow-2xl"
-                >
-                  {t('hero.cta', 'Cere Oferta')}
-                </Button>
-              </motion.div>
+                {t('hero.cta', 'Cere Oferta')}
+              </Button>
             </div>
           </div>
-        </motion.div>
-      ))}
+        </div>
+      </div>
 
       {/* Navigation Dots */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">

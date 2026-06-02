@@ -6,10 +6,52 @@ import BlogCard from '../../../components/ui/BlogCard';
 import Button from '../../../components/ui/Button';
 import { blogPosts } from '../../../data/blogPosts';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
-import { FiArrowLeft, FiTwitter, FiLinkedin, FiFacebook } from 'react-icons/fi';
+import { IconArrowLeft, IconFacebook, IconLinkedIn, IconTwitter } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizeBlogPosts } from '../../../lib/i18n/contentLocalization';
 /* eslint-disable react/prop-types */
+
+export async function generateMetadata({ params }) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const isEn = locale === 'en';
+  const localizedPosts = localizeBlogPosts(blogPosts, locale);
+  const { slug } = await params;
+  const post = localizedPosts.find((entry) => entry.slug === slug);
+
+  if (!post) {
+    return {
+      title: isEn ? 'Article Not Found | Traceability Blog' : 'Articol Negăsit | Blog Traceability',
+      description: isEn
+        ? 'The requested blog article could not be found. Explore the latest traceability articles and industrial insights on Traceability blog.'
+        : 'Articolul solicitat nu a fost găsit. Explorează cele mai noi articole și perspective industriale pe blogul Traceability.',
+    };
+  }
+
+  const title = `${post.title} | ${isEn ? 'Traceability Blog' : 'Blog Traceability'}`;
+  const description = post.excerpt;
+  const pageUrl = `https://traceability.ro/blog/${post.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      url: pageUrl,
+      locale: isEn ? 'en_US' : 'ro_RO',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  };
+}
 
 export default async function BlogDetailPage({ params }) {
   const cookieStore = await cookies();
@@ -45,7 +87,7 @@ export default async function BlogDetailPage({ params }) {
         <div className="py-12">
           {/* Back Button */}
           <Link href="/blog" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
-            <FiArrowLeft /> {locale === 'en' ? 'Back to Blog' : 'Inapoi la Blog'}
+            <IconArrowLeft /> {locale === 'en' ? 'Back to Blog' : 'Inapoi la Blog'}
           </Link>
 
           <article className="max-w-6xl mx-auto">
@@ -78,7 +120,7 @@ export default async function BlogDetailPage({ params }) {
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
                   title={locale === 'en' ? 'Share on Twitter' : 'Distribuie pe Twitter'}
                 >
-                  <FiTwitter size={20} />
+                  <IconTwitter size={20} />
                 </a>
                 <a
                   href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
@@ -87,7 +129,7 @@ export default async function BlogDetailPage({ params }) {
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
                   title={locale === 'en' ? 'Share on LinkedIn' : 'Distribuie pe LinkedIn'}
                 >
-                  <FiLinkedin size={20} />
+                  <IconLinkedIn size={20} />
                 </a>
                 <a
                   href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
@@ -96,7 +138,7 @@ export default async function BlogDetailPage({ params }) {
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
                   title={locale === 'en' ? 'Share on Facebook' : 'Distribuie pe Facebook'}
                 >
-                  <FiFacebook size={20} />
+                  <IconFacebook size={20} />
                 </a>
               </div>
             </div>

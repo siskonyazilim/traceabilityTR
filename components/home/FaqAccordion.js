@@ -1,8 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
-import { FiPlus } from 'react-icons/fi';
+import { IconPlus } from '../ui/Icons';
 import Container from '../ui/Container';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { getFaqBundle } from '../../lib/i18n/contentLocalization';
@@ -67,13 +66,7 @@ export const FaqAccordion = () => {
 
       <Container size="xl" className="relative z-10">
         {/* Header */}
-        <motion.div
-          className="text-center mb-12 md:mb-16"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-12 md:mb-16">
           <p className="text-secondary-blue text-xs md:text-sm uppercase tracking-[0.18em] font-semibold mb-4">
             {faqBundle.eyebrow}
           </p>
@@ -81,19 +74,15 @@ export const FaqAccordion = () => {
             {faqBundle.title}
           </h2>
           <div className="w-24 h-1 bg-accent-blue mx-auto"></div>
-        </motion.div>
+        </div>
 
         {/* FAQ Grid - 2 columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Column - First 4 questions */}
           <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
             {faqBundle.items.slice(0, 4).map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.id}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="border-b border-slate-200 last:border-b-0 relative group"
               >
                 {/* Hover Background */}
@@ -110,44 +99,34 @@ export const FaqAccordion = () => {
                   <h3 className={`text-lg md:text-xl font-bold tracking-[-0.01em] leading-tight transition-colors duration-300 ${openId === faq.id ? 'text-secondary-blue' : 'text-primary-black group-hover:text-accent-blue'}`}>
                     {faq.question}
                   </h3>
-                  <motion.div
-                    animate={{ rotate: openId === faq.id ? 45 : 0 }}
-                    transition={{ duration: 0.3, type: "spring" }}
-                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300`}
+                  <span
+                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300`}
                   >
-                    <FiPlus size={24} />
-                  </motion.div>
+                    <IconPlus size={24} />
+                  </span>
                 </button>
 
-                <motion.div
-                  id={`faq-panel-${faq.id}`}
-                  role="region"
-                  aria-labelledby={`faq-trigger-${faq.id}`}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{
-                    height: openId === faq.id ? 'auto' : 0,
-                    opacity: openId === faq.id ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden relative z-10"
-                >
-                  <p className="px-6 md:px-8 pb-6 md:pb-7 pr-16 text-gray-text leading-relaxed text-sm md:text-base">
-                    {faq.answer}
-                  </p>
-                </motion.div>
-              </motion.div>
+                {openId === faq.id && (
+                  <div
+                    id={`faq-panel-${faq.id}`}
+                    role="region"
+                    aria-labelledby={`faq-trigger-${faq.id}`}
+                    className="overflow-hidden relative z-10"
+                  >
+                    <p className="px-6 md:px-8 pb-6 md:pb-7 pr-16 text-gray-text leading-relaxed text-sm md:text-base">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
           {/* Right Column - Last 4 questions */}
           <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
             {faqBundle.items.slice(4, 8).map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.id}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="border-b border-slate-200 last:border-b-0 relative group"
               >
                 {/* Hover Background */}
@@ -164,32 +143,26 @@ export const FaqAccordion = () => {
                   <h3 className={`text-lg md:text-xl font-bold tracking-[-0.01em] leading-tight transition-colors duration-300 ${openId === faq.id ? 'text-secondary-blue' : 'text-primary-black group-hover:text-accent-blue'}`}>
                     {faq.question}
                   </h3>
-                  <motion.div
-                    animate={{ rotate: openId === faq.id ? 45 : 0 }}
-                    transition={{ duration: 0.3, type: "spring" }}
-                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300`}
+                  <span
+                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300`}
                   >
-                    <FiPlus size={24} />
-                  </motion.div>
+                    <IconPlus size={24} />
+                  </span>
                 </button>
 
-                <motion.div
-                  id={`faq-panel-${faq.id}`}
-                  role="region"
-                  aria-labelledby={`faq-trigger-${faq.id}`}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{
-                    height: openId === faq.id ? 'auto' : 0,
-                    opacity: openId === faq.id ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden relative z-10"
-                >
-                  <p className="px-6 md:px-8 pb-6 md:pb-7 pr-16 text-gray-text leading-relaxed text-sm md:text-base">
-                    {faq.answer}
-                  </p>
-                </motion.div>
-              </motion.div>
+                {openId === faq.id && (
+                  <div
+                    id={`faq-panel-${faq.id}`}
+                    role="region"
+                    aria-labelledby={`faq-trigger-${faq.id}`}
+                    className="overflow-hidden relative z-10"
+                  >
+                    <p className="px-6 md:px-8 pb-6 md:pb-7 pr-16 text-gray-text leading-relaxed text-sm md:text-base">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>

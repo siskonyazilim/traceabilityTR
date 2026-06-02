@@ -1,0 +1,133 @@
+/* eslint-disable react/prop-types */
+
+const baseProps = (size, className) => ({
+  width: size,
+  height: size,
+  viewBox: '0 0 24 24',
+  fill: 'none',
+  xmlns: 'http://www.w3.org/2000/svg',
+  className,
+  'aria-hidden': 'true',
+});
+
+export function IconChevronLeft({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconChevronRight({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconChevronDown({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconMenu({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconX({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconPlus({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M12 5V19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconArrowLeft({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconCheck({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconMail({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M4 4H20V20H4V4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4 7L12 13L20 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconPhone({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M22 16.92V20A2 2 0 0 1 19.82 22C9.9 22 2 14.1 2 4.18A2 2 0 0 1 4 2H7.09A2 2 0 0 1 9.06 3.64L10.14 8.32A2 2 0 0 1 9.58 10.24L7.98 11.84A16 16 0 0 0 12.16 16.02L13.76 14.42A2 2 0 0 1 15.68 13.86L20.36 14.94A2 2 0 0 1 22 16.92Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconTwitter({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M23 3C22.04 3.68 21 4.2 19.9 4.54C19.3 3.86 18.5 3.4 17.62 3.24C16.74 3.08 15.84 3.23 15.06 3.67C14.27 4.11 13.64 4.81 13.25 5.66C12.86 6.5 12.74 7.44 12.9 8.35V9.35C11.3 9.39 9.72 9.03 8.31 8.29C6.9 7.55 5.71 6.45 4.86 5.1C4.86 5.1 1 13.1 9 17.1C7.17 18.34 4.99 19 2.75 19C2.16 19 1.58 18.97 1 18.9C3.26 20.36 5.88 21.13 8.55 21.1C16.9 21.1 21.46 14.13 21.46 8.1C21.46 7.9 21.46 7.71 21.45 7.51C22.5 6.77 23.4 5.84 24.1 4.77L23 3Z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function IconLinkedIn({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M16 8A6 6 0 0 1 22 14V21H18V14A2 2 0 0 0 16 12A2 2 0 0 0 14 14V21H10V9H14V11A4 4 0 0 1 16 8Z" fill="currentColor" stroke="none" />
+      <rect x="2" y="9" width="4" height="12" fill="currentColor" />
+      <circle cx="4" cy="4" r="2" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function IconInstagram({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <rect x="3" y="3" width="18" height="18" rx="5" ry="5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function IconFacebook({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M14 8H16V4H13C10.24 4 8 6.24 8 9V12H6V16H8V22H12V16H15L16 12H12V9C12 8.45 12.45 8 13 8H14Z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}

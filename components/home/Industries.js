@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 
@@ -42,12 +41,8 @@ export default function Industries() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
-            <motion.div
+            <div
               key={industry.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="group relative h-full"
             >
               <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-accent-blue transition-all duration-300 hover:shadow-xl h-full flex flex-col">
@@ -56,6 +51,8 @@ export default function Industries() {
                   <img
                     src={industry.icon}
                     alt={industry.name}
+                    width="64"
+                    height="64"
                     className="w-16 h-16 object-contain"
                   />
                 </div>
@@ -69,7 +66,7 @@ export default function Industries() {
                   {industry.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </Container>

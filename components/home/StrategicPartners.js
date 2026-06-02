@@ -1,11 +1,10 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
+import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { strategicPartners } from '../../data/partners';
 import { localizePartners } from '../../lib/i18n/contentLocalization';
@@ -93,7 +92,7 @@ export const StrategicPartners = () => {
               aria-label={t('sections.partnerPrev', 'Partener anterior')}
               className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
-              <FiChevronLeft size={20} />
+              <IconChevronLeft size={20} />
             </button>
           </div>
 
@@ -103,14 +102,14 @@ export const StrategicPartners = () => {
               aria-label={t('sections.partnerNext', 'Partener următor')}
               className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
-              <FiChevronRight size={20} />
+              <IconChevronRight size={20} />
             </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {visiblePartners.map((partner, index) => (
               <Link key={partner.id} href={`/solution-partners/${partner.slug}`}>
-                <motion.article
+                <article
                   className="h-full rounded-2xl bg-white border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                 >
                   {/* Logo */}
@@ -120,6 +119,8 @@ export const StrategicPartners = () => {
                       <img
                         src={partner.logo}
                         alt={partner.name}
+                        width="220"
+                        height="96"
                         className="max-h-24 max-w-[92%] object-contain"
                         style={{ objectFit: 'contain' }}
                         onError={(e) => {
@@ -143,7 +144,7 @@ export const StrategicPartners = () => {
                       </svg>
                     </span>
                   </div>
-                </motion.article>
+                </article>
               </Link>
             ))}
           </div>
