@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { IconPlus } from '../ui/Icons';
 import Container from '../ui/Container';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -53,6 +53,44 @@ export const FaqAccordion = () => {
   const [openId, setOpenId] = useState(null);
   const { locale } = useLanguage();
   const faqBundle = useMemo(() => getFaqBundle(faqs, locale), [locale]);
+  const triggerRefs = useRef(new Map());
+  const panelRefs = useRef(new Map());
+
+  useEffect(() => {
+    if (openId === null) {
+      return;
+    }
+
+    const trigger = triggerRefs.current.get(openId);
+    const panel = panelRefs.current.get(openId);
+
+    if (!trigger || !panel) {
+      return;
+    }
+
+    const SCROLL_TOP_OFFSET = 96;
+    const SCROLL_BOTTOM_PADDING = 24;
+
+    requestAnimationFrame(() => {
+      const triggerRect = trigger.getBoundingClientRect();
+      const panelRect = panel.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      const titleHiddenTop = triggerRect.top < SCROLL_TOP_OFFSET;
+      const contentHiddenBottom = panelRect.bottom > viewportHeight - SCROLL_BOTTOM_PADDING;
+
+      if (!titleHiddenTop && !contentHiddenBottom) {
+        return;
+      }
+
+      const targetTop = Math.max(0, window.scrollY + triggerRect.top - SCROLL_TOP_OFFSET);
+
+      window.scrollTo({
+        top: targetTop,
+        behavior: 'smooth',
+      });
+    });
+  }, [openId]);
 
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);
@@ -91,33 +129,46 @@ export const FaqAccordion = () => {
                 <button
                   type="button"
                   onClick={() => toggleAccordion(faq.id)}
+                  ref={(element) => {
+                    if (element) {
+                      triggerRefs.current.set(faq.id, element);
+                    } else {
+                      triggerRefs.current.delete(faq.id);
+                    }
+                  }}
                   aria-expanded={openId === faq.id}
                   aria-controls={`faq-panel-${faq.id}`}
                   id={`faq-trigger-${faq.id}`}
-                  className="w-full px-6 md:px-8 py-6 md:py-7 flex items-center justify-between gap-5 text-left relative z-10"
+                  className="w-full px-6 md:px-8 py-6 md:py-7 flex items-center justify-between gap-5 text-left relative z-10 transition-all duration-300"
                 >
                   <h3 className={`text-lg md:text-xl font-bold tracking-[-0.01em] leading-tight transition-colors duration-300 ${openId === faq.id ? 'text-secondary-blue' : 'text-primary-black group-hover:text-accent-blue'}`}>
                     {faq.question}
                   </h3>
                   <span
-                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300`}
+                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45 shadow-md shadow-secondary-blue/20' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300`}
                   >
                     <IconPlus size={24} />
                   </span>
                 </button>
 
-                {openId === faq.id && (
-                  <div
-                    id={`faq-panel-${faq.id}`}
-                    role="region"
-                    aria-labelledby={`faq-trigger-${faq.id}`}
-                    className="overflow-hidden relative z-10"
-                  >
-                    <p className="px-6 md:px-8 pb-6 md:pb-7 pr-16 text-gray-text leading-relaxed text-sm md:text-base">
+                <section
+                  id={`faq-panel-${faq.id}`}
+                  ref={(element) => {
+                    if (element) {
+                      panelRefs.current.set(faq.id, element);
+                    } else {
+                      panelRefs.current.delete(faq.id);
+                    }
+                  }}
+                  aria-labelledby={`faq-trigger-${faq.id}`}
+                  className={`grid overflow-hidden relative z-10 transition-all duration-500 ease-out ${openId === faq.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+                >
+                  <div className="overflow-hidden">
+                    <p className={`px-6 md:px-8 pr-16 text-gray-text leading-relaxed text-sm md:text-base transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
                       {faq.answer}
                     </p>
                   </div>
-                )}
+                </section>
               </div>
             ))}
           </div>
@@ -135,33 +186,46 @@ export const FaqAccordion = () => {
                 <button
                   type="button"
                   onClick={() => toggleAccordion(faq.id)}
+                  ref={(element) => {
+                    if (element) {
+                      triggerRefs.current.set(faq.id, element);
+                    } else {
+                      triggerRefs.current.delete(faq.id);
+                    }
+                  }}
                   aria-expanded={openId === faq.id}
                   aria-controls={`faq-panel-${faq.id}`}
                   id={`faq-trigger-${faq.id}`}
-                  className="w-full px-6 md:px-8 py-6 md:py-7 flex items-center justify-between gap-5 text-left relative z-10"
+                  className="w-full px-6 md:px-8 py-6 md:py-7 flex items-center justify-between gap-5 text-left relative z-10 transition-all duration-300"
                 >
                   <h3 className={`text-lg md:text-xl font-bold tracking-[-0.01em] leading-tight transition-colors duration-300 ${openId === faq.id ? 'text-secondary-blue' : 'text-primary-black group-hover:text-accent-blue'}`}>
                     {faq.question}
                   </h3>
                   <span
-                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300`}
+                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45 shadow-md shadow-secondary-blue/20' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300`}
                   >
                     <IconPlus size={24} />
                   </span>
                 </button>
 
-                {openId === faq.id && (
-                  <div
-                    id={`faq-panel-${faq.id}`}
-                    role="region"
-                    aria-labelledby={`faq-trigger-${faq.id}`}
-                    className="overflow-hidden relative z-10"
-                  >
-                    <p className="px-6 md:px-8 pb-6 md:pb-7 pr-16 text-gray-text leading-relaxed text-sm md:text-base">
+                <section
+                  id={`faq-panel-${faq.id}`}
+                  ref={(element) => {
+                    if (element) {
+                      panelRefs.current.set(faq.id, element);
+                    } else {
+                      panelRefs.current.delete(faq.id);
+                    }
+                  }}
+                  aria-labelledby={`faq-trigger-${faq.id}`}
+                  className={`grid overflow-hidden relative z-10 transition-all duration-500 ease-out ${openId === faq.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+                >
+                  <div className="overflow-hidden">
+                    <p className={`px-6 md:px-8 pr-16 text-gray-text leading-relaxed text-sm md:text-base transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
                       {faq.answer}
                     </p>
                   </div>
-                )}
+                </section>
               </div>
             ))}
           </div>
