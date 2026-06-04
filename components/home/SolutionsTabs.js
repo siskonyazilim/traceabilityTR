@@ -111,7 +111,7 @@ export const SolutionsTabs = () => {
                   <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.5rem] flex items-center">
                     {solution.title}
                   </h3>
-                  <p className="text-gray-text text-sm leading-7 line-clamp-4 flex-1 max-w-[42ch]">
+                  <p className="text-gray-text text-sm leading-7 flex-1 max-w-[42ch]">
                     {solution.description}
                   </p>
                 </div>
@@ -148,7 +148,7 @@ export const SolutionsTabs = () => {
                     <h3 className="text-lg font-bold text-primary-black mb-2 group-hover:text-accent-blue transition-colors min-h-[3rem]">
                       {product.title}
                     </h3>
-                    <p className="text-gray-text text-sm leading-7 line-clamp-4 flex-1 max-w-[42ch]">
+                    <p className="text-gray-text text-sm leading-7 flex-1 max-w-[42ch]">
                       {product.description}
                     </p>
                   </div>
