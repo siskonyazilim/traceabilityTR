@@ -68,6 +68,16 @@
     "success": "✓ Mesajul dvs. a fost trimis cu succes!",
     "locationAlt": "Locație",
     "mapTitleSuffix": "hartă",
+    "offices": {
+      "brasov": {
+        "name": "România - Brașov",
+        "address": "Punct de lucru: Str. Turnului Nr.5,\nClădirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România"
+      },
+      "izmir": {
+        "name": "Turcia - İzmir",
+        "address": "Campusul Tınaztepe, Universitatea Dokuz Eylül\nClădirea Depark Beta, Cartierul Adatepe\nStrada Doğuş Nr. 207/AG, Etaj 2, Nr. 202\n35390 Buca/İzmir, Turcia"
+      }
+    },
     "errors": {
       "firstNameRequired": "Prenumele este necesar",
       "firstNameMin": "Min 2 caractere",

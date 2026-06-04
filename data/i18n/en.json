@@ -68,6 +68,16 @@
     "success": "✓ Your message has been sent successfully!",
     "locationAlt": "Location",
     "mapTitleSuffix": "map",
+    "offices": {
+      "brasov": {
+        "name": "Romania - Brașov",
+        "address": "Work point: Turnului St. No.5,\nM.U.M. Building, Entrance 3, Floor 2, Office 5, 500152\nBrașov, Romania"
+      },
+      "izmir": {
+        "name": "Turkey - İzmir",
+        "address": "Dokuz Eylül University Tınaztepe Campus\nDepark Beta Building, Adatepe District\nDoğuş Street No:207/AG, Floor 2, No:202\n35390 Buca/İzmir, Turkey"
+      }
+    },
     "errors": {
       "firstNameRequired": "First name is required",
       "firstNameMin": "Minimum 2 characters",

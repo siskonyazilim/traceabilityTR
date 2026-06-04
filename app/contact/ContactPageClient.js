@@ -9,27 +9,33 @@ import Button from '../../components/ui/Button';
 import { IconMail, IconPhone } from '../../components/ui/Icons';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
 
-const offices = [
-  {
-    id: 1,
-    name: 'România - Brașov',
-    address: 'Dima Consulting Group\nStrada Turnului 25, intrare B\n500152 Brașov, România',
-    phone: '+40 368 402 002',
-    email: 'info@traceability.ro',
-    mapQuery: 'Dima Consulting Group, Strada Turnului 25, intrare B, 500152 Brașov, România',
-  },
-  {
-    id: 2,
-    name: 'Turcia - İzmir',
-    address: 'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi\nDepark Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir',
-    phone: '+90 232 245 00 76',
-    email: 'info@traceability.ro',
-    mapQuery: 'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi Depark Beta Binası, Adatepe Mahallesi Doğuş Caddesi No:207/AG, Kat: 2 No:202, 35390 Buca/İzmir',
-  },
-];
-
 export default function ContactPageClient() {
   const { t } = useLanguage();
+
+  const offices = [
+    {
+      id: 1,
+      name: t('contactPage.offices.brasov.name', 'România - Brașov'),
+      address: t(
+        'contactPage.offices.brasov.address',
+        'Punct de lucru: Str. Turnului Nr.5,\nCladirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România'
+      ),
+      phone: '+40 368 402 002',
+      email: 'info@traceability.ro',
+      mapQuery: 'Dima Consulting Group, Strada Turnului 25, intrare B, 500152 Brașov, România',
+    },
+    {
+      id: 2,
+      name: t('contactPage.offices.izmir.name', 'Turcia - İzmir'),
+      address: t(
+        'contactPage.offices.izmir.address',
+        'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi\nDepark Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir'
+      ),
+      phone: '+90 232 245 00 76',
+      email: 'info@traceability.ro',
+      mapQuery: 'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi Depark Beta Binası, Adatepe Mahallesi Doğuş Caddesi No:207/AG, Kat: 2 No:202, 35390 Buca/İzmir',
+    },
+  ];
 
   const {
     register,
