@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { IconInstagram, IconLinkedIn, IconTwitter } from '../ui/Icons';
+import { IconTwitter } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer = () => {
@@ -58,19 +58,17 @@ export const Footer = () => {
               {t('footer.brandDescription', 'Soluții innovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.')}
             </p>
             <div className="flex items-center gap-3">
-              <a href="https://www.linkedin.com/company/siskonyazilimveotomasyon" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <IconLinkedIn size={18} />
+              <a href="https://www.linkedin.com/company/siskonromania/" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+                <img src="/social/linkedin.svg" alt="LinkedIn" className="h-[18px] w-[18px]" />
               </a>
               <a href="https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
+                <img src="/social/youtube.svg" alt="YouTube" className="h-[18px] w-[18px]" />
               </a>
-              <a href="https://x.com/siskonsoftware" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+              <a href="https://x.com/siskonromania" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <IconTwitter size={18} />
               </a>
-              <a href="https://www.instagram.com/siskonyazilimveotomasyon" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <IconInstagram size={18} />
+              <a href="https://www.instagram.com/siskon_romania" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+                <img src="/social/instagram-2016-5.svg" alt="Instagram" className="h-[18px] w-[18px]" />
               </a>
             </div>
           </div>
@@ -128,6 +126,16 @@ export const Footer = () => {
               <li>
                 <Link href="/blog" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.news', 'Știri')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                  {t('footer.gdprPolicy', 'Politica GDPR (Confidențialitate)')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookie" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                  {t('footer.cookiePolicy', 'Politica de cookie-uri')}
                 </Link>
               </li>
             </ul>
