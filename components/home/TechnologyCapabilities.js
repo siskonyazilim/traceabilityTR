@@ -32,7 +32,7 @@ export default function TechnologyCapabilities() {
   const localizedCapabilities = useMemo(() => getTechnologyCapabilities(capabilities, locale), [locale]);
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-[#f9fbfd] to-white relative overflow-hidden">
+    <section className="section-block bg-gradient-to-br from-white via-[#f9fbfd] to-white relative overflow-hidden">
       <div className="absolute inset-0 pattern-dots opacity-35"></div>
 
       <Container size="xl" className="relative z-10">
@@ -52,10 +52,10 @@ export default function TechnologyCapabilities() {
                 <span className="sr-only">{capability.title}</span>
               </div>
 
-              <h3 className="text-2xl font-bold text-primary-black text-center mb-3">
+              <h3 className="text-[1.45rem] font-bold text-primary-black text-center mb-3 leading-tight">
                 {capability.title}
               </h3>
-              <p className="text-gray-text text-base leading-relaxed text-center">
+              <p className="text-gray-text text-base leading-8 text-center max-w-[46ch] mx-auto">
                 {capability.description}
               </p>
             </div>

@@ -97,7 +97,7 @@ export const FaqAccordion = () => {
   };
 
   return (
-    <section id="faq" className="py-14 md:py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 font-sans relative overflow-hidden">
+    <section id="faq" className="section-block bg-gradient-to-br from-slate-50 via-white to-slate-50 font-sans relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-1 bg-accent-blue opacity-30"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent-blue/5 rounded-full blur-3xl"></div>
@@ -108,7 +108,7 @@ export const FaqAccordion = () => {
           <p className="text-secondary-blue text-xs md:text-sm uppercase tracking-[0.18em] font-semibold mb-4">
             {faqBundle.eyebrow}
           </p>
-          <h2 className="text-primary-black text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] tracking-tight mb-6">
+          <h2 className="text-primary-black text-[clamp(1.85rem,1.4rem+1.6vw,3.1rem)] font-extrabold leading-[1.08] tracking-tight mb-6">
             {faqBundle.title}
           </h2>
           <div className="w-24 h-1 bg-accent-blue mx-auto"></div>
@@ -164,7 +164,7 @@ export const FaqAccordion = () => {
                   className={`grid overflow-hidden relative z-10 transition-all duration-500 ease-out ${openId === faq.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
                 >
                   <div className="overflow-hidden">
-                    <p className={`px-6 md:px-8 pr-16 text-gray-text leading-relaxed text-sm md:text-base transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
+                    <p className={`px-6 md:px-8 pr-16 text-gray-text leading-8 text-sm md:text-base max-w-[62ch] transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
                       {faq.answer}
                     </p>
                   </div>
@@ -221,7 +221,7 @@ export const FaqAccordion = () => {
                   className={`grid overflow-hidden relative z-10 transition-all duration-500 ease-out ${openId === faq.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
                 >
                   <div className="overflow-hidden">
-                    <p className={`px-6 md:px-8 pr-16 text-gray-text leading-relaxed text-sm md:text-base transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
+                    <p className={`px-6 md:px-8 pr-16 text-gray-text leading-8 text-sm md:text-base max-w-[62ch] transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
                       {faq.answer}
                     </p>
                   </div>

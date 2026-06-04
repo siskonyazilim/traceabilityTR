@@ -74,7 +74,7 @@ export const StrategicPartners = () => {
   };
 
   return (
-    <section id="our-strategic-solution-partners" className="py-16 md:py-24 bg-gradient-to-br from-[#f6f7f8] via-white to-[#f6f7f8] relative overflow-hidden">
+    <section id="our-strategic-solution-partners" className="section-block bg-gradient-to-br from-[#f6f7f8] via-white to-[#f6f7f8] relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-accent-blue/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-secondary-blue/5 rounded-full blur-3xl"></div>
@@ -90,7 +90,7 @@ export const StrategicPartners = () => {
             <button
               onClick={handlePrev}
               aria-label={t('sections.partnerPrev', 'Partener anterior')}
-              className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
+              className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <IconChevronLeft size={20} />
             </button>
@@ -100,17 +100,17 @@ export const StrategicPartners = () => {
             <button
               onClick={handleNext}
               aria-label={t('sections.partnerNext', 'Partener următor')}
-              className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-md text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
+              className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <IconChevronRight size={20} />
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 mb-8">
             {visiblePartners.map((partner, index) => (
               <Link key={partner.id} href={`/solution-partners/${partner.slug}`}>
                 <article
-                  className="h-full rounded-2xl bg-white border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
+                  className="h-full rounded-2xl bg-gradient-to-b from-white to-slate-50/70 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                 >
                   {/* Logo */}
                   <div className="h-40 flex items-center justify-center p-6 bg-white relative overflow-hidden">
@@ -130,11 +130,11 @@ export const StrategicPartners = () => {
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3rem] flex items-center">
+                  <div className="p-6 md:p-7">
+                    <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] flex items-center">
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-gray-text leading-relaxed min-h-[4.5rem]">
+                    <p className="text-sm text-gray-text leading-7 line-clamp-3 min-h-[5.2rem] max-w-[44ch]">
                       {partner.description}
                     </p>
                     <span className="inline-flex items-center mt-4 text-accent-blue font-semibold text-sm">

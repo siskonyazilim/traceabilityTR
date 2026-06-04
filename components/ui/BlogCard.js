@@ -21,10 +21,10 @@ export const BlogCard = ({ post }) => {
     <article className="h-full">
       <Link
         href={`/blog/${post.slug}`}
-        className="group block bg-white rounded-2xl border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full"
+        className="group block bg-white rounded-2xl border border-slate-200 shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all overflow-hidden h-full"
       >
         {/* Blog Image */}
-        <div className="aspect-video bg-gradient-to-br from-slate-blue to-primary-black flex items-center justify-center overflow-hidden relative">
+        <div className="aspect-video bg-gradient-to-br from-slate-blue via-secondary-blue to-primary-black flex items-center justify-center overflow-hidden relative">
           <Image
             src="/resmi/TRACEABILITY-logo.svg"
             alt="Traceability icon"
@@ -51,7 +51,7 @@ export const BlogCard = ({ post }) => {
           )}
         </div>
 
-        <div className="p-6">
+        <div className="p-6 md:p-7">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xs font-semibold text-secondary-blue uppercase">
               {post.category}
@@ -59,11 +59,11 @@ export const BlogCard = ({ post }) => {
             <span className="text-xs text-inactive-gray">{date}</span>
           </div>
 
-          <h3 className="text-lg font-bold text-primary-black mb-3 line-clamp-2 group-hover:text-accent-blue transition-colors">
+          <h3 className="text-xl font-bold text-primary-black mb-3 line-clamp-2 group-hover:text-accent-blue transition-colors">
             {post.title}
           </h3>
 
-          <p className="text-gray-text text-sm mb-4 line-clamp-3">
+          <p className="text-gray-text text-sm leading-7 mb-4 line-clamp-2 max-w-[46ch]">
             {post.excerpt}
           </p>
 

@@ -9,13 +9,13 @@ export const SectionHeader = ({
 }) => {
   return (
     <div 
-      className={`${centered ? 'text-center' : ''} mb-12 ${className}`}
+      className={`${centered ? 'text-center' : ''} mb-16 ${className}`}
     >
-      <h2 className="text-section font-bold text-primary-black mb-4">
+      <h2 className="text-[clamp(1.75rem,1.35rem+1.3vw,2.85rem)] font-extrabold tracking-tight leading-[1.12] text-primary-black mb-5">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-body text-gray-text max-w-4xl mx-auto">
+        <p className="text-[clamp(1rem,0.97rem+0.22vw,1.125rem)] leading-7 text-gray-text max-w-3xl mx-auto">
           {subtitle}
         </p>
       )}

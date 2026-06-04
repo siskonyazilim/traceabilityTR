@@ -13,10 +13,10 @@ const offices = [
   {
     id: 1,
     name: 'România - Brașov',
-    address: 'Punct de lucru: Str. Turnului Nr.5\nCladira M.U.M. Scara 3, Etajul 2, Biroul 5\n500152 Brașov, Romania',
-    phone: null,
+    address: 'Dima Consulting Group\nStrada Turnului 25, intrare B\n500152 Brașov, România',
+    phone: '+40 368 402 002',
     email: 'info@traceability.ro',
-    coords: { lat: 45.66462, lng: 25.61252 },
+    mapQuery: 'Dima Consulting Group, Strada Turnului 25, intrare B, 500152 Brașov, România',
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const offices = [
     address: 'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi\nDepark Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir',
     phone: '+90 232 245 00 76',
     email: 'info@traceability.ro',
-    coords: { lat: 38.3661068, lng: 27.2074696 },
+    mapQuery: 'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi Depark Beta Binası, Adatepe Mahallesi Doğuş Caddesi No:207/AG, Kat: 2 No:202, 35390 Buca/İzmir',
   },
 ];
 
@@ -129,7 +129,7 @@ export default function ContactPageClient() {
                     style={{ border: 0 }}
                     loading="lazy"
                     allowFullScreen=""
-                    src={`https://www.google.com/maps?q=${office.coords.lat},${office.coords.lng}&z=15&output=embed`}
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
                   />
                 </div>
               </motion.div>
@@ -265,7 +265,7 @@ export default function ContactPageClient() {
               />
               <label htmlFor="privacy" className="text-sm text-gray-text">
                 {t('contactPage.privacyText', 'Sunt de acord cu')} {' '}
-                <Link href="/" className="text-accent-blue font-semibold hover:underline">
+                <Link href="/privacy-policy" className="text-accent-blue font-semibold hover:underline">
                   {t('contactPage.privacyPolicy', 'politica de confidențialitate')}
                 </Link>
                 {' '}*

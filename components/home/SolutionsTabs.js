@@ -53,7 +53,7 @@ export const SolutionsTabs = () => {
   }, []);
 
   return (
-    <section id="traceability-solutions" className="py-16 md:py-24 bg-gradient-to-br from-white via-[#f9fbfd] to-white relative overflow-hidden">
+    <section id="traceability-solutions" className="section-block bg-gradient-to-br from-white via-[#f9fbfd] to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 pattern-dots opacity-40"></div>
 
@@ -64,7 +64,7 @@ export const SolutionsTabs = () => {
         />
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={() => setActiveTab('solutions')}
             className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
@@ -90,27 +90,28 @@ export const SolutionsTabs = () => {
 
         {/* Solutions Tab */}
         {activeTab === 'solutions' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
             {localizedSolutions.map((solution) => (
               <div
                 key={solution.id}
-                className="bg-white rounded-2xl p-6 border border-gray-light shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 group relative overflow-hidden h-full flex flex-col"
+                className="bg-gradient-to-b from-white to-slate-50/55 rounded-2xl p-6 md:p-7 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 group relative overflow-hidden h-full flex flex-col"
               >
                 {/* Gradient Overlay on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-secondary-blue to-accent-blue"></div>
 
                 <div className="relative z-10 flex h-full flex-col items-center text-center">
-                  <div className="mb-6 text-slate-blue leading-none">
+                  <div className="mb-5 text-slate-blue leading-none">
                     <i
-                      className={solutionFontAwesomeMap[solution.icon] || 'fa fa-cube fa-5x fa-fw'}
+                      className={solutionFontAwesomeMap[solution.icon] || 'fa fa-cube fa-4x fa-fw'}
                       aria-hidden="true"
                     ></i>
                     <span className="fallback-solution-icon hidden text-6xl text-slate-blue">{iconMap[solution.icon]}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors">
+                  <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.5rem] flex items-center">
                     {solution.title}
                   </h3>
-                  <p className="text-gray-text text-sm leading-relaxed flex-1">
+                  <p className="text-gray-text text-sm leading-7 line-clamp-4 flex-1 max-w-[42ch]">
                     {solution.description}
                   </p>
                 </div>
@@ -121,11 +122,11 @@ export const SolutionsTabs = () => {
 
         {/* Products Tab */}
         {activeTab === 'products' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
             {localizedProducts.map((product) => (
               <div
                 key={product.id}
-                className="rounded-2xl border border-gray-light shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 bg-white group h-full relative overflow-hidden p-5"
+                className="rounded-2xl border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 bg-white group h-full relative overflow-hidden p-5 md:p-6"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10 h-full flex flex-col">
@@ -144,10 +145,10 @@ export const SolutionsTabs = () => {
                     </div>
                   </div>
                   <div className="flex-1 h-full flex flex-col min-w-0">
-                    <h3 className="text-lg font-bold text-primary-black mb-2 group-hover:text-accent-blue transition-colors">
+                    <h3 className="text-lg font-bold text-primary-black mb-2 group-hover:text-accent-blue transition-colors min-h-[3rem]">
                       {product.title}
                     </h3>
-                    <p className="text-gray-text text-sm flex-1">
+                    <p className="text-gray-text text-sm leading-7 line-clamp-4 flex-1 max-w-[42ch]">
                       {product.description}
                     </p>
                   </div>

@@ -61,7 +61,7 @@ export const BlogPreview = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-slate-50/30 to-white relative overflow-hidden">
+    <section className="section-block bg-gradient-to-br from-white via-slate-50/30 to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 pattern-grid opacity-30"></div>
 
@@ -99,7 +99,7 @@ export const BlogPreview = () => {
         </div>
 
         <div className="px-2 sm:px-4 py-2 text-center">
-          <p className="text-primary-black text-lg sm:text-2xl font-semibold leading-relaxed mb-6 max-w-4xl mx-auto">
+          <p className="text-primary-black text-lg sm:text-[1.6rem] font-semibold leading-[1.35] mb-6 max-w-3xl mx-auto">
             {t('sections.blogPreviewSubtitle', 'Accesați blogul nostru și obțineți cele mai recente actualizări din industrie și tendințele viitoare.')}
           </p>
           <Button

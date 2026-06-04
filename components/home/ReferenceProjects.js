@@ -75,7 +75,7 @@ export const ReferenceProjects = () => {
   );
 
   return (
-    <section id="reference-projects" className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section id="reference-projects" className="section-block bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/30 to-transparent"></div>
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent-green/5 rounded-full blur-3xl"></div>
@@ -91,7 +91,7 @@ export const ReferenceProjects = () => {
           <div className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20">
             <button
               onClick={handlePrev}
-              className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl group"
+              className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
               aria-label={t('sections.referenceProjectsPrev', 'Proiect anterior')}
             >
               <IconChevronLeft size={24} className="group-hover:text-accent-blue transition-colors" />
@@ -101,7 +101,7 @@ export const ReferenceProjects = () => {
           <div className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20">
             <button
               onClick={handleNext}
-              className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl group"
+              className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
               aria-label={t('sections.referenceProjectsNext', 'Proiect următor')}
             >
               <IconChevronRight size={24} className="group-hover:text-accent-blue transition-colors" />
@@ -109,7 +109,7 @@ export const ReferenceProjects = () => {
           </div>
 
           {/* Grid with Featured Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 px-2">
             {visibleProjects.map((project, index) => (
               <article
                 key={project.id}
@@ -117,7 +117,7 @@ export const ReferenceProjects = () => {
               >
                 <Link
                   href={`/portfolio/${project.slug}`}
-                  className="h-full flex flex-col rounded-3xl border-2 border-slate-200 bg-white shadow-soft hover:shadow-2xl hover:border-accent-blue transition-all duration-300 overflow-hidden"
+                  className="h-full flex flex-col rounded-3xl border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
                 >
                   {/* Image with Overlay Effect */}
                   <div className="relative h-44 bg-white overflow-hidden">
@@ -140,10 +140,10 @@ export const ReferenceProjects = () => {
 
                   {/* Content */}
                   <div className="flex-1 p-6 flex flex-col">
-                    <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors">
+                    <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem]">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-gray-text leading-relaxed line-clamp-3 flex-1">
+                    <p className="text-sm text-gray-text leading-7 line-clamp-2 flex-1 max-w-[44ch]">
                       {project.description}
                     </p>
                     {/* Read More Link */}

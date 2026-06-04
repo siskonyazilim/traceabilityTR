@@ -1,18 +1,18 @@
 export const blogPosts = [
   {
     id: 1,
-    title: 'Procedura Chestny ZNAK: Sistemul digital de trasabilitate al Rusiei',
-    titleTr: "Chestny ZNAK Proseduru: Rusya'nin Dijital Izlenebilirlik Sistemi",
-    slug: 'chestny-znak-russia-traceability-system',
+    title: 'Procedura Chestny ZNAK: Sistemul digital de trasabilitate',
+    titleTr: 'Chestny ZNAK Proseduru: Dijital Izlenebilirlik Sistemi',
+    slug: 'chestny-znak-digital-traceability-system',
     category: 'Știri',
     categoryEn: 'News',
     date: '2025-01-29',
     author: 'Admin',
-    image: '/images/blog/photos/chestny-znak-russia.png',
-    excerpt: 'Procedura Chestny ZNAK explica modul in care sistemul digital obligatoriu din Rusia creste controlul, autenticitatea si increderea in lantul logistic.',
+    image: '/images/blog/photos/chestny-znak-traceability.png',
+    excerpt: 'Procedura Chestny ZNAK explica modul in care platforma digitala obligatorie creste controlul, autenticitatea si increderea in lantul logistic.',
     content: `
       <h2>Introducere</h2>
-      <p>Chestny ZNAK este sistemul national de trasabilitate al Federatiei Ruse. Fiecare produs este marcat cu un cod unic, validat de platforma centrala.</p>
+      <p>Chestny ZNAK este un sistem national de trasabilitate in care fiecare produs este marcat cu un cod unic, validat de platforma centrala.</p>
       <h2>De ce este important?</h2>
       <p>Reduce contrafacerea, imbunatateste trasabilitatea end-to-end si permite verificarea rapida de catre autoritati, companii si consumatori.</p>
     `,
