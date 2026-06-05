@@ -1,0 +1,17 @@
+{
+  "notFoundTitle": "Project Not Found | Traceability",
+  "notFoundDescription": "The requested reference project could not be found. Browse other industrial traceability implementations by Traceability.",
+  "projectSuffix": "Reference Project",
+  "backToProjects": "Back to Projects",
+  "technologiesUsed": "Technologies Used",
+  "projectGallery": "Project Gallery",
+  "results": "Results",
+  "efficiency": "Efficiency",
+  "defects": "Defects",
+  "productivity": "Productivity",
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution in your business.",
+  "ctaPrimary": "Request Proposal",
+  "ctaSecondary": "View All References"
+}

@@ -1,0 +1,27 @@
+{
+  "notFoundTitle": "Solution Not Found | Traceability",
+  "notFoundDescription": "The requested solution page could not be found. Explore Traceability industrial solutions for production and logistics.",
+  "back": "Back to Solutions",
+  "catalog": "Traceability Solutions",
+  "benefits": "Key Benefits",
+  "useCases": "Use Cases",
+  "technologies": "Technologies Used",
+  "ctaTitle": "We implement the right solution for your business",
+  "ctaSubtitle": "Contact us for a free consultation and a tailored proposal.",
+  "ctaPrimary": "Request Proposal",
+  "ctaSecondary": "View Similar Projects",
+  "roi": {
+    "efficiency": "efficiency",
+    "errors": "errors",
+    "time": "time",
+    "utilization": "utilization",
+    "space": "space",
+    "defects": "defects",
+    "rework": "rework",
+    "claims": "claims",
+    "quality": "quality",
+    "speed": "speed",
+    "labor": "labor",
+    "visibility": "visibility"
+  }
+}

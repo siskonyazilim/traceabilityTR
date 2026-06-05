@@ -1,0 +1,20 @@
+{
+  "notFoundTitle": "Partner Not Found | Traceability",
+  "notFoundDescription": "The requested strategic partner page could not be found. Explore our global solution partners and integration ecosystem.",
+  "partnerSuffix": "Strategic Solution Partner",
+  "backHome": "Back to Home",
+  "breadcrumbHome": "Home",
+  "heroTitle": "Innovation and leadership",
+  "coreValuesTitle": "Core values",
+  "coreValues": [
+    "Operational and financial independence",
+    "Continuous innovation and future orientation",
+    "Responsible leadership and corporate culture",
+    "Long-term trust-based partnerships"
+  ],
+  "otherPartnersTitle": "Other Strategic Partners",
+  "details": "Details ->",
+  "ctaTitle": "Let us build the next project together",
+  "ctaSubtitle": "Contact us to adapt this expertise to your company operations.",
+  "ctaPrimary": "Contact us"
+}

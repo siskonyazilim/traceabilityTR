@@ -5,6 +5,7 @@ import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { IconArrowLeft, IconCheck } from '../../../components/ui/Icons';
 import { localizeSolutionDetail } from '../../../lib/i18n/contentLocalization';
+import { f } from '../../../lib/i18n/sectionTranslations';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
 const solutions = {
@@ -242,10 +243,8 @@ export async function generateMetadata({ params }) {
 
   if (!solution) {
     return {
-      title: isEn ? 'Solution Not Found | Traceability' : 'Soluție Negăsită | Traceability',
-      description: isEn
-        ? 'The requested solution page could not be found. Explore Traceability industrial solutions for production and logistics.'
-        : 'Pagina soluției solicitate nu a fost găsită. Explorează soluțiile de trasabilitate Traceability pentru producție și logistică.',
+      title: f(locale, 'solutionDetailPage', 'notFoundTitle'),
+      description: f(locale, 'solutionDetailPage', 'notFoundDescription'),
     };
   }
 
@@ -286,57 +285,18 @@ export default async function SolutionDetailPage({ params }) {
     notFound();
   }
 
-  const labels = locale === 'en'
-    ? {
-        back: 'Back to Solutions',
-        catalog: 'Traceability Solutions',
-        benefits: 'Key Benefits',
-        useCases: 'Use Cases',
-        technologies: 'Technologies Used',
-        ctaTitle: 'We implement the right solution for your business',
-        ctaSubtitle: 'Contact us for a free consultation and a tailored proposal.',
-        ctaPrimary: 'Request Proposal',
-        ctaSecondary: 'View Similar Projects',
-        roi: {
-          efficiency: 'efficiency',
-          errors: 'errors',
-          time: 'time',
-          utilization: 'utilization',
-          space: 'space',
-          defects: 'defects',
-          rework: 'rework',
-          claims: 'claims',
-          quality: 'quality',
-          speed: 'speed',
-          labor: 'labor',
-          visibility: 'visibility',
-        },
-      }
-    : {
-        back: 'Inapoi la Solutii',
-        catalog: 'Solutii de Trasabilitate',
-        benefits: 'Beneficii Cheie',
-        useCases: 'Cazuri de Utilizare',
-        technologies: 'Tehnologii Utilizate',
-        ctaTitle: 'Implementam solutia potrivita pentru afacerea ta',
-        ctaSubtitle: 'Contacteaza-ne pentru o consultatie gratuita si o oferta personalizata.',
-        ctaPrimary: 'Cere Oferta',
-        ctaSecondary: 'Vezi Proiecte Similare',
-        roi: {
-          efficiency: 'eficienta',
-          errors: 'erori',
-          time: 'timp',
-          utilization: 'utilizare',
-          space: 'spatiu',
-          defects: 'defecte',
-          rework: 'remanieri',
-          claims: 'reclamatii',
-          quality: 'calitate',
-          speed: 'viteza',
-          labor: 'munca',
-          visibility: 'vizibilitate',
-        },
-      };
+  const labels = {
+    back: f(locale, 'solutionDetailPage', 'back'),
+    catalog: f(locale, 'solutionDetailPage', 'catalog'),
+    benefits: f(locale, 'solutionDetailPage', 'benefits'),
+    useCases: f(locale, 'solutionDetailPage', 'useCases'),
+    technologies: f(locale, 'solutionDetailPage', 'technologies'),
+    ctaTitle: f(locale, 'solutionDetailPage', 'ctaTitle'),
+    ctaSubtitle: f(locale, 'solutionDetailPage', 'ctaSubtitle'),
+    ctaPrimary: f(locale, 'solutionDetailPage', 'ctaPrimary'),
+    ctaSecondary: f(locale, 'solutionDetailPage', 'ctaSecondary'),
+    roi: f(locale, 'solutionDetailPage', 'roi', {}),
+  };
 
   // Schema.org markup
   const schemaData = {

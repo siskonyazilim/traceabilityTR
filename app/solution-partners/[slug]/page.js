@@ -6,6 +6,7 @@ import { strategicPartners } from '../../../data/partners';
 import { IconArrowLeft } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizePartners } from '../../../lib/i18n/contentLocalization';
+import { f } from '../../../lib/i18n/sectionTranslations';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
 export async function generateMetadata({ params }) {
@@ -22,14 +23,12 @@ export async function generateMetadata({ params }) {
 
   if (!partner) {
     return {
-      title: isEn ? 'Partner Not Found | Traceability' : 'Partener Negăsit | Traceability',
-      description: isEn
-        ? 'The requested strategic partner page could not be found. Explore our global solution partners and integration ecosystem.'
-        : 'Pagina partenerului strategic solicitat nu a fost găsită. Explorează partenerii noștri globali și ecosistemul de integrare.',
+      title: f(locale, 'partnerDetailPage', 'notFoundTitle'),
+      description: f(locale, 'partnerDetailPage', 'notFoundDescription'),
     };
   }
 
-  const title = `${partner.name} | ${isEn ? 'Strategic Solution Partner' : 'Partener Strategic de Soluții'} | Traceability`;
+  const title = `${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')} | Traceability`;
   const description = partner.description;
   const pageUrl = `https://traceability.ro/solution-partners/${partner.slug}`;
 
@@ -76,12 +75,12 @@ export default async function PartnerDetailPage({ params }) {
     <div className="min-h-screen bg-[#f5f7fa] pt-24 pb-16">
       <Container size="xl">
         <Link href="/" className="inline-flex items-center gap-2 text-accent-blue hover:underline mb-6 font-medium">
-          <IconArrowLeft /> {locale === 'en' ? 'Back to Home' : 'Inapoi la Acasa'}
+          <IconArrowLeft /> {f(locale, 'partnerDetailPage', 'backHome')}
         </Link>
 
         <article className="max-w-6xl mx-auto">
           <div className="mb-6 text-sm text-gray-text font-medium">
-            <span>{locale === 'en' ? 'Home' : 'Acasa'} / {partner.breadcrumbLabel || partner.name.toUpperCase()}</span>
+            <span>{f(locale, 'partnerDetailPage', 'breadcrumbHome')} / {partner.breadcrumbLabel || partner.name.toUpperCase()}</span>
           </div>
 
           <div className="bg-white border border-gray-light rounded-3xl shadow-sm overflow-hidden mb-8">
@@ -91,7 +90,7 @@ export default async function PartnerDetailPage({ params }) {
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
                 <div className="lg:col-span-3">
                   <h1 className="text-4xl md:text-5xl font-bold text-primary-black mb-4 leading-tight">
-                    {locale === 'en' ? 'Innovation and leadership' : 'Inovatie si leadership'}
+                    {f(locale, 'partnerDetailPage', 'heroTitle')}
                   </h1>
                   <h2 className="text-xl md:text-2xl font-semibold text-gray-text">
                     {partner.name}
@@ -124,23 +123,23 @@ export default async function PartnerDetailPage({ params }) {
             </div>
 
             <aside className="bg-white border border-gray-light rounded-2xl p-6 md:p-8 h-fit">
-              <h3 className="text-lg font-bold text-primary-black mb-4">{locale === 'en' ? 'Core values' : 'Valori fundamentale'}</h3>
+              <h3 className="text-lg font-bold text-primary-black mb-4">{f(locale, 'partnerDetailPage', 'coreValuesTitle')}</h3>
               <ul className="space-y-3 text-gray-text">
                 <li className="flex items-start gap-2">
                   <span className="text-accent-blue font-bold">•</span>
-                  <span>{locale === 'en' ? 'Operational and financial independence' : 'Independenta operationala si financiara'}</span>
+                  <span>{f(locale, 'partnerDetailPage', 'coreValues.0')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-blue font-bold">•</span>
-                  <span>{locale === 'en' ? 'Continuous innovation and future orientation' : 'Inovatie continua si orientare spre viitor'}</span>
+                  <span>{f(locale, 'partnerDetailPage', 'coreValues.1')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-blue font-bold">•</span>
-                  <span>{locale === 'en' ? 'Responsible leadership and corporate culture' : 'Leadership responsabil si cultura corporativa'}</span>
+                  <span>{f(locale, 'partnerDetailPage', 'coreValues.2')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-blue font-bold">•</span>
-                  <span>{locale === 'en' ? 'Long-term trust-based partnerships' : 'Parteneriate bazate pe incredere pe termen lung'}</span>
+                  <span>{f(locale, 'partnerDetailPage', 'coreValues.3')}</span>
                 </li>
               </ul>
             </aside>
@@ -150,7 +149,7 @@ export default async function PartnerDetailPage({ params }) {
           {otherPartners.length > 0 && (
             <div className="mt-16 pt-12 border-t border-gray-light">
               <h2 className="text-3xl font-bold text-primary-black mb-8">
-                {locale === 'en' ? 'Other Strategic Partners' : 'Alti Parteneri Strategici'}
+                {f(locale, 'partnerDetailPage', 'otherPartnersTitle')}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {otherPartners.map((otherPartner) => (
@@ -172,7 +171,7 @@ export default async function PartnerDetailPage({ params }) {
                         {otherPartner.description}
                       </p>
                       <span className="text-accent-blue font-semibold text-sm hover:underline">
-                        {locale === 'en' ? 'Details ->' : 'Detalii ->'}
+                        {f(locale, 'partnerDetailPage', 'details')}
                       </span>
                     </div>
                   </Link>
@@ -183,13 +182,13 @@ export default async function PartnerDetailPage({ params }) {
 
           <div className="mt-20 text-center">
             <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
-              {locale === 'en' ? 'Let us build the next project together' : 'Hai sa construim impreuna urmatorul proiect'}
+              {f(locale, 'partnerDetailPage', 'ctaTitle')}
             </h3>
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              {locale === 'en' ? 'Contact us to adapt this expertise to your company operations.' : 'Contacteaza-ne pentru a adapta aceasta expertiza la procesele companiei tale.'}
+              {f(locale, 'partnerDetailPage', 'ctaSubtitle')}
             </p>
             <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-              {locale === 'en' ? 'Contact us' : 'Contacteaza-ne'}
+              {f(locale, 'partnerDetailPage', 'ctaPrimary')}
             </Button>
           </div>
         </article>

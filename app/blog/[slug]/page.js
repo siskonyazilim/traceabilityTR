@@ -9,6 +9,7 @@ import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { IconArrowLeft, IconFacebook, IconLinkedIn, IconTwitter } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizeBlogPosts } from '../../../lib/i18n/contentLocalization';
+import { f } from '../../../lib/i18n/sectionTranslations';
 /* eslint-disable react/prop-types */
 
 export async function generateMetadata({ params }) {
@@ -21,14 +22,12 @@ export async function generateMetadata({ params }) {
 
   if (!post) {
     return {
-      title: isEn ? 'Article Not Found | Traceability Blog' : 'Articol Negăsit | Blog Traceability',
-      description: isEn
-        ? 'The requested blog article could not be found. Explore the latest traceability articles and industrial insights on Traceability blog.'
-        : 'Articolul solicitat nu a fost găsit. Explorează cele mai noi articole și perspective industriale pe blogul Traceability.',
+      title: f(locale, 'blogDetailPage', 'notFoundTitle'),
+      description: f(locale, 'blogDetailPage', 'notFoundDescription'),
     };
   }
 
-  const title = `${post.title} | ${isEn ? 'Traceability Blog' : 'Blog Traceability'}`;
+  const title = `${post.title} | ${f(locale, 'blogDetailPage', 'blogSuffix')}`;
   const description = post.excerpt;
   const pageUrl = `https://traceability.ro/blog/${post.slug}`;
 
@@ -78,7 +77,7 @@ export default async function BlogDetailPage({ params }) {
   });
 
   const shareUrl = `https://traceability.ro/blog/${post.slug}`;
-  const shareText = locale === 'en' ? `Quote: ${post.title}` : `Citez: ${post.title}`;
+  const shareText = `${f(locale, 'blogDetailPage', 'quotePrefix')} ${post.title}`;
   const safeContent = sanitizeRichText(post.content);
 
   return (
@@ -87,7 +86,7 @@ export default async function BlogDetailPage({ params }) {
         <div className="py-12">
           {/* Back Button */}
           <Link href="/blog" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
-            <IconArrowLeft /> {locale === 'en' ? 'Back to Blog' : 'Inapoi la Blog'}
+            <IconArrowLeft /> {f(locale, 'blogDetailPage', 'backToBlog')}
           </Link>
 
           <article className="max-w-6xl mx-auto">
@@ -106,19 +105,19 @@ export default async function BlogDetailPage({ params }) {
 
             <div className="flex items-center gap-4 py-4 border-y border-gray-light">
               <div className="flex-1">
-                <p className="text-sm text-gray-text">{locale === 'en' ? 'Written by' : 'Scris de'}</p>
+                <p className="text-sm text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
                 <p className="font-semibold text-primary-black">{post.author}</p>
               </div>
 
               {/* Share Buttons */}
               <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-gray-text">{locale === 'en' ? 'Share:' : 'Distribuie:'}</span>
+                <span className="text-sm font-semibold text-gray-text">{f(locale, 'blogDetailPage', 'share')}</span>
                 <a
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
-                  title={locale === 'en' ? 'Share on Twitter' : 'Distribuie pe Twitter'}
+                  title={f(locale, 'blogDetailPage', 'shareTwitter')}
                 >
                   <IconTwitter size={20} />
                 </a>
@@ -127,7 +126,7 @@ export default async function BlogDetailPage({ params }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
-                  title={locale === 'en' ? 'Share on LinkedIn' : 'Distribuie pe LinkedIn'}
+                  title={f(locale, 'blogDetailPage', 'shareLinkedIn')}
                 >
                   <IconLinkedIn size={20} />
                 </a>
@@ -136,7 +135,7 @@ export default async function BlogDetailPage({ params }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
-                  title={locale === 'en' ? 'Share on Facebook' : 'Distribuie pe Facebook'}
+                  title={f(locale, 'blogDetailPage', 'shareFacebook')}
                 >
                   <IconFacebook size={20} />
                 </a>
@@ -169,7 +168,7 @@ export default async function BlogDetailPage({ params }) {
           {relatedPosts.length > 0 && (
             <div className="mt-16 pt-12 border-t border-gray-light">
               <h2 className="text-3xl font-bold text-primary-black mb-8">
-                {locale === 'en' ? 'Related Articles' : 'Articole Inrudite'}
+                {f(locale, 'blogDetailPage', 'relatedArticles')}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedPosts.map((relatedPost) => (
@@ -182,13 +181,13 @@ export default async function BlogDetailPage({ params }) {
           {/* CTA */}
           <div className="mt-20 text-center">
             <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
-              {locale === 'en' ? 'Need a traceability solution?' : 'Ai nevoie de o solutie de trasabilitate?'}
+              {f(locale, 'blogDetailPage', 'ctaTitle')}
             </h3>
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              {locale === 'en' ? 'Contact us to learn how we can support your business.' : 'Contacteaza-ne pentru a afla cum putem ajuta afacerea ta.'}
+              {f(locale, 'blogDetailPage', 'ctaSubtitle')}
             </p>
             <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-              {locale === 'en' ? 'Contact us' : 'Contacteaza-ne'}
+              {f(locale, 'blogDetailPage', 'ctaPrimary')}
             </Button>
           </div>
           </article>

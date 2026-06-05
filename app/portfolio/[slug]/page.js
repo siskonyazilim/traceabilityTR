@@ -7,6 +7,7 @@ import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { IconArrowLeft } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizeReferenceProjects } from '../../../lib/i18n/contentLocalization';
+import { f } from '../../../lib/i18n/sectionTranslations';
 /* eslint-disable react/prop-types */
 
 export async function generateMetadata({ params }) {
@@ -31,14 +32,12 @@ export async function generateMetadata({ params }) {
 
   if (!project) {
     return {
-      title: isEn ? 'Project Not Found | Traceability' : 'Proiect Negăsit | Traceability',
-      description: isEn
-        ? 'The requested reference project could not be found. Browse other industrial traceability implementations by Traceability.'
-        : 'Proiectul de referință solicitat nu a fost găsit. Descoperă alte implementări industriale de trasabilitate realizate de Traceability.',
+      title: f(locale, 'portfolioDetailPage', 'notFoundTitle'),
+      description: f(locale, 'portfolioDetailPage', 'notFoundDescription'),
     };
   }
 
-  const title = `${project.title} | ${isEn ? 'Reference Project' : 'Proiect de Referință'} | Traceability`;
+  const title = `${project.title} | ${f(locale, 'portfolioDetailPage', 'projectSuffix')} | Traceability`;
   const description = project.description;
   const pageUrl = `https://traceability.ro/portfolio/${project.slug}`;
 
@@ -107,7 +106,7 @@ export default async function PortfolioDetailPage({ params }) {
       <Container size="xl">
         {/* Back Button */}
         <Link href="/proiecte-de-referinta" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
-          <IconArrowLeft /> {locale === 'en' ? 'Back to Projects' : 'Inapoi la Proiecte'}
+          <IconArrowLeft /> {f(locale, 'portfolioDetailPage', 'backToProjects')}
         </Link>
 
         <article className="max-w-6xl mx-auto">
@@ -153,7 +152,7 @@ export default async function PortfolioDetailPage({ params }) {
 
           {/* Technologies */}
           <div className="mb-8 pb-8 border-b border-gray-light rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-primary-black mb-4">{locale === 'en' ? 'Technologies Used' : 'Tehnologii Utilizate'}</h2>
+              <h2 className="text-2xl font-bold text-primary-black mb-4">{f(locale, 'portfolioDetailPage', 'technologiesUsed')}</h2>
             <div className="flex flex-wrap gap-3">
               {project.technologies.map((tech, index) => (
                 <span
@@ -176,7 +175,7 @@ export default async function PortfolioDetailPage({ params }) {
 
           {Array.isArray(project.gallery) && project.gallery.length > 0 && (
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-primary-black mb-4">{locale === 'en' ? 'Project Gallery' : 'Galerie Proiect'}</h2>
+              <h2 className="text-2xl font-bold text-primary-black mb-4">{f(locale, 'portfolioDetailPage', 'projectGallery')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {project.gallery.map((image) => (
                   <div key={`${project.id}-${image}`} className="h-56 md:h-64 rounded-xl overflow-hidden border border-gray-200 bg-slate-100">
@@ -189,19 +188,19 @@ export default async function PortfolioDetailPage({ params }) {
 
           {/* Results */}
           <div className="bg-primary-black rounded-2xl p-8 text-white mb-12 shadow-[0_14px_34px_rgba(10,10,43,0.3)]">
-            <h2 className="text-2xl font-bold mb-6">{locale === 'en' ? 'Results' : 'Rezultate'}</h2>
+            <h2 className="text-2xl font-bold mb-6">{f(locale, 'portfolioDetailPage', 'results')}</h2>
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">+{project.results.efficiency}</div>
-                <p className="text-white text-opacity-90">{locale === 'en' ? 'Efficiency' : 'Eficienta'}</p>
+                <p className="text-white text-opacity-90">{f(locale, 'portfolioDetailPage', 'efficiency')}</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">-{project.results.defects}</div>
-                <p className="text-white text-opacity-90">{locale === 'en' ? 'Defects' : 'Defecte'}</p>
+                <p className="text-white text-opacity-90">{f(locale, 'portfolioDetailPage', 'defects')}</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">+{project.results.productivity}</div>
-                <p className="text-white text-opacity-90">{locale === 'en' ? 'Productivity' : 'Productivitate'}</p>
+                <p className="text-white text-opacity-90">{f(locale, 'portfolioDetailPage', 'productivity')}</p>
               </div>
             </div>
           </div>
@@ -210,7 +209,7 @@ export default async function PortfolioDetailPage({ params }) {
           {relatedProjects.length > 0 && (
             <div className="mt-16 pt-12 border-t border-gray-light">
               <h2 className="text-3xl font-bold text-primary-black mb-8">
-                {locale === 'en' ? 'Related Projects' : 'Proiecte Inrudite'}
+                {f(locale, 'portfolioDetailPage', 'relatedProjects')}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedProjects.map((relatedProject) => (
@@ -240,17 +239,17 @@ export default async function PortfolioDetailPage({ params }) {
           {/* CTA */}
           <div className="mt-20 text-center">
             <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
-              {locale === 'en' ? 'Want to transform your production processes too?' : 'Vrei sa transformi si tu procesele de productie?'}
+              {f(locale, 'portfolioDetailPage', 'ctaTitle')}
             </h3>
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              {locale === 'en' ? 'Contact us to discuss how we can implement a similar solution in your business.' : 'Contacteaza-ne pentru a discuta cum putem implementa o solutie similara in afacerea ta.'}
+              {f(locale, 'portfolioDetailPage', 'ctaSubtitle')}
             </p>
             <div className="flex gap-6 justify-center flex-wrap">
               <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                {locale === 'en' ? 'Request Proposal' : 'Cere Oferta'}
+                {f(locale, 'portfolioDetailPage', 'ctaPrimary')}
               </Button>
               <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
-                {locale === 'en' ? 'View All References' : 'Vezi Toate Referintele'}
+                {f(locale, 'portfolioDetailPage', 'ctaSecondary')}
               </Button>
             </div>
           </div>

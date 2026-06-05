@@ -1,0 +1,27 @@
+{
+  "notFoundTitle": "Solutie Negasita | Traceability",
+  "notFoundDescription": "Pagina solutiei solicitate nu a fost gasita. Exploreaza solutiile de trasabilitate Traceability pentru productie si logistica.",
+  "back": "Inapoi la Solutii",
+  "catalog": "Solutii de Trasabilitate",
+  "benefits": "Beneficii Cheie",
+  "useCases": "Cazuri de Utilizare",
+  "technologies": "Tehnologii Utilizate",
+  "ctaTitle": "Implementam solutia potrivita pentru afacerea ta",
+  "ctaSubtitle": "Contacteaza-ne pentru o consultatie gratuita si o oferta personalizata.",
+  "ctaPrimary": "Cere Oferta",
+  "ctaSecondary": "Vezi Proiecte Similare",
+  "roi": {
+    "efficiency": "eficienta",
+    "errors": "erori",
+    "time": "timp",
+    "utilization": "utilizare",
+    "space": "spatiu",
+    "defects": "defecte",
+    "rework": "remanieri",
+    "claims": "reclamatii",
+    "quality": "calitate",
+    "speed": "viteza",
+    "labor": "munca",
+    "visibility": "vizibilitate"
+  }
+}
