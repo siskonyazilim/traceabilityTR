@@ -132,6 +132,7 @@ export const Header = () => {
               <div key={item.label}>
                 {item.href.startsWith('#') ? (
                   <button
+                    type="button"
                     onClick={() => handleNavClick(item.href)}
                     className={`text-sm font-semibold transition-colors hover:text-accent-blue ${
                       useTransparentHeader ? 'text-white' : 'text-primary-black'
@@ -156,6 +157,7 @@ export const Header = () => {
           <div className="flex items-center gap-3">
             <div ref={langMenuRef} className="relative hidden md:block w-[116px]">
               <button
+                type="button"
                 onClick={(event) => {
                   event.stopPropagation();
                   setIsLangOpen((prev) => !prev);
@@ -178,6 +180,7 @@ export const Header = () => {
                 <div className="absolute right-0 mt-2 w-full rounded-xl border border-slate-200 bg-white shadow-lg overflow-hidden z-50">
                   {languageOptions.map((option) => (
                     <button
+                      type="button"
                       key={option.code}
                       onClick={() => {
                         setLocale(option.code);
@@ -196,6 +199,7 @@ export const Header = () => {
             </div>
 
             <button
+              type="button"
               onClick={() => setLocale(nextLanguage)}
               aria-label={t('language.switchAria', 'Schimbă limba')}
               className={`md:hidden h-10 px-2.5 rounded-lg border flex items-center gap-2 text-xs font-bold transition-colors ${
@@ -210,7 +214,11 @@ export const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? t('header.closeMenu', 'Închide meniul') : t('header.openMenu', 'Deschide meniul')}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
               className={`md:hidden p-2 rounded-lg transition-colors ${
                 useTransparentHeader ? 'text-white' : 'text-primary-black'
               }`}
@@ -222,11 +230,12 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
+          <div id="mobile-navigation" className="md:hidden bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
             {navItems.map((item) => (
               <div key={item.label} className="mb-3">
                 {item.href.startsWith('#') ? (
                   <button
+                    type="button"
                     onClick={() => handleNavClick(item.href)}
                     className="w-full text-left px-4 py-3 text-base text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
                   >

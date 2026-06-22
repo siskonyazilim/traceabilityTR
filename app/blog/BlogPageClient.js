@@ -46,7 +46,7 @@ export default function BlogPageClient() {
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">{t('blogPage.heroTitle', 'Noutăți, ghiduri și tendințe în trasabilitate')}</h1>
               <p className="text-lg md:text-xl text-white/90 max-w-3xl">{t('blogPage.heroSubtitle', 'Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.')}</p>
               <div className="mt-8">
-                <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-white text-secondary-blue hover:bg-slate-100">
+                <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
                   {t('blogPage.topCta', 'Discută cu un expert')}
                 </Button>
               </div>
@@ -121,7 +121,7 @@ export default function BlogPageClient() {
 
           <div className="mt-10 pb-4 text-center">
             <Button as={Link} href="/contact" variant="outline" size="lg" className="border-2 border-secondary-blue text-secondary-blue hover:bg-secondary-blue hover:text-white">
-              {t('blogPage.bottomCta', 'Proiectin için bizimle iletişime geç')}
+              {t('blogPage.bottomCta', 'Contactează-ne pentru proiectul tău')}
             </Button>
           </div>
         </div>

@@ -117,6 +117,7 @@ export default async function BlogDetailPage({ params }) {
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={f(locale, 'blogDetailPage', 'shareTwitter')}
                   className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
                   title={f(locale, 'blogDetailPage', 'shareTwitter')}
                 >
@@ -126,6 +127,7 @@ export default async function BlogDetailPage({ params }) {
                   href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={f(locale, 'blogDetailPage', 'shareLinkedIn')}
                   className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
                   title={f(locale, 'blogDetailPage', 'shareLinkedIn')}
                 >
@@ -135,6 +137,7 @@ export default async function BlogDetailPage({ params }) {
                   href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={f(locale, 'blogDetailPage', 'shareFacebook')}
                   className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
                   title={f(locale, 'blogDetailPage', 'shareFacebook')}
                 >

@@ -170,11 +170,13 @@ export default function ContactPageClient() {
                     minLength: { value: 2, message: t('contactPage.errors.firstNameMin', 'Min 2 caractere') },
                   })}
                   type="text"
+                  aria-invalid={errors.firstName ? 'true' : 'false'}
+                  aria-describedby={errors.firstName ? 'firstName-error' : undefined}
                   className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
                   placeholder={t('contactPage.placeholders.firstName', 'Ion')}
                 />
                 {errors.firstName && (
-                  <span className="text-accent-red text-sm">{errors.firstName.message}</span>
+                  <span id="firstName-error" role="alert" className="text-accent-red text-sm">{errors.firstName.message}</span>
                 )}
               </div>
 
@@ -189,11 +191,13 @@ export default function ContactPageClient() {
                     minLength: { value: 2, message: t('contactPage.errors.lastNameMin', 'Min 2 caractere') },
                   })}
                   type="text"
+                  aria-invalid={errors.lastName ? 'true' : 'false'}
+                  aria-describedby={errors.lastName ? 'lastName-error' : undefined}
                   className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
                   placeholder={t('contactPage.placeholders.lastName', 'Popescu')}
                 />
                 {errors.lastName && (
-                  <span className="text-accent-red text-sm">{errors.lastName.message}</span>
+                  <span id="lastName-error" role="alert" className="text-accent-red text-sm">{errors.lastName.message}</span>
                 )}
               </div>
             </div>
@@ -212,11 +216,13 @@ export default function ContactPageClient() {
                   },
                 })}
                 type="email"
+                aria-invalid={errors.email ? 'true' : 'false'}
+                aria-describedby={errors.email ? 'email-error' : undefined}
                 className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
                 placeholder={t('contactPage.placeholders.email', 'email@example.com')}
               />
               {errors.email && (
-                <span className="text-accent-red text-sm">{errors.email.message}</span>
+                <span id="email-error" role="alert" className="text-accent-red text-sm">{errors.email.message}</span>
               )}
             </div>
 
@@ -233,11 +239,13 @@ export default function ContactPageClient() {
                   },
                 })}
                 type="text"
+                aria-invalid={errors.website ? 'true' : 'false'}
+                aria-describedby={errors.website ? 'website-error' : undefined}
                 className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
                 placeholder={t('contactPage.placeholders.website', 'https://www.example.com')}
               />
               {errors.website && (
-                <span className="text-accent-red text-sm">{errors.website.message}</span>
+                <span id="website-error" role="alert" className="text-accent-red text-sm">{errors.website.message}</span>
               )}
             </div>
 
@@ -252,11 +260,13 @@ export default function ContactPageClient() {
                   minLength: { value: 10, message: t('contactPage.errors.messageMin', 'Min 10 caractere') },
                 })}
                 rows="6"
+                aria-invalid={errors.message ? 'true' : 'false'}
+                aria-describedby={errors.message ? 'message-error' : undefined}
                 className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white resize-none"
                 placeholder={t('contactPage.placeholders.message', 'Scrie-ți mesajul aici...')}
               />
               {errors.message && (
-                <span className="text-accent-red text-sm">{errors.message.message}</span>
+                <span id="message-error" role="alert" className="text-accent-red text-sm">{errors.message.message}</span>
               )}
             </div>
 
@@ -267,6 +277,8 @@ export default function ContactPageClient() {
                   required: t('contactPage.errors.privacyRequired', 'Trebuie să accepti politica de confidențialitate'),
                 })}
                 type="checkbox"
+                aria-invalid={errors.privacy ? 'true' : 'false'}
+                aria-describedby={errors.privacy ? 'privacy-error' : undefined}
                 className="mt-1"
               />
               <label htmlFor="privacy" className="text-sm text-gray-text">
@@ -278,7 +290,7 @@ export default function ContactPageClient() {
               </label>
             </div>
             {errors.privacy && (
-              <span className="text-accent-red text-sm block">{errors.privacy.message}</span>
+              <span id="privacy-error" role="alert" className="text-accent-red text-sm block">{errors.privacy.message}</span>
             )}
 
             <div className="flex justify-center">
@@ -291,6 +303,8 @@ export default function ContactPageClient() {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
+                role="status"
+                aria-live="polite"
                 className="bg-accent-green bg-opacity-20 border-2 border-accent-green text-accent-green px-4 py-3 rounded-lg text-center font-semibold"
               >
                 {t('contactPage.success', '✓ Mesajul dvs. a fost trimis cu succes!')}

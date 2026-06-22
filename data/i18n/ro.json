@@ -102,11 +102,13 @@
     "eyebrow": "Resurse",
     "heroTitle": "Noutăți, ghiduri și tendințe în trasabilitate",
     "heroSubtitle": "Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.",
+    "topCta": "Discută cu un expert",
     "empty": "Nu au fost găsite articole.",
     "ctaTitle": "Vrei să discutăm despre trasabilitate?",
     "ctaSubtitle": "Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.",
     "ctaPrimary": "Cere Ofertă",
-    "ctaSecondary": "Vezi Proiectele"
+    "ctaSecondary": "Vezi Proiectele",
+    "bottomCta": "Contactează-ne pentru proiectul tău"
   },
   "projectsPage": {
     "eyebrow": "Studii de caz",

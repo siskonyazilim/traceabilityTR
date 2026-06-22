@@ -58,16 +58,16 @@ export const Footer = () => {
               {t('footer.brandDescription', 'Soluții innovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.')}
             </p>
             <div className="flex items-center gap-3">
-              <a href="https://www.linkedin.com/company/siskonromania/" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+              <a href="https://www.linkedin.com/company/siskonromania/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <img src="/social/linkedin.svg" alt="LinkedIn" className="h-[18px] w-[18px]" />
               </a>
-              <a href="https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+              <a href="https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <img src="/social/youtube.svg" alt="YouTube" className="h-[18px] w-[18px]" />
               </a>
-              <a href="https://x.com/siskonromania" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+              <a href="https://x.com/siskonromania" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <IconTwitter size={18} />
               </a>
-              <a href="https://www.instagram.com/siskon_romania" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+              <a href="https://www.instagram.com/siskon_romania" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="h-9 w-9 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <img src="/social/instagram-2016-5.svg" alt="Instagram" className="h-[18px] w-[18px]" />
               </a>
             </div>

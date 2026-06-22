@@ -64,9 +64,14 @@ export const SolutionsTabs = () => {
         />
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12" role="tablist" aria-label={t('sections.solutionsProductsTitle', 'Soluții și Produse')}>
           <button
+            type="button"
             onClick={() => setActiveTab('solutions')}
+            role="tab"
+            id="solutions-tab"
+            aria-selected={activeTab === 'solutions'}
+            aria-controls="solutions-panel"
             className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
               activeTab === 'solutions'
                 ? 'bg-secondary-blue text-white shadow-lg'
@@ -76,8 +81,13 @@ export const SolutionsTabs = () => {
             {t('sections.solutionsTab', 'Soluții')}
           </button>
           <button
+            type="button"
             id="products-tab-button"
             onClick={() => setActiveTab('products')}
+            role="tab"
+            aria-selected={activeTab === 'products'}
+            aria-controls="products-panel"
+            aria-labelledby="products-tab-button"
             className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
               activeTab === 'products'
                 ? 'bg-accent-blue text-white shadow-lg'
@@ -90,7 +100,7 @@ export const SolutionsTabs = () => {
 
         {/* Solutions Tab */}
         {activeTab === 'solutions' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+          <div id="solutions-panel" role="tabpanel" aria-labelledby="solutions-tab" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
             {localizedSolutions.map((solution) => (
               <div
                 key={solution.id}
@@ -122,7 +132,7 @@ export const SolutionsTabs = () => {
 
         {/* Products Tab */}
         {activeTab === 'products' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
+          <div id="products-panel" role="tabpanel" aria-labelledby="products-tab-button" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
             {localizedProducts.map((product) => (
               <div
                 key={product.id}

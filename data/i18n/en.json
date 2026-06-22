@@ -102,11 +102,13 @@
     "eyebrow": "Resources",
     "heroTitle": "News, guides and trends in traceability",
     "heroSubtitle": "Decision-focused content: implementation, operational optimization and best practices for modern manufacturing.",
+    "topCta": "Talk to an expert",
     "empty": "No articles found.",
     "ctaTitle": "Want to discuss traceability?",
     "ctaSubtitle": "Our team can help you turn article insights into clear steps for your factory.",
     "ctaPrimary": "Request an Offer",
-    "ctaSecondary": "View Projects"
+    "ctaSecondary": "View Projects",
+    "bottomCta": "Contact us for your project"
   },
   "projectsPage": {
     "eyebrow": "Case studies",
