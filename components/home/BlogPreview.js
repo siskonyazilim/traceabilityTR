@@ -91,7 +91,7 @@ export const BlogPreview = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-8">
             {visiblePosts.map((post) => (
-              <div key={`${post.id}-${currentIndex}`}>
+              <div key={`${post.id}-${currentIndex}`} className="h-full">
                 <BlogCard post={post} />
               </div>
             ))}

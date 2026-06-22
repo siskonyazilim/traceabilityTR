@@ -172,6 +172,38 @@ section {
   box-shadow: var(--elevation-3);
 }
 
+.card-cta-mini {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: fit-content;
+  border: 1px solid rgba(0, 130, 210, 0.32);
+  border-radius: 9999px;
+  padding: 0.46rem 0.9rem;
+  font-size: 0.79rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #005cc9 0%, #0082d2 100%);
+  box-shadow: 0 8px 16px rgba(0, 92, 201, 0.2);
+  transition: color var(--motion-fast), border-color var(--motion-fast), background-color var(--motion-fast), box-shadow var(--motion-fast), transform var(--motion-fast);
+}
+
+.card-cta-mini:hover {
+  color: #ffffff;
+  border-color: rgba(0, 130, 210, 0.58);
+  background: linear-gradient(135deg, #004ba5 0%, #0071bc 100%);
+  box-shadow: 0 10px 20px rgba(0, 92, 201, 0.26);
+  transform: translateY(-1px);
+}
+
+.card-cta-mini-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
 .legal-doc {
   color: #335a7b;
   font-size: 1rem;
@@ -240,6 +272,45 @@ section {
 .legal-doc strong {
   color: #0a0a2b;
   font-weight: 700;
+}
+
+.blog-rich {
+  color: #111827;
+}
+
+.blog-rich p {
+  max-width: 76ch;
+  margin-bottom: 1rem;
+}
+
+.blog-rich h2 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #000000;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding-left: 0.8rem;
+  border-left: 4px solid #d1d5db;
+}
+
+.blog-rich h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.55rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+.blog-rich ul,
+.blog-rich ol {
+  margin: 0 0 1rem 1.25rem;
+}
+
+.blog-rich li {
+  margin-bottom: 0.4rem;
+}
+
+.blog-rich strong {
+  color: #000000;
 }
 
 /* Background Patterns */

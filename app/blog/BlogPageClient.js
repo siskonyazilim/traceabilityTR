@@ -36,15 +36,20 @@ export default function BlogPageClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-12 md:mb-16 rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-primary-black via-secondary-blue to-accent-blue px-8 py-12 md:px-12 md:py-16 text-white shadow-2xl relative overflow-hidden"
+            className="mb-12 md:mb-16 rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-600 via-blue-500 to-cyan-400 px-8 py-12 md:px-12 md:py-16 text-white shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-blue/20 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-200/25 rounded-full blur-2xl"></div>
 
             <div className="relative z-10">
               <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-white/80 font-bold mb-4">{t('blogPage.eyebrow', 'Resurse')}</p>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">{t('blogPage.heroTitle', 'Noutăți, ghiduri și tendințe în trasabilitate')}</h1>
               <p className="text-lg md:text-xl text-white/90 max-w-3xl">{t('blogPage.heroSubtitle', 'Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.')}</p>
+              <div className="mt-8">
+                <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-white text-secondary-blue hover:bg-slate-100">
+                  {t('blogPage.topCta', 'Discută cu un expert')}
+                </Button>
+              </div>
             </div>
           </motion.div>
 
@@ -64,6 +69,7 @@ export default function BlogPageClient() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.3 }}
                     viewport={{ once: true }}
+                    className="h-full"
                   >
                     <BlogCard post={post} />
                   </motion.div>
@@ -97,7 +103,7 @@ export default function BlogPageClient() {
           )}
 
           <div className="mt-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
               {t('blogPage.ctaTitle', 'Vrei să discutăm despre trasabilitate?')}
             </h2>
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
@@ -111,6 +117,12 @@ export default function BlogPageClient() {
                 {t('blogPage.ctaSecondary', 'Vezi Proiectele')}
               </Button>
             </div>
+          </div>
+
+          <div className="mt-10 pb-4 text-center">
+            <Button as={Link} href="/contact" variant="outline" size="lg" className="border-2 border-secondary-blue text-secondary-blue hover:bg-secondary-blue hover:text-white">
+              {t('blogPage.bottomCta', 'Proiectin için bizimle iletişime geç')}
+            </Button>
           </div>
         </div>
       </Container>

@@ -1,23 +1,5 @@
 export const blogPosts = [
   {
-    id: 1,
-    title: 'Procedura Chestny ZNAK: Sistemul digital de trasabilitate',
-    titleTr: 'Chestny ZNAK Proseduru: Dijital Izlenebilirlik Sistemi',
-    slug: 'chestny-znak-digital-traceability-system',
-    category: 'Știri',
-    categoryEn: 'News',
-    date: '2025-01-29',
-    author: 'Admin',
-    image: '/images/blog/photos/chestny-znak-traceability.png',
-    excerpt: 'Procedura Chestny ZNAK explica modul in care platforma digitala obligatorie creste controlul, autenticitatea si increderea in lantul logistic.',
-    content: `
-      <h2>Introducere</h2>
-      <p>Chestny ZNAK este un sistem national de trasabilitate in care fiecare produs este marcat cu un cod unic, validat de platforma centrala.</p>
-      <h2>De ce este important?</h2>
-      <p>Reduce contrafacerea, imbunatateste trasabilitatea end-to-end si permite verificarea rapida de catre autoritati, companii si consumatori.</p>
-    `,
-  },
-  {
     id: 2,
     title: 'Importanța Trasabilității Alimentare pentru Consumatorii Finali',
     titleTr: 'Gida Izlenebilirliginin Son Tuketiciler Icin Onemi',
@@ -92,7 +74,7 @@ export const blogPosts = [
     excerpt: 'Tehnologiile de coduri de bare precum 1D, 2D și Data Matrix rămân componente esențiale pentru trasabilitate fiabilă și scalabilă.',
     content: `
       <p>În lumea actuală în rapid proces de digitalizare, sistemele de coduri de bare au devenit indispensabile pentru creșterea eficienței în procesele de producție și logistică, asigurând trasabilitatea produselor și simplificarea operațiunilor. Codurile de bare permit urmărirea și gestionarea produselor în fiecare etapă, de la producție până la consum.</p>
-      <p>Istoria tehnologiei codurilor de bare a început în 1948 cu dezvoltarea primului sistem de scanare optică de către Norman Joseph Woodland și Bernard Silver. Primul scaner de coduri de bare a fost folosit într-un supermarket din SUA în 1974, marcând începutul adoptării comerciale pe scară largă a tehnologiei codurilor de bare. În Turcia, tehnologia codurilor de bare a fost implementată pentru prima dată în 1988, un moment semnificativ în modernizarea sectorului de retail.</p>
+      <p>Istoria tehnologiei codurilor de bare a început în 1948 cu dezvoltarea primului sistem de scanare optică de către Norman Joseph Woodland și Bernard Silver. Primele utilizări comerciale la scară largă au accelerat adoptarea tehnologiei în retail, iar ulterior implementările regionale au contribuit la modernizarea proceselor operaționale.</p>
       <p>Tehnologiile de coduri de bare pe care le folosim extensiv în soluțiile noastre de trasabilitate sunt critice pentru asigurarea că produsele sunt trasabile în fiecare etapă, de la producție până la consum.</p>
       <h2><strong>Sisteme de Coduri de Bare Utilizate Frecvent la Nivel Global</strong></h2>
       <h3><strong>EAN-8</strong></h3>
@@ -235,7 +217,7 @@ export const blogPosts = [
       </ul>
       <h3><strong>Han Xin Code</strong></h3>
       <ul>
-        <li><strong>Caz de Utilizare</strong>: Piața chineză, utilizare generală</li>
+        <li><strong>Caz de Utilizare</strong>: Piețe cu adopție ridicată, utilizare generală</li>
         <li><strong>Structură</strong>: Matrice pătrată sau rectangulară</li>
         <li><strong>Caracteristici</strong>: Densitate mare de date, suportă atât date numerice, cât și alfanumerice.</li>
       </ul>
@@ -326,7 +308,7 @@ export const blogPosts = [
     excerpt: 'O implementare de citire multi-cod bazată pe camere de către BOMI Group pentru a îmbunătăți viteza și fiabilitatea în fluxurile de identificare industrială.',
     content: `
       <p>Cu acest obiectiv în minte, am proiectat un nou produs pentru vizualizare în sectorul logistic și de depozitare.</p>
-      <p>Pentru depozitul din Turcia al BOMI Group, un lider global în logistica farmaceutică, am dezvoltat un <strong>Sistem de Citire Multi-Cod Bazat pe Camere</strong>, automatizând procesele efectuate anterior manual.</p>
+      <p>Pentru unul dintre depozitele BOMI Group, un lider global în logistica farmaceutică, am dezvoltat un <strong>Sistem de Citire Multi-Cod Bazat pe Camere</strong>, automatizând procesele efectuate anterior manual.</p>
       <p>Linia, adaptată nevoilor BOMI, constă dintr-o bandă transportoare de 3 metri, 6 camere SICK, un ecran pentru operator și un terminal portabil.</p>
       <p>Acest sistem permite verificarea automată a produselor din lista de comenzi, accelerând procesul și eliminând erorile umane. În sistemul pe care l-am proiectat, un operator plasează o cutie care conține 50 de produse pe banda transportoare. Cutia intră într-o zonă închisă, unde camerele încep să captureze imagini. În câteva secunde, codurile Data Matrix sunt citite și afișate pe sistem și pe ecranul operatorului. Codurile sunt comparate cu lista de comenzi pentru a asigura conformitatea cu standardele BOMI. Codurile neconforme sunt evidențiate în roșu, solicitând corectarea erorii și re-scanarea. Odată aprobată de operator, comanda este finalizată.</p>
       <p>Dacă este necesar, produsele pot fi adăugate manual folosind terminalul portabil.</p>
@@ -352,7 +334,7 @@ export const blogPosts = [
       <p>Companiile potrivite au colaborat pentru a dezvolta dosare de soluții comune. Poveștile de succes din program au fost împărtășite cu publicul la <strong>Ceremonia Poveștilor de Succes în Transformarea Digitală</strong> organizată la sfârșitul anului.</p>
       <p>Al doilea an al programului SD2 al TUSIAD, menit să sprijine transformarea digitală în industrie, a conectat companiile utilizatoare de tehnologie care caută transformarea digitală cu partenerii de soluții potriviți, oferind în același timp furnizorilor de tehnologie o platformă pentru a-și prezenta soluțiile și pentru a le valida cu clienții.</p>
       <p>După fazele de aplicare și pre-selecție, companiile utilizatoare de tehnologie și furnizorii micro, mici și mijlocii de tehnologie pre-selectați s-au întâlnit la <strong>Programul de Integrare Industrie-Tehnologie (STEP)</strong>. În timpul evenimentului STEP, au fost făcute potriviri între utilizatorii de tehnologie și furnizorii de tehnologie pre-selectați. Pe parcursul perioadei următoare, companiile potrivite au lucrat împreună pentru a pregăti dosare de soluții. Poveștile de succes rezultate au fost împărtășite la Ceremonia Poveștilor de Succes în Transformarea Digitală la sfârșitul anului. Evenimentul a prezentat, de asemenea, paneluri cu experți care au discutat subiecte care variază de la sprijinul public la instrumentele de transformare digitală.</p>
-      <p>Discursul de deschidere a evidențiat incertitudinile crescânde cu care se confruntă factorii de decizie odată cu a Patra Revoluție Industrială și a subliniat că SD2 a fost lansat pentru a aborda această provocare prin crearea de oportunități de colaborare pentru a avansa ecosistemul de inovare al Turciei.</p>
+      <p>Discursul de deschidere a evidențiat incertitudinile crescânde cu care se confruntă factorii de decizie odată cu a Patra Revoluție Industrială și a subliniat că SD2 a fost lansat pentru a aborda această provocare prin crearea de oportunități de colaborare pentru a avansa ecosistemul regional de inovare industrială.</p>
       <p>Un alt discurs principal a subliniat mediul competitiv intens determinat de transformarea digitală și a subliniat că colaborarea între companii, guverne, universități și alte părți interesate joacă un rol vital în competitivitate. De asemenea, a evidențiat noile abilități de leadership și management necesare în transformarea digitală.</p>
       <p>Detaliile programului au subliniat că TUSIAD SD2 a fost creat pentru a răspunde nevoii unei platforme care conectează utilizatorii de tehnologie cu furnizorii. Programul consolidează ecosistemul utilizatorilor și furnizorilor de tehnologie, răspunde nevoilor utilizatorilor, sprijină producția de tehnologie IMM și prezintă cele mai bune practici în transformarea digitală.</p>
       <p>În observațiile finale, mesajul a fost clar: nu există câștigători sau perdanți în acest program, iar chiar și furnizorii nepotriviți rămân parte dintr-o rețea în creștere care sprijină impulsul industrial și viitoarele povești de succes.</p>

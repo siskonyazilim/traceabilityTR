@@ -146,13 +146,12 @@ export const ReferenceProjects = () => {
                     <p className="text-sm text-gray-text leading-7 line-clamp-2 flex-1 max-w-[44ch]">
                       {project.description}
                     </p>
-                    {/* Read More Link */}
-                    <div className="mt-4 flex items-center text-accent-blue font-semibold text-sm">
+                    <span className="card-cta-mini mt-4">
                       <span>{t('sections.details', 'Detalii')}</span>
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </div>
+                    </span>
                   </div>
                 </Link>
               </article>

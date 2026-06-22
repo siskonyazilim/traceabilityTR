@@ -216,7 +216,7 @@ export default async function PortfolioDetailPage({ params }) {
                   <Link
                     key={relatedProject.id}
                     href={`/portfolio/${relatedProject.slug}`}
-                    className="group rounded-2xl border border-gray-200 bg-white p-5 hover:border-accent-blue hover:shadow-md transition-all"
+                    className="group rounded-2xl border border-gray-200 bg-white p-5 hover:border-accent-blue hover:shadow-md transition-all flex flex-col"
                   >
                     <div className="h-32 rounded-xl border border-gray-200 bg-[#f7f8fa] flex items-center justify-center p-4 mb-4">
                       <img
@@ -230,6 +230,12 @@ export default async function PortfolioDetailPage({ params }) {
                     <h3 className="text-base md:text-lg font-bold text-primary-black group-hover:text-accent-blue transition-colors leading-snug">
                       {relatedProject.title}
                     </h3>
+                    <span className="card-cta-mini mt-4">
+                      {f(locale, 'sections', 'details', 'Detalii')}
+                      <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
                   </Link>
                 ))}
               </div>

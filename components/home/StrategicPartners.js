@@ -130,16 +130,16 @@ export const StrategicPartners = () => {
                     </div>
                   </div>
 
-                  <div className="p-6 md:p-7">
+                  <div className="p-6 md:p-7 h-full flex flex-col">
                     <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] flex items-center">
                       {partner.name}
                     </h3>
                     <p className="text-sm text-gray-text leading-7 line-clamp-3 min-h-[5.2rem] max-w-[44ch]">
                       {partner.description}
                     </p>
-                    <span className="inline-flex items-center mt-4 text-accent-blue font-semibold text-sm">
+                    <span className="card-cta-mini mt-4">
                       {t('sections.details', 'Detalii')}
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </span>

@@ -16,15 +16,16 @@ export const BlogCard = ({ post }) => {
     month: 'long',
     day: 'numeric',
   });
+  const readMoreLabel = t('cards.readMore', 'Citește mai mult →').replace(/\s*→\s*$/, '');
 
   return (
     <article className="h-full">
       <Link
         href={`/blog/${post.slug}`}
-        className="group block bg-white rounded-2xl border border-slate-200 shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all overflow-hidden h-full"
+        className="group flex h-full flex-col rounded-2xl border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/70 shadow-soft hover:shadow-soft-lg hover:border-sky-300 transition-all overflow-hidden"
       >
         {/* Blog Image */}
-        <div className="aspect-video bg-gradient-to-br from-slate-blue via-secondary-blue to-primary-black flex items-center justify-center overflow-hidden relative">
+        <div className="aspect-video bg-gradient-to-br from-sky-100 via-blue-100 to-cyan-100 flex items-center justify-center overflow-hidden relative">
           <Image
             src="/resmi/TRACEABILITY-logo.svg"
             alt="Traceability icon"
@@ -51,7 +52,7 @@ export const BlogCard = ({ post }) => {
           )}
         </div>
 
-        <div className="p-6 md:p-7">
+        <div className="p-6 md:p-7 flex-1 flex flex-col">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xs font-semibold text-secondary-blue uppercase">
               {post.category}
@@ -59,16 +60,19 @@ export const BlogCard = ({ post }) => {
             <span className="text-xs text-inactive-gray">{date}</span>
           </div>
 
-          <h3 className="text-xl font-bold text-primary-black mb-3 line-clamp-2 group-hover:text-accent-blue transition-colors">
+          <h3 className="text-xl font-bold text-slate-800 mb-3 line-clamp-2 group-hover:text-secondary-blue transition-colors">
             {post.title}
           </h3>
 
-          <p className="text-gray-text text-sm leading-7 mb-4 line-clamp-2 max-w-[46ch]">
+          <p className="rounded-xl border border-slate-100 bg-white/80 px-4 py-3 text-slate-600 text-sm leading-7 mb-4 max-w-[46ch] min-h-[96px]">
             {post.excerpt}
           </p>
 
-          <span className="text-secondary-blue font-semibold text-sm group-hover:text-accent-blue">
-            {t('cards.readMore', 'Citește mai mult →')}
+          <span className="card-cta-mini mt-auto">
+            {readMoreLabel}
+            <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </span>
         </div>
         </Link>

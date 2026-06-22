@@ -7,6 +7,7 @@ import { useLanguage } from '../i18n/LanguageProvider';
 
 export const ProjectCard = ({ project }) => {
   const { t } = useLanguage();
+  const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').replace(/\s*→\s*$/, '');
 
   return (
     <motion.article
@@ -66,8 +67,11 @@ export const ProjectCard = ({ project }) => {
             </div>
           </div>
 
-          <span className="text-secondary-blue font-semibold text-sm group-hover:text-accent-blue">
-            {t('cards.projectDetails', 'Detalii proiect →')}
+          <span className="card-cta-mini mt-auto">
+            {projectDetailsLabel}
+            <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </span>
         </div>
         </Link>

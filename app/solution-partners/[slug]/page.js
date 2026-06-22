@@ -155,7 +155,7 @@ export default async function PartnerDetailPage({ params }) {
                 {otherPartners.map((otherPartner) => (
                   <Link key={otherPartner.id} href={`/solution-partners/${otherPartner.slug}`}>
                     <div
-                      className="bg-white rounded-2xl p-6 border border-gray-light shadow-sm hover:shadow-xl transition-all cursor-pointer h-full"
+                      className="bg-white rounded-2xl p-6 border border-gray-light shadow-sm hover:shadow-xl transition-all cursor-pointer h-full flex flex-col"
                     >
                       <div className="h-14 bg-[#f7f8fa] rounded-xl border border-gray-light flex items-center justify-center px-4 mb-4">
                         <img
@@ -170,8 +170,11 @@ export default async function PartnerDetailPage({ params }) {
                       <p className="text-gray-text text-sm line-clamp-2 mb-4">
                         {otherPartner.description}
                       </p>
-                      <span className="text-accent-blue font-semibold text-sm hover:underline">
+                      <span className="card-cta-mini mt-auto">
                         {f(locale, 'partnerDetailPage', 'details')}
+                        <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                       </span>
                     </div>
                   </Link>

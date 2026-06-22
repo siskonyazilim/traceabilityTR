@@ -85,28 +85,29 @@ export default async function BlogDetailPage({ params }) {
       <Container size="xl">
         <div className="py-12">
           {/* Back Button */}
-          <Link href="/blog" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
-            <IconArrowLeft /> {f(locale, 'blogDetailPage', 'backToBlog')}
+          <Link href="/blog" className="card-cta-mini mb-8">
+            <IconArrowLeft size={16} />
+            <span>{f(locale, 'blogDetailPage', 'backToBlog')}</span>
           </Link>
 
           <article className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="mb-8 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_14px_36px_rgba(10,10,43,0.08)]">
+          <div className="mb-8 rounded-3xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/80 p-6 md:p-9 shadow-[0_14px_36px_rgba(10,10,43,0.06)]">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-xs font-semibold text-accent-blue uppercase bg-accent-blue bg-opacity-20 px-3 py-1 rounded-full">
+              <span className="text-xs font-semibold text-secondary-blue uppercase bg-sky-100 px-3 py-1 rounded-full border border-sky-200">
                 {post.category}
               </span>
               <span className="text-sm text-gray-text">{date}</span>
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-bold text-primary-black mb-4 leading-[1.08]">
+            <h1 className="text-3xl md:text-5xl font-bold text-slate-800 mb-4 leading-[1.08]">
               {post.title}
             </h1>
 
             <div className="flex items-center gap-4 py-4 border-y border-gray-light">
               <div className="flex-1">
                 <p className="text-sm text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
-                <p className="font-semibold text-primary-black">{post.author}</p>
+                <p className="font-semibold text-slate-700">{post.author}</p>
               </div>
 
               {/* Share Buttons */}
@@ -116,7 +117,7 @@ export default async function BlogDetailPage({ params }) {
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
+                  className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
                   title={f(locale, 'blogDetailPage', 'shareTwitter')}
                 >
                   <IconTwitter size={20} />
@@ -125,7 +126,7 @@ export default async function BlogDetailPage({ params }) {
                   href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
+                  className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
                   title={f(locale, 'blogDetailPage', 'shareLinkedIn')}
                 >
                   <IconLinkedIn size={20} />
@@ -134,7 +135,7 @@ export default async function BlogDetailPage({ params }) {
                   href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-accent-blue hover:bg-accent-blue hover:text-white rounded-lg transition-all"
+                  className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
                   title={f(locale, 'blogDetailPage', 'shareFacebook')}
                 >
                   <IconFacebook size={20} />
@@ -157,10 +158,10 @@ export default async function BlogDetailPage({ params }) {
           </div>
 
           {/* Content */}
-          <div className="prose prose-lg max-w-none mb-12 rounded-3xl border border-slate-200 bg-white p-6 md:p-9 shadow-[0_10px_28px_rgba(10,10,43,0.06)]">
+          <div className="prose prose-lg max-w-none mb-12 rounded-3xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/70 p-6 md:p-9 shadow-[0_10px_28px_rgba(10,10,43,0.05)]">
             <div
               dangerouslySetInnerHTML={{ __html: safeContent }}
-              className="text-gray-text leading-relaxed space-y-4"
+              className="blog-rich text-gray-text leading-relaxed space-y-4"
             />
           </div>
 

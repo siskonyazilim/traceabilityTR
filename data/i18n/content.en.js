@@ -382,12 +382,6 @@ export const contentEn = {
     },
   },
   blogPosts: {
-    'chestny-znak-digital-traceability-system': {
-      title: 'Chestny ZNAK Procedure: Digital Traceability System',
-      excerpt: 'How a mandatory digital platform improves control, authenticity and trust across regulated supply chains.',
-      content: '<h2>Introduction</h2><p>Chestny ZNAK is a national traceability platform where each product is marked with a unique code validated by a central system.</p><h2>Why it matters</h2><p>It reduces counterfeiting, improves end-to-end visibility and enables faster verification for authorities, companies and consumers.</p>',
-      category: 'News',
-    },
     'the-importance-of-food-traceability-for-end-consumers': {
       title: 'The Importance of Food Traceability for End Consumers',
       excerpt: 'Food traceability enables safer and better-informed choices through transparency, quality control and rapid recall capabilities.',
