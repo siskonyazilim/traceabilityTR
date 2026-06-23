@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -33,9 +33,32 @@ const slides = [
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [videoFailed, setVideoFailed] = useState(false);
+  const videoRef = useRef(null);
   const { locale, t } = useLanguage();
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
   const activeSlide = localizedSlides[current];
+
+  useEffect(() => {
+    setVideoFailed(false);
+  }, [activeSlide.id]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || videoFailed) return;
+
+    // iOS and some Android browsers may require a direct play attempt after mount.
+    const tryPlay = async () => {
+      try {
+        await video.play();
+      } catch {
+        // Keep a visible fallback instead of a black slide when autoplay is blocked.
+        setVideoFailed(true);
+      }
+    };
+
+    tryPlay();
+  }, [activeSlide.id, videoFailed]);
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -56,16 +79,24 @@ export const HeroSlider = () => {
     <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Active slide only for reduced network and CPU */}
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={activeSlide.video} type="video/mp4" />
-        </video>
+        {!videoFailed ? (
+          <video
+            key={activeSlide.video}
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/images/blog/what_is_traceability-1288x724-1-uai-516x344.webp"
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={() => setVideoFailed(true)}
+          >
+            <source src={activeSlide.video} type="video/mp4" />
+          </video>
+        ) : (
+          <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle_at_top,_rgba(0,181,247,0.25),_rgba(10,10,43,0.95)_55%)]" />
+        )}
 
         <div className="absolute inset-0 bg-primary-black/35"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
@@ -73,6 +104,7 @@ export const HeroSlider = () => {
         <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="w-full max-w-5xl mx-auto text-center">
             <h1
+              suppressHydrationWarning
               className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-[1.06] sm:leading-[1.02] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
               style={{ fontFamily: 'var(--font-kanit)' }}
             >
@@ -80,7 +112,7 @@ export const HeroSlider = () => {
             </h1>
 
             <div className="text-white mt-6 sm:mt-7">
-              <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl mx-auto">
+              <p suppressHydrationWarning className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl mx-auto">
                 {activeSlide.subtitle}
               </p>
             </div>
