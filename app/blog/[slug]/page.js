@@ -2,11 +2,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Container from '../../../components/ui/Container';
-import BlogCard from '../../../components/ui/BlogCard';
 import Button from '../../../components/ui/Button';
 import { blogPosts } from '../../../data/blogPosts';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
-import { IconArrowLeft, IconFacebook, IconLinkedIn, IconTwitter } from '../../../components/ui/Icons';
+import { IconArrowLeft } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizeBlogPosts } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
@@ -76,126 +75,116 @@ export default async function BlogDetailPage({ params }) {
     day: 'numeric',
   });
 
-  const shareUrl = `https://traceability.ro/blog/${post.slug}`;
-  const shareText = `${f(locale, 'blogDetailPage', 'quotePrefix')} ${post.title}`;
   const safeContent = sanitizeRichText(post.content);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] pb-16">
+    <div className="min-h-screen bg-white pb-16">
       <Container size="xl">
-        <div className="py-12">
-          {/* Back Button */}
-          <Link href="/blog" className="card-cta-mini mb-8">
+        <article className="mx-auto max-w-none py-10 md:py-14">
+          <Link href="/blog" className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-secondary-blue transition-colors hover:text-accent-blue">
             <IconArrowLeft size={16} />
             <span>{f(locale, 'blogDetailPage', 'backToBlog')}</span>
           </Link>
 
-          <article className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="mb-8 rounded-3xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/80 p-6 md:p-9 shadow-[0_14px_36px_rgba(10,10,43,0.06)]">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-xs font-semibold text-secondary-blue uppercase bg-sky-100 px-3 py-1 rounded-full border border-sky-200">
-                {post.category}
-              </span>
-              <span className="text-sm text-gray-text">{date}</span>
+          <header className="mb-8 border-b border-slate-200 pb-6">
+            <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+              <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
+              <span className="text-gray-text">{date}</span>
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-bold text-slate-800 mb-4 leading-[1.08]">
-              {post.title}
-            </h1>
-
-            <div className="flex items-center gap-4 py-4 border-y border-gray-light">
-              <div className="flex-1">
-                <p className="text-sm text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
-                <p className="font-semibold text-slate-700">{post.author}</p>
-              </div>
-
-              {/* Share Buttons */}
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-gray-text">{f(locale, 'blogDetailPage', 'share')}</span>
-                <a
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={f(locale, 'blogDetailPage', 'shareTwitter')}
-                  className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
-                  title={f(locale, 'blogDetailPage', 'shareTwitter')}
-                >
-                  <IconTwitter size={20} />
-                </a>
-                <a
-                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={f(locale, 'blogDetailPage', 'shareLinkedIn')}
-                  className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
-                  title={f(locale, 'blogDetailPage', 'shareLinkedIn')}
-                >
-                  <IconLinkedIn size={20} />
-                </a>
-                <a
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={f(locale, 'blogDetailPage', 'shareFacebook')}
-                  className="p-2 text-secondary-blue hover:bg-secondary-blue hover:text-white rounded-lg transition-all"
-                  title={f(locale, 'blogDetailPage', 'shareFacebook')}
-                >
-                  <IconFacebook size={20} />
-                </a>
-              </div>
+            <h1 className="text-3xl font-bold leading-tight text-slate-900 md:text-5xl">{post.title}</h1>
+            <div className="mt-4 flex items-center gap-3">
+              <p className="text-sm font-semibold text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
+              <Image
+                src="/siskon-logo-header.svg"
+                alt="Siskon"
+                width={96}
+                height={28}
+              />
             </div>
-          </div>
+          </header>
 
-          {/* Feature Image */}
-          <div className="w-full h-72 md:h-96 bg-gradient-to-br from-accent-blue to-accent-green rounded-2xl flex items-center justify-center mb-8 text-white text-6xl overflow-hidden relative border border-slate-200">
+          <figure className="relative mb-8 aspect-video w-full overflow-hidden rounded-xl md:float-right md:mb-6 md:ml-8 md:w-[46%] lg:w-[42%] xl:w-[40%]">
             <Image
               src={post.image}
               alt={post.title}
               fill
-              sizes="(max-width: 768px) 100vw, 896px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 46vw, 40vw"
               className="object-cover"
-              quality={82}
+              quality={95}
               priority
             />
-          </div>
+          </figure>
 
-          {/* Content */}
-          <div className="prose prose-lg max-w-none mb-12 rounded-3xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/70 p-6 md:p-9 shadow-[0_10px_28px_rgba(10,10,43,0.05)]">
-            <div
-              dangerouslySetInnerHTML={{ __html: safeContent }}
-              className="blog-rich text-gray-text leading-relaxed space-y-4"
-            />
-          </div>
+          <div
+            dangerouslySetInnerHTML={{ __html: safeContent }}
+            className="blog-rich text-gray-text"
+          />
 
-          {/* Related Posts */}
           {relatedPosts.length > 0 && (
-            <div className="mt-16 pt-12 border-t border-gray-light">
-              <h2 className="text-3xl font-bold text-primary-black mb-8">
-                {f(locale, 'blogDetailPage', 'relatedArticles')}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedPosts.map((relatedPost) => (
-                  <BlogCard key={relatedPost.id} post={relatedPost} />
-                ))}
-              </div>
-            </div>
+            <section className="clear-both mt-16 border-t border-slate-200 pt-10">
+              <h2 className="mb-6 text-xl font-semibold text-primary-black">{f(locale, 'blogDetailPage', 'relatedArticles')}</h2>
+              <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+                {relatedPosts.map((relatedPost) => {
+                  const relatedDate = new Date(relatedPost.date).toLocaleDateString(dateLocale, {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  });
+
+                  return (
+                    <li key={relatedPost.id}>
+                      <Link
+                        href={`/blog/${relatedPost.slug}`}
+                        className="group block h-full overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/70 shadow-soft transition-all hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-soft-lg"
+                      >
+                        <div className="relative aspect-video w-full overflow-hidden">
+                          <Image
+                            src={relatedPost.image}
+                            alt={relatedPost.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                            className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                            quality={82}
+                          />
+                        </div>
+                        <div className="p-5">
+                          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-secondary-blue">
+                            {relatedPost.category}
+                          </p>
+                          <p className="mb-3 text-lg font-semibold leading-snug text-slate-800 transition-colors group-hover:text-secondary-blue">
+                            {relatedPost.title}
+                          </p>
+                          <p className="text-sm text-slate-500">{relatedDate}</p>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
           )}
 
-          {/* CTA */}
-          <div className="mt-20 text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
-              {f(locale, 'blogDetailPage', 'ctaTitle')}
-            </h3>
-            <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              {f(locale, 'blogDetailPage', 'ctaSubtitle')}
-            </p>
-            <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-              {f(locale, 'blogDetailPage', 'ctaPrimary')}
-            </Button>
-          </div>
-          </article>
-        </div>
+          <section className="clear-both mt-16 border-t border-slate-200 pt-10">
+            <div className="mx-auto max-w-3xl text-center">
+              <h3 className="mx-auto mb-4 max-w-2xl text-2xl font-semibold leading-tight text-primary-black md:text-3xl">
+                {f(locale, 'blogDetailPage', 'ctaTitle')}
+              </h3>
+              <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-gray-text md:text-lg">
+                {f(locale, 'blogDetailPage', 'ctaSubtitle')}
+              </p>
+              <Button
+                as={Link}
+                href="/contact"
+                variant="solid"
+                size="lg"
+                className="bg-secondary-blue font-semibold text-white hover:bg-accent-blue"
+              >
+                {f(locale, 'blogDetailPage', 'ctaPrimary')}
+              </Button>
+            </div>
+          </section>
+        </article>
       </Container>
     </div>
   );

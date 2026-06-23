@@ -1,7 +1,10 @@
 'use client';
 
+import { useMemo } from 'react';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
+import { useLanguage } from '../i18n/LanguageProvider';
+import { getTechnologyCapabilities } from '../../lib/i18n/contentLocalization';
 
 const industries = [
   {
@@ -28,6 +31,16 @@ const industries = [
 ];
 
 export default function Industries() {
+  const { locale, t } = useLanguage();
+  const localizedIndustries = useMemo(() => {
+    const localized = getTechnologyCapabilities(industries.map(i => ({ title: i.name, description: i.description })), locale);
+    return industries.map((industry, index) => ({
+      ...industry,
+      name: localized[index]?.title || industry.name,
+      description: localized[index]?.description || industry.description,
+    }));
+  }, [locale]);
+
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       {/* Background Elements */}
@@ -35,17 +48,17 @@ export default function Industries() {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title="Urmăriți cu înțelepciune, bazat pe analize strategice și riguroase"
-          subtitle=""
+          title={t('sections.industriesTitle', 'Urmăriți cu înțelepciune, bazat pe analize strategice și riguroase')}
+          subtitle={t('sections.industriesSubtitle', '')}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
+          {localizedIndustries.map((industry) => (
             <div
               key={industry.id}
               className="group relative h-full"
             >
-              <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-accent-blue transition-all duration-300 hover:shadow-xl h-full flex flex-col">
+              <div className="bg-white rounded-2xl border-2 border-gray-200 p-5 md:p-8 hover:border-accent-blue transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 {/* Icon */}
                 <div className="mb-6 text-center flex justify-center">
                   <img
@@ -58,7 +71,7 @@ export default function Industries() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-primary-black mb-4 group-hover:text-accent-blue transition-colors text-center">
+                <h3 className="text-lg sm:text-2xl font-bold text-primary-black mb-4 group-hover:text-accent-blue transition-colors text-center">
                   {industry.name}
                 </h3>
 

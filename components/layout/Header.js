@@ -127,7 +127,7 @@ export const Header = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <div key={item.label}>
                 {item.href.startsWith('#') ? (
@@ -155,7 +155,7 @@ export const Header = () => {
           </nav>
 
           <div className="flex items-center gap-3">
-            <div ref={langMenuRef} className="relative hidden md:block w-[116px]">
+            <div ref={langMenuRef} className="relative hidden lg:block w-[116px]">
               <button
                 type="button"
                 onClick={(event) => {
@@ -163,10 +163,10 @@ export const Header = () => {
                   setIsLangOpen((prev) => !prev);
                 }}
                 aria-label={t('language.switchAria', 'Schimbă limba')}
-                className={`w-full h-10 flex items-center justify-between rounded-lg px-3 text-xs font-bold border transition-colors ${
+                className={`w-full h-10 flex items-center justify-between rounded-xl px-3 text-xs font-bold transition-all duration-300 ${
                   useTransparentHeader
-                    ? 'text-white border-white/40 hover:bg-white/10'
-                    : 'text-primary-black border-slate-200 hover:bg-slate-50'
+                    ? 'text-white bg-white/5 ring-1 ring-white/20 hover:bg-white/15 hover:ring-white/35'
+                    : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
                 }`}
               >
                 <span className="flex items-center gap-2">
@@ -177,7 +177,7 @@ export const Header = () => {
               </button>
 
               {isLangOpen && (
-                <div className="absolute right-0 mt-2 w-full rounded-xl border border-slate-200 bg-white shadow-lg overflow-hidden z-50">
+                <div className="absolute right-0 mt-2 w-full rounded-xl bg-white/95 backdrop-blur-md shadow-lg ring-1 ring-slate-200/80 overflow-hidden z-50 animate-fade-in">
                   {languageOptions.map((option) => (
                     <button
                       type="button"
@@ -186,8 +186,10 @@ export const Header = () => {
                         setLocale(option.code);
                         setIsLangOpen(false);
                       }}
-                      className={`w-full h-10 flex items-center gap-2 px-3 text-sm text-left transition-colors ${
-                        locale === option.code ? 'bg-slate-100 text-primary-black font-semibold' : 'text-gray-700 hover:bg-slate-50'
+                      className={`w-full h-10 flex items-center gap-2 px-3 text-sm text-left transition-all duration-200 ${
+                        locale === option.code
+                          ? 'bg-slate-100/90 text-primary-black font-semibold'
+                          : 'text-gray-700 hover:bg-slate-50/90'
                       }`}
                     >
                       <img src={option.flagSrc} alt={option.label} width="20" height="16" className="h-4 w-5 rounded-[2px] object-cover" />
@@ -202,10 +204,10 @@ export const Header = () => {
               type="button"
               onClick={() => setLocale(nextLanguage)}
               aria-label={t('language.switchAria', 'Schimbă limba')}
-              className={`md:hidden h-10 px-2.5 rounded-lg border flex items-center gap-2 text-xs font-bold transition-colors ${
+              className={`lg:hidden h-10 px-2.5 rounded-xl flex items-center gap-2 text-xs font-bold transition-all duration-300 ${
                 useTransparentHeader
-                  ? 'text-white border-white/40 hover:bg-white/10'
-                  : 'text-primary-black border-slate-200 hover:bg-slate-50'
+                  ? 'text-white bg-white/5 ring-1 ring-white/25 hover:bg-white/15 hover:ring-white/40'
+                  : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
               }`}
             >
               <img src={mobileNextLanguage.flagSrc} alt={mobileNextLanguage.label} width="20" height="16" className="h-4 w-5 rounded-[2px] object-cover" />
@@ -219,7 +221,7 @@ export const Header = () => {
               aria-label={isOpen ? t('header.closeMenu', 'Închide meniul') : t('header.openMenu', 'Deschide meniul')}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
-              className={`md:hidden p-2 rounded-lg transition-colors ${
+              className={`lg:hidden p-2.5 rounded-lg transition-colors ${
                 useTransparentHeader ? 'text-white' : 'text-primary-black'
               }`}
             >
@@ -230,7 +232,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div id="mobile-navigation" className="md:hidden bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
+          <div id="mobile-navigation" className="lg:hidden bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
             {navItems.map((item) => (
               <div key={item.label} className="mb-3">
                 {item.href.startsWith('#') ? (

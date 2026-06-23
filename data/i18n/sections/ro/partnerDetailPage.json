@@ -5,15 +5,8 @@
   "backHome": "Inapoi la Acasa",
   "breadcrumbHome": "Acasa",
   "heroTitle": "Inovatie si leadership",
-  "coreValuesTitle": "Valori fundamentale",
-  "coreValues": [
-    "Independenta operationala si financiara",
-    "Inovatie continua si orientare spre viitor",
-    "Leadership responsabil si cultura corporativa",
-    "Parteneriate bazate pe incredere pe termen lung"
-  ],
-  "otherPartnersTitle": "Alti Parteneri Strategici",
-  "details": "Detalii ->",
+  "previousPartner": "Partenerul Anterior",
+  "nextPartner": "Partenerul Urmator",
   "ctaTitle": "Hai sa construim impreuna urmatorul proiect",
   "ctaSubtitle": "Contacteaza-ne pentru a adapta aceasta expertiza la procesele companiei tale.",
   "ctaPrimary": "Contacteaza-ne"

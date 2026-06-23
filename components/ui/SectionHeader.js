@@ -9,9 +9,9 @@ export const SectionHeader = ({
 }) => {
   return (
     <div 
-      className={`${centered ? 'text-center' : ''} mb-16 ${className}`}
+      className={`${centered ? 'text-center' : ''} mb-10 md:mb-16 ${className}`}
     >
-      <h2 className="text-[clamp(1.75rem,1.35rem+1.3vw,2.85rem)] font-extrabold tracking-tight leading-[1.12] text-primary-black mb-5">
+      <h2 className="text-[clamp(1.375rem,1.1rem+0.9vw,2rem)] font-semibold tracking-tight leading-[1.15] text-primary-black mb-5">
         {title}
       </h2>
       {subtitle && (

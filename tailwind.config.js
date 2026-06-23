@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-black': '#0a0a2b',
+        'primary-black': '#0e1f4b',
         'primary-white': '#ffffff',
         'dark-bg': '#0a0a2b',
         'gray-text': '#335a7b',
@@ -22,8 +22,8 @@ module.exports = {
         'accent-red': '#bf1e2e',
       },
       fontSize: {
-        'hero': 'clamp(2.8125rem, -2.2939rem + 8.5106vw, 7.8125rem)',
-        'section': 'clamp(2.1875rem, 0.7813rem + 2.3438vw, 3.125rem)',
+        'hero': 'clamp(2.25rem, 0.5rem + 4vw, 4rem)',
+        'section': 'clamp(1.5rem, 0.8rem + 1.5vw, 2.25rem)',
         'body': 'clamp(1.125rem, 0.5625rem + 0.9375vw, 1.5rem)',
       },
       animation: {

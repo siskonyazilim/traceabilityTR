@@ -32,27 +32,6 @@ export default function BlogPageClient() {
 
       <Container size="xl">
         <div className="py-10 md:py-14">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-12 md:mb-16 rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-600 via-blue-500 to-cyan-400 px-8 py-12 md:px-12 md:py-16 text-white shadow-2xl relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-200/25 rounded-full blur-2xl"></div>
-
-            <div className="relative z-10">
-              <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-white/80 font-bold mb-4">{t('blogPage.eyebrow', 'Resurse')}</p>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">{t('blogPage.heroTitle', 'Noutăți, ghiduri și tendințe în trasabilitate')}</h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-3xl">{t('blogPage.heroSubtitle', 'Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.')}</p>
-              <div className="mt-8">
-                <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                  {t('blogPage.topCta', 'Discută cu un expert')}
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-
           {paginatedPosts.length > 0 ? (
             <>
               <motion.div
@@ -82,7 +61,7 @@ export default function BlogPageClient() {
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}
-                      className={`min-w-10 px-4 py-2 rounded-lg font-semibold transition-all duration-200 ${
+                      className={`min-w-11 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 ${
                         currentPage === page
                           ? 'bg-secondary-blue text-white shadow-[0_10px_22px_rgba(0,25,210,0.24)]'
                           : 'bg-gray-light text-primary-black hover:bg-slate-200'
@@ -119,11 +98,6 @@ export default function BlogPageClient() {
             </div>
           </div>
 
-          <div className="mt-10 pb-4 text-center">
-            <Button as={Link} href="/contact" variant="outline" size="lg" className="border-2 border-secondary-blue text-secondary-blue hover:bg-secondary-blue hover:text-white">
-              {t('blogPage.bottomCta', 'Contactează-ne pentru proiectul tău')}
-            </Button>
-          </div>
         </div>
       </Container>
       </div>

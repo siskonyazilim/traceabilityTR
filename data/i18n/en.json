@@ -10,7 +10,9 @@
     "industries": "Industries",
     "partners": "Solution Partners",
     "contact": "Contact",
-    "news": "News"
+    "news": "News",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu"
   },
   "footer": {
     "brandDescription": "Innovative traceability solutions for smart factories and sustainable production.",
@@ -30,6 +32,7 @@
     "copyright": "© 2026 Traceability. All rights reserved."
   },
   "cookie": {
+    "title": "Cookie Preference",
     "close": "Close",
     "message": "We use cookies to improve your OnSuite experience. By using this website, you agree to our cookie policy.",
     "accept": "Accept",
@@ -43,7 +46,8 @@
     "secondary": "View References"
   },
   "hero": {
-    "cta": "Request Proposal"
+    "cta": "Request Proposal",
+    "goToSlide": "Go to slide {{index}}"
   },
   "notFound": {
     "title": "Page not found",
@@ -104,7 +108,7 @@
     "heroSubtitle": "Decision-focused content: implementation, operational optimization and best practices for modern manufacturing.",
     "topCta": "Talk to an expert",
     "empty": "No articles found.",
-    "ctaTitle": "Want to discuss traceability?",
+    "ctaTitle": "Want to discuss?",
     "ctaSubtitle": "Our team can help you turn article insights into clear steps for your factory.",
     "ctaPrimary": "Request an Offer",
     "ctaSecondary": "View Projects",
@@ -117,6 +121,8 @@
     "sectionTitle": "Project Selection",
     "sectionSubtitle": "Successfully delivered projects for clients across multiple industries",
     "empty": "No projects found.",
+    "paginationPrev": "Previous",
+    "paginationNext": "Next",
     "total": "Total: {{count}} projects",
     "ctaTitle": "Want a similar project for your company?",
     "ctaSubtitle": "We can adapt these reference solutions to your processes and operational goals.",
@@ -146,6 +152,8 @@
     "allArticles": "ALL ARTICLES",
     "technologyTitle": "Technology Capabilities and Competencies",
     "technologySubtitle": "Advanced traceability solutions for modern manufacturing",
+    "industriesTitle": "Track wisely, driven by strategic analysis",
+    "industriesSubtitle": "",
     "referenceProjectsPrev": "Previous project",
     "referenceProjectsNext": "Next project",
     "referenceProjectsGoTo": "Go to page {{page}}",

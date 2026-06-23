@@ -73,7 +73,7 @@ export const HeroSlider = () => {
         <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="w-full max-w-5xl mx-auto text-center">
             <h1
-              className="text-white text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] sm:leading-[0.98] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
+              className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-[1.06] sm:leading-[1.02] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
               style={{ fontFamily: 'var(--font-kanit)' }}
             >
               {activeSlide.title}
@@ -107,7 +107,7 @@ export const HeroSlider = () => {
             type="button"
             key={`hero-dot-${slide.id}`}
             onClick={() => goToSlide(index)}
-            className={`h-3 rounded-full transition-all duration-200 ${
+            className={`h-3 rounded-full transition-all duration-200 min-h-[44px] flex items-center ${
               current === index
                 ? 'bg-slate-blue w-8'
                 : 'bg-inactive-gray bg-opacity-70 w-3 hover:bg-accent-blue'

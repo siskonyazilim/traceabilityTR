@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { strategicPartners } from '../../../data/partners';
-import { IconArrowLeft } from '../../../components/ui/Icons';
+import { IconArrowLeft, IconChevronLeft, IconChevronRight } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizePartners } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
@@ -67,124 +67,91 @@ export default async function PartnerDetailPage({ params }) {
 
   if (!partner) notFound();
 
-  const otherPartners = localizedPartners
-    .filter((p) => p.id !== partner.id)
-    .slice(0, 4);
+  const currentIndex = localizedPartners.findIndex((p) => p.slug === slug);
+  const totalPartners = localizedPartners.length;
+  const prevPartner = localizedPartners[(currentIndex - 1 + totalPartners) % totalPartners];
+  const nextPartner = localizedPartners[(currentIndex + 1) % totalPartners];
 
   return (
-    <div className="min-h-screen bg-[#f5f7fa] pt-24 pb-16">
+    <div className="min-h-screen bg-white pt-24 pb-16">
       <Container size="xl">
-        <Link href="/" className="inline-flex items-center gap-2 text-accent-blue hover:underline mb-6 font-medium">
+        <Link href="/" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-6 font-semibold">
           <IconArrowLeft /> {f(locale, 'partnerDetailPage', 'backHome')}
         </Link>
 
-        <article className="max-w-6xl mx-auto">
-          <div className="mb-6 text-sm text-gray-text font-medium">
-            <span>{f(locale, 'partnerDetailPage', 'breadcrumbHome')} / {partner.breadcrumbLabel || partner.name.toUpperCase()}</span>
-          </div>
-
-          <div className="bg-white border border-gray-light rounded-3xl shadow-sm overflow-hidden mb-8">
-            <div className="h-2 bg-gradient-to-r from-accent-blue via-accent-green to-accent-yellow"></div>
-
-            <div className="p-6 md:p-10">
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-                <div className="lg:col-span-3">
-                  <h1 className="text-4xl md:text-5xl font-bold text-primary-black mb-4 leading-tight">
-                    {f(locale, 'partnerDetailPage', 'heroTitle')}
-                  </h1>
-                  <h2 className="text-xl md:text-2xl font-semibold text-gray-text">
-                    {partner.name}
-                  </h2>
-                </div>
-
-                <div className="lg:col-span-2">
-                  <div className="w-full h-36 bg-[#f7f8fa] rounded-2xl border border-gray-light flex items-center justify-center overflow-hidden relative px-8">
-                    <img
-                      src={partner.detailLogo || partner.logo}
-                      alt={partner.name}
-                      className="max-h-20 w-full object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-white border border-gray-light rounded-2xl p-6 md:p-8">
-              {partner.fullDescription.split('\n\n').map((paragraph, index) => (
-                <p
-                  key={index}
-                  className={`text-gray-text leading-relaxed text-lg ${index > 0 ? 'mt-6' : ''}`}
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-
-            <aside className="bg-white border border-gray-light rounded-2xl p-6 md:p-8 h-fit">
-              <h3 className="text-lg font-bold text-primary-black mb-4">{f(locale, 'partnerDetailPage', 'coreValuesTitle')}</h3>
-              <ul className="space-y-3 text-gray-text">
-                <li className="flex items-start gap-2">
-                  <span className="text-accent-blue font-bold">•</span>
-                  <span>{f(locale, 'partnerDetailPage', 'coreValues.0')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent-blue font-bold">•</span>
-                  <span>{f(locale, 'partnerDetailPage', 'coreValues.1')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent-blue font-bold">•</span>
-                  <span>{f(locale, 'partnerDetailPage', 'coreValues.2')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent-blue font-bold">•</span>
-                  <span>{f(locale, 'partnerDetailPage', 'coreValues.3')}</span>
-                </li>
-              </ul>
-            </aside>
-          </div>
-
-          {/* Other Partners */}
-          {otherPartners.length > 0 && (
-            <div className="mt-16 pt-12 border-t border-gray-light">
-              <h2 className="text-3xl font-bold text-primary-black mb-8">
-                {f(locale, 'partnerDetailPage', 'otherPartnersTitle')}
+        <article className="max-w-5xl mx-auto">
+          {/* Hero */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center mb-12">
+            <div className="lg:col-span-3">
+              <h1 className="text-2xl md:text-3xl font-semibold text-primary-black mb-3 leading-tight">
+                {f(locale, 'partnerDetailPage', 'heroTitle')}
+              </h1>
+              <h2 className="text-xl md:text-2xl font-semibold text-gray-text">
+                {partner.name}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {otherPartners.map((otherPartner) => (
-                  <Link key={otherPartner.id} href={`/solution-partners/${otherPartner.slug}`}>
-                    <div
-                      className="bg-white rounded-2xl p-6 border border-gray-light shadow-sm hover:shadow-xl transition-all cursor-pointer h-full flex flex-col"
-                    >
-                      <div className="h-14 bg-[#f7f8fa] rounded-xl border border-gray-light flex items-center justify-center px-4 mb-4">
-                        <img
-                          src={otherPartner.logo}
-                          alt={otherPartner.name}
-                          className="h-8 object-contain"
-                        />
-                      </div>
-                      <h3 className="text-lg font-bold text-primary-black mb-2">
-                        {otherPartner.name}
-                      </h3>
-                      <p className="text-gray-text text-sm line-clamp-2 mb-4">
-                        {otherPartner.description}
-                      </p>
-                      <span className="card-cta-mini mt-auto">
-                        {f(locale, 'partnerDetailPage', 'details')}
-                        <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </span>
-                    </div>
-                  </Link>
-                ))}
+            </div>
+
+            <div className="lg:col-span-2">
+              <div className="w-full h-48 flex items-center justify-center overflow-hidden relative px-2">
+                <img
+                  src={partner.detailLogo || partner.logo}
+                  alt={partner.name}
+                  className="max-h-32 w-full object-contain"
+                />
               </div>
             </div>
-          )}
+          </div>
 
+          {/* Content */}
+          <div className="max-w-4xl space-y-6 mb-16">
+            {partner.fullDescription.split('\n\n').map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-gray-text leading-relaxed text-lg"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+
+          {/* Previous / Next Navigation */}
+          <nav className="pt-8 border-t border-gray-200">
+            <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-6 sm:gap-0">
+              <Link
+                href={`/solution-partners/${prevPartner.slug}`}
+                className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors"
+              >
+                <IconChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
+                <div className="text-left">
+                  <span className="block text-sm text-gray-text font-medium">
+                    {f(locale, 'partnerDetailPage', 'previousPartner')}
+                  </span>
+                  <span className="block text-lg font-semibold">
+                    {prevPartner.name}
+                  </span>
+                </div>
+              </Link>
+
+              <Link
+                href={`/solution-partners/${nextPartner.slug}`}
+                className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors self-end sm:self-auto"
+              >
+                <div className="text-right">
+                  <span className="block text-sm text-gray-text font-medium">
+                    {f(locale, 'partnerDetailPage', 'nextPartner')}
+                  </span>
+                  <span className="block text-lg font-semibold">
+                    {nextPartner.name}
+                  </span>
+                </div>
+                <IconChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </nav>
+
+          {/* CTA */}
           <div className="mt-20 text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
+            <h3 className="text-2xl md:text-3xl font-semibold text-primary-black mb-6">
               {f(locale, 'partnerDetailPage', 'ctaTitle')}
             </h3>
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">

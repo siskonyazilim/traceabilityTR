@@ -24,16 +24,8 @@ export const BlogCard = ({ post }) => {
         href={`/blog/${post.slug}`}
         className="group flex h-full flex-col rounded-2xl border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/70 shadow-soft hover:shadow-soft-lg hover:border-sky-300 transition-all overflow-hidden"
       >
-        {/* Blog Image */}
+        {/* Blog image */}
         <div className="aspect-video bg-gradient-to-br from-sky-100 via-blue-100 to-cyan-100 flex items-center justify-center overflow-hidden relative">
-          <Image
-            src="/resmi/TRACEABILITY-logo.svg"
-            alt="Traceability icon"
-            width={32}
-            height={32}
-            className="absolute top-3 left-3 h-8 w-8 object-contain z-10"
-            loading="lazy"
-          />
           {imageError ? (
             <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-blue to-accent-green">
               <div className="text-white text-lg font-semibold tracking-wide">BLOG</div>

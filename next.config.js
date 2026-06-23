@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   images: {
-    qualities: [75, 78, 82],
+    qualities: [75, 78, 82, 95],
   },
 }
 

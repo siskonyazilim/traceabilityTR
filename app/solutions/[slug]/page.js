@@ -339,8 +339,8 @@ export default async function SolutionDetailPage({ params }) {
           <article className="max-w-6xl mx-auto">
             {/* Hero */}
             <div className="mb-12 text-center">
-              <div className="text-7xl mb-6">{solution.icon}</div>
-              <h1 className="text-5xl md:text-6xl font-bold text-primary-black mb-6 leading-tight">
+              <div className="text-5xl md:text-7xl mb-6">{solution.icon}</div>
+              <h1 className="text-3xl md:text-4xl font-semibold text-primary-black mb-6 leading-tight">
                 {solution.h1}
               </h1>
               <p className="text-xl text-gray-text max-w-3xl mx-auto">
@@ -349,7 +349,7 @@ export default async function SolutionDetailPage({ params }) {
             </div>
 
             {/* ROI Metrics */}
-            <div className="grid grid-cols-3 gap-6 mb-16 bg-gradient-to-br from-primary-black to-secondary-blue rounded-3xl p-8 text-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16 bg-gradient-to-br from-primary-black to-secondary-blue rounded-3xl p-5 md:p-8 text-white">
               {Object.entries(solution.roi).map(([key, value]) => (
                 <div key={key} className="text-center">
                   <div className="text-4xl font-bold mb-2">{value}</div>
@@ -360,7 +360,7 @@ export default async function SolutionDetailPage({ params }) {
 
             {/* Benefits */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-primary-black mb-8">{labels.benefits}</h2>
+              <h2 className="text-xl font-semibold text-primary-black mb-8">{labels.benefits}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {solution.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-gray-200">
@@ -373,11 +373,11 @@ export default async function SolutionDetailPage({ params }) {
 
             {/* Use Cases */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-primary-black mb-8">{labels.useCases}</h2>
+              <h2 className="text-xl font-semibold text-primary-black mb-8">{labels.useCases}</h2>
               <div className="space-y-6">
                 {solution.useCases.map((useCase, index) => (
                   <div key={index} className="bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-accent-blue transition-colors">
-                    <h3 className="text-xl font-bold text-primary-black mb-3">{useCase.title}</h3>
+                    <h3 className="text-lg font-semibold text-primary-black mb-3">{useCase.title}</h3>
                     <p className="text-gray-text leading-relaxed">{useCase.description}</p>
                   </div>
                 ))}
@@ -386,7 +386,7 @@ export default async function SolutionDetailPage({ params }) {
 
             {/* Technologies */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-primary-black mb-8">{labels.technologies}</h2>
+              <h2 className="text-xl font-semibold text-primary-black mb-8">{labels.technologies}</h2>
               <div className="flex flex-wrap gap-3">
                 {solution.technologies.map((tech, index) => (
                   <span key={index} className="px-6 py-3 bg-accent-blue/10 text-accent-blue rounded-full font-semibold">
@@ -398,7 +398,7 @@ export default async function SolutionDetailPage({ params }) {
 
             {/* CTA */}
             <div className="text-center bg-gradient-to-br from-slate-50 to-white p-12 rounded-3xl border-2 border-gray-200">
-              <h3 className="text-3xl font-bold text-primary-black mb-4">
+              <h3 className="text-2xl font-semibold text-primary-black mb-4">
                 {labels.ctaTitle}
               </h3>
               <p className="text-gray-text text-lg mb-8 max-w-2xl mx-auto">

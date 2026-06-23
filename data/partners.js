@@ -8,7 +8,7 @@ export const strategicPartners = [
     breadcrumbLabel: "SICK",
     description: "Lider global în tehnologii de senzori și automatizare industrială.",
     website: "https://www.sick.com",
-    fullDescription: "SICK este unul dintre cei mai importanți furnizori de soluții la nivel mondial pentru aplicații bazate pe senzori în sectorul industrial și se numără printre liderii tehnologici de pe piață. Cu mai mult de 50 de filiale și investiții de capital, precum și numeroase agenții, SICK menține o prezență în întreaga lume.\n\nInteligența senzorilor, independența, inovația și leadership-ul sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre trecut și viitor. Idealul dumneavoastră își găsește locul în mijlocul zilei de ieri și de astăzi. Aceasta include putere, dorință, cerere și viziune. Aici se construiește o cultură corporativă prosperă și se preconizează un design de viitor care inspiră responsabilitate și motivație.\n\nÎn conformitate cu idealurile sale corporative, SICK își bazează operațiunile interne pe valorile de bază ale independenței, inovației și leadership-ului. Acest lucru este demonstrat de angajamentul companiei de a-și menține independența juridică și financiară, de a gândi și de a acționa în mod durabil și de a-și asuma responsabilitatea socială adecvată. Succesul SICK se bazează pe încrederea acordată de clienții, furnizorii, angajații și publicul nostru și acest lucru ar trebui să rămână același și în viitor.",
+    fullDescription: "Inteligența senzorilor, independența, inovația și leadership-ul sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre trecut și viitor. Idealul dumneavoastră își găsește locul în mijlocul zilei de ieri și de astăzi. Aceasta include putere, dorință, cerere și viziune. Aici se construiește o cultură corporativă prosperă și se preconizează un design de viitor care inspiră responsabilitate și motivație.\n\nÎn conformitate cu idealurile sale corporative, SICK își bazează operațiunile interne pe valorile de bază ale independenței, inovației și leadership-ului. Acest lucru este demonstrat de angajamentul companiei de a-și menține independența juridică și financiară, de a gândi și de a acționa în mod durabil și de a-și asuma responsabilitatea socială adecvată. Succesul SICK se bazează pe încrederea acordată de clienții, furnizorii, angajații și publicul nostru și acest lucru ar trebui să rămână același și în viitor.",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const strategicPartners = [
     breadcrumbLabel: "UNIVERSAL ROBOTS",
     description: "Lider mondial în roboți colaborativi (coboți) pentru producție.",
     website: "https://www.universalrobots.com",
-    fullDescription: "Din 2005, Universal Robots a lucrat pentru a face o diferență în viața clienților noștri în moduri care contează cel mai mult pentru ei. Mai mult decât simpla automatizare, Universal Robots schimbă modul în care oamenii lucrează și trăiesc în întreaga lume.\n\nRoboții noștri colaborativi sunt ușor de utilizat, versatili și siguri, permițând companiilor de toate dimensiunile să automatizeze procesele și să crească productivitatea. Cu o gamă completă de coboți și soluții software, Universal Robots oferă flexibilitatea necesară pentru a răspunde cerințelor în schimbare ale producției moderne.",
+    fullDescription: "Inteligența senzorilor, independența, inovația și leadership-ul sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre trecut și viitor. Idealul dumneavoastră își găsește locul în mijlocul zilei de ieri și de astăzi. Aceasta include putere, dorință, cerere și viziune. Aici se construiește o cultură corporativă prosperă și se preconizează un design de viitor care inspiră responsabilitate și motivație.\n\nÎn conformitate cu idealurile sale corporative, SICK își bazează operațiunile interne pe valorile de bază ale independenței, inovației și leadership-ului. Acest lucru este demonstrat de angajamentul companiei de a-și menține independența juridică și financiară, de a gândi și de a acționa în mod durabil și de a-și asuma responsabilitatea socială adecvată. Succesul SICK se bazează pe încrederea acordată de clienții, furnizorii, angajații și publicul nostru și acest lucru ar trebui să rămână același și în viitor.",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const strategicPartners = [
     breadcrumbLabel: "Proiectul A.Ş.",
     description: "Soluții avansate de codare, marcare și serializare industrială.",
     website: "https://www.markem-imaje.com",
-    fullDescription: "PROJET A.Ș., care are o experiență de peste 20 de ani ca distribuitor în Turcia al \"Imaje\" în domeniul tehnologiilor de codare și marcare, și-a continuat activitățile ca distribuitor în Turcia al \"MARKEM-IMAJE\" din 2009.\n\nCu experiența sa vastă și expertiza tehnică, PROJET A.Ș. oferă soluții complete de codare și marcare pentru diverse industrii, asigurând trasabilitate completă și conformitate cu standardele internaționale.",
+    fullDescription: "Inteligența senzorilor, independența, inovația și leadership-ul sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre trecut și viitor. Idealul dumneavoastră își găsește locul în mijlocul zilei de ieri și de astăzi. Aceasta include putere, dorință, cerere și viziune. Aici se construiește o cultură corporativă prosperă și se preconizează un design de viitor care inspiră responsabilitate și motivație.\n\nÎn conformitate cu idealurile sale corporative, SICK își bazează operațiunile interne pe valorile de bază ale independenței, inovației și leadership-ului. Acest lucru este demonstrat de angajamentul companiei de a-și menține independența juridică și financiară, de a gândi și de a acționa în mod durabil și de a-și asuma responsabilitatea socială adecvată. Succesul SICK se bazează pe încrederea acordată de clienții, furnizorii, angajații și publicul nostru și acest lucru ar trebui să rămână același și în viitor.",
   },
   {
     id: 4,
@@ -41,18 +41,7 @@ export const strategicPartners = [
     breadcrumbLabel: "INTERROLL",
     description: "Expert global în sisteme transportoare și echipamente logistice.",
     website: "https://www.interroll.com",
-    fullDescription: "Grupul Interroll este principalul furnizor global de soluții de manipulare a materialelor. Interroll oferă integratorilor de sisteme și OEM-urilor o gamă largă de produse și servicii bazate pe platformă în aceste categorii: Role (role transportoare), Acționări (motoare și acționări pentru sisteme transportoare), Transportoare și sortatoare, precum și flux de paleți și cutii de carton (sisteme de stocare cu flux).\n\nCu o rețea globală de producție și distribuție, Interroll oferă soluții inovatoare și fiabile pentru toate nevoile de manipulare a materialelor în producție și logistică.",
-  },
-  {
-    id: 5,
-    name: "Beckhoff",
-    logo: "/Logos/Beckhoff_red.svg",
-    detailLogo: "/Logos/Beckhoff_red.svg",
-    slug: "beckhoff",
-    breadcrumbLabel: "BECKHOFF",
-    description: "Sisteme de automatizare bazate pe PC pentru controlul industrial.",
-    website: "https://www.beckhoff.com",
-    fullDescription: "Beckhoff implementează sisteme de automatizare deschise folosind tehnologie de control dovedită bazată pe PC. Principalele domenii pe care le acoperă gama de produse sunt PC-uri industriale, componente I/O și fieldbus, tehnologie de acționare, software de automatizare, precum și automatizare fără dulap de control.\n\nCu o abordare inovatoare și tehnologie de vârf, Beckhoff oferă soluții complete pentru automatizarea industrială modernă, de la controlere compacte până la sisteme complexe de producție.",
+    fullDescription: "Inteligența senzorilor, independența, inovația și leadership-ul sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre trecut și viitor. Idealul dumneavoastră își găsește locul în mijlocul zilei de ieri și de astăzi. Aceasta include putere, dorință, cerere și viziune. Aici se construiește o cultură corporativă prosperă și se preconizează un design de viitor care inspiră responsabilitate și motivație.\n\nÎn conformitate cu idealurile sale corporative, SICK își bazează operațiunile interne pe valorile fundamentale ale independenței, inovației și leadership-ului. Acest lucru este demonstrat de angajamentul companiei de a-și menține independența juridică și financiară, de a gândi și de a acționa în mod durabil și de a-și asuma responsabilitatea socială adecvată. Succesul SICK se bazează pe încrederea acordată de clienții, furnizorii, angajații și publicul nostru și ar trebui să rămână același și în viitor.",
   },
   {
     id: 6,
@@ -63,6 +52,6 @@ export const strategicPartners = [
     breadcrumbLabel: "SEWIO",
     description: "Specialist RTLS și IoT pentru localizare și urmărire în timp real.",
     website: "https://www.sewio.net",
-    fullDescription: "Sewio este lider în tehnologia RTLS (Real-Time Location Systems) pentru industrie. Cu soluții avansate de localizare în timp real, Sewio permite companiilor să urmărească active, persoane și procese cu precizie ridicată.\n\nSistemele Sewio sunt utilizate în fabrici inteligente, depozite și centre logistice pentru optimizarea fluxurilor de lucru și îmbunătățirea eficienței operaționale.",
+    fullDescription: "Inteligența senzorilor, independența, inovația și leadership-ul sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre trecut și viitor. Idealul dumneavoastră își găsește locul în mijlocul zilei de ieri și de astăzi. Aceasta include putere, dorință, cerere și viziune. Aici se construiește o cultură corporativă prosperă și se preconizează un design de viitor care inspiră responsabilitate și motivație.\n\nÎn conformitate cu idealurile sale corporative, SICK își bazează operațiunile interne pe valorile de bază ale independenței, inovației și leadership-ului. Acest lucru este demonstrat de angajamentul companiei de a-și menține independența juridică și financiară, de a gândi și de a acționa în mod durabil și de a-și asuma responsabilitatea socială adecvată. Succesul SICK se bazează pe încrederea acordată de clienții, furnizorii, angajații și publicul nostru și acest lucru ar trebui să rămână același și în viitor.",
   },
 ];

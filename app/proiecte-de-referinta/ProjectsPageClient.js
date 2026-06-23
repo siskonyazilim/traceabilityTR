@@ -1,7 +1,8 @@
 'use client';
 
+import { useMemo } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import Container from '../../components/ui/Container';
 import SectionHeader from '../../components/ui/SectionHeader';
 import ProjectCard from '../../components/ui/ProjectCard';
@@ -13,26 +14,48 @@ import { localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
 export default function ProjectsPageClient() {
   const { locale, t } = useLanguage();
   const localizedProjects = localizeReferenceProjects(referenceProjects, locale);
+  const pageSize = 9;
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParamsString = searchParams.toString();
+
+  const pageFromQuery = Number.parseInt(searchParams.get('page') || '1', 10);
+  const normalizedPageFromQuery = Number.isFinite(pageFromQuery) && pageFromQuery > 0 ? pageFromQuery : 1;
+
+  const totalPages = Math.max(1, Math.ceil(localizedProjects.length / pageSize));
+  const currentPage = Math.min(Math.max(normalizedPageFromQuery, 1), totalPages);
+
+  const updatePage = (nextPage) => {
+    const safePage = Math.min(Math.max(nextPage, 1), totalPages);
+    const params = new URLSearchParams(searchParamsString);
+    if (safePage <= 1) {
+      params.delete('page');
+    } else {
+      params.set('page', String(safePage));
+    }
+
+    const nextQuery = params.toString();
+    const nextUrl = nextQuery ? `${pathname}?${nextQuery}` : pathname;
+    const currentUrl = searchParamsString ? `${pathname}?${searchParamsString}` : pathname;
+
+    if (nextUrl !== currentUrl) {
+      router.replace(nextUrl, { scroll: false });
+    }
+  };
+
+  const currentProjects = useMemo(() => {
+    const start = (currentPage - 1) * pageSize;
+    return localizedProjects.slice(start, start + pageSize);
+  }, [currentPage, localizedProjects]);
+
+  const pageNumbers = useMemo(() => {
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }, [totalPages]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
       <Container size="xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 md:mb-16 rounded-3xl border-2 border-slate-200 bg-gradient-to-br from-primary-black via-secondary-blue to-accent-blue px-8 py-12 md:px-12 md:py-16 text-white shadow-2xl relative overflow-hidden"
-        >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-blue/20 rounded-full blur-2xl"></div>
-
-          <div className="relative z-10">
-            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-white/80 font-bold mb-4">{t('projectsPage.eyebrow', 'Studii de caz')}</p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">{t('projectsPage.heroTitle', 'Proiecte de referință cu impact măsurabil')}</h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl">{t('projectsPage.heroSubtitle', 'Implementări reale în automotive, alimentar și producție industrială, cu indicatori clari de eficiență și calitate.')}</p>
-          </div>
-        </motion.div>
-
         <SectionHeader
           title={t('projectsPage.sectionTitle', 'Selecție Proiecte')}
           subtitle={t('projectsPage.sectionSubtitle', 'Proiecte realizate cu succes pentru clienți din diverse industrii')}
@@ -40,8 +63,8 @@ export default function ProjectsPageClient() {
 
         {localizedProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7">
-            {localizedProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {currentProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} currentPage={currentPage} />
             ))}
           </div>
         ) : (
@@ -52,12 +75,45 @@ export default function ProjectsPageClient() {
           </div>
         )}
 
-        <div className="mt-12 text-center text-gray-text">
-          <p>{t('projectsPage.total', 'Total: {{count}} proiecte', { count: localizedProjects.length })}</p>
-        </div>
+        {localizedProjects.length > pageSize && (
+          <div className="mt-10 flex items-center justify-center gap-2 flex-wrap">
+            <button
+              type="button"
+              onClick={() => updatePage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="px-3 py-2 rounded-lg border border-gray-light text-sm text-primary-black disabled:opacity-50 disabled:cursor-not-allowed hover:border-accent-blue"
+            >
+              {t('projectsPage.paginationPrev', 'Înapoi')}
+            </button>
+
+            {pageNumbers.map((page) => (
+              <button
+                key={page}
+                type="button"
+                onClick={() => updatePage(page)}
+                className={`px-3 py-2.5 rounded-lg border text-sm min-w-[44px] ${
+                  currentPage === page
+                    ? 'bg-accent-blue text-white border-accent-blue'
+                    : 'border-gray-light text-primary-black hover:border-accent-blue'
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+
+            <button
+              type="button"
+              onClick={() => updatePage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="px-3 py-2 rounded-lg border border-gray-light text-sm text-primary-black disabled:opacity-50 disabled:cursor-not-allowed hover:border-accent-blue"
+            >
+              {t('projectsPage.paginationNext', 'Înainte')}
+            </button>
+          </div>
+        )}
 
         <div className="mt-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-black mb-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-primary-black mb-6">
             {t('projectsPage.ctaTitle', 'Vrei un proiect similar pentru compania ta?')}
           </h2>
           <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">

@@ -62,8 +62,8 @@ export const PerformanceMetrics = () => {
   const { locale, t } = useLanguage();
 
   const labels = getPerformanceMetricLabels([
-    'Clienti multumiti',
-    'Tari',
+    'Clienți mulțumiți',
+    'Țări',
     'Proiecte globale',
     'Colegi',
   ], locale);
@@ -91,7 +91,7 @@ export const PerformanceMetrics = () => {
 
       <Container size="xl" className="relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-4">
             {t('sections.performanceTitle', 'Performanță și indicatori cuprinzători')}
           </h2>
           <p className="text-base sm:text-xl text-gray-light max-w-2xl mx-auto">

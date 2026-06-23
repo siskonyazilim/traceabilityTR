@@ -134,10 +134,10 @@ export const StrategicPartners = () => {
                     <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] flex items-center">
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-gray-text leading-7 line-clamp-3 min-h-[5.2rem] max-w-[44ch]">
+                    <p className="text-sm text-gray-text leading-7 line-clamp-3 min-h-[5.2rem] max-w-none">
                       {partner.description}
                     </p>
-                    <span className="card-cta-mini mt-4">
+                    <span className="card-cta-mini mt-auto">
                       {t('sections.details', 'Detalii')}
                       <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

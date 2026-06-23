@@ -16,6 +16,25 @@ export const ReferenceProjects = () => {
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
   const localizedProjects = useMemo(() => localizeReferenceProjects(referenceProjects, locale), [locale]);
+  const uniqueBrandProjects = useMemo(() => {
+    const seenBrands = new Set();
+
+    return localizedProjects.filter((project) => {
+      const [brandRaw] = String(project.title || '').split(' - ');
+      const brand = brandRaw.trim().toLowerCase();
+
+      if (!brand || seenBrands.has(brand)) {
+        return false;
+      }
+
+      seenBrands.add(brand);
+      return true;
+    });
+  }, [localizedProjects]);
+
+  const featuredProjects = useMemo(() => {
+    return uniqueBrandProjects.slice(0, 10);
+  }, [uniqueBrandProjects]);
 
   useEffect(() => {
     const updateItemsPerView = () => {
@@ -33,7 +52,7 @@ export const ReferenceProjects = () => {
     return () => globalThis.removeEventListener('resize', updateItemsPerView);
   }, []);
 
-  const maxIndex = Math.max(0, localizedProjects.length - itemsPerView);
+  const maxIndex = Math.max(0, featuredProjects.length - itemsPerView);
 
   useEffect(() => {
     if (currentIndex > maxIndex) {
@@ -70,8 +89,8 @@ export const ReferenceProjects = () => {
   };
 
   const visibleProjects = useMemo(
-    () => localizedProjects.slice(currentIndex, currentIndex + itemsPerView),
-    [currentIndex, itemsPerView, localizedProjects]
+    () => featuredProjects.slice(currentIndex, currentIndex + itemsPerView),
+    [currentIndex, itemsPerView, featuredProjects]
   );
 
   return (
@@ -88,7 +107,7 @@ export const ReferenceProjects = () => {
 
         <div className="relative mb-10">
           {/* Enhanced Navigation Buttons */}
-          <div className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20">
+          <div className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20 hidden md:block">
             <button
               onClick={handlePrev}
               className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
@@ -98,7 +117,7 @@ export const ReferenceProjects = () => {
             </button>
           </div>
 
-          <div className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20">
+          <div className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20 hidden md:block">
             <button
               onClick={handleNext}
               className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
@@ -146,7 +165,7 @@ export const ReferenceProjects = () => {
                     <p className="text-sm text-gray-text leading-7 line-clamp-2 flex-1 max-w-[44ch]">
                       {project.description}
                     </p>
-                    <span className="card-cta-mini mt-4">
+                    <span className="card-cta-mini mt-auto">
                       <span>{t('sections.details', 'Detalii')}</span>
                       <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

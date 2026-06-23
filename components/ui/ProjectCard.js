@@ -5,9 +5,80 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../i18n/LanguageProvider';
 
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ project, currentPage = 1 }) => {
   const { t } = useLanguage();
   const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').replace(/\s*→\s*$/, '');
+  const projectVisual = (() => {
+    const explicitLogo = project.logo && !project.logo.includes('siskon-logo-header') ? project.logo : null;
+    if (explicitLogo) {
+      return explicitLogo;
+    }
+
+    if (project.slug?.startsWith('delphi-')) {
+      return '/Logos/delphi.svg';
+    }
+    if (project.slug?.startsWith('candy-hoover-')) {
+      return '/Logos/Candy.svg';
+    }
+    if (project.slug?.startsWith('pmi-')) {
+      return '/Logos/pmi.svg';
+    }
+    if (project.slug?.startsWith('haier-')) {
+      return '/Logos/haier_europa_2025.svg';
+    }
+    if (project.slug?.startsWith('mey-diageo-')) {
+      return '/Logos/mey-diageo.svg';
+    }
+    if (project.slug?.startsWith('bsh-')) {
+      return '/Logos/BSH_Bosch_und_Siemens_Hausger%C3%A4te_logo.svg';
+    }
+    if (project.slug?.startsWith('ajinomoto-')) {
+      return '/Logos/ajinomoto-global-seeklogo.svg';
+    }
+    if (project.slug?.startsWith('stackpole-')) {
+      return '/Logos/Stackpole.svg';
+    }
+    if (project.slug?.startsWith('orkide-')) {
+      return '/Logos/Orkide_Ya%C4%9F-removebg-preview.png';
+    }
+    if (project.slug?.startsWith('phinia-')) {
+      return '/Logos/phinia.svg';
+    }
+    if (project.slug?.startsWith('borgwarner-')) {
+      return '/Logos/borgwarner-seeklogo.svg';
+    }
+    if (project.slug?.startsWith('turk-demir-dokum-')) {
+      return '/Logos/demirdokum-seeklogo.svg';
+    }
+    if (project.slug?.startsWith('bosch-')) {
+      return '/Logos/Bosch-logo.svg';
+    }
+    if (project.slug?.startsWith('nemak-')) {
+      return '/Logos/nemak.svg';
+    }
+    if (project.slug === 'maxion-inci-celik-rfid-mold-tracking') {
+      return '/Logos/maxion_inci.svg';
+    }
+    if (project.slug === 'turk-tuborg-automatic-pallet-labeling-traceability') {
+      return '/Logos/turk_tuborg.png';
+    }
+    if (project.slug === 'bosch-trolley-tracking-rfid-gate') {
+      return '/images/companies/boschFabrika.jpg';
+    }
+    if (project.slug?.startsWith('bomi-group-')) {
+      return '/Logos/Bomi.svg';
+    }
+
+    return project.image || '/images/companies/fabrika.jpg';
+  })();
+
+  const isRasterImage = /\.(png|jpe?g|webp|gif|avif)$/i.test(projectVisual);
+  const detailHref = currentPage > 1
+    ? {
+        pathname: `/portfolio/${project.slug}`,
+        query: { fromPage: String(currentPage) },
+      }
+    : `/portfolio/${project.slug}`;
 
   return (
     <motion.article
@@ -18,21 +89,21 @@ export const ProjectCard = ({ project }) => {
       viewport={{ once: true }}
     >
       <Link
-        href={`/portfolio/${project.slug}`}
+        href={detailHref}
         className="group bg-white rounded-2xl border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full flex flex-col"
       >
         {/* Project Image */}
-        <div className="h-44 bg-[#f7f8fa] border-b border-gray-200 flex items-center justify-center overflow-hidden relative">
+        <div className="h-44 flex items-center justify-center overflow-hidden relative">
           <img
-            src={project.logo || project.image}
+            src={projectVisual}
             alt={project.title}
-            className="w-full h-full object-contain p-5"
+            className={`w-full h-full ${isRasterImage ? 'object-cover' : 'object-contain p-5'}`}
             onError={(e) => {
               e.target.style.display = 'none';
               e.target.parentElement.querySelector('.fallback-project-icon')?.classList.remove('hidden');
             }}
           />
-          <div className="fallback-project-icon hidden absolute inset-0 flex items-center justify-center bg-[#f7f8fa]">
+          <div className="fallback-project-icon hidden absolute inset-0 flex items-center justify-center bg-white">
             <div className="text-primary-black text-4xl">🏭</div>
           </div>
         </div>
@@ -44,28 +115,13 @@ export const ProjectCard = ({ project }) => {
             </span>
           </div>
 
-          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors">
+          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem]">
             {project.title}
           </h3>
 
-          <p className="text-gray-text text-sm md:text-base leading-relaxed mb-5 flex-1">
+          <p className="text-gray-text text-sm md:text-base leading-relaxed mb-5 flex-1 max-w-none">
             {project.description}
           </p>
-
-          <div className="grid grid-cols-3 gap-3 mb-4 pt-4 border-t">
-            <div className="text-center">
-              <div className="text-accent-blue font-bold text-lg">+{project.results.efficiency}</div>
-              <div className="text-xs text-gray-text">{t('cards.efficiency', 'Eficiență')}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-accent-green font-bold text-lg">-{project.results.defects}</div>
-              <div className="text-xs text-gray-text">{t('cards.defects', 'Defecte')}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-accent-yellow font-bold text-lg">+{project.results.productivity}</div>
-              <div className="text-xs text-gray-text">{t('cards.productivity', 'Productivitate')}</div>
-            </div>
-          </div>
 
           <span className="card-cta-mini mt-auto">
             {projectDetailsLabel}

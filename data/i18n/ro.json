@@ -10,7 +10,9 @@
     "industries": "Industrii",
     "partners": "Parteneri de Soluții",
     "contact": "Contact",
-    "news": "Știri"
+    "news": "Știri",
+    "closeMenu": "Închide meniul",
+    "openMenu": "Deschide meniul"
   },
   "footer": {
     "brandDescription": "Soluții innovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.",
@@ -30,6 +32,7 @@
     "copyright": "© 2026 Traceability. Toate drepturile rezervate."
   },
   "cookie": {
+    "title": "Preferință Cookie",
     "close": "Închide",
     "message": "Folosim cookie-uri pentru a îmbunătăți experiența ta pe OnSuite. Prin utilizarea site-ului, ești de acord cu politica noastră de cookie-uri.",
     "accept": "Acceptă",
@@ -43,7 +46,8 @@
     "secondary": "Vezi Referințele"
   },
   "hero": {
-    "cta": "Cere Ofertă"
+    "cta": "Cere Ofertă",
+    "goToSlide": "Mergi la slide-ul {{index}}"
   },
   "notFound": {
     "title": "Pagina nu a fost găsită",
@@ -104,7 +108,7 @@
     "heroSubtitle": "Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.",
     "topCta": "Discută cu un expert",
     "empty": "Nu au fost găsite articole.",
-    "ctaTitle": "Vrei să discutăm despre trasabilitate?",
+    "ctaTitle": "Vrei să discutăm?",
     "ctaSubtitle": "Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.",
     "ctaPrimary": "Cere Ofertă",
     "ctaSecondary": "Vezi Proiectele",
@@ -117,6 +121,8 @@
     "sectionTitle": "Selecție Proiecte",
     "sectionSubtitle": "Proiecte realizate cu succes pentru clienți din diverse industrii",
     "empty": "Nu am găsit proiecte.",
+    "paginationPrev": "Înapoi",
+    "paginationNext": "Înainte",
     "total": "Total: {{count}} proiecte",
     "ctaTitle": "Vrei un proiect similar pentru compania ta?",
     "ctaSubtitle": "Putem adapta soluțiile din aceste referințe la procesele și obiectivele tale operaționale.",
@@ -146,6 +152,8 @@
     "allArticles": "TOATE ARTICOLELE",
     "technologyTitle": "Capabilități și Competențe Tehnologice",
     "technologySubtitle": "Soluții avansate de trasabilitate pentru producția modernă",
+    "industriesTitle": "Urmăriți cu înțelepciune, bazat pe analize strategice și riguroase",
+    "industriesSubtitle": "",
     "referenceProjectsPrev": "Proiect anterior",
     "referenceProjectsNext": "Proiect următor",
     "referenceProjectsGoTo": "Mergi la pagina {{page}}",
