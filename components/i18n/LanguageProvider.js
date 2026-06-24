@@ -18,6 +18,10 @@ export function LanguageProvider({ initialLocale, children }) {
         return fallback;
       }
 
+      if (typeof value !== 'string') {
+        return typeof fallback === 'string' ? fallback : key;
+      }
+
       return formatTranslation(value, params);
     };
   }, [dictionary]);

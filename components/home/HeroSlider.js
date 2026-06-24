@@ -80,8 +80,13 @@ export const HeroSlider = () => {
     // iOS and some Android browsers may require a direct play attempt after mount.
     const tryPlay = async () => {
       try {
+        video.load();
         await video.play();
-      } catch {
+      } catch (error) {
+        if (error?.name === 'AbortError') {
+          return;
+        }
+
         // Keep a visible fallback instead of a black slide when autoplay is blocked.
         setVideoFailed(true);
       }
@@ -111,7 +116,6 @@ export const HeroSlider = () => {
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
         {shouldRenderVideo && (
           <video
-            key={activeVideoSrc}
             ref={videoRef}
             autoPlay
             muted
@@ -119,14 +123,12 @@ export const HeroSlider = () => {
             playsInline
             preload="metadata"
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+            src={activeVideoSrc}
             onError={() => setVideoFailed(true)}
-            onLoadedData={() => setVideoReady(true)}
-            onCanPlay={() => setVideoReady(true)}
-          >
-            <source src={activeVideoSrc} type="video/mp4" />
-          </video>
+            onPlaying={() => setVideoReady(true)}
+            onWaiting={() => setVideoReady(false)}
+          />
         )}
-        {videoFailed && <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle_at_top,_rgba(0,181,247,0.25),_rgba(10,10,43,0.95)_55%)]" />}
 
         <div className="absolute inset-0 bg-primary-black/35"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
