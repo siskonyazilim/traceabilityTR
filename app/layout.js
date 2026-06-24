@@ -4,7 +4,6 @@ import { Layout } from '../components/layout/Layout'
 import { LanguageProvider } from '../components/i18n/LanguageProvider'
 import { cookies } from 'next/headers'
 import { Kanit } from 'next/font/google'
-import Script from 'next/script'
 import { DEFAULT_LOCALE, isSupportedLocale } from '../lib/i18n/dictionaries'
 /* eslint-disable react/prop-types */
 
@@ -15,11 +14,6 @@ const kanit = Kanit({
   display: 'swap',
   preload: false,
 })
-
-const cerezgoSrc = process.env.NEXT_PUBLIC_CEREZGO_SRC
-const cerezgoKey = process.env.NEXT_PUBLIC_CEREZGO_KEY
-const cerezgoId = process.env.NEXT_PUBLIC_CEREZGO_ID
-const isCerezgoConfigured = Boolean(cerezgoSrc && cerezgoKey && cerezgoId)
 
 export async function generateMetadata() {
   const cookieStore = await cookies();
@@ -73,17 +67,16 @@ export default async function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          id="cerezgo-script"
+          src="https://cdn.cerezgo.com/file/cerezgo.min.js"
+          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU9ZRrCt2t5XqPh1PZTcqf+d"
+          data-id="nt"
+          async
+          defer
+        />
       </head>
       <body className={kanit.variable}>
-        {isCerezgoConfigured ? (
-          <Script
-            id="cerezgo-script"
-            src={cerezgoSrc}
-            strategy="beforeInteractive"
-            data-key={cerezgoKey}
-            data-id={cerezgoId}
-          />
-        ) : null}
         <LanguageProvider initialLocale={locale}>
           <Layout>
             {children}
