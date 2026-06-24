@@ -14,6 +14,7 @@ export const StrategicPartners = () => {
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
+  const detailBasePath = locale === 'en' ? '/solution-partners' : '/parteneri-de-solutii';
   const localizedPartners = useMemo(() => localizePartners(strategicPartners, locale), [locale]);
 
   useEffect(() => {
@@ -108,7 +109,7 @@ export const StrategicPartners = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 mb-8">
             {visiblePartners.map((partner, index) => (
-              <Link key={partner.id} href={`/solution-partners/${partner.slug}`}>
+              <Link key={partner.id} href={`${detailBasePath}/${partner.slug}`}>
                 <article
                   className="h-full rounded-2xl bg-gradient-to-b from-white to-slate-50/70 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                 >

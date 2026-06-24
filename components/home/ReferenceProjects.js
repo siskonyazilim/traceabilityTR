@@ -15,6 +15,7 @@ export const ReferenceProjects = () => {
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
+  const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
   const localizedProjects = useMemo(() => localizeReferenceProjects(referenceProjects, locale), [locale]);
   const uniqueBrandProjects = useMemo(() => {
     const seenBrands = new Set();
@@ -139,7 +140,7 @@ export const ReferenceProjects = () => {
                 className="h-full group"
               >
                 <Link
-                  href={`/portfolio/${project.slug}`}
+                  href={`${detailBasePath}/${project.slug}`}
                   className="h-full flex flex-col rounded-3xl border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
                 >
                   {/* Image with Overlay Effect */}
@@ -207,7 +208,7 @@ export const ReferenceProjects = () => {
         <div className="flex justify-center">
           <Button
             as={Link}
-            href="/proiecte-de-referinta"
+            href={detailBasePath}
             variant="outline"
             size="lg"
             className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"

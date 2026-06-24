@@ -14,7 +14,7 @@ export const blogPosts = [
       <p>Trasabilitatea alimentară joacă un rol esențial în asigurarea siguranței alimentelor, a calității și a satisfacției consumatorilor. În prezent, consumatorii finali solicită tot mai des informații despre originea produselor alimentare și despre procesele prin care acestea au fost obținute.</p>
 
       <h2>Ce este trasabilitatea alimentară?</h2>
-      <p>Trasabilitatea alimentară reprezintă capacitatea de a urmări produsele de-a lungul întregului lanț de aprovizionare. FAO definește trasabilitatea alimentară ca „înregistrarea și urmărirea proceselor de producție, procesare și distribuție ale produselor alimentare” (FAO, 2015). Acest proces le permite consumatorilor să afle de unde provin alimentele și cum au fost procesate.</p>
+      <p>Trasabilitatea alimentară reprezintă capacitatea de a urmări produsele de-a lungul întregului lanț de aprovizionare. FAO definește trasabilitatea alimentară ca „înregistrarea și urmărirea proceselor de producție, procesare și distribuție ale produselor alimentare” (Food and Agriculture Organization (FAO), 2015). Acest proces le permite consumatorilor să afle de unde provin alimentele și cum au fost procesate.</p>
 
       <h2>Importanța trasabilității alimentare pentru consumatorii finali</h2>
       <ul>
@@ -36,8 +36,8 @@ export const blogPosts = [
 
       <h2>Soluțiile SISKON de trasabilitate</h2>
       <p>Trasabilitatea alimentară nu este doar un instrument de siguranță pentru consumatorii finali, ci și un indicator al calității și transparenței. Pe măsură ce consumatorii cer tot mai multe informații despre produsele alimentare, importanța trasabilității continuă să crească. În următorii cinci ani, digitalizarea, cerințele în creștere, schimbările de reglementare, focusul pe sustenabilitate și eforturile de educare vor modela evoluția sistemelor de trasabilitate alimentară. Prin implementarea eficientă a acestor sisteme, companiile pot câștiga încrederea consumatorilor și pot crește valoarea brandului. În viitor, trasabilitatea alimentară va deveni și mai importantă, ajutând consumatorii să facă alegeri informate.</p>
-      <p><strong>Siskon Traceability Solutions</strong> vă permit să gestionați toate procesele de producție dintr-o singură platformă.</p>
-      <p><strong>Siskon Traceability Solutions</strong> oferă monitorizare în timp real a proceselor de producție, raportare istorică și măsurători analitice, prin colectarea datelor din rezultatele testelor, măsurători de calitate, materiale utilizate, date de proces setate și reale, inspecții vizuale, reparații și stații de eșantionare. Acestea susțin procese operaționale precum fluxul de materiale, ordinele de lucru, managementul uneltelor și consumul de energie, asigurând colectarea digitală a informațiilor critice dincolo de procesele automatizate. Prin integrări orizontale și verticale, toate procesele de producție pot fi vizualizate și gestionate digital.</p>
+      <p><strong>SISKON Soluții de Trasabilitate</strong> vă permit să gestionați toate procesele de producție dintr-o singură platformă.</p>
+      <p><strong>SISKON Soluții de Trasabilitate</strong> oferă monitorizare în timp real a proceselor de producție, raportare istorică și măsurători analitice, prin colectarea datelor din rezultatele testelor, măsurători de calitate, materiale utilizate, date de proces setate și reale, inspecții vizuale, reparații și stații de eșantionare. Acestea susțin procese operaționale precum fluxul de materiale, ordinele de lucru, managementul uneltelor și consumul de energie, asigurând colectarea digitală a informațiilor critice dincolo de procesele automatizate. Prin integrări orizontale și verticale, toate procesele de producție pot fi vizualizate și gestionate digital.</p>
 
       <h2>Referințe</h2>
       <ul>
@@ -67,7 +67,7 @@ export const blogPosts = [
       <p>Trasabilitatea alimentara joaca un rol esential in asigurarea sigurantei alimentelor, a calitatii si a satisfactiei consumatorilor. Astazi, consumatorii finali solicita din ce in ce mai multe informatii despre originea produselor alimentare si despre procesele lor de productie.</p>
 
       <h2>Ce este trasabilitatea alimentara?</h2>
-      <p>Trasabilitatea alimentara se refera la capacitatea de a urmari produsele pe tot parcursul lantului de aprovizionare. FAO defineste trasabilitatea alimentara drept „inregistrarea si urmarirea proceselor de productie, procesare si distributie ale produselor alimentare” (FAO, 2015). Acest proces le permite consumatorilor sa stie de unde provin alimentele si cum au fost procesate.</p>
+      <p>Trasabilitatea alimentara se refera la capacitatea de a urmari produsele pe tot parcursul lantului de aprovizionare. FAO defineste trasabilitatea alimentara drept „inregistrarea si urmarirea proceselor de productie, procesare si distributie ale produselor alimentare” (Food and Agriculture Organization (FAO), 2015). Acest proces le permite consumatorilor sa stie de unde provin alimentele si cum au fost procesate.</p>
 
       <h2>Importanta trasabilitatii alimentare pentru consumatorii finali</h2>
       <ul>
@@ -87,10 +87,10 @@ export const blogPosts = [
         <li><strong>Accent pe sustenabilitate:</strong> Cererea pentru agricultura sustenabila si productie alimentara sustenabila va creste. Consumatorii vor prefera brandurile care sustin sustenabilitatea mediului, incurajand dezvoltarea sistemelor de trasabilitate in aceasta directie (Sustainable Food Trust, 2023).</li>
       </ul>
 
-      <h2>SISKON Traceability Solutions</h2>
+      <h2>SISKON Soluții de Trasabilitate</h2>
       <p>Trasabilitatea alimentara nu este doar un instrument de siguranta pentru consumatorii finali, ci si un indicator al calitatii si transparentei. Pe masura ce consumatorii cer mai multe informatii despre produsele alimentare, importanta trasabilitatii continua sa creasca. In urmatorii cinci ani, digitalizarea, cerintele crescute, schimbarile de reglementare, focusul pe sustenabilitate si eforturile educationale vor modela evolutia sistemelor de trasabilitate alimentara. Prin implementarea eficienta a acestor sisteme, companiile pot castiga increderea consumatorilor si pot creste valoarea brandului. In viitor, trasabilitatea alimentara va deveni si mai critica, permitand consumatorilor sa ia decizii informate.</p>
-      <p><strong>Siskon Traceability Solutions</strong> va permit sa gestionati toate procesele de productie de pe o singura platforma.</p>
-      <p><strong>Siskon Traceability Solutions</strong> permit monitorizarea in timp real a proceselor de productie, raportarea istorica si masuratori analitice prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordinele de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
+      <p><strong>SISKON Soluții de Trasabilitate</strong> va permit sa gestionati toate procesele de productie de pe o singura platforma.</p>
+      <p><strong>SISKON Soluții de Trasabilitate</strong> permit monitorizarea in timp real a proceselor de productie, raportarea istorica si masuratori analitice prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordinele de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
 
       <h2>Referinte</h2>
       <ul>
@@ -140,10 +140,10 @@ export const blogPosts = [
       <p><strong>IFS (International Featured Standards):</strong> IFS defineste standarde de calitate si siguranta pentru procesele de productie alimentara. Acesta sprijina producatorii in dezvoltarea si mentinerea sistemelor de trasabilitate si control al calitatii.</p>
       <p><strong>GlobalG.A.P.:</strong> GlobalG.A.P. este un standard pentru bune practici agricole la nivel de ferma. Acesta urmareste asigurarea trasabilitatii si sustenabilitatii productiei alimentare. Certificarea GlobalG.A.P. demonstreaza ca produsele agricole sunt sigure si sustenabile.</p>
 
-      <h2>SISKON Traceability Solutions</h2>
+      <h2>SISKON Soluții de Trasabilitate</h2>
       <p>Trasabilitatea alimentara a devenit un element indispensabil al proceselor moderne de productie si distributie alimentara. Trasabilitatea la nivel de produs, cutie si palet nu doar asigura conformitatea legala si controlul calitatii, ci creste si eficienta operationala si reduce riscurile de siguranta alimentara. De aceea, este esential ca toate companiile care activeaza in industria alimentara sa implementeze si sa actualizeze continuu sisteme eficiente de trasabilitate.</p>
-      <p><strong>Siskon Traceability Solutions</strong> va permit sa gestionati toate procesele de productie dintr-o singura platforma.</p>
-      <p><strong>Siskon Traceability Products</strong> permit monitorizarea in timp real a proceselor de productie, raportare istorica si masuratori analitice prin colectarea datelor din rezultate ale testelor, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordine de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
+      <p><strong>SISKON Soluții de Trasabilitate</strong> va permit sa gestionati toate procesele de productie dintr-o singura platforma.</p>
+      <p><strong>SISKON Produse pentru Trasabilitate</strong> permit monitorizarea in timp real a proceselor de productie, raportare istorica si masuratori analitice prin colectarea datelor din rezultate ale testelor, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordine de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
       <p>Cu motto-ul <strong>„Control Continuu, Zero Erori”</strong>, asiguram trasabilitate digitala completa, end-to-end, pentru afacerea dumneavoastra.</p>
     `,
   },
@@ -368,15 +368,15 @@ export const blogPosts = [
 
       <p>Acum, dupa ce suntem pregatiti sa marcam produsul, al doilea pas critic este sa ne asiguram ca fiecare cod este scanat inaintea fiecarei operatiuni. Vom detalia acest subiect in urmatorul articol.</p>
 
-      <h2>SISKON Traceability Solutions</h2>
-      <p>Cu <strong>Siskon Traceability Solutions</strong>, puteti gestiona toate procesele de productie dintr-o singura platforma.</p>
-      <p><strong>Siskon Traceability Products</strong> permit monitorizarea in timp real a proceselor de productie, raportarea istorica si masuratori analitice, prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Ele sustin procese operationale precum fluxul de materiale, ordine de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
+      <h2>SISKON Soluții de Trasabilitate</h2>
+      <p>Cu <strong>SISKON Soluții de Trasabilitate</strong>, puteti gestiona toate procesele de productie dintr-o singura platforma.</p>
+      <p><strong>SISKON Produse pentru Trasabilitate</strong> permit monitorizarea in timp real a proceselor de productie, raportarea istorica si masuratori analitice, prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Ele sustin procese operationale precum fluxul de materiale, ordine de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
       <p>Cu motto-ul <strong>„Control Continuu, Zero Erori”</strong>, asiguram trasabilitate digitala completa, end-to-end, pentru afacerea dumneavoastra.</p>
     `,
   },
   {
     id: 7,
-    title: 'Care sunt beneficiile sistemelor de trasabilitate?',
+    title: 'Care sunt beneficiile sistemelor de trasabilitate ?',
     titleTr: 'Izlenebilirlik Sistemlerinin Faydalari Nelerdir?',
     slug: 'what-are-the-benefits-of-traceability-systems',
     category: 'Știri',
@@ -400,7 +400,7 @@ export const blogPosts = [
       <h3><strong>Reducerea Rework-ului si a Costurilor de Productie</strong></h3>
       <p>Prin detectarea timpurie a erorilor prin controale de proces, problemele sunt rezolvate rapid. Astfel se reduce munca de rework si, indirect, scad costurile de productie.</p>
 
-      <h3><strong>Suport pentru Analiza Cauzei Radacina</strong></h3>
+      <h3><strong>Suport pentru Analiza Root Couse</strong></h3>
       <p>Sistemele de trasabilitate ofera acces la date din fiecare etapa a productiei, facilitand identificarea si eliminarea cauzelor reale ale problemelor.</p>
 
       <h3><strong>Clarificarea Analizei Costurilor intre Operatiuni</strong></h3>
@@ -411,9 +411,9 @@ export const blogPosts = [
 
       <p>Pe langa aceste beneficii, in anumite industrii reglementarile impun utilizarea sistemelor de trasabilitate. Domenii precum sanatatea si industria farmaceutica, care influenteaza direct siguranta oamenilor, sunt in prima linie. Totusi, noile reglementari arata ca tot mai multe industrii vor urma aceasta directie.</p>
 
-      <h2><strong>SISKON Traceability Solutions</strong></h2>
-      <p><strong>Siskon Traceability Solutions</strong> va permit sa gestionati toate procesele de productie de pe o singura platforma.</p>
-      <p><strong>Siskon Traceability Products</strong> permit monitorizarea in timp real a proceselor de productie, raportare istorica si analize avansate, prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordinele de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
+      <h2><strong>SISKON Soluții de Trasabilitate</strong></h2>
+      <p><strong>SISKON Soluții de Trasabilitate</strong> va permit sa gestionati toate procesele de productie de pe o singura platforma.</p>
+      <p><strong>SISKON Produse pentru Trasabilitate</strong> permit monitorizarea in timp real a proceselor de productie, raportare istorica si analize avansate, prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordinele de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
       <p>Cu motto-ul <strong>„Control Continuu, Zero Erori”</strong>, asiguram trasabilitate digitala completa, end-to-end, pentru afacerea dumneavoastra.</p>
     `,
   },

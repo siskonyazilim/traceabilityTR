@@ -12,18 +12,21 @@ export async function generateMetadata() {
   const description = isEn
     ? 'Explore real-world traceability projects delivered by Traceability across automotive, food and industrial manufacturing with measurable ROI and quality gains.'
     : 'Explorează proiecte reale de trasabilitate livrate de Traceability în automotive, alimentar și producție industrială, cu ROI măsurabil și îmbunătățiri de calitate.';
+  const listUrl = isEn
+    ? 'https://traceability.ro/reference-projects'
+    : 'https://traceability.ro/proiecte-de-referinta';
 
   return {
     title,
     description,
     alternates: {
-      canonical: 'https://traceability.ro/proiecte-de-referinta',
+      canonical: listUrl,
     },
     openGraph: {
       title,
       description,
       type: 'website',
-      url: 'https://traceability.ro/proiecte-de-referinta',
+      url: listUrl,
       locale: isEn ? 'en_US' : 'ro_RO',
     },
     twitter: {

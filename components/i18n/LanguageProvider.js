@@ -1,13 +1,11 @@
 'use client';
 
 import { createContext, useContext, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { DEFAULT_LOCALE, getDictionary, formatTranslation, isSupportedLocale, resolveTranslation } from '../../lib/i18n/dictionaries';
 
 const LanguageContext = createContext(null);
 
 export function LanguageProvider({ initialLocale, children }) {
-  const router = useRouter();
   const normalizedInitial = isSupportedLocale(initialLocale) ? initialLocale : DEFAULT_LOCALE;
   const [locale, setLocaleState] = useState(normalizedInitial);
 
@@ -47,8 +45,6 @@ export function LanguageProvider({ initialLocale, children }) {
     if (typeof globalThis !== 'undefined') {
       globalThis.document.documentElement.lang = nextLocale;
     }
-
-    router.refresh();
   };
 
   const value = useMemo(() => ({ locale, setLocale, t }), [locale, t]);

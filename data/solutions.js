@@ -61,7 +61,7 @@ export const products = [
     type: "premium",
     color: "accent-green",
     image: "/resmi/a-01.png",
-    description: "Oferă trasabilitate end-to-end prin înregistrarea datelor atât din sistemele interne, cât și de la partenerii din lanțul de aprovizionare. Urmărirea și trasabilitatea A+++ este dezvoltată de Siskon special pentru industria de bunuri albe și oferă trasabilitate end-to-end a produselor cu urmărirea produselor, urmărirea componentelor critice, urmărirea traseului și alte module pe liniile de asamblare.",
+    description: "Urmărirea și trasabilitatea A+++ este dezvoltată de Siskon special pentru industria electrocasnicelor și oferă trasabilitate end-to-end a produselor prin urmărirea produselor, a componentelor critice, a traseului și a altor module pe liniile de asamblare.",
     buttonText: "Mai multe informații",
   },
   {
@@ -71,7 +71,7 @@ export const products = [
     type: "organic",
     color: "accent-yellow",
     image: "/resmi/bio-04.png",
-    description: "Trasabilitatea alimentelor este capacitatea de a urmări producția de alimente în toate etapele, inclusiv producția și distribuția. Trasabilitatea pentru industria alimentară este un sistem în care poate fi identificată sursa tuturor intrărilor de proces, inclusiv materiile prime. Chiar și reglementările legale vin în minte mai întâi, atunci când se ia în considerare trasabilitatea alimentelor, dar există și beneficii comerciale foarte importante ale trasabilității.",
+    description: "Trasabilitatea alimentelor este capacitatea de a urmări producția de alimente în toate etapele, inclusiv producția și distribuția. Trasabilitatea pentru industria alimentară este un sistem în care poate fi identificată sursa tuturor intrărilor de proces, inclusiv materiile prime. Chiar și reglementările legale sunt prioritare, atunci când se ia în considerare trasabilitatea alimentelor, dar există și beneficii comerciale foarte importante.",
     buttonText: "Mai multe informații",
   },
   {

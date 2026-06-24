@@ -105,6 +105,54 @@ export const Header = () => {
   const nextLanguage = locale === 'ro' ? 'en' : 'ro';
   const mobileNextLanguage = languageOptions.find((option) => option.code === nextLanguage) || languageOptions[1];
 
+  const getLocalizedPathname = (currentPathname, targetLocale) => {
+    const current = currentPathname || '/';
+
+    if (targetLocale === 'en') {
+      if (current === '/proiecte-de-referinta') {
+        return '/reference-projects';
+      }
+      if (current.startsWith('/proiecte-de-referinta/')) {
+        return current.replace('/proiecte-de-referinta/', '/reference-projects/');
+      }
+      if (current.startsWith('/parteneri-de-solutii/')) {
+        return current.replace('/parteneri-de-solutii/', '/solution-partners/');
+      }
+    }
+
+    if (targetLocale === 'ro') {
+      if (current === '/reference-projects') {
+        return '/proiecte-de-referinta';
+      }
+      if (current.startsWith('/reference-projects/')) {
+        return current.replace('/reference-projects/', '/proiecte-de-referinta/');
+      }
+      if (current.startsWith('/solution-partners/')) {
+        return current.replace('/solution-partners/', '/parteneri-de-solutii/');
+      }
+    }
+
+    return current;
+  };
+
+  const handleLocaleSwitch = async (targetLocale) => {
+    const runtimePathname = typeof globalThis === 'undefined' ? pathname : globalThis.location.pathname;
+    const localizedPath = getLocalizedPathname(runtimePathname, targetLocale);
+
+    await setLocale(targetLocale);
+
+    if (typeof globalThis === 'undefined') {
+      return;
+    }
+
+    if (localizedPath !== runtimePathname) {
+      globalThis.location.assign(localizedPath);
+      return;
+    }
+
+    router.refresh();
+  };
+
   let headerBackgroundClass = 'bg-white border-b border-slate-blue/10 shadow-[0_10px_32px_rgba(10,10,43,0.08)]';
   if (useTransparentHeader) {
     headerBackgroundClass = 'bg-primary-black/32 backdrop-blur-[2px]';
@@ -183,7 +231,7 @@ export const Header = () => {
                       type="button"
                       key={option.code}
                       onClick={() => {
-                        setLocale(option.code);
+                        handleLocaleSwitch(option.code);
                         setIsLangOpen(false);
                       }}
                       className={`w-full h-10 flex items-center gap-2 px-3 text-sm text-left transition-all duration-200 ${
@@ -202,7 +250,7 @@ export const Header = () => {
 
             <button
               type="button"
-              onClick={() => setLocale(nextLanguage)}
+              onClick={() => handleLocaleSwitch(nextLanguage)}
               aria-label={t('language.switchAria', 'Schimbă limba')}
               className={`lg:hidden h-10 px-2.5 rounded-xl flex items-center gap-2 text-xs font-bold transition-all duration-300 ${
                 useTransparentHeader

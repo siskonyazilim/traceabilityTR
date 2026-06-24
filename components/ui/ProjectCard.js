@@ -6,8 +6,9 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../i18n/LanguageProvider';
 
 export const ProjectCard = ({ project, currentPage = 1 }) => {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').replace(/\s*→\s*$/, '');
+  const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
 
   const slugPrefixLogoMap = {
     'delphi-': '/Logos/delphi.svg',
@@ -64,10 +65,10 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   }
   const detailHref = currentPage > 1
     ? {
-        pathname: `/portfolio/${project.slug}`,
+        pathname: `${detailBasePath}/${project.slug}`,
         query: { fromPage: String(currentPage) },
       }
-    : `/portfolio/${project.slug}`;
+    : `${detailBasePath}/${project.slug}`;
 
   return (
     <motion.article

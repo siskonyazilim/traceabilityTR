@@ -15,6 +15,7 @@ export const BlogCard = ({ post }) => {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   });
   const readMoreLabel = t('cards.readMore', 'Citește mai mult →').replace(/\s*→\s*$/, '');
 

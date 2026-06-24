@@ -39,7 +39,8 @@ export async function generateMetadata({ params }) {
 
   const title = `${project.title} | ${f(locale, 'portfolioDetailPage', 'projectSuffix')} | Traceability`;
   const description = project.description;
-  const pageUrl = `https://traceability.ro/portfolio/${project.slug}`;
+  const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
+  const pageUrl = `https://traceability.ro${detailBasePath}/${project.slug}`;
 
   return {
     title,
@@ -82,9 +83,10 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const project = localizedProjects.find((p) => p.slug === slug);
   const fromPageRaw = resolvedSearchParams?.fromPage;
   const fromPage = Number.parseInt(Array.isArray(fromPageRaw) ? fromPageRaw[0] : fromPageRaw || '1', 10);
+  const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
   const backHref = Number.isFinite(fromPage) && fromPage > 1
-    ? `/proiecte-de-referinta?page=${fromPage}`
-    : '/proiecte-de-referinta';
+    ? `${detailBasePath}?page=${fromPage}`
+    : detailBasePath;
 
   if (!project) notFound();
 
@@ -554,7 +556,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                     return (
                   <Link
                     key={relatedProject.id}
-                    href={`/portfolio/${relatedProject.slug}`}
+                    href={`${detailBasePath}/${relatedProject.slug}`}
                     className="group rounded-2xl border border-gray-200 bg-white p-5 hover:border-accent-blue hover:shadow-md transition-all flex flex-col"
                   >
                     <div className="h-32 flex items-center justify-center p-2 mb-4">
@@ -595,7 +597,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
               <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
                 {f(locale, 'portfolioDetailPage', 'ctaPrimary')}
               </Button>
-              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
+              <Button as={Link} href={detailBasePath} variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
                 {f(locale, 'portfolioDetailPage', 'ctaSecondary')}
               </Button>
             </div>

@@ -22,7 +22,8 @@ export default function ContactPageClient() {
       ),
       phone: '+40 368 402 002',
       email: 'info@traceability.ro',
-      mapQuery: 'Siskon, Strada Turnului 25, intrare B, 500152 Brașov, România',
+      mapQuery: 'Strada Turnului Nr. 25, Cladirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152 Brașov, România',
+      mapEmbedQuery: 'loc:45.6634463,25.6198952',
     },
     {
       id: 2,
@@ -158,7 +159,7 @@ export default function ContactPageClient() {
                     style={{ border: 0 }}
                     loading="lazy"
                     allowFullScreen=""
-                    src={`https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(office.mapEmbedQuery || office.mapQuery)}&z=17&output=embed`}
                   />
                 </div>
               </motion.div>
