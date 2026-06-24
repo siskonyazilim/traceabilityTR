@@ -2,6 +2,16 @@ import nodemailer from 'nodemailer';
 
 export const runtime = 'nodejs';
 
+function getRequestId() {
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function getMissingSmtpKeys(config) {
+  return Object.entries(config)
+    .filter(([, value]) => !value)
+    .map(([key]) => key);
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -28,6 +38,7 @@ function validatePayload(payload) {
 }
 
 export async function POST(request) {
+  const requestId = getRequestId();
   const smtpHost = process.env.SMTP_HOST;
   const smtpPort = Number(process.env.SMTP_PORT || 587);
   const smtpUser = process.env.SMTP_USER;
@@ -35,10 +46,23 @@ export async function POST(request) {
   const smtpTo = process.env.SMTP_TO || smtpUser;
   const smtpFrom = process.env.SMTP_FROM || smtpUser;
   const smtpSecure = process.env.SMTP_SECURE === 'true' || smtpPort === 465;
+  const smtpRequireTLS = process.env.SMTP_REQUIRE_TLS === 'true';
 
-  if (!smtpHost || !smtpUser || !smtpPass || !smtpTo || !smtpFrom) {
+  const missingSmtpKeys = getMissingSmtpKeys({
+    SMTP_HOST: smtpHost,
+    SMTP_USER: smtpUser,
+    SMTP_PASS: smtpPass,
+    SMTP_TO: smtpTo,
+    SMTP_FROM: smtpFrom,
+  });
+
+  if (missingSmtpKeys.length > 0) {
+    console.error('[contact-api] Missing SMTP configuration', {
+      requestId,
+      missingSmtpKeys,
+    });
     return Response.json(
-      { ok: false, message: 'SMTP ayarlari eksik.' },
+      { ok: false, message: 'SMTP ayarlari eksik.', requestId },
       { status: 500 }
     );
   }
@@ -48,7 +72,7 @@ export async function POST(request) {
     json = await request.json();
   } catch {
     return Response.json(
-      { ok: false, message: 'Gecersiz istek govdesi.' },
+      { ok: false, message: 'Gecersiz istek govdesi.', requestId },
       { status: 400 }
     );
   }
@@ -56,7 +80,7 @@ export async function POST(request) {
   const payload = validatePayload(json);
   if (!payload) {
     return Response.json(
-      { ok: false, message: 'Form verileri gecersiz.' },
+      { ok: false, message: 'Form verileri gecersiz.', requestId },
       { status: 400 }
     );
   }
@@ -65,6 +89,10 @@ export async function POST(request) {
     host: smtpHost,
     port: smtpPort,
     secure: smtpSecure,
+    requireTLS: smtpRequireTLS,
+    connectionTimeout: 10_000,
+    greetingTimeout: 10_000,
+    socketTimeout: 20_000,
     auth: {
       user: smtpUser,
       pass: smtpPass,
@@ -94,6 +122,8 @@ export async function POST(request) {
   `;
 
   try {
+    await transporter.verify();
+
     await transporter.sendMail({
       from: smtpFrom,
       to: smtpTo,
@@ -103,10 +133,18 @@ export async function POST(request) {
       html: htmlBody,
     });
 
-    return Response.json({ ok: true });
-  } catch {
+    return Response.json({ ok: true, requestId });
+  } catch (error) {
+    console.error('[contact-api] Mail send failed', {
+      requestId,
+      name: error?.name,
+      code: error?.code,
+      command: error?.command,
+      message: error?.message,
+    });
+
     return Response.json(
-      { ok: false, message: 'Mesaj gonderilemedi.' },
+      { ok: false, message: 'Mesaj gonderilemedi.', requestId },
       { status: 500 }
     );
   }

@@ -492,6 +492,13 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     || (project.image?.includes('/Logos/') ? '/resmi/Factory.jpg' : project.image);
   const sliderImages = [featuredImage, ...(Array.isArray(project.gallery) ? project.gallery : [])];
   const isNuhunAnkaraProject = project.slug === 'nuhun-ankara';
+  const isCandyHooverProject = project.slug.startsWith('candy-hoover-');
+  let projectLogoMaxWidthClass = 'max-w-[320px]';
+  if (isNuhunAnkaraProject) {
+    projectLogoMaxWidthClass = 'max-w-[380px] md:max-w-[430px]';
+  } else if (isCandyHooverProject) {
+    projectLogoMaxWidthClass = 'max-w-[420px] md:max-w-[460px]';
+  }
 
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
@@ -522,7 +529,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                   <img
                     src={project.logo}
                     alt={`${project.title} logo`}
-                    className={`h-full w-auto object-contain ${isNuhunAnkaraProject ? 'max-w-[380px] md:max-w-[430px]' : 'max-w-[320px]'}`}
+                    className={`h-full w-auto object-contain ${projectLogoMaxWidthClass}`}
                   />
                 </div>
               )}
@@ -553,6 +560,9 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                 {relatedProjects.map((relatedProject) => (
                   (() => {
                     const isNuhunAnkaraRelated = relatedProject.slug === 'nuhun-ankara';
+                    const isCandyHooverRelated = relatedProject.slug.startsWith('candy-hoover-');
+                    const relatedLogoScaleClass =
+                      (isNuhunAnkaraRelated || isCandyHooverRelated) ? 'scale-110' : '';
                     return (
                   <Link
                     key={relatedProject.id}
@@ -565,7 +575,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                         alt={relatedProject.title}
                         width="320"
                         height="128"
-                        className={`w-full h-full object-contain ${isNuhunAnkaraRelated ? 'scale-110' : ''}`}
+                        className={`w-full h-full object-contain ${relatedLogoScaleClass}`}
                       />
                     </div>
                     <h3 className="text-base md:text-lg font-bold text-primary-black group-hover:text-accent-blue transition-colors leading-snug min-h-[3.4rem]">

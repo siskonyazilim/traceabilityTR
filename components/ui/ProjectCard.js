@@ -12,13 +12,13 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
 
   const slugPrefixLogoMap = {
     'delphi-': '/Logos/delphi.svg',
-    'candy-hoover-': '/Logos/Candy.svg',
+    'candy-hoover-': '/Logos/candy-hoover-group-srl-vector-logo.svg',
     'pmi-': '/Logos/pmi.svg',
     'haier-': '/Logos/haier_europa_2025.svg',
     'mey-diageo-': '/Logos/mey-diageo.svg',
     'bsh-': '/Logos/BSH_Bosch_und_Siemens_Hausger%C3%A4te_logo.svg',
     'ajinomoto-': '/Logos/ajinomoto-global-seeklogo.svg',
-    'stackpole-': '/Logos/Stackpole.svg',
+    'stackpole-': '/Logos/Stackpole.webp',
     'orkide-': '/Logos/Orkide_Ya%C4%9F-removebg-preview.png',
     'phinia-': '/Logos/phinia.svg',
     'borgwarner-': '/Logos/borgwarner-seeklogo.svg',
@@ -56,9 +56,12 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
 
   const isRasterImage = /\.(png|jpe?g|webp|gif|avif)$/i.test(projectVisual);
   const isNuhunAnkaraLogo = projectVisual.includes('/Logos/nuhun-ankara-makarnasi.webp');
+  const isCandyHooverLogo = projectVisual.includes('/Logos/candy-hoover-group-srl-vector-logo.svg');
   let projectVisualClass = 'object-contain p-5';
 
-  if (isNuhunAnkaraLogo) {
+  if (isCandyHooverLogo) {
+    projectVisualClass = 'object-contain p-2 scale-110';
+  } else if (isNuhunAnkaraLogo) {
     projectVisualClass = 'object-contain p-6 md:p-7';
   } else if (isRasterImage) {
     projectVisualClass = 'object-cover';

@@ -63,7 +63,8 @@ export default function ContactPageClient() {
 
       if (!response.ok) {
         const responseBody = await response.json().catch(() => ({}));
-        throw new Error(responseBody.message || 'Mesaj gonderilemedi.');
+        const requestIdSuffix = responseBody.requestId ? ` (Ref: ${responseBody.requestId})` : '';
+        throw new Error((responseBody.message || 'Mesaj gonderilemedi.') + requestIdSuffix);
       }
 
       setSubmitted(true);
