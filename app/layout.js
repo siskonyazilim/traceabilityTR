@@ -72,11 +72,64 @@ export default async function RootLayout({ children }) {
           src="https://cdn.cerezgo.com/file/cerezgo.min.js"
           data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU9ZRrCt2t5XqPh1PZTcqf+d"
           data-id="nt"
+          data-lang="en"
           async
           defer
         />
+        <script
+          id="gtm-deferred"
+          dangerouslySetInnerHTML={{ __html: `(function(){
+  var initialized = false;
+  var idleTimer = null;
+
+  function cleanup() {
+    ['pointerdown','keydown','touchstart','scroll'].forEach(function(e){
+      window.removeEventListener(e, init, true);
+    });
+    if (idleTimer) { clearTimeout(idleTimer); idleTimer = null; }
+  }
+
+  function loadGtm() {
+    if (document.getElementById('gtm-script')) return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    var s = document.createElement('script');
+    s.id = 'gtm-script';
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KH28SB29';
+    document.head.appendChild(s);
+    cleanup();
+  }
+
+  function init() {
+    if (initialized) return;
+    initialized = true;
+    var cerez = document.getElementById('cerezgo-script');
+    if (cerez && cerez.getAttribute('data-ready') !== '1') {
+      cerez.addEventListener('load', function(){ cerez.setAttribute('data-ready','1'); loadGtm(); }, {once:true});
+      cerez.addEventListener('error', loadGtm, {once:true});
+    } else {
+      loadGtm();
+    }
+  }
+
+  ['pointerdown','keydown','touchstart','scroll'].forEach(function(e){
+    window.addEventListener(e, init, {once:true, passive:true, capture:true});
+  });
+  idleTimer = setTimeout(init, 3500);
+})();` }}
+        />
       </head>
       <body className={kanit.variable}>
+        <noscript>
+          <iframe
+            title="gtm-noscript"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KH28SB29"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <LanguageProvider initialLocale={locale}>
           <Layout>
             {children}
