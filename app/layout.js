@@ -72,7 +72,6 @@ export default async function RootLayout({ children }) {
           src="https://cdn.cerezgo.com/file/cerezgo.min.js"
           data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU9ZRrCt2t5XqPh1PZTcqf+d"
           data-id="nt"
-          data-lang="en"
           async
           defer
         />

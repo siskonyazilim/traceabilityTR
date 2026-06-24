@@ -240,7 +240,8 @@ section {
 .legal-doc {
   color: #335a7b;
   font-size: 1rem;
-  line-height: 1.72;
+  line-height: 1.74;
+  max-width: none;
 }
 
 .legal-doc > *:first-child {
@@ -248,8 +249,11 @@ section {
 }
 
 .legal-doc p {
-  margin: 0 0 1rem;
-  max-width: 74ch;
+  margin: 0 0 1.1rem;
+  max-width: none;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .legal-doc h2 {
@@ -273,12 +277,15 @@ section {
 
 .legal-doc ul,
 .legal-doc ol {
-  margin: 0 0 1rem 1.25rem;
+  margin: 0 0 1.1rem 1.35rem;
   padding: 0;
 }
 
 .legal-doc li {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .legal-doc table {

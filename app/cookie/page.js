@@ -21,7 +21,7 @@ export default async function CookiePolicyPage() {
   return (
     <div className="min-h-screen bg-[#f8fafc] pt-24 pb-16">
       <Container size="xl">
-        <article className="max-w-4xl mx-auto rounded-3xl border border-slate-200 bg-white p-6 md:p-10 shadow-[0_14px_36px_rgba(10,10,43,0.08)]">
+        <article className="w-full">
           <p className="text-xs uppercase tracking-[0.16em] text-accent-blue font-semibold mb-3">
             {f(locale, 'cookiePolicyPage', 'eyebrow')}
           </p>

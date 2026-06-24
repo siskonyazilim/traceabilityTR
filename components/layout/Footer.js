@@ -9,10 +9,6 @@ export const Footer = () => {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const { t } = useLanguage();
-  const cookiePreferencesLabel = t('footer.cookiePreferences', 'Cookie Preferences');
-  const safeCookiePreferencesLabel = typeof cookiePreferencesLabel === 'string'
-    ? cookiePreferencesLabel
-    : 'Cookie Preferences';
 
   const handleSectionClick = (e, href) => {
     // Only handle if we're on homepage and it's a hash link
@@ -141,15 +137,6 @@ export const Footer = () => {
                 <Link href="/cookie" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.cookiePolicy', 'Politica de cookie-uri')}
                 </Link>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  className="nesil-open-modal text-gray-light hover:text-accent-blue transition-colors text-sm"
-                >
-                  {safeCookiePreferencesLabel}
-                </a>
               </li>
             </ul>
           </div>
