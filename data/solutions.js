@@ -4,7 +4,7 @@ export const solutions = [
     title: "Urmărirea unui singur produs",
     titleTr: "Tek Ürün Takibi",
     icon: "qr-code",
-    description: "Asigură că fiecare produs are un număr unic și urmărește acest număr unic în toți pașii procesului. Unul dintre criteriile importante pentru urmărirea unui singur produs este tipul de material. Deoarece este esențial ca marcajul să poată fi procesat pe produs. Sunt disponibile diferite soluții pentru marcarea produselor, cum ar fi inkjet, transfer termic, laser, fibră de carbon.",
+    description: "Asigură că fiecare produs are un număr unic și urmărește acest număr unic în toți pașii procesului. Unul dintre criteriile importante pentru urmărirea unui singur produs este tipul de material, deoarece este esențial ca marcajul să poată fi procesat pe produs. Sunt disponibile diferite soluții pentru marcarea produselor, cum ar fi inkjet, transfer termic, laser, fibră de carbon.",
   },
   {
     id: 2,

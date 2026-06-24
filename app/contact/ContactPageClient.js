@@ -18,11 +18,11 @@ export default function ContactPageClient() {
       name: t('contactPage.offices.brasov.name', 'România - Brașov'),
       address: t(
         'contactPage.offices.brasov.address',
-        'Punct de lucru: Str. Turnului Nr.5,\nCladirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România'
+        'Str. Turnului Nr. 25,\nCladirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România'
       ),
       phone: '+40 368 402 002',
       email: 'info@traceability.ro',
-      mapQuery: 'Dima Consulting Group, Strada Turnului 25, intrare B, 500152 Brașov, România',
+      mapQuery: 'Siskon, Strada Turnului 25, intrare B, 500152 Brașov, România',
     },
     {
       id: 2,
@@ -44,12 +44,35 @@ export default function ContactPageClient() {
     reset,
   } = useForm();
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log('Form Data:', data);
-    setSubmitted(true);
-    reset();
-    setTimeout(() => setSubmitted(false), 3000);
+  const onSubmit = async (data) => {
+    setSubmitError('');
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const responseBody = await response.json().catch(() => ({}));
+        throw new Error(responseBody.message || 'Mesaj gonderilemedi.');
+      }
+
+      setSubmitted(true);
+      reset();
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      setSubmitError(error.message || 'Mesaj gonderilemedi.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -294,10 +317,21 @@ export default function ContactPageClient() {
             )}
 
             <div className="flex justify-center">
-              <Button type="submit" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                {t('contactPage.submit', 'Trimite Mesaj')}
+              <Button type="submit" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white" disabled={isSubmitting}>
+                {isSubmitting ? t('contactPage.sending', 'Se trimite...') : t('contactPage.submit', 'Trimite Mesaj')}
               </Button>
             </div>
+
+            {submitError && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                role="alert"
+                className="bg-accent-red bg-opacity-15 border-2 border-accent-red text-accent-red px-4 py-3 rounded-lg text-center font-semibold"
+              >
+                {submitError}
+              </motion.div>
+            )}
 
             {submitted && (
               <motion.div

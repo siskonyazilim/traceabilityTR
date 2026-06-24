@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { getHeroSlides } from '../../lib/i18n/contentLocalization';
@@ -13,6 +14,7 @@ const slides = [
     subtitle: 'Procesul metodic de investiții echilibrează gestionarea riscurilor cu identificarea oportunităților, creând portofolii rezistente, concepute pentru a performa în ciclurile pieței.',
     color: 'from-accent-blue',
     video: '/videos/hero-slide-1.mp4',
+    mobileVideo: '/MobileVideos/FabrikaMobil.mp4',
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ const slides = [
     subtitle: 'Abordarea noastră adaptivă transformă provocările în oportunități, oferind valoare durabilă și rezultate excepționale pentru clienții noștri în diverse condiții economice.',
     color: 'from-accent-green',
     video: '/videos/hero-slide-2.mp4',
+    mobileVideo: '/MobileVideos/KolSarıMobil.mp4',
   },
   {
     id: 3,
@@ -27,25 +30,55 @@ const slides = [
     subtitle: 'Lucrăm îndeaproape cu investitorii pentru a înțelege obiectivele acestora, creând soluții personalizate care abordează nevoile specifice, menținând în același timp angajamentul nostru față de excelență.',
     color: 'from-accent-yellow',
     video: '/video/DisliDonus.mp4',
+    mobileVideo: '/MobileVideos/DisliCarkMobil.mp4',
   },
 ];
 
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isAutoPlay, setIsAutoPlay] = useState(false);
+  const [isMobile, setIsMobile] = useState(null);
   const [videoFailed, setVideoFailed] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef(null);
   const { locale, t } = useLanguage();
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
   const activeSlide = localizedSlides[current];
+  const activeVideoSrc = isMobile && activeSlide.mobileVideo ? activeSlide.mobileVideo : activeSlide.video;
+  const activePosterSrc = '/images/blog/what_is_traceability-1288x724-1-uai-516x344.webp';
+  const shouldRenderVideo = isMobile !== null && videoFailed === false;
+  const shouldShowPoster = videoReady === false && videoFailed === false;
+
+  useEffect(() => {
+    const mediaQuery = globalThis.matchMedia('(max-width: 1023px)');
+    const updateMobileState = () => setIsMobile(mediaQuery.matches);
+
+    updateMobileState();
+    mediaQuery.addEventListener('change', updateMobileState);
+
+    return () => {
+      mediaQuery.removeEventListener('change', updateMobileState);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile === null) {
+      return;
+    }
+
+    // Keep mobile payload lower by avoiding automatic slide rotation.
+    setIsAutoPlay(!isMobile);
+  }, [isMobile]);
 
   useEffect(() => {
     setVideoFailed(false);
-  }, [activeSlide.id]);
+    setVideoReady(false);
+  }, [activeSlide.id, activeVideoSrc]);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video || videoFailed) return;
+    if (videoFailed) return;
+    if (!video) return;
 
     // iOS and some Android browsers may require a direct play attempt after mount.
     const tryPlay = async () => {
@@ -58,7 +91,7 @@ export const HeroSlider = () => {
     };
 
     tryPlay();
-  }, [activeSlide.id, videoFailed]);
+  }, [activeSlide.id, activeVideoSrc, videoFailed]);
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -79,24 +112,36 @@ export const HeroSlider = () => {
     <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Active slide only for reduced network and CPU */}
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
-        {!videoFailed ? (
+        {shouldShowPoster && (
+          <Image
+            src={activePosterSrc}
+            alt=""
+            fill
+            priority
+            quality={62}
+            sizes="100vw"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
+        {shouldRenderVideo && (
           <video
-            key={activeSlide.video}
+            key={activeVideoSrc}
             ref={videoRef}
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
-            poster="/images/blog/what_is_traceability-1288x724-1-uai-516x344.webp"
-            className="absolute inset-0 w-full h-full object-cover"
+            preload="metadata"
+            poster={activePosterSrc}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
             onError={() => setVideoFailed(true)}
+            onLoadedData={() => setVideoReady(true)}
+            onCanPlay={() => setVideoReady(true)}
           >
-            <source src={activeSlide.video} type="video/mp4" />
+            <source src={activeVideoSrc} type="video/mp4" />
           </video>
-        ) : (
-          <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle_at_top,_rgba(0,181,247,0.25),_rgba(10,10,43,0.95)_55%)]" />
         )}
+        {videoFailed && <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle_at_top,_rgba(0,181,247,0.25),_rgba(10,10,43,0.95)_55%)]" />}
 
         <div className="absolute inset-0 bg-primary-black/35"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>

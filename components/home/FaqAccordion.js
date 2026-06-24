@@ -68,28 +68,41 @@ export const FaqAccordion = () => {
       return;
     }
 
-    const SCROLL_TOP_OFFSET = 96;
-    const SCROLL_BOTTOM_PADDING = 24;
-
-    requestAnimationFrame(() => {
+    const alignExpandedFaqToViewportCenter = () => {
       const triggerRect = trigger.getBoundingClientRect();
       const panelRect = panel.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
+      const viewportHeight = globalThis.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
 
-      const titleHiddenTop = triggerRect.top < SCROLL_TOP_OFFSET;
-      const contentHiddenBottom = panelRect.bottom > viewportHeight - SCROLL_BOTTOM_PADDING;
+      const expandedTop = Math.min(triggerRect.top, panelRect.top);
+      const expandedBottom = Math.max(triggerRect.bottom, panelRect.bottom);
+      const expandedCenter = (expandedTop + expandedBottom) / 2;
 
-      if (!titleHiddenTop && !contentHiddenBottom) {
-        return;
-      }
+      const targetTop = Math.max(
+        0,
+        Math.min(
+          documentHeight - viewportHeight,
+          globalThis.scrollY + expandedCenter - viewportHeight / 2,
+        ),
+      );
 
-      const targetTop = Math.max(0, window.scrollY + triggerRect.top - SCROLL_TOP_OFFSET);
-
-      window.scrollTo({
+      globalThis.scrollTo({
         top: targetTop,
         behavior: 'smooth',
       });
-    });
+
+    };
+
+    globalThis.requestAnimationFrame(alignExpandedFaqToViewportCenter);
+
+    // Run once more after transition starts so long answers are centered as they expand.
+    const settleTimer = globalThis.setTimeout(() => {
+      globalThis.requestAnimationFrame(alignExpandedFaqToViewportCenter);
+    }, 320);
+
+    return () => {
+      globalThis.clearTimeout(settleTimer);
+    };
   }, [openId]);
 
   const toggleAccordion = (id) => {

@@ -489,6 +489,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const featuredImage = project.heroImage
     || (project.image?.includes('/Logos/') ? '/resmi/Factory.jpg' : project.image);
   const sliderImages = [featuredImage, ...(Array.isArray(project.gallery) ? project.gallery : [])];
+  const isNuhunAnkaraProject = project.slug === 'nuhun-ankara';
 
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
@@ -519,7 +520,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                   <img
                     src={project.logo}
                     alt={`${project.title} logo`}
-                    className="h-full w-auto max-w-[320px] object-contain"
+                    className={`h-full w-auto object-contain ${isNuhunAnkaraProject ? 'max-w-[380px] md:max-w-[430px]' : 'max-w-[320px]'}`}
                   />
                 </div>
               )}
@@ -548,6 +549,9 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedProjects.map((relatedProject) => (
+                  (() => {
+                    const isNuhunAnkaraRelated = relatedProject.slug === 'nuhun-ankara';
+                    return (
                   <Link
                     key={relatedProject.id}
                     href={`/portfolio/${relatedProject.slug}`}
@@ -559,7 +563,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                         alt={relatedProject.title}
                         width="320"
                         height="128"
-                        className="w-full h-full object-contain"
+                        className={`w-full h-full object-contain ${isNuhunAnkaraRelated ? 'scale-110' : ''}`}
                       />
                     </div>
                     <h3 className="text-base md:text-lg font-bold text-primary-black group-hover:text-accent-blue transition-colors leading-snug min-h-[3.4rem]">
@@ -572,6 +576,8 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                       </svg>
                     </span>
                   </Link>
+                    );
+                  })()
                 ))}
               </div>
             </div>

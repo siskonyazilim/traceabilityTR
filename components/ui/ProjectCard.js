@@ -8,71 +8,60 @@ import { useLanguage } from '../i18n/LanguageProvider';
 export const ProjectCard = ({ project, currentPage = 1 }) => {
   const { t } = useLanguage();
   const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').replace(/\s*→\s*$/, '');
+
+  const slugPrefixLogoMap = {
+    'delphi-': '/Logos/delphi.svg',
+    'candy-hoover-': '/Logos/Candy.svg',
+    'pmi-': '/Logos/pmi.svg',
+    'haier-': '/Logos/haier_europa_2025.svg',
+    'mey-diageo-': '/Logos/mey-diageo.svg',
+    'bsh-': '/Logos/BSH_Bosch_und_Siemens_Hausger%C3%A4te_logo.svg',
+    'ajinomoto-': '/Logos/ajinomoto-global-seeklogo.svg',
+    'stackpole-': '/Logos/Stackpole.svg',
+    'orkide-': '/Logos/Orkide_Ya%C4%9F-removebg-preview.png',
+    'phinia-': '/Logos/phinia.svg',
+    'borgwarner-': '/Logos/borgwarner-seeklogo.svg',
+    'turk-demir-dokum-': '/Logos/demirdokum-seeklogo.svg',
+    'bosch-': '/Logos/Bosch-logo.svg',
+    'nemak-': '/Logos/nemak.svg',
+    'bomi-group-': '/Logos/Bomi.svg',
+  };
+
+  const exactSlugLogoMap = {
+    'maxion-inci-celik-rfid-mold-tracking': '/Logos/maxion_inci.svg',
+    'turk-tuborg-automatic-pallet-labeling-traceability': '/Logos/turk_tuborg.png',
+    'bosch-trolley-tracking-rfid-gate': '/images/companies/boschFabrika.jpg',
+  };
+
   const projectVisual = (() => {
     const explicitLogo = project.logo && !project.logo.includes('siskon-logo-header') ? project.logo : null;
     if (explicitLogo) {
       return explicitLogo;
     }
 
-    if (project.slug?.startsWith('delphi-')) {
-      return '/Logos/delphi.svg';
+    const slug = project.slug || '';
+
+    if (exactSlugLogoMap[slug]) {
+      return exactSlugLogoMap[slug];
     }
-    if (project.slug?.startsWith('candy-hoover-')) {
-      return '/Logos/Candy.svg';
-    }
-    if (project.slug?.startsWith('pmi-')) {
-      return '/Logos/pmi.svg';
-    }
-    if (project.slug?.startsWith('haier-')) {
-      return '/Logos/haier_europa_2025.svg';
-    }
-    if (project.slug?.startsWith('mey-diageo-')) {
-      return '/Logos/mey-diageo.svg';
-    }
-    if (project.slug?.startsWith('bsh-')) {
-      return '/Logos/BSH_Bosch_und_Siemens_Hausger%C3%A4te_logo.svg';
-    }
-    if (project.slug?.startsWith('ajinomoto-')) {
-      return '/Logos/ajinomoto-global-seeklogo.svg';
-    }
-    if (project.slug?.startsWith('stackpole-')) {
-      return '/Logos/Stackpole.svg';
-    }
-    if (project.slug?.startsWith('orkide-')) {
-      return '/Logos/Orkide_Ya%C4%9F-removebg-preview.png';
-    }
-    if (project.slug?.startsWith('phinia-')) {
-      return '/Logos/phinia.svg';
-    }
-    if (project.slug?.startsWith('borgwarner-')) {
-      return '/Logos/borgwarner-seeklogo.svg';
-    }
-    if (project.slug?.startsWith('turk-demir-dokum-')) {
-      return '/Logos/demirdokum-seeklogo.svg';
-    }
-    if (project.slug?.startsWith('bosch-')) {
-      return '/Logos/Bosch-logo.svg';
-    }
-    if (project.slug?.startsWith('nemak-')) {
-      return '/Logos/nemak.svg';
-    }
-    if (project.slug === 'maxion-inci-celik-rfid-mold-tracking') {
-      return '/Logos/maxion_inci.svg';
-    }
-    if (project.slug === 'turk-tuborg-automatic-pallet-labeling-traceability') {
-      return '/Logos/turk_tuborg.png';
-    }
-    if (project.slug === 'bosch-trolley-tracking-rfid-gate') {
-      return '/images/companies/boschFabrika.jpg';
-    }
-    if (project.slug?.startsWith('bomi-group-')) {
-      return '/Logos/Bomi.svg';
+
+    const matchedPrefix = Object.keys(slugPrefixLogoMap).find((prefix) => slug.startsWith(prefix));
+    if (matchedPrefix) {
+      return slugPrefixLogoMap[matchedPrefix];
     }
 
     return project.image || '/images/companies/fabrika.jpg';
   })();
 
   const isRasterImage = /\.(png|jpe?g|webp|gif|avif)$/i.test(projectVisual);
+  const isNuhunAnkaraLogo = projectVisual.includes('/Logos/nuhun-ankara-makarnasi.webp');
+  let projectVisualClass = 'object-contain p-5';
+
+  if (isNuhunAnkaraLogo) {
+    projectVisualClass = 'object-contain p-6 md:p-7';
+  } else if (isRasterImage) {
+    projectVisualClass = 'object-cover';
+  }
   const detailHref = currentPage > 1
     ? {
         pathname: `/portfolio/${project.slug}`,
@@ -97,7 +86,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
           <img
             src={projectVisual}
             alt={project.title}
-            className={`w-full h-full ${isRasterImage ? 'object-cover' : 'object-contain p-5'}`}
+            className={`w-full h-full ${projectVisualClass}`}
             onError={(e) => {
               e.target.style.display = 'none';
               e.target.parentElement.querySelector('.fallback-project-icon')?.classList.remove('hidden');

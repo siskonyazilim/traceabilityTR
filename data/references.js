@@ -59,9 +59,9 @@ export const referenceProjects = [
     id: 3,
     title: "Nuh'un Ankara - Trasabilitate",
     slug: "nuhun-ankara",
-    logo: "/Logos/nuhun_ankara.svg",
+    logo: "/Logos/nuhun-ankara-makarnasi.webp",
     sector: "Alimente",
-    image: "/Logos/nuhun_ankara.svg",
+    image: "/Logos/nuhun-ankara-makarnasi.webp",
     heroImage: "/images/companies/NuhAnkara/nuhunankara.jpg",
     gallery: [
       "/images/companies/NuhAnkara/nuhunankara.jpg",

@@ -130,6 +130,10 @@ export const ReferenceProjects = () => {
           {/* Grid with Featured Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 px-2">
             {visibleProjects.map((project, index) => (
+              (() => {
+                const logoSource = project.logo || project.image || '';
+                const isNuhunAnkaraLogo = logoSource.includes('/Logos/nuhun-ankara-makarnasi.webp');
+                return (
               <article
                 key={project.id}
                 className="h-full group"
@@ -147,7 +151,7 @@ export const ReferenceProjects = () => {
                         alt={project.title}
                         width="320"
                         height="128"
-                        className="max-h-32 w-auto object-contain"
+                        className={`w-auto object-contain ${isNuhunAnkaraLogo ? 'max-h-36 md:max-h-40' : 'max-h-32'}`}
                         onError={(e) => {
                           e.target.style.display = 'none';
                         }}
@@ -174,6 +178,8 @@ export const ReferenceProjects = () => {
                   </div>
                 </Link>
               </article>
+                );
+              })()
             ))}
           </div>
 

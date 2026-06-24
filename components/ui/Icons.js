@@ -131,3 +131,90 @@ export function IconFacebook({ size = 20, className = '' }) {
     </svg>
   );
 }
+
+export function IconQrCode({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <rect x="3" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2" />
+      <rect x="14" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2" />
+      <rect x="3" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2" />
+      <path d="M14 14H17V17H14V14Z" fill="currentColor" />
+      <path d="M17 17H21V21H17V17Z" fill="currentColor" />
+      <path d="M14 19H16V21H14V19Z" fill="currentColor" />
+      <path d="M19 14H21V16H19V14Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function IconBarcode({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <rect x="3" y="4" width="2" height="16" fill="currentColor" />
+      <rect x="6" y="4" width="1" height="16" fill="currentColor" />
+      <rect x="8" y="4" width="3" height="16" fill="currentColor" />
+      <rect x="12" y="4" width="1" height="16" fill="currentColor" />
+      <rect x="14" y="4" width="2" height="16" fill="currentColor" />
+      <rect x="17" y="4" width="1" height="16" fill="currentColor" />
+      <rect x="19" y="4" width="2" height="16" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function IconTarget({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="1.8" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function IconClockCircle({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
+      <path d="M12 7V12L15 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconCubes({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <rect x="3" y="4" width="7" height="7" stroke="currentColor" strokeWidth="2" />
+      <rect x="14" y="4" width="7" height="7" stroke="currentColor" strokeWidth="2" />
+      <rect x="8.5" y="13" width="7" height="7" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
+export function IconCogs({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <circle cx="9" cy="14" r="3" stroke="currentColor" strokeWidth="2" />
+      <circle cx="16" cy="9" r="3" stroke="currentColor" strokeWidth="2" />
+      <path d="M9 9V7M9 21V19M4 14H2M16 14H14M16 4V2M16 16V14M21 9H19M13 9H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function IconHistory({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M3 12A9 9 0 1 0 6 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 4V8H7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 8V12L15 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconCube({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M12 3L4 7V17L12 21L20 17V7L12 3Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M4 7L12 11L20 7" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M12 11V21" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+    </svg>
+  );
+}

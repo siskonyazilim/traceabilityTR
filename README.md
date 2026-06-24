@@ -206,6 +206,15 @@ The header includes language selector:
 - SEO-friendly metadata
 - Accessible components with ARIA labels
 
+### SMTP Setup (Contact Form)
+
+The contact form sends email via SMTP through `app/api/contact/route.js`.
+
+1. Copy `.env.example` to `.env.local`
+2. Fill SMTP values:
+`SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `SMTP_TO`, `SMTP_FROM`
+3. Restart the dev server after env changes
+
 ## 📊 Performance Optimizations
 
 - Image optimization with Next.js `<Image>`

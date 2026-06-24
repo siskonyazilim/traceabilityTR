@@ -1,4 +1,5 @@
 import './globals.css'
+import 'font-awesome/css/font-awesome.min.css'
 import { Layout } from '../components/layout/Layout'
 import { LanguageProvider } from '../components/i18n/LanguageProvider'
 import { cookies } from 'next/headers'
@@ -11,6 +12,7 @@ const kanit = Kanit({
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-kanit',
   display: 'swap',
+  preload: false,
 })
 
 export async function generateMetadata() {
@@ -65,10 +67,6 @@ export default async function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
       </head>
       <body className={kanit.variable}>
         <LanguageProvider initialLocale={locale}>

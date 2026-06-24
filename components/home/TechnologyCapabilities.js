@@ -4,25 +4,26 @@ import { useMemo } from 'react';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { IconBarcode, IconHistory, IconTarget } from '../ui/Icons';
 import { getTechnologyCapabilities } from '../../lib/i18n/contentLocalization';
 
 const capabilities = [
   {
     title: 'POKA YOKE',
     description: 'Trasabilitatea este soluția permanentă la erorile umane, ale mașinilor sau legate de proiectare care apar în timpul producției cu metode simple și ieftine.',
-    iconClass: 'fa fa-history2 fa-history fa-4x fa-fw',
+    icon: IconHistory,
     fallback: '🔁',
   },
   {
     title: 'RFID și coduri de bare',
     description: 'Tehnologia RFID și a codurilor de bare este utilizată în multe aplicații care necesită identificare automată și trasabilitate în automatizarea proceselor și a fabricilor.',
-    iconClass: 'fa fa-barcode fa-4x fa-fw',
+    icon: IconBarcode,
     fallback: '📦',
   },
   {
     title: 'Procesare de imagini',
     description: 'Detectarea defectelor în produsele fabricate cu sisteme de control vizual oferă superioritate față de oameni.',
-    iconClass: 'fa fa-frame-contract fa-crosshairs fa-4x fa-fw',
+    icon: IconTarget,
     fallback: '🖼️',
   },
 ];
@@ -43,12 +44,15 @@ export default function TechnologyCapabilities() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
           {localizedCapabilities.map((capability, index) => (
+            (() => {
+              const CapabilityIcon = capability.icon || IconTarget;
+              return (
             <div
               key={capability.title}
               className={`px-6 md:px-10 text-center ${index < localizedCapabilities.length - 1 ? 'md:border-r md:border-slate-300' : ''}`}
             >
               <div className="mb-6 text-slate-blue leading-none flex justify-center">
-                <i className={capability.iconClass || 'fa fa-cube fa-4x fa-fw'} aria-hidden="true"></i>
+                <CapabilityIcon size={56} className="text-slate-blue" />
                 <span className="sr-only">{capability.title}</span>
               </div>
 
@@ -59,6 +63,8 @@ export default function TechnologyCapabilities() {
                 {capability.description}
               </p>
             </div>
+              );
+            })()
           ))}
         </div>
       </Container>
