@@ -15,7 +15,7 @@
     "openMenu": "Deschide meniul"
   },
   "footer": {
-    "brandDescription": "Soluții inovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.",
+    "brandDescription": "Soluții innovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.",
     "navigation": "Navigare",
     "home": "Pagina Principală",
     "solutions": "Soluțiile Noastre",
@@ -26,6 +26,7 @@
     "news": "Știri",
     "gdprPolicy": "Politica GDPR (Confidențialitate)",
     "cookiePolicy": "Politica de cookie-uri",
+    "cookiePreferences": "Preferințe cookie",
     "contactTitle": "Contact",
     "phone": "Telefon",
     "email": "Email",
@@ -69,13 +70,14 @@
     "privacyText": "Sunt de acord cu",
     "privacyPolicy": "politica de confidențialitate",
     "submit": "Trimite Mesaj",
+    "submitting": "Se trimite...",
     "success": "✓ Mesajul dvs. a fost trimis cu succes!",
     "locationAlt": "Locație",
     "mapTitleSuffix": "hartă",
     "offices": {
       "brasov": {
         "name": "România - Brașov",
-        "address": "Str. Turnului Nr. 25,\nClădirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România"
+        "address": "Punct de lucru: Str. Turnului Nr.5,\nClădirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România"
       },
       "izmir": {
         "name": "Turcia - İzmir",
@@ -92,7 +94,9 @@
       "urlInvalid": "URL invalid",
       "messageRequired": "Mesajul este necesar",
       "messageMin": "Min 10 caractere",
-      "privacyRequired": "Trebuie să accepti politica de confidențialitate"
+      "privacyRequired": "Trebuie să accepti politica de confidențialitate",
+      "submitFailed": "A apărut o eroare. Vă rugăm să încercați din nou.",
+      "networkError": "Eroare de rețea. Verificați conexiunea."
     },
     "placeholders": {
       "firstName": "Ion",
@@ -163,7 +167,7 @@
     "blogPrev": "Articol anterior",
     "blogNext": "Articol următor",
     "performanceTitle": "Performanță și indicatori cuprinzători",
-    "performanceSubtitle": "Rezultatele noastre vorbesc de la sine",
+    "performanceSubtitle": "Rezultatele noastre vorbesc pentru ei înșiși",
     "performanceCta": "Proiectele noastre de referință"
   }
 }

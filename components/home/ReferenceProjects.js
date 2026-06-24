@@ -15,7 +15,6 @@ export const ReferenceProjects = () => {
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
-  const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
   const localizedProjects = useMemo(() => localizeReferenceProjects(referenceProjects, locale), [locale]);
   const uniqueBrandProjects = useMemo(() => {
     const seenBrands = new Set();
@@ -131,16 +130,12 @@ export const ReferenceProjects = () => {
           {/* Grid with Featured Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 px-2">
             {visibleProjects.map((project, index) => (
-              (() => {
-                const logoSource = project.logo || project.image || '';
-                const isNuhunAnkaraLogo = logoSource.includes('/Logos/nuhun-ankara-makarnasi.webp');
-                return (
               <article
                 key={project.id}
                 className="h-full group"
               >
                 <Link
-                  href={`${detailBasePath}/${project.slug}`}
+                  href={`/portfolio/${project.slug}`}
                   className="h-full flex flex-col rounded-3xl border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
                 >
                   {/* Image with Overlay Effect */}
@@ -152,7 +147,7 @@ export const ReferenceProjects = () => {
                         alt={project.title}
                         width="320"
                         height="128"
-                        className={`w-auto object-contain ${isNuhunAnkaraLogo ? 'max-h-36 md:max-h-40' : 'max-h-32'}`}
+                        className="max-h-32 w-auto object-contain"
                         onError={(e) => {
                           e.target.style.display = 'none';
                         }}
@@ -179,8 +174,6 @@ export const ReferenceProjects = () => {
                   </div>
                 </Link>
               </article>
-                );
-              })()
             ))}
           </div>
 
@@ -208,7 +201,7 @@ export const ReferenceProjects = () => {
         <div className="flex justify-center">
           <Button
             as={Link}
-            href={detailBasePath}
+            href="/proiecte-de-referinta"
             variant="outline"
             size="lg"
             className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"

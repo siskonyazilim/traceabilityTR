@@ -26,6 +26,7 @@
     "news": "News",
     "gdprPolicy": "GDPR Privacy Policy",
     "cookiePolicy": "Cookie Policy",
+    "cookiePreferences": "Cookie Preferences",
     "contactTitle": "Contact",
     "phone": "Phone",
     "email": "Email",
@@ -69,13 +70,14 @@
     "privacyText": "I agree with the",
     "privacyPolicy": "privacy policy",
     "submit": "Send Message",
+    "submitting": "Sending...",
     "success": "✓ Your message has been sent successfully!",
     "locationAlt": "Location",
     "mapTitleSuffix": "map",
     "offices": {
       "brasov": {
         "name": "Romania - Brașov",
-        "address": "Turnului St. No. 25,\nM.U.M. Building, Entrance 3, Floor 2, Office 5, 500152\nBrașov, Romania"
+        "address": "Work point: Turnului St. No.5,\nM.U.M. Building, Entrance 3, Floor 2, Office 5, 500152\nBrașov, Romania"
       },
       "izmir": {
         "name": "Turkey - İzmir",
@@ -92,7 +94,9 @@
       "urlInvalid": "Invalid URL",
       "messageRequired": "Message is required",
       "messageMin": "Minimum 10 characters",
-      "privacyRequired": "You must accept the privacy policy"
+      "privacyRequired": "You must accept the privacy policy",
+      "submitFailed": "An error occurred. Please try again.",
+      "networkError": "Network error. Please check your connection."
     },
     "placeholders": {
       "firstName": "John",

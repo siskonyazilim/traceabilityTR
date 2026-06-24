@@ -4,6 +4,7 @@ import { Layout } from '../components/layout/Layout'
 import { LanguageProvider } from '../components/i18n/LanguageProvider'
 import { cookies } from 'next/headers'
 import { Kanit } from 'next/font/google'
+import Script from 'next/script'
 import { DEFAULT_LOCALE, isSupportedLocale } from '../lib/i18n/dictionaries'
 /* eslint-disable react/prop-types */
 
@@ -14,6 +15,10 @@ const kanit = Kanit({
   display: 'swap',
   preload: false,
 })
+
+const cerezgoSrc = process.env.NEXT_PUBLIC_CEREZGO_SRC || 'https://cdn.cerezgo.com/file/cerezgo.min.js'
+const cerezgoKey = process.env.NEXT_PUBLIC_CEREZGO_KEY || 'tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU9ZRrCt2t5XqPh1PZTcqf+d'
+const cerezgoId = process.env.NEXT_PUBLIC_CEREZGO_ID || 'nt'
 
 export async function generateMetadata() {
   const cookieStore = await cookies();
@@ -69,6 +74,12 @@ export default async function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={kanit.variable}>
+        <Script
+          src={cerezgoSrc}
+          strategy="afterInteractive"
+          data-key={cerezgoKey}
+          data-id={cerezgoId}
+        />
         <LanguageProvider initialLocale={locale}>
           <Layout>
             {children}

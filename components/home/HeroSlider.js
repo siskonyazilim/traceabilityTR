@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { getHeroSlides } from '../../lib/i18n/contentLocalization';
@@ -45,9 +44,7 @@ export const HeroSlider = () => {
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
   const activeSlide = localizedSlides[current];
   const activeVideoSrc = isMobile && activeSlide.mobileVideo ? activeSlide.mobileVideo : activeSlide.video;
-  const activePosterSrc = '/images/blog/what_is_traceability-1288x724-1-uai-516x344.webp';
   const shouldRenderVideo = isMobile !== null && videoFailed === false;
-  const shouldShowPoster = videoReady === false && videoFailed === false;
 
   useEffect(() => {
     const mediaQuery = globalThis.matchMedia('(max-width: 1023px)');
@@ -112,17 +109,6 @@ export const HeroSlider = () => {
     <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Active slide only for reduced network and CPU */}
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
-        {shouldShowPoster && (
-          <Image
-            src={activePosterSrc}
-            alt=""
-            fill
-            priority
-            quality={62}
-            sizes="100vw"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        )}
         {shouldRenderVideo && (
           <video
             key={activeVideoSrc}
@@ -132,7 +118,6 @@ export const HeroSlider = () => {
             loop
             playsInline
             preload="metadata"
-            poster={activePosterSrc}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
             onError={() => setVideoFailed(true)}
             onLoadedData={() => setVideoReady(true)}

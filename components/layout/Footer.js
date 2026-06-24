@@ -55,7 +55,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-light text-sm mb-5 leading-relaxed max-w-sm">
-              {t('footer.brandDescription', 'Soluții inovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.')}
+              {t('footer.brandDescription', 'Soluții innovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.')}
             </p>
             <div className="flex items-center gap-3">
               <a href="https://www.linkedin.com/company/siskonromania/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="h-11 w-11 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
@@ -137,6 +137,14 @@ export const Footer = () => {
                 <Link href="/cookie" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.cookiePolicy', 'Politica de cookie-uri')}
                 </Link>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  className="nesil-open-modal text-gray-light hover:text-accent-blue transition-colors text-sm"
+                >
+                  {t('footer.cookiePreferences', 'Cookie Preferences')}
+                </button>
               </li>
             </ul>
           </div>

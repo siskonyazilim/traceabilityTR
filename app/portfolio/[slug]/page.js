@@ -39,8 +39,7 @@ export async function generateMetadata({ params }) {
 
   const title = `${project.title} | ${f(locale, 'portfolioDetailPage', 'projectSuffix')} | Traceability`;
   const description = project.description;
-  const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
-  const pageUrl = `https://traceability.ro${detailBasePath}/${project.slug}`;
+  const pageUrl = `https://traceability.ro/portfolio/${project.slug}`;
 
   return {
     title,
@@ -83,10 +82,9 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const project = localizedProjects.find((p) => p.slug === slug);
   const fromPageRaw = resolvedSearchParams?.fromPage;
   const fromPage = Number.parseInt(Array.isArray(fromPageRaw) ? fromPageRaw[0] : fromPageRaw || '1', 10);
-  const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
   const backHref = Number.isFinite(fromPage) && fromPage > 1
-    ? `${detailBasePath}?page=${fromPage}`
-    : detailBasePath;
+    ? `/proiecte-de-referinta?page=${fromPage}`
+    : '/proiecte-de-referinta';
 
   if (!project) notFound();
 
@@ -491,14 +489,6 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const featuredImage = project.heroImage
     || (project.image?.includes('/Logos/') ? '/resmi/Factory.jpg' : project.image);
   const sliderImages = [featuredImage, ...(Array.isArray(project.gallery) ? project.gallery : [])];
-  const isNuhunAnkaraProject = project.slug === 'nuhun-ankara';
-  const isCandyHooverProject = project.slug.startsWith('candy-hoover-');
-  let projectLogoMaxWidthClass = 'max-w-[320px]';
-  if (isNuhunAnkaraProject) {
-    projectLogoMaxWidthClass = 'max-w-[380px] md:max-w-[430px]';
-  } else if (isCandyHooverProject) {
-    projectLogoMaxWidthClass = 'max-w-[420px] md:max-w-[460px]';
-  }
 
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
@@ -529,7 +519,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                   <img
                     src={project.logo}
                     alt={`${project.title} logo`}
-                    className={`h-full w-auto object-contain ${projectLogoMaxWidthClass}`}
+                    className="h-full w-auto max-w-[320px] object-contain"
                   />
                 </div>
               )}
@@ -558,15 +548,9 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedProjects.map((relatedProject) => (
-                  (() => {
-                    const isNuhunAnkaraRelated = relatedProject.slug === 'nuhun-ankara';
-                    const isCandyHooverRelated = relatedProject.slug.startsWith('candy-hoover-');
-                    const relatedLogoScaleClass =
-                      (isNuhunAnkaraRelated || isCandyHooverRelated) ? 'scale-110' : '';
-                    return (
                   <Link
                     key={relatedProject.id}
-                    href={`${detailBasePath}/${relatedProject.slug}`}
+                    href={`/portfolio/${relatedProject.slug}`}
                     className="group rounded-2xl border border-gray-200 bg-white p-5 hover:border-accent-blue hover:shadow-md transition-all flex flex-col"
                   >
                     <div className="h-32 flex items-center justify-center p-2 mb-4">
@@ -575,7 +559,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                         alt={relatedProject.title}
                         width="320"
                         height="128"
-                        className={`w-full h-full object-contain ${relatedLogoScaleClass}`}
+                        className="w-full h-full object-contain"
                       />
                     </div>
                     <h3 className="text-base md:text-lg font-bold text-primary-black group-hover:text-accent-blue transition-colors leading-snug min-h-[3.4rem]">
@@ -588,8 +572,6 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                       </svg>
                     </span>
                   </Link>
-                    );
-                  })()
                 ))}
               </div>
             </div>
@@ -607,7 +589,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
               <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
                 {f(locale, 'portfolioDetailPage', 'ctaPrimary')}
               </Button>
-              <Button as={Link} href={detailBasePath} variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
+              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
                 {f(locale, 'portfolioDetailPage', 'ctaSecondary')}
               </Button>
             </div>

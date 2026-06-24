@@ -29,18 +29,16 @@ export function LanguageProvider({ initialLocale, children }) {
 
     setLocaleState(nextLocale);
 
-    try {
-      await fetch('/api/locale', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ locale: nextLocale }),
-      });
-    } catch (error) {
+    fetch('/api/locale', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ locale: nextLocale }),
+    }).catch((error) => {
       // Keep UI responsive even if cookie persistence fails.
       console.error('Unable to persist locale', error);
-    }
+    });
 
     if (typeof globalThis !== 'undefined') {
       globalThis.document.documentElement.lang = nextLocale;

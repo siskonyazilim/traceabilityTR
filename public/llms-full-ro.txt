@@ -1,0 +1,241 @@
+# Traceability.ro — llms-full.txt (Română)
+
+> Traceability.ro livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end. Operată de Siskon Endüstriyel Otomasyon Sistemleri A.Ș., cu birouri în România (Brașov) și Turcia (İzmir).
+> Motto: „Control Continuu, Zero Erori"
+
+---
+
+## Pagina Principală
+
+**URL:** https://traceability.ro/
+
+Traceability.ro oferă soluții inovative de trasabilitate pentru fabrici inteligente și producție sustenabilă. Planificăm împreună o soluție de trasabilitate adaptată fluxurilor operaționale ale clientului.
+
+### Soluții și Produse
+
+**Urmărirea unui singur produs (Track & Trace individual)**
+Asigură că fiecare produs are un număr unic (UID) și urmărește acest număr în toți pașii procesului. Un criteriu important este tipul de material al produsului. Sunt disponibile diferite soluții de marcare: inkjet, transfer termic, laser, fibră de carbon.
+
+**Urmărirea lotului/partidei (Lot Tracking)**
+Preferată acolo unde este dificil să se urmărească produsele individual. Lotul se obține după data fabricării și numărul lotului, parcurge ambalarea, depozitarea și ajunge la consumatorul final. Ambele metodologii pot fi aplicate simultan.
+
+**Pick to Light (P2L)**
+Soluțiile P2L oferă operatorilor ghidare vizuală pentru procesele manuale de producție și asamblare. Situațiile corecte sau incorecte sunt arătate cu lumini sau avertismente sonore. Lucrările finalizate pot fi aprobate automat și integrate cu alte sisteme.
+
+**RTLS — Real Time Location Systems**
+Sisteme de localizare în timp real pentru identificarea și urmărirea automată a locației obiectelor sau persoanelor. Etichetele RTLS wireless pot fi atașate la obiecte sau purtate de oameni. Poziționarea nodurilor fixe de referință permite determinarea precisă a pozițiilor.
+
+**WMS — Sisteme de Gestionare a Depozitelor**
+Sistem care permite organizațiilor să controleze și să gestioneze intrarea și ieșirea mărfurilor în depozit. Funcționează cu date în timp real, oferind cele mai actualizate informații despre toate activitățile din depozit.
+
+**Integrare ERP/MES**
+Combinația necesară de aplicații și soluții pentru transferul de date între aplicații independente. Integrare cu SAP, Oracle, Microsoft Dynamics prin API-uri RESTful, web services SOAP sau conectori personalizați. Protocoale industriale standard: OPC-UA, TMC.
+
+---
+
+## FAQ — Perspectivele noastre asupra trasabilității
+
+**Ce este trasabilitatea industrială Track & Trace?**
+Trasabilitatea Track & Trace este un sistem critic care permite urmărirea individuală a produselor pe parcursul întregului ciclu de viață, de la nivel de pachet până la nivel de palet. Sistemul asigură că fiecare produs primește un identificator unic (UID) înregistrat digital în toate etapele producției, ambalării, depozitării și distribuției. Sistemele moderne colectează și analizează date în timp real, oferind vizibilitate completă și conformitate cu reglementările industriale stricte.
+
+**Ce este Aggregation (Agregarea) și de ce este critică?**
+Aggregation reprezintă procesul de creare a unei ierarhii digitale în care identificatorii unici ai produselor individuale sunt asociați cu identificatorul ambalajului mai mare care le conține, formând o relație parent-copil. Ierarhia standard: Pachet → Carton → Cutie → Palet. Orice eroare de asociere (Aggregation Mismatch) determină oprirea imediată a mașinii și respingerea produselor.
+
+**Care este diferența dintre Serializare (UID) și Urmărirea Lotului?**
+Serializarea atribuie un identificator complet unic fiecărui produs individual. Un UID conține: ID-ul producătorului, GTIN/SKU, număr de serie unic, referință de agregare și checksum/semnătură criptografică. Standardele GS1 SGTIN și SSCC sunt utilizate pe scară largă. Urmărirea lotului grupează produsele fabricate în aceeași perioadă sub un identificator comun de lot. Ambele pot funcționa simultan.
+
+**Cum funcționează sistemele de verificare cu camere industriale?**
+Camere industriale de înaltă rezoluție scanează automat fiecare cod în timp real după aplicare, verificând lizibilitatea, contrastul, dimensiunile și corectitudinea datelor. Dacă camera nu poate citi codul (No Read), produsul este marcat pentru respingere și îndepărtat fizic printr-un mecanism de reject automat. Camerele moderne pot procesa peste 2000 de produse pe minut.
+
+**Ce tehnologii de codare sunt utilizate în trasabilitate?**
+Trei tehnologii principale: (1) Codarea cu laser — preferată pentru linii de mare viteză (>2000 produse/minut), marcare permanentă fără consumabile; (2) Codarea inkjet — utilizată la nivel logistic pentru cutii și paleți, contrast excelent; (3) Marcarea directă Data Matrix 2D — standard industrial pentru serializare, stochează cantități mari de date în spațiu mic, poate fi citit chiar dacă parțial deteriorat.
+
+**Cum se realizează integrarea cu sistemele corporative ERP și MES?**
+Flux standard: Generator UID → Imprimante → Camere de verificare → Aggregation Server central → Straturi MES/MII via OPC-UA și TMC → Sisteme ERP (SAP, Oracle, Microsoft Dynamics) prin API-uri RESTful, SOAP sau conectori personalizați. Integrarea end-to-end elimină introducerea manuală de date.
+
+**Cum se asigură conformitatea cu reglementările și standardele GS1?**
+Sistemele generează automat identificatori conformi GS1 (SGTIN pentru produse individuale, SSCC pentru unități logistice), inclusiv checksumuri și semnături criptografice. Pentru ISO 9001, IATF 16949 (automotive), ISO 22000/HACCP (alimente), TTT și EU TPD (tutun). Rapoartele pentru audituri sunt generate automat, reducând timpul de pregătire cu peste 70%.
+
+**Cât durează implementarea unui sistem complet de trasabilitate?**
+Un proiect tipic durează 4–8 luni: analiză procese, proiectare arhitectură, instalare hardware, configurare servere, dezvoltare integrări OPC-UA, configurare conectivitate MES/ERP, testare extensivă, instruire personal, suport post-implementare. Proiectele mari (multiple linii, cerințe complexe de conformitate) pot necesita 10–14 luni. Abordare modulară pentru punere în funcțiune progresivă.
+
+---
+
+## Contact
+
+**URL:** https://traceability.ro/contact
+
+### România — Brașov
+- Str. Turnului Nr. 25, Clădirea M.U.M., Scara 3, Etajul 2, Biroul 5, 500152 Brașov, România
+- Telefon: +40 368 402 002
+- Email: info@traceability.ro
+
+### Turcia — İzmir
+- Campusul Tınaztepe, Universitatea Dokuz Eylül, Clădirea Depark Beta, Cartierul Adatepe, Strada Doğuș Nr. 207/AG, Etaj 2, Nr. 202, 35390 Buca/İzmir, Turcia
+- Telefon: +90 232 245 00 76
+- Email: info@traceability.ro
+
+---
+
+## Proiecte de Referință
+
+**URL:** https://traceability.ro/proiecte-de-referinta
+
+### Maxion İnci Çelik — Trasabilitatea paleților
+**Industrie:** Automotive
+**URL:** https://traceability.ro/proiecte-de-referinta/maxion-inci-celik
+Am dezvoltat un software de comunicare între PLC-ul Beckhoff și aplicatorul de paleți de pe linia de producție, permițând imprimarea automată a codurilor 2D pe baza rețetelor.
+
+### Abalıoğlu Yağ — Trasabilitate
+**Industrie:** Alimente
+**URL:** https://traceability.ro/proiecte-de-referinta/abalioglu-yag
+Pentru unul dintre cei mai importanți producători de ulei din Turcia, am dezvoltat o soluție integrată care asigură trasabilitatea paleților și etichetarea automată a cutiilor de carton pe parcursul operațiunilor de producție și logistică.
+
+### Nuh'un Ankara — Trasabilitate
+**Industrie:** Alimente
+**URL:** https://traceability.ro/proiecte-de-referinta/nuhun-ankara
+Soluție integrată care asigură trasabilitatea cartonului, a paleților și a transportului pentru o companie din sectorul alimentar cu sediul în Ankara.
+
+### Delphi Technologies — Managementul Depozitelor
+**Industrie:** Automotive
+**URL:** https://traceability.ro/proiecte-de-referinta/delphi-technologies
+Soluție integrată de management al depozitului și trasabilitate, cu vizibilitate completă de la ieșirea din producție până la expediere.
+
+### PMI — RFID pentru ștanțare
+**Industrie:** Tutun
+**URL:** https://traceability.ro/proiecte-de-referinta/pmi-rfid
+Integrare cu SAP care asigură funcționarea unității de ștanțare corecte pentru comanda de producție corectă.
+
+### Delphi Technologies — Monitorizarea individuală a produselor pe linia de asamblare a rampelor de injecție
+**Industrie:** Automotive
+**URL:** https://traceability.ro/proiecte-de-referinta/delphi-monitorizare-individuala-rampa-injectie
+Monitorizarea individuală a produselor pe linia de asamblare a rampelor de injecție.
+
+### Mey Diageo — Sistem de control al camerei pentru etichete
+**Industrie:** Alimente
+**URL:** https://traceability.ro/proiecte-de-referinta/mey-diageo-control-camera-etichete
+Sistem de control al camerei care inspectează etichetele de pe sticle în timpul procesului de ambalare.
+
+### PMI — Urmărirea filtrelor
+**Industrie:** Tutun
+**URL:** https://traceability.ro/proiecte-de-referinta/pmi-urmarirea-filtrelor
+50.300 etichete RFID, 109 capete de citire-scriere RFID fixe, 63 panouri de control locale și 8 terminale portabile RFID. Asigură trasabilitatea filtrelor de țigări în întreaga zonă de producție.
+
+### Delphi Technologies — Trasabilitatea liniei de prototipuri
+**Industrie:** Automotive
+**URL:** https://traceability.ro/proiecte-de-referinta/delphi-prototype-line-traceability
+Trasabilitatea completă a liniei de prototipuri.
+
+---
+
+## Parteneri Strategici de Soluții
+
+### SICK
+**URL:** https://traceability.ro/parteneri-de-solutii/sick
+Lider global în tehnologii de senzori și automatizare industrială.
+
+### Universal Robots
+**URL:** https://traceability.ro/parteneri-de-solutii/universal-robots
+Lider mondial în roboți colaborativi (coboți) pentru producție.
+
+### Markem-Imaje
+**URL:** https://traceability.ro/parteneri-de-solutii/markem-imaje
+Soluții avansate de codare, marcare și serializare industrială.
+
+---
+
+## Blog
+
+**URL:** https://traceability.ro/blog
+
+---
+
+### Importanța Trasabilității Alimentare pentru Consumatorii Finali
+**URL:** https://traceability.ro/blog/the-importance-of-food-traceability-for-end-consumers
+**Data:** 25 noiembrie 2024
+
+Trasabilitatea alimentară joacă un rol esențial în asigurarea siguranței alimentelor, a calității și a satisfacției consumatorilor. FAO definește trasabilitatea alimentară ca „înregistrarea și urmărirea proceselor de producție, procesare și distribuție ale produselor alimentare".
+
+Importanța trasabilității pentru consumatorii finali:
+- **Siguranța alimentară:** Sistemele de trasabilitate ajută la identificarea rapidă a problemelor și la retrageri eficiente.
+- **Transparență și încredere:** 66% dintre consumatori caută informații despre producția sustenabilă și etică (Nielsen, 2015).
+- **Percepția calității:** 60% dintre consumatori sunt dispuși să plătească mai mult pentru produse de calitate superioară (Mintel, 2020).
+- **Responsabilitate socială:** 73% dintre consumatori sunt înclinați să cumpere produse sustenabile (McKinsey, 2020).
+- **Diferențiere și preferință:** Trasabilitatea ridicată ajută brandurile să se evidențieze pe piață.
+
+Previziuni pentru urmatorii cinci ani: digitalizare și blockchain, cerințe crescute ale consumatorilor (80% vor solicita mai multe informații — FMI, 2021), reglementări mai stricte, accent pe sustenabilitate.
+
+---
+
+### Trasabilitatea Produselor: De ce este esențială pentru Calitate, Încredere și Durabilitate?
+**URL:** https://traceability.ro/blog/product-traceability-why-is-it-essential-for-quality-trust-and-sustainability
+**Data:** 8 octombrie 2024
+
+Trasabilitatea produselor este esențială pentru siguranță, transparență și încredere, oferind vizibilitate completă asupra lanțului de aprovizionare. Aceleași beneficii-cheie ca și trasabilitatea alimentară: siguranță, transparență, percepția calității, responsabilitate socială și diferențiere competitivă. Digitalizarea, blockchain și cerințele crescânde ale consumatorilor vor modela evoluția sistemelor de trasabilitate.
+
+---
+
+### Trasabilitatea Alimentară și Standarde: Importanța Trasabilității Produselor, Cutiilor și Paleților
+**URL:** https://traceability.ro/blog/food-traceability-and-standards-the-importance-of-product-carton-and-pallet-traceability
+**Data:** 30 iulie 2024
+
+Trasabilitatea trebuie aplicată la nivelul produsului, cutiei și paleților. Avantaje: urmărire detaliată, eficiență logistică, transparență în lanțul de aprovizionare, management al riscului.
+
+Standarde internaționale:
+- **ISO 22000** — Management al siguranței alimentare, bazat pe principiile HACCP.
+- **HACCP** — Identifică și controlează riscurile de siguranță alimentară.
+- **BRC Global Standards** — Criterii pentru siguranță alimentară, calitate și operațiuni.
+- **IFS (International Featured Standards)** — Standarde de calitate și siguranță pentru producție alimentară.
+- **GlobalG.A.P.** — Bune practici agricole la nivel de fermă.
+
+---
+
+### Sisteme de Coduri de Bare Utilizate în Trasabilitate
+**URL:** https://traceability.ro/blog/barcode-systems-used-in-traceability
+**Data:** 23 iulie 2024
+
+Istoria codurilor de bare: 1948 (primul sistem optic de scanare — Norman Joseph Woodland și Bernard Silver), 1974 (primul scanner comercial în SUA), 1988 (implementare în Turcia).
+
+Sisteme utilizate frecvent: EAN-8, EAN-13, UPC-A, UPC-E, Code 39, Code 128, QR Code, Data Matrix (standard pentru componente electronice și industria farmaceutică — capacitate mare de date în spații mici, corectare erori robustă), PDF417, ITF, Codabar, MSI, Aztec Code, MaxiCode, GS1 DataBar, Code 93, Micro QR Code, MicroPDF417, GS1-128, Plessey Code, Code 11, GS1 DataBar Expanded, Pharmacode, Han Xin Code.
+
+---
+
+### Cum se implementează trasabilitatea individuală a produselor?
+**URL:** https://traceability.ro/blog/how-to-implement-individual-product-traceability
+**Data:** 5 octombrie 2021
+
+Prima regulă: atribuirea unui cod unic fiecărui produs. Întrebări critice de analizat:
+1. Structura produsului este potrivită pentru marcare? Unde se aplică marcajul? (Implică marketing, vânzări, calitate, R&D, producție)
+2. Ce operațiuni necesită marcare în avans? (Abordare modulară, începeți cu operațiunile critice)
+3. Codul aplicat poate rămâne lizibil pe parcursul tuturor operațiunilor? (Cuptoare, vopsire, sablare pot afecta lizibilitatea)
+4. Ce tehnologie de marcare se folosește? (Inkjet, transfer termic, laser/fibră de carbon, RFID — în funcție de analiza anterioară)
+
+Al doilea pas critic: scanarea fiecărui cod înaintea fiecărei operațiuni.
+
+---
+
+### Care sunt beneficiile sistemelor de trasabilitate?
+**URL:** https://traceability.ro/blog/what-are-the-benefits-of-traceability-systems
+**Data:** 4 octombrie 2021
+
+Într-un mediu competitiv, diferențierea vine prin calitate — producție cu rate reduse de rebut și rework. Beneficii:
+- **Îmbunătățirea calității producției** — puncte de control integrate previn erorile critice.
+- **Reducerea rework-ului și a costurilor de producție** — detecție timpurie a erorilor.
+- **Suport pentru analiza Root Cause** — acces la date din fiecare etapă a producției.
+- **Clarificarea analizei costurilor între operațiuni** — observarea fluxurilor de cost și valoare.
+- **Facilitarea îmbunătățirii continue** — monitorizarea fluxului pieselor între linii.
+
+În anumite industrii (sănătate, farmaceutic) reglementările impun utilizarea sistemelor de trasabilitate. Tendința se extinde la tot mai multe industrii.
+
+---
+
+## Informații Companie
+
+- **Companie:** Siskon Endüstriyel Otomasyon Sistemleri A.Ș.
+- **Email:** info@traceability.ro
+- **Telefon RO:** +40 368 402 002
+- **Telefon TR:** +90 232 245 00 76
+- **LinkedIn:** https://www.linkedin.com/company/siskonromania/
+- **YouTube:** https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg
+- **X (Twitter):** https://x.com/siskonromania
+- **Instagram:** https://www.instagram.com/siskon_romania

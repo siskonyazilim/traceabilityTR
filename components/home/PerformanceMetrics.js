@@ -95,7 +95,7 @@ export const PerformanceMetrics = () => {
             {t('sections.performanceTitle', 'Performanță și indicatori cuprinzători')}
           </h2>
           <p className="text-base sm:text-xl text-gray-light max-w-2xl mx-auto">
-            {t('sections.performanceSubtitle', 'Rezultatele noastre vorbesc de la sine')}
+            {t('sections.performanceSubtitle', 'Rezultatele noastre vorbesc pentru ei înșiși')}
           </p>
         </div>
 

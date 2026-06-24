@@ -30,8 +30,7 @@ export async function generateMetadata({ params }) {
 
   const title = `${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')} | Traceability`;
   const description = partner.description;
-  const detailBasePath = locale === 'en' ? '/solution-partners' : '/parteneri-de-solutii';
-  const pageUrl = `https://traceability.ro${detailBasePath}/${partner.slug}`;
+  const pageUrl = `https://traceability.ro/solution-partners/${partner.slug}`;
 
   return {
     title,
@@ -72,7 +71,6 @@ export default async function PartnerDetailPage({ params }) {
   const totalPartners = localizedPartners.length;
   const prevPartner = localizedPartners[(currentIndex - 1 + totalPartners) % totalPartners];
   const nextPartner = localizedPartners[(currentIndex + 1) % totalPartners];
-  const detailBasePath = locale === 'en' ? '/solution-partners' : '/parteneri-de-solutii';
 
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
@@ -120,7 +118,7 @@ export default async function PartnerDetailPage({ params }) {
           <nav className="pt-8 border-t border-gray-200">
             <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-6 sm:gap-0">
               <Link
-                href={`${detailBasePath}/${prevPartner.slug}`}
+                href={`/solution-partners/${prevPartner.slug}`}
                 className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors"
               >
                 <IconChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
@@ -135,7 +133,7 @@ export default async function PartnerDetailPage({ params }) {
               </Link>
 
               <Link
-                href={`${detailBasePath}/${nextPartner.slug}`}
+                href={`/solution-partners/${nextPartner.slug}`}
                 className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors self-end sm:self-auto"
               >
                 <div className="text-right">

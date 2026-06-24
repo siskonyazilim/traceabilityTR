@@ -4,24 +4,46 @@ import { useState, useEffect } from 'react';
 import { IconX } from './Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 
+const CONSENT_KEY = 'onsuiteConsent';
+
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   useEffect(() => {
-    const cookieConsent = localStorage.getItem('cookieConsent');
+    const cookieConsent = localStorage.getItem(CONSENT_KEY);
     if (!cookieConsent) {
-      setTimeout(() => setIsVisible(true), 1000);
+      const timerId = setTimeout(() => setIsVisible(true), 2000);
+      return () => clearTimeout(timerId);
     }
+
+    return undefined;
   }, []);
 
+  useEffect(() => {
+    if (typeof globalThis === 'undefined') {
+      return undefined;
+    }
+
+    if (isVisible) {
+      globalThis.document.body.classList.add('ons-cookie-open');
+    } else {
+      globalThis.document.body.classList.remove('ons-cookie-open');
+    }
+
+    return () => {
+      globalThis.document.body.classList.remove('ons-cookie-open');
+    };
+  }, [isVisible]);
+
+  const cookiePolicyUrl = `/cookie?lang=${locale}`;
+
   const acceptCookies = () => {
-    localStorage.setItem('cookieConsent', 'accepted');
+    localStorage.setItem(CONSENT_KEY, 'accepted');
     setIsVisible(false);
   };
 
   const declineCookies = () => {
-    localStorage.setItem('cookieConsent', 'declined');
     setIsVisible(false);
   };
 
@@ -34,7 +56,7 @@ export default function CookieBanner() {
               <button
                 onClick={declineCookies}
                 className="text-gray-400 hover:text-gray-600 transition-colors p-1.5 hover:bg-gray-100 rounded-full"
-                aria-label={t('cookie.close', 'Închide')}
+                aria-label={t('cookie.close', 'Close')}
               >
                 <IconX size={18} />
               </button>
@@ -60,10 +82,10 @@ export default function CookieBanner() {
                 </button>
               </div>
               <button
-                  onClick={() => globalThis.open('/cookie', '_blank')}
+                  onClick={() => globalThis.open(cookiePolicyUrl, '_blank')}
                   className="mt-3 w-full bg-transparent hover:bg-slate-50 text-accent-blue font-semibold py-2.5 px-3 rounded-lg transition-colors duration-300 border border-accent-blue/35 text-sm"
                 >
-                  {t('cookie.learnMore', 'Află mai multe')}
+                  {t('cookie.learnMore', 'Learn more')}
                 </button>
             </div>
           </div>

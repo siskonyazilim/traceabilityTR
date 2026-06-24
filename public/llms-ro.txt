@@ -1,0 +1,70 @@
+# Traceability.ro
+
+> Traceability.ro, akıllı fabrikalar ve sürdürülebilir üretim için yenilikçi izlenebilirlik çözümleri sunan endüstriyel otomasyon şirketidir. Siskon Endüstriyel Otomasyon Sistemleri A.Ş. tarafından işletilmektedir. Romanya (Brașov) ve Türkiye (İzmir) ofisleriyle hizmet vermektedir.
+
+Traceability.ro livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.
+
+## Pagini Principale
+
+- [Pagina Principală](https://traceability.ro/): Prezentare generală a soluțiilor de trasabilitate industrială, MES, RFID, RTLS, WMS și integrare pentru fabrici inteligente.
+- [Contact](https://traceability.ro/contact): Birouri în România (Brașov) și Turcia (İzmir). Telefon RO: +40 368 402 002, Telefon TR: +90 232 245 00 76.
+- [Blog / Știri](https://traceability.ro/blog): Articole despre trasabilitate industrială, MES, RFID, controlul calității și tendințe în producție.
+- [Proiecte de Referință](https://traceability.ro/proiecte-de-referinta): Implementări reale în automotive, alimentar, tutun și producție industrială.
+
+## Soluții și Produse
+
+- Urmărirea unui singur produs (Track & Trace individual cu UID unic)
+- Urmărirea lotului/partidei (Lot Tracking cu data fabricării și număr lot)
+- Pick to Light (P2L — ghidare vizuală pentru asamblare manuală)
+- RTLS — Real Time Location Systems (urmărirea în timp real a obiectelor și persoanelor)
+- WMS — Sisteme de gestionare a depozitelor
+- Integrare ERP/MES (SAP, Oracle, Microsoft Dynamics — protocoale OPC-UA, REST, SOAP)
+
+## Industrii Deservite
+
+- Automotive (IATF 16949)
+- Alimentar (ISO 22000 / HACCP)
+- Tutun (TTT, EU TPD)
+- Farmaceutic
+- Producție industrială generală
+
+## Parteneri Strategici de Soluții
+
+- [SICK](https://traceability.ro/parteneri-de-solutii/sick): Lider global în tehnologii de senzori și automatizare industrială.
+- [Universal Robots](https://traceability.ro/parteneri-de-solutii/universal-robots): Lider mondial în roboți colaborativi (coboți).
+- [Markem-Imaje](https://traceability.ro/parteneri-de-solutii/markem-imaje): Soluții avansate de codare, marcare și serializare industrială.
+
+## Proiecte de Referință
+
+- [Maxion İnci Çelik — Trasabilitatea paleților](https://traceability.ro/proiecte-de-referinta/maxion-inci-celik): Automotive — software de comunicare PLC Beckhoff cu aplicator paleți, imprimare automată coduri 2D.
+- [Abalıoğlu Yağ — Trasabilitate](https://traceability.ro/proiecte-de-referinta/abalioglu-yag): Alimentar — trasabilitate paleți și etichetare automată cutii de carton.
+- [Nuh'un Ankara — Trasabilitate](https://traceability.ro/proiecte-de-referinta/nuhun-ankara): Alimentar — trasabilitate carton, paleți și transport.
+- [Delphi Technologies — Managementul Depozitelor](https://traceability.ro/proiecte-de-referinta/delphi-technologies): Automotive — WMS integrat, vizibilitate de la producție până la expediere.
+- [PMI — RFID pentru ștanțare](https://traceability.ro/proiecte-de-referinta/pmi-rfid): Tutun — integrare SAP, control unitate de ștanțare per comandă de producție.
+- [Delphi Technologies — Monitorizare individuală rampe de injecție](https://traceability.ro/proiecte-de-referinta/delphi-monitorizare-individuala-rampa-injectie): Automotive.
+- [Mey Diageo — Sistem control cameră etichete](https://traceability.ro/proiecte-de-referinta/mey-diageo-control-camera-etichete): Alimentar — inspecție etichete pe sticle în procesul de ambalare.
+- [PMI — Urmărirea filtrelor](https://traceability.ro/proiecte-de-referinta/pmi-urmarirea-filtrelor): Tutun — 50.300 etichete RFID, 109 capete fixe, trasabilitate filtre țigări.
+- [Delphi Technologies — Trasabilitatea liniei de prototipuri](https://traceability.ro/proiecte-de-referinta/delphi-prototype-line-traceability): Automotive.
+
+## Articole Blog
+
+- [Importanța Trasabilității Alimentare pentru Consumatorii Finali](https://traceability.ro/blog/the-importance-of-food-traceability-for-end-consumers) — 25 noiembrie 2024
+- [Trasabilitatea Produselor: De ce este esențială pentru Calitate, Încredere și Durabilitate?](https://traceability.ro/blog/product-traceability-why-is-it-essential-for-quality-trust-and-sustainability) — 8 octombrie 2024
+- [Trasabilitatea Alimentară și Standarde: Importanța Trasabilității Produselor, Cutiilor și Paleților](https://traceability.ro/blog/food-traceability-and-standards-the-importance-of-product-carton-and-pallet-traceability) — 30 iulie 2024
+- [Sisteme de Coduri de Bare Utilizate în Trasabilitate](https://traceability.ro/blog/barcode-systems-used-in-traceability) — 23 iulie 2024
+- [Cum se implementează trasabilitatea individuală a produselor?](https://traceability.ro/blog/how-to-implement-individual-product-traceability) — 5 octombrie 2021
+- [Care sunt beneficiile sistemelor de trasabilitate?](https://traceability.ro/blog/what-are-the-benefits-of-traceability-systems) — 4 octombrie 2021
+
+## Pagini Legale
+
+- [Politica GDPR (Confidențialitate)](https://traceability.ro/privacy-policy)
+- [Politica de Cookie-uri](https://traceability.ro/cookie)
+
+## Informații Companie
+
+- Companie: Siskon Endüstriyel Otomasyon Sistemleri A.Ș.
+- Birou România: Str. Turnului Nr. 25, Clădirea M.U.M., Sc. 3, Et. 2, Bir. 5, 500152 Brașov
+- Birou Turcia: Campusul Tınaztepe, Universitatea Dokuz Eylül, Depark Beta, Buca/İzmir
+- Email: info@traceability.ro
+- LinkedIn: https://www.linkedin.com/company/siskonromania/
+- YouTube: https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg

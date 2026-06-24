@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -8,6 +8,8 @@ import Container from '../../components/ui/Container';
 import Button from '../../components/ui/Button';
 import { IconMail, IconPhone } from '../../components/ui/Icons';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
+
+const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 export default function ContactPageClient() {
   const { t } = useLanguage();
@@ -18,12 +20,11 @@ export default function ContactPageClient() {
       name: t('contactPage.offices.brasov.name', 'România - Brașov'),
       address: t(
         'contactPage.offices.brasov.address',
-        'Str. Turnului Nr. 25,\nCladirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România'
+        'Punct de lucru: Str. Turnului Nr.5,\nCladirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România'
       ),
       phone: '+40 368 402 002',
       email: 'info@traceability.ro',
-      mapQuery: 'Strada Turnului Nr. 25, Cladirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152 Brașov, România',
-      mapEmbedQuery: 'loc:45.6634463,25.6198952',
+      mapQuery: 'Dima Consulting Group, Strada Turnului 25, intrare B, 500152 Brașov, România',
     },
     {
       id: 2,
@@ -44,36 +45,107 @@ export default function ContactPageClient() {
     formState: { errors },
     reset,
   } = useForm();
+
   const [submitted, setSubmitted] = useState(false);
-  const [submitError, setSubmitError] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [csrfToken, setCsrfToken] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const formMountedAt = useRef(Date.now());
+  const turnstileRef = useRef(null);
+  const turnstileWidgetId = useRef(null);
+
+  const fetchCsrfToken = useCallback(async () => {
+    try {
+      const res = await fetch('/api/csrf');
+      const data = await res.json();
+      if (data.csrfToken) setCsrfToken(data.csrfToken);
+    } catch {
+      // CSRF fetch failed silently; form submission will show error
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchCsrfToken();
+  }, [fetchCsrfToken]);
+
+  useEffect(() => {
+    if (!turnstileSiteKey || typeof window === 'undefined') return;
+
+    function renderTurnstile() {
+      if (turnstileRef.current && window.turnstile && turnstileWidgetId.current === null) {
+        turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+          sitekey: turnstileSiteKey,
+          callback: (token) => setTurnstileToken(token),
+          'expired-callback': () => setTurnstileToken(''),
+        });
+      }
+    }
+
+    if (!document.querySelector('script[src*="challenges.cloudflare.com/turnstile"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      script.onload = () => renderTurnstile();
+      document.head.appendChild(script);
+    } else if (window.turnstile) {
+      renderTurnstile();
+    }
+  }, []);
 
   const onSubmit = async (data) => {
-    setSubmitError('');
-    setIsSubmitting(true);
+    setSubmitting(true);
+    setErrorMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
+      const payload = {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        website: data.website || '',
+        message: data.message,
+        _hp: data._hp || '',
+        csrfToken,
+        submittedAt: formMountedAt.current,
+      };
+
+      if (turnstileSiteKey && turnstileToken) {
+        payload.turnstileToken = turnstileToken;
+      }
+
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-CSRF-Token': csrfToken,
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
-        const responseBody = await response.json().catch(() => ({}));
-        const requestIdSuffix = responseBody.requestId ? ` (Ref: ${responseBody.requestId})` : '';
-        throw new Error((responseBody.message || 'Mesaj gonderilemedi.') + requestIdSuffix);
-      }
+      const result = await res.json();
 
-      setSubmitted(true);
-      reset();
-      setTimeout(() => setSubmitted(false), 3000);
-    } catch (error) {
-      setSubmitError(error.message || 'Mesaj gonderilemedi.');
+      if (result.ok) {
+        setSubmitted(true);
+        reset();
+        formMountedAt.current = Date.now();
+        fetchCsrfToken();
+        if (window.turnstile && turnstileWidgetId.current !== null) {
+          window.turnstile.reset(turnstileWidgetId.current);
+        }
+        setTurnstileToken('');
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        setErrorMessage(
+          result.message || t('contactPage.errors.submitFailed', 'A apărut o eroare. Vă rugăm să încercați din nou.')
+        );
+      }
+    } catch {
+      setErrorMessage(
+        t('contactPage.errors.networkError', 'Eroare de rețea. Verificați conexiunea.')
+      );
     } finally {
-      setIsSubmitting(false);
+      setSubmitting(false);
     }
   };
 
@@ -160,7 +232,7 @@ export default function ContactPageClient() {
                     style={{ border: 0 }}
                     loading="lazy"
                     allowFullScreen=""
-                    src={`https://www.google.com/maps?q=${encodeURIComponent(office.mapEmbedQuery || office.mapQuery)}&z=17&output=embed`}
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
                   />
                 </div>
               </motion.div>
@@ -274,6 +346,12 @@ export default function ContactPageClient() {
               )}
             </div>
 
+            {/* Honeypot */}
+            <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
+              <label htmlFor="_hp">Company</label>
+              <input id="_hp" {...register('_hp')} type="text" tabIndex={-1} autoComplete="off" />
+            </div>
+
             <div>
               <label htmlFor="message" className="block text-sm font-semibold text-primary-black mb-2">
                 {t('contactPage.message', 'Mesaj')} *
@@ -318,22 +396,24 @@ export default function ContactPageClient() {
               <span id="privacy-error" role="alert" className="text-accent-red text-sm block">{errors.privacy.message}</span>
             )}
 
+            {turnstileSiteKey && (
+              <div ref={turnstileRef} className="flex justify-center" />
+            )}
+
             <div className="flex justify-center">
-              <Button type="submit" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white" disabled={isSubmitting}>
-                {isSubmitting ? t('contactPage.sending', 'Se trimite...') : t('contactPage.submit', 'Trimite Mesaj')}
+              <Button
+                type="submit"
+                variant="solid"
+                size="lg"
+                className="bg-secondary-blue hover:bg-accent-blue text-white"
+                disabled={submitting}
+              >
+                {submitting
+                  ? t('contactPage.submitting', 'Se trimite...')
+                  : t('contactPage.submit', 'Trimite Mesaj')
+                }
               </Button>
             </div>
-
-            {submitError && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                role="alert"
-                className="bg-accent-red bg-opacity-15 border-2 border-accent-red text-accent-red px-4 py-3 rounded-lg text-center font-semibold"
-              >
-                {submitError}
-              </motion.div>
-            )}
 
             {submitted && (
               <motion.div
@@ -344,6 +424,18 @@ export default function ContactPageClient() {
                 className="bg-accent-green bg-opacity-20 border-2 border-accent-green text-accent-green px-4 py-3 rounded-lg text-center font-semibold"
               >
                 {t('contactPage.success', '✓ Mesajul dvs. a fost trimis cu succes!')}
+              </motion.div>
+            )}
+
+            {errorMessage && !submitted && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                role="alert"
+                aria-live="assertive"
+                className="bg-accent-red bg-opacity-10 border-2 border-accent-red text-accent-red px-4 py-3 rounded-lg text-center font-semibold"
+              >
+                {errorMessage}
               </motion.div>
             )}
             </form>
