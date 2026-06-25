@@ -33,19 +33,22 @@ export function LanguageProvider({ initialLocale, children }) {
 
     setLocaleState(nextLocale);
 
-    fetch('/api/locale', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ locale: nextLocale }),
-    }).catch((error) => {
-      // Keep UI responsive even if cookie persistence fails.
-      console.error('Unable to persist locale', error);
-    });
-
     if (typeof globalThis !== 'undefined') {
       globalThis.document.documentElement.lang = nextLocale;
+      globalThis.document.cookie = `locale=${nextLocale}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`;
+    }
+
+    try {
+      await fetch('/api/locale', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ locale: nextLocale }),
+      });
+    } catch (error) {
+      // Keep UI responsive even if cookie persistence fails.
+      console.error('Unable to persist locale', error);
     }
   };
 

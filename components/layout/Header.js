@@ -31,8 +31,8 @@ export const Header = () => {
     return () => globalThis.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLocaleChange = (nextLocaleCode) => {
-    setLocale(nextLocaleCode);
+  const handleLocaleChange = async (nextLocaleCode) => {
+    await setLocale(nextLocaleCode);
     router.refresh();
   };
 
