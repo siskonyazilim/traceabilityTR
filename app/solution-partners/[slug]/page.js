@@ -4,6 +4,7 @@ import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { strategicPartners } from '../../../data/partners';
 import { IconArrowLeft, IconChevronLeft, IconChevronRight } from '../../../components/ui/Icons';
+import PartnerStorySlider from '../../../components/ui/PartnerStorySlider';
 import { cookies } from 'next/headers';
 import { localizePartners } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
@@ -71,6 +72,7 @@ export default async function PartnerDetailPage({ params }) {
   const totalPartners = localizedPartners.length;
   const prevPartner = localizedPartners[(currentIndex - 1 + totalPartners) % totalPartners];
   const nextPartner = localizedPartners[(currentIndex + 1) % totalPartners];
+  const showStorySlider = Array.isArray(partner.storySlides) && partner.storySlides.length > 0;
 
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
@@ -79,40 +81,44 @@ export default async function PartnerDetailPage({ params }) {
           <IconArrowLeft /> {f(locale, 'partnerDetailPage', 'backHome')}
         </Link>
 
-        <article className="max-w-5xl mx-auto">
+        <article className="w-full">
           {/* Hero */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center mb-12">
-            <div className="lg:col-span-3">
-              <h1 className="text-2xl md:text-3xl font-semibold text-primary-black mb-3 leading-tight">
-                {f(locale, 'partnerDetailPage', 'heroTitle')}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.618fr_1fr] gap-8 lg:gap-12 xl:gap-16 items-start mb-12">
+            <div className="text-left lg:pr-2 xl:pr-6">
+              <h1 className="text-3xl md:text-4xl xl:text-[2.8rem] font-semibold text-primary-black leading-tight">
+                {`${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')}`}
               </h1>
-              <h2 className="text-xl md:text-2xl font-semibold text-gray-text">
-                {partner.name}
-              </h2>
+
+              <div className="mt-6 space-y-6">
+                {partner.fullDescription.split('\n\n').map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-gray-text leading-relaxed text-lg xl:text-[1.23rem]"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
 
-            <div className="lg:col-span-2">
-              <div className="w-full h-48 flex items-center justify-center overflow-hidden relative px-2">
+            <div className="lg:self-stretch flex items-center justify-center">
+              <div className="w-full h-full min-h-72 md:min-h-80 xl:min-h-96 flex items-center justify-center overflow-hidden relative px-4 md:px-6 rounded-2xl border border-slate-200 bg-white">
                 <img
                   src={partner.detailLogo || partner.logo}
                   alt={partner.name}
-                  className="max-h-32 w-full object-contain"
+                  className="max-h-56 md:max-h-64 xl:max-h-72 w-full object-contain"
                 />
               </div>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="max-w-4xl space-y-6 mb-16">
-            {partner.fullDescription.split('\n\n').map((paragraph, index) => (
-              <p
-                key={index}
-                className="text-gray-text leading-relaxed text-lg"
-              >
-                {paragraph}
-              </p>
-            ))}
-          </div>
+          {showStorySlider ? (
+            <PartnerStorySlider
+              slides={partner.storySlides}
+              partnerName={partner.name}
+              locale={locale}
+            />
+          ) : null}
 
           {/* Previous / Next Navigation */}
           <nav className="pt-8 border-t border-gray-200">
@@ -126,8 +132,12 @@ export default async function PartnerDetailPage({ params }) {
                   <span className="block text-sm text-gray-text font-medium">
                     {f(locale, 'partnerDetailPage', 'previousPartner')}
                   </span>
-                  <span className="block text-lg font-semibold">
-                    {prevPartner.name}
+                  <span className="mt-2 inline-flex h-14 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm">
+                    <img
+                      src={prevPartner.detailLogo || prevPartner.logo}
+                      alt={prevPartner.name}
+                      className="max-h-8 w-full object-contain"
+                    />
                   </span>
                 </div>
               </Link>
@@ -140,8 +150,12 @@ export default async function PartnerDetailPage({ params }) {
                   <span className="block text-sm text-gray-text font-medium">
                     {f(locale, 'partnerDetailPage', 'nextPartner')}
                   </span>
-                  <span className="block text-lg font-semibold">
-                    {nextPartner.name}
+                  <span className="mt-2 ml-auto inline-flex h-14 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm">
+                    <img
+                      src={nextPartner.detailLogo || nextPartner.logo}
+                      alt={nextPartner.name}
+                      className="max-h-8 w-full object-contain"
+                    />
                   </span>
                 </div>
                 <IconChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
