@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 import { cookies } from 'next/headers';
+import { buildContactEmail } from '../../../lib/email-template';
 
 export const runtime = 'nodejs';
 
@@ -56,21 +57,13 @@ function getMissingSmtpKeys(config) {
     .map(([key]) => key);
 }
 
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
-}
-
 function validatePayload(payload) {
   const firstName = String(payload?.firstName || '').trim();
   const lastName = String(payload?.lastName || '').trim();
   const email = String(payload?.email || '').trim();
   const website = String(payload?.website || '').trim();
   const message = String(payload?.message || '').trim();
+  const locale = String(payload?.locale || 'ro').trim();
 
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -78,7 +71,7 @@ function validatePayload(payload) {
     return null;
   }
 
-  return { firstName, lastName, email, website, message };
+  return { firstName, lastName, email, website, message, locale };
 }
 
 export async function POST(request) {
@@ -241,26 +234,13 @@ export async function POST(request) {
   });
 
   const fullName = `${payload.firstName} ${payload.lastName}`.trim();
-
-  const textBody = [
-    'Yeni iletisim formu mesaji alindi.',
-    '',
-    `Ad Soyad: ${fullName}`,
-    `E-posta: ${payload.email}`,
-    `Website: ${payload.website || '-'}`,
-    '',
-    'Mesaj:',
-    payload.message,
-  ].join('\n');
-
-  const htmlBody = `
-    <h2>Yeni iletisim formu mesaji alindi</h2>
-    <p><strong>Ad Soyad:</strong> ${escapeHtml(fullName)}</p>
-    <p><strong>E-posta:</strong> ${escapeHtml(payload.email)}</p>
-    <p><strong>Website:</strong> ${escapeHtml(payload.website || '-')}</p>
-    <p><strong>Mesaj:</strong></p>
-    <p>${escapeHtml(payload.message).replaceAll('\n', '<br/>')}</p>
-  `;
+  const { subject, text, html } = buildContactEmail({
+    fullName,
+    email: payload.email,
+    website: payload.website,
+    message: payload.message,
+    locale: payload.locale,
+  });
 
   try {
     await transporter.verify();
@@ -269,9 +249,9 @@ export async function POST(request) {
       from: smtpFrom,
       to: smtpTo,
       replyTo: payload.email,
-      subject: `Yeni mesaj - ${fullName}`,
-      text: textBody,
-      html: htmlBody,
+      subject,
+      text,
+      html,
     });
 
     const response = Response.json({ ok: true, requestId });

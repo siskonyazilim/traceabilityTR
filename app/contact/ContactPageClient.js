@@ -12,7 +12,7 @@ import { useLanguage } from '../../components/i18n/LanguageProvider';
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 export default function ContactPageClient() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   const offices = [
     {
@@ -105,6 +105,7 @@ export default function ContactPageClient() {
         email: data.email,
         website: data.website || '',
         message: data.message,
+        locale,
         _hp: data._hp || '',
         csrfToken,
         submittedAt: formMountedAt.current,

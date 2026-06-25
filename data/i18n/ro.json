@@ -169,5 +169,13 @@
     "performanceTitle": "Performanță și indicatori cuprinzători",
     "performanceSubtitle": "Rezultatele noastre vorbesc pentru ei înșiși",
     "performanceCta": "Proiectele noastre de referință"
+  },
+  "email": {
+    "heading": "Mesaj nou primit prin formularul de contact",
+    "fullName": "Nume complet",
+    "emailLabel": "E-posta",
+    "websiteLabel": "Website",
+    "messageLabel": "Mesaj",
+    "footer": "Acest mesaj a fost trimis prin {{siteName}}."
   }
 }

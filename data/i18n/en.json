@@ -169,5 +169,13 @@
     "performanceTitle": "Performance and key metrics",
     "performanceSubtitle": "Our results speak for themselves",
     "performanceCta": "Our reference projects"
+  },
+  "email": {
+    "heading": "New message received via contact form",
+    "fullName": "Full Name",
+    "emailLabel": "Email",
+    "websiteLabel": "Website",
+    "messageLabel": "Message",
+    "footer": "This message was sent via {{siteName}}."
   }
 }
