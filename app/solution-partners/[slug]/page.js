@@ -74,6 +74,19 @@ export default async function PartnerDetailPage({ params }) {
   const nextPartner = localizedPartners[(currentIndex + 1) % totalPartners];
   const showStorySlider = Array.isArray(partner.storySlides) && partner.storySlides.length > 0;
 
+  const toCardSummary = (value) => {
+    const text = String(value || '').replace(/\s+/g, ' ').trim();
+    if (!text) {
+      return '';
+    }
+
+    const firstSentence = text.split(/[.!?]/)[0]?.trim() || text;
+    return firstSentence.length > 120 ? `${firstSentence.slice(0, 117)}...` : `${firstSentence}.`;
+  };
+
+  const prevSummary = toCardSummary(prevPartner.fullDescription || prevPartner.description);
+  const nextSummary = toCardSummary(nextPartner.fullDescription || nextPartner.description);
+
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
       <Container size="xl">
@@ -139,6 +152,9 @@ export default async function PartnerDetailPage({ params }) {
                       className="max-h-8 w-full object-contain"
                     />
                   </span>
+                  <p className="mt-2 max-w-xs text-sm text-gray-text leading-relaxed">
+                    {prevSummary}
+                  </p>
                 </div>
               </Link>
 
@@ -157,6 +173,9 @@ export default async function PartnerDetailPage({ params }) {
                       className="max-h-8 w-full object-contain"
                     />
                   </span>
+                  <p className="mt-2 ml-auto max-w-xs text-sm text-gray-text leading-relaxed">
+                    {nextSummary}
+                  </p>
                 </div>
                 <IconChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
               </Link>

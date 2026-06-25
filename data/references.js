@@ -10,7 +10,7 @@ export const referenceProjects = [
     gallery: [
       "/images/companies/maxion/DJI_0076_renk_op-scaled.webp",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Am dezvoltat un software de comunicare între PLC-ul Beckhoff și aplicatorul de paleți de pe linia de producție, permițând imprimarea automată a codurilor 2D pe baza rețetelor.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -43,7 +43,7 @@ export const referenceProjects = [
       "/images/companies/abalıoglu/stock-image-63418985-XL-min.jpg",
       "/images/companies/abalıoglu/uretimm.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Pentru Abalıoğlu Yağ, unul dintre cei mai importanți producători de ulei din Turcia, am dezvoltat o soluție integrată care asigură trasabilitatea paleților și etichetarea automată a cutiilor de carton pe parcursul operațiunilor de producție și logistică.",
     technologies: ["Pallet Traceability", "Automatic Label Printing", "ERP Integration", "Real-time Data Collection"],
     results: {
       efficiency: "45%",
@@ -67,7 +67,7 @@ export const referenceProjects = [
       "/images/companies/NuhAnkara/nuhunankara.jpg",
       "/images/companies/NuhAnkara/14016699cd.-1200x900-1.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Pentru Nuh'un Ankara, o companie din sectorul alimentar cu sediul în Ankara, am dezvoltat o soluție integrată care asigură trasabilitatea cartonului, a paleților și a transportului.",
     technologies: ["RFID", "GPS Tracking", "Blockchain"],
     results: {
       efficiency: "40%",
@@ -97,7 +97,7 @@ export const referenceProjects = [
       "/images/companies/Delphi/Delphi-Fabrika.jpg",
       "/images/companies/Delphi/delphi_dizel.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Pentru Delphi Technologies, am dezvoltat o soluție integrată de management al depozitului și trasabilitate, care oferă vizibilitate completă de la ieșirea din producție până la expediere.",
     technologies: ["Barcode", "Vision Systems", "IoT Integration"],
     results: {
       efficiency: "50%",
@@ -129,7 +129,7 @@ export const referenceProjects = [
       "/images/companies/PhilipMorris/1-1-1-uai-1598x799.jpg",
       "/images/companies/PhilipMorris/ege-bolgesi-philip-morris-sabancinin-ihracat-ussu-oluyor-81699-8122015134810.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "În această aplicație integrată cu SAP, se asigură funcționarea unității de ștanțare corecte pentru comanda de producție corectă. În cazul unei nepotriviri, funcționarea mașinii este împiedicată, iar notificările sunt trimise prin e-mail către utilizatorii desemnați.",
     technologies: ["RFID", "Marking Systems", "Real-time Tracking"],
     results: {
       efficiency: "38%",
@@ -159,7 +159,7 @@ export const referenceProjects = [
       "/images/companies/Delphi/delphi_dizel.jpg",
       "/images/companies/Delphi/Delphi-Fabrika.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Monitorizarea individuală a produselor pe linia de asamblare a rampelor de injecție, cu trasabilitate completă a fiecărui produs și integrare MES.",
     technologies: ["Barcode", "Assembly Tracking", "MES Integration"],
     results: {
       efficiency: "44%",
@@ -185,7 +185,7 @@ export const referenceProjects = [
     sector: "Alimente",
     image: "/images/companies/MeyDiego/original-1711372140-d0487a0a-bd81-48cb-aa7b-78ff087fad3d.webp",
     heroImage: "/images/companies/MeyDiego/original-1711372140-d0487a0a-bd81-48cb-aa7b-78ff087fad3d.webp",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Un sistem de control al camerei care inspectează etichetele de pe sticle în timpul procesului de ambalare, alertând operatorul în cazul lipsurilor sau erorilor.",
     technologies: ["Vision Systems", "Label Inspection", "Quality Control"],
     results: {
       efficiency: "39%",
@@ -217,7 +217,7 @@ export const referenceProjects = [
       "/images/companies/PhilipMorris/1-1-1-uai-1598x799.jpg",
       "/images/companies/PhilipMorris/ege-bolgesi-philip-morris-sabancinin-ihracat-ussu-oluyor-81699-8122015134810.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "În acest proiect, care utilizează 50.300 de etichete RFID, 109 capete de citire-scriere RFID fixe, 63 de panouri de control locale și 8 terminale portabile RFID, scopul este de a asigura trasabilitatea filtrelor de țigări în întreaga zonă de producție.",
     technologies: ["Filter Tracking", "RFID", "Process Monitoring"],
     results: {
       efficiency: "36%",
@@ -247,7 +247,7 @@ export const referenceProjects = [
       "/images/companies/Delphi/Delphi-Fabrika.jpg",
       "/images/companies/Delphi/delphi_dizel.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Trasabilitatea liniei de prototipuri Delphi Technologies, cu urmărire completă a componentelor și integrare cu sistemele de producție.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -268,7 +268,7 @@ export const referenceProjects = [
       "/images/companies/Tirsan/Tirsan-kardan.jpg",
       "/images/companies/Tirsan/DJI_0620.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Trasabilitatea produselor Tirsan, cu identificare individuală și urmărire pe parcursul întregului ciclu de fabricație.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -289,7 +289,7 @@ export const referenceProjects = [
       "/images/companies/Delphi/Delphi-Fabrika.jpg",
       "/images/companies/Delphi/delphi_dizel.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Integrare în Cloud a datelor de trasabilitate Delphi Technologies, permițând accesul centralizat la informațiile de producție și calitate.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -310,7 +310,7 @@ export const referenceProjects = [
       "/images/companies/Candy/eskisehirdeki-dev-yatirim-507_2.jpg",
       "/images/companies/Candy/sisecam-mersin-1.webp",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Trasabilitatea produselor în cadrul fabricii și rezultatele testelor bazate pe coduri de bare, împreună cu inspecțiile vizuale și procesele de retușare, au fost înregistrate. Au fost colectate date privind producția, timpii de nefuncționare și rebuturile, permițând monitorizarea în timp real a eficienței producției.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -331,7 +331,7 @@ export const referenceProjects = [
       "/images/companies/Tuborg/c13974-tuborg.jpg",
       "/images/companies/Tuborg/turk-tuborg-hakkinda_img_v3.webp",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Etichetare și trasabilitate automată a paleților pentru Turk Tuborg, cu integrare completă ERP și monitorizare în timp real a procesului de producție.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -352,7 +352,7 @@ export const referenceProjects = [
       "/images/companies/Delphi/Delphi-Fabrika.jpg",
       "/images/companies/Delphi/delphi_dizel.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Integrarea RFID-Datamatrix a ansamblului de șină pentru Delphi Technologies, asigurând trasabilitatea componentelor pe linia de asamblare.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -373,7 +373,7 @@ export const referenceProjects = [
       "/images/companies/Candy/eskisehirdeki-dev-yatirim-507_2.jpg",
       "/images/companies/Candy/sisecam-mersin-1.webp",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Colectarea datelor de testare și trasabilitatea pentru liniile de aragazuri Candy Hoover, cu monitorizare automată a calității și integrare cu sistemele de producție.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -394,7 +394,7 @@ export const referenceProjects = [
       "/images/companies/Delphi/delphi_dizel.jpg",
       "/images/companies/Delphi/Delphi-Fabrika.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Pentru Delphi Technologies, am implementat un flux de trasabilitate a vârfului de unealtă care înregistrează fiecare etapă de operare și leagă verificările de calitate de istoricul piesei.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -416,7 +416,7 @@ export const referenceProjects = [
       "/images/companies/PhilipMorris/1-1-1-uai-1598x799.jpg",
       "/images/companies/PhilipMorris/ege-bolgesi-philip-morris-sabancinin-ihracat-ussu-oluyor-81699-8122015134810.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Automatizare paletizare și etichetare automată pentru PMI, cu integrare completă a proceselor de ambalare și expediere.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -433,7 +433,7 @@ export const referenceProjects = [
     sector: "Industria auto",
     image: "/images/companies/Steckpole/1698577809204.jpg",
     heroImage: "/images/companies/Steckpole/1698577809204.jpg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Sistem de trasabilitate implementat pentru Stackpole, asigurând urmărirea completă a produselor pe parcursul procesului de fabricație.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -456,7 +456,7 @@ export const referenceProjects = [
       "/images/companies/Haier/20211022_162223-scaled-1.jpg",
       "/images/companies/Haier/haierin-eskisehirdeki-85-milyon-avroluk-yatirimi-1600-kisiye-istihdam-saglayacak_066df37.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "În proiectul nostru implementat la fabrica din Turcia a Haier, un lider global în domeniul electrocasnicelor, am transformat procesele de planificare, urmărire și control anterior manuale din liniile de asamblare în sisteme complet automatizate.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -477,7 +477,7 @@ export const referenceProjects = [
       "/images/companies/Nemak/Resim-2025-04-05T211710.704-1024x680.webp",
       "/images/companies/Nemak/Resim-2025-04-05T211739.798-1024x680.webp",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "În sistemul de trasabilitate Nemak pentru producția discretă, produsele semifinite sunt urmărite pe parcursul întregului proces de fabricație și logistică.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -499,7 +499,7 @@ export const referenceProjects = [
       "/images/companies/Haier/20211022_162223-scaled-1.jpg",
       "/images/companies/Haier/haierin-eskisehirdeki-85-milyon-avroluk-yatirimi-1600-kisiye-istihdam-saglayacak_066df37.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "În sistemul stabilit de Siskon, produsele de pe liniile de asamblare și reparații sunt trimise către linia de ambalare printr-un elevator. După ambalare, produsele sunt direcționate automat către linia de sortare.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -519,7 +519,7 @@ export const referenceProjects = [
     gallery: [
       "/images/companies/Orkide/Image1.jpg",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "În colaborare cu Orkide, una dintre companiile de top din Turcia în producția de uleiuri lichide, am implementat un proiect de urmărire a deficiențelor de conținut din cutii.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -541,7 +541,7 @@ export const referenceProjects = [
       "/images/companies/Bomi/iag-056.jpg",
       "/images/companies/Bomi/Video-Bomi.gif",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Pentru depozitul turcesc al BOMI Group – una dintre cele mai importante companii de logistică farmaceutică – am dezvoltat un sistem de citire multi-cod bazat pe cameră, care a automatizat operațiunile manuale anterioare din cadrul unității.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -563,7 +563,7 @@ export const referenceProjects = [
       "/images/companies/Bomi/iag-056.jpg",
       "/images/companies/Bomi/Video-Bomi.gif",
     ],
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Pentru depozitul turcesc al BOMI Group – una dintre cele mai importante companii de logistică farmaceutică – am dezvoltat un sistem de citire multi-cod bazat pe cameră, care a automatizat operațiunile manuale anterioare din cadrul unității.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -580,7 +580,7 @@ export const referenceProjects = [
     sector: "Industria auto",
     image: "/images/companies/Borgwarner/gaziemir-turkey-mc-header_5b5c3c8c-4c5a-42ec-9a7d-a037dac8b318.tmb-bw1380.webp",
     heroImage: "/images/companies/Borgwarner/gaziemir-turkey-mc-header_5b5c3c8c-4c5a-42ec-9a7d-a037dac8b318.tmb-bw1380.webp",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Toate produsele primite au fost scanate folosind un cititor de coduri bazat pe cameră, iar datele codurilor de bare au fost verificate încrucișat cu informațiile primite de la sistemul SAP și PLC pentru a preveni trecerea produselor neconforme.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -597,7 +597,7 @@ export const referenceProjects = [
     sector: "Industria auto",
     image: "/images/companies/Borgwarner/gaziemir-turkey-mc-header_5b5c3c8c-4c5a-42ec-9a7d-a037dac8b318.tmb-bw1380.webp",
     heroImage: "/images/companies/Borgwarner/gaziemir-turkey-mc-header_5b5c3c8c-4c5a-42ec-9a7d-a037dac8b318.tmb-bw1380.webp",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Ca soluție la cheie, sistemul a intrat în funcțiune cu integrarea completă a componentelor mecanice, automatizării și ERP. Funcționând sincron cu sistemul Oracle ERP, mașina efectuează marcarea automată cu laser.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -634,7 +634,7 @@ export const referenceProjects = [
     sector: "Industria auto",
     image: "/images/companies/Bosch/TTIC_ACILIS5.jpg",
     heroImage: "/images/companies/Bosch/TTIC_ACILIS5.jpg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "În aplicația dezvoltată pentru fabrica de termotehnică Bosch, capetele de citire/scriere RFID poziționate la ieșirea din depozit au asigurat că cărucioarele cu kituri, pregătite conform ordinului de lucru, au fost eliberate pentru producție.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -668,7 +668,7 @@ export const referenceProjects = [
     sector: "Electronice",
     image: "/images/companies/Bsh/5_1.jpg",
     heroImage: "/images/companies/Bsh/5_1.jpg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Integrarea cu sistemul de trasabilitate a fost realizată prin corelarea numerelor de serie ale produselor cu informațiile despre loturile cărucioarelor pentru rafturi din sticlă.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",
@@ -702,7 +702,7 @@ export const referenceProjects = [
     sector: "Electronice",
     image: "/images/companies/Bsh/5_1.jpg",
     heroImage: "/images/companies/Bsh/5_1.jpg",
-    description: "În cadrul proiectului, completarea automată a informațiilor despre rețetele specifice produselor a prevenit introducerea de date incorecte. Mai mult, deoarece sistemul a oferit informații anticipate despre produsele care ajung la linia de ambalare, aprovizionarea cu materialele necesare pentru liniile de ambalare a fost pregătită în avans, prevenind astfel opririle liniei.",
+    description: "Integrarea cu sistemul de trasabilitate a fost realizată prin potrivirea numerelor de serie ale produselor cu informațiile despre loturile de cărucioare pentru uși.",
     technologies: ["RFID", "Barcode", "ERP Integration"],
     results: {
       efficiency: "35%",

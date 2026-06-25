@@ -20,11 +20,11 @@ export default function ContactPageClient() {
       name: t('contactPage.offices.brasov.name', 'România - Brașov'),
       address: t(
         'contactPage.offices.brasov.address',
-        'Punct de lucru: Str. Turnului Nr.5,\nCladirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România'
+        'Punct de lucru: Str. Turnului Nr.5,\nClădirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România'
       ),
       phone: '+40 368 402 002',
       email: 'info@traceability.ro',
-      mapQuery: 'Dima Consulting Group, Strada Turnului 25, intrare B, 500152 Brașov, România',
+      mapQuery: '45.6653892,25.6152886',
     },
     {
       id: 2,
