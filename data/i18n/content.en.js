@@ -1,4 +1,4 @@
-export const contentEn = {
+﻿export const contentEn = {
   heroSlides: [
     {
       id: 1,
@@ -309,235 +309,235 @@ export const contentEn = {
     'maxion-inci-celik': {
       title: 'Maxion Inci Steel - Pallet Traceability',
       sector: 'Automotive',
-      description: 'In this project, automatic completion of product-specific recipe information prevented incorrect entries. In addition, because the system provided advance visibility of which products would arrive at which packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.',
+      description: 'We developed communication software between the Beckhoff PLC and the pallet applicator on the production line, enabling automatic printing of 2D codes based on recipes.',
       content: '<h2>Pallet Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect entries. In addition, because the system provided advance visibility of which products would arrive at which packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p><h3>Results</h3><ul><li>Efficiency +35%</li><li>Defects -60%</li><li>Productivity +40%</li></ul>',
     },
     'abalioglu-yag': {
       title: 'Abalioglu Oils - Traceability',
       sector: 'Food',
-      description: 'In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.',
+      description: 'For Abalioglu Yag, one of Turkey\'s leading edible oil producers, we developed an integrated solution that ensures pallet traceability and automatic carton labeling throughout production and logistics operations.',
       content: '<h2>Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p><h3>Results</h3><ul><li>Efficiency +45%</li><li>Defects -75%</li><li>Productivity +50%</li></ul>',
     },
     'nuhun-ankara': {
       title: "Nuh'un Ankara - Traceability",
       sector: 'Food',
-      description: 'In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.',
+      description: 'For Nuh\'un Ankara, a food-sector company based in Ankara, we developed an integrated solution that ensures carton, pallet, and shipment traceability.',
       content: '<h2>Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p><h3>Results</h3><ul><li>Efficiency +40%</li><li>Defects -70%</li><li>Productivity +35%</li></ul>',
     },
     'delphi-technologies': {
       title: 'Delphi Technologies - Warehouse Management',
       sector: 'Automotive',
-      description: 'In this project, automatic population of product-specific recipe information prevented incorrect data entry. In addition, because the system provided advance information about which products arrived at which packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.',
+      description: 'For Delphi Technologies, we developed an integrated warehouse management and traceability solution that provides full visibility from production output to shipment.',
       content: '<h2>Warehouse Management</h2><p>In this project, automatic population of product-specific recipe information prevented incorrect data entry. In addition, because the system provided advance information about which products arrived at which packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p><h3>Results</h3><ul><li>Efficiency +50%</li><li>Defects -80%</li><li>Productivity +55%</li></ul>',
     },
     'pmi-rfid': {
       title: 'PMI - RFID for Stamping',
       sector: 'Tobacco',
-      description: 'In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.',
+      description: 'In this SAP-integrated application, the correct stamping unit is enforced for the correct production order. In case of a mismatch, machine operation is blocked and email notifications are sent to designated users.',
       content: '<h2>RFID for Stamping</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p><h3>Results</h3><ul><li>Efficiency +38%</li><li>Errors -65%</li><li>Productivity +42%</li></ul>',
     },
     'delphi-monitorizare-individuala-rampa-injectie': {
       title: 'Delphi Technologies - Individual Product Tracking on Fuel-Rail Assembly',
       sector: 'Automotive',
-      description: 'In this project, automatic completion of product-specific recipe information prevented incorrect entries. Moreover, because the system provided advance information about products arriving at packaging lines, the required material supply for packaging lines was prepared in advance, preventing line stoppages.',
+      description: 'Individual product monitoring on the fuel-rail assembly line, with full traceability for each product and MES integration.',
       content: '<h2>Individual Product Monitoring on the Fuel-Rail Assembly Line</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect entries. Moreover, because the system provided advance information about products arriving at packaging lines, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p><h3>Results</h3><ul><li>Efficiency +44%</li><li>Defects -68%</li><li>Productivity +41%</li></ul>',
     },
     'mey-diageo-control-camera-etichete': {
       title: 'Mey Diageo - Camera-Based Label Control',
       sector: 'Food',
-      description: 'In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.',
+      description: 'A camera control system that inspects bottle labels during the packaging process and alerts the operator in case of missing labels or errors.',
       content: '<h2>Camera-Based Label Control System</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p><h3>Results</h3><ul><li>Efficiency +39%</li><li>Defects -63%</li><li>Productivity +37%</li></ul>',
     },
     'pmi-urmarirea-filtrelor': {
       title: 'PMI - Filter Tracking',
       sector: 'Tobacco',
-      description: 'In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.',
+      description: 'In this project, which uses 50,300 RFID tags, 109 fixed RFID read/write heads, 63 local control panels, and 8 handheld RFID terminals, the goal is to ensure cigarette filter traceability across the entire production area.',
       content: '<h2>Filter Tracking</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p><h3>Results</h3><ul><li>Efficiency +36%</li><li>Defects -59%</li><li>Productivity +34%</li></ul>',
     },
     'delphi-prototype-line-traceability': {
       title: "Delphi Technologies - Prototype Line Traceability",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Traceability for the Delphi Technologies prototype line, with full component tracking and integration with production systems.",
       content: "<h2>Prototype Line Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'tirsan-product-traceability': {
       title: "Tirsan - Product Traceability",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Tirsan product traceability, with individual identification and tracking throughout the entire manufacturing cycle.",
       content: "<h2>Product Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'delphi-cloud-traceability-data-integration': {
       title: "Delphi Technologies - Cloud Integration of Traceability Data",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Cloud integration of Delphi Technologies traceability data, enabling centralized access to production and quality information.",
       content: "<h2>Cloud Integration of Traceability Data</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'candy-hoover-test-data-production-efficiency-tracking': {
       title: "Candy Hoover - Test Data Collection and Production Efficiency Tracking",
       sector: "Electronics",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Product traceability within the factory and barcode-based test results, together with visual inspections and rework processes, were recorded. Production, downtime, and scrap data were collected, enabling real-time monitoring of production efficiency.",
       content: "<h2>Test Data Collection and Production Efficiency Tracking</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'turk-tuborg-automatic-pallet-labeling-traceability': {
       title: "Turk Tuborg - Automatic Pallet Labeling and Traceability",
       sector: "Food",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Automatic pallet labeling and traceability for Turk Tuborg, with full ERP integration and real-time monitoring of the production process.",
       content: "<h2>Automatic Pallet Labeling and Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'delphi-rfid-datamatrix-rail-assembly-integration': {
       title: "Delphi Technologies - RFID-DataMatrix Integration of Rail Assembly",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "RFID-DataMatrix integration of rail assembly for Delphi Technologies, ensuring component traceability on the assembly line.",
       content: "<h2>RFID-DataMatrix Integration of Rail Assembly</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'candy-hoover-test-data-cooker-lines-traceability': {
       title: "Candy Hoover - Test Data Collection and Traceability for Cooker Lines",
       sector: "Electronics",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Test data collection and traceability for Candy Hoover cooker lines, with automated quality monitoring and integration with production systems.",
       content: "<h2>Test Data Collection and Traceability for Cooker Lines</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'delphi-tool-tip-traceability': {
       title: "Delphi Technologies - Tool Tip Traceability",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "For Delphi Technologies, we implemented a tool-tip traceability flow that records each operation step and links quality checks to the part history.",
       content: "<h2>Tool Tip Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'pmi-palletizing-automation-automatic-labeling': {
       title: "PMI - Palletizing Automation and Automatic Labeling",
       sector: "Tobacco",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Palletizing automation and automatic labeling for PMI, with full integration of packaging and shipping processes.",
       content: "<h2>Palletizing Automation and Automatic Labeling</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'stackpole-traceability': {
       title: "Stackpole - Traceability",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "A traceability system implemented for Stackpole, ensuring complete product tracking throughout the manufacturing process.",
       content: "<h2>Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'haier-europe-assembly-line-installation-traceability': {
       title: "Haier Europe - Assembly Line Installation and Traceability",
       sector: "Electronics",
-      description: "In our project implemented at Haier's factory in Turkey, a global leader in home appliances, we transformed the previously manual planning, tracking, and control processes on assembly lines into fully automated systems. Siskon installed new assembly lines at Haier Europe's cooking appliance factory and completely renewed the conveyor systems. The entire assembly process was made digitally traceable. End-to-end traceability for all products was achieved based on unique IDs from the start of the assembly line to the warehouse.",
+      description: "In our project implemented at Haier's factory in Turkey, a global home-appliance leader, we transformed previously manual planning, tracking, and control processes on assembly lines into fully automated systems.",
       content: "<h2>Assembly Line Installation and Traceability</h2><p>We developed communication software between the Beckhoff PLC and the pallet applicator on the production line, enabling automatic printing of 2D codes based on recipes.</p><p>The codes were read automatically at each station, enabling the automatic loading of the corresponding recipes into the relevant PLCs.</p><p>On manual lines, integrating a PLC-controlled desktop printer enabled automatic extraction of reference data from DPM codes and automatic label printing.</p><p>Through the HMI panel, barcode and printer errors were visualized, and a manual reading capability was added via handheld scanners whenever needed.</p><p>As a result, product mix-ups were eliminated, and full traceability, automatic data flow, and operational efficiency were achieved.</p>",
     },
     'nemak-parts-traceability': {
       title: "NEMAK - Parts Traceability",
       sector: "Automotive",
-      description: "In NEMAK's traceability system for discrete production, semi-finished products are tracked throughout the entire manufacturing and logistics process. Each product is equipped with a Datamatrix code, which is scanned and linked to its container as it moves through operations.",
+      description: "In Nemak's traceability system for discrete production, semi-finished products are tracked throughout the entire manufacturing and logistics process.",
       content: "<h2>Parts Traceability</h2><p>In NEMAK's traceability system for discrete production, semi-finished products are tracked throughout the entire manufacturing and logistics process.</p><p>Each product is equipped with a Datamatrix code, which is scanned and linked to its container as it moves through operations. This ensures precise tracking of every container, while accumulated containers are transported efficiently to the warehouse.</p><p>The entire flow can be monitored in real time through dashboards, providing full transparency and operational control.</p>",
     },
     'haier-europe-sorting-line-installation-traceability': {
       title: "Haier Europe - Sorting Line Installation and Traceability",
       sector: "Electronics",
-      description: "In the system established by Siskon, products from assembly and repair lines are sent to the packaging line via an elevator. After packaging, products are automatically directed to the sorting line.",
-      content: "<h2>Sorting Line Installation and Traceability</h2><p>In the system established by Siskon, products from assembly and repair lines are sent to the packaging line via an elevator. After packaging, products are automatically directed to the sorting line.</p><p>Based on the assembly line plan, sorting lines are programmed automatically. Products scanned with barcodes on the sorting line are routed to the relevant lines.</p><p>Products accumulated on the lines are picked up by forklift operators and sent to the warehouse. The entire process can be monitored live through on-site Andon TVs.</p>",
+      description: "In the system established by SISKON, products from assembly and rework lines are sent to the packaging line via an elevator. After packaging, products are automatically directed to the sorting line.",
+      content: "<h2>Sorting Line Installation and Traceability</h2><p>In the system established by SISKON, products from assembly and repair lines are sent to the packaging line via an elevator. After packaging, products are automatically directed to the sorting line.</p><p>Based on the assembly line plan, sorting lines are programmed automatically. Products scanned with barcodes on the sorting line are routed to the relevant lines.</p><p>Products accumulated on the lines are picked up by forklift operators and sent to the warehouse. The entire process can be monitored live through on-site Andon TVs.</p>",
     },
     'orkide-quality-control-application': {
       title: "ORKIDE - Quality Control Application",
       sector: "Food",
-      description: "In collaboration with Orkide, one of Turkey's leading liquid oil producers, we implemented a project to track box content deficiencies.",
+      description: "In collaboration with Orkide, one of Turkey's leading liquid-oil producers, we implemented a project to track content deficiencies in boxes.",
       content: "<h2>Quality Control Application</h2><p>In collaboration with Orkide, one of Turkey's leading liquid oil producers, we implemented a project to track box content deficiencies.</p><p>By enabling box traceability on the production line, the system automatically checks for missing product quantities inside the boxes. In addition, for selected products, handle presence/absence checks were implemented to detect defective products.</p>",
     },
     'bomi-group-camera-based-multi-code-reading-system-tr': {
       title: "Bomi Group - Camera-Based Multi-Code Reading System",
       sector: "Automotive",
-      description: "Within the scope of the project, the automatic filling of product-specific recipe information prevented incorrect entries. In addition, since the system indicated in advance which products would go to which packaging line, the necessary material supplies for the packaging lines were prepared in advance, thus preventing line stoppages.",
+      description: "For BOMI Group's warehouse in Turkey, one of the leading pharmaceutical logistics companies, we developed a camera-based multi-code reading system that automated previously manual operations at the facility.",
       content: "<h2>Camera-Based Multi-Code Reading System</h2><p>Within the scope of the project, the automatic filling of product-specific recipe information prevented incorrect entries. In addition, since the system indicated in advance which products would go to which packaging line, the necessary material supplies for the packaging lines were prepared in advance, thus preventing line stoppages.</p>",
     },
     'bomi-group-camera-based-multi-code-reading-system': {
       title: "Bomi Group - Camera-Based Multi-Code Reading System",
       sector: "Automotive",
-      description: "Within the scope of the project, the automatic filling of product-specific recipe information prevented incorrect entries. In addition, since the system indicated in advance which products would go to which packaging line, the necessary material supplies for the packaging lines were prepared in advance, thus preventing line stoppages.",
+      description: "For BOMI Group's warehouse in Turkey, one of the leading pharmaceutical logistics companies, we developed a camera-based multi-code reading system that automated previously manual operations at the facility.",
       content: "<h2>Camera-Based Multi-Code Reading System</h2><p>Within the scope of the project, the automatic filling of product-specific recipe information prevented incorrect entries. In addition, since the system indicated in advance which products would go to which packaging line, the necessary material supplies for the packaging lines were prepared in advance, thus preventing line stoppages.</p>",
     },
     'borgwarner-sorting-barcode-control': {
       title: "BorgWarner - Sorting Barcode Control",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "All incoming products were scanned using a camera-based code reader, and barcode data was cross-checked with SAP and PLC system data to prevent non-conforming products from passing through.",
       content: "<h2>Sorting Barcode Control</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'borgwarner-laser-marking': {
       title: "BorgWarner - Laser Marking",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "As a turnkey solution, the system entered operation with full integration of mechanical, automation, and ERP components. Operating in sync with Oracle ERP, the machine performs automatic laser marking.",
       content: "<h2>Laser Marking</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'maxion-inci-celik-rfid-mold-tracking': {
       title: "Maxion Inci Steel - RFID Mold Tracking",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "In this project, SICK RFID equipment was used and integrated with a Siemens S7-1500 PLC. Mold and recipe matching was enabled to prevent incorrect mold usage.",
       content: "<h2>RFID Mold Tracking</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'bosch-trolley-tracking-rfid-gate': {
       title: "Bosch - Trolley Tracking with RFID Gate",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "In the application developed for the Bosch thermotechnology plant, RFID read/write heads positioned at the warehouse exit ensured that kit trolleys prepared according to work orders were released to production.",
       content: "<h2>Trolley Tracking with RFID Gate</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'mey-diageo-tracking-and-localization-project': {
       title: "Mey Diageo - Tracking and Localization Project",
       sector: "Food",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "As part of the Mey Diageo tracking and localization system renovation project, a robust, user-friendly, and flexible traceability system was successfully implemented.",
       content: "<h2>Tracking and Localization Project</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'bsh-glass-shelf-tracking': {
       title: "BSH - Glass Shelf Tracking",
       sector: "Electronics",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Integration with the traceability system was achieved by correlating product serial numbers with lot information from glass-shelf trolleys.",
       content: "<h2>Glass Shelf Tracking</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability': {
       title: "Ajinomoto (Kemal Kukrer) - Blockchain-Integrated Product Traceability",
       sector: "Food",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "At our client's factory in Eskisehir, which produces organic vinegar, bottling-stage organic vinegar parameters are collected and correlated with individual bottle numbers.",
       content: "<h2>Blockchain-Integrated Product Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'bsh-oven-door-traceability': {
       title: "BSH - Oven Door Traceability",
       sector: "Electronics",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "Integration with the traceability system was achieved by matching product serial numbers with lot information from door trolleys.",
       content: "<h2>Oven Door Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'haier-europe-single-product-traceability-oven-assembly-line': {
       title: "Haier Europe - Single-Product Traceability on the Oven Assembly Line",
       sector: "Electronics",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "We implemented a traceability system on the new oven assembly lines at Haier Europe's cooking-appliance factory in Turkey, a global leader in white-goods manufacturing.",
       content: "<h2>Single-Product Traceability on the Oven Assembly Line</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'bsh-assembly-line-traceability': {
       title: "BSH - Assembly Line Traceability",
       sector: "Electronics",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "In the project implemented using Sick RFGS Pro equipment, warehouse material-preparation processes, including bin preparation, were optimized based on requirements coming from the production area.",
       content: "<h2>Assembly Line Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'turk-demir-dokum-rfid-gate-with-digital-kanban': {
       title: "Turk Demir Dokum - RFID Gate with Digital Kanban",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "In the project implemented using Sick RFGS Pro equipment, warehouse material-preparation processes, including bin preparation, were optimized based on requirements from the production department.",
       content: "<h2>RFID Gate with Digital Kanban</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'pmi-barcode-gate': {
       title: "PMI - Barcode Gate",
       sector: "Tobacco",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "During the shipping process, a barcode-gate system installed at the exit ramp automatically reads all pallet labels.",
       content: "<h2>Barcode Gate</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'bsh-carriers-traceability': {
       title: "BSH - Carrier Traceability",
       sector: "Electronics",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "In the project carried out at the BSH oven factory, carriers mounted on oven glass were tracked and recorded based on basket ID.",
       content: "<h2>Carrier Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'phinia-laser-marking-machine-traceability-integration': {
       title: "Phinia - Laser Marking Machine and Traceability Integration",
       sector: "Automotive",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "To ensure traceability for each product, a laser marking machine was developed for Phinia to support marking and identification processes.",
       content: "<h2>Laser Marking Machine and Traceability Integration</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'duru-bulgur-product-carton-pallet-traceability': {
       title: "Duru Bulgur - Product-Carton-Pallet Traceability",
       sector: "Food",
-      description: "In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.",
+      description: "The Product | Carton | Pallet traceability application was successfully implemented on production lines at Duru Bulgur's Karaman factory.",
       content: "<h2>Product-Carton-Pallet Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
   },
@@ -571,13 +571,13 @@ export const contentEn = {
         <p>Food traceability plays a critical role in ensuring food safety, quality, and consumer satisfaction. Today, end consumers increasingly demand information about the origin and production processes of food products.</p>
 
         <h2>What is Food Traceability?</h2>
-        <p>Food traceability refers to the ability to track products throughout the supply chain. The FAO defines food traceability as “the recording and tracking of food products’ production, processing, and distribution processes” (FAO, 2015). This process enables consumers to know where their food comes from and how it was processed.</p>
+        <p>Food traceability refers to the ability to track products throughout the supply chain. The FAO defines food traceability as â€œthe recording and tracking of food productsâ€™ production, processing, and distribution processesâ€ (FAO, 2015). This process enables consumers to know where their food comes from and how it was processed.</p>
 
         <h2>Importance of Food Traceability for End Consumers</h2>
         <ul>
           <li><strong>Food Safety:</strong> Consumers want to avoid health risks associated with food safety issues. Traceability systems help quickly identify and address health concerns, facilitating efficient recall processes. For example, during the 2006 E. coli outbreak, a lack of traceability damaged the reputation of many brands (FDA, 2007). Food traceability systems are critical for mitigating the impact of such crises.</li>
-          <li><strong>Transparency and Trust:</strong> Consumers demand more information about food production processes. Studies show that brands offering transparency increase consumer trust. According to Nielsen’s 2015 report, 66% of consumers seek information about sustainable and ethical production (Nielsen, 2015). Traceability is a key tool in building this trust.</li>
-          <li><strong>Quality Perception:</strong> Food traceability ensures continuous monitoring of product quality. Consumers trust brands with high traceability more. Mintel’s 2020 report indicates that 60% of consumers are willing to pay more for high-quality products (Mintel, 2020), highlighting how traceability influences brand perception.</li>
+          <li><strong>Transparency and Trust:</strong> Consumers demand more information about food production processes. Studies show that brands offering transparency increase consumer trust. According to Nielsenâ€™s 2015 report, 66% of consumers seek information about sustainable and ethical production (Nielsen, 2015). Traceability is a key tool in building this trust.</li>
+          <li><strong>Quality Perception:</strong> Food traceability ensures continuous monitoring of product quality. Consumers trust brands with high traceability more. Mintelâ€™s 2020 report indicates that 60% of consumers are willing to pay more for high-quality products (Mintel, 2020), highlighting how traceability influences brand perception.</li>
           <li><strong>Social Responsibility:</strong> Consumers prefer brands with environmental and social responsibility. Traceability allows companies to transparently present their production processes and supply chains, enhancing their social responsibility perception. Studies show that 73% of consumers are inclined to purchase sustainable products (McKinsey, 2020).</li>
           <li><strong>Differentiation and Preference:</strong> In the highly competitive food industry, traceability provides a differentiation advantage. Consumers prefer products with high traceability, helping brands stand out in the market (Baker et al., 2018).</li>
         </ul>
@@ -593,19 +593,19 @@ export const contentEn = {
 
         <h2>SISKON Traceability Solutions</h2>
         <p>Food traceability is not only a safety tool for end consumers but also an indicator of quality and transparency. As consumers demand more information about food products, the importance of traceability continues to grow. Over the next five years, digitalization, increasing demands, regulatory changes, sustainability focus, and educational efforts will shape the evolution of food traceability systems. By effectively implementing traceability systems, companies can gain consumer trust and enhance brand value. In the future, food traceability will become even more critical, enabling consumers to make informed choices.</p>
-        <p><strong>Siskon Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
-        <p><strong>Siskon Traceability Solutions</strong> allow real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
+        <p><strong>SISKON Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
+        <p><strong>SISKON Traceability Solutions</strong> allow real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
 
         <h2>References</h2>
         <ul>
-          <li>Baker, M., et al. (2018). “The Role of Traceability in the Food Supply Chain: A Study of Market Benefits.” <em>International Journal of Supply Chain Management.</em></li>
+          <li>Baker, M., et al. (2018). â€œThe Role of Traceability in the Food Supply Chain: A Study of Market Benefits.â€ <em>International Journal of Supply Chain Management.</em></li>
           <li>FAO. (2015). <em>Guidelines for the Development of Traceability Systems for Food Products.</em> Food and Agriculture Organization.</li>
-          <li>FMI. (2021). “The Future of Food: Consumer Trends in 2021.” Food Marketing Institute.</li>
-          <li>Kamble, S. S., Gunasekaran, A., & Sharma, R. (2021). “Blockchain Technology for Sustainable Supply Chain Management: A Comprehensive Review.” <em>Sustainable Production and Consumption.</em></li>
-          <li>McKinsey. (2020). “The Consumer Demand for Sustainable Products.” McKinsey & Company.</li>
+          <li>FMI. (2021). â€œThe Future of Food: Consumer Trends in 2021.â€ Food Marketing Institute.</li>
+          <li>Kamble, S. S., Gunasekaran, A., & Sharma, R. (2021). â€œBlockchain Technology for Sustainable Supply Chain Management: A Comprehensive Review.â€ <em>Sustainable Production and Consumption.</em></li>
+          <li>McKinsey. (2020). â€œThe Consumer Demand for Sustainable Products.â€ McKinsey & Company.</li>
           <li>Mintel. (2020). <em>Consumer Trends in Food Safety: The Demand for Transparency.</em></li>
-          <li>Sustainable Food Trust. (2023). “The Future of Food: Sustainability and Transparency.” <em>Sustainable Food Trust Report.</em></li>
-          <li>Wang, Y., et al. (2022). “Regulatory Challenges in Food Traceability: A Global Perspective.” <em>Food Policy Journal.</em></li>
+          <li>Sustainable Food Trust. (2023). â€œThe Future of Food: Sustainability and Transparency.â€ <em>Sustainable Food Trust Report.</em></li>
+          <li>Wang, Y., et al. (2022). â€œRegulatory Challenges in Food Traceability: A Global Perspective.â€ <em>Food Policy Journal.</em></li>
         </ul>
       `,
       category: 'News',
@@ -617,7 +617,7 @@ export const contentEn = {
         <p>Food traceability plays a critical role in ensuring food safety, quality, and consumer satisfaction. Today, end consumers increasingly demand information about the origin and production processes of food products.</p>
 
         <h2>What is Food Traceability?</h2>
-        <p>Food traceability refers to the ability to track products throughout the supply chain. The FAO defines food traceability as “the recording and tracking of food products' production, processing, and distribution processes” (FAO, 2015). This process enables consumers to know where their food comes from and how it was processed.</p>
+        <p>Food traceability refers to the ability to track products throughout the supply chain. The FAO defines food traceability as â€œthe recording and tracking of food products' production, processing, and distribution processesâ€ (FAO, 2015). This process enables consumers to know where their food comes from and how it was processed.</p>
 
         <h2>Importance of Food Traceability for End Consumers</h2>
         <ul>
@@ -639,19 +639,19 @@ export const contentEn = {
 
         <h2>SISKON Traceability Solutions</h2>
         <p>Food traceability is not only a safety tool for end consumers but also an indicator of quality and transparency. As consumers demand more information about food products, the importance of traceability continues to grow. Over the next five years, digitalization, increasing demands, regulatory changes, sustainability focus, and educational efforts will shape the evolution of food traceability systems. By effectively implementing traceability systems, companies can gain consumer trust and enhance brand value. In the future, food traceability will become even more critical, enabling consumers to make informed choices.</p>
-        <p><strong>Siskon Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
-        <p><strong>Siskon Traceability Solutions</strong> allow real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
+        <p><strong>SISKON Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
+        <p><strong>SISKON Traceability Solutions</strong> allow real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
 
         <h2>References</h2>
         <ul>
-          <li>Baker, M., et al. (2018). “The Role of Traceability in the Food Supply Chain: A Study of Market Benefits.” <em>International Journal of Supply Chain Management</em>.</li>
+          <li>Baker, M., et al. (2018). â€œThe Role of Traceability in the Food Supply Chain: A Study of Market Benefits.â€ <em>International Journal of Supply Chain Management</em>.</li>
           <li>FAO. (2015). <em>Guidelines for the Development of Traceability Systems for Food Products</em>. Food and Agriculture Organization.</li>
-          <li>FMI. (2021). “The Future of Food: Consumer Trends in 2021.” Food Marketing Institute.</li>
-          <li>Kamble, S. S., Gunasekaran, A., & Sharma, R. (2021). “Blockchain Technology for Sustainable Supply Chain Management: A Comprehensive Review.” <em>Sustainable Production and Consumption</em>.</li>
-          <li>McKinsey. (2020). “The Consumer Demand for Sustainable Products.” McKinsey & Company.</li>
+          <li>FMI. (2021). â€œThe Future of Food: Consumer Trends in 2021.â€ Food Marketing Institute.</li>
+          <li>Kamble, S. S., Gunasekaran, A., & Sharma, R. (2021). â€œBlockchain Technology for Sustainable Supply Chain Management: A Comprehensive Review.â€ <em>Sustainable Production and Consumption</em>.</li>
+          <li>McKinsey. (2020). â€œThe Consumer Demand for Sustainable Products.â€ McKinsey & Company.</li>
           <li>Mintel. (2020). <em>Consumer Trends in Food Safety: The Demand for Transparency</em>.</li>
-          <li>Sustainable Food Trust. (2023). “The Future of Food: Sustainability and Transparency.” <em>Sustainable Food Trust Report</em>.</li>
-          <li>Wang, Y., et al. (2022). “Regulatory Challenges in Food Traceability: A Global Perspective.” <em>Food Policy Journal</em>.</li>
+          <li>Sustainable Food Trust. (2023). â€œThe Future of Food: Sustainability and Transparency.â€ <em>Sustainable Food Trust Report</em>.</li>
+          <li>Wang, Y., et al. (2022). â€œRegulatory Challenges in Food Traceability: A Global Perspective.â€ <em>Food Policy Journal</em>.</li>
         </ul>
       `,
       category: 'News',
@@ -685,8 +685,8 @@ export const contentEn = {
 
         <h2>SISKON Traceability Solutions</h2>
         <p>Food traceability has become an indispensable element of modern food production and distribution processes. Product, carton, and pallet-level traceability not only ensures legal compliance and quality control but also enhances operational efficiency and minimizes food safety risks. Therefore, it is crucial for all businesses operating in the food industry to establish and continuously update effective traceability systems.</p>
-        <p><strong>Siskon Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
-        <p><strong>Siskon Traceability Products</strong> allow real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
+        <p><strong>SISKON Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
+        <p><strong>SISKON Traceability Products</strong> allow real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
         <p>With the motto <strong>"Continuous Control, Zero Errors"</strong>, we ensure end-to-end digital traceability for your business.</p>
       `,
       category: 'News',
@@ -898,8 +898,8 @@ export const contentEn = {
         <p>Now that we are ready to mark the product, the second critical step is ensuring the codes are scanned before each operation. We will discuss this in more detail in our next blog post.</p>
 
         <h2>SISKON Traceability Solutions</h2>
-        <p>With <strong>Siskon Traceability Solutions</strong>, you can manage all your production processes from a single platform.</p>
-        <p><strong>Siskon Traceability Products</strong> enable real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
+        <p>With <strong>SISKON Traceability Solutions</strong>, you can manage all your production processes from a single platform.</p>
+        <p><strong>SISKON Traceability Products</strong> enable real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
         <p>With the motto <strong>"Continuous Control, Zero Errors"</strong>, we ensure end-to-end digital traceability for your business.</p>
       `,
       category: 'News',
@@ -934,8 +934,8 @@ export const contentEn = {
         <p>In addition to these benefits, regulations in some industries mandate traceability systems. Sectors like healthcare and pharmaceuticals, which directly impact human health, lead the way in this regard. However, new regulations indicate that many other industries will follow suit.</p>
 
         <h2><strong>SISKON Traceability Solutions</strong></h2>
-        <p><strong>Siskon Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
-        <p><strong>Siskon Traceability Products</strong> allow real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
+        <p><strong>SISKON Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
+        <p><strong>SISKON Traceability Products</strong> allow real-time monitoring of production processes, historical reporting, and analytical measurements by collecting data from test results, quality measurements, materials used, set and actual process data, visual inspections, repairs, and sampling stations. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
         <p>With the motto <strong>"Continuous Control, Zero Errors"</strong>, we ensure end-to-end digital traceability for your business.</p>
       `,
       category: 'News',
@@ -955,8 +955,8 @@ export const contentEn = {
         <p>As electronics have become a critical component in industries such as automotive, white goods, and aerospace, the reliability of electronic products is paramount. In cases of potential failures in final products, determining responsibility for the failure must be assessed quickly. Suppliers are often seen as the source of such errors. Compliance with agreed-upon rules and procedures protects suppliers by proving that no errors or deviations occurred in the production of a defective product. Traceability data meets these requirements instantly, safeguarding suppliers from costly legal disputes.</p>
 
         <h2><strong>How Do I Track a Product? SISKON Traceability Solutions</strong></h2>
-        <p><strong>Siskon Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
-        <p><strong>Siskon Traceability Products</strong> electronically link test results, measurements, materials used, set and actual process data, visual inspections, repairs, and data from sampling stations to individual products based on serial numbers. This enables real-time monitoring of production processes, historical reporting, and analytical measurements. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
+        <p><strong>SISKON Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
+        <p><strong>SISKON Traceability Products</strong> electronically link test results, measurements, materials used, set and actual process data, visual inspections, repairs, and data from sampling stations to individual products based on serial numbers. This enables real-time monitoring of production processes, historical reporting, and analytical measurements. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
         <p>With the motto <strong>"Continuous Control, Zero Errors"</strong>, we ensure end-to-end digital traceability for your business.</p>
         <p><strong>Keywords</strong>: Industry 4.0, Traceability, What is Traceability?, Traceability Definition</p>
       `,
@@ -976,34 +976,34 @@ export const contentEn = {
 
         <p>If needed, products can be added manually using the handheld terminal.</p>
 
-        <p>With our Camera-Based Multi-Code Reading System, Siskon has supported our solution partner BOMI in achieving significant advancements in warehouse management.</p>
+        <p>With our Camera-Based Multi-Code Reading System, SISKON has supported our solution partner BOMI in achieving significant advancements in warehouse management.</p>
 
         <p>This system, adaptable to various industries and applications, can add value to your business processes. Introduce your brand to us and confidently advance toward Industry 4.0.</p>
 
-        <p>Siskon continues to code the future.</p>
-        <p><strong>Keywords</strong>: Barcode, BOMI Group, Industry 4.0, Scanning, Siskon</p>
+        <p>SISKON continues to code the future.</p>
+        <p><strong>Keywords</strong>: Barcode, BOMI Group, Industry 4.0, Scanning, SISKON</p>
       `,
       category: 'News',
     },
     'tusiad-sd2-pioneering-digital-transformation-in-industry': {
-      title: 'TÜSİAD SD2: Pioneering Digital Transformation in Industry',
+      title: 'TÃœSÄ°AD SD2: Pioneering Digital Transformation in Industry',
       excerpt: 'Highlights from TUSIAD SD2, where technology users and suppliers collaborated to accelerate industrial digital transformation.',
       content: `
-        <p>As the first comprehensive program focused on digital transformation in industry, <strong>TÜSİAD SD2</strong> brought together 18 leading technology user companies with SME-scale technology suppliers.</p>
+        <p>As the first comprehensive program focused on digital transformation in industry, <strong>TÃœSÄ°AD SD2</strong> brought together 18 leading technology user companies with SME-scale technology suppliers.</p>
 
         <p>Matched companies will collaborate to develop joint solution dossiers. Success stories from the program will be shared with the public at the <strong>Digital Transformation Success Stories Ceremony</strong> held at the end of the year.</p>
 
-        <p>The second year of TÜSİAD's SD2 program, aimed at supporting digital transformation in industry, is underway. Sponsored by Vodafone Business (gold sponsor), Inventram (silver sponsor), and supported legally by Gün+Partners, the program connects technology user companies seeking digital transformation with the right solution partners while providing technology suppliers with a platform to showcase their solutions and validate them with customers.</p>
+        <p>The second year of TÃœSÄ°AD's SD2 program, aimed at supporting digital transformation in industry, is underway. Sponsored by Vodafone Business (gold sponsor), Inventram (silver sponsor), and supported legally by GÃ¼n+Partners, the program connects technology user companies seeking digital transformation with the right solution partners while providing technology suppliers with a platform to showcase their solutions and validate them with customers.</p>
 
         <p>On Tuesday, September 10, following application and pre-selection phases, 18 technology user companies and shortlisted micro, small, and medium-sized technology suppliers came together at the <strong>Industry-Technology Integration Program (STEP)</strong>. During the STEP event, matches were made between technology users and pre-selected technology suppliers. Over the coming period, matched companies will work together to prepare solution dossiers. The resulting success stories will be shared at the <strong>Digital Transformation Success Stories Ceremony</strong> at year-end. The event also featured panels with experts discussing topics ranging from public support to digital transformation tools.</p>
 
-        <p>The opening speech was delivered by TÜSİAD Vice President and Industrial Policies Roundtable President <strong>Bahadır Balkır</strong>. Highlighting the increasing uncertainties decision-makers face with the Fourth Industrial Revolution, Balkır stated: "Last year, we launched the TÜSİAD SD2 Program to address this. In its pilot year, we brought together 13 leading Turkish industrial companies with 14 technology suppliers, creating collaboration opportunities to advance Turkey's innovation ecosystem. This year, we are connecting 18 leading technology user companies with valuable technology suppliers."</p>
+        <p>The opening speech was delivered by TÃœSÄ°AD Vice President and Industrial Policies Roundtable President <strong>BahadÄ±r BalkÄ±r</strong>. Highlighting the increasing uncertainties decision-makers face with the Fourth Industrial Revolution, BalkÄ±r stated: "Last year, we launched the TÃœSÄ°AD SD2 Program to address this. In its pilot year, we brought together 13 leading Turkish industrial companies with 14 technology suppliers, creating collaboration opportunities to advance Turkey's innovation ecosystem. This year, we are connecting 18 leading technology user companies with valuable technology suppliers."</p>
 
-        <p>Following Balkır, TÜSİAD Board President <strong>Simone Kaslowski</strong> took the stage, emphasizing the intense competitive environment driven by digital transformation. "New technologies are creating a winner-takes-all dynamic in many industries, making winning more critical than ever. Collaboration between companies, governments, universities, and other stakeholders plays a vital role in the competitiveness of countries and companies," Kaslowski said. Highlighting the need for new leadership and management skills in digital transformation, he added: "Production quality and value are measured by factors like average internet speed, the number of collaborative robots per thousand workers, STEM skills, employee training, data security regulations, logistics performance, infrastructure quality, carbon emissions, and recycling rates. With advancements like 3D technology, advanced materials, and gene-editing technologies, the boundaries between digital and physical worlds are increasingly blurring. The TÜSİAD SD2 Program offers a vital opportunity to approach transformation holistically. It is gratifying to see the program, which began as a pilot last year, continue with increased participation this year."</p>
+        <p>Following BalkÄ±r, TÃœSÄ°AD Board President <strong>Simone Kaslowski</strong> took the stage, emphasizing the intense competitive environment driven by digital transformation. "New technologies are creating a winner-takes-all dynamic in many industries, making winning more critical than ever. Collaboration between companies, governments, universities, and other stakeholders plays a vital role in the competitiveness of countries and companies," Kaslowski said. Highlighting the need for new leadership and management skills in digital transformation, he added: "Production quality and value are measured by factors like average internet speed, the number of collaborative robots per thousand workers, STEM skills, employee training, data security regulations, logistics performance, infrastructure quality, carbon emissions, and recycling rates. With advancements like 3D technology, advanced materials, and gene-editing technologies, the boundaries between digital and physical worlds are increasingly blurring. The TÃœSÄ°AD SD2 Program offers a vital opportunity to approach transformation holistically. It is gratifying to see the program, which began as a pilot last year, continue with increased participation this year."</p>
 
-        <p><strong>Perihan İnci</strong>, President of the TÜSİAD SD2 Task Force, provided details about the program's processes. She noted that the TÜSİAD SD2 Program was created to address the need for a platform connecting technology users with suppliers. The program strengthens the technology user and supplier ecosystem, addresses user needs, supports SME technology production, and showcases best practices in digital transformation.</p>
+        <p><strong>Perihan Ä°nci</strong>, President of the TÃœSÄ°AD SD2 Task Force, provided details about the program's processes. She noted that the TÃœSÄ°AD SD2 Program was created to address the need for a platform connecting technology users with suppliers. The program strengthens the technology user and supplier ecosystem, addresses user needs, supports SME technology production, and showcases best practices in digital transformation.</p>
 
-        <p>In the closing speech, TÜSİAD Board President <strong>Simone Kaslowski</strong> said: "Starting today, some of our companies will begin working one-on-one with technology users. This will be a long and challenging but equally valuable and exciting process. I want to reiterate that there are no winners or losers in this program. Unmatched technology suppliers are now an integral part of this network. I believe this program has sparked the momentum Turkish industry needs. I am confident we will hear many inspiring success stories in the coming period."</p>
+        <p>In the closing speech, TÃœSÄ°AD Board President <strong>Simone Kaslowski</strong> said: "Starting today, some of our companies will begin working one-on-one with technology users. This will be a long and challenging but equally valuable and exciting process. I want to reiterate that there are no winners or losers in this program. Unmatched technology suppliers are now an integral part of this network. I believe this program has sparked the momentum Turkish industry needs. I am confident we will hear many inspiring success stories in the coming period."</p>
 
         <h2><strong>TUSIAD SD2 Program STEP Event by the Numbers</strong></h2>
         <ul>
@@ -1027,7 +1027,7 @@ export const contentEn = {
           <li>Ekoten with Eliar Elektronik</li>
           <li>Enerjisa Enerji with T4E Enerji</li>
           <li>Kastamonu Entegre with Buyutech</li>
-          <li>Kordsa with Siskon</li>
+          <li>Kordsa with SISKON</li>
           <li>Migros with AI Labs</li>
           <li>Nobel Ilac with Simsoft</li>
           <li>Norm Civata with Alp Otomasyon</li>
@@ -1039,13 +1039,13 @@ export const contentEn = {
         </ul>
 
         <p><strong>Source</strong>: <a href="https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html">https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html</a></p>
-        <p><strong>Keywords</strong>: Industry 4.0, Industrial Transformation, Siskon, TUSIAD SD2</p>
+        <p><strong>Keywords</strong>: Industry 4.0, Industrial Transformation, SISKON, TUSIAD SD2</p>
       `,
       category: 'News',
     },
     'siskon-at-the-future-industrial-technology-fair': {
-      title: 'Siskon at the Future Industrial Technology Fair',
-      excerpt: 'Siskon presented IoT, traceability and smart automation capabilities for end-to-end industrial digitalization at FIT.',
+      title: 'SISKON at the Future Industrial Technology Fair',
+      excerpt: 'SISKON presented IoT, traceability and smart automation capabilities for end-to-end industrial digitalization at FIT.',
       content: `
         <p>With our IoT solutions, we provide vertical integration between the production floor, ERP, and cloud systems. Using barcode, QR code, RFID, and Bluetooth technologies, our traceability solutions enable you to monitor and optimize all processes from raw material intake to shipment.</p>
 
@@ -1055,15 +1055,16 @@ export const contentEn = {
     },
     'traceability-presentation-at-industry-4-0-event': {
       title: 'Traceability Presentation at an Industry 4.0 Event',
-      excerpt: 'A focused Industry 4.0 session on traceability strategy, delivered jointly by Siskon and SICK experts.',
-      content: '<p>Join us for the presentation titled <strong>One Step Toward 4.0: Traceability</strong> by Siskon Sales Manager <strong>Cemal Tezcan</strong> and SICK Automatic Identification Systems Product Manager <strong>Berk Boyaci</strong>.</p>',
+      excerpt: 'A focused Industry 4.0 session on traceability strategy, delivered jointly by SISKON and SICK experts.',
+      content: '<p>Join us for the presentation titled <strong>One Step Toward 4.0: Traceability</strong> by SISKON Sales Manager <strong>Cemal Tezcan</strong> and SICK Automatic Identification Systems Product Manager <strong>Berk Boyaci</strong>.</p>',
       category: 'News',
     },
     'iot-dashboard-and-traceability-solutions-at-logistics-seminar': {
       title: 'IoT Dashboard and Traceability Solutions at Logistics Seminar',
-      excerpt: 'Siskon showcased IoT dashboard and traceability capabilities at the 7th logistics automation technologies seminar.',
+      excerpt: 'SISKON showcased IoT dashboard and traceability capabilities at the 7th logistics automation technologies seminar.',
       content: '<p>We showcased our <strong>IoT Dashboard</strong>, digital transformation, and traceability solutions at the <strong>7th Automation Technologies in Logistics Seminar</strong>, organized by the Logistics Association <strong>LODER</strong> and <strong>SICK</strong>.</p>',
       category: 'News',
     },
   },
 };
+
