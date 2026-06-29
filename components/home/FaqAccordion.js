@@ -123,7 +123,7 @@ export const FaqAccordion = () => {
                   className={`grid overflow-hidden relative z-10 transition-all duration-500 ease-out ${openId === faq.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
                 >
                   <div className="overflow-hidden">
-                    <p className={`px-6 md:px-8 pr-4 sm:pr-16 text-gray-text leading-8 text-sm md:text-base max-w-[62ch] transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
+                    <p className={`pl-6 md:pl-8 pr-4 text-gray-text leading-8 text-sm md:text-base text-justify transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
                       {faq.answer}
                     </p>
                   </div>
@@ -180,7 +180,7 @@ export const FaqAccordion = () => {
                   className={`grid overflow-hidden relative z-10 transition-all duration-500 ease-out ${openId === faq.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
                 >
                   <div className="overflow-hidden">
-                    <p className={`px-6 md:px-8 pr-4 sm:pr-16 text-gray-text leading-8 text-sm md:text-base max-w-[62ch] transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
+                    <p className={`pl-6 md:pl-8 pr-4 text-gray-text leading-8 text-sm md:text-base text-justify transition-all duration-500 ${openId === faq.id ? 'pb-6 md:pb-7 translate-y-0' : 'pb-0 -translate-y-2'}`}>
                       {faq.answer}
                     </p>
                   </div>
