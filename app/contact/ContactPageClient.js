@@ -24,7 +24,7 @@ export default function ContactPageClient() {
       ),
       phone: '+40 368 402 002',
       email: 'info@traceability.ro',
-      mapQuery: '45.6653892,25.6152886',
+      mapQuery: 'Strada Turnului 5, Scara 3, 500152 Brașov, Romania',
     },
     {
       id: 2,
