@@ -1,0 +1,566 @@
+export const contentTr = {
+  heroSlides: [
+    {
+      id: 1,
+      title: 'Akıllı Fabrikalar İçin Uçtan Uca İzlenebilirlik Çözümleri',
+      subtitle: 'Uygulama yaklaşımımız; risk yönetimini ve fırsat keşfini dengelerken değişen piyasa koşullarında güçlü performans gösteren dayanıklı operasyonlar inşa eder.',
+    },
+    {
+      id: 2,
+      title: 'Gerçek Zamanlı Kontrol, Sıfır Hata',
+      subtitle: 'Uyarlanabilir metodolojimiz, üretim zorluklarını veri odaklı kalite ve operasyonel görünürlük sayesinde ölçülebilir kazanımlara dönüştürür.',
+    },
+    {
+      id: 3,
+      title: 'POKA YOKE',
+      subtitle: 'Operasyonel hedefleri anlamak ve yüksek kalite standardını koruyarak özelleştirilmiş çözümler tasarlamak için ekiplerle yakın çalışırız.',
+    },
+  ],
+  faq: {
+    eyebrow: 'SSS',
+    title: 'İzlenebilirlik Hakkındaki Görüşlerimiz',
+    items: [
+      {
+        id: 1,
+        question: 'Endüstriyel Takip ve İzleme (Track & Trace) nedir?',
+        answer: 'Track & Trace; ürünlerin yaşam döngüsü boyunca ürün düzeyinden palet düzeyine kadar uçtan uca izlenmesini sağlayan kritik bir sistemdir. Her ürüne benzersiz bir tanımlayıcı (UID) verilir ve bu tanımlayıcı, üretim, ambalajlama, depolama ve dağıtımın her aşamasında dijital olarak kaydedilir. Fabrikalar bu sayede her bireysel birim için kaynak malzemeler, kalite parametreleri, test sonuçları, üretim hattı, sorumlu operatör ve zaman damgası gibi bilgilere anında erişebilir. Modern izlenebilirlik sistemleri verileri gerçek zamanlı olarak toplar ve analiz eder; tam görünürlük sağlar ve katı endüstriyel yönetmeliklere uyumu destekler.',
+      },
+      {
+        id: 2,
+        question: 'Agregasyon nedir ve neden kritiktir?',
+        answer: 'Agregasyon, modern izlenebilirliğin en kritik unsurlarından biridir. Bireysel ürünlerin benzersiz tanımlayıcılarının (UID), onları içeren büyük paketin tanımlayıcısına bağlandığı dijital bir hiyerarşi oluşturur ve ebeveyn-çocuk ilişkisi kurar. Standart hiyerarşi: Paket (üretim makinesinden) → Karton (ambalaj makinesinden) → Kasa (kasa doldurucudan) → Palet (paletleyiciden). Bu dijital ağaç sayesinde yalnızca palet lojistik barkodunu tarayarak içerdiği tüm bireysel paketler hakkında anında görünürlük elde edilir. Herhangi bir ilişkilendirme hatası (agregasyon uyuşmazlığı) hat durdurma ve ürün reddini tetikler. Doğru agregasyon olmadan bir izlenebilirlik sistemi güvenilir biçimde çalışamaz.',
+      },
+      {
+        id: 3,
+        question: 'Serileştirme ile toplu izleme arasındaki fark nedir?',
+        answer: 'Serileştirme, her bireysel ürüne tam anlamıyla benzersiz bir tanımlayıcı atayarak bağımsız birim düzeyinde izlenebilirlik sağlar. Bir UID (Benzersiz Tanımlayıcı) tipik olarak üretici kimliği, GTIN/SKU, benzersiz seri numarası, agregasyon referansı ve güvenlik için sağlama toplamı veya kriptografik imzayı içerir. GS1 SGTIN (serileştirilmiş ürünler için) ve GS1 SSCC (lojistik birimler için) yaygın olarak kullanılan standartlardır. Toplu izleme, aynı dönemde üretilen ürünleri üretim tarihi ve parti numarasına göre ortak bir lot tanımlayıcısı altında gruplar. Her iki yaklaşım birlikte çalışabilir: serileştirme hedefli geri çağırmalar ve sahteciliğe karşı kontrol için maksimum ayrıntı sağlarken lot izleme, tüketilen malzemelerin, ekipmanların ve toplu düzeydeki kalite parametrelerinin verimli yönetimini destekler.',
+      },
+      {
+        id: 4,
+        question: 'Kamera tabanlı doğrulama sistemleri nasıl çalışır?',
+        answer: 'Kamera tabanlı doğrulama sistemleri, ürün kodlarının kalitesini doğrulamak için vazgeçilmezdir. Lazer veya mürekkep püskürtme yoluyla bir kod yazıldıktan sonra, üretim hattındaki yüksek çözünürlüklü endüstriyel kameralar her kodu gerçek zamanlı olarak tarar ve okunabilirlik, kontrast, boyutlar ile veri doğruluğunu kontrol eder. Kamera kodu okuyamazsa (No Read), ürün derhal reddedilmek üzere işaretlenir ve hattan otomatik olarak çıkarılır. Bu sayede yalnızca tamamen okunabilir kodlara sahip ürünlerin dağıtıma devam etmesi sağlanır ve tedarik zincirinde yaşanabilecek sorunlar önlenir. Modern kamera sistemleri dakikada 2.000\'den fazla ürünü işleyebilir ve insan gözünden kaçan ince kontrast değişimleri ile kısmi Veri Matris hasarı dahil kusurları tespit edebilir.',
+      },
+      {
+        id: 5,
+        question: 'İzlenebilirlikte hangi kodlama teknolojileri kullanılır?',
+        answer: 'Track & Trace sistemlerinde üç temel kodlama teknolojisi vardır. Lazer kodlama, sarf maliyeti olmaksızın kalıcı işaretleme sunarak yüksek hızlı hatlar (dakikada 2.000\'den fazla ürün) için tercih edilir; ancak bazı yüzeylerde kontrast zorluğu yaşanabilir. Mürekkep püskürtme kodlama, mükemmel kontrast sunan daha büyük kodlar için ağırlıklı olarak lojistik düzeyinde (kasa ve paletler) kullanılır; ancak nozul tıkanmasını önlemek için bakım gerektirir ve çevre koşullarına duyarlıdır. Doğrudan 2D Veri Matris işaretleme, küçük alanda büyük veri hacmini depolayabilmesi ve kısmi hasar durumunda dahi okunabilirliğini koruması nedeniyle serileştirme için sektör standardıdır. Kodlar, ömür boyu okunabilirliği sağlamak amacıyla uygulama sonrasında doğrulama kameraları tarafından hemen kontrol edilir. Teknoloji seçimi hat hızına, ambalaj malzemesine ve dayanıklılık gereksinimlerine bağlıdır.',
+      },
+      {
+        id: 6,
+        question: 'ERP/MES entegrasyonu nasıl uygulanır?',
+        answer: 'İzlenebilirlik mimarisi, kurumsal BT altyapısıyla sıkı entegrasyon gerektirir. Standart akış, bir UID Üretecinin benzersiz tanımlayıcılar oluşturması ve bunları fiziksel işaretleme için yazıcılara göndermesiyle başlar. Endüstriyel kameralar ardından kodlama kalitesini doğrular. Merkezi bir Agregasyon Sunucusu, ürünler ve ambalajlar arasındaki tüm hiyerarşik bağlantıları yönetir. Veriler, ekipman iletişimi için OPC-UA ve gerçek zamanlı üretim izleme için MES/MII sistemleri (Üretim Uygulama Sistemleri) ile endüstriyel protokoller aracılığıyla ara katman yazılımı üzerinden iletilir. Son olarak veriler, REST API\'ları, SOAP web hizmetleri veya özel konektörler aracılığıyla ERP platformlarıyla (SAP, Oracle, Microsoft Dynamics) senkronize edilerek üretim emri, envanter, kalite ve sevkiyat verilerinin çift yönlü paylaşımı sağlanır. Bu uçtan uca entegrasyon, manuel veri girişini ortadan kaldırır ve kurum genelinde görünürlük sunar.',
+      },
+      {
+        id: 7,
+        question: 'Yönetmeliklere ve GS1 standartlarına uyum nasıl sağlanır?',
+        answer: 'Uluslararası yönetmeliklere uyum, Track & Trace sistemlerinin temelidir. Tütün sektöründe TTT (Tütün için Takip ve İzleme) ve AB TPD (Tütün Ürünleri Direktifi) gibi son derece katı yönetmelikler, fabrikadan satış noktasına kadar tam izlenebilirlik gerektirir. GS1 standartları teknik omurgayı oluşturur: bireysel ürünler için SGTIN (Serileştirilmiş Global Ticaret Kalem Numarası) ve lojistik birimler için SSCC (Seri Sevkiyat Konteyner Kodu). Sistemlerimiz, sahteciliği önlemek amacıyla sağlama toplamları ve kriptografik imzalar dahil olmak üzere GS1 uyumlu tanımlayıcıları otomatik olarak oluşturur. ISO 9001 için denetimler kapsamında süreçleri eksiksiz belgeliyoruz. IATF 16949 (otomotiv) için kritik bileşenlerin tam izlenebilirliğini sağlıyoruz. ISO 22000/HACCP (gıda güvenliği) için kritik parametreleri gerçek zamanlı izliyoruz. Tüm veriler yasal saklama gerekliliklerine göre arşivlenir ve denetim raporları otomatik olarak oluşturularak hazırlık süresi yüzde 70\'ten fazla azaltılır.',
+      },
+      {
+        id: 8,
+        question: 'Tam uygulama ne kadar sürer?',
+        answer: 'Tam Track & Trace uygulamasının süresi, üretim hattı karmaşıklığına ve gereken entegrasyon derinliğine bağlıdır. Tipik bir proje 4-8 ay sürer ve ayrıntılı süreç analizi ile akış haritalama, serileştirme/agregasyon mimari tasarımı, donanım kurulumu (lazer/mürekkep püskürtme yazıcılar, doğrulama kameraları, reddetme sistemleri), UID Üreteci ve Agregasyon sunucusu kurulumu, ekipmanlarla OPC-UA entegrasyonları, MES/ERP bağlantısı yapılandırması, tüm agregasyon senaryolarının gerçek ortamda kapsamlı testi, üretim ve BT ekipleri için kapsamlı eğitim ve canlıya geçiş sonrası optimizasyon desteğini içerir. Birden fazla hat veya karmaşık uyum gereksinimleri içeren büyük projeler 10-14 ay sürebilir. Seçilen hatların süregelen üretim üzerindeki etkiyi en aza indirirken daha erken operasyonel hale gelmesini sağlamak için aşamalı canlıya geçişi mümkün kılan modüler bir çalışma yaklaşımı kullanıyoruz.',
+      },
+    ],
+  },
+  technologyCapabilities: [
+    {
+      title: 'POKA YOKE',
+      description: 'İzlenebilirlik, pratik ve maliyet etkin kontroller aracılığıyla üretimdeki insan, makine ve tasarım hatalarına karşı kalıcı bir güvence olarak işlev görür.',
+    },
+    {
+      title: 'RFID ve Barkodlar',
+      description: 'RFID ve barkod teknolojileri, endüstriyel ve süreç otomasyon ortamlarında otomatik tanımlama ve güvenilir izlenebilirlik sağlar.',
+    },
+    {
+      title: 'Görüntü İşleme',
+      description: 'Görme tabanlı muayene, manuel muayene kapasitesinin ötesinde hız ve tutarlılıkla üretim hatalarını tespit eder.',
+    },
+  ],
+  performanceMetrics: {
+    labels: ['Memnun müşteri', 'Ülke', 'Global proje', 'Ekip üyesi'],
+  },
+  solutions: {
+    1: {
+      title: 'Tekli Ürün Takibi',
+      description: 'Her ürüne benzersiz bir kimlik atar ve her süreç adımında takip eder. İşaretleme teknolojisi malzemeye ve çalışma koşullarına göre seçilir; mürekkep püskürtme, termal transfer ve lazer gibi seçenekler mevcuttur.',
+    },
+    2: {
+      title: 'Lot / Parti Takibi',
+      description: 'Ürün düzeyinde takibin güç olduğu durumlarda idealdir. Lotlar üretim tarihi ve parti numarasından oluşturulur; ambalajlama, depolama ve dağıtım boyunca izlenir.',
+    },
+    3: {
+      title: 'Pick to Light',
+      description: 'Manuel montaj ve üretim adımları için görsel rehberlik sağlar. Doğru veya yanlış eylemler ışıklar ve isteğe bağlı sesli uyarılarla bildirilir.',
+    },
+    4: {
+      title: 'RTLS (Gerçek Zamanlı Konum Sistemleri)',
+      description: 'RTLS, kişilerin ve varlıkların gerçek zamanlı konumunu tanımlar ve izler. Etiketler, hassas konumları belirlemek amacıyla sabit ankerlerle iletişim kurar.',
+    },
+    5: {
+      title: 'Depo Yönetim Sistemleri',
+      description: 'WMS çözümleri, gerçek zamanlı operasyonel görünürlük ve envanter durumu ile gelen ve giden depo akışlarını kontrol eder.',
+    },
+    6: {
+      title: 'Entegrasyon',
+      description: 'Bağımsız yazılım sistemleri ve üretim platformları arasında güvenilir veri alışverişi için gereken entegrasyon katmanını sağlıyoruz.',
+    },
+  },
+  products: {
+    1: {
+      title: 'Hybrid Track and Trace',
+      description: 'Otomotiv standartlarına ilişkin gelişmiş gereksinimler dahil, dahili sistemler ve tedarik zinciri ortakları genelinde uçtan uca izlenebilirlik sunar.',
+    },
+    2: {
+      title: 'A+++ Track and Trace',
+      description: 'Beyaz eşya üretimi için tasarlanmış; montaj hatlarında ürün takibi, kritik bileşen takibi ve rota takibi modüllerine sahiptir.',
+    },
+    3: {
+      title: 'Organic Track and Trace',
+      description: 'Uyum gereksinimlerini desteklerken üretim ve dağıtım boyunca kaynak girdileri ve süreç durumlarını tanımlayan gıda izlenebilirlik çözümü.',
+    },
+    4: {
+      title: 'Capsule Track and Trace',
+      description: 'RFID, 1D barkod ve Veri Matris teknolojilerini kullanarak hammadde kabulünden depo teslimatına kadar farmasötik izlenebilirliği sağlar.',
+    },
+  },
+  solutionsDetail: {
+    'rfid-trasabilitate': {
+      title: 'Endüstriyel İzlenebilirlik için RFID',
+      h1: 'İzlenebilirlik ve Gerçek Zamanlı Kontrol için RFID Çözümleri',
+      description: 'Ürün izlenebilirliği, envanter yönetimi ve otomatik üretim iş akışları için kapsamlı RFID platformu.',
+      metaDescription: 'Üretim ve depolama operasyonlarında gerçek zamanlı takip ve yüzde 95\'e varan hata azaltımıyla endüstriyel RFID izlenebilirlik uygulaması.',
+      keywords: 'endüstriyel RFID izlenebilirlik, RFID üretim, RFID depo, otomatik tanımlama, RFID takip',
+      benefits: [
+        'Temassız otomatik tanımlama',
+        'Gerçek zamanlı ürün ve bileşen takibi',
+        'Yüzde 95\'e varan tanımlama hatası azaltımı',
+        'MES ve ERP entegrasyon hazırlığı',
+        'Yüksek verimli paralel okuma (saniyede 200\'den fazla etiket)',
+        'Zorlu endüstriyel ortamlarda dayanıklılık',
+      ],
+      useCases: [
+        {
+          title: 'Otomotiv - Bileşen İzlenebilirliği',
+          description: 'Bileşenleri mal kabulünden son montaja kadar otomatik sıra doğrulamasıyla takip edin.',
+        },
+        {
+          title: 'Depo - Envanter Yönetimi',
+          description: 'Büyük sayım süresi azaltımıyla otomatik sayım, palet takibi ve malzeme akışı optimizasyonu.',
+        },
+        {
+          title: 'Üretim - Kalite Kontrolü',
+          description: 'Montaj hatalarını önlemek ve eksiksiz ürün geçmişini korumak için otomatik süreç doğrulaması.',
+        },
+      ],
+      technologies: ['UHF RFID', 'NFC', 'Sabit ve mobil okuyucular', 'Endüstriyel antenler', 'Özel etiketler'],
+    },
+    'rtls-localizare': {
+      title: 'RTLS - Gerçek Zamanlı Konum',
+      h1: 'Hassas Tesis İçi Konum Yönetimi için RTLS Sistemi',
+      description: 'Endüstriyel tesislerde varlıkların, kişilerin ve malzemelerin takibi için Gerçek Zamanlı Konum Sistemi teknolojisi.',
+      metaDescription: 'Alt metre hassasiyetiyle canlı varlık konumu, üretim akışı optimizasyonu ve arama süresi azaltımı için RTLS kurulumu.',
+      keywords: 'RTLS, gerçek zamanlı konum, varlık takibi, UWB, iç mekan konumlandırma, depo takibi',
+      benefits: [
+        'Yüksek hassasiyetli konum takibi',
+        'Dijital tesis haritalarında canlı görünürlük',
+        'Malzeme akışı optimizasyon desteği',
+        'Varlık arama süresinde önemli azalma',
+        'Otomatik kısıtlı bölge uyarıları',
+        'Geçmiş hareket analitikleri',
+      ],
+      useCases: [
+        {
+          title: 'Üretim - Mobil Varlık Takibi',
+          description: 'Aletleri, ekipmanları ve taşıma arabalarını gerçek zamanlı konumlandırın ve boşa harcanan arama çabasını ortadan kaldırın.',
+        },
+        {
+          title: 'Depo - Akış Optimizasyonu',
+          description: 'Palet ve konteynerleri takip edin, optimal rotaları analiz edin ve tıkanıklığı azaltın.',
+        },
+        {
+          title: 'Lojistik - Konteyner Takibi',
+          description: 'Giriş/çıkış olaylarını, bekleme sürelerini ve gecikmiş hareket uyarılarını izleyin.',
+        },
+      ],
+      technologies: ['UWB', 'BLE', 'WiFi RTT', 'Ankerler ve etiketler', 'RTLS yazılımı'],
+    },
+    'wms-depozit': {
+      title: 'WMS - Depo Yönetim Sistemi',
+      h1: 'Akıllı Depo Operasyonları için WMS',
+      description: 'Envanter kontrolü, depo yönetimi ve uçtan uca izlenebilirlik için tam özellikli WMS yazılımı.',
+      metaDescription: 'Stok kontrolü, toplama optimizasyonu, lot izlenebilirliği ve ERP entegrasyonu için Depo Yönetim Sistemi.',
+      keywords: 'WMS, depo yönetim sistemi, envanter yönetimi, toplama optimizasyonu, lot izlenebilirliği',
+      benefits: [
+        'Eksiksiz gelen ve giden kontrolü',
+        'Optimize edilmiş depo alanı kullanımı',
+        'Rota optimizasyonlu akıllı toplama',
+        'Tam lot/seri izlenebilirliği',
+        'RFID ve barkod tarayıcı entegrasyonu',
+        'Gerçek zamanlı operasyonel raporlama',
+      ],
+      useCases: [
+        {
+          title: 'Merkezi Depo - Envanter Kontrolü',
+          description: 'Otomatik FIFO/FEFO ve düşük seviye uyarılarıyla eksiksiz stok yönetimi.',
+        },
+        {
+          title: 'Cross-Docking - Akış Optimizasyonu',
+          description: 'Depolama bağımlılığını azaltın ve doğrudan tedarikçiden müşteriye hareketi hızlandırın.',
+        },
+        {
+          title: 'E-ticaret - Hızlı Toplama',
+          description: 'Sevkiyat odaklı yürütme desteğiyle toplu ve dalgalı toplama.',
+        },
+      ],
+      technologies: ['Bulut/Yerinde', 'Mobil WMS', 'Sesli toplama', 'Entegrasyon API\'ları', 'BI panoları'],
+    },
+    'poka-yoke': {
+      title: 'POKA YOKE - Hata Önleme Sistemi',
+      h1: 'POKA YOKE - Üretim Hatalarını Önleme',
+      description: 'Sensörler ve gerçek zamanlı doğrulama mantığına dayalı otomatik insan/süreç hata önleme sistemi.',
+      metaDescription: 'Üretim hattlarında üretim hatası önleme, sıra doğrulama ve kusur önleme için POKA YOKE sistemi.',
+      keywords: 'poka yoke, hata önleme, sıfır hata, kalite kontrolü, üretim kalitesi',
+      benefits: [
+        'Hataları yayılmadan önler',
+        'Otomatik operasyon sırası doğrulaması',
+        'Anlık sapma uyarıları',
+        'Önemli yeniden işleme azaltma potansiyeli',
+        'Otomatik uyumluluk belgelenmesi',
+        'Operatörler için görsel rehberlik',
+      ],
+      useCases: [
+        {
+          title: 'Montaj - Bileşen Doğrulama',
+          description: 'Her montaj aşamasında doğru bileşeni, doğru adımı ve doğru parametreyi doğrulayın.',
+        },
+        {
+          title: 'Kalite - Yüzde 100 Doğrulama',
+          description: 'Boyutlar, görsel kusurlar ve teknik şartname uygunluğu için otomatik kontroller.',
+        },
+        {
+          title: 'Ambalajlama - Hata Önleme',
+          description: 'Sevkiyat öncesinde ürün kimliğini, miktarı, etiketleri ve gerekli belgeleri doğrulayın.',
+        },
+      ],
+      technologies: ['Endüstriyel sensörler', 'Görü sistemleri', 'PLC entegrasyonu', 'IoT cihazları', 'HMI ekranları'],
+    },
+    'image-processing': {
+      title: 'Görüntü İşleme - Görü Kalite Kontrolü',
+      h1: 'Otomatik Kalite Kontrolü için Görüntü İşleme Sistemleri',
+      description: 'Kusur tespiti, hassas ölçüm ve tam üretim kalitesi kapsamı için makine görü teknolojisi.',
+      metaDescription: 'Yüksek verimlilik ve yüksek doğrulukta otomatik kusur tespiti ve kalite kontrolü için endüstriyel görüntü işleme.',
+      keywords: 'görüntü işleme, görü muayenesi, kusur tespiti, otomatik kalite kontrolü, makine görüsü',
+      benefits: [
+        'Yüzde 100 üretim muayene kapsamı',
+        'İnsan görsel sınırlarının ötesinde tespit',
+        'Yüksek hassasiyetli ölçümler',
+        'Yüksek verimli muayene kapasitesi',
+        'Birim başına görüntü belgesi',
+        'Ortaya çıkan kusur türleri için yapay zeka tabanlı adaptasyon',
+      ],
+      useCases: [
+        {
+          title: 'Otomotiv - Kaynak Muayenesi',
+          description: 'Gözeneklilik, çatlaklar ve geometrik uygunluk için otomatik kaynak kalite kontrolleri.',
+        },
+        {
+          title: 'Gıda - Ambalaj Muayenesi',
+          description: 'Conta bütünlüğünü, dolum seviyesini, etiket varlığını ve lot kodu doğruluğunu doğrulayın.',
+        },
+        {
+          title: 'Elektronik - PCB Muayenesi',
+          description: 'Bileşen yerleşimini, polariteyi ve lehim kalitesini otomatik olarak kontrol edin.',
+        },
+      ],
+      technologies: ['Endüstriyel kameralar', 'Yapay Zeka/Derin Öğrenme', 'Özel aydınlatma', 'Görü yazılımı', 'Uç bilişim'],
+    },
+    'integrare-sisteme': {
+      title: 'MES ve ERP Sistem Entegrasyonu',
+      h1: 'İzlenebilirliğin MES ve ERP ile Eksiksiz Entegrasyonu',
+      description: 'İzlenebilirlik platformlarını MES, ERP, WMS ve kurumsal uygulamalarla bağlayan entegrasyon hizmetleri.',
+      metaDescription: 'Güvenilir gerçek zamanlı senkronizasyon ve API tabanlı mimari ile MES, ERP, WMS ve SCADA için izlenebilirlik entegrasyonu.',
+      keywords: 'MES entegrasyonu, ERP entegrasyonu, API entegrasyonu, SAP entegrasyonu, sistem ara yazılımı',
+      benefits: [
+        'Sistemler arasında otomatik veri akışı',
+        'Manuel yeniden girişi ortadan kaldırır',
+        'Gerçek zamanlı senkronizasyon',
+        'Uçtan uca izlenebilirlik sürekliliği',
+        'Birleşik raporlama temeli',
+        'Eski sistem birlikte çalışabilirlik desteği',
+      ],
+      useCases: [
+        {
+          title: 'MES-ERP Entegrasyonu',
+          description: 'Üretim emirlerini, malzeme tüketimini, tamamlanmaları ve kalite verilerini senkronize edin.',
+        },
+        {
+          title: 'Çok Sistemli Pano',
+          description: 'Üretim, kalite, bakım ve lojistik kaynaklarında birleşik bir pano oluşturun.',
+        },
+        {
+          title: 'Tedarik Zinciri Görünürlüğü',
+          description: 'Tedarikçi olaylarından müşteri teslimat onayına kadar uçtan uca akış görünürlüğü sağlayın.',
+        },
+      ],
+      technologies: ['REST API\'ları', 'MQTT', 'OPC UA', 'SAP konektörleri', 'Veritabanı senkronizasyonu', 'Mesaj kuyrukları'],
+    },
+  },
+  references: {
+    'maxion-inci-celik': {
+      title: 'Maxion İnci Çelik - Palet İzlenebilirliği',
+      sector: 'Otomotiv',
+      description: 'Üretim hattında Beckhoff PLC ile palet uygulayıcı arasında iletişim yazılımı geliştirerek reçetelere dayalı 2D kod otomatik baskısını sağladık.',
+      content: '<h2>Palet İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış girişleri önledi. Ayrıca sistem, hangi ürünlerin hangi ambalaj hattına geleceğini önceden gösterdiğinden, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%35</li><li>Hata -%60</li><li>Üretkenlik +%40</li></ul>',
+    },
+    'abalioglu-yag': {
+      title: 'Abalıoğlu Yağ - İzlenebilirlik',
+      sector: 'Gıda',
+      description: 'Türkiye\'nin önde gelen bitkisel yağ üreticilerinden Abalıoğlu Yağ için, üretim ve lojistik operasyonları boyunca palet izlenebilirliği ve otomatik karton etiketlemeyi sağlayan entegre bir çözüm geliştirdik.',
+      content: '<h2>İzlenebilirlik</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%45</li><li>Hata -%75</li><li>Üretkenlik +%50</li></ul>',
+    },
+    'nuhun-ankara': {
+      title: "Nuh'un Ankara - İzlenebilirlik",
+      sector: 'Gıda',
+      description: 'Ankara merkezli gıda sektörü şirketi Nuh\'un Ankara için karton, palet ve sevkiyat izlenebilirliğini sağlayan entegre bir çözüm geliştirdik.',
+      content: '<h2>İzlenebilirlik</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%40</li><li>Hata -%70</li><li>Üretkenlik +%35</li></ul>',
+    },
+    'delphi-technologies': {
+      title: 'Delphi Technologies - Depo Yönetimi',
+      sector: 'Otomotiv',
+      description: 'Delphi Technologies için üretim çıktısından sevkiyata kadar tam görünürlük sağlayan entegre bir depo yönetimi ve izlenebilirlik çözümü geliştirdik.',
+      content: '<h2>Depo Yönetimi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik doldurulması yanlış veri girişini önledi. Ayrıca sistem, hangi ürünlerin hangi ambalaj hattına geldiğini önceden gösterdiğinden, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%50</li><li>Hata -%80</li><li>Üretkenlik +%55</li></ul>',
+    },
+    'pmi-rfid': {
+      title: 'PMI - Damgalama için RFID',
+      sector: 'Tütün',
+      description: 'SAP entegreli bu uygulamada, doğru üretim emri için doğru damgalama ünitesinin kullanılması zorunlu kılınmaktadır. Uyumsuzluk durumunda makine çalışması engellenir ve belirlenen kullanıcılara e-posta bildirimi gönderilir.',
+      content: '<h2>Damgalama için RFID</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%38</li><li>Hata -%65</li><li>Üretkenlik +%42</li></ul>',
+    },
+    'delphi-monitorizare-individuala-rampa-injectie': {
+      title: 'Delphi Technologies - Yakıt Rayı Montaj Hattında Bireysel Ürün Takibi',
+      sector: 'Otomotiv',
+      description: 'Yakıt rayı montaj hattında her ürün için tam izlenebilirlik ve MES entegrasyonuyla bireysel ürün izleme.',
+      content: '<h2>Yakıt Rayı Montaj Hattında Bireysel Ürün İzleme</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış girişleri önledi. Ayrıca sistem, ambalaj hatlarına gelen ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%44</li><li>Hata -%68</li><li>Üretkenlik +%41</li></ul>',
+    },
+    'mey-diageo-control-camera-etichete': {
+      title: 'Mey Diageo - Kamera Tabanlı Etiket Kontrolü',
+      sector: 'Gıda',
+      description: 'Ambalajlama sürecinde şişe etiketlerini inceleyen ve eksik etiket veya hata durumunda operatörü uyaran kamera kontrol sistemi.',
+      content: '<h2>Kamera Tabanlı Etiket Kontrol Sistemi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%39</li><li>Hata -%63</li><li>Üretkenlik +%37</li></ul>',
+    },
+    'pmi-urmarirea-filtrelor': {
+      title: 'PMI - Filtre Takibi',
+      sector: 'Tütün',
+      description: '50.300 RFID etiketi, 109 sabit RFID okuma/yazma kafası, 63 yerel kontrol paneli ve 8 elde taşınan RFID terminali kullanan bu projede amaç, tüm üretim alanında sigara filtresi izlenebilirliğini sağlamaktır.',
+      content: '<h2>Filtre Takibi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%36</li><li>Hata -%59</li><li>Üretkenlik +%34</li></ul>',
+    },
+    'delphi-prototype-line-traceability': {
+      title: 'Delphi Technologies - Prototip Hattı İzlenebilirliği',
+      sector: 'Otomotiv',
+      description: 'Delphi Technologies prototip hattı için tam bileşen takibi ve üretim sistemleriyle entegrasyon içeren izlenebilirlik.',
+      content: '<h2>Prototip Hattı İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'tirsan-product-traceability': {
+      title: 'Tirsan - Ürün İzlenebilirliği',
+      sector: 'Otomotiv',
+      description: 'Tüm üretim döngüsü boyunca bireysel tanımlama ve takip ile Tirsan ürün izlenebilirliği.',
+      content: '<h2>Ürün İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'delphi-cloud-traceability-data-integration': {
+      title: 'Delphi Technologies - İzlenebilirlik Verilerinin Bulut Entegrasyonu',
+      sector: 'Otomotiv',
+      description: 'Üretim ve kalite bilgilerine merkezi erişim sağlayan Delphi Technologies izlenebilirlik verilerinin bulut entegrasyonu.',
+      content: '<h2>İzlenebilirlik Verilerinin Bulut Entegrasyonu</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'candy-hoover-test-data-production-efficiency-tracking': {
+      title: 'Candy Hoover - Test Verisi Toplama ve Üretim Verimliliği Takibi',
+      sector: 'Elektronik',
+      description: 'Fabrika içi ürün izlenebilirliği ve barkod tabanlı test sonuçları, görsel muayeneler ve yeniden işleme süreçleriyle birlikte kaydedildi. Üretim, duruş ve hurda verileri toplandı; üretim verimliliğinin gerçek zamanlı izlenmesi sağlandı.',
+      content: '<h2>Test Verisi Toplama ve Üretim Verimliliği Takibi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'turk-tuborg-automatic-pallet-labeling-traceability': {
+      title: 'Türk Tuborg - Otomatik Palet Etiketleme ve İzlenebilirlik',
+      sector: 'Gıda',
+      description: 'Türk Tuborg için tam ERP entegrasyonu ve üretim sürecinin gerçek zamanlı izlenmesiyle otomatik palet etiketleme ve izlenebilirlik.',
+      content: '<h2>Otomatik Palet Etiketleme ve İzlenebilirlik</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'delphi-rfid-datamatrix-rail-assembly-integration': {
+      title: 'Delphi Technologies - Ray Montajının RFID-DataMatrix Entegrasyonu',
+      sector: 'Otomotiv',
+      description: 'Montaj hattında bileşen izlenebilirliğini sağlayan Delphi Technologies ray montajının RFID-DataMatrix entegrasyonu.',
+      content: '<h2>Ray Montajının RFID-DataMatrix Entegrasyonu</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'candy-hoover-test-data-cooker-lines-traceability': {
+      title: 'Candy Hoover - Ocak Hatları için Test Verisi Toplama ve İzlenebilirlik',
+      sector: 'Elektronik',
+      description: 'Candy Hoover ocak hatları için otomatik kalite izleme ve üretim sistemleriyle entegrasyon içeren test verisi toplama ve izlenebilirlik.',
+      content: '<h2>Ocak Hatları için Test Verisi Toplama ve İzlenebilirlik</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'delphi-tool-tip-traceability': {
+      title: 'Delphi Technologies - Takım Ucu İzlenebilirliği',
+      sector: 'Otomotiv',
+      description: 'Üretim kalitesi ve süreç güvenilirliğini artırmak amacıyla Delphi Technologies için takım ucu izlenebilirliği.',
+      content: '<h2>Takım Ucu İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'pmi-palletizing-automation-automatic-labeling': {
+      title: 'PMI - Paletleme Otomasyonu ve Otomatik Etiketleme',
+      sector: 'Tütün',
+      description: 'PMI için ambalajlama ve sevkiyat süreçlerinin tam entegrasyonuyla paletleme otomasyonu ve otomatik etiketleme.',
+      content: '<h2>Paletleme Otomasyonu ve Otomatik Etiketleme</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'stackpole-traceability': {
+      title: 'Stackpole - İzlenebilirlik',
+      sector: 'Otomotiv',
+      description: 'Üretim süreci boyunca eksiksiz ürün takibini sağlayan Stackpole için izlenebilirlik sistemi.',
+      content: '<h2>İzlenebilirlik</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'haier-europe-assembly-line-installation-traceability': {
+      title: 'Haier Europe - Montaj Hattı Kurulumu ve İzlenebilirlik',
+      sector: 'Elektronik',
+      description: 'Türkiye\'deki Haier fabrikasında yürütülen projemizde montaj hatlarındaki manuel planlama, takip ve kontrol süreçleri tamamen otomatik hale getirildi.',
+      content: '<h2>Montaj Hattı Kurulumu ve İzlenebilirlik</h2><p>Üretim hattındaki Beckhoff PLC ile palet etiketleyici arasında iletişim yazılımı geliştirdik; bu sayede reçetelere dayalı 2D kod otomatik olarak yazdırıldı.</p><p>Kodlar her istasyonda otomatik okunarak ilgili PLC\'lere karşılık gelen reçeteler otomatik yüklendi.</p><p>Manuel hatlarda PLC kontrollü masaüstü yazıcının entegrasyonu, DPM kodlarından referans verilerinin otomatik çıkarılmasını ve otomatik etiket yazdırılmasını sağladı.</p><p>HMI paneli üzerinden barkod ve yazıcı hataları görselleştirildi; gerektiğinde el tipi tarayıcılarla manuel okuma imkânı eklendi.</p><p>Sonuç olarak ürün karışması ortadan kalktı; tam izlenebilirlik, otomatik veri akışı ve operasyonel verimlilik sağlandı.</p>',
+    },
+    'nemak-parts-traceability': {
+      title: 'NEMAK - Parça İzlenebilirliği',
+      sector: 'Otomotiv',
+      description: 'Nemak\'ın kesikli üretim izlenebilirlik sisteminde yarı mamuller, tüm üretim ve lojistik süreci boyunca takip edilmektedir.',
+      content: '<h2>Parça İzlenebilirliği</h2><p>NEMAK\'ın kesikli üretim izlenebilirlik sisteminde yarı mamuller, tüm üretim ve lojistik süreci boyunca takip edilmektedir.</p><p>Her ürüne bir Datamatrix kodu yerleştirilir; operasyonlar arasında hareket ederken taranarak konteyneriyle ilişkilendirilir. Bu sayede her konteynerin hassas takibi sağlanırken birikmiş konteynerlerin depoya verimli nakliyesi gerçekleştirilir.</p><p>Tüm akış, panolar aracılığıyla gerçek zamanlı izlenebilir; tam şeffaflık ve operasyonel kontrol sağlanır.</p>',
+    },
+    'haier-europe-sorting-line-installation-traceability': {
+      title: 'Haier Europe - Sıralama Hattı Kurulumu ve İzlenebilirlik',
+      sector: 'Elektronik',
+      description: 'SISKON tarafından kurulan sistemde montaj ve yeniden işleme hatlarından gelen ürünler asansör aracılığıyla ambalaj hattına gönderilmekte; ambalajlama sonrası ürünler otomatik olarak sıralama hattına yönlendirilmektedir.',
+      content: '<h2>Sıralama Hattı Kurulumu ve İzlenebilirlik</h2><p>SISKON tarafından kurulan sistemde montaj ve tamir hatlarından gelen ürünler asansör aracılığıyla ambalaj hattına gönderilmekte; ambalajlama sonrası ürünler otomatik olarak sıralama hattına yönlendirilmektedir.</p><p>Montaj hattı planına göre sıralama hatları otomatik programlanmaktadır. Sıralama hattında barkodla taranan ürünler ilgili hatlara yönlendirilmektedir.</p><p>Hatlarda biriken ürünler forklift operatörleri tarafından alınarak depoya gönderilmektedir. Tüm süreç sahada bulunan Andon TV\'leri aracılığıyla canlı izlenebilmektedir.</p>',
+    },
+    'orkide-quality-control-application': {
+      title: 'ORKİDE - Kalite Kontrol Uygulaması',
+      sector: 'Gıda',
+      description: 'Türkiye\'nin önde gelen sıvı yağ üreticilerinden Orkide ile iş birliği yaparak kutulardaki içerik eksikliklerini takip etmeye yönelik bir proje hayata geçirdik.',
+      content: '<h2>Kalite Kontrol Uygulaması</h2><p>Türkiye\'nin önde gelen sıvı yağ üreticilerinden Orkide ile iş birliği yaparak kutu içeriği eksikliklerini takip etmeye yönelik bir proje hayata geçirdik.</p><p>Üretim hattında kutu izlenebilirliği sağlanarak sistem, kutular içindeki eksik ürün miktarlarını otomatik kontrol etmektedir. Ayrıca seçili ürünlerde sap varlığı/yokluğu kontrolleri uygulanarak hatalı ürünler tespit edilmektedir.</p>',
+    },
+    'bomi-group-camera-based-multi-code-reading-system-tr': {
+      title: 'Bomi Group - Kamera Tabanlı Çok Kodlu Okuma Sistemi',
+      sector: 'Otomotiv',
+      description: 'Önde gelen farmasötik lojistik şirketlerinden BOMI Group\'un Türkiye\'deki deposu için, tesiste önceden manuel olarak yürütülen operasyonları otomatikleştiren kamera tabanlı çok kodlu okuma sistemi geliştirildi.',
+      content: '<h2>Kamera Tabanlı Çok Kodlu Okuma Sistemi</h2><p>Proje kapsamında ürüne özgü reçete bilgisinin otomatik doldurulması yanlış girişleri önledi. Ayrıca sistem, hangi ürünlerin hangi ambalaj hattına gideceğini önceden belirttiğinden, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'bomi-group-camera-based-multi-code-reading-system': {
+      title: 'Bomi Group - Kamera Tabanlı Çok Kodlu Okuma Sistemi',
+      sector: 'Otomotiv',
+      description: 'Önde gelen farmasötik lojistik şirketlerinden BOMI Group\'un Türkiye\'deki deposu için, tesiste önceden manuel olarak yürütülen operasyonları otomatikleştiren kamera tabanlı çok kodlu okuma sistemi geliştirildi.',
+      content: '<h2>Kamera Tabanlı Çok Kodlu Okuma Sistemi</h2><p>Proje kapsamında ürüne özgü reçete bilgisinin otomatik doldurulması yanlış girişleri önledi. Ayrıca sistem, hangi ürünlerin hangi ambalaj hattına gideceğini önceden belirttiğinden, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'borgwarner-sorting-barcode-control': {
+      title: 'BorgWarner - Sıralama Barkod Kontrolü',
+      sector: 'Otomotiv',
+      description: 'Gelen tüm ürünler kamera tabanlı kod okuyucuyla tarandı; barkod verileri SAP ve PLC sistem verileriyle karşılaştırılarak uygunsuz ürünlerin geçişi engellendi.',
+      content: '<h2>Sıralama Barkod Kontrolü</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'borgwarner-laser-marking': {
+      title: 'BorgWarner - Lazer İşaretleme',
+      sector: 'Otomotiv',
+      description: 'Anahtar teslim çözüm olarak sistem, mekanik, otomasyon ve ERP bileşenlerinin tam entegrasyonuyla devreye alındı. Oracle ERP ile senkronize çalışan makine otomatik lazer işaretleme gerçekleştiriyor.',
+      content: '<h2>Lazer İşaretleme</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'maxion-inci-celik-rfid-mold-tracking': {
+      title: 'Maxion İnci Çelik - RFID Kalıp Takibi',
+      sector: 'Otomotiv',
+      description: 'Bu projede SICK RFID ekipmanı kullanılarak Siemens S7-1500 PLC ile entegrasyon sağlandı. Yanlış kalıp kullanımını önlemek için kalıp ve reçete eşleştirmesi etkinleştirildi.',
+      content: '<h2>RFID Kalıp Takibi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'bosch-trolley-tracking-rfid-gate': {
+      title: 'Bosch - RFID Kapı ile Araba Takibi',
+      sector: 'Otomotiv',
+      description: 'Bosch ısı teknolojisi fabrikası için geliştirilen uygulamada depo çıkışına konumlanan RFID okuma/yazma kafaları, iş emirlerine göre hazırlanan kit arabalarının üretime çıkarılmasını sağladı.',
+      content: '<h2>RFID Kapı ile Araba Takibi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'mey-diageo-tracking-and-localization-project': {
+      title: 'Mey Diageo - Takip ve Konumlandırma Projesi',
+      sector: 'Gıda',
+      description: 'Mey Diageo takip ve konumlandırma sistemi yenileme projesi kapsamında sağlam, kullanıcı dostu ve esnek bir izlenebilirlik sistemi başarıyla hayata geçirildi.',
+      content: '<h2>Takip ve Konumlandırma Projesi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'bsh-glass-shelf-tracking': {
+      title: 'BSH - Cam Raf Takibi',
+      sector: 'Elektronik',
+      description: 'Ürün seri numaralarının cam raf arabalarından elde edilen lot bilgileriyle ilişkilendirilmesi aracılığıyla izlenebilirlik sistemiyle entegrasyon sağlandı.',
+      content: '<h2>Cam Raf Takibi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability': {
+      title: 'Ajinomoto (Kemal Kükreer) - Blokzincir Entegreli Ürün İzlenebilirliği',
+      sector: 'Gıda',
+      description: 'Organik sirke üreten Eskişehir fabrikasında şişeleme aşamasındaki organik sirke parametreleri toplandı ve bireysel şişe numaralarıyla ilişkilendirildi.',
+      content: '<h2>Blokzincir Entegreli Ürün İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'bsh-oven-door-traceability': {
+      title: 'BSH - Fırın Kapısı İzlenebilirliği',
+      sector: 'Elektronik',
+      description: 'Ürün seri numaralarının kapı arabalarından elde edilen lot bilgileriyle eşleştirilmesi aracılığıyla izlenebilirlik sistemiyle entegrasyon sağlandı.',
+      content: '<h2>Fırın Kapısı İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'haier-europe-single-product-traceability-oven-assembly-line': {
+      title: 'Haier Europe - Fırın Montaj Hattında Tekli Ürün İzlenebilirliği',
+      sector: 'Elektronik',
+      description: 'Beyaz eşya üretiminde küresel lider Haier Europe\'un Türkiye\'deki pişirme cihazları fabrikasındaki yeni fırın montaj hatlarına izlenebilirlik sistemi kuruldu.',
+      content: '<h2>Fırın Montaj Hattında Tekli Ürün İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'bsh-assembly-line-traceability': {
+      title: 'BSH - Montaj Hattı İzlenebilirliği',
+      sector: 'Elektronik',
+      description: 'Sick RFGS Pro ekipmanı kullanılarak hayata geçirilen projede, üretim alanından gelen gereksinimlere dayalı olarak kutu hazırlama dahil depo malzeme hazırlama süreçleri optimize edildi.',
+      content: '<h2>Montaj Hattı İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'turk-demir-dokum-rfid-gate-with-digital-kanban': {
+      title: 'Türk Demir Döküm - Dijital Kanban ile RFID Kapı',
+      sector: 'Otomotiv',
+      description: 'Sick RFGS Pro ekipmanı kullanılarak hayata geçirilen projede, üretim departmanından gelen gereksinimlere dayalı olarak kutu hazırlama dahil depo malzeme hazırlama süreçleri optimize edildi.',
+      content: '<h2>Dijital Kanban ile RFID Kapı</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'pmi-barcode-gate': {
+      title: 'PMI - Barkod Kapı',
+      sector: 'Tütün',
+      description: 'Sevkiyat sürecinde çıkış rampasına kurulan barkod kapı sistemi, tüm palet etiketlerini otomatik olarak okumaktadır.',
+      content: '<h2>Barkod Kapı</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'bsh-carriers-traceability': {
+      title: 'BSH - Taşıyıcı İzlenebilirliği',
+      sector: 'Elektronik',
+      description: 'BSH fırın fabrikasında gerçekleştirilen projede fırın camına monte edilen taşıyıcılar, sepet kimliğine göre takip edildi ve kayıt altına alındı.',
+      content: '<h2>Taşıyıcı İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'phinia-laser-marking-machine-traceability-integration': {
+      title: 'Phinia - Lazer İşaretleme Makinesi ve İzlenebilirlik Entegrasyonu',
+      sector: 'Otomotiv',
+      description: 'Her ürünün izlenebilirliğini sağlamak amacıyla Phinia için işaretleme ve tanımlama süreçlerini destekleyen bir lazer işaretleme makinesi geliştirildi.',
+      content: '<h2>Lazer İşaretleme Makinesi ve İzlenebilirlik Entegrasyonu</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+    'duru-bulgur-product-carton-pallet-traceability': {
+      title: 'Duru Bulgur - Ürün-Karton-Palet İzlenebilirliği',
+      sector: 'Gıda',
+      description: 'Ürün | Karton | Palet izlenebilirlik uygulaması, Duru Bulgur\'un Karaman fabrikasındaki üretim hatlarında başarıyla hayata geçirildi.',
+      content: '<h2>Ürün-Karton-Palet İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+    },
+  },
+  partners: {
+    'sick': {
+      description: 'Sensör teknolojileri ve endüstriyel otomasyon alanında küresel lider.',
+      fullDescription: 'Sensör zekası, bağımsızlık, yenilik ve liderlik kimliğimizin temel mesajlarıdır. Kimlik, geçmiş ile gelecek arasındaki arayüzde kendini gösterir. İdealiniz, dünün ve bugünün ortasında yer bulur. Bu; güç, istek, talep ve vizyonu kapsar. Burada gelişen bir kurumsal kültür inşa edilir ve sorumluluk ile motivasyonu ilham veren geleceğe yönelik bir tasarım öngörülür.\n\nSICK\'in kurumsal ideallerine uygun olarak şirket, iç operasyonlarını bağımsızlık, yenilik ve liderlik temel değerleri üzerine kurar. Bu durum, şirketin yasal ve mali bağımsızlığını koruma, sürdürülebilir düşünce ve eylem ile uygun sosyal sorumluluğu üstlenme taahhüdüyle ortaya konur. SICK\'in başarısı, müşterilerimizin, tedarikçilerimizin, çalışanlarımızın ve kamuoyunun bize duyduğu güvene dayanır ve bu durum gelecekte de böyle kalmalıdır.',
+    },
+    'universal-robots': {
+      description: 'Erişilebilir otomasyon, insan-robot iş birliği ve öncü inovasyon kimliğimizin temel mesajlarıdır.',
+      fullDescription: 'Erişilebilir otomasyon, insan-robot iş birliği ve öncü inovasyon kimliğimizin temel mesajlarıdır. Kimlik, insan zekası ile robotik hassasiyet arasındaki arayüzde kendini gösterir. Operasyonel vizyonunuz, insanların robotlarla çalıştığı ancak robot gibi çalışmadığı bir dünyanın tam ortasında yer bulur. Bu; güven, çeviklik, teknolojik güçlenme ve geleceğe yönelik tasarımı kapsar. Burada gelişen bir iş birliği kültürü inşa edilir ve derin motivasyon ile endüstriyel dönüşümü ilham veren iş yerinin geleceği öngörülür.\n\nUniversal Robots, küresel operasyonlarını erişilebilirlik, sürdürülebilir etki ve pazarı şekillendiren liderlik temel değerleri üzerine kurar. Bu durum, şirketin dünya lider cobot öncüsü konumunu sürdürme, küresel operasyonlarında ileriye dönük bir ortam oluşturma ve derin sosyal ile etik sorumluluk üstlenme taahhüdüyle ortaya konur. Universal Robots\'un başarısı, endüstrilerin, otomasyon ortaklarının ve küresel iş gücünün verdiği güvene dayanır; bu güven, geleceği güvenle şekillendirmeye devam edecektir.',
+    },
+    'markem-imaje': {
+      description: 'Ürün zekası, tedarik zinciri bütünlüğü ve marka koruması kimliğimizin temel mesajlarıdır.',
+      fullDescription: 'Ürün zekası, tedarik zinciri bütünlüğü ve marka koruması kimliğimizin temel mesajlarıdır. Kimlik, operasyonel mükemmellik ile tüketici güveni arasındaki kesişim noktasında kendini gösterir. Vizyonunuz, sorunsuz izlenen tedarik zincirleri ve optimize üretim hatlarının tam ortasında yer bulur. Bu; verimlilik, yönetmelik uyumu, risk azaltımı ve küresel bağlantısallığı kapsar. Burada ileri görüşlü bir ambalaj zekası inşa edilir ve mutlak güvenliği ve marka sadakatini ilham veren birbirine bağlı bir ekosistem öngörülür.\n\nMarkem-Imaje, endüstriyel operasyonlarını bağlantı, koruma ve son teknoloji yenilik temel değerleri üzerine kurar. Bu durum, şirketin her kodun içindeki zekanın gücünü açığa çıkarma, çevre dostu sarf malzemeleri aracılığıyla karbon ayak izini azaltma ve dünya genelindeki üreticiler için kesintisiz çalışma süresi sağlama taahhüdüyle ortaya konur. Markem-Imaje\'nin başarısı, küresel ortakların, yerel üreticilerin ve dünyayı hareket ettiren endüstrilerin verdiği güvene dayanır; bu miras markaları güvenle geleceğe taşıyacaktır.',
+    },
+    'interroll': {
+      description: 'Sürdürülebilir lojistik ve verimli malzeme akışı çözümleri sunarak küresel endüstriyel rekabette fark yaratıyoruz.',
+      fullDescription: 'Sürdürülebilirlik, verimlilik ve yenilik kimliğimizin temel mesajlarıdır. Kimlik, operasyonel mükemmellik ile çevresel sorumluluk arasındaki kesişim noktasında kendini gösterir. Vizyonumuz, dünyanın dört bir yanındaki tesisleri yüksek performanslı ve sürdürülebilir operasyon merkezlerine dönüştürmektir. Yenilikçi konveyör ve depolama sistemlerimizle tedarik zincirlerini optimize ediyor, operasyonel verimliliği artırıyoruz.\n\nInterroll, küresel operasyonlarını sürdürülebilirlik, yenilik ve operasyonel mükemmellik temel değerleri üzerine kurar. Bu durum, şirketin lojistik sistemlerinin çevresel etkisini azaltma, müşterilere uzun vadeli değer sunma ve endüstrinin geleceğini şekillendirme taahhüdüyle ortaya konur. Interroll\'un başarısı, küresel ortakların, lojistik şirketlerinin ve endüstriyel operatörlerin verdiği güvene dayanır.',
+    },
+    'sewio': {
+      description: 'Gerçek zamanlı konum sistemleri alanında küresel lider; UWB tabanlı RTLS teknolojisiyle akıllı fabrikalar kuruyoruz.',
+      fullDescription: 'Mimari bağımsızlık, müşteri odaklı yenilik ve pazar liderliği kimliğimizin temel mesajlarıdır. Kimlik, teknolojik öncülük ile pratik endüstriyel uygulama arasındaki arayüzde kendini gösterir. Vizyonumuz, fabrika zeminlerini yüksek verimli ve akıllı operasyon alanlarına dönüştürmektir. UWB tabanlı RTLS çözümlerimizle milyonlarca metrekare, hiper verimli mekânlara dönüştürülmüştür.\n\nSewio, teknolojik operasyonlarını mimari bağımsızlık, müşteri odaklı yenilik ve pazar liderliği temel değerleri üzerine kurar. Bu durum, şirketin nihai UWB tabanlı RTLS sağlayıcısı konumunu sürdürme, milyonlarca metrekareyi hiper verimli alanlara dönüştürme ve endüstriyel güvenlik için derin sorumluluk üstlenme taahhüdüyle ortaya konur. Sewio\'nun başarısı, küresel ortakların, Fortune 500 şirketlerinin ve dünya genelindeki sistem entegratörlerinin verdiği güvene dayanır.',
+    },
+  },
+};

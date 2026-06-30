@@ -1,0 +1,184 @@
+{
+  "delphi-rfid-datamatrix-rail-assembly-integration": [
+    "Delphi Technologies / Integrarea RFID-Datamatrix a ansamblului de șină."
+  ],
+  "delphi-tool-tip-traceability": [
+    "Pentru Delphi Technologies, am implementat un flux de trasabilitate a vârfului de unealtă care înregistrează fiecare etapă de operare și leagă verificările de calitate de istoricul piesei.",
+    "Soluția a crescut vizibilitatea procesului pe linie și a permis analiza mai rapidă a cauzelor pentru abateri și acțiuni de retușare."
+  ],
+  "turk-tuborg-automatic-pallet-labeling-traceability": [
+    "Turk Tuborg / Etichetare și trasabilitate automată a paleților."
+  ],
+  "candy-hoover-test-data-production-efficiency-tracking": [
+    "Trasabilitatea produselor în cadrul fabricii și rezultatele testelor bazate pe coduri de bare, împreună cu inspecțiile vizuale și procesele de retușare, au fost înregistrate.",
+    "Au fost colectate date privind producția, timpii de nefuncționare și rebuturile, permițând monitorizarea în timp real a eficienței producției și afișarea instantanee a procentelor OEE prin unități TV Andon instalate la fața locului."
+  ],
+  "delphi-cloud-traceability-data-integration": [
+    "Delphi Technologies / Integrare în Cloud a Datelor de Trasabilitate."
+  ],
+  "tirsan-product-traceability": [
+    "Tirsan / Trasabilitatea produsului."
+  ],
+  "delphi-prototype-line-traceability": [
+    "Delphi Technologies / Trasabilitatea liniei de prototipuri."
+  ],
+  "pmi-urmarirea-filtrelor": [
+    "În acest proiect, care utilizează 50.300 de etichete RFID, 109 capete de citire-scriere RFID fixe, 63 de panouri de control locale și 8 terminale portabile RFID, scopul este de a asigura trasabilitatea filtrelor de țigări în întreaga zonă de producție.",
+    "Aplicația, concepută pentru a asigura utilizarea filtrului corect pentru produsul corect, va oferi, de asemenea, utilizatorilor rapoarte auxiliare, cum ar fi verificări ale datei de expirare, informații despre inventar și date de producție și consum bazate pe mașini.",
+    "Toate instrumentele pot fi monitorizate în timp real printr-un sistem SCADA dezvoltat cu .Net.",
+    "Integrat cu ERP, proiectul își propune să prevină potențialele erori de calitate și să asigure trasabilitatea filtrelor de la un capăt la altul."
+  ],
+  "mey-diageo-control-camera-etichete": [
+    "Un sistem de control al camerei care inspectează etichetele de pe sticle în timpul procesului de ambalare.",
+    "Principiu de funcționare:",
+    "Înainte de etapa finală de ambalare, verifică etichetele de pe sticle în cutii de diferite dimensiuni.",
+    "Dacă lipsește o sticlă sau există o sticlă fără etichetă în numărul prestabilit de sticle, alertează operatorul cu un avertisment sonor și oprește transportorul.",
+    "Operatorul efectuează verificările necesare.",
+    "Sistemul de control al camerei și transportorul rămân inactive până când avertismentul este resetat."
+  ],
+  "delphi-monitorizare-individuala-rampa-injectie": [
+    "Delphi Technologies / Monitorizarea individuală a produselor pe linia de asamblare a rampelor de injecție."
+  ],
+  "pmi-rfid": [
+    "În această aplicație integrată cu SAP, se asigură funcționarea unității de ștanțare corecte pentru comanda de producție corectă.",
+    "În cazul unei nepotriviri, funcționarea mașinii este împiedicată, iar notificările sunt trimise prin e-mail către utilizatorii desemnați."
+  ],
+  "delphi-technologies": [
+    "Pentru Delphi Technologies, am dezvoltat o soluție integrată de management al depozitului și trasabilitate, care oferă vizibilitate completă de la ieșirea din producție până la expediere.",
+    "În cadrul proiectului, mișcările de materiale la intrare și ieșire au fost digitalizate și urmărite prin identificare cu coduri de bare la nivel de carton, palet și locație de stocare.",
+    "Validarea automată a proceselor a redus erorile dependente de operator în fluxurile de picking, consolidare și livrare.",
+    "Colectarea datelor în timp real a permis monitorizarea centralizată a stocurilor, operațiunilor din depozit și statusului expedierilor dintr-un singur strat de control.",
+    "Integrarea ERP bidirecțională a asigurat sincronizarea datelor de comenzi, stocuri și expediere între operațiunile de depozit și sistemele enterprise.",
+    "Cu această soluție, Delphi a obținut execuție mai rapidă în depozit, reducerea erorilor de manipulare, acuratețe mai bună a stocurilor și trasabilitate operațională completă."
+  ],
+  "nemak-parts-traceability": [
+    "În sistemul de trasabilitate Nemak pentru producția discretă, produsele semifinite sunt urmărite pe parcursul întregului proces de fabricație și logistică.",
+    "Fiecare produs este echipat cu un cod Datamatrix, care este scanat și conectat la containerul său pe măsură ce se deplasează prin operațiuni. Acest lucru asigură urmărirea precisă a fiecărui container, în timp ce containerele acumulate sunt transportate eficient la depozit.",
+    "Întregul flux poate fi monitorizat în timp real prin intermediul tablourilor de bord, oferind transparență deplină și control operațional."
+  ],
+  "haier-europe-assembly-line-installation-traceability": [
+    "În proiectul nostru implementat la fabrica din Turcia a Haier, un lider global în domeniul electrocasnicelor, am transformat procesele de planificare, urmărire și control anterior manuale din liniile de asamblare în sisteme complet automatizate.",
+    "Siskon a instalat noi linii de asamblare la fabrica de aparate de gătit a Haier Europe și a reînnoit complet sistemele de transport. Întregul proces de asamblare a fost făcut urmăribil digital.",
+    "Trasabilitatea end-to-end a tuturor produselor a fost realizată pe baza unor ID-uri unice de la începutul liniei de asamblare până la depozit."
+  ],
+  "haier-europe-sorting-line-installation-traceability": [
+    "În sistemul stabilit de Siskon, produsele de pe liniile de asamblare și reparații sunt trimise către linia de ambalare printr-un elevator. După ambalare, produsele sunt direcționate automat către linia de sortare.",
+    "Pe baza planului liniei de asamblare, liniile de sortare sunt programate automat. Produsele scanate cu codul de bare pe linia de sortare sunt direcționate către liniile relevante.",
+    "Produsele acumulate pe linii sunt preluate de operatorii de stivuitor și trimise în depozit. Întregul proces poate fi monitorizat în direct prin intermediul televizoarelor Andon amplasate la fața locului."
+  ],
+  "bomi-group-camera-based-multi-code-reading-system-tr": [
+    "Pentru depozitul turcesc al BOMI Group – una dintre cele mai importante companii de logistică farmaceutică care operează în multe țări din întreaga lume – am dezvoltat un sistem de citire multi-cod bazat pe cameră, care a automatizat operațiunile manuale anterioare din cadrul unității.",
+    "În cadrul proiectului, trasabilitatea a fost asigurată prin integrarea ERP în etapa de pregătire a transportului. Fluxurile de lucru manuale care implicau scanarea manuală a mii de produse au fost complet automatizate după implementarea sistemului. Ca rezultat, timpul de pregătire a produsului pentru expediere s-a îmbunătățit cu aproximativ 80%."
+  ],
+  "bomi-group-camera-based-multi-code-reading-system": [
+    "Pentru depozitul turcesc al BOMI Group – una dintre cele mai importante companii de logistică farmaceutică care operează în multe țări din întreaga lume – am dezvoltat un sistem de citire multi-cod bazat pe cameră, care a automatizat operațiunile manuale anterioare din cadrul unității.",
+    "În cadrul proiectului, trasabilitatea a fost asigurată prin integrarea ERP în etapa de pregătire a transportului. Fluxurile de lucru manuale care implicau scanarea manuală a mii de produse au fost complet automatizate după implementarea sistemului. Ca rezultat, timpul de pregătire a produsului pentru expediere s-a îmbunătățit cu aproximativ 80%."
+  ],
+  "abalioglu-yag": [
+    "Pentru Abalıoğlu Yağ, unul dintre cei mai importanți producători de ulei din Turcia, am dezvoltat o soluție integrată care asigură trasabilitatea paleților și etichetarea automată a cutiilor de carton pe parcursul operațiunilor de producție și logistică.",
+    "În cadrul proiectului, a fost implementat un sistem de trasabilitate bazat pe paleți, etichetând fiecare palet cu un ID unic pentru a permite urmărirea de la producție până la expediere.",
+    "Transferul automat al ordinelor de producție către imprimantele de etichete a asigurat imprimarea etichetei corecte pe cutia de carton corectă, fără intervenția operatorului.",
+    "Colectarea datelor în timp real a permis monitorizarea centralizată a liniei de producție și a proceselor de expediere.",
+    "Integrarea ERP a asigurat sincronizarea completă între datele comenzilor, producției și expedierilor.",
+    "Cu această soluție, au fost atinse: trasabilitate 100% a paleților, proces de etichetare rapid și fără erori, eficiență operațională sporită și vizibilitate în timp real a stocurilor și expedierilor în ERP."
+  ],
+  "nuhun-ankara": [
+    "Pentru Nuh'un Ankara, o companie din sectorul alimentar cu sediul în Ankara, am dezvoltat o soluție integrată care asigură trasabilitatea cartonului, a paleților și a transportului.",
+    "În cadrul proiectului, toate procesele, de la producție până la expediere, au fost făcute trasabile digital.",
+    "A fost implementat un sistem de coduri de bare/etichetare bazat pe carton și paleți, identificând în mod unic fiecare unitate de produs.",
+    "Integrarea bidirecțională ERP a asigurat sincronizarea automată a datelor de comandă, producție și expediere.",
+    "Urmărirea în timp real a transportului a permis raportarea ușoară a produsului care a fost expediat, cu ce vehicul și către ce client.",
+    "Cu infrastructura de colectare și raportare a datelor în timp real, operațiunile de producție, depozitare și logistică au devenit gestionabile dintr-o singură interfață. Cu această soluție s-au atins: trasabilitate 100%, gestionare rapidă și fără erori a transportului și urmărire ușoară înapoi în caz de returnări sau rechemări."
+  ],
+  "maxion-inci-celik": [
+    "Am dezvoltat un software de comunicare între PLC-ul Beckhoff și aplicatorul de paleți de pe linia de producție, permițând imprimarea automată a codurilor 2D pe baza rețetelor.",
+    "Codurile au fost citite automat la fiecare stație, permițând încărcarea automată a rețetelor aferente în PLC-urile corespunzătoare.",
+    "Pe liniile manuale, integrarea imprimantei desktop controlată de PLC a permis extragerea automată a datelor de referință din codurile DPM și imprimarea etichetelor.",
+    "Prin intermediul panoului HMI, erorile de coduri de bare și de imprimantă au fost vizualizate, iar capacitatea de citire manuală a fost adăugată prin scanere portabile, atunci când a fost necesar.",
+    "Ca rezultat, amestecurile de produse au fost eliminate și s-au obținut trasabilitate completă, flux automat de date și eficiență operațională."
+  ],
+  "haier-europe-single-product-traceability-oven-assembly-line": [
+    "Am implementat un sistem de trasabilitate pe noile linii de asamblare a cuptoarelor de la fabrica de aparate de gătit a Haier Europe, un lider global în producția de bunuri albe, situată în Turcia.",
+    "În acest proiect, unde am dezvoltat și software-ul de automatizare pentru linia de asamblare, numărul de serie de pe codul de bare al produsului este asociat cu RFID la începutul liniei, iar trasabilitatea este asigurată prin sistemul RFID. În timpul producției, testele electrice, testele de scurgeri de gaz și testele de control al flăcării sunt efectuate automat, independent de operator, la stațiile desemnate de-a lungul liniei, rezultatele testelor fiind colectate de la stațiile de testare și potrivite cu numărul de serie al produsului.",
+    "Proiectul utilizează sisteme servo cu 9 axe. Tot schimbul de date este facilitat prin infrastructura de comunicare EtherCAT, TCP/IP și Profinet.",
+    "În urma finalizării cu succes a proiectului, au început lucrările la a doua linie."
+  ],
+  "borgwarner-sorting-barcode-control": [
+    "Toate produsele primite au fost scanate folosind un cititor de coduri bazat pe cameră, iar datele codurilor de bare au fost verificate încrucișat cu informațiile primite de la sistemul SAP și PLC pentru a preveni trecerea produselor neconforme.",
+    "Imaginile tuturor produselor au fost stocate într-o bază de date, potrivite cu numerele lor de serie.",
+    "Datorită aplicației de raportare dezvoltate, tranzițiile produselor și fotografiile asociate au putut fi accesate pe baza datei și orei."
+  ],
+  "borgwarner-laser-marking": [
+    "Ca soluție la cheie, sistemul a intrat în funcțiune cu integrarea completă a componentelor mecanice, automatizării și ERP.",
+    "Funcționând sincron cu sistemul Oracle ERP, mașina efectuează marcarea automată cu laser pe baza datelor ERP, urmată de verificarea bazată pe cameră.",
+    "Sistemul dispune de control pe 3 axe și utilizează o infrastructură Profinet.",
+    "Procesele de monitorizare, control și integrare sunt gestionate printr-un sistem SCADA specific clientului, dezvoltat pe platforma .NET."
+  ],
+  "maxion-inci-celik-rfid-mold-tracking": [
+    "În acest proiect, au fost utilizate echipamente SICK RFID și integrate cu un PLC Siemens S7-1500. Potrivirea matrițelor și a rețetelor a fost activată pentru a preveni utilizarea incorectă a matrițelor.",
+    "În timpul modificărilor rețetelor, ID-urile matrițelor au fost citite prin RFID, iar sistemul a verificat potrivirea corectă. Dacă a fost detectată o potrivire corectă, mașinii i s-a acordat permisiunea de a funcționa.",
+    "Durata de viață a matrițelor poate fi urmărită prin intermediul sistemului bazat pe RFID."
+  ],
+  "bosch-trolley-tracking-rfid-gate": [
+    "În aplicația dezvoltată pentru fabrica de termotehnică Bosch, capetele de citire/scriere RFID poziționate la ieșirea din depozit au asigurat că cărucioarele cu kituri, pregătite conform ordinului de lucru, au fost eliberate pentru producție.",
+    "Pentru a permite fizic acest control, a fost instalat un sistem de barieră la intrarea și ieșirea din depozit. Aplicația, care a facilitat comunicarea bidirecțională cu sistemul de gestionare a depozitului, a scanat etichetele RFID de pe cărucioarele cu kituri care intrau și a interogat sistemul depozitului, permițând doar cărucioarelelor aprobate să iasă.",
+    "Proiectul a utilizat 700 de etichete RFID Confidex Metal pentru capetele de citire/scriere RFID."
+  ],
+  "mey-diageo-tracking-and-localization-project": [
+    "Ca parte a proiectului de renovare a sistemului de urmărire și localizare Mey Diageo, a fost implementat cu succes un sistem de trasabilitate solid, ușor de utilizat și flexibil.",
+    "Proiectul a avut ca scop activarea trasabilității de la cutie la palet. Folosind cititoare de coduri de bare marca SICK, codurile de bare ale cutiilor produse pe linie sunt scanate și potrivite cu codurile de bare corespunzătoare ale paleților. Sistemul este complet integrat cu SAP în ambele direcții și este capabil să funcționeze offline în cazurile în care accesul la SAP este limitat, cum ar fi în timpul întreruperilor de rețea, asigurând o producție continuă.",
+    "În prezent, funcționând în 6 fabrici și 12 linii de producție, aplicația poate fi monitorizată de la sediul central din Istanbul, unde sunt generate centralizat și rapoartele legate de producție."
+  ],
+  "bsh-glass-shelf-tracking": [
+    "Integrarea cu sistemul de trasabilitate a fost realizată prin corelarea numerelor de serie ale produselor cu informațiile despre loturile cărucioarelor pentru rafturi din sticlă.",
+    "Au fost înregistrate datele privind componentele, alimentate pe linia de producție pe bază de lot, care au fost asamblate în produse cu numere de serie specifice.",
+    "Prin corelarea produs–componentă, s-a asigurat utilizarea componentelor corecte în produsele corecte."
+  ],
+  "bsh-oven-door-traceability": [
+    "Integrarea cu sistemul de trasabilitate a fost realizată prin potrivirea numerelor de serie ale produselor cu informațiile despre loturile de cărucioare pentru uși.",
+    "Au fost înregistrate date despre ce componente, furnizate pe loturi la etajul de producție, au fost asamblate în produse cu numere de serie specifice.",
+    "Prin potrivirea produs-componentă, s-a asigurat utilizarea componentelor corecte în produsele corecte."
+  ],
+  "bsh-assembly-line-traceability": [
+    "În cadrul proiectului implementat utilizând echipamente Sick RFGS Pro, procesul de pregătire a materialelor în depozit, inclusiv pregătirea lăzilor, a fost optimizat pe baza cerințelor venite din zona de producție.",
+    "Etichete RFID au fost instalate pe peste 300 de lăzi, permițând generarea automată a comenzilor de materiale în depozit pe măsură ce lăzile ieșeau prin poarta RFID de pe linia de producție. Fluxul de materiale a fost restructurat conform metodologiei de tip 'pull'."
+  ],
+  "turk-demir-dokum-rfid-gate-with-digital-kanban": [
+    "În proiectul implementat folosind echipamente Sick RFGS Pro, procesul de pregătire a materialelor în depozit, inclusiv pregătirea lăzilor, a fost optimizat pe baza cerințelor din secția de producție.",
+    "Etichete RFID au fost instalate pe peste 300 de lăzi, permițând generarea automată a comenzilor de materiale în depozit, pe măsură ce lăzile ieșeau prin poarta RFID din secția de producție. Fluxul de materiale a fost restructurat conform metodologiei pull."
+  ],
+  "pmi-barcode-gate": [
+    "În timpul procesului de expediere, un sistem de poartă de coduri de bare instalat la rampa de ieșire citește automat toate etichetele paleților.",
+    "Prin integrare, ordinele de lucru pentru expediere sunt preluate automat din sistem și comparate cu etichetele paleților.",
+    "Dacă etichetele scanate ale paleților corespund comenzilor de expediere, codurile de bare ale paleților, împreună cu numărul de expediere, sunt trimise către sistemul WMS.",
+    "În cazul unui conținut incorect al etichetei, este emisă o avertizare către operator. Acest lucru previne expedierea produselor cu coduri de bare incorecte sau lipsă."
+  ],
+  "bsh-carriers-traceability": [
+    "În proiectul realizat la fabrica de cuptoare BSH, suporturile montate pe sticla cuptoarelor au fost urmărite și înregistrate pe baza ID-ului coșului.",
+    "La stația de lipire a sticlei, coșurile au fost scanate pentru a asigura potrivirea între numerele de lot ale sticlei și ale suporturilor.",
+    "În timpul asamblării produsului, numărul de lot al căruciorului de sticlă relevant a fost asociat cu numărul de serie al produsului, integrându-se cu sistemul de trasabilitate.",
+    "Acest lucru a asigurat potrivirea componentă-produs, garantând utilizarea componentelor corecte în produsele corecte.",
+    "Pentru piesele conforme, datele de confirmare au fost trimise înapoi către Oracle."
+  ],
+  "phinia-laser-marking-machine-traceability-integration": [
+    "Pentru a asigura trasabilitatea fiecărui produs, a fost dezvoltată o mașină de marcare cu laser pentru Phinia, pentru a facilita procesele de marcare și identificare.",
+    "Mașina a fost proiectată cu capacitate de mișcare pe 3 axe, creând o structură flexibilă.",
+    "Sistemul a fost integrat cu Oracle. Numerele de serie care urmau să fie imprimate pe produse au fost preluate din Oracle. După procesul de marcare, conținutul codului, gradul și verificările poziției au fost efectuate automat folosind o cameră.",
+    "Pentru piesele conforme, datele de confirmare au fost trimise înapoi către Oracle."
+  ],
+  "duru-bulgur-product-carton-pallet-traceability": [
+    "Aplicația de trasabilitate Produs | Carton | Palet a fost implementată cu succes pe liniile de producție de la fabrica Duru Bulgur din Karaman.",
+    "În timpul etapei de ambalare, produsele au fost marcate individual pentru a asigura trasabilitatea. O structură similară a fost stabilită pentru cartoane și paleți, înregistrând ce produs a intrat în ce carton și ce carton a fost plasat pe ce palet.",
+    "Transferurile între depozite din locații diferite și transferurile către clienți au fost înregistrate folosind o aplicație terminal portabilă.",
+    "Pașii Produs – Carton – Palet – Depozit – Client au fost făcuți urmăribili și gestionabili pe o singură platformă, pe baza numărului de serie al produsului."
+  ],
+  "ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability": [
+    "La fabrica clientului nostru din Eskișehir, care produce oțet organic, parametrii oțetului organic în etapa de îmbuteliere sunt colectați și corelați cu numerele individuale ale sticlelor.",
+    "Pentru a asigura transparența și imuabilitatea datelor colectate, acestea sunt transferate într-o rețea blockchain. Utilizatorii finali pot scana codul QR de pe sticlă pentru a vizualiza în mod transparent parametrii de umplere ai oțetului respectiv și pentru a accesa detaliile de producție.",
+    "Aplicația, care funcționează integrată cu sistemul SAP, se remarcă și prin rularea pe servere cloud."
+  ],
+  "orkide-quality-control-application": [
+    "În colaborare cu Orkide, una dintre companiile de top din Turcia în producția de uleiuri lichide, am implementat un proiect de urmărire a deficiențelor de conținut din cutii.",
+    "Prin activarea trasabilității cutiilor pe linia de producție, sistemul efectuează automat verificări pentru cantitățile de produse lipsă din interiorul cutiilor. În plus, pentru anumite produse selectate, au fost implementate controale de prezență/absență a mânerelor pentru a detecta produsele defecte."
+  ]
+}

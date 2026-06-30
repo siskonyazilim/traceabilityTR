@@ -1,0 +1,184 @@
+{
+  "delphi-rfid-datamatrix-rail-assembly-integration": [
+    "Delphi Technologies / Ray Montajının RFID-Datamatrix Entegrasyonu."
+  ],
+  "delphi-tool-tip-traceability": [
+    "Delphi Technologies için, her operasyon adımını kaydeden ve kalite kontrollerini ilgili parça geçmişine bağlayan bir takım ucu izlenebilirlik akışı uyguladık.",
+    "Çözüm, hat üzerindeki süreç görünürlüğünü artırdı ve sapmalar ile yeniden işleme eylemleri için daha hızlı kök neden analizi yapılmasını sağladı."
+  ],
+  "turk-tuborg-automatic-pallet-labeling-traceability": [
+    "Türk Tuborg / Otomatik palet etiketleme ve izlenebilirlik."
+  ],
+  "candy-hoover-test-data-production-efficiency-tracking": [
+    "Fabrika içi ürün izlenebilirliği ve barkod tabanlı test sonuçları, görsel muayeneler ve yeniden işleme süreçleriyle birlikte kaydedildi.",
+    "Üretim, duruş ve hurda verileri toplandı; üretim verimliliğinin gerçek zamanlı izlenmesi ve sahadaki Andon TV üniteleri aracılığıyla anlık OEE yüzdelerinin gösterilmesi sağlandı."
+  ],
+  "delphi-cloud-traceability-data-integration": [
+    "Delphi Technologies / İzlenebilirlik Verilerinin Bulut Entegrasyonu."
+  ],
+  "tirsan-product-traceability": [
+    "Tirsan / Ürün İzlenebilirliği."
+  ],
+  "delphi-prototype-line-traceability": [
+    "Delphi Technologies / Prototip Hattı İzlenebilirliği."
+  ],
+  "pmi-urmarirea-filtrelor": [
+    "50.300 RFID etiketi, 109 sabit RFID okuma/yazma kafası, 63 yerel kontrol paneli ve 8 elde taşınan RFID terminali kullanan bu projede amaç, tüm üretim alanında sigara filtresi izlenebilirliğini sağlamaktır.",
+    "Doğru filtre ve doğru ürün eşleşmesini güvence altına almak için tasarlanan uygulama; son kullanma tarihi kontrolleri, stok bilgisi ve makine bazlı üretim/tüketim verileri gibi yardımcı raporlar da sunmaktadır.",
+    "Tüm araçlar, .NET platformunda geliştirilen SCADA sistemi aracılığıyla gerçek zamanlı izlenebilmektedir.",
+    "ERP ile entegre olan proje, potansiyel kalite hatalarını önlemeyi ve uçtan uca filtre izlenebilirliğini sağlamayı hedeflemektedir."
+  ],
+  "mey-diageo-control-camera-etichete": [
+    "Ambalajlama sürecinde şişe etiketlerini inceleyen kamera kontrol sistemi.",
+    "Çalışma prensibi:",
+    "Son ambalajlama aşamasından önce, farklı boyutlardaki kutulara doldurulmuş şişelerin etiketleri kontrol edilmektedir.",
+    "Belirlenen şişe sayısında herhangi bir şişe eksikse ya da etiketsiz şişe tespit edilirse, sesli uyarıyla operatör bilgilendirilmekte ve konveyör durdurulmaktadır.",
+    "Operatör gerekli kontrolleri yapar.",
+    "Uyarı sıfırlanana kadar kamera kontrol sistemi ve konveyör devre dışı kalır."
+  ],
+  "delphi-monitorizare-individuala-rampa-injectie": [
+    "Delphi Technologies / Yakıt Rayı Montaj Hattında Bireysel Ürün İzleme."
+  ],
+  "pmi-rfid": [
+    "SAP entegreli bu uygulamada, doğru üretim emri için doğru damgalama ünitesinin kullanılması zorunlu kılınmaktadır.",
+    "Uyumsuzluk durumunda makine çalışması engellenir ve belirlenen kullanıcılara e-posta bildirimi otomatik olarak gönderilir."
+  ],
+  "delphi-technologies": [
+    "Delphi Technologies için, üretim çıktısından sevkiyata kadar uçtan uca görünürlük sağlayan entegre bir depo yönetimi ve izlenebilirlik çözümü geliştirdik.",
+    "Proje kapsamında gelen ve giden malzeme hareketleri, karton, palet ve depolama konumu düzeyinde barkodla tanımlama yöntemiyle sayısallaştırıldı ve takip edildi.",
+    "Otomatik süreç doğrulama, toplama, konsolidasyon ve sevkiyat iş akışlarındaki operatöre bağımlı hataları azalttı.",
+    "Gerçek zamanlı veri toplama, stok, depo operasyonları ve sevkiyat durumunun tek bir kontrol katmanından merkezi olarak izlenmesini sağladı.",
+    "Çift yönlü ERP entegrasyonu, depo operasyonları ile kurumsal sistemler arasında sipariş, stok ve sevkiyat verilerinin senkronize edilmesini güvence altına aldı.",
+    "Bu çözümle Delphi; daha hızlı depo yürütme, azaltılmış işleme hataları, geliştirilmiş stok doğruluğu ve tam operasyonel izlenebilirlik elde etti."
+  ],
+  "nemak-parts-traceability": [
+    "NEMAK'ın kesikli üretim izlenebilirlik sisteminde yarı mamuller, tüm üretim ve lojistik süreci boyunca takip edilmektedir.",
+    "Her ürüne bir Datamatrix kodu yerleştirilir; operasyonlar arasında hareket ederken taranarak konteyneriyle ilişkilendirilir. Bu sayede her konteynerin hassas takibi sağlanırken birikmiş konteynerlerin depoya verimli nakliyesi gerçekleştirilir.",
+    "Tüm akış, panolar aracılığıyla gerçek zamanlı izlenebilir; tam şeffaflık ve operasyonel kontrol sağlanır."
+  ],
+  "haier-europe-assembly-line-installation-traceability": [
+    "Türkiye'deki Haier fabrikasında yürütülen projemizde montaj hatlarındaki manuel planlama, takip ve kontrol süreçleri tamamen otomatik hale getirildi.",
+    "SISKON, Haier Europe'un pişirme cihazları fabrikasına yeni montaj hatları kurdu ve konveyör sistemlerini tamamen yeniledi. Tüm montaj süreci dijital olarak izlenebilir hâle getirildi.",
+    "Montaj hattının başından depoya kadar benzersiz kimlikler temelinde tüm ürünler için uçtan uca izlenebilirlik sağlandı."
+  ],
+  "haier-europe-sorting-line-installation-traceability": [
+    "SISKON tarafından kurulan sistemde montaj ve tamir hatlarından gelen ürünler asansör aracılığıyla ambalaj hattına gönderilmekte; ambalajlama sonrası ürünler otomatik olarak sıralama hattına yönlendirilmektedir.",
+    "Montaj hattı planına göre sıralama hatları otomatik programlanmaktadır. Sıralama hattında barkodla taranan ürünler ilgili hatlara yönlendirilmektedir.",
+    "Hatlarda biriken ürünler forklift operatörleri tarafından alınarak depoya gönderilmektedir. Tüm süreç sahada bulunan Andon TV'leri aracılığıyla canlı izlenebilmektedir."
+  ],
+  "bomi-group-camera-based-multi-code-reading-system-tr": [
+    "Dünyanın birçok ülkesinde faaliyet gösteren önde gelen farmasötik lojistik şirketlerinden BOMI Group'un Türkiye deposu için, tesiste önceden manuel olarak yürütülen operasyonları otomatikleştiren kamera tabanlı çok kodlu okuma sistemi geliştirildi.",
+    "Proje kapsamında ERP entegrasyonu aracılığıyla sevkiyat hazırlık aşamasında izlenebilirlik sağlandı. Binlerce ürünün manuel taranmasını içeren manuel iş akışları, sistemin devreye alınmasıyla tamamen otomatikleştirildi. Sonuç olarak sevkiyat için ürün hazırlama süresi yaklaşık %80 oranında iyileşti."
+  ],
+  "bomi-group-camera-based-multi-code-reading-system": [
+    "Dünyanın birçok ülkesinde faaliyet gösteren önde gelen farmasötik lojistik şirketlerinden BOMI Group'un Türkiye deposu için, tesiste önceden manuel olarak yürütülen operasyonları otomatikleştiren kamera tabanlı çok kodlu okuma sistemi geliştirildi.",
+    "Proje kapsamında ERP entegrasyonu aracılığıyla sevkiyat hazırlık aşamasında izlenebilirlik sağlandı. Binlerce ürünün manuel taranmasını içeren manuel iş akışları, sistemin devreye alınmasıyla tamamen otomatikleştirildi. Sonuç olarak sevkiyat için ürün hazırlama süresi yaklaşık %80 oranında iyileşti."
+  ],
+  "abalioglu-yag": [
+    "Türkiye'nin önde gelen bitkisel yağ üreticilerinden Abalıoğlu Yağ için, üretim ve lojistik operasyonları boyunca palet izlenebilirliği ve otomatik karton etiketlemeyi sağlayan entegre bir çözüm geliştirdik.",
+    "Proje kapsamında her palete benzersiz bir kimlik atayarak üretimden sevkiyata kadar uçtan uca takibi sağlayan palet tabanlı izlenebilirlik sistemi hayata geçirildi.",
+    "Üretim emirlerinin otomatik olarak etiket yazıcılara aktarılması, operatör müdahalesi olmaksızın her kartona doğru etiketin basılmasını güvence altına aldı.",
+    "Gerçek zamanlı veri toplama, üretim hattı ve sevkiyat süreçlerinin merkezi olarak izlenmesini sağladı.",
+    "ERP entegrasyonu, sipariş, üretim ve sevkiyat verileri arasında tam senkronizasyonu güvence altına aldı.",
+    "Bu çözümle şu sonuçlar elde edildi: %100 palet izlenebilirliği, hızlı ve hatasız etiketleme süreci, artan operasyonel verimlilik ile ERP'de stok ve sevkiyatların gerçek zamanlı görünürlüğü."
+  ],
+  "nuhun-ankara": [
+    "Ankara merkezli gıda sektörü şirketi Nuh'un Ankara için karton, palet ve sevkiyat izlenebilirliğini sağlayan entegre bir çözüm geliştirdik.",
+    "Proje kapsamında üretimden sevkiyata kadar tüm süreçler dijital olarak izlenebilir hâle getirildi.",
+    "Her ürün birimini benzersiz biçimde tanımlayan karton ve palet tabanlı barkod/etiketleme sistemi uygulandı.",
+    "Çift yönlü ERP entegrasyonu, sipariş, üretim ve sevkiyat verilerinin otomatik senkronizasyonunu sağladı.",
+    "Gerçek zamanlı sevkiyat takibi, hangi ürünün hangi araçla hangi müşteriye gönderildiğinin kolaylıkla raporlanmasını mümkün kıldı.",
+    "Gerçek zamanlı veri toplama ve raporlama altyapısı sayesinde üretim, depolama ve lojistik operasyonları tek bir arayüzden yönetilebilir hâle geldi. Bu çözümle %100 izlenebilirlik, hızlı ve hatasız sevkiyat yönetimi ile iade veya geri çağırma senaryolarında kolay geriye dönük takip sağlandı."
+  ],
+  "maxion-inci-celik": [
+    "Üretim hattındaki Beckhoff PLC ile palet uygulayıcı arasında iletişim yazılımı geliştirdik; bu sayede reçetelere dayalı 2D kod otomatik olarak yazdırıldı.",
+    "Kodlar her istasyonda otomatik okunarak ilgili PLC'lere karşılık gelen reçeteler otomatik yüklendi.",
+    "Manuel hatlarda PLC kontrollü masaüstü yazıcının entegrasyonu, DPM kodlarından referans verilerinin otomatik çıkarılmasını ve otomatik etiket yazdırılmasını sağladı.",
+    "HMI paneli üzerinden barkod ve yazıcı hataları görselleştirildi; gerektiğinde el tipi tarayıcılarla manuel okuma imkânı eklendi.",
+    "Sonuç olarak ürün karışması ortadan kalktı; tam izlenebilirlik, otomatik veri akışı ve operasyonel verimlilik sağlandı."
+  ],
+  "haier-europe-single-product-traceability-oven-assembly-line": [
+    "Beyaz eşya üretiminde küresel lider Haier Europe'un Türkiye'deki pişirme cihazları fabrikasındaki yeni fırın montaj hatlarına izlenebilirlik sistemi uyguladık.",
+    "Montaj hattı otomasyon yazılımını da geliştirdiğimiz bu projede, ürün barkodundaki seri numara hat başında RFID ile ilişkilendirilmekte ve izlenebilirlik RFID sistemi üzerinden sağlanmaktadır. Üretim sürecinde elektrik testleri, gaz kaçak testleri ve alev kontrol testleri, hat boyunca belirlenen istasyonlarda operatörden bağımsız olarak otomatik gerçekleştirilmekte; test sonuçları test istasyonlarından toplanarak ürün seri numarasıyla eşleştirilmektedir.",
+    "Proje, 9 eksenli servo sistemler kullanmaktadır. Tüm veri alışverişi EtherCAT, TCP/IP ve Profinet iletişim altyapısı üzerinden sağlanmaktadır.",
+    "Projenin başarıyla tamamlanmasının ardından ikinci hat çalışmalarına başlandı."
+  ],
+  "borgwarner-sorting-barcode-control": [
+    "Gelen tüm ürünler kamera tabanlı kod okuyucuyla tarandı; barkod verileri SAP ve PLC sistem verileriyle karşılaştırılarak uygunsuz ürünlerin geçişi engellendi.",
+    "Tüm ürünlerin görüntüleri veri tabanında depolandı ve seri numaralarıyla eşleştirildi.",
+    "Geliştirilen raporlama uygulaması sayesinde ürün geçişlerine ve ilgili fotoğraflara tarih ve saat bazında erişilebildi."
+  ],
+  "borgwarner-laser-marking": [
+    "Anahtar teslim çözüm olarak sistem, mekanik, otomasyon ve ERP bileşenlerinin tam entegrasyonuyla devreye alındı.",
+    "Oracle ERP ile senkronize çalışan makine, ERP verilerine dayalı otomatik lazer işaretleme gerçekleştirmekte; ardından kamera tabanlı doğrulama yapılmaktadır.",
+    "Sistem 3 eksenli kontrol özelliğine sahip olup Profinet altyapısı kullanmaktadır.",
+    "İzleme, kontrol ve entegrasyon süreçleri .NET platformunda geliştirilen müşteriye özgü SCADA sistemiyle yönetilmektedir."
+  ],
+  "maxion-inci-celik-rfid-mold-tracking": [
+    "Bu projede SICK RFID ekipmanı kullanılarak Siemens S7-1500 PLC ile entegrasyon sağlandı. Yanlış kalıp kullanımını önlemek için kalıp ve reçete eşleştirmesi etkinleştirildi.",
+    "Reçete değişikliklerinde kalıp kimlikleri RFID ile okunarak sistem doğru eşleşmeyi doğruladı. Doğru eşleşme tespit edildiğinde makineye çalışma izni verildi.",
+    "Kalıp ömrü RFID tabanlı sistem aracılığıyla takip edilebilmektedir."
+  ],
+  "bosch-trolley-tracking-rfid-gate": [
+    "Bosch ısı teknolojisi fabrikası için geliştirilen uygulamada depo çıkışına konumlanan RFID okuma/yazma kafaları, iş emirlerine göre hazırlanan kit arabalarının üretime çıkarılmasını sağladı.",
+    "Bu kontrolü fiziksel olarak mümkün kılmak için depo giriş ve çıkışına bariyer sistemi kuruldu. Depo yönetim sistemiyle çift yönlü iletişim sağlayan uygulama, gelen kit arabalarının RFID etiketlerini taradı ve depo sistemini sorguladı; yalnızca onaylı arabaların çıkışına izin verdi.",
+    "Projede RFID okuma/yazma kafaları için 700 adet Confidex Metal RFID etiketi kullanıldı."
+  ],
+  "mey-diageo-tracking-and-localization-project": [
+    "Mey Diageo takip ve konumlandırma sistemi yenileme projesi kapsamında sağlam, kullanıcı dostu ve esnek bir izlenebilirlik sistemi başarıyla hayata geçirildi.",
+    "Proje, kutudan palete izlenebilirliğin etkinleştirilmesini hedefledi. SICK marka barkod okuyucular kullanılarak hattaki üretimden gelen kutuların barkodları taranmakta ve karşılık gelen palet barkodlarıyla eşleştirilmektedir. Sistem SAP ile her iki yönde tam entegre olup ağ kesintileri gibi SAP erişiminin kısıtlı olduğu durumlarda çevrimdışı çalışarak kesintisiz üretime devam etmektedir.",
+    "Şu anda 6 fabrika ve 12 üretim hattında çalışan uygulama, İstanbul'daki genel merkezden izlenebilmekte; üretime ilişkin raporlar da merkezi olarak oluşturulmaktadır."
+  ],
+  "bsh-glass-shelf-tracking": [
+    "Ürün seri numaralarının cam raf arabalarından elde edilen lot bilgileriyle ilişkilendirilmesi aracılığıyla izlenebilirlik sistemiyle entegrasyon sağlandı.",
+    "Üretim hattına lot bazında beslenen ve belirli seri numaralı ürünlere monte edilen bileşenlere ilişkin veriler kaydedildi.",
+    "Ürün-bileşen ilişkilendirmesi sayesinde doğru bileşenlerin doğru ürünlerde kullanılması güvence altına alındı."
+  ],
+  "bsh-oven-door-traceability": [
+    "Ürün seri numaralarının kapı arabalarından elde edilen lot bilgileriyle eşleştirilmesi aracılığıyla izlenebilirlik sistemiyle entegrasyon sağlandı.",
+    "Üretim katına lot bazında tedarik edilen ve belirli seri numaralı ürünlere monte edilen bileşenlere ilişkin veriler kaydedildi.",
+    "Ürün-bileşen eşleştirmesi sayesinde doğru bileşenlerin doğru ürünlerde kullanılması güvence altına alındı."
+  ],
+  "bsh-assembly-line-traceability": [
+    "Sick RFGS Pro ekipmanı kullanılarak hayata geçirilen projede, üretim alanından gelen gereksinimlere dayalı olarak kutu hazırlama dahil depo malzeme hazırlama süreçleri optimize edildi.",
+    "300'den fazla kutuya RFID etiketi takılarak üretim hattındaki RFID kapısından çıkan kutuların depo malzeme siparişlerini otomatik oluşturması sağlandı. Malzeme akışı çekme (pull) metodolojisine göre yeniden yapılandırıldı."
+  ],
+  "turk-demir-dokum-rfid-gate-with-digital-kanban": [
+    "Sick RFGS Pro ekipmanı kullanılarak hayata geçirilen projede, üretim departmanından gelen gereksinimlere dayalı olarak kutu hazırlama dahil depo malzeme hazırlama süreçleri optimize edildi.",
+    "300'den fazla kutuya RFID etiketi takılarak üretim alanındaki RFID kapısından çıkan kutuların depo malzeme siparişlerini otomatik oluşturması sağlandı. Malzeme akışı çekme (pull) metodolojisine göre yeniden yapılandırıldı."
+  ],
+  "pmi-barcode-gate": [
+    "Sevkiyat sürecinde çıkış rampasına kurulan barkod kapı sistemi, tüm palet etiketlerini otomatik olarak okumaktadır.",
+    "Entegrasyon aracılığıyla sevkiyat iş emirleri sistemden otomatik alınmakta ve palet etiketleriyle karşılaştırılmaktadır.",
+    "Taranan palet etiketleri sevkiyat emirleriyle eşleştiğinde palet barkodları ve sevkiyat numarası WMS sistemine gönderilmektedir.",
+    "Yanlış etiket içeriği durumunda operatöre uyarı verilmektedir. Bu durum, eksik veya hatalı barkodlu ürünlerin sevkiyatını önlemektedir."
+  ],
+  "bsh-carriers-traceability": [
+    "BSH fırın fabrikasında gerçekleştirilen projede fırın camına monte edilen taşıyıcılar, sepet kimliğine göre takip edildi ve kayıt altına alındı.",
+    "Cam yapıştırma istasyonunda sepetler taranarak cam lot numaraları ile taşıyıcı lot numaraları arasındaki eşleşme doğrulandı.",
+    "Ürün montajı sırasında ilgili cam arabasının lot numarası ürün seri numarasıyla ilişkilendirilerek izlenebilirlik sistemiyle entegrasyon sağlandı.",
+    "Bu durum bileşen-ürün eşleşmesini güvence altına alarak doğru ürünlerde doğru bileşenlerin kullanılmasını sağladı.",
+    "Uygun parçalar için onay verileri Oracle'a geri gönderildi."
+  ],
+  "phinia-laser-marking-machine-traceability-integration": [
+    "Her ürünün izlenebilirliğini sağlamak amacıyla Phinia için işaretleme ve tanımlama süreçlerini destekleyen bir lazer işaretleme makinesi geliştirildi.",
+    "Makine esnek bir yapı oluşturacak şekilde 3 eksenli hareket kapasitesiyle tasarlandı.",
+    "Sistem Oracle ile entegre edildi. Ürünlere basılacak seri numaralar Oracle'dan alındı. İşaretleme sürecinin ardından kod içeriği, derece ve konum kontrolleri kamera kullanılarak otomatik gerçekleştirildi.",
+    "Uygun parçalar için onay verileri Oracle'a geri gönderildi."
+  ],
+  "duru-bulgur-product-carton-pallet-traceability": [
+    "Ürün | Karton | Palet izlenebilirlik uygulaması, Duru Bulgur'un Karaman fabrikasındaki üretim hatlarında başarıyla hayata geçirildi.",
+    "Ambalajlama aşamasında izlenebilirliği sağlamak amacıyla ürünler bireysel olarak işaretlendi. Kartonlar ve paletler için benzer yapı kurularak hangi ürünün hangi kartona girdiği ve hangi kartonun hangi palete yerleştirildiği kayıt altına alındı.",
+    "Farklı konumlar arasındaki depo transferleri ve müşterilere yapılan transferler, el terminali uygulaması kullanılarak kaydedildi.",
+    "Ürün – Karton – Palet – Depo – Müşteri adımları, ürün seri numarasına dayalı tek bir platformda izlenebilir ve yönetilebilir hale getirildi."
+  ],
+  "ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability": [
+    "Organik sirke üreten Eskişehir'deki müşteri fabrikasında şişeleme aşamasındaki organik sirke parametreleri toplanarak bireysel şişe numaralarıyla ilişkilendirildi.",
+    "Toplanan verilerin şeffaflığını ve değiştirilemezliğini güvence altına almak için veriler bir blokzincir ağına aktarıldı. Son kullanıcılar şişe üzerindeki QR kodu tarayarak söz konusu sirkenin dolum parametrelerini şeffaf biçimde görüntüleyebilir ve üretim detaylarına erişebilir.",
+    "SAP sistemiyle entegre çalışan uygulama, bulut sunucularında çalışmasıyla da öne çıkmaktadır."
+  ],
+  "orkide-quality-control-application": [
+    "Türkiye'nin önde gelen sıvı yağ üreticilerinden Orkide ile iş birliği yaparak kutu içeriği eksikliklerini takip etmeye yönelik bir proje hayata geçirdik.",
+    "Üretim hattında kutu izlenebilirliği sağlanarak sistem, kutular içindeki eksik ürün miktarlarını otomatik kontrol etmektedir. Ayrıca seçili ürünlerde sap varlığı/yokluğu kontrolleri uygulanarak hatalı ürünler tespit edilmektedir."
+  ]
+}

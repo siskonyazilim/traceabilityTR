@@ -1,15 +1,21 @@
-import { cookies } from 'next/headers';
+﻿import { cookies } from 'next/headers';
 import ProjectsPageClient from './ProjectsPageClient';
 
 export async function generateMetadata() {
   const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localeRaw = cookieStore.get('locale')?.value;
+  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  const isTr = locale === 'tr';
   const isEn = locale === 'en';
 
-  const title = isEn
+  const title = isTr
+    ? 'Referans Projeler | Endüstriyel İzlenebilirlik Başarı Hikayeleri | Traceability'
+    : isEn
     ? 'Reference Projects | Industrial Traceability Success Stories'
     : 'Proiecte de Referință | Implementări de Trasabilitate cu Impact';
-  const description = isEn
+  const description = isTr
+    ? 'Traceability tarafından otomotiv, gıda ve endüstriyel üretim sektörlerinde ölçülebilir ROI ve kalite kazanımlarıyla gerçekleştirilen izlenebilirlik projelerini inceleyin.'
+    : isEn
     ? 'Explore real-world traceability projects delivered by Traceability across automotive, food and industrial manufacturing with measurable ROI and quality gains.'
     : 'Explorează proiecte reale de trasabilitate livrate de Traceability în automotive, alimentar și producție industrială, cu ROI măsurabil și îmbunătățiri de calitate.';
   const listUrl = isEn
@@ -27,7 +33,7 @@ export async function generateMetadata() {
       description,
       type: 'website',
       url: listUrl,
-      locale: isEn ? 'en_US' : 'ro_RO',
+      locale: isTr ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
     },
     twitter: {
       card: 'summary_large_image',

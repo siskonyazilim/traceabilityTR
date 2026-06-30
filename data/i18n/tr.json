@@ -1,0 +1,183 @@
+{
+  "language": {
+    "label": "Dil",
+    "ro": "Rumence",
+    "en": "İngilizce",
+    "tr": "Türkçe",
+    "switchAria": "Dil değiştir"
+  },
+  "header": {
+    "solutions": "Çözümlerimiz",
+    "industries": "Sektörler",
+    "partners": "Çözüm Ortakları",
+    "contact": "İletişim",
+    "news": "Haberler",
+    "closeMenu": "Menüyü kapat",
+    "openMenu": "Menüyü aç"
+  },
+  "footer": {
+    "brandDescription": "Akıllı fabrikalar ve sürdürülebilir üretim için yenilikçi izlenebilirlik çözümleri.",
+    "navigation": "Navigasyon",
+    "home": "Ana Sayfa",
+    "solutions": "Çözümlerimiz",
+    "industries": "Sektörler",
+    "partners": "Çözüm Ortakları",
+    "faq": "Sık Sorulan Sorular",
+    "contact": "İletişim",
+    "news": "Haberler",
+    "gdprPolicy": "KVKK Gizlilik Politikası",
+    "cookiePolicy": "Çerez Politikası",
+    "cookiePreferences": "Çerez Tercihleri",
+    "contactTitle": "İletişim",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "copyright": "© 2026 Traceability. Tüm hakları saklıdır."
+  },
+  "cookie": {
+    "title": "Çerez Tercihi",
+    "close": "Kapat",
+    "message": "OnSuite deneyiminizi iyileştirmek için çerezler kullanıyoruz. Bu siteyi kullanarak çerez politikamızı kabul etmiş olursunuz.",
+    "accept": "Kabul Et",
+    "decline": "Reddet",
+    "learnMore": "Daha fazla bilgi"
+  },
+  "homeCta": {
+    "title": "Üretim süreçlerinizi dönüştürmeye hazır mısınız?",
+    "subtitle": "Operasyonel akışlarınıza uygun bir izlenebilirlik çözümü birlikte planlayalım.",
+    "primary": "İletişime Geç",
+    "secondary": "Referanslara Bak"
+  },
+  "hero": {
+    "cta": "İletişime Geç",
+    "goToSlide": "{{index}}. slayta git"
+  },
+  "notFound": {
+    "codeLabel": "Hata",
+    "title": "Sayfa bulunamadı",
+    "description": "Bu adrese ait içerik şu anda mevcut değil.",
+    "home": "Ana Sayfaya Dön",
+    "contact": "İletişim"
+  },
+  "contactPage": {
+    "eyebrow": "İletişim",
+    "heroTitle": "İzlenebilirlik sürecinizi birlikte konuşalım",
+    "heroSubtitle": "Uygun ofisi seçin veya bize mesaj gönderin. Operasyonel akışlarınıza uygun bir teklifle en kısa sürede dönüş yapacağız.",
+    "officesTitle": "Ofislerimiz",
+    "formTitle": "Mesaj Gönder",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "email": "E-posta",
+    "website": "Web Sitesi (isteğe bağlı)",
+    "message": "Mesaj",
+    "privacyText": "Kabul ediyorum",
+    "privacyPolicy": "gizlilik politikasını",
+    "submit": "Mesaj Gönder",
+    "submitting": "Gönderiliyor...",
+    "success": "✓ Mesajınız başarıyla gönderildi!",
+    "locationAlt": "Konum",
+    "mapTitleSuffix": "harita",
+    "offices": {
+      "brasov": {
+        "name": "Romanya - Brașov",
+        "address": "Çalışma noktası: Str. Turnului No.5,\nM.U.M. Binası, Giriş 3, Kat 2, Ofis 5, 500152\nBrașov, Romanya"
+      },
+      "izmir": {
+        "name": "Türkiye - İzmir",
+        "address": "Dokuz Eylül Üniversitesi Tınaztepe Kampüsü\nDepark Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat 2, No:202\n35390 Buca/İzmir, Türkiye"
+      }
+    },
+    "errors": {
+      "firstNameRequired": "Ad zorunludur",
+      "firstNameMin": "En az 2 karakter",
+      "lastNameRequired": "Soyad zorunludur",
+      "lastNameMin": "En az 2 karakter",
+      "emailRequired": "E-posta zorunludur",
+      "emailInvalid": "Geçersiz e-posta",
+      "urlInvalid": "Geçersiz URL",
+      "messageRequired": "Mesaj zorunludur",
+      "messageMin": "En az 10 karakter",
+      "privacyRequired": "Gizlilik politikasını kabul etmelisiniz",
+      "submitFailed": "Bir hata oluştu. Lütfen tekrar deneyin.",
+      "networkError": "Ağ hatası. Bağlantınızı kontrol edin."
+    },
+    "placeholders": {
+      "firstName": "Ahmet",
+      "lastName": "Yılmaz",
+      "email": "eposta@ornek.com",
+      "website": "https://www.ornek.com",
+      "message": "Mesajınızı buraya yazın..."
+    }
+  },
+  "blogPage": {
+    "eyebrow": "Kaynaklar",
+    "heroTitle": "İzlenebilirlikte haberler, rehberler ve trendler",
+    "heroSubtitle": "Karara odaklı içerikler: modern üretim için uygulama, operasyonel optimizasyon ve en iyi uygulamalar.",
+    "topCta": "Bir uzmanla görüşün",
+    "empty": "Makale bulunamadı.",
+    "ctaTitle": "Görüşmek ister misiniz?",
+    "ctaSubtitle": "Ekibimiz, makalelerdeki bilgileri fabrikanız için net adımlara dönüştürmenize yardımcı olabilir.",
+    "ctaPrimary": "İletişime Geç",
+    "ctaSecondary": "Projeleri Gör",
+    "bottomCta": "Projeniz için bize ulaşın"
+  },
+  "projectsPage": {
+    "eyebrow": "Vaka Çalışmaları",
+    "heroTitle": "Ölçülebilir etkiye sahip referans projeler",
+    "heroSubtitle": "Otomotiv, gıda ve endüstriyel üretimdeki gerçek uygulamalar; net verimlilik ve kalite göstergeleriyle.",
+    "sectionTitle": "Proje Seçimi",
+    "sectionSubtitle": "Birden fazla sektördeki müşteriler için başarıyla teslim edilmiş projeler",
+    "empty": "Proje bulunamadı.",
+    "paginationPrev": "Önceki",
+    "paginationNext": "Sonraki",
+    "total": "Toplam: {{count}} proje",
+    "ctaTitle": "Şirketiniz için benzer bir proje ister misiniz?",
+    "ctaSubtitle": "Bu referans çözümleri süreçlerinize ve operasyonel hedeflerinize uyarlayabiliriz.",
+    "ctaPrimary": "İletişime Geç"
+  },
+  "cards": {
+    "projectDetails": "Proje detayları →",
+    "readMore": "Devamını oku →",
+    "efficiency": "Verimlilik",
+    "defects": "Hata",
+    "productivity": "Üretkenlik"
+  },
+  "sections": {
+    "solutionsProductsTitle": "Çözümler ve Ürünler",
+    "solutionsProductsSubtitle": "İzlenebilirlik için eksiksiz hizmet ve ürün yelpazemiz",
+    "solutionsTab": "Çözümler",
+    "productsTab": "Ürünler",
+    "details": "Detaylar",
+    "referenceProjectsTitle": "Referans Projeler",
+    "referenceProjectsSubtitle": "Sektörler genelinde gerçek uygulama örnekleri",
+    "allProjects": "TÜM PROJELERİMİZ",
+    "strategicPartnersTitle": "Stratejik çözüm ortaklarımız",
+    "strategicPartnersSubtitle": "Değerli çözüm ortaklarımız, kendi alanlarında lider konumda olup küresel başarılarını kanıtlamış kuruluşlardır.",
+    "blogPreviewTitle": "Blogdan",
+    "blogPreviewSubtitle": "En güncel sektörel gelişmeler ve gelecek trendleri için blogumuzu ziyaret edin.",
+    "blogPreviewCta": "BLOGA GİT",
+    "allArticles": "TÜM MAKALELER",
+    "technologyTitle": "Teknoloji Yetkinlikleri ve Uzmanlıkları",
+    "technologySubtitle": "Modern üretim için gelişmiş izlenebilirlik çözümleri",
+    "industriesTitle": "Stratejik analizle akıllıca izleyin",
+    "industriesSubtitle": "",
+    "referenceProjectsPrev": "Önceki proje",
+    "referenceProjectsNext": "Sonraki proje",
+    "referenceProjectsGoTo": "{{page}}. sayfaya git",
+    "partnerPrev": "Önceki ortak",
+    "partnerNext": "Sonraki ortak",
+    "partnerSet": "{{page}}. sete git",
+    "blogPrev": "Önceki makale",
+    "blogNext": "Sonraki makale",
+    "performanceTitle": "Performans ve temel metrikler",
+    "performanceSubtitle": "Sonuçlarımız kendiliğinden konuşuyor",
+    "performanceCta": "Referans projelerimiz"
+  },
+  "email": {
+    "heading": "İletişim formu aracılığıyla yeni mesaj alındı",
+    "fullName": "Ad Soyad",
+    "emailLabel": "E-posta",
+    "websiteLabel": "Web Sitesi",
+    "messageLabel": "Mesaj",
+    "footer": "Bu mesaj {{siteName}} üzerinden gönderildi."
+  }
+}

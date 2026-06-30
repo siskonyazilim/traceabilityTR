@@ -1,0 +1,184 @@
+{
+  "delphi-rfid-datamatrix-rail-assembly-integration": [
+    "Delphi Technologies / RFID-Datamatrix Integration of Rail Assembly."
+  ],
+  "delphi-tool-tip-traceability": [
+    "For Delphi Technologies, we implemented a tool-tip traceability flow that records each operation step and links quality checks to the relevant part history.",
+    "The solution increased process visibility on the line and enabled faster root cause analysis for deviations and rework actions."
+  ],
+  "turk-tuborg-automatic-pallet-labeling-traceability": [
+    "Turk Tuborg / Automatic pallet labeling and traceability."
+  ],
+  "candy-hoover-test-data-production-efficiency-tracking": [
+    "In-factory product traceability and barcode-based test results, along with visual inspections and rework processes, were recorded.",
+    "Production, downtime, and scrap data were collected, enabling real-time monitoring of production efficiency and instant display of OEE percentages via on-site Andon TV units."
+  ],
+  "delphi-cloud-traceability-data-integration": [
+    "Delphi Technologies / Cloud Integration of Traceability Data."
+  ],
+  "tirsan-product-traceability": [
+    "Tirsan / Product Traceability."
+  ],
+  "delphi-prototype-line-traceability": [
+    "Delphi Technologies / Prototype Line Traceability."
+  ],
+  "pmi-urmarirea-filtrelor": [
+    "In this project, which uses 50,300 RFID tags, 109 fixed RFID read/write heads, 63 local control panels and 8 handheld RFID terminals, the aim is to ensure cigarette filter traceability throughout the entire production area.",
+    "The application, designed to ensure the correct filter is used for the correct product, will also provide users with auxiliary reports such as expiry date checks, inventory information, and machine-based production and consumption data.",
+    "All tools can be monitored in real time through a SCADA system developed on the .NET platform.",
+    "Integrated with ERP, the project aims to prevent potential quality errors and ensure end-to-end filter traceability."
+  ],
+  "mey-diageo-control-camera-etichete": [
+    "A camera control system that inspects bottle labels during the packaging process.",
+    "Operating principle:",
+    "Before the final packaging stage, it checks the labels on bottles in boxes of different sizes.",
+    "If a bottle is missing or there is an unlabeled bottle in the preset number of bottles, the operator is alerted with an audible warning and the conveyor is stopped.",
+    "The operator performs the necessary checks.",
+    "The camera control system and conveyor remain inactive until the warning is reset."
+  ],
+  "delphi-monitorizare-individuala-rampa-injectie": [
+    "Delphi Technologies / Individual Product Monitoring on the Fuel Rail Assembly Line."
+  ],
+  "pmi-rfid": [
+    "In this SAP-integrated application, the use of the correct stamping unit for the correct production order is enforced.",
+    "In case of a mismatch, machine operation is prevented and email notifications are automatically sent to designated users."
+  ],
+  "delphi-technologies": [
+    "For Delphi Technologies, we developed an integrated warehouse management and traceability solution that provides end-to-end visibility from production output to shipment.",
+    "Within the project, incoming and outgoing material movements were digitized and tracked through barcode-based identification at the carton, pallet, and storage location level.",
+    "Automated process validation reduced operator-dependent errors in picking, consolidation, and delivery workflows.",
+    "Real-time data collection enabled centralized monitoring of inventory, warehouse operations, and shipment status from a single control layer.",
+    "Bidirectional ERP integration ensured synchronization of order, inventory, and shipment data between warehouse operations and enterprise systems.",
+    "With this solution, Delphi achieved faster warehouse execution, reduced handling errors, improved inventory accuracy, and complete operational traceability."
+  ],
+  "nemak-parts-traceability": [
+    "In NEMAK's discrete manufacturing traceability system, semi-finished products are tracked throughout the entire manufacturing and logistics process.",
+    "Each product is fitted with a Datamatrix code, which is scanned and associated with its container as it moves between operations. This ensures precise tracking of each container, while accumulated containers are efficiently transported to the warehouse.",
+    "The entire flow can be monitored in real time through dashboards, providing complete transparency and operational control."
+  ],
+  "haier-europe-assembly-line-installation-traceability": [
+    "In our project implemented at the Haier factory in Turkey, the previously manual planning, tracking, and control processes on the assembly lines were fully automated.",
+    "SISKON installed new assembly lines at Haier Europe's cooking appliance factory and completely renewed the conveyor systems. The entire assembly process was made digitally traceable.",
+    "End-to-end traceability was achieved for all products based on unique IDs from the start of the assembly line to the warehouse."
+  ],
+  "haier-europe-sorting-line-installation-traceability": [
+    "In the system established by SISKON, products from the assembly and repair lines are sent to the packaging line via an elevator. After packaging, products are automatically directed to the sorting line.",
+    "Based on the assembly line plan, sorting lines are programmed automatically. Products scanned with barcodes on the sorting line are directed to the relevant lines.",
+    "Products accumulated on the lines are collected by forklift operators and sent to the warehouse. The entire process can be monitored live through Andon TVs on site."
+  ],
+  "bomi-group-camera-based-multi-code-reading-system-tr": [
+    "For the Turkish warehouse of BOMI Group — one of the world's leading pharmaceutical logistics companies operating in many countries — we developed a camera-based multi-code reading system that automated the previously manual operations at the facility.",
+    "Within the project, traceability was ensured through ERP integration at the shipment preparation stage. Manual workflows involving manual scanning of thousands of products were fully automated after the system was implemented. As a result, product preparation time for shipment improved by approximately 80%."
+  ],
+  "bomi-group-camera-based-multi-code-reading-system": [
+    "For the Turkish warehouse of BOMI Group — one of the world's leading pharmaceutical logistics companies operating in many countries — we developed a camera-based multi-code reading system that automated the previously manual operations at the facility.",
+    "Within the project, traceability was ensured through ERP integration at the shipment preparation stage. Manual workflows involving manual scanning of thousands of products were fully automated after the system was implemented. As a result, product preparation time for shipment improved by approximately 80%."
+  ],
+  "abalioglu-yag": [
+    "For Abalıoğlu Yağ, one of Turkey's leading vegetable oil producers, we developed an integrated solution that ensures pallet traceability and automatic carton labeling throughout production and logistics operations.",
+    "Within the project, a pallet-based traceability system was implemented, assigning a unique ID to each pallet to enable end-to-end tracking from production to shipment.",
+    "Automatic transfer of production orders to label printers ensured that the correct label was printed on the correct carton without operator intervention.",
+    "Real-time data collection enabled centralized monitoring of the production line and shipping processes.",
+    "ERP integration ensured full synchronization between order, production, and shipment data.",
+    "With this solution, the following outcomes were achieved: 100% pallet traceability, a fast and error-free labeling process, increased operational efficiency, and real-time visibility of inventory and shipments in ERP."
+  ],
+  "nuhun-ankara": [
+    "For Nuh'un Ankara, a food-sector company based in Ankara, we developed an integrated solution that ensures carton, pallet, and shipment traceability.",
+    "Within the project, all processes from production to shipment were made digitally traceable.",
+    "A carton- and pallet-based barcode/labeling system was implemented, uniquely identifying each product unit.",
+    "Bidirectional ERP integration ensured automatic synchronization of order, production, and shipment data.",
+    "Real-time shipment tracking made it easy to report which product was shipped, with which vehicle, and to which customer.",
+    "With real-time data collection and reporting infrastructure, production, warehousing, and logistics operations became manageable from a single interface. As a result, 100% traceability, fast and error-free shipment management, and easy backward tracking in return or recall scenarios were achieved."
+  ],
+  "maxion-inci-celik": [
+    "We developed communication software between the Beckhoff PLC and the pallet applicator on the production line, enabling automatic printing of 2D codes based on recipes.",
+    "Codes were automatically read at every station, enabling the automatic loading of corresponding recipes into the related PLCs.",
+    "On manual lines, desktop printer integration controlled by PLC enabled automatic extraction of reference data from DPM codes and label printing.",
+    "Through the HMI panel, barcode and printer errors were visualized, and manual read capability was added via handheld scanners when needed.",
+    "As a result, product mix-ups were eliminated, and full traceability, automated data flow, and operational efficiency were achieved."
+  ],
+  "haier-europe-single-product-traceability-oven-assembly-line": [
+    "We implemented a traceability system on the new oven assembly lines at Haier Europe's cooking appliance factory, a global leader in white goods manufacturing, located in Turkey.",
+    "In this project, where we also developed the assembly line automation software, the serial number from the product barcode is associated with RFID at the start of the line, and traceability is ensured through the RFID system. During production, electrical tests, gas leakage tests, and flame control tests are performed automatically, independently of the operator, at designated stations along the line, with test results collected from test stations and matched to the product serial number.",
+    "The project uses 9-axis servo systems. All data exchange is facilitated through EtherCAT, TCP/IP, and Profinet communication infrastructure.",
+    "Following the successful completion of the project, work began on the second line."
+  ],
+  "borgwarner-sorting-barcode-control": [
+    "All incoming products were scanned using a camera-based code reader, and the barcode data was cross-verified with information received from the SAP and PLC systems to prevent non-conforming products from passing through.",
+    "Images of all products were stored in a database, matched with their serial numbers.",
+    "Thanks to the reporting application developed, product transitions and associated photographs could be accessed based on date and time."
+  ],
+  "borgwarner-laser-marking": [
+    "As a turnkey solution, the system went into operation with full integration of mechanical, automation, and ERP components.",
+    "Operating in sync with the Oracle ERP system, the machine performs automatic laser marking based on ERP data, followed by camera-based verification.",
+    "The system features 3-axis control and uses a Profinet infrastructure.",
+    "Monitoring, control, and integration processes are managed through a customer-specific SCADA system developed on the .NET platform."
+  ],
+  "maxion-inci-celik-rfid-mold-tracking": [
+    "In this project, SICK RFID equipment was used and integrated with a Siemens S7-1500 PLC. Mold and recipe matching was enabled to prevent incorrect mold usage.",
+    "During recipe changes, mold IDs were read via RFID, and the system verified correct matching. If a correct match was detected, the machine was granted permission to operate.",
+    "Mold lifetime can be tracked through the RFID-based system."
+  ],
+  "bosch-trolley-tracking-rfid-gate": [
+    "In the application developed for the Bosch thermotechnology factory, RFID read/write heads positioned at the warehouse exit ensured that kit trolleys, prepared according to the work order, were released for production.",
+    "To physically enable this control, a barrier system was installed at the warehouse entrance and exit. The application, which facilitated bidirectional communication with the warehouse management system, scanned the RFID tags on incoming kit trolleys and queried the warehouse system, allowing only approved trolleys to exit.",
+    "The project utilized 700 Confidex Metal RFID tags for the RFID read/write heads."
+  ],
+  "mey-diageo-tracking-and-localization-project": [
+    "As part of the Mey Diageo tracking and localization system renovation project, a robust, user-friendly, and flexible traceability system was successfully implemented.",
+    "The project aimed to enable traceability from box to pallet. Using SICK brand barcode readers, the barcodes of boxes produced on the line are scanned and matched with the corresponding pallet barcodes. The system is fully integrated with SAP in both directions and is capable of operating offline in cases where SAP access is limited, such as during network outages, ensuring continuous production.",
+    "Currently operating in 6 factories and 12 production lines, the application can be monitored from the central headquarters in Istanbul, where production-related reports are also generated centrally."
+  ],
+  "bsh-glass-shelf-tracking": [
+    "Integration with the traceability system was achieved by correlating product serial numbers with glass shelf trolley lot information.",
+    "Data was recorded regarding which components, fed to the production line on a lot basis, were assembled into products with specific serial numbers.",
+    "Through product-component correlation, the use of correct components in the correct products was ensured."
+  ],
+  "bsh-oven-door-traceability": [
+    "Integration with the traceability system was achieved by matching product serial numbers with door trolley lot information.",
+    "Data was recorded about which components, supplied in batches to the production floor, were assembled into products with specific serial numbers.",
+    "Through product-component matching, the use of correct components in correct products was ensured."
+  ],
+  "bsh-assembly-line-traceability": [
+    "In the project implemented using Sick RFGS Pro equipment, the material preparation process in the warehouse, including bin preparation, was optimized based on requirements from the production area.",
+    "RFID tags were installed on over 300 bins, enabling automatic generation of material orders in the warehouse as bins exited through the RFID gate on the production line. The material flow was restructured according to the pull methodology."
+  ],
+  "turk-demir-dokum-rfid-gate-with-digital-kanban": [
+    "In the project implemented using Sick RFGS Pro equipment, the material preparation process in the warehouse, including bin preparation, was optimized based on requirements from the production floor.",
+    "RFID tags were installed on over 300 bins, enabling automatic generation of material orders in the warehouse as bins exited through the RFID gate from the production floor. The material flow was restructured according to the pull methodology."
+  ],
+  "pmi-barcode-gate": [
+    "During the shipping process, a barcode gate system installed at the exit ramp automatically reads all pallet labels.",
+    "Through integration, shipping work orders are automatically retrieved from the system and compared with pallet labels.",
+    "If the scanned pallet labels match the shipping orders, the pallet barcodes along with the shipping number are sent to the WMS system.",
+    "In case of incorrect label content, a warning is issued to the operator. This prevents the shipment of products with incorrect or missing barcodes."
+  ],
+  "bsh-carriers-traceability": [
+    "In the project carried out at the BSH oven factory, carriers mounted on oven glass were tracked and recorded based on basket ID.",
+    "At the glass bonding station, baskets were scanned to ensure matching between glass lot numbers and carrier lot numbers.",
+    "During product assembly, the lot number of the relevant glass trolley was associated with the product serial number, integrating with the traceability system.",
+    "This ensured component-product matching, guaranteeing the use of correct components in correct products.",
+    "For conforming parts, confirmation data was sent back to Oracle."
+  ],
+  "phinia-laser-marking-machine-traceability-integration": [
+    "To ensure traceability of each product, a laser marking machine was developed for Phinia to facilitate marking and identification processes.",
+    "The machine was designed with 3-axis movement capability, creating a flexible structure.",
+    "The system was integrated with Oracle. Serial numbers to be printed on products were retrieved from Oracle. After the marking process, code content, grade, and position checks were automatically performed using a camera.",
+    "For conforming parts, confirmation data was sent back to Oracle."
+  ],
+  "duru-bulgur-product-carton-pallet-traceability": [
+    "The Product | Carton | Pallet traceability application was successfully implemented on production lines at Duru Bulgur's Karaman factory.",
+    "During the packaging stage, products were individually marked to ensure traceability. A similar structure was established for cartons and pallets, recording which product went into which carton and which carton was placed on which pallet.",
+    "Inter-warehouse transfers from different locations and transfers to customers were recorded using a handheld terminal application.",
+    "The Product – Carton – Pallet – Warehouse – Customer steps were made traceable and manageable on a single platform, based on the product serial number."
+  ],
+  "ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability": [
+    "At our client's factory in Eskisehir, which produces organic vinegar, organic vinegar parameters during the bottling stage are collected and correlated with individual bottle numbers.",
+    "To ensure transparency and immutability of the collected data, it is transferred to a blockchain network. End users can scan the QR code on the bottle to transparently view the filling parameters of that vinegar and access production details.",
+    "The application, which operates integrated with the SAP system, is also notable for running on cloud servers."
+  ],
+  "orkide-quality-control-application": [
+    "In collaboration with Orkide, one of Turkey's top companies in liquid oil production, we implemented a project for tracking content deficiencies in boxes.",
+    "By enabling box traceability on the production line, the system automatically performs checks for missing product quantities inside boxes. Additionally, for certain selected products, handle presence/absence controls were implemented to detect defective products."
+  ]
+}

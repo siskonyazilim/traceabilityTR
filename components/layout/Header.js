@@ -18,6 +18,7 @@ export const Header = () => {
   const useTransparentHeader = isHomePage && !scrolled && !isOpen;
 
   const languageOptions = [
+    { code: 'tr', flagSrc: '/Turkey.svg', label: 'TR' },
     { code: 'ro', flagSrc: '/romania.svg', label: 'RO' },
     { code: 'en', flagSrc: '/england.svg', label: 'EN' },
   ];
@@ -106,9 +107,11 @@ export const Header = () => {
     { label: t('header.news', 'Știri'), href: '/blog' },
   ];
 
-  const currentLanguage = languageOptions.find((option) => option.code === locale) || languageOptions[0];
-  const nextLanguage = locale === 'ro' ? 'en' : 'ro';
-  const mobileNextLanguage = languageOptions.find((option) => option.code === nextLanguage) || languageOptions[1];
+  const currentLangIndex = languageOptions.findIndex((option) => option.code === locale);
+  const nextLangIndex = (currentLangIndex + 1) % languageOptions.length;
+  const nextLanguage = languageOptions[nextLangIndex].code;
+  const mobileNextLanguage = languageOptions[nextLangIndex];
+  const currentLanguage = languageOptions[currentLangIndex] || languageOptions[0];
 
   let headerBackgroundClass = 'bg-white border-b border-slate-blue/10 shadow-[0_10px_32px_rgba(10,10,43,0.08)]';
   if (useTransparentHeader) {

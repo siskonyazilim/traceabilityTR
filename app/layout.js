@@ -21,11 +21,16 @@ export async function generateMetadata() {
   const locale = isSupportedLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
 
   const isEn = locale === 'en';
+  const isTr = locale === 'tr';
   const title = isEn
     ? 'Industrial Traceability & MES Solutions for Smart Factories | Traceability'
+    : isTr
+    ? 'Akıllı Fabrikalar için Endüstriyel İzlenebilirlik & MES Çözümleri | Traceability'
     : 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability';
   const description = isEn
     ? 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.'
+    : isTr
+    ? 'Traceability; RFID, RTLS, WMS, Poka Yoke ve uçtan uca MES/ERP entegrasyonu ile akıllı fabrikalar için endüstriyel izlenebilirlik, MES ve üretim otomasyon çözümleri sunar.'
     : 'Traceability.ro livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
 
   return {
@@ -43,7 +48,7 @@ export async function generateMetadata() {
       description,
       type: 'website',
       url: 'https://traceability.ro',
-      locale: isEn ? 'en_US' : 'ro_RO',
+      locale: isEn ? 'en_US' : isTr ? 'tr_TR' : 'ro_RO',
     },
     twitter: {
       card: 'summary_large_image',

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { cookies } from 'next/headers';
 import Container from '../../../components/ui/Container';
@@ -235,7 +235,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localeRaw = cookieStore.get('locale')?.value;
+  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
   const isEn = locale === 'en';
   const { slug } = await params;
   const baseSolution = solutions[slug];
@@ -264,7 +265,7 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       type: 'website',
       url: pageUrl,
-      locale: isEn ? 'en_US' : 'ro_RO',
+      locale: locale === 'tr' ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
     },
     twitter: {
       card: 'summary_large_image',
@@ -276,7 +277,8 @@ export async function generateMetadata({ params }) {
 
 export default async function SolutionDetailPage({ params }) {
   const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localeRaw = cookieStore.get('locale')?.value;
+  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
   const { slug } = await params;
   const baseSolution = solutions[slug];
   const solution = localizeSolutionDetail(slug, baseSolution, locale);

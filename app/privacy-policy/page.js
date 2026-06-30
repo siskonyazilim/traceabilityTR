@@ -1,11 +1,12 @@
-import { cookies } from 'next/headers';
+﻿import { cookies } from 'next/headers';
 import Container from '../../components/ui/Container';
 import { loadPolicyHtml } from '../../lib/policyDocuments';
 import { f } from '../../lib/i18n/sectionTranslations';
 
 export async function generateMetadata() {
   const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localeRaw = cookieStore.get('locale')?.value;
+  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
 
   return {
     title: f(locale, 'privacyPolicyPage', 'metaTitle'),
@@ -15,7 +16,8 @@ export async function generateMetadata() {
 
 export default async function PrivacyPolicyPage() {
   const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localeRaw = cookieStore.get('locale')?.value;
+  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
   const policyHtml = await loadPolicyHtml('privacy', locale);
   const pageTitle = f(locale, 'privacyPolicyPage', 'title');
 

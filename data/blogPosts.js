@@ -2,7 +2,7 @@ export const blogPosts = [
   {
     id: 2,
     title: 'Importanța Trasabilității Alimentare pentru Consumatorii Finali',
-    titleTr: 'Gida Izlenebilirliginin Son Tuketiciler Icin Onemi',
+    titleTr: 'Gıda İzlenebilirliğinin Son Tüketiciler İçin Önemi',
     slug: 'the-importance-of-food-traceability-for-end-consumers',
     category: 'Știri',
     categoryEn: 'News',
@@ -55,7 +55,7 @@ export const blogPosts = [
   {
     id: 3,
     title: 'Trasabilitatea Produselor: De ce este esentiala pentru Calitate, Incredere si Durabilitate?',
-    titleTr: 'Urun Izlenebilirligi: Kalite, Guven ve Surdurulebilirlik Icin Neden Esansiyeldir?',
+    titleTr: 'Ürün İzlenebilirliği: Kalite, Güven ve Sürdürülebilirlik İçin Neden Zorunludur?',
     slug: 'product-traceability-why-is-it-essential-for-quality-trust-and-sustainability',
     category: 'Știri',
     categoryEn: 'News',
@@ -108,7 +108,7 @@ export const blogPosts = [
   {
     id: 4,
     title: 'Trasabilitatea Alimentară și Standarde: Importanța Trasabilității Produselor, Cutiilor și Paleților',
-    titleTr: 'Gida Izlenebilirligi ve Standartlar: Urun, Koli ve Palet Izlenebilirliginin Onemi',
+    titleTr: 'Gıda İzlenebilirliği ve Standartlar: Ürün, Koli ve Palet İzlenebilirliğinin Önemi',
     slug: 'food-traceability-and-standards-the-importance-of-product-carton-and-pallet-traceability',
     category: 'Știri',
     categoryEn: 'News',
@@ -150,7 +150,7 @@ export const blogPosts = [
   {
     id: 5,
     title: 'Sisteme de Coduri de Bare Utilizate în Trasabilitate',
-    titleTr: 'Izlenebilirlikte Kullanilan Barkod Sistemleri',
+    titleTr: 'İzlenebilirlikte Kullanılan Barkod Sistemleri',
     slug: 'barcode-systems-used-in-traceability',
     category: 'Știri',
     categoryEn: 'News',
@@ -337,7 +337,7 @@ export const blogPosts = [
   {
     id: 6,
     title: 'Cum se implementeaza trasabilitatea individuala a produselor?',
-    titleTr: 'Bireysel Urun Izlenebilirligi Nasil Uygulanir?',
+    titleTr: 'Bireysel Ürün İzlenebilirliği Nasıl Uygulanır?',
     slug: 'how-to-implement-individual-product-traceability',
     category: 'Știri',
     categoryEn: 'News',
@@ -377,7 +377,7 @@ export const blogPosts = [
   {
     id: 7,
     title: 'Care sunt beneficiile sistemelor de trasabilitate ?',
-    titleTr: 'Izlenebilirlik Sistemlerinin Faydalari Nelerdir?',
+    titleTr: 'İzlenebilirlik Sistemlerinin Faydaları Nelerdir?',
     slug: 'what-are-the-benefits-of-traceability-systems',
     category: 'Știri',
     categoryEn: 'News',
@@ -420,7 +420,7 @@ export const blogPosts = [
   {
     id: 8,
     title: 'Ce Sunt Datele de Trasabilitate? Definiția Trasabilității',
-    titleTr: 'Izlenebilirlik Verileri Nedir? Izlenebilirlik Tanimi',
+    titleTr: 'İzlenebilirlik Verisi Nedir? İzlenebilirlik Tanımı',
     slug: 'what-are-traceability-data-definition-of-traceability',
     category: 'Știri',
     categoryEn: 'News',
@@ -445,7 +445,7 @@ export const blogPosts = [
   {
     id: 9,
     title: 'Sistem de Citire Multi-Cod Bazat pe Camere BOMI Group',
-    titleTr: 'BOMI Group Kamera Tabanli Coklu Kod Okuma Sistemi',
+    titleTr: 'BOMI Group Kamera Tabanlı Çoklu Kod Okuma Sistemi',
     slug: 'bomi-group-camera-based-multi-code-reading-system',
     category: 'Știri',
     categoryEn: 'News',
@@ -468,7 +468,7 @@ export const blogPosts = [
   {
     id: 10,
     title: 'TUSIAD SD2: Pionier în Transformarea Digitală Industrială',
-    titleTr: 'TUSIAD SD2: Endustride Dijital Donusume Onculuk Etmek',
+    titleTr: 'TÜSİAD SD2: Endüstride Dijital Dönüşüme Öncülük Etmek',
     slug: 'tusiad-sd2-pioneering-digital-transformation-in-industry',
     category: 'Știri',
     categoryEn: 'News',
@@ -523,7 +523,7 @@ export const blogPosts = [
   {
     id: 11,
     title: 'Siskon la Târgul Viitorului Tehnologiilor Industriale',
-    titleTr: "Siskon Gelecegin Endustri Teknolojileri Fuari'nda",
+    titleTr: "Siskon, Geleceğin Endüstri Teknolojileri Fuarı'nda",
     slug: 'siskon-at-the-future-industrial-technology-fair',
     category: 'Știri',
     categoryEn: 'News',
@@ -540,7 +540,7 @@ export const blogPosts = [
   {
     id: 12,
     title: 'Prezentare despre trasabilitate la Evenimentul Industrie 4.0',
-    titleTr: 'Endustri 4.0 Etkinliginde Izlenebilirlik Sunumu',
+    titleTr: 'Endüstri 4.0 Etkinliğinde İzlenebilirlik Sunumu',
     slug: 'traceability-presentation-at-industry-4-0-event',
     category: 'Știri',
     categoryEn: 'News',
@@ -555,7 +555,7 @@ export const blogPosts = [
   {
     id: 13,
     title: 'Tablou de bord IoT si Solutii de Trasabilitate la Seminarul de Logistica',
-    titleTr: 'Lojistik Seminerinde IoT Panosu ve Izlenebilirlik Cozumleri',
+    titleTr: 'Lojistik Seminerinde IoT Panosu ve İzlenebilirlik Çözümleri',
     slug: 'iot-dashboard-and-traceability-solutions-at-logistics-seminar',
     category: 'Știri',
     categoryEn: 'News',

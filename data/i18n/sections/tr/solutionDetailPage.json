@@ -1,0 +1,27 @@
+{
+  "notFoundTitle": "Çözüm Bulunamadı | Traceability",
+  "notFoundDescription": "İstenen çözüm sayfası bulunamadı. Üretim ve lojistik için Traceability endüstriyel çözümlerini keşfedin.",
+  "back": "Çözümlere Dön",
+  "catalog": "Traceability Çözümleri",
+  "benefits": "Temel Faydalar",
+  "useCases": "Kullanım Senaryoları",
+  "technologies": "Kullanılan Teknolojiler",
+  "ctaTitle": "İşinize uygun çözümü birlikte uyguluyoruz",
+  "ctaSubtitle": "Ücretsiz danışmanlık ve özelleştirilmiş bir teklif için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç",
+  "ctaSecondary": "Benzer Projeleri Gör",
+  "roi": {
+    "efficiency": "verimlilik",
+    "errors": "hata",
+    "time": "zaman",
+    "utilization": "kullanım",
+    "space": "alan",
+    "defects": "kusur",
+    "rework": "yeniden işleme",
+    "claims": "şikayet",
+    "quality": "kalite",
+    "speed": "hız",
+    "labor": "iş gücü",
+    "visibility": "görünürlük"
+  }
+}

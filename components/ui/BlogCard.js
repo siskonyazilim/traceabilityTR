@@ -10,7 +10,7 @@ export const BlogCard = ({ post }) => {
   const [imageError, setImageError] = useState(false);
   const { locale, t } = useLanguage();
 
-  const dateLocale = locale === 'en' ? 'en-US' : 'ro-RO';
+  const dateLocale = locale === 'en' ? 'en-US' : locale === 'tr' ? 'tr-TR' : 'ro-RO';
   const date = new Date(post.date).toLocaleDateString(dateLocale, {
     year: 'numeric',
     month: 'long',

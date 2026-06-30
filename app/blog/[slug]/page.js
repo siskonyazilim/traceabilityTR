@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Container from '../../../components/ui/Container';
@@ -13,7 +13,8 @@ import { f } from '../../../lib/i18n/sectionTranslations';
 
 export async function generateMetadata({ params }) {
   const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localeRaw = cookieStore.get('locale')?.value;
+  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
   const isEn = locale === 'en';
   const localizedPosts = localizeBlogPosts(blogPosts, locale);
   const { slug } = await params;
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }) {
       description,
       type: 'article',
       url: pageUrl,
-      locale: isEn ? 'en_US' : 'ro_RO',
+      locale: locale === 'tr' ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
     },
     twitter: {
       card: 'summary_large_image',
@@ -53,7 +54,8 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogDetailPage({ params }) {
   const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value === 'en' ? 'en' : 'ro';
+  const localeRaw = cookieStore.get('locale')?.value;
+  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
   const localizedPosts = localizeBlogPosts(blogPosts, locale);
   const { slug } = await params;
   const post = localizedPosts.find((p) => p.slug === slug);
@@ -68,7 +70,7 @@ export default async function BlogDetailPage({ params }) {
     )
     .slice(0, 3);
 
-  const dateLocale = locale === 'en' ? 'en-US' : 'ro-RO';
+  const dateLocale = locale === 'en' ? 'en-US' : locale === 'tr' ? 'tr-TR' : 'ro-RO';
   const date = new Date(post.date).toLocaleDateString(dateLocale, {
     year: 'numeric',
     month: 'long',
