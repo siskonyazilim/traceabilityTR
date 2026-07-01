@@ -74,8 +74,8 @@ export default async function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           id="cerezgo-script"
-          src="https://cdn.cerezgo.com/file/cerezgo.min.js"
-          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU9ZRrCt2t5XqPh1PZTcqf+d"
+          src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
+          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0szME7AHM2StfwPjoKkg0DOCFRSHeqEBQs3+SrK7/9T1h3iFvw33e+o="
           data-id="nt"
           async
           defer
