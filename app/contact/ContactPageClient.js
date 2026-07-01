@@ -14,7 +14,7 @@ const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 export default function ContactPageClient() {
   const { t, locale } = useLanguage();
 
-  const offices = [
+  const officeList = [
     {
       id: 1,
       name: t('contactPage.offices.brasov.name', 'România - Brașov'),
@@ -31,13 +31,15 @@ export default function ContactPageClient() {
       name: t('contactPage.offices.izmir.name', 'Turcia - İzmir'),
       address: t(
         'contactPage.offices.izmir.address',
-        'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi\nDepark Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir'
+        'Dokuz Eylül Üniversitesi Merkez Kampüsü\nDEPARK Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir'
       ),
       phone: '+90 232 245 00 76',
       email: 'info@traceability.ro',
-      mapQuery: 'Dokuz Eylül Üniversitesi Tınaztepe Yerleşkesi Depark Beta Binası, Adatepe Mahallesi Doğuş Caddesi No:207/AG, Kat: 2 No:202, 35390 Buca/İzmir',
+      mapQuery: 'Dokuz Eylül Üniversitesi Merkez Kampüsü DEPARK Beta Binası, Adatepe Mahallesi Doğuş Caddesi No:207/AG, Kat: 2 No:202, 35390 Buca/İzmir',
     },
   ];
+
+  const offices = locale === 'tr' ? [officeList[1], officeList[0]] : officeList;
 
   const {
     register,
