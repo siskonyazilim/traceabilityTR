@@ -36,41 +36,21 @@ const slides = [
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
-  const [isMobile, setIsMobile] = useState(null);
   const [videoFailed, setVideoFailed] = useState(false);
-  const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef(null);
   const { locale, t } = useLanguage();
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
   const activeSlide = localizedSlides[current];
-  const activeVideoSrc = isMobile && activeSlide.mobileVideo ? activeSlide.mobileVideo : activeSlide.video;
-  const shouldRenderVideo = isMobile !== null && videoFailed === false;
+  const shouldRenderVideo = videoFailed === false;
 
   useEffect(() => {
-    const mediaQuery = globalThis.matchMedia('(max-width: 1023px)');
-    const updateMobileState = () => setIsMobile(mediaQuery.matches);
-
-    updateMobileState();
-    mediaQuery.addEventListener('change', updateMobileState);
-
-    return () => {
-      mediaQuery.removeEventListener('change', updateMobileState);
-    };
+    // Mobile payload is lower by default because autoplay stays disabled.
+    setIsAutoPlay(false);
   }, []);
 
   useEffect(() => {
-    if (isMobile === null) {
-      return;
-    }
-
-    // Keep mobile payload lower by avoiding automatic slide rotation.
-    setIsAutoPlay(!isMobile);
-  }, [isMobile]);
-
-  useEffect(() => {
     setVideoFailed(false);
-    setVideoReady(false);
-  }, [activeSlide.id, activeVideoSrc]);
+  }, [activeSlide.id]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -93,7 +73,7 @@ export const HeroSlider = () => {
     };
 
     tryPlay();
-  }, [activeSlide.id, activeVideoSrc, videoFailed]);
+  }, [activeSlide.id, videoFailed]);
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -121,13 +101,15 @@ export const HeroSlider = () => {
             muted
             loop
             playsInline
-            preload="metadata"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
-            src={activeVideoSrc}
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
             onError={() => setVideoFailed(true)}
-            onPlaying={() => setVideoReady(true)}
-            onWaiting={() => setVideoReady(false)}
-          />
+          >
+            {activeSlide.mobileVideo ? (
+              <source src={activeSlide.mobileVideo} media="(max-width: 1023px)" type="video/webm" />
+            ) : null}
+            <source src={activeSlide.video} type="video/webm" />
+          </video>
         )}
 
         <div className="absolute inset-0 bg-primary-black/35"></div>

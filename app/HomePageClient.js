@@ -1,16 +1,12 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import HeroSlider from '../components/home/HeroSlider';
 import HomeCta from '../components/home/HomeCta';
 
 const DeferredSection = () => (
   <section className="py-12" aria-hidden="true" />
 );
-
-const HeroSlider = dynamic(() => import('../components/home/HeroSlider'), {
-  ssr: false,
-  loading: () => <section className="h-screen bg-black" aria-hidden="true" />,
-});
 
 const FaqAccordion = dynamic(() => import('../components/home/FaqAccordion'), {
   loading: () => <DeferredSection />,
