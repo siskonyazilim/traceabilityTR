@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -36,44 +36,14 @@ const slides = [
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
-  const [videoFailed, setVideoFailed] = useState(false);
-  const videoRef = useRef(null);
   const { locale, t } = useLanguage();
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
   const activeSlide = localizedSlides[current];
-  const shouldRenderVideo = videoFailed === false;
 
   useEffect(() => {
     // Mobile payload is lower by default because autoplay stays disabled.
     setIsAutoPlay(false);
   }, []);
-
-  useEffect(() => {
-    setVideoFailed(false);
-  }, [activeSlide.id]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (videoFailed) return;
-    if (!video) return;
-
-    // iOS and some Android browsers may require a direct play attempt after mount.
-    const tryPlay = async () => {
-      try {
-        video.load();
-        await video.play();
-      } catch (error) {
-        if (error?.name === 'AbortError') {
-          return;
-        }
-
-        // Keep a visible fallback instead of a black slide when autoplay is blocked.
-        setVideoFailed(true);
-      }
-    };
-
-    tryPlay();
-  }, [activeSlide.id, videoFailed]);
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -94,23 +64,19 @@ export const HeroSlider = () => {
     <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Active slide only for reduced network and CPU */}
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
-        {shouldRenderVideo && (
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
-            onError={() => setVideoFailed(true)}
-          >
-            {activeSlide.mobileVideo ? (
-              <source src={activeSlide.mobileVideo} media="(max-width: 1023px)" type="video/webm" />
-            ) : null}
-            <source src={activeSlide.video} type="video/webm" />
-          </video>
-        )}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          {activeSlide.mobileVideo ? (
+            <source src={activeSlide.mobileVideo} media="(max-width: 1023px)" type="video/webm" />
+          ) : null}
+          <source src={activeSlide.video} type="video/webm" />
+        </video>
 
         <div className="absolute inset-0 bg-primary-black/35"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
