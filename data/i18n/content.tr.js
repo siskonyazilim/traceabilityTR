@@ -83,44 +83,184 @@ export const contentTr = {
     1: {
       title: 'Tekli Ürün Takibi',
       description: 'Her ürüne benzersiz bir kimlik atar ve her süreç adımında takip eder. İşaretleme teknolojisi malzemeye ve çalışma koşullarına göre seçilir; mürekkep püskürtme, termal transfer ve lazer gibi seçenekler mevcuttur.',
+      detail: 'İzlenebilirlik süreçlerinde tekil ürün takibi, her bir ürünün eşsiz numaraya sahip olması ve prosesin tüm adımlarında bu eşsiz numara üzerinden takip edilmesini sağlamaktadır. Tekil ürün takibi için önemli kriterlerden biri de takibi yapılacak malzemenin materyalidir. Çünkü takip için gereken markalama işleminin mamulün üstüne işlenebilir olması kritik öneme sahiptir.\n\nÜrün markalama işlemleri için farklı çözümler mevcuttur. Inkjet, termal transfer, lazer, karbon fiber bunlardan birkaçıdır.',
     },
     2: {
       title: 'Lot / Parti Takibi',
       description: 'Ürün düzeyinde takibin güç olduğu durumlarda idealdir. Lotlar üretim tarihi ve parti numarasından oluşturulur; ambalajlama, depolama ve dağıtım boyunca izlenir.',
+      detail: 'İzlenebilirlik süreçlerinde prosese göre tekil olarak ürün takibinin yapılmasının zor olduğu süreçlerde parti/lot takibi de tercih edilmektedir. Parti kavramı, üretilen ürünlerin geriye dönük izlenmesine imkan verecek şekilde üretim tarihi ve parti bileşeni ile elde edilir. Devamında paketleme, depolama ve nihai tüketiciye ulaşması ile son bulur.\n\nİzlenebilirlik uygulamaları tüketilen malzeme detayları, kullanılan ekipman ve süreçleri, toplanan parametrik ve kalite verilerini, istisna oluşturan nedenler gibi birçok veriyi içerisinde barındırmaktadır. Bu nedenle bir izlenebilirlik sürecinde gerek tekil ürün gerekse de parti/lot takip metodolojileri eş zamanlı uygulanabilmektedir.\n\nParti/lot takibi süreçlerinde maksimum şeffaflık sağlayabilmek adına parti/lot, seri numarası ve diğer kritik verilerin veya bunların kombinasyonlarının izlenmesi ve takip edilmesi gerekmektedir.\n\nEtkili bir Parti/lot takibi için:',
+      detailBullets: [
+        'Her ürün grubu açıkça işaretlenmiş olmalıdır.',
+        'Parti/lot kimliği ve hedef ayrıntılarının bir kaydı tutulmalıdır.',
+        'Sektöre göre zorunlu güvenlik ihtiyaçları ve kalitesi için kritik öneme sahip işlemlerin kayıtları tutulmalıdır.',
+      ],
     },
     3: {
       title: 'Pick to Light',
       description: 'Manuel montaj ve üretim adımları için görsel rehberlik sağlar. Doğru veya yanlış eylemler ışıklar ve isteğe bağlı sesli uyarılarla bildirilir.',
+      detail: 'Siskon\' un, P2L çözümleri el işçiliği kullanılan endüstriyel üretimlerde ve montaj işlemlerinde operatörlere sıradaki parça ve işlem ile ilgili görsel olarak yönlendirme sunar. Montaj sırasında doğru veya yanlış gibi aksiyonlar, ışıklar veya opsiyonel olarak sesli ikazlar ile operatöre gösterilir. Ayrıca Siskon P2L çözümlerinde operatör tarafından tamamlanan işler otomatik veya manuel olarak onaylanabilir ve diğer sistemler ile entegrasyonu sağlanabilir. "P2L (Pick to Light)", endüstriyel üretimin en dikkat çekici iki konusunu doğrudan etkilemektedir:',
+      detailPreBullets: [
+        'Hatalı ürün sayısının azaltılarak sürdürülebilir kalite elde edilmesi, kalite standardizasyonunun sağlanması.',
+        'Rework için harcanan zamandan tasarruf edilerek verimliliğin arttırılması ve müşteri memnuniyetinin korunmasına katkıda bulunulması.',
+      ],
+      detailBulletsHeading: 'P2L Avantajları:',
+      detailBullets: [
+        'Süreç İyileştirme - Görsel proses yönetimi ile proses kalitesi artar ve sürdürülebilir kalite anlayışı korunur.',
+        'Denetim: Montaj anında tümüyle denetleme imkanı sunar.',
+        'Artan Esneklik - Operatörler ek eğitime ihtiyaç duymaksızın sahada faaliyet gösterebilirler.',
+        'Zamandan Tasarruf - Üretim esnasında montaj ve devreye alma sürelerinde dramatik azalma.',
+        'Sıfır Hata - Operasyonel performansı etkilemeden, üretim sahalarında hatasız montaj.',
+      ],
     },
     4: {
       title: 'RTLS (Gerçek Zamanlı Konum Sistemleri)',
       description: 'RTLS, kişilerin ve varlıkların gerçek zamanlı konumunu tanımlar ve izler. Etiketler, hassas konumları belirlemek amacıyla sabit ankerlerle iletişim kurar.',
+      detail: 'Gerçek Zamanlı Konum Belirleme Sistemleri (RTLS), nesnelerin veya insanların konumlarını gerçek zamanlı ve otomatik olarak tanımlamak ve izlemek için kullanılır. Kablosuz RTLS etiketleri nesnelere takılabildiği gibi insanlar tarafından giyilebilir çeşitleri de bulunmaktadır. RTLS sistemlerinde sabit referans noktaları konumlandırılarak, etiketlerden kablosuz sinyaller alınıp, nesnelerin ve insanların konumları belirlenir. Montaj hattı üzerindeki otomobillerin izlenmesi, bir depodaki paletlerin konumlandırılması veya bir hastanede tıbbi ekipman ve hastaların izlenmesi Gerçek Zamanlı Konum Belirleme Sistemlerine örnek gösterilebilir. Radyo Frekansı (RF), RTLS teknolojisinin genellikle fiziksel bileşenlerinin başında gelmektedir. Ancak bazı sistemlerde, ihtiyaca göre, RF yerine veya RF\' ye ek olarak optik (genellikle kızılötesi) veya akustik (genellikle ultrason) teknolojiler de kullanılabilmektedir.',
+      detailBulletsHeading: 'RTLS Uygulamaları;',
+      detailBullets: [
+        'Bir depodaki forklift hareketlerinin izlenerek verimliliğin artırılması',
+        'Ekipmanların fabrika kullanım alanı dışına çıkmasının engellenmesi',
+        'Paleti izleyerek birden çok öğenin izlenebilir hale gelmesi',
+        'Operasyon alanında doğru ve gerekli personel sayısının varlığının kontrol edilmesi',
+        'Acil tahliye ihtiyacında personel güvenliğinin tespiti',
+        'Ekipman veya yüksek değerli varlıkların akışının optimize edilmesi',
+        'Sıcaklık gibi değişkenlerden etkilenen ürünlerin yanlış bölgelerde depolanmasının engellenmesi',
+        'Çalışanların veya ziyaretçilerin fabrika içerisinde izlenmesi',
+        'Varlıkların ya da iş akışının tesis içerisinde en hızlı ve güvenli rotalarının oluşturulması',
+      ],
     },
     5: {
       title: 'Depo Yönetim Sistemleri',
       description: 'WMS çözümleri, gerçek zamanlı operasyonel görünürlük ve envanter durumu ile gelen ve giden depo akışlarını kontrol eder.',
+      detail: 'Depo Yönetim Sistemi, genel anlamıyla kuruluşların mal veya malzemelerinin depoya giriş ve çıkışlarını kontrol etmelerini ve yönetmelerini sağlayan bir süreçtir. Modern depo yönetim sistemleri, gerçek zamanlı verilerle çalışarak organizasyonun depo içerisinde gerçekleştirdiği tüm faaliyetler hakkında en güncel bilgileri yönetmesine olanak tanır.',
+      detailPreBulletsHeading: 'Bu anlamda bir Depo Yönetim Sistemi;',
+      detailPreBullets: [
+        'İşletmelerin işgücü maliyetlerini azaltmasına,',
+        'Envanter doğruluğunu artırmasına,',
+        'Esnekliğinin ve yanıt verebilirliğinin artmasına,',
+        'Ürün gönderme ve nakliye hatalarının azaltılmasına',
+        'Müşteri hizmetlerinin iyileşmesine yardımcı olmaktadır.',
+      ],
+      detailBulletsHeading: 'Genel hatlarıyla Depo Yönetim Sistemleri aşağıdaki bölümlerden oluşmaktadır:',
+      detailBullets: [
+        'Depo Tasarımı',
+        'Raf Yönetimi ve Yerleştirme',
+        'Envanter Yönetimi',
+        'Mal/Malzeme Giriş/Çıkış İşlemleri',
+        'Raf Ömrü İzleme',
+        'Personel Yönetimi',
+        'Raporlama',
+      ],
     },
     6: {
       title: 'Entegrasyon',
       description: 'Bağımsız yazılım sistemleri ve üretim platformları arasında güvenilir veri alışverişi için gereken entegrasyon katmanını sağlıyoruz.',
+      detail: 'Bağımsız uygulamaların kendi aralarındaki veri transferini, kısaca sistemlerin birbirleri ile konuşmalarını sağlamak için gerekli birleşim uygulamaları ve çözümleri sunuyoruz. Birden fazla farklı yazılım kullanıyorsanız, veri girişi, rapor alma ve karşılaştırma gibi işlemlere ihtiyaç duyduğunuzda, bu farklı yazılımlardaki verileri birleştirmek ve sonuçlar elde etmek zor olmaktadır. Yazılım entegrasyon hizmetleri kapsamında Siskon, kullandığınız yazılımları birbirine entegre eder ve ihtiyaç halinde birbiri ile senkronize çalışmalarını sağlar. Çok sayıda sistem entegrasyonu gerçekleştirmiş olan Siskon bu alanda uzmandır.',
+      detailPreBulletsHeading: 'Sistem entegrasyonları kapsamında:',
+      detailPreBullets: [
+        'Analiz, tasarım ve geliştirme sürecinin yönetimi,',
+        'İhtiyaca göre gereken entegrasyon teknolojisinin belirlenmesi,',
+        '.Net programlama ile entegrasyon yazılımları hazırlanması,',
+        'Test ve devreye alma çözümlerini sunmaktayız.',
+      ],
+      detailBulletsHeading: 'Başlıca entegrasyonlarımız;',
+      detailBullets: [
+        'MRP',
+        'ERP',
+        'CRM',
+        'Enerji yönetim sistemleri',
+        'Kalibrasyon ve bakım sistemleri',
+        'Kalite yönetim sistemleri',
+      ],
     },
   },
   products: {
     1: {
       title: 'Hybrid Track and Trace',
       description: 'Otomotiv standartlarına ilişkin gelişmiş gereksinimler dahil, dahili sistemler ve tedarik zinciri ortakları genelinde uçtan uca izlenebilirlik sunar.',
+      detail: 'Hybrid Track & Trace Otomotiv Üreticileri - Global işlemlerde tutarlı kalite sağlayın, uygunluğunuzu sürdürün ve çevikliğinizi geliştirin. Siskon\'un, Otomotiv Ana ve Yan Sanayi için geliştirdiği Hybrid Track and Trace, hem iç sistemlerden hem de tedarik zinciri ortaklarından gelen verileri, ürünün geçtiği tüm süreçleri ve süreç verilerini kayıt altına alarak uçtan uca izlenebilirliği sağlar. ISO/TS 16949 standartları için gerekli olan mevzuattaki güncel değişikliklere uygun gelişmiş ürün izlenebilirlik gerekliliklerini sağlar.',
+      detailPreBulletsHeading: 'Hybrid T&T, otomotiv endüstrisinin en dikkat çekici iki konusunu doğrudan etkilemektedir:',
+      detailPreBullets: [
+        'Hatalı ürün sayısını azaltarak global ölçekte sürdürülebilir kalite elde edilmesi.',
+        'Mevzuata dayanarak ürünlerin geri çağrılması durumunda bir yandan garanti giderleri azaltılırken, diğer yandan da müşterilerin gereksinimlerinin karşılanmasıdır.',
+      ],
+      detailBulletsHeading: 'Hybrid T&T sayesinde;',
+      detailBullets: [
+        'İşlemlerde İş Birliği - Üretici ve ticaret ortakları arasında düzeltici faaliyetlerin daha iyi koordine edilmesi, hata ihtimali yüksek manuel süreçlerin azaltılması.',
+        'Merkezi İzlenebilirlik Raporlama - Ürün geliştirme süreçleri ve paketleme hiyerarşisinin her aşamasının kayıt altına alınması.',
+        'Tedarik Zinciri Senkronizasyonu - Analiz ve düzeltici faaliyetlerde yer alan iş ortakları ile daha iyi iletişim kurulması.',
+        'Yüksek Hacimli İzlenebilirlik Verilerini Yönetme - Operasyonel performansı etkilemeden verilerin entegre yönetilmesi.',
+        'Ürün Kimlik Belirleme Şemaları Oluşturma - RFID ve barkod tarama teknolojilerinin iyileştirilmesi.',
+      ],
     },
     2: {
       title: 'A+++ Track and Trace',
       description: 'Beyaz eşya üretimi için tasarlanmış; montaj hatlarında ürün takibi, kritik bileşen takibi ve rota takibi modüllerine sahiptir.',
+      detail: 'A+++ Track and Trace A+++ T&T, hem iç sistemlerinden hem de tedarik zinciri ortaklarından gelen verileri, ürünün geçtiği tüm süreçleri ve süreç verilerini kayıt altına alarak uçtan uca izlenebilirliği sağlar. Siskon tarafından beyaz eşya endüstrisine özel olarak geliştirilen A+++ Track and Trace çözümü, montaj hatlarında ürün takibi, kritik komponent takibi, rota takibi ve diğer modülleri ile uçtan uca ürün izlenebilirliğini sağlamaktadır. A+++ T&T, hem iç sistemlerinden hem de tedarik zinciri ortaklarından gelen verileri, ürünün geçtiği tüm süreçleri ve süreç verilerini kayıt altına alarak uçtan uca izlenebilirliği sağlar. A+++ T&T, kalite veya üretim ile ilgili potansiyel sorunların kritik hale gelmeden önce tespit edilmesini sağlayarak karlılığı ve ilk seferde doğru yap prensibi ile verimliliği arttırmayı hedefler. A+++ T&T, beyaz eşya endüstrisinde faaliyet gösteren firmaların, etkin maliyet ve proaktif olarak ürün kalitesi sağlamalarına yardımcı olurken, bir yandan da bir kalite yönetim standardı olan ISO 9001 gibi gelişimi düzenleyici yapıların gereksinimlerini karşılamaktadır.',
     },
     3: {
       title: 'Organic Track and Trace',
       description: 'Uyum gereksinimlerini desteklerken üretim ve dağıtım boyunca kaynak girdileri ve süreç durumlarını tanımlayan gıda izlenebilirlik çözümü.',
+      detail: 'Organic T&T ürünün izlenebilirliğini sağlarken aynı zamanda;',
+      detailSections: [
+        {
+          heading: 'OPERASYONEL VERİMLİLİK',
+          items: [
+            'Gelişmiş Tedarik Zinciri Yönetimi: Firmaların müşteri talebini daha verimli bir şekilde karşılamalarını sağlayacak stok doğruluğuna sahip olmasını sağlamaktadır.',
+            'Artan Tedarik Zinciri Güveni: Ürün izlenebilirliği performansının artırılması tedarik zinciri katılımcılarının performanslarının artmasını yol açmaktadır.',
+            'Süreç İyileştirmeleri: Ürün takibindeki iyileştirmeler sıklıkla hata oranlarını düşürür, ürün seçim doğruluğunu artırır ve iş akışını daha etkin bir şekilde yönetmek ve en üst düzeye çıkarmak için belge yönetimini kolaylaştırmaktadır.',
+            'Bozulma / Atık ve Fire Miktarında Azalma: Gelişmiş ürün izlenebilirliği, fire maliyetlerini ve atıkları azaltarak daha doğru envanter yönetimi sağlamaktadır.',
+          ],
+        },
+        {
+          heading: 'PAZARA ERİŞİM',
+          items: [
+            'Gelişmiş Marka İtibarı: Ürün izleme sistemleri, marka itibarını etkileyen kararları destekler. Ürün izlemenin iyileştirilmesi karar verme yeteneğini geliştirmektedir.',
+            'Artan Tüketici Güveni: İzlenebilirlik, ürünün talep edildiği şekilde belirli özelliklere sahip olduğunun kanıtıdır. Ürün takibi iş yapmanın normal bir maliyeti olarak kabul edilebilirken, izlenebilirliğin olmaması birçok firmanın tüketici güvenini ve müşteri sadakatini olumsuz yönde etkilemektedir.',
+            'Genişletilmiş Pazarlar / Yeni Müşteriler: Ürün izlenebilirliği ile sağlanacak geri çağırma ve geri izleme maliyetlerindeki azalma, yeni pazarlara girme ve yeni müşteriler kazanmak adına işletme risklerini azaltmaktadır.',
+          ],
+        },
+        {
+          heading: 'RİSK AZALTMA',
+          items: [
+            'Sigorta / Yükümlülük Maliyetinin Azaltılması: Bazı sigorta sağlayıcıları, gıda endüstrisi içindeki firmalar için belirli sigorta poliçelerine tabi tutulmadan önce ürün izleme kabiliyetine ihtiyaç duymaktadır.',
+            'Azaltılmış Geri Çağırma Maliyetleri: Bir geri çağırma durumunda kritik verilere erişim süresini azaltır ve geri çağırma kapsamını düşürmektedir.',
+            'Olağan İşlere Geri Dönmek: İşletmenin geri çağırma işlemine dahil olmadığının daha hızlı doğrulanması, mevcut iş akışına hızlı dönüş yapabilmesine olanak sağlamaktadır.',
+          ],
+        },
+      ],
     },
     4: {
       title: 'Capsule Track and Trace',
       description: 'RFID, 1D barkod ve Veri Matris teknolojilerini kullanarak hammadde kabulünden depo teslimatına kadar farmasötik izlenebilirliği sağlar.',
+      detail: 'Siskon tarafından ilaç endüstrisine özel olarak geliştirilen Capsule Track and Trace, firmaların ürünlerin hammadde girişinden depoya teslimine kadar tekil numara bazında izlenmesine, daha geniş ve karmaşık çeşitlerde üretim yapmalarına, ilaçların dağıtımına aynı zamanda hastalarla olan bağlantıyı hızlandırmaya ve hatta önceden olduğundan daha yakın hale gelmesine yardım etmeyi hedeflemektedir.',
+      detailSections: [
+        {
+          heading: 'Capsule T&T temel faydaları:',
+          items: [
+            'Hammadde girişinden başlayarak bitmiş ürüne kadar olan tüm süreçlerin tekil numara bazında izlenmesi ile entegre raporlama imkanı',
+            'Süresi dolmuş, yasaklanmış veya geri çağrılan ürünlerin dağıtımının engellenmesi',
+            'Tıbbi ürün kullanım verilerinin toplanmasını ve bu verilere göre özel stratejiler geliştirilmesine olanak sağlaması',
+            'Etkin bir malzeme yönetimi sağlaması',
+            'Tedarik zinciri operasyonlarının daha iyi yönetilmesi',
+          ],
+        },
+        {
+          paragraph: 'İlaç sektöründe izlenebilirlik için RFID, 1D çizgi barkod veya Data Matrix (Karekod) gibi farklı teknolojiler kullanılmaktadır. Ülkemizde 2D karekod teknolojisi ile ilaç izlenebilirliği sağlanmaktadır.',
+        },
+        {
+          heading: 'Türkiye’de karekod içinde şu bilgiler bulunur:',
+          items: [
+            'GTIN (Global Trade Item Number- Küresel Ticari Ürün Numarası): 14 rakamlı barkod numarasıdır.',
+            'SN (Serial Number- Seri Numarası): Her birim ilaç için benzersiz şekilde üreticiler tarafından tespit edilir. Sıralı şekilde artan bir numaradır.',
+            'XD (Expiration Date- Son Kullanma Tarihi): Yıl, ay, gün formatında 6 rakamla anlatılan son kullanma tarihidir.',
+            'BN (Batch Number- Parti Numarası): İlacın üretimindeki parti numarasını ifade eden bir rakamdır.',
+          ],
+        },
+        {
+          paragraph: 'Görüntü İşleme Üretilen ürünlerdeki hataların görsel kontrol sistemleri ile tespit edilmesi süre gelen insan ve diğer hata ayıklayıcılarına üstünlük sağlamaktadır.',
+        },
+      ],
     },
   },
   solutionsDetail: {

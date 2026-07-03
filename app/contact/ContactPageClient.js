@@ -16,15 +16,17 @@ export default function ContactPageClient() {
 
   const officeList = [
     {
-      id: 1,
+       id: 1,
       name: t('contactPage.offices.brasov.name', 'România - Brașov'),
       address: t(
         'contactPage.offices.brasov.address',
-        'Punct de lucru: Str. Turnului Nr.5,\nClădirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România'
+        'Strada Turnului Nr. 25\nCorp M.U.M., Scara 3, Birou 5, Etaj 2\n500152 Brasov\nJud. Brasov\nRomania'
       ),
       phone: '+40 368 402 002',
       email: 'info@traceability.ro',
-      mapQuery: 'Strada Turnului 5, Scara 3, 500152 Brașov, Romania',
+      mapEmbedUrl:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.3812984624165!2d25.6221473!3d45.6632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b910e74964b%3A0xac8086acca35f96a!2sSiskon%20Software%20and%20Automation%20SRL!5e0!3m2!1sen!2str!4v1783058783861!5m2!1sen!2str',
+      mapQuery: 'Strada Turnului Nr. 25, Corp M.U.M., Scara 3, Birou 5, Etaj 2, 500152 Brasov, Jud. Brasov, Romania',
     },
     {
       id: 2,
@@ -235,7 +237,7 @@ export default function ContactPageClient() {
                     style={{ border: 0 }}
                     loading="lazy"
                     allowFullScreen=""
-                    src={`https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
+                    src={office.mapEmbedUrl || `https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
                   />
                 </div>
               </motion.div>

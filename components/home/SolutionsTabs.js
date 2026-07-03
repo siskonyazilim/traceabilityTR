@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -26,12 +27,26 @@ const solutionFontAwesomeMap = {
   'link': 'fa fa-cogs fa-5x fa-fw',
 };
 
+function getCardPreviewText(item, maxLength = 210) {
+  const source = item?.detail || item?.summary || item?.description || '';
+  const normalized = String(source).replace(/\s+/g, ' ').trim();
+
+  if (normalized.length <= maxLength) {
+    return normalized;
+  }
+
+  return `${normalized.slice(0, maxLength).trim()}...`;
+}
+
 export const SolutionsTabs = () => {
   const [activeTab, setActiveTab] = useState('solutions');
   const searchParams = useSearchParams();
   const { locale, t } = useLanguage();
   const localizedSolutions = useMemo(() => localizeSolutions(solutions, locale), [locale]);
   const localizedProducts = useMemo(() => localizeProducts(products, locale), [locale]);
+  const catalogBasePath = '/catalog';
+  const detailChipLabel = t('sections.detailChip', 'Detalii').replace(/\s*→\s*$/, '');
+  const detailChipProductsLabel = t('sections.detailChipProducts', detailChipLabel).replace(/\s*→\s*$/, '');
 
   useEffect(() => {
     const tabFromQuery = searchParams.get('tab');
@@ -102,8 +117,9 @@ export const SolutionsTabs = () => {
         {activeTab === 'solutions' && (
           <div id="solutions-panel" role="tabpanel" aria-labelledby="solutions-tab" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
             {localizedSolutions.map((solution) => (
-              <div
+              <Link
                 key={solution.id}
+                href={`${catalogBasePath}/solutions/${solution.slug}`}
                 className="bg-gradient-to-b from-white to-slate-50/55 rounded-2xl p-6 md:p-7 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 group relative overflow-hidden h-full flex flex-col"
               >
                 {/* Gradient Overlay on Hover */}
@@ -122,10 +138,16 @@ export const SolutionsTabs = () => {
                     {solution.title}
                   </h3>
                   <p className="text-gray-text text-sm leading-7 flex-1 max-w-[42ch]">
-                    {solution.description}
+                    {getCardPreviewText(solution, 220)}
                   </p>
+                  <span className="card-cta-mini mt-4">
+                    {detailChipLabel}
+                    <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}
@@ -134,8 +156,9 @@ export const SolutionsTabs = () => {
         {activeTab === 'products' && (
           <div id="products-panel" role="tabpanel" aria-labelledby="products-tab-button" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
             {localizedProducts.map((product) => (
-              <div
+              <Link
                 key={product.id}
+                href={`${catalogBasePath}/products/${product.slug}`}
                 className="rounded-2xl border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 bg-white group h-full relative overflow-hidden p-5 md:p-6"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -159,11 +182,17 @@ export const SolutionsTabs = () => {
                       {product.title}
                     </h3>
                     <p className="text-gray-text text-sm leading-7 flex-1 max-w-[42ch]">
-                      {product.description}
+                      {getCardPreviewText(product, 180)}
                     </p>
+                    <span className="card-cta-mini mt-4">
+                      {detailChipProductsLabel}
+                      <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}

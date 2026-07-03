@@ -145,6 +145,8 @@
     "solutionsTab": "Solutions",
     "productsTab": "Products",
     "details": "Details",
+    "detailChip": "Solution detail",
+    "detailChipProducts": "Product detail",
     "referenceProjectsTitle": "Reference Projects",
     "referenceProjectsSubtitle": "Real implementation examples across industries",
     "allProjects": "ALL OUR PROJECTS",

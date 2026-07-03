@@ -57,9 +57,12 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   const isRasterImage = /\.(png|jpe?g|webp|gif|avif)$/i.test(projectVisual);
   const isNuhunAnkaraLogo = projectVisual.includes('/Logos/nuhun-ankara-makarnasi.webp');
   const isCandyHooverLogo = projectVisual.includes('/Logos/candy-hoover-group-srl-vector-logo.svg');
+  const isTurkTuborgLogo = projectVisual.includes('/Logos/turk_tuborg.png');
   let projectVisualClass = 'object-contain p-5';
 
-  if (isCandyHooverLogo) {
+  if (isTurkTuborgLogo) {
+    projectVisualClass = 'object-contain p-4 md:p-5';
+  } else if (isCandyHooverLogo) {
     projectVisualClass = 'object-contain p-2 scale-110';
   } else if (isNuhunAnkaraLogo) {
     projectVisualClass = 'object-contain p-6 md:p-7';

@@ -16,6 +16,19 @@ export const BlogPreview = () => {
   const [itemsPerView, setItemsPerView] = useState(2);
   const { locale, t } = useLanguage();
   const localizedPosts = useMemo(() => localizeBlogPosts(blogPosts, locale), [locale]);
+  const sortedPosts = useMemo(
+    () =>
+      [...localizedPosts].sort((a, b) => {
+        const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+
+        if (dateDiff !== 0) {
+          return dateDiff;
+        }
+
+        return (b.id ?? 0) - (a.id ?? 0);
+      }),
+    [localizedPosts]
+  );
 
   useEffect(() => {
     const updateItemsPerView = () => {
@@ -31,7 +44,7 @@ export const BlogPreview = () => {
     return () => globalThis.removeEventListener('resize', updateItemsPerView);
   }, []);
 
-  const maxIndex = Math.max(0, localizedPosts.length - itemsPerView);
+  const maxIndex = Math.max(0, sortedPosts.length - itemsPerView);
 
   useEffect(() => {
     if (currentIndex > maxIndex) {
@@ -48,8 +61,8 @@ export const BlogPreview = () => {
   }, [maxIndex]);
 
   const visiblePosts = useMemo(
-    () => localizedPosts.slice(currentIndex, currentIndex + itemsPerView),
-    [currentIndex, itemsPerView, localizedPosts]
+    () => sortedPosts.slice(currentIndex, currentIndex + itemsPerView),
+    [currentIndex, itemsPerView, sortedPosts]
   );
 
   const handlePrev = () => {

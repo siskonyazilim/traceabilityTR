@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import BlogCard from '../../components/ui/BlogCard';
@@ -16,10 +16,23 @@ export default function BlogPageClient() {
   const [currentPage, setCurrentPage] = useState(1);
   const { locale, t } = useLanguage();
   const localizedPosts = localizeBlogPosts(blogPosts, locale);
+  const sortedPosts = useMemo(
+    () =>
+      [...localizedPosts].sort((a, b) => {
+        const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
 
-  const totalPages = Math.ceil(localizedPosts.length / ITEMS_PER_PAGE);
+        if (dateDiff !== 0) {
+          return dateDiff;
+        }
+
+        return (b.id ?? 0) - (a.id ?? 0);
+      }),
+    [localizedPosts]
+  );
+
+  const totalPages = Math.ceil(sortedPosts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const paginatedPosts = localizedPosts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const paginatedPosts = sortedPosts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);

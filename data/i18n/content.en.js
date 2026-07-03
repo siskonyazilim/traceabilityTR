@@ -83,44 +83,181 @@
     1: {
       title: 'Single Product Tracking',
       description: 'Assigns a unique ID to each product and follows it through every process step. Marking technology is selected by material and operating conditions, with options such as inkjet, thermal transfer and laser.',
+      detail: 'In traceability processes, single product tracking ensures that each product has a unique number and is tracked through this unique number in all steps of the process. One of the important criteria for single product tracking is the material of the item to be tracked. This is because it is of critical importance that the marking process required for tracking can be processed onto the product.\n\nThere are different solutions for product marking processes. Inkjet, thermal transfer, laser, and carbon fiber are a few of them.',
     },
     2: {
       title: 'Lot / Batch Tracking',
       description: 'Ideal when item-level tracking is difficult. Lots are built from production date and batch number and tracked through packaging, storage and distribution.',
+      detail: 'In traceability processes, batch/lot tracking is preferred in processes where it is difficult to track products individually depending on the process. The concept of a batch is obtained with the production date and batch component in a way that allows backward traceability of the manufactured products. It ends with packaging, storage, and reaching the final consumer.\n\nTraceability applications contain a lot of data such as consumed material details, equipment and processes used, collected parametric and quality data, and the reasons causing exceptions. Therefore, in a traceability process, both single product and batch/lot tracking methodologies can be applied simultaneously.\n\nIn order to provide maximum transparency in batch/lot tracking processes, batch/lot, serial number, and other critical data or their combinations must be monitored and tracked.\n\nFor an effective Batch/lot tracking:',
+      detailBullets: [
+        'Each product group must be clearly marked.',
+        'A record of batch/lot identification and target details must be kept.',
+        'Records of operations that are critical for mandatory security needs and quality according to the sector must be kept.',
+      ],
     },
     3: {
       title: 'Pick to Light',
       description: 'Provides visual guidance for manual assembly and production steps. Correct or incorrect actions are signaled through lights and optional audio warnings.',
+      detail: 'Siskon\'s P2L solutions provide visual guidance to operators regarding the next part and process in industrial production and assembly operations where manual labor is used. Actions such as correct or incorrect during assembly are shown to the operator with lights or optionally with audible warnings. In addition, in Siskon P2L solutions, the tasks completed by the operator can be approved automatically or manually, and integration with other systems can be provided. "P2L (Pick to Light)" directly affects the two most striking issues of industrial production:',
+      detailPreBullets: [
+        'Achieving sustainable quality by reducing the number of defective products and ensuring quality standardization.',
+        'Increasing efficiency by saving time spent on rework and contributing to maintaining customer satisfaction.',
+      ],
+      detailBulletsHeading: 'P2L Advantages:',
+      detailBullets: [
+        'Process Improvement - With visual process management, process quality increases and the sustainable quality approach is preserved.',
+        'Inspection - Offers full inspection capability at the time of assembly.',
+        'Increased Flexibility - Operators can operate in the field without the need for additional training.',
+        'Time Saving - Dramatic reduction in assembly and commissioning times during production.',
+        'Zero Defects - Error-free assembly in production areas without affecting operational performance.',
+      ],
     },
     4: {
       title: 'RTLS (Real Time Location Systems)',
       description: 'RTLS identifies and tracks the real-time location of people and assets. Tags communicate with fixed anchors to determine accurate positions.',
+      detail: 'Real-Time Location Systems (RTLS) are used to automatically identify and track the locations of objects or people in real time. Wireless RTLS tags can be attached to objects, and there are also wearable versions for people. In RTLS systems, fixed reference points are positioned to receive wireless signals from the tags, and the locations of objects and people are determined. Tracking cars on an assembly line, locating pallets in a warehouse, or tracking medical equipment and patients in a hospital are examples of Real-Time Location Systems. Radio Frequency (RF) is generally the primary physical component of RTLS technology. However, in some systems, depending on the need, optical (usually infrared) or acoustic (usually ultrasound) technologies can also be used instead of or in addition to RF.',
+      detailBulletsHeading: 'RTLS Applications can be exemplified as follows:',
+      detailBullets: [
+        'Increasing efficiency by tracking forklift movements in a warehouse',
+        'Preventing equipment from leaving the factory usage area',
+        'Making multiple items traceable by tracking the pallet',
+        'Checking the presence of the correct and necessary number of personnel in the operation area',
+        'Ensuring personnel safety in the event of an emergency evacuation',
+        'Optimizing the flow of equipment or high-value assets',
+        'Preventing products affected by variables such as temperature from being stored in wrong areas',
+        'Tracking employees or visitors within the factory',
+        'Creating the fastest and safest routes for assets or workflow within the facility',
+      ],
     },
     5: {
       title: 'Warehouse Management Systems',
       description: 'WMS solutions control inbound and outbound warehouse flows with real-time operational visibility and inventory status.',
+      detail: 'A Warehouse Management System, in a general sense, is a process that allows organizations to control and manage the entry and exit of goods or materials into and out of the warehouse. Modern warehouse management systems operate with real-time data, allowing the organization to manage the most up-to-date information regarding all activities performed within the warehouse.',
+      detailPreBulletsHeading: 'In this sense, a Warehouse Management System helps businesses to:',
+      detailPreBullets: [
+        'Reduce labor costs,',
+        'Increase inventory accuracy,',
+        'Increase flexibility and responsiveness,',
+        'Reduce product dispatch and shipping errors,',
+        'Improve customer service.',
+      ],
+      detailBulletsHeading: 'In general terms, Warehouse Management Systems consist of the following components:',
+      detailBullets: [
+        'Warehouse Design',
+        'Shelf Management and Putaway',
+        'Inventory Management',
+        'Goods/Materials Inbound and Outbound Operations',
+        'Shelf Life Monitoring',
+        'Personnel Management',
+        'Reporting',
+      ],
     },
     6: {
       title: 'Integration',
       description: 'We provide the integration layer required for reliable data exchange between independent software systems and production platforms.',
+      detail: 'We offer the necessary combination applications and solutions to ensure data transfer between independent applications, in short, to enable systems to talk to each other. If you use multiple different softwares, when you need processes such as data entry, reporting, and comparison, it becomes difficult to combine the data in these different software and obtain results. Within the scope of software integration services, Siskon integrates the software you use with each other and ensures they work synchronously when needed. Having successfully implemented numerous system integrations, Siskon is an expert in this field.',
+      detailPreBulletsHeading: 'Within the scope of system integrations, we offer solutions for:',
+      detailPreBullets: [
+        'Management of the analysis, design, and development process,',
+        'Determination of the required integration technology based on needs,',
+        'Preparation of integration software with .Net programming,',
+        'Testing and commissioning solutions.',
+      ],
+      detailBulletsHeading: 'Our main integrations include:',
+      detailBullets: [
+        'MRP',
+        'ERP',
+        'CRM',
+        'Energy management systems',
+        'Calibration and maintenance systems',
+        'Quality management systems',
+      ],
     },
   },
   products: {
     1: {
       title: 'Hybrid Track and Trace',
       description: 'Delivers end-to-end traceability across internal systems and supply-chain partners, including advanced requirements for automotive standards.',
+      detail: 'Hybrid Track & Trace Automotive Manufacturers - Ensure consistent quality in global operations, maintain your compliance, and improve your agility. Developed by Siskon for the Automotive Main and Component Industry, Hybrid Track & Trace provides end-to-end traceability by recording data coming from both internal systems and supply chain partners, all processes the product goes through, and process data. It provides advanced product traceability requirements in accordance with current regulatory changes required for ISO/TS 16949 standards.',
+      detailPreBulletsHeading: 'Hybrid T&T directly affects the two most striking issues of the automotive industry:',
+      detailPreBullets: [
+        'Achieving global sustainable quality by reducing the number of defective products.',
+        'Reducing warranty expenses in case of product recalls based on regulations, while meeting customer requirements.',
+      ],
+      detailBulletsHeading: 'Thanks to Hybrid T&T, the following are provided:',
+      detailBullets: [
+        'Collaboration in Operations - Better coordination of corrective actions between the manufacturer and trading partners, with reduced time-consuming and error-prone manual tasks.',
+        'Centralized Traceability Reporting - Recording every stage of product development process and packaging hierarchy.',
+        'Supply Chain Synchronization - Better communication with business partners involved in analysis and corrective actions.',
+        'Managing High-Volume Traceability Data - Integration of data collected from production floors, quality laboratories, suppliers, and logistics providers without affecting operational performance.',
+        'Creating Product Identification Schemes - Improving RFID and barcode scanning technologies.',
+      ],
     },
     2: {
       title: 'A+++ Track and Trace',
       description: 'Designed for white goods manufacturing with modules for product tracking, critical component tracking and route tracking on assembly lines.',
+      detail: 'A+++ Track and Trace A+++ T&T ensures end-to-end traceability by recording data coming from both internal systems and supply chain partners, all the processes the product goes through, and the process data. The A+++ Track and Trace solution, specially developed for the white goods home appliances industry by Siskon, provides end-to-end product traceability with its product tracking on assembly lines, critical component tracking, route tracking, and other modules. A+++ T&T ensures end-to-end traceability by recording data coming from both internal systems and supply chain partners, all the processes the product goes through, and the process data. A+++ T&T aims to increase profitability and efficiency with the do it right the first time principle by ensuring that potential quality or production-related problems are detected before they become critical. A+++ T&T helps companies operating in the white goods industry to provide product quality cost-effectively and proactively, while also meeting the requirements of development-regulating structures such as ISO 9001, a quality management standard.',
     },
     3: {
       title: 'Organic Track and Trace',
       description: 'Food traceability solution that identifies source inputs and process states across production and distribution while supporting compliance requirements.',
+      detail: 'While Organic T&T ensures product traceability, it also provides:',
+      detailSections: [
+        {
+          heading: 'OPERATIONAL EFFICIENCY',
+          items: [
+            'Advanced Supply Chain Management: It ensures that companies have the inventory accuracy to meet customer demand more efficiently.',
+            'Increased Supply Chain Trust: Increasing the performance of product traceability leads to an increase in the performance of supply chain participants.',
+            'Process Improvements: Improvements in product tracking frequently reduce error rates, increase product picking accuracy, and streamline document management to more effectively manage and maximize workflow.',
+            'Reduction in Spoilage / Waste and Shrinkage: Advanced product traceability provides more accurate inventory management by reducing shrinkage costs and waste.',
+          ],
+        },
+        {
+          heading: 'MARKET ACCESS',
+          items: [
+            'Enhanced Brand Reputation: Product tracking systems support decisions affecting brand reputation. Improving product tracking enhances decision-making capabilities.',
+            'Increased Consumer Confidence: Traceability is proof that the product has specific characteristics as requested. While product tracking may be considered a normal cost of doing business, the lack of traceability negatively affects consumer confidence and customer loyalty for many companies.',
+            'Expanded Markets / New Customers: The reduction in recall and tracing costs provided by product traceability reduces business risks in order to enter new markets and acquire new customers.',
+          ],
+        },
+        {
+          heading: 'RISK REDUCTION',
+          items: [
+            'Reduction of Insurance / Liability Cost: Some insurance providers require product tracking capabilities before subjecting companies in the food industry to certain insurance policies.',
+            'Reduced Recall Costs: In the event of a recall, it reduces the time to access critical data and reduces the scope of the recall.',
+            'Returning to Business as Usual: Faster verification that the business is not involved in the recall process allows a rapid return to the current workflow.',
+          ],
+        },
+      ],
     },
     4: {
       title: 'Capsule Track and Trace',
       description: 'Enables pharmaceutical traceability from raw material intake to warehouse delivery using RFID, 1D barcodes and Data Matrix technologies.',
+      detail: 'Capsule Track and Trace, specially developed for the pharmaceutical industry by Siskon, aims to help companies track products on a unique number basis from raw material entry to warehouse delivery, manufacture wider and more complex varieties, accelerate the distribution of medicines as well as the connection with patients, and even make it closer than before.',
+      detailSections: [
+        {
+          heading: 'Main benefits of Capsule T&T:',
+          items: [
+            'Integrated reporting capability by tracking all processes, starting from raw material entry to the finished product, on a unique number basis.',
+            'Preventing the distribution of expired, banned, or recalled products.',
+            'Allowing the collection of medical product usage data and the development of special strategies based on this data.',
+            'Providing effective material management.',
+            'Better management of supply chain operations.',
+          ],
+        },
+        {
+          paragraph: 'Different technologies such as RFID, 1D linear barcode, or Data Matrix (QR Code) are used for traceability in the pharmaceutical industry. In our country (Turkey), drug traceability is provided by 2D QR code technology.',
+        },
+        {
+          heading: 'In Turkey, the following information is included in the QR code:',
+          items: [
+            'GTIN (Global Trade Item Number): It is a 14-digit barcode number.',
+            'SN (Serial Number): It is uniquely determined by manufacturers for each unit of medicine. It is a sequentially increasing number.',
+            'XD (Expiration Date): It is the expiration date expressed in 6 digits in year, month, day format.',
+            'BN (Batch Number): It is a number indicating the batch number in the production of the medicine.',
+          ],
+        },
+      ],
     },
   },
   solutionsDetail: {
