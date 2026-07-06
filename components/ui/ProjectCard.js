@@ -58,6 +58,9 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   const isNuhunAnkaraLogo = projectVisual.includes('/Logos/nuhun-ankara-makarnasi.webp');
   const isCandyHooverLogo = projectVisual.includes('/Logos/candy-hoover-group-srl-vector-logo.svg');
   const isTurkTuborgLogo = projectVisual.includes('/Logos/turk_tuborg.png');
+  const isDemirdokumLogo = projectVisual.toLowerCase().includes('demirdokum');
+  const isGroupeAtlanticLogo = projectVisual.toLowerCase().includes('atlantic');
+  const isStackpoleLogo = projectVisual.toLowerCase().includes('stackpole');
   let projectVisualClass = 'object-contain p-5';
 
   if (isTurkTuborgLogo) {
@@ -65,6 +68,12 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   } else if (isCandyHooverLogo) {
     projectVisualClass = 'object-contain p-2 scale-110';
   } else if (isNuhunAnkaraLogo) {
+    projectVisualClass = 'object-contain p-6 md:p-7';
+  } else if (isDemirdokumLogo) {
+    projectVisualClass = 'object-contain p-5 md:p-6';
+  } else if (isGroupeAtlanticLogo) {
+    projectVisualClass = 'object-contain p-5 md:p-6';
+  } else if (isStackpoleLogo) {
     projectVisualClass = 'object-contain p-6 md:p-7';
   } else if (isRasterImage) {
     projectVisualClass = 'object-cover';
@@ -119,12 +128,19 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
             {project.description}
           </p>
 
-          <span className="card-cta-mini mt-auto">
-            {projectDetailsLabel}
-            <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </span>
+          <div className="mt-auto flex items-end justify-between gap-3">
+            <span className="card-cta-mini">
+              {projectDetailsLabel}
+              <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+            {project.referenceDateLabel && (
+              <span className="rounded-full bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap">
+                {project.referenceDateLabel}
+              </span>
+            )}
+          </div>
         </div>
         </Link>
     </motion.article>

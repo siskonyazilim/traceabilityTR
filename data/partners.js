@@ -73,6 +73,18 @@ export const strategicPartners = [
     fullDescription: "Eficiența fluxului de materiale, conectivitatea globală și mișcarea durabilă sunt mesajele de bază ale identității noastre. Identitatea se manifestă în nucleul intralogisticii avansate și al automatizării transparente. Obiectivele dumneavoastră operaționale își găsesc locul în mijlocul unor lanțuri de aprovizionare sincronizate cu precizie și al unei manipulări de înaltă performanță a materialelor. Aceasta include puterea, viteza, optimizarea resurselor și fiabilitatea fără compromisuri. Aici se construiește o cultură corporativă înfloritoare și se preconizează un design logistic intern pregătit pentru viitor, care inspiră mișcare continuă și productivitate.\n\nÎn conformitate cu idealurile sale corporative, Interroll își bazează operațiunile globale pe valorile fundamentale de inovare bazată pe platforme, independență strategică și leadership de clasă mondială. Acest lucru este demonstrat de angajamentul companiei de a si menține o puternică independență financiară prin integritatea pieței bursiere globale, de a gândi și acționa cu o mentalitate eco eficientă și de a si asuma o responsabilitate profundă pentru cele mai importante lanțuri de aprovizionare din lume. Succesul Interroll se bazează pe încrederea acordată de integratorii de sisteme globali, OEM și public iar această fundație puternică va continua să mențină viitorul în mișcare.",
   },
   {
+    id: 5,
+    name: "Beckhoff",
+    logo: "/Logos/Beckhoff_red.svg",
+    detailLogo: "/Logos/Beckhoff_red.svg",
+    slug: "beckhoff",
+    breadcrumbLabel: "BECKHOFF",
+    description: "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC.",
+    website: "https://www.beckhoff.com",
+    storySlides: [],
+    fullDescription: "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC. Gama de produse constă în PC-uri industriale, componente I/O și Fieldbus, tehnologie de acționare și software de automatizare. Pentru toate industriile, există produse care pot fi utilizate ca și componente individuale sau pentru a crea de la zero un sistem de control complet și fără întreruperi. Filosofia Beckhoff privind \"Noua Tehnologie de Automatizare\" reprezintă soluții de control și automatizare universale și deschise, utilizate într-o varietate de aplicații la nivel mondial, variind de la mașini-unelte controlate prin CNC până la automatizarea inteligentă a clădirilor.",
+  },
+  {
     id: 6,
     name: "Sewio",
     logo: "/Logos/sewio-logo.svg",

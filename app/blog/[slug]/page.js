@@ -62,13 +62,27 @@ export default async function BlogDetailPage({ params }) {
 
   if (!post) notFound();
 
-  const relatedPosts = localizedPosts
-    .filter(
-      (p) =>
-        p.category === post.category &&
-        p.id !== post.id
-    )
-    .slice(0, 3);
+  const sortedCategoryPosts = [...localizedPosts]
+    .filter((p) => p.category === post.category)
+    .sort((a, b) => {
+      const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+
+      if (dateDiff !== 0) {
+        return dateDiff;
+      }
+
+      return (b.id ?? 0) - (a.id ?? 0);
+    });
+
+  const currentPostIndex = sortedCategoryPosts.findIndex((p) => p.id === post.id);
+
+  // Keep recommendation order consistent with category order and rotate after current post.
+  const orderedRelatedPosts = [
+    ...sortedCategoryPosts.slice(currentPostIndex + 1),
+    ...sortedCategoryPosts.slice(0, currentPostIndex),
+  ];
+
+  const relatedPosts = orderedRelatedPosts.slice(0, 3);
 
   const dateLocale = locale === 'en' ? 'en-US' : locale === 'tr' ? 'tr-TR' : 'ro-RO';
   const date = new Date(post.date).toLocaleDateString(dateLocale, {

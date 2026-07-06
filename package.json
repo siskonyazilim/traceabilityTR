@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:i18n": "node scripts/i18n-lint.js"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",

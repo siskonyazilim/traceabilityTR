@@ -10,10 +10,14 @@ import Button from '../../components/ui/Button';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
 import { referenceProjects } from '../../data/references';
 import { localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
+import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/referenceProjectOrdering';
 
 export default function ProjectsPageClient() {
   const { locale, t } = useLanguage();
-  const localizedProjects = localizeReferenceProjects(referenceProjects, locale);
+  const localizedProjects = withReferenceProjectTimeline(
+    sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
+    locale
+  );
   const pageSize = 9;
   const searchParams = useSearchParams();
   const router = useRouter();

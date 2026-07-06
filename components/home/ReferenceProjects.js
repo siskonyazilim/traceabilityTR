@@ -9,13 +9,17 @@ import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { referenceProjects } from '../../data/references';
 import { localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
+import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/referenceProjectOrdering';
 
 export const ReferenceProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
-  const localizedProjects = useMemo(() => localizeReferenceProjects(referenceProjects, locale), [locale]);
+  const localizedProjects = useMemo(
+    () => withReferenceProjectTimeline(sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)), locale),
+    [locale]
+  );
   const uniqueBrandProjects = useMemo(() => {
     const seenBrands = new Set();
 
@@ -153,6 +157,11 @@ export const ReferenceProjects = () => {
                         }}
                       />
                     </div>
+                    {project.referenceDateLabel && (
+                      <div className="absolute bottom-3 left-3 rounded-full bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                        {project.referenceDateLabel}
+                      </div>
+                    )}
                     {/* Corner Badge */}
                     <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-gradient-to-br from-accent-blue to-accent-green shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>

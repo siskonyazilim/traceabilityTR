@@ -1,7 +1,6 @@
 ﻿import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
-import Button from '../../../components/ui/Button';
 import { referenceProjects } from '../../../data/references';
 import { IconArrowLeft } from '../../../components/ui/Icons';
 import ProjectGallerySlider from '../../../components/ui/ProjectGallerySlider';
@@ -9,6 +8,8 @@ import { cookies } from 'next/headers';
 import { localizeReferenceProjects } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { getReferenceNarrative } from '../../../lib/i18n/referenceNarratives';
+import { sortReferenceProjects, withReferenceProjectTimeline } from '../../../lib/referenceProjectOrdering';
+import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 /* eslint-disable react/prop-types */
 
 export async function generateMetadata({ params }) {
@@ -16,7 +17,10 @@ export async function generateMetadata({ params }) {
   const localeRaw = cookieStore.get('locale')?.value;
   const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
   const isEn = locale === 'en';
-  const localizedProjects = localizeReferenceProjects(referenceProjects, locale);
+  const localizedProjects = withReferenceProjectTimeline(
+    sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
+    locale
+  );
   const { slug: rawSlug } = await params;
 
   const legacySlugMap = {
@@ -68,7 +72,10 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
   const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
-  const localizedProjects = localizeReferenceProjects(referenceProjects, locale);
+  const localizedProjects = withReferenceProjectTimeline(
+    sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
+    locale
+  );
   const { slug: rawSlug } = await params;
   const resolvedSearchParams = await searchParams;
   const legacySlugMap = {
@@ -151,6 +158,13 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+            {project.referenceDateLabel && (
+              <div className="mt-6 flex justify-end">
+                <span className="rounded-full bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap">
+                  {project.referenceDateLabel}
+                </span>
+              </div>
+            )}
           </div>
 
           <ProjectGallerySlider
@@ -196,22 +210,12 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
           )}
 
           {/* CTA */}
-          <div className="mt-20 text-center">
-            <h3 className="text-2xl md:text-3xl font-semibold text-primary-black mb-6">
-              {f(locale, 'portfolioDetailPage', 'ctaTitle')}
-            </h3>
-            <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              {f(locale, 'portfolioDetailPage', 'ctaSubtitle')}
-            </p>
-            <div className="flex gap-6 justify-center flex-wrap">
-              <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                {f(locale, 'portfolioDetailPage', 'ctaPrimary')}
-              </Button>
-              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
-                {f(locale, 'portfolioDetailPage', 'ctaSecondary')}
-              </Button>
-            </div>
-          </div>
+          <PagePrimaryCta
+            title={f(locale, 'portfolioDetailPage', 'ctaTitle')}
+            subtitle={f(locale, 'portfolioDetailPage', 'ctaSubtitle')}
+            primaryHref="/contact"
+            primaryLabel={f(locale, 'portfolioDetailPage', 'ctaPrimary')}
+          />
         </article>
       </Container>
     </div>

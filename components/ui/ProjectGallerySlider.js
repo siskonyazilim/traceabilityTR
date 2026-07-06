@@ -3,7 +3,7 @@
 
 import { useMemo, useState } from 'react';
 
-export default function ProjectGallerySlider({ images = [], title = 'Project' }) {
+export default function ProjectGallerySlider({ images = [], title = 'Project', dateLabel = '' }) {
   const normalizedImages = useMemo(
     () => [...new Set(images.filter(Boolean))],
     [images]
@@ -33,31 +33,35 @@ export default function ProjectGallerySlider({ images = [], title = 'Project' })
           />
         </div>
 
-        <>
-          <button
-            type="button"
-            aria-label="Previous image"
-            onClick={goPrev}
-            disabled={normalizedImages.length < 2}
-            className={`absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
-              normalizedImages.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
-            }`}
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            aria-label="Next image"
-            onClick={goNext}
-            disabled={normalizedImages.length < 2}
-            className={`absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
-              normalizedImages.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
-            }`}
-          >
-            ›
-          </button>
-        </>
+        <button
+          type="button"
+          aria-label="Previous image"
+          onClick={goPrev}
+          disabled={normalizedImages.length < 2}
+          className={`absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
+            normalizedImages.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
+          }`}
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          aria-label="Next image"
+          onClick={goNext}
+          disabled={normalizedImages.length < 2}
+          className={`absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
+            normalizedImages.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
+          }`}
+        >
+          ›
+        </button>
       </div>
+
+      {dateLabel && (
+        <p className="mt-3 text-left text-sm font-semibold text-slate-700">
+          {dateLabel}
+        </p>
+      )}
 
       <div className="mt-4 flex flex-wrap gap-2">
         {normalizedImages.map((image, index) => (

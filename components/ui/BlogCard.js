@@ -6,11 +6,20 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../i18n/LanguageProvider';
 
-export const BlogCard = ({ post }) => {
+export const BlogCard = ({
+  post,
+  prioritizeImage = false,
+  imageSizes = '(max-width: 767px) 100vw, (max-width: 1280px) 50vw, 33vw',
+}) => {
   const [imageError, setImageError] = useState(false);
   const { locale, t } = useLanguage();
 
-  const dateLocale = locale === 'en' ? 'en-US' : locale === 'tr' ? 'tr-TR' : 'ro-RO';
+  const localeDateMap = {
+    en: 'en-US',
+    tr: 'tr-TR',
+    ro: 'ro-RO',
+  };
+  const dateLocale = localeDateMap[locale] || 'tr-TR';
   const date = new Date(post.date).toLocaleDateString(dateLocale, {
     year: 'numeric',
     month: 'long',
@@ -36,9 +45,11 @@ export const BlogCard = ({ post }) => {
               src={post.image}
               alt={post.title}
               fill
-              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+              sizes={imageSizes}
               className="object-cover"
-              loading="lazy"
+              loading={prioritizeImage ? 'eager' : 'lazy'}
+              priority={prioritizeImage}
+              fetchPriority={prioritizeImage ? 'high' : 'auto'}
               quality={78}
               onError={() => setImageError(true)}
             />

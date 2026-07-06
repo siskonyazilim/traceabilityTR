@@ -7,8 +7,31 @@ import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer = () => {
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
-  const { t } = useLanguage();
+  const normalizedPathname = (pathname || '/').replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+  const isHomePage = normalizedPathname === '/';
+  const { t, locale } = useLanguage();
+  const contactEmail = locale === 'tr' ? 'info@izlenebilirlik.com.tr' : 'info@traceability.ro';
+
+  const toLocalePath = (targetPath) => {
+    if (!targetPath) {
+      return locale === 'tr' ? '/' : `/${locale}`;
+    }
+
+    if (/^https?:\/\//.test(targetPath)) {
+      return targetPath;
+    }
+
+    const normalized = targetPath.startsWith('/') ? targetPath : `/${targetPath}`;
+    const withoutPrefix = normalized.replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+
+    if (locale === 'tr') {
+      return withoutPrefix;
+    }
+
+    return withoutPrefix === '/'
+      ? `/${locale}`
+      : `/${locale}${withoutPrefix}`;
+  };
 
   const handleSectionClick = (e, href) => {
     // Only handle if we're on homepage and it's a hash link
@@ -78,13 +101,13 @@ export const Footer = () => {
             <h4 className="text-lg font-bold mb-4 text-white">{t('footer.navigation', 'Navigare')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.home', 'Pagina Principală')}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#traceability-solutions"
+                  href={toLocalePath('/#traceability-solutions')}
                   onClick={(e) => handleSectionClick(e, '/#traceability-solutions')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
@@ -93,7 +116,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#products-tab"
+                  href={toLocalePath('/#products-tab')}
                   onClick={(e) => handleSectionClick(e, '/#products-tab')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
@@ -102,7 +125,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#our-strategic-solution-partners"
+                  href={toLocalePath('/#our-strategic-solution-partners')}
                   onClick={(e) => handleSectionClick(e, '/#our-strategic-solution-partners')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
@@ -111,7 +134,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#faq"
+                  href={toLocalePath('/#faq')}
                   onClick={(e) => handleSectionClick(e, '/#faq')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
@@ -119,22 +142,22 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/contact')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.contact', 'Contact')}
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/blog')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.news', 'Știri')}
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/privacy-policy')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.gdprPolicy', 'Politica GDPR (Confidențialitate)')}
                 </Link>
               </li>
               <li>
-                <Link href="/cookie" className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/cookie')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.cookiePolicy', 'Politica de cookie-uri')}
                 </Link>
               </li>
@@ -156,8 +179,8 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@traceability.ro" className="text-gray-light hover:text-accent-blue transition-colors">
-                  <span className="font-semibold">{t('footer.email', 'Email')}:</span> info@traceability.ro
+                <a href={`mailto:${contactEmail}`} className="text-gray-light hover:text-accent-blue transition-colors">
+                  <span className="font-semibold">{t('footer.email', 'Email')}:</span> {contactEmail}
                 </a>
               </li>
             </ul>

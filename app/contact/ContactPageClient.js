@@ -36,7 +36,7 @@ export default function ContactPageClient() {
         'Dokuz Eylül Üniversitesi Merkez Kampüsü\nDEPARK Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir'
       ),
       phone: '+90 232 245 00 76',
-      email: 'info@traceability.ro',
+      email: 'info@izlenebilirlik.com.tr',
       mapQuery: 'Dokuz Eylül Üniversitesi Merkez Kampüsü DEPARK Beta Binası, Adatepe Mahallesi Doğuş Caddesi No:207/AG, Kat: 2 No:202, 35390 Buca/İzmir',
     },
   ];

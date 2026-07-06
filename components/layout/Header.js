@@ -14,7 +14,8 @@ export const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
   const { locale, setLocale, t } = useLanguage();
-  const isHomePage = pathname === '/';
+  const normalizedPathname = (pathname || '/').replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+  const isHomePage = normalizedPathname === '/';
   const useTransparentHeader = isHomePage && !scrolled && !isOpen;
 
   const languageOptions = [
@@ -22,6 +23,33 @@ export const Header = () => {
     { code: 'ro', flagSrc: '/romania.svg', label: 'RO' },
     { code: 'en', flagSrc: '/england.svg', label: 'EN' },
   ];
+
+  const toLocalePath = (targetPath, targetLocale = locale) => {
+    if (!targetPath) {
+      return targetLocale === 'tr' ? '/' : `/${targetLocale}`;
+    }
+
+    if (/^https?:\/\//.test(targetPath)) {
+      return targetPath;
+    }
+
+    const normalized = targetPath.startsWith('/') ? targetPath : `/${targetPath}`;
+    const withoutPrefix = normalized.replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+
+    if (targetLocale === 'tr') {
+      return withoutPrefix;
+    }
+
+    return withoutPrefix === '/'
+      ? `/${targetLocale}`
+      : `/${targetLocale}${withoutPrefix}`;
+  };
+
+  const currentPathForLocale = (() => {
+    const raw = pathname || '/';
+    const cleaned = raw.replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+    return cleaned;
+  })();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +62,7 @@ export const Header = () => {
 
   const handleLocaleChange = async (nextLocaleCode) => {
     await setLocale(nextLocaleCode);
+    router.push(toLocalePath(currentPathForLocale, nextLocaleCode));
     router.refresh();
   };
 
@@ -67,7 +96,7 @@ export const Header = () => {
         return true;
       }
 
-      router.push(`/?tab=${tabValue}#traceability-solutions`);
+      router.push(toLocalePath(`/?tab=${tabValue}#traceability-solutions`));
       setIsOpen(false);
       return true;
     };
@@ -95,7 +124,7 @@ export const Header = () => {
     }
 
     // If section is not on the current page, go to homepage anchor.
-    router.push(`/${id}`);
+    router.push(toLocalePath(`/${id}`));
     setIsOpen(false);
   };
 
@@ -103,8 +132,8 @@ export const Header = () => {
     { label: t('header.solutions', 'Soluțiile Noastre'), href: '#solutions-tab' },
     { label: t('header.industries', 'Industrii'), href: '#products-tab' },
     { label: t('header.partners', 'Parteneri de Soluții'), href: '#our-strategic-solution-partners' },
-    { label: t('header.contact', 'Contact'), href: '/contact' },
-    { label: t('header.news', 'Știri'), href: '/blog' },
+    { label: t('header.contact', 'Contact'), href: toLocalePath('/contact') },
+    { label: t('header.news', 'Blog'), href: toLocalePath('/blog') },
   ];
 
   const currentLangIndex = languageOptions.findIndex((option) => option.code === locale);
@@ -126,7 +155,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Brand text */}
           <Link
-            href="/"
+            href={toLocalePath('/')}
             className={`font-poppins text-2xl font-extrabold tracking-tight transition-all duration-300 hover:tracking-normal ${
               useTransparentHeader ? 'text-white' : 'text-primary-black'
             }`}

@@ -1,10 +1,9 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import BlogCard from '../../components/ui/BlogCard';
-import Button from '../../components/ui/Button';
+import PagePrimaryCta from '../../components/ui/PagePrimaryCta';
 import { blogPosts } from '../../data/blogPosts';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
@@ -63,7 +62,11 @@ export default function BlogPageClient() {
                     viewport={{ once: true }}
                     className="h-full"
                   >
-                    <BlogCard post={post} />
+                    <BlogCard
+                      post={post}
+                      prioritizeImage={currentPage === 1 && index === 0}
+                      imageSizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
+                    />
                   </motion.div>
                 ))}
               </motion.div>
@@ -94,22 +97,12 @@ export default function BlogPageClient() {
             </div>
           )}
 
-          <div className="mt-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-              {t('blogPage.ctaTitle', 'Vrei să discutăm despre trasabilitate?')}
-            </h2>
-            <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
-              {t('blogPage.ctaSubtitle', 'Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.')}
-            </p>
-            <div className="flex gap-6 justify-center flex-wrap">
-              <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                {t('blogPage.ctaPrimary', 'Cere Ofertă')}
-              </Button>
-              <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
-                {t('blogPage.ctaSecondary', 'Vezi Proiectele')}
-              </Button>
-            </div>
-          </div>
+          <PagePrimaryCta
+            title={t('blogPage.ctaTitle', 'Vrei să discutăm despre trasabilitate?')}
+            subtitle={t('blogPage.ctaSubtitle', 'Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.')}
+            primaryHref="/contact"
+            primaryLabel={t('blogPage.ctaPrimary', 'Cere Ofertă')}
+          />
 
         </div>
       </Container>

@@ -2,8 +2,8 @@
 import { notFound } from 'next/navigation';
 import { cookies } from 'next/headers';
 import Container from '../../../components/ui/Container';
-import Button from '../../../components/ui/Button';
 import { IconArrowLeft, IconCheck } from '../../../components/ui/Icons';
+import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 import { localizeSolutionDetail } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
 /* eslint-disable react/prop-types, react/no-array-index-key */
@@ -399,21 +399,14 @@ export default async function SolutionDetailPage({ params }) {
             </div>
 
             {/* CTA */}
-            <div className="text-center bg-gradient-to-br from-slate-50 to-white p-12 rounded-3xl border-2 border-gray-200">
-              <h3 className="text-2xl font-semibold text-primary-black mb-4">
-                {labels.ctaTitle}
-              </h3>
-              <p className="text-gray-text text-lg mb-8 max-w-2xl mx-auto">
-                {labels.ctaSubtitle}
-              </p>
-              <div className="flex gap-6 justify-center flex-wrap">
-                <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
-                  {labels.ctaPrimary}
-                </Button>
-                <Button as={Link} href="/proiecte-de-referinta" variant="outline" size="lg" className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white">
-                  {labels.ctaSecondary}
-                </Button>
-              </div>
+            <div className="bg-gradient-to-br from-slate-50 to-white p-12 rounded-3xl border-2 border-gray-200">
+              <PagePrimaryCta
+                className="text-center"
+                title={labels.ctaTitle}
+                subtitle={labels.ctaSubtitle}
+                primaryHref="/contact"
+                primaryLabel={labels.ctaPrimary}
+              />
             </div>
           </article>
         </Container>
