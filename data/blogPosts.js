@@ -13,32 +13,6 @@ export const blogPosts = [
     content: `
       <p>Trasabilitatea alimentară joacă un rol esențial în asigurarea siguranței alimentelor, a calității și a satisfacției consumatorilor. În prezent, consumatorii finali solicită tot mai des informații despre originea produselor alimentare și despre procesele prin care acestea au fost obținute.</p>
 
-      <h2>Ce este trasabilitatea alimentară?</h2>
-      <p>Trasabilitatea alimentară reprezintă capacitatea de a urmări produsele de-a lungul întregului lanț de aprovizionare. FAO definește trasabilitatea alimentară ca „înregistrarea și urmărirea proceselor de producție, procesare și distribuție ale produselor alimentare” (Food and Agriculture Organization (FAO), 2015). Acest proces le permite consumatorilor să afle de unde provin alimentele și cum au fost procesate.</p>
-
-      <h2>Importanța trasabilității alimentare pentru consumatorii finali</h2>
-      <ul>
-        <li><strong>Siguranța alimentară:</strong> Consumatorii doresc să evite riscurile pentru sănătate asociate problemelor de siguranță alimentară. Sistemele de trasabilitate ajută la identificarea rapidă a problemelor și la intervenții eficiente, inclusiv în procesele de retragere a produselor. De exemplu, în timpul focarului de E. coli din 2006, lipsa trasabilității a afectat reputația multor branduri (FDA, 2007). Sistemele de trasabilitate sunt critice pentru reducerea impactului unor astfel de crize.</li>
-        <li><strong>Transparență și încredere:</strong> Consumatorii cer tot mai multe informații despre procesele de producție alimentară. Studiile arată că brandurile transparente cresc nivelul de încredere al clienților. Conform raportului Nielsen din 2015, 66% dintre consumatori caută informații despre producția sustenabilă și etică (Nielsen, 2015). Trasabilitatea este un instrument-cheie pentru construirea acestei încrederi.</li>
-        <li><strong>Percepția calității:</strong> Trasabilitatea alimentară asigură monitorizarea continuă a calității produselor. Consumatorii au mai multă încredere în brandurile cu un nivel ridicat de trasabilitate. Raportul Mintel din 2020 arată că 60% dintre consumatori sunt dispuși să plătească mai mult pentru produse de calitate superioară (Mintel, 2020), ceea ce evidențiază impactul trasabilității asupra percepției brandului.</li>
-        <li><strong>Responsabilitate socială:</strong> Consumatorii preferă brandurile cu responsabilitate socială și de mediu. Trasabilitatea permite companiilor să prezinte transparent procesele de producție și lanțurile de aprovizionare, consolidând percepția de responsabilitate socială. Studiile arată că 73% dintre consumatori sunt înclinați să cumpere produse sustenabile (McKinsey, 2020).</li>
-        <li><strong>Diferențiere și preferință:</strong> Într-o industrie alimentară puternic competitivă, trasabilitatea oferă un avantaj de diferențiere. Consumatorii preferă produsele cu trasabilitate ridicată, ceea ce ajută brandurile să se evidențieze pe piață (Baker et al., 2018).</li>
-      </ul>
-
-      <h2>Previziuni pentru următorii cinci ani</h2>
-      <p>Evoluțiile în trasabilitatea alimentară vor genera schimbări majore în următorii cinci ani, iar următoarele tendințe vor ieși în evidență:</p>
-      <ul>
-        <li><strong>Digitalizare și adoptarea tehnologiei:</strong> Adoptarea tehnologiilor inovatoare, precum blockchain, va accelera dezvoltarea sistemelor de trasabilitate alimentară. Aceste tehnologii permit înregistrarea sigură a fiecărui pas din lanțul de aprovizionare, astfel încât consumatorii să poată verifica ușor istoricul produselor (Kamble et al., 2021).</li>
-        <li><strong>Creșterea cerințelor consumatorilor:</strong> Interesul consumatorilor pentru sănătate, siguranță și mediu va continua să crească, făcând esențială implementarea unor sisteme eficiente de trasabilitate. Studiile indică faptul că 80% dintre consumatori vor solicita mai multe informații despre siguranța alimentelor și trasabilitate (FMI, 2021).</li>
-        <li><strong>Reglementare și standardizare:</strong> Guvernele și organizațiile internaționale introduc reglementări mai stricte privind trasabilitatea alimentară, ceea ce determină companiile să standardizeze sistemele și să crească încrederea consumatorilor (Wang et al., 2022). Reglementările vor deveni și mai riguroase, în special după crizele de siguranță alimentară.</li>
-        <li><strong>Accent pe sustenabilitate:</strong> Cererea pentru agricultură sustenabilă și producție alimentară responsabilă va crește. Consumatorii vor prefera brandurile care susțin sustenabilitatea mediului, încurajând dezvoltarea sistemelor de trasabilitate în această direcție (Sustainable Food Trust, 2023).</li>
-      </ul>
-
-      <h2>Soluțiile SISKON de trasabilitate</h2>
-      <p>Trasabilitatea alimentară nu este doar un instrument de siguranță pentru consumatorii finali, ci și un indicator al calității și transparenței. Pe măsură ce consumatorii cer tot mai multe informații despre produsele alimentare, importanța trasabilității continuă să crească. În următorii cinci ani, digitalizarea, cerințele în creștere, schimbările de reglementare, focusul pe sustenabilitate și eforturile de educare vor modela evoluția sistemelor de trasabilitate alimentară. Prin implementarea eficientă a acestor sisteme, companiile pot câștiga încrederea consumatorilor și pot crește valoarea brandului. În viitor, trasabilitatea alimentară va deveni și mai importantă, ajutând consumatorii să facă alegeri informate.</p>
-      <p><strong>SISKON Soluții de Trasabilitate</strong> vă permit să gestionați toate procesele de producție dintr-o singură platformă.</p>
-      <p><strong>SISKON Soluții de Trasabilitate</strong> oferă monitorizare în timp real a proceselor de producție, raportare istorică și măsurători analitice, prin colectarea datelor din rezultatele testelor, măsurători de calitate, materiale utilizate, date de proces setate și reale, inspecții vizuale, reparații și stații de eșantionare. Acestea susțin procese operaționale precum fluxul de materiale, ordinele de lucru, managementul uneltelor și consumul de energie, asigurând colectarea digitală a informațiilor critice dincolo de procesele automatizate. Prin integrări orizontale și verticale, toate procesele de producție pot fi vizualizate și gestionate digital.</p>
-
       <h2>Referințe</h2>
       <ul>
         <li>Baker, M., et al. (2018). “The Role of Traceability in the Food Supply Chain: A Study of Market Benefits.” <em>International Journal of Supply Chain Management.</em></li>
@@ -65,32 +39,6 @@ export const blogPosts = [
     excerpt: 'Trasabilitatea produselor este esentiala pentru siguranta, transparenta si incredere, oferind vizibilitate completa asupra lantului de aprovizionare.',
     content: `
       <p>Trasabilitatea alimentara joaca un rol esential in asigurarea sigurantei alimentelor, a calitatii si a satisfactiei consumatorilor. Astazi, consumatorii finali solicita din ce in ce mai multe informatii despre originea produselor alimentare si despre procesele lor de productie.</p>
-
-      <h2>Ce este trasabilitatea alimentara?</h2>
-      <p>Trasabilitatea alimentara se refera la capacitatea de a urmari produsele pe tot parcursul lantului de aprovizionare. FAO defineste trasabilitatea alimentara drept „inregistrarea si urmarirea proceselor de productie, procesare si distributie ale produselor alimentare” (Food and Agriculture Organization (FAO), 2015). Acest proces le permite consumatorilor sa stie de unde provin alimentele si cum au fost procesate.</p>
-
-      <h2>Importanta trasabilitatii alimentare pentru consumatorii finali</h2>
-      <ul>
-        <li><strong>Siguranta alimentara:</strong> Consumatorii doresc sa evite riscurile pentru sanatate asociate problemelor de siguranta alimentara. Sistemele de trasabilitate ajuta la identificarea si rezolvarea rapida a riscurilor, facilitand procese eficiente de retragere a produselor. De exemplu, in timpul focarului de E. coli din 2006, lipsa trasabilitatii a afectat reputatia multor branduri (FDA, 2007). Sistemele de trasabilitate sunt critice pentru limitarea impactului unor astfel de crize.</li>
-        <li><strong>Transparenta si incredere:</strong> Consumatorii cer mai multe informatii despre procesele de productie alimentara. Studiile arata ca brandurile care ofera transparenta cresc increderea consumatorilor. Potrivit raportului Nielsen din 2015, 66% dintre consumatori cauta informatii despre productia sustenabila si etica (Nielsen, 2015). Trasabilitatea este un instrument-cheie in construirea acestei increderi.</li>
-        <li><strong>Perceptia calitatii:</strong> Trasabilitatea alimentara asigura monitorizarea continua a calitatii produsului. Consumatorii au mai multa incredere in brandurile cu trasabilitate ridicata. Raportul Mintel din 2020 indica faptul ca 60% dintre consumatori sunt dispusi sa plateasca mai mult pentru produse de calitate superioara (Mintel, 2020), evidentiind modul in care trasabilitatea influenteaza perceptia asupra brandului.</li>
-        <li><strong>Responsabilitate sociala:</strong> Consumatorii prefera brandurile cu responsabilitate de mediu si sociala. Trasabilitatea permite companiilor sa prezinte transparent procesele de productie si lanturile de aprovizionare, consolidand perceptia de responsabilitate sociala. Studiile arata ca 73% dintre consumatori sunt inclinati sa cumpere produse sustenabile (McKinsey, 2020).</li>
-        <li><strong>Diferentiere si preferinta:</strong> Intr-o industrie alimentara foarte competitiva, trasabilitatea ofera un avantaj de diferentiere. Consumatorii prefera produsele cu trasabilitate ridicata, ajutand brandurile sa se remarce pe piata (Baker et al., 2018).</li>
-      </ul>
-
-      <h2>Predictii pentru urmatorii cinci ani</h2>
-      <p>Evolutiile in trasabilitatea alimentara vor genera schimbari importante in urmatorii cinci ani, iar urmatoarele tendinte sunt asteptate sa iasa in evidenta:</p>
-      <ul>
-        <li><strong>Digitalizare si adoptarea tehnologiei:</strong> Adoptarea tehnologiilor inovatoare, cum ar fi blockchain, va avansa si mai mult sistemele de trasabilitate alimentara. Aceste tehnologii permit inregistrarea securizata a fiecarui pas din lantul de aprovizionare, oferind consumatorilor posibilitatea de a verifica usor istoricul produselor (Kamble et al., 2021).</li>
-        <li><strong>Cresterea cerintelor consumatorilor:</strong> Interesul consumatorilor pentru sanatate, siguranta si mediu va continua sa creasca, facand esentiala implementarea unor sisteme eficiente de trasabilitate. Studiile indica faptul ca 80% dintre consumatori vor solicita mai multe informatii despre siguranta alimentara si trasabilitate (FMI, 2021).</li>
-        <li><strong>Reglementare si standardizare:</strong> Guvernele si organizatiile internationale introduc reglementari mai stricte privind trasabilitatea alimentara, determinand companiile sa standardizeze sistemele si sa consolideze increderea consumatorilor (Wang et al., 2022). Reglementarile vor deveni mai stricte, in special dupa crizele de siguranta alimentara.</li>
-        <li><strong>Accent pe sustenabilitate:</strong> Cererea pentru agricultura sustenabila si productie alimentara sustenabila va creste. Consumatorii vor prefera brandurile care sustin sustenabilitatea mediului, incurajand dezvoltarea sistemelor de trasabilitate in aceasta directie (Sustainable Food Trust, 2023).</li>
-      </ul>
-
-      <h2>SISKON Soluții de Trasabilitate</h2>
-      <p>Trasabilitatea alimentara nu este doar un instrument de siguranta pentru consumatorii finali, ci si un indicator al calitatii si transparentei. Pe masura ce consumatorii cer mai multe informatii despre produsele alimentare, importanta trasabilitatii continua sa creasca. In urmatorii cinci ani, digitalizarea, cerintele crescute, schimbarile de reglementare, focusul pe sustenabilitate si eforturile educationale vor modela evolutia sistemelor de trasabilitate alimentara. Prin implementarea eficienta a acestor sisteme, companiile pot castiga increderea consumatorilor si pot creste valoarea brandului. In viitor, trasabilitatea alimentara va deveni si mai critica, permitand consumatorilor sa ia decizii informate.</p>
-      <p><strong>SISKON Soluții de Trasabilitate</strong> va permit sa gestionati toate procesele de productie de pe o singura platforma.</p>
-      <p><strong>SISKON Soluții de Trasabilitate</strong> permit monitorizarea in timp real a proceselor de productie, raportarea istorica si masuratori analitice prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordinele de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
 
       <h2>Referinte</h2>
       <ul>
@@ -132,20 +80,7 @@ export const blogPosts = [
       <p><strong>Transparenta:</strong> Transparenta in intregul lant de aprovizionare creste increderea atat pentru producatori, cat si pentru consumatori. Consumatorii pot accesa usor informatii despre originea si istoricul produselor cumparate, iar producatorii pot identifica rapid orice intrerupere in lantul de aprovizionare.</p>
       <p><strong>Managementul riscului:</strong> Trasabilitatea la nivel de cutie si palet minimizeaza riscurile de siguranta alimentara. In cazul contaminarii sau al problemelor de calitate, sursa poate fi identificata rapid, iar produsele afectate pot fi retrase, prevenind crize extinse de sanatate publica.</p>
 
-      <h2>Standarde de trasabilitate alimentara</h2>
-      <p>Mai multe standarde internationale reglementeaza trasabilitatea alimentara, stabilind reguli si proceduri pentru a asigura siguranta alimentara si calitatea. Printre acestea se numara:</p>
-      <p><strong>ISO 22000:</strong> ISO 22000 este un standard pentru sistemele de management al sigurantei alimentare. Acesta defineste cerinte pentru asigurarea trasabilitatii in fiecare etapa a lantului alimentar. Bazat pe principiile HACCP, ISO 22000 identifica punctele critice de control pentru garantarea sigurantei alimentare.</p>
-      <p><strong>HACCP (Hazard Analysis and Critical Control Points):</strong> HACCP este un sistem care identifica si controleaza riscurile de siguranta alimentara. El asigura aplicarea masurilor preventive prin identificarea pericolelor potentiale in fiecare etapa a procesului de productie. HACCP are un rol major in trasabilitatea alimentara si este recunoscut pe scara larga de standardele internationale.</p>
-      <p><strong>BRC Global Standards:</strong> BRC (British Retail Consortium) Global Standards stabilesc criterii pentru siguranta alimentara, calitate si operatiuni. Certificarea BRC ajuta producatorii alimentari sa demonstreze ca produsele lor sunt sigure si conforme cu reglementarile.</p>
-      <p><strong>IFS (International Featured Standards):</strong> IFS defineste standarde de calitate si siguranta pentru procesele de productie alimentara. Acesta sprijina producatorii in dezvoltarea si mentinerea sistemelor de trasabilitate si control al calitatii.</p>
-      <p><strong>GlobalG.A.P.:</strong> GlobalG.A.P. este un standard pentru bune practici agricole la nivel de ferma. Acesta urmareste asigurarea trasabilitatii si sustenabilitatii productiei alimentare. Certificarea GlobalG.A.P. demonstreaza ca produsele agricole sunt sigure si sustenabile.</p>
-
-      <h2>SISKON Soluții de Trasabilitate</h2>
-      <p>Trasabilitatea alimentara a devenit un element indispensabil al proceselor moderne de productie si distributie alimentara. Trasabilitatea la nivel de produs, cutie si palet nu doar asigura conformitatea legala si controlul calitatii, ci creste si eficienta operationala si reduce riscurile de siguranta alimentara. De aceea, este esential ca toate companiile care activeaza in industria alimentara sa implementeze si sa actualizeze continuu sisteme eficiente de trasabilitate.</p>
-      <p><strong>SISKON Soluții de Trasabilitate</strong> va permit sa gestionati toate procesele de productie dintr-o singura platforma.</p>
-      <p><strong>SISKON Produse pentru Trasabilitate</strong> permit monitorizarea in timp real a proceselor de productie, raportare istorica si masuratori analitice prin colectarea datelor din rezultate ale testelor, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordine de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
-      <p>Cu motto-ul <strong>„Control Continuu, Zero Erori”</strong>, asiguram trasabilitate digitala completa, end-to-end, pentru afacerea dumneavoastra.</p>
-    `,
+      `,
   },
   {
     id: 5,
@@ -368,11 +303,7 @@ export const blogPosts = [
 
       <p>Acum, dupa ce suntem pregatiti sa marcam produsul, al doilea pas critic este sa ne asiguram ca fiecare cod este scanat inaintea fiecarei operatiuni. Vom detalia acest subiect in urmatorul articol.</p>
 
-      <h2>SISKON Soluții de Trasabilitate</h2>
-      <p>Cu <strong>SISKON Soluții de Trasabilitate</strong>, puteti gestiona toate procesele de productie dintr-o singura platforma.</p>
-      <p><strong>SISKON Produse pentru Trasabilitate</strong> permit monitorizarea in timp real a proceselor de productie, raportarea istorica si masuratori analitice, prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Ele sustin procese operationale precum fluxul de materiale, ordine de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
-      <p>Cu motto-ul <strong>„Control Continuu, Zero Erori”</strong>, asiguram trasabilitate digitala completa, end-to-end, pentru afacerea dumneavoastra.</p>
-    `,
+      `,
   },
   {
     id: 7,
@@ -392,30 +323,7 @@ export const blogPosts = [
 
       <p>Sa produci mai mult in acelasi timp nu mai este suficient; productia de inalta calitate, cu rate reduse de rebut si rework, devine tot mai critica. Din acest motiv, nevoia de sisteme de trasabilitate creste de la o zi la alta. Deci, care sunt beneficiile sistemelor de trasabilitate?</p>
 
-      <h2><strong>Beneficiile Sistemelor de Trasabilitate</strong></h2>
-
-      <h3><strong>Imbunatatirea Calitatii Productiei</strong></h3>
-      <p>Sistemele de trasabilitate includ puncte de control al calitatii in procesul de productie, contribuind la prevenirea erorilor critice si la cresterea calitatii generale a productiei.</p>
-
-      <h3><strong>Reducerea Rework-ului si a Costurilor de Productie</strong></h3>
-      <p>Prin detectarea timpurie a erorilor prin controale de proces, problemele sunt rezolvate rapid. Astfel se reduce munca de rework si, indirect, scad costurile de productie.</p>
-
-      <h3><strong>Suport pentru Analiza Root Couse</strong></h3>
-      <p>Sistemele de trasabilitate ofera acces la date din fiecare etapa a productiei, facilitand identificarea si eliminarea cauzelor reale ale problemelor.</p>
-
-      <h3><strong>Clarificarea Analizei Costurilor intre Operatiuni</strong></h3>
-      <p>Prin urmarirea fluxului de productie, sistemele de trasabilitate permit observarea clara a fluxurilor de cost si valoare din interiorul procesului.</p>
-
-      <h3><strong>Facilitarea Imbunatatirii Continue</strong></h3>
-      <p>Monitorizarea modului in care piesele si produsele circula intre linii face mai usoara imbunatatirea continua. Cunoasterea punctelor in care apar blocaje sau intarzieri permite optimizare in timp real.</p>
-
-      <p>Pe langa aceste beneficii, in anumite industrii reglementarile impun utilizarea sistemelor de trasabilitate. Domenii precum sanatatea si industria farmaceutica, care influenteaza direct siguranta oamenilor, sunt in prima linie. Totusi, noile reglementari arata ca tot mai multe industrii vor urma aceasta directie.</p>
-
-      <h2><strong>SISKON Soluții de Trasabilitate</strong></h2>
-      <p><strong>SISKON Soluții de Trasabilitate</strong> va permit sa gestionati toate procesele de productie de pe o singura platforma.</p>
-      <p><strong>SISKON Produse pentru Trasabilitate</strong> permit monitorizarea in timp real a proceselor de productie, raportare istorica si analize avansate, prin colectarea datelor din rezultate de test, masuratori de calitate, materiale utilizate, date de proces setate si reale, inspectii vizuale, reparatii si statii de esantionare. Acestea sustin procese operationale precum fluxul de materiale, ordinele de lucru, managementul sculelor si consumul de energie, asigurand colectarea digitala a informatiilor critice dincolo de procesele automatizate. Prin integrari orizontale si verticale, toate procesele de productie pot fi vizualizate si gestionate digital.</p>
-      <p>Cu motto-ul <strong>„Control Continuu, Zero Erori”</strong>, asiguram trasabilitate digitala completa, end-to-end, pentru afacerea dumneavoastra.</p>
-    `,
+      `,
   },
   {
     id: 8,
@@ -435,10 +343,6 @@ export const blogPosts = [
       <p>În loc să ne concentrăm doar pe datele de trasabilitate pentru scenarii de retragere a produselor, ceva ce afacerile nu doresc niciodată să înfrunte, este mult mai valoros să vedem datele de trasabilitate ca pe un instrument de management al calității în timp real. Luați în considerare un scenariu în care un singur defect este înregistrat într-un lot de o mie de produse. De obicei, identificarea exactă a cauzei unor astfel de defecte unice este aproape imposibilă, deoarece acestea par aleatorii. Cu date de trasabilitate fiabile și detaliate, poate fi efectuată o analiză a cauzei primare pentru a identifica condițiile și evenimentele care au dus la defect. Ca parte a unui Sistem de Management al Calității, pot fi definite și implementate acțiuni corective pentru a asigura că eroarea nu se repetă niciodată. Pentru a amplifica beneficiile, acțiuni similare pot fi aplicate altor produse în procese comparabile. Trasabilitatea digitală permite afacerilor să realizeze îmbunătățiri reale și continue către operațiuni de producție fără defecte.</p>
       <h2><strong>Valorile Trasabilității: Conformitate</strong></h2>
       <p>Pe măsură ce electronicele au devenit o componentă critică în industrii precum automotivă, electrocasnice și aerospațială, fiabilitatea produselor electronice este primordială. În cazul potențialelor defecțiuni în produsele finale, determinarea responsabilității pentru defecțiune trebuie evaluată rapid. Furnizorii sunt adesea văzuți ca sursa unor astfel de erori. Conformitatea cu regulile și procedurile convenite protejează furnizorii, dovedind că nu au apărut erori sau abateri în producția unui produs defect. Datele de trasabilitate îndeplinesc aceste cerințe instantaneu, protejând furnizorii de dispute legale costisitoare.</p>
-      <h2><strong>Cum Urmăresc un Produs? Soluții de Trasabilitate SISKON</strong></h2>
-      <p><strong>Soluțiile de Trasabilitate Siskon</strong> vă permit să gestionați toate procesele de producție de pe o singură platformă.</p>
-      <p><strong>Produsele de Trasabilitate Siskon</strong> leagă electronic rezultatele testelor, măsurătorile, materialele utilizate, datele de proces setate și reale, inspecțiile vizuale, reparațiile și datele de la stațiile de eșantionare la produse individuale pe bază de numere de serie. Acest lucru permite monitorizarea în timp real a proceselor de producție, raportarea istorică și măsurători analitice. Acestea susțin procesele operaționale precum fluxul de materiale, comenzile de lucru, gestionarea uneltelor și utilizarea energiei, asigurând colectarea digitală a informațiilor critice dincolo de procesele automatizate. Prin integrări orizontale și verticale, toate procesele de producție pot fi vizualizate și gestionate digital.</p>
-      <p>Cu motto-ul <strong>Control Continuu, Zero Erori</strong>, asigurăm trasabilitate digitală completă, de la un capăt la altul, pentru afacerea dumneavoastră.</p>
       <p><strong>Cuvinte cheie</strong>: Industrie 4.0, Trasabilitate, Ce este Trasabilitatea?, Definiția Trasabilității</p>
     `,
   },

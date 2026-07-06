@@ -71,6 +71,15 @@ export function IconArrowLeft({ size = 20, className = '' }) {
   );
 }
 
+export function IconArrowRight({ size = 20, className = '' }) {
+  return (
+    <svg {...baseProps(size, className)}>
+      <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function IconCheck({ size = 20, className = '' }) {
   return (
     <svg {...baseProps(size, className)}>

@@ -5,7 +5,7 @@ import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { blogPosts } from '../../../data/blogPosts';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
-import { IconArrowLeft } from '../../../components/ui/Icons';
+import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
 import { cookies } from 'next/headers';
 import { localizeBlogPosts } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
@@ -14,7 +14,12 @@ import { f } from '../../../lib/i18n/sectionTranslations';
 export async function generateMetadata({ params }) {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  let locale = 'ro';
+  if (localeRaw === 'tr') {
+    locale = 'tr';
+  } else if (localeRaw === 'en') {
+    locale = 'en';
+  }
   const isEn = locale === 'en';
   const localizedPosts = localizeBlogPosts(blogPosts, locale);
   const { slug } = await params;
@@ -31,6 +36,13 @@ export async function generateMetadata({ params }) {
   const description = post.excerpt;
   const pageUrl = `https://traceability.ro/blog/${post.slug}`;
 
+  let openGraphLocale = 'ro_RO';
+  if (locale === 'tr') {
+    openGraphLocale = 'tr_TR';
+  } else if (isEn) {
+    openGraphLocale = 'en_US';
+  }
+
   return {
     title,
     description,
@@ -42,7 +54,7 @@ export async function generateMetadata({ params }) {
       description,
       type: 'article',
       url: pageUrl,
-      locale: locale === 'tr' ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
+      locale: openGraphLocale,
     },
     twitter: {
       card: 'summary_large_image',
@@ -55,15 +67,19 @@ export async function generateMetadata({ params }) {
 export default async function BlogDetailPage({ params }) {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  let locale = 'ro';
+  if (localeRaw === 'tr') {
+    locale = 'tr';
+  } else if (localeRaw === 'en') {
+    locale = 'en';
+  }
   const localizedPosts = localizeBlogPosts(blogPosts, locale);
   const { slug } = await params;
   const post = localizedPosts.find((p) => p.slug === slug);
 
   if (!post) notFound();
 
-  const sortedCategoryPosts = [...localizedPosts]
-    .filter((p) => p.category === post.category)
+  const sortedAllPosts = [...localizedPosts]
     .sort((a, b) => {
       const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
 
@@ -74,17 +90,17 @@ export default async function BlogDetailPage({ params }) {
       return (b.id ?? 0) - (a.id ?? 0);
     });
 
-  const currentPostIndex = sortedCategoryPosts.findIndex((p) => p.id === post.id);
+  const currentAllIndex = sortedAllPosts.findIndex((p) => p.id === post.id);
+  const prevPost = currentAllIndex > 0 ? sortedAllPosts[currentAllIndex - 1] : null;
+  const nextPost = currentAllIndex < sortedAllPosts.length - 1 ? sortedAllPosts[currentAllIndex + 1] : null;
 
-  // Keep recommendation order consistent with category order and rotate after current post.
-  const orderedRelatedPosts = [
-    ...sortedCategoryPosts.slice(currentPostIndex + 1),
-    ...sortedCategoryPosts.slice(0, currentPostIndex),
-  ];
+  let dateLocale = 'ro-RO';
+  if (locale === 'en') {
+    dateLocale = 'en-US';
+  } else if (locale === 'tr') {
+    dateLocale = 'tr-TR';
+  }
 
-  const relatedPosts = orderedRelatedPosts.slice(0, 3);
-
-  const dateLocale = locale === 'en' ? 'en-US' : locale === 'tr' ? 'tr-TR' : 'ro-RO';
   const date = new Date(post.date).toLocaleDateString(dateLocale, {
     year: 'numeric',
     month: 'long',
@@ -92,6 +108,13 @@ export default async function BlogDetailPage({ params }) {
   });
 
   const safeContent = sanitizeRichText(post.content);
+
+  let onsuiteUrl = 'https://onsuite.com.tr/ro/modules/trace';
+  if (locale === 'tr') {
+    onsuiteUrl = 'https://onsuite.com.tr/tr/moduller/trace';
+  } else if (locale === 'en') {
+    onsuiteUrl = 'https://onsuite.com.tr/en/modules/trace';
+  }
 
   return (
     <div className="min-h-screen bg-white pb-16">
@@ -137,49 +160,99 @@ export default async function BlogDetailPage({ params }) {
             className="blog-rich text-gray-text"
           />
 
-          {relatedPosts.length > 0 && (
-            <section className="clear-both mt-16 border-t border-slate-200 pt-10">
-              <h2 className="mb-6 text-xl font-semibold text-primary-black">{f(locale, 'blogDetailPage', 'relatedArticles')}</h2>
-              <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {relatedPosts.map((relatedPost) => {
-                  const relatedDate = new Date(relatedPost.date).toLocaleDateString(dateLocale, {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  });
+          {/* OnSuite Trace Redirection CTA */}
+          <div className="mt-12 rounded-2xl bg-gradient-to-br from-primary-black to-dark-bg p-8 text-white shadow-xl md:p-10 border border-slate-blue/10 relative overflow-hidden">
+            {/* Ambient decorative background patterns */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,181,247,0.15),transparent_48%)] pointer-events-none" />
+            <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-accent-blue/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="space-y-3 max-w-3xl">
+                <div className="inline-flex items-center gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-accent-blue px-2.5 py-1 bg-accent-blue/10 rounded-full border border-accent-blue/20">
+                    OnSuite Trace
+                  </span>
+                </div>
+                <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">
+                  {locale === 'tr' && 'Uçtan Uca İzlenebilirlik Çözümümüzle Tanışın'}
+                  {locale === 'en' && 'Meet Our End-to-End Traceability Solution'}
+                  {locale === 'ro' && 'Descoperiți Soluția Noastră de Trasabilitate End-to-End'}
+                </h3>
+                <p className="text-gray-light/85 text-sm md:text-base leading-relaxed">
+                  {locale === 'tr' && 'OnSuite Trace, tüm üretim süreçlerinizi tek bir platformdan yönetmenize olanak tanır. "Sürekli Kontrol, Sıfır Hata" mottosuyla işletmeniz için uçtan uca dijital izlenebilirlik sağlıyoruz.'}
+                  {locale === 'en' && 'OnSuite Trace allows you to manage all your production processes from a single platform. We provide end-to-end digital traceability for your business with the motto "Continuous Control, Zero Defects".'}
+                  {locale === 'ro' && 'OnSuite Trace vă permite să gestionați toate procesele de producție dintr-o singură platformă. Oferim trasabilitate digitală completă pentru afacerea dumneavoastră sub deviza "Control Continuu, Zero Erori".'}
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <Button
+                  as="a"
+                  href={onsuiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="solid"
+                  size="lg"
+                  className="bg-secondary-blue text-white hover:bg-accent-blue font-semibold text-sm rounded-full inline-flex items-center gap-2 whitespace-nowrap min-w-max shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <span>
+                    {locale === 'tr' && "OnSuite Trace'i Keşfedin"}
+                    {locale === 'en' && 'Explore OnSuite Trace'}
+                    {locale === 'ro' && 'Explorează OnSuite Trace'}
+                  </span>
+                  <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Button>
+              </div>
+            </div>
+          </div>
 
-                  return (
-                    <li key={relatedPost.id}>
-                      <Link
-                        href={`/blog/${relatedPost.slug}`}
-                        className="group block h-full overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/70 shadow-soft transition-all hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-soft-lg"
-                      >
-                        <div className="relative aspect-video w-full overflow-hidden">
-                          <Image
-                            src={relatedPost.image}
-                            alt={relatedPost.title}
-                            fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                            className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                            quality={82}
-                          />
-                        </div>
-                        <div className="p-5">
-                          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-secondary-blue">
-                            {relatedPost.category}
-                          </p>
-                          <p className="mb-3 text-lg font-semibold leading-snug text-slate-800 transition-colors group-hover:text-secondary-blue">
-                            {relatedPost.title}
-                          </p>
-                          <p className="text-sm text-slate-500">{relatedDate}</p>
-                        </div>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-          )}
+          {/* Navigation Section */}
+          <section className="clear-both mt-16 border-t border-slate-200 pt-10">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {prevPost ? (
+                <Link
+                  href={`/blog/${prevPost.slug}`}
+                  className="group flex flex-col items-start gap-2 rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
+                >
+                  <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
+                    <IconArrowLeft size={16} />
+                    <span>
+                      {locale === 'tr' && 'Önceki Makale'}
+                      {locale === 'en' && 'Previous Article'}
+                      {locale === 'ro' && 'Articol anterior'}
+                    </span>
+                  </span>
+                  <span className="text-base font-bold text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
+                    {prevPost.title}
+                  </span>
+                </Link>
+              ) : (
+                <div className="hidden sm:block" />
+              )}
+
+              {nextPost ? (
+                <Link
+                  href={`/blog/${nextPost.slug}`}
+                  className="group flex flex-col items-end gap-2 rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
+                >
+                  <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
+                    <span>
+                      {locale === 'tr' && 'Sonraki Makale'}
+                      {locale === 'en' && 'Next Article'}
+                      {locale === 'ro' && 'Articol următor'}
+                    </span>
+                    <IconArrowRight size={16} />
+                  </span>
+                  <span className="text-base font-bold text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
+                    {nextPost.title}
+                  </span>
+                </Link>
+              ) : (
+                <div className="hidden sm:block" />
+              )}
+            </div>
+          </section>
 
           <section className="clear-both mt-16 border-t border-slate-200 pt-10">
             <div className="mx-auto max-w-3xl text-center">

@@ -250,14 +250,13 @@ function getDetailBodyState(item, paragraphs, detailSections) {
   const hasListHeading = renderHighlights.length > 0 && !item.detailBulletsHeading && lastParagraph.trim().endsWith(':');
   const listHeading = item.detailBulletsHeading || (hasListHeading ? lastParagraph : '');
   const contentParagraphs = hasListHeading ? paragraphs.slice(0, -1) : paragraphs;
-  const mergedContent = contentParagraphs.join(' ').trim();
 
   return {
     preHighlights,
     preHighlightsHeading,
     renderHighlights,
     listHeading,
-    mergedContent,
+    contentParagraphs,
   };
 }
 
@@ -280,7 +279,7 @@ export default function CatalogDetailPage({ item, type, locale }) {
     preHighlightsHeading,
     renderHighlights,
     listHeading,
-    mergedContent,
+    contentParagraphs,
   } = getDetailBodyState(item, paragraphs, detailSections);
   const homeHref = type === 'product' ? '/?tab=products#traceability-solutions' : '/?tab=solutions#traceability-solutions';
   const visual = getItemVisual(item, type);
@@ -315,8 +314,14 @@ export default function CatalogDetailPage({ item, type, locale }) {
           </header>
 
           <section className="mb-6">
-            <div className="text-[#355a7d] text-[1.04rem] leading-[1.75] font-normal break-words [&_p]:max-w-none">
-              <p>{mergedContent || item.summary || item.description}</p>
+            <div className="text-[#355a7d] text-[1.04rem] leading-[1.75] font-normal break-words [&_p]:max-w-none space-y-4">
+              {contentParagraphs.length > 0 ? (
+                contentParagraphs.map((para) => (
+                  <p key={para.slice(0, 32)}>{para}</p>
+                ))
+              ) : (
+                <p>{item.summary || item.description}</p>
+              )}
             </div>
           </section>
 
