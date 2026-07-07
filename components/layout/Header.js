@@ -14,7 +14,7 @@ export const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
   const { locale, setLocale, t } = useLanguage();
-  const normalizedPathname = (pathname || '/').replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+  const normalizedPathname = (pathname || '/').replace(/^\/(tr|en|ro)(?=\/|$)/, '') || '/';
   const isHomePage = normalizedPathname === '/';
   const useTransparentHeader = isHomePage && !scrolled && !isOpen;
 
@@ -34,7 +34,7 @@ export const Header = () => {
     }
 
     const normalized = targetPath.startsWith('/') ? targetPath : `/${targetPath}`;
-    const withoutPrefix = normalized.replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+    const withoutPrefix = normalized.replace(/^\/(tr|en|ro)(?=\/|$)/, '') || '/';
 
     if (targetLocale === 'tr') {
       return withoutPrefix;
@@ -47,7 +47,7 @@ export const Header = () => {
 
   const currentPathForLocale = (() => {
     const raw = pathname || '/';
-    const cleaned = raw.replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+    const cleaned = raw.replace(/^\/(tr|en|ro)(?=\/|$)/, '') || '/';
     return cleaned;
   })();
 

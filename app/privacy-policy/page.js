@@ -2,11 +2,12 @@
 import Container from '../../components/ui/Container';
 import { loadPolicyHtml } from '../../lib/policyDocuments';
 import { f } from '../../lib/i18n/sectionTranslations';
+import { DEFAULT_LOCALE, isSupportedLocale } from '../../lib/i18n/dictionaries';
 
 export async function generateMetadata() {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
 
   return {
     title: f(locale, 'privacyPolicyPage', 'metaTitle'),
@@ -17,7 +18,7 @@ export async function generateMetadata() {
 export default async function PrivacyPolicyPage() {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
   const policyHtml = await loadPolicyHtml('privacy', locale);
   const pageTitle = f(locale, 'privacyPolicyPage', 'title');
 

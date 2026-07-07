@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 export const MainContent = ({ children }) => {
   const pathname = usePathname();
-  const normalizedPathname = (pathname || '/').replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+  const normalizedPathname = (pathname || '/').replace(/^\/(tr|en|ro)(?=\/|$)/, '') || '/';
   const isHeroBlendPage = normalizedPathname === '/' || normalizedPathname === '/contact' || normalizedPathname === '/blog';
 
   return (

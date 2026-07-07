@@ -6,6 +6,7 @@ import { IconArrowLeft, IconCheck } from '../../../components/ui/Icons';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 import { localizeSolutionDetail } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
+import { DEFAULT_LOCALE, isSupportedLocale } from '../../../lib/i18n/dictionaries';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
 const solutions = {
@@ -236,7 +237,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
   const isEn = locale === 'en';
   const { slug } = await params;
   const baseSolution = solutions[slug];
@@ -278,7 +279,7 @@ export async function generateMetadata({ params }) {
 export default async function SolutionDetailPage({ params }) {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
   const { slug } = await params;
   const baseSolution = solutions[slug];
   const solution = localizeSolutionDetail(slug, baseSolution, locale);

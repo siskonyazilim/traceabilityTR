@@ -1,10 +1,11 @@
 ﻿import { cookies } from 'next/headers';
 import ProjectsPageClient from './ProjectsPageClient';
+import { DEFAULT_LOCALE, isSupportedLocale } from '../../lib/i18n/dictionaries';
 
 export async function generateMetadata() {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
   const isTr = locale === 'tr';
   const isEn = locale === 'en';
 

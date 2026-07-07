@@ -882,8 +882,8 @@ export const referenceProjects = [
     slug: "philsa-palletizing-automation-automatic-labeling",
     logo: "/siskon-logo-header.svg",
     sector: "Tutun",
-    image: "/resmi/Factory.jpg",
-    heroImage: "/resmi/Factory.jpg",
+    image: "/logos/philip_morris_sa.svg ",
+    heroImage: "/logos/philip_morris_sa.svg ",
     gallery: [
       "/resmi/Factory.jpg",
     ],
@@ -902,8 +902,8 @@ export const referenceProjects = [
     slug: "philsa-filter-tracking",
     logo: "/siskon-logo-header.svg",
     sector: "Tutun",
-    image: "/resmi/Factory.jpg",
-    heroImage: "/resmi/Factory.jpg",
+    image: "/logos/philip_morris_sa.svg ",
+    heroImage: "/logos/philip_morris_sa.svg ",
     gallery: [
       "/resmi/Factory.jpg",
     ],
@@ -942,8 +942,8 @@ export const referenceProjects = [
     slug: "philsa-embosser-rfid",
     logo: "/siskon-logo-header.svg",
     sector: "Tutun",
-    image: "/resmi/Factory.jpg",
-    heroImage: "/resmi/Factory.jpg",
+    image: "/logos/philip_morris_sa.svg ",
+    heroImage: "/logos/philip_morris_sa.svg ",
     gallery: [
       "/resmi/Factory.jpg",
     ],

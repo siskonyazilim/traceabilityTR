@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 import { DEFAULT_LOCALE, isSupportedLocale } from './lib/i18n/dictionaries';
 
-const LOCALE_PREFIXES = new Set(['en', 'ro']);
+const LOCALE_PREFIXES = new Set(['tr', 'en', 'ro']);
 
 function hasPublicFile(pathname) {
-	return /\.[^/]+$/.test(pathname);
+	const lastSegment = pathname.split('/').pop();
+	return lastSegment?.includes('.') ?? false;
 }
 
 function getLocaleFromPath(pathname) {
@@ -70,6 +71,16 @@ export function middleware(request) {
 		const redirectUrl = nextUrl.clone();
 		redirectUrl.pathname = withLocalePrefix(pathname, currentLocale);
 		return NextResponse.redirect(redirectUrl);
+	}
+
+	if (!isSupportedLocale(localeCookie)) {
+		const response = NextResponse.next();
+		response.cookies.set('locale', DEFAULT_LOCALE, {
+			path: '/',
+			maxAge: 60 * 60 * 24 * 365,
+			sameSite: 'lax',
+		});
+		return response;
 	}
 
 	return NextResponse.next();

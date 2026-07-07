@@ -9,13 +9,14 @@ import { localizeReferenceProjects } from '../../../lib/i18n/contentLocalization
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { getReferenceNarrative } from '../../../lib/i18n/referenceNarratives';
 import { sortReferenceProjects, withReferenceProjectTimeline } from '../../../lib/referenceProjectOrdering';
+import { DEFAULT_LOCALE, isSupportedLocale } from '../../../lib/i18n/dictionaries';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 /* eslint-disable react/prop-types */
 
 export async function generateMetadata({ params }) {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
   const isEn = locale === 'en';
   const localizedProjects = withReferenceProjectTimeline(
     sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
@@ -71,7 +72,7 @@ export async function generateMetadata({ params }) {
 export default async function PortfolioDetailPage({ params, searchParams }) {
   const cookieStore = await cookies();
   const localeRaw = cookieStore.get('locale')?.value;
-  const locale = localeRaw === 'tr' ? 'tr' : localeRaw === 'en' ? 'en' : 'ro';
+  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
   const localizedProjects = withReferenceProjectTimeline(
     sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
     locale

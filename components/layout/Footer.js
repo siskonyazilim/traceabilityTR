@@ -7,7 +7,7 @@ import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer = () => {
   const pathname = usePathname();
-  const normalizedPathname = (pathname || '/').replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+  const normalizedPathname = (pathname || '/').replace(/^\/(tr|en|ro)(?=\/|$)/, '') || '/';
   const isHomePage = normalizedPathname === '/';
   const { t, locale } = useLanguage();
   const contactEmail = locale === 'tr' ? 'info@izlenebilirlik.com.tr' : 'info@traceability.ro';
@@ -22,7 +22,7 @@ export const Footer = () => {
     }
 
     const normalized = targetPath.startsWith('/') ? targetPath : `/${targetPath}`;
-    const withoutPrefix = normalized.replace(/^\/(en|ro)(?=\/|$)/, '') || '/';
+    const withoutPrefix = normalized.replace(/^\/(tr|en|ro)(?=\/|$)/, '') || '/';
 
     if (locale === 'tr') {
       return withoutPrefix;
