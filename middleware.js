@@ -37,6 +37,7 @@ export function middleware(request) {
 		|| pathname.startsWith('/api')
 		|| pathname.startsWith('/images')
 		|| pathname.startsWith('/Logos')
+		|| pathname.startsWith('/logos')
 		|| pathname.startsWith('/icon')
 		|| pathname.startsWith('/social')
 		|| pathname.startsWith('/video')
