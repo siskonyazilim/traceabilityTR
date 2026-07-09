@@ -2,14 +2,14 @@
 import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import { referenceProjects } from '../../../data/references';
-import { IconArrowLeft } from '../../../components/ui/Icons';
+import { IconArrowLeft, IconChevronLeft, IconChevronRight } from '../../../components/ui/Icons';
 import ProjectGallerySlider from '../../../components/ui/ProjectGallerySlider';
 import { cookies } from 'next/headers';
 import { localizeReferenceProjects } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { getReferenceNarrative } from '../../../lib/i18n/referenceNarratives';
 import { sortReferenceProjects, withReferenceProjectTimeline } from '../../../lib/referenceProjectOrdering';
-import { DEFAULT_LOCALE, isSupportedLocale } from '../../../lib/i18n/dictionaries';
+import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 /* eslint-disable react/prop-types */
 
@@ -48,6 +48,13 @@ export async function generateMetadata({ params }) {
   const description = project.description;
   const pageUrl = `https://traceability.ro/portfolio/${project.slug}`;
 
+  let ogLocale = 'ro_RO';
+  if (locale === 'tr') {
+    ogLocale = 'tr_TR';
+  } else if (isEn) {
+    ogLocale = 'en_US';
+  }
+
   return {
     title,
     description,
@@ -59,7 +66,7 @@ export async function generateMetadata({ params }) {
       description,
       type: 'article',
       url: pageUrl,
-      locale: locale === 'tr' ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
+      locale: ogLocale,
     },
     twitter: {
       card: 'summary_large_image',
@@ -93,15 +100,18 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const project = localizedProjects.find((p) => p.slug === slug);
   const fromPageRaw = resolvedSearchParams?.fromPage;
   const fromPage = Number.parseInt(Array.isArray(fromPageRaw) ? fromPageRaw[0] : fromPageRaw || '1', 10);
+  const listPath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
+  const localizedListPath = toLocalePath(listPath, locale);
   const backHref = Number.isFinite(fromPage) && fromPage > 1
-    ? `/proiecte-de-referinta?page=${fromPage}`
-    : '/proiecte-de-referinta';
+    ? `${localizedListPath}?page=${fromPage}`
+    : localizedListPath;
 
   if (!project) notFound();
 
-  const relatedProjects = localizedProjects
-    .filter((p) => p.sector === project.sector && p.id !== project.id)
-    .slice(0, 3);
+  const currentIndex = localizedProjects.findIndex((p) => p.slug === slug);
+  const totalProjects = localizedProjects.length;
+  const prevProject = localizedProjects[(currentIndex - 1 + totalProjects) % totalProjects];
+  const nextProject = localizedProjects[(currentIndex + 1) % totalProjects];
 
   const titleMatchedNarrativeSlugs = new Set([
     'candy-hoover-test-data-cooker-lines-traceability',
@@ -173,42 +183,54 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
             title={project.title}
           />
 
-          {/* Related Projects */}
-          {relatedProjects.length > 0 && (
-            <div className="clear-both mt-16 pt-12 border-t border-gray-light">
-              <h2 className="text-xl font-semibold text-primary-black mb-8">
-                {f(locale, 'portfolioDetailPage', 'relatedProjects')}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedProjects.map((relatedProject) => (
-                  <Link
-                    key={relatedProject.id}
-                    href={`/portfolio/${relatedProject.slug}`}
-                    className="group rounded-2xl border border-gray-200 bg-white p-5 hover:border-accent-blue hover:shadow-md transition-all flex flex-col"
-                  >
-                    <div className="h-32 flex items-center justify-center p-2 mb-4">
-                      <img
-                        src={relatedProject.logo || relatedProject.image}
-                        alt={relatedProject.title}
-                        width="320"
-                        height="128"
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <h3 className="text-base md:text-lg font-bold text-primary-black group-hover:text-accent-blue transition-colors leading-snug min-h-[3.4rem]">
-                      {relatedProject.title}
-                    </h3>
-                    <span className="card-cta-mini mt-auto">
-                      {f(locale, 'portfolioDetailPage', 'details', 'Detalii')}
-                      <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </span>
-                  </Link>
-                ))}
-              </div>
+          {/* Previous / Next Navigation */}
+          <nav className="clear-both mt-16 pt-12 border-t border-gray-light">
+            <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-6 sm:gap-0">
+              <Link
+                href={toLocalePath(`/portfolio/${prevProject.slug}`, locale)}
+                className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors"
+              >
+                <IconChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
+                <div className="text-left">
+                  <span className="block text-sm text-gray-text font-medium">
+                    {f(locale, 'portfolioDetailPage', 'previousProject')}
+                  </span>
+                  <span className="mt-2 inline-flex h-14 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm">
+                    <img
+                      src={prevProject.logo || prevProject.image}
+                      alt={prevProject.title}
+                      className="max-h-8 w-full object-contain"
+                    />
+                  </span>
+                  <h3 className="mt-2 max-w-xs text-xs font-bold text-primary-black leading-tight group-hover:text-accent-blue transition-colors">
+                    {prevProject.title}
+                  </h3>
+                </div>
+              </Link>
+
+              <Link
+                href={toLocalePath(`/portfolio/${nextProject.slug}`, locale)}
+                className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors self-end sm:self-auto"
+              >
+                <div className="text-right">
+                  <span className="block text-sm text-gray-text font-medium">
+                    {f(locale, 'portfolioDetailPage', 'nextProject')}
+                  </span>
+                  <span className="mt-2 ml-auto inline-flex h-14 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm">
+                    <img
+                      src={nextProject.logo || nextProject.image}
+                      alt={nextProject.title}
+                      className="max-h-8 w-full object-contain"
+                    />
+                  </span>
+                  <h3 className="mt-2 ml-auto max-w-xs text-xs font-bold text-primary-black leading-tight text-right group-hover:text-accent-blue transition-colors">
+                    {nextProject.title}
+                  </h3>
+                </div>
+                <IconChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
-          )}
+          </nav>
 
           {/* CTA */}
           <PagePrimaryCta

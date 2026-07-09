@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 export const BlogCard = ({
   post,
@@ -26,12 +27,12 @@ export const BlogCard = ({
     day: 'numeric',
     timeZone: 'UTC',
   });
-  const readMoreLabel = t('cards.readMore', 'Citește mai mult →').replace(/\s*→\s*$/, '');
+  const readMoreLabel = t('cards.readMore', 'Citește mai mult →').split('→')[0].trim();
 
   return (
     <article className="h-full">
       <Link
-        href={`/blog/${post.slug}`}
+        href={toLocalePath(`/blog/${post.slug}`, locale)}
         className="group flex h-full flex-col rounded-2xl border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/70 shadow-soft hover:shadow-soft-lg hover:border-sky-300 transition-all overflow-hidden"
       >
         {/* Blog image */}

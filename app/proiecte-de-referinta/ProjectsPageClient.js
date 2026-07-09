@@ -14,10 +14,17 @@ import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/r
 
 export default function ProjectsPageClient() {
   const { locale, t } = useLanguage();
-  const localizedProjects = withReferenceProjectTimeline(
-    sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
-    locale
-  );
+  const localizedProjects = useMemo(() => {
+    const projects = withReferenceProjectTimeline(
+      sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
+      locale
+    );
+    return [...projects].sort((a, b) => {
+      const aCode = a.referenceDate || '';
+      const bCode = b.referenceDate || '';
+      return bCode.localeCompare(aCode);
+    });
+  }, [locale]);
   const pageSize = 9;
   const searchParams = useSearchParams();
   const router = useRouter();

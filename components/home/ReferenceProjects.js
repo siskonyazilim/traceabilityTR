@@ -10,6 +10,7 @@ import { useLanguage } from '../i18n/LanguageProvider';
 import { referenceProjects } from '../../data/references';
 import { localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
 import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/referenceProjectOrdering';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 export const ReferenceProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,25 +21,15 @@ export const ReferenceProjects = () => {
     () => withReferenceProjectTimeline(sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)), locale),
     [locale]
   );
-  const uniqueBrandProjects = useMemo(() => {
-    const seenBrands = new Set();
-
-    return localizedProjects.filter((project) => {
-      const [brandRaw] = String(project.title || '').split(' - ');
-      const brand = brandRaw.trim().toLowerCase();
-
-      if (!brand || seenBrands.has(brand)) {
-        return false;
-      }
-
-      seenBrands.add(brand);
-      return true;
-    });
-  }, [localizedProjects]);
-
   const featuredProjects = useMemo(() => {
-    return uniqueBrandProjects.slice(0, 10);
-  }, [uniqueBrandProjects]);
+    return [...localizedProjects]
+      .sort((a, b) => {
+        const aCode = a.referenceDate || '';
+        const bCode = b.referenceDate || '';
+        return bCode.localeCompare(aCode);
+      })
+      .slice(0, 10);
+  }, [localizedProjects]);
 
   useEffect(() => {
     const updateItemsPerView = () => {
@@ -139,7 +130,7 @@ export const ReferenceProjects = () => {
                 className="h-full group"
               >
                 <Link
-                  href={`/portfolio/${project.slug}`}
+                  href={toLocalePath(`/portfolio/${project.slug}`, locale)}
                   className="h-full flex flex-col rounded-3xl border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
                 >
                   {/* Image with Overlay Effect */}
@@ -210,7 +201,7 @@ export const ReferenceProjects = () => {
         <div className="flex justify-center">
           <Button
             as={Link}
-            href="/proiecte-de-referinta"
+            href={toLocalePath(locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta', locale)}
             variant="outline"
             size="lg"
             className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"

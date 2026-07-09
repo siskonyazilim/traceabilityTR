@@ -8,6 +8,7 @@ import SectionHeader from '../ui/SectionHeader';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { solutions, products } from '../../data/solutions';
 import { localizeProducts, localizeSolutions } from '../../lib/i18n/contentLocalization';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 const iconMap = {
   'qr-code': '📱',
@@ -45,8 +46,8 @@ export const SolutionsTabs = () => {
   const localizedSolutions = useMemo(() => localizeSolutions(solutions, locale), [locale]);
   const localizedProducts = useMemo(() => localizeProducts(products, locale), [locale]);
   const catalogBasePath = '/catalog';
-  const detailChipLabel = t('sections.detailChip', 'Detalii').replace(/\s*→\s*$/, '');
-  const detailChipProductsLabel = t('sections.detailChipProducts', detailChipLabel).replace(/\s*→\s*$/, '');
+  const detailChipLabel = t('sections.detailChip', 'Detalii').split('→')[0].trim();
+  const detailChipProductsLabel = t('sections.detailChipProducts', detailChipLabel).split('→')[0].trim();
 
   useEffect(() => {
     const tabFromQuery = searchParams.get('tab');
@@ -119,7 +120,7 @@ export const SolutionsTabs = () => {
             {localizedSolutions.map((solution) => (
               <Link
                 key={solution.id}
-                href={`${catalogBasePath}/solutions/${solution.slug}`}
+                href={toLocalePath(`${catalogBasePath}/solutions/${solution.slug}`, locale)}
                 className="bg-gradient-to-b from-white to-slate-50/55 rounded-2xl p-6 md:p-7 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 group relative overflow-hidden h-full flex flex-col"
               >
                 {/* Gradient Overlay on Hover */}
@@ -158,7 +159,7 @@ export const SolutionsTabs = () => {
             {localizedProducts.map((product) => (
               <Link
                 key={product.id}
-                href={`${catalogBasePath}/products/${product.slug}`}
+                href={toLocalePath(`${catalogBasePath}/products/${product.slug}`, locale)}
                 className="rounded-2xl border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 bg-white group h-full relative overflow-hidden p-5 md:p-6"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

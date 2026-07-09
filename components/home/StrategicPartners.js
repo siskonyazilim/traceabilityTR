@@ -8,6 +8,7 @@ import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { strategicPartners } from '../../data/partners';
 import { localizePartners } from '../../lib/i18n/contentLocalization';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 export const StrategicPartners = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -109,7 +110,7 @@ export const StrategicPartners = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 mb-8">
             {visiblePartners.map((partner, index) => (
-              <Link key={partner.id} href={`${detailBasePath}/${partner.slug}`}>
+              <Link key={partner.id} href={toLocalePath(`${detailBasePath}/${partner.slug}`, locale)}>
                 <article
                   className="h-full rounded-2xl bg-gradient-to-b from-white to-slate-50/70 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                 >

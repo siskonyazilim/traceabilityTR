@@ -8,7 +8,7 @@ import PartnerStorySlider from '../../../components/ui/PartnerStorySlider';
 import { cookies } from 'next/headers';
 import { localizePartners } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
-import { DEFAULT_LOCALE, isSupportedLocale } from '../../../lib/i18n/dictionaries';
+import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
 export async function generateMetadata({ params }) {
@@ -35,6 +35,13 @@ export async function generateMetadata({ params }) {
   const description = partner.description;
   const pageUrl = `https://traceability.ro/solution-partners/${partner.slug}`;
 
+  let ogLocale = 'ro_RO';
+  if (locale === 'tr') {
+    ogLocale = 'tr_TR';
+  } else if (isEn) {
+    ogLocale = 'en_US';
+  }
+
   return {
     title,
     description,
@@ -46,7 +53,7 @@ export async function generateMetadata({ params }) {
       description,
       type: 'article',
       url: pageUrl,
-      locale: locale === 'tr' ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
+      locale: ogLocale,
     },
     twitter: {
       card: 'summary_large_image',
@@ -71,6 +78,7 @@ export default async function PartnerDetailPage({ params }) {
 
   if (!partner) notFound();
 
+  const detailBasePath = locale === 'en' ? '/solution-partners' : '/parteneri-de-solutii';
   const currentIndex = localizedPartners.findIndex((p) => p.slug === slug);
   const totalPartners = localizedPartners.length;
   const prevPartner = localizedPartners[(currentIndex - 1 + totalPartners) % totalPartners];
@@ -93,7 +101,7 @@ export default async function PartnerDetailPage({ params }) {
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
       <Container size="xl">
-        <Link href="/" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-6 font-semibold">
+        <Link href={toLocalePath('/', locale)} className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-6 font-semibold">
           <IconArrowLeft /> {f(locale, 'partnerDetailPage', 'backHome')}
         </Link>
 
@@ -140,7 +148,7 @@ export default async function PartnerDetailPage({ params }) {
           <nav className="pt-8 border-t border-gray-200">
             <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-6 sm:gap-0">
               <Link
-                href={`/solution-partners/${prevPartner.slug}`}
+                href={toLocalePath(`${detailBasePath}/${prevPartner.slug}`, locale)}
                 className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors"
               >
                 <IconChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
@@ -162,7 +170,7 @@ export default async function PartnerDetailPage({ params }) {
               </Link>
 
               <Link
-                href={`/solution-partners/${nextPartner.slug}`}
+                href={toLocalePath(`${detailBasePath}/${nextPartner.slug}`, locale)}
                 className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors self-end sm:self-auto"
               >
                 <div className="text-right">
@@ -193,7 +201,7 @@ export default async function PartnerDetailPage({ params }) {
             <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto">
               {f(locale, 'partnerDetailPage', 'ctaSubtitle')}
             </p>
-            <Button as={Link} href="/contact" variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
+            <Button as={Link} href={toLocalePath('/contact', locale)} variant="solid" size="lg" className="bg-secondary-blue hover:bg-accent-blue text-white">
               {f(locale, 'partnerDetailPage', 'ctaPrimary')}
             </Button>
           </div>

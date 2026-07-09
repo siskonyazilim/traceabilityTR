@@ -4,10 +4,11 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 export const ProjectCard = ({ project, currentPage = 1 }) => {
   const { locale, t } = useLanguage();
-  const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').replace(/\s*→\s*$/, '');
+  const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').split('→')[0].trim();
   const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
 
   const slugPrefixLogoMap = {
@@ -78,12 +79,13 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   } else if (isRasterImage) {
     projectVisualClass = 'object-cover';
   }
+  const localizedPath = toLocalePath(`${detailBasePath}/${project.slug}`, locale);
   const detailHref = currentPage > 1
     ? {
-        pathname: `${detailBasePath}/${project.slug}`,
+        pathname: localizedPath,
         query: { fromPage: String(currentPage) },
       }
-    : `${detailBasePath}/${project.slug}`;
+    : localizedPath;
 
   return (
     <motion.article
