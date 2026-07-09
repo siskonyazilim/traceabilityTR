@@ -677,6 +677,48 @@
       description: "The Product | Carton | Pallet traceability application was successfully implemented on production lines at Duru Bulgur's Karaman factory.",
       content: "<h2>Product-Carton-Pallet Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
+    'vestel-automatic-labeling-verification': {
+      title: "Vestel - Automatic Labeling and Verification",
+      sector: "Electronics",
+      description: "Automatic labeling and verification system to eliminate labeling errors on packaging flows.",
+      content: "<h2>Automatic Labeling and Verification</h2><p>Within the scope of the project, automatic labeling has been integrated with validation mechanisms to prevent incorrect labeling and increase batch traceability.</p>",
+    },
+    'groupe-atlantic-busbar-traceability': {
+      title: "Groupe Atlantic - Busbar Traceability",
+      sector: "Electronics",
+      description: "Busbar-level traceability for production flow control and component correlation.",
+      content: "<h2>Busbar Traceability</h2><p>The application tracks critical components during production stages and ensures correct product-component correlation.</p>",
+    },
+    'whirlpool-sorting-barcode-control': {
+      title: "Whirlpool - Sorting Line Barcode Control",
+      sector: "Electronics",
+      description: "Automatic barcode control on the sorting line to prevent the passage of non-conforming products.",
+      content: "<h2>Sorting Line Barcode Control</h2><p>Products are automatically scanned in the sorting flow, and data is validated in real-time with production systems to block non-conformities.</p>",
+    },
+    'philsa-palletizing-automation-automatic-labeling': {
+      title: "Philsa - Palletizing Automation and Automatic Labeling",
+      sector: "Tobacco",
+      description: "Palletizing and labeling automation to increase shipping speed and eliminate operational errors.",
+      content: "<h2>Palletizing Automation and Automatic Labeling</h2><p>The system automates palletizing and labeling steps, ensuring synchronization of data with central systems.</p>",
+    },
+    'philsa-filter-tracking': {
+      title: "Philsa - Filter Tracking",
+      sector: "Tobacco",
+      description: "Filter tracking application to ensure the use of correct components in cigarette production.",
+      content: "<h2>Filter Tracking</h2><p>The project ensures real-time tracking of filters and their correlation with production orders to prevent quality errors.</p>",
+    },
+    'mey-icki-bandrol-control-system': {
+      title: "Mey İçki - Excise Stamp Control System",
+      sector: "Food",
+      description: "Excise stamp control system for automatic verification and prevention of non-conforming packaging.",
+      content: "<h2>Excise Stamp Control System</h2><p>The system checks the presence and correctness of the excise stamp in the packaging line and stops the flow in case of deviation.</p>",
+    },
+    'philsa-embosser-rfid': {
+      title: "Philsa - Embosser RFID",
+      sector: "Tobacco",
+      description: "RFID integration for Embosser equipment, with real-time validation of configurations and production orders.",
+      content: "<h2>Embosser RFID</h2><p>The RFID application for Embosser validates production parameters and prevents running incorrect settings through automatic lockouts.</p>",
+    },
   },
   partners: {
     sick: {

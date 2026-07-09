@@ -20,8 +20,8 @@ export const Header = () => {
 
   const languageOptions = [
     { code: 'tr', flagSrc: '/Turkey.svg', label: 'TR' },
-    { code: 'ro', flagSrc: '/romania.svg', label: 'RO' },
     { code: 'en', flagSrc: '/england.svg', label: 'EN' },
+    { code: 'ro', flagSrc: '/romania.svg', label: 'RO' },
   ];
 
   const toLocalePath = (targetPath, targetLocale = locale) => {

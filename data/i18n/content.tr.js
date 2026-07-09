@@ -680,6 +680,48 @@ export const contentTr = {
       description: 'Ürün | Karton | Palet izlenebilirlik uygulaması, Duru Bulgur\'un Karaman fabrikasındaki üretim hatlarında başarıyla hayata geçirildi.',
       content: '<h2>Ürün-Karton-Palet İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
     },
+    'vestel-automatic-labeling-verification': {
+      title: 'Vestel - Otomatik Etiketleme ve Doğrulama',
+      sector: 'Elektronik',
+      description: 'Paketleme hatlarındaki etiketleme hatalarını ortadan kaldırmak için otomatik etiketleme ve doğrulama sistemi.',
+      content: '<h2>Otomatik Etiketleme ve Doğrulama</h2><p>Proje kapsamında, hatalı etiketlemeyi önlemek ve parti izlenebilirliğini artırmak için otomatik etiketleme doğrulama mekanizmalarıyla entegre edilmiştir.</p>',
+    },
+    'groupe-atlantic-busbar-traceability': {
+      title: 'Groupe Atlantic - Bara İzlenebilirliği',
+      sector: 'Elektronik',
+      description: 'Üretim akış kontrolü ve bileşen eşleştirmesi için bara düzeyinde izlenebilirlik.',
+      content: '<h2>Bara İzlenebilirliği</h2><p>Uygulama, üretim aşamalarında kritik bileşenleri takip eder ve doğru ürün-bileşen eşleşmesini sağlar.</p>',
+    },
+    'whirlpool-sorting-barcode-control': {
+      title: 'Whirlpool - Sıralama Hattında Barkod Kontrolü',
+      sector: 'Elektronik',
+      description: 'Uygun olmayan ürünlerin geçişini önlemek için sıralama hattında otomatik barkod kontrolü.',
+      content: '<h2>Sıralama Hattında Barkod Kontrolü</h2><p>Ürünler sıralama akışında otomatik olarak taranır ve uygunsuzlukları engellemek için veriler üretim sistemleriyle gerçek zamanlı olarak doğrulanır.</p>',
+    },
+    'philsa-palletizing-automation-automatic-labeling': {
+      title: 'Philsa - Paletleme Otomasyonu ve Otomatik Etiketleme',
+      sector: 'Tütün',
+      description: 'Sevkiyat hızını artırmak ve operasyonel hataları ortadan kaldırmak için paletleme ve etiketleme otomasyonu.',
+      content: '<h2>Paletleme Otomasyonu ve Otomatik Etiketleme</h2><p>Sistem, paletleme ve etiketleme adımlarını otomatikleştirerek verilerin merkezi sistemlerle senkronizasyonunu sağlar.</p>',
+    },
+    'philsa-filter-tracking': {
+      title: 'Philsa - Filtre Takip',
+      sector: 'Tütün',
+      description: 'Sigara üretiminde doğru bileşenlerin kullanılmasını sağlamak için filtre takip uygulaması.',
+      content: '<h2>Filtre Takip</h2><p>Proje, filtrelerin gerçek zamanlı olarak takip edilmesini ve kalite hatalarını önlemek için üretim emirleriyle ilişkilendirilmesini sağlar.</p>',
+    },
+    'mey-icki-bandrol-control-system': {
+      title: 'Mey İçki - Bandrol Kamera Kontrol Sistemi',
+      sector: 'Gıda',
+      description: 'Otomatik doğrulama ve uygun olmayan ambalajlamayı önlemek için bandrol kontrol sistemi.',
+      content: '<h2>Bandrol Kontrol Sistemi</h2><p>Sistem, ambalaj hattındaki bandrolün varlığını ve doğruluğunu kontrol eder ve herhangi bir sapma durumunda akışı durdurur.</p>',
+    },
+    'philsa-embosser-rfid': {
+      title: 'Philsa - Embosser RFID',
+      sector: 'Tütün',
+      description: 'Konfigürasyonların ve üretim siparişlerinin gerçek zamanlı doğrulanması ile Embosser ekipmanı için RFID entegrasyonu.',
+      content: '<h2>Embosser RFID</h2><p>Embosser için RFID uygulaması, üretim parametrelerini doğrular ve otomatik kilitlemelerle yanlış ayarların çalışmasını önler.</p>',
+    },
   },
   partners: {
     'sick': {
