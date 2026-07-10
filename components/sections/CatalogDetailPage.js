@@ -230,7 +230,7 @@ function toParagraphs(detailText) {
   return String(detailText)
     .replaceAll('\r\n', '\n')
     .split(/\n{2,}/)
-    .map((entry) => entry.replace(/\s*\n\s*/g, ' ').trim())
+    .map((entry) => entry.replaceAll('\n', ' ').split(' ').filter(Boolean).join(' ').trim())
     .filter(Boolean);
 }
 
@@ -337,7 +337,7 @@ export default function CatalogDetailPage({ item, type, locale }) {
         </article>
 
         <section className="mx-auto mt-14 w-full text-center">
-            <h3 className="text-3xl md:text-4xl font-semibold text-[#0d2a60] tracking-[-0.02em]">{labels.ctaTitle}</h3>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#0d2a60] tracking-[-0.02em]">{labels.ctaTitle}</h2>
             <p className="mt-5 text-[#4d6687] text-base md:text-lg max-w-3xl mx-auto">{labels.ctaSubtitle}</p>
             <div className="mt-8 flex justify-center">
               <Button as={Link} href="/contact" variant="solid" className="bg-secondary-blue hover:bg-accent-blue text-white px-10 py-3 rounded-full">

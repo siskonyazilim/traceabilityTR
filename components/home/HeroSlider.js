@@ -113,20 +113,24 @@ export const HeroSlider = () => {
       </div>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-1 sm:gap-2 z-10 flex-wrap justify-center">
         {localizedSlides.map((slide, index) => (
           <button
             type="button"
             key={`hero-dot-${slide.id}`}
             onClick={() => goToSlide(index)}
-            className={`h-3 rounded-full transition-all duration-200 min-h-[44px] flex items-center ${
-              current === index
-                ? 'bg-slate-blue w-8'
-                : 'bg-inactive-gray bg-opacity-70 w-3 hover:bg-accent-blue'
-            }`}
+            className="h-12 w-12 flex items-center justify-center group"
             aria-label={t('hero.goToSlide', `Go to slide ${index + 1}`, { index: index + 1 })}
             aria-current={current === index ? 'true' : undefined}
-          />
+          >
+            <div
+              className={`h-3 rounded-full transition-all duration-200 ${
+                current === index
+                  ? 'bg-slate-blue w-8'
+                  : 'bg-inactive-gray bg-opacity-70 w-3 group-hover:bg-accent-blue'
+              }`}
+            />
+          </button>
         ))}
       </div>
 

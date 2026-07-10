@@ -42,11 +42,20 @@ export async function generateMetadata() {
       type: 'website',
       url: 'https://traceability.ro/',
       locale: ogLocale,
+      images: [
+        {
+          url: 'https://traceability.ro/siskon-logo-header.svg',
+          width: 800,
+          height: 600,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ['https://traceability.ro/siskon-logo-header.svg'],
     },
   };
 }

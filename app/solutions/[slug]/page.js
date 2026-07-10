@@ -254,6 +254,13 @@ export async function generateMetadata({ params }) {
   const pageTitle = `${solution.title} | Traceability`;
   const pageUrl = `https://traceability.ro/solutions/${slug}`;
 
+  let ogLocale = 'ro_RO';
+  if (locale === 'tr') {
+    ogLocale = 'tr_TR';
+  } else if (isEn) {
+    ogLocale = 'en_US';
+  }
+
   return {
     title: pageTitle,
     description: metaDescription,
@@ -266,12 +273,21 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       type: 'website',
       url: pageUrl,
-      locale: locale === 'tr' ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
+      locale: ogLocale,
+      images: [
+        {
+          url: 'https://traceability.ro/siskon-logo-header.svg',
+          width: 800,
+          height: 600,
+          alt: pageTitle,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: pageTitle,
       description: metaDescription,
+      images: ['https://traceability.ro/siskon-logo-header.svg'],
     },
   };
 }

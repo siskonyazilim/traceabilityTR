@@ -15,7 +15,7 @@ module.exports = {
         'accent-blue': '#00b5f7',
         'secondary-blue': '#0019d2',
         'slate-blue': '#335a7b',
-        'inactive-gray': '#919191',
+        'inactive-gray': '#5b6b80',
         'footer-text': '#222222',
         'accent-green': '#0d9246',
         'accent-yellow': '#8cc63f',

@@ -70,6 +70,7 @@ export default function ProjectsPageClient() {
         <SectionHeader
           title={t('projectsPage.sectionTitle', 'Selecție Proiecte')}
           subtitle={t('projectsPage.sectionSubtitle', 'Proiecte realizate cu succes pentru clienți din diverse industrii')}
+          titleTag="h1"
         />
 
         {localizedProjects.length > 0 ? (
@@ -92,7 +93,7 @@ export default function ProjectsPageClient() {
               type="button"
               onClick={() => updatePage(currentPage - 1)}
               disabled={currentPage === 1}
-              className="px-3 py-2 rounded-lg border border-gray-light text-sm text-primary-black disabled:opacity-50 disabled:cursor-not-allowed hover:border-accent-blue"
+              className="px-4 py-3 min-h-[48px] rounded-lg border border-gray-light text-sm text-primary-black disabled:opacity-50 disabled:cursor-not-allowed hover:border-accent-blue"
             >
               {t('projectsPage.paginationPrev', 'Înapoi')}
             </button>
@@ -102,7 +103,7 @@ export default function ProjectsPageClient() {
                 key={page}
                 type="button"
                 onClick={() => updatePage(page)}
-                className={`px-3 py-2.5 rounded-lg border text-sm min-w-[44px] ${
+                className={`px-3.5 py-3 rounded-lg border text-sm min-w-[48px] min-h-[48px] ${
                   currentPage === page
                     ? 'bg-accent-blue text-white border-accent-blue'
                     : 'border-gray-light text-primary-black hover:border-accent-blue'
@@ -116,7 +117,7 @@ export default function ProjectsPageClient() {
               type="button"
               onClick={() => updatePage(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="px-3 py-2 rounded-lg border border-gray-light text-sm text-primary-black disabled:opacity-50 disabled:cursor-not-allowed hover:border-accent-blue"
+              className="px-4 py-3 min-h-[48px] rounded-lg border border-gray-light text-sm text-primary-black disabled:opacity-50 disabled:cursor-not-allowed hover:border-accent-blue"
             >
               {t('projectsPage.paginationNext', 'Înainte')}
             </button>

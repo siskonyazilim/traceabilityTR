@@ -92,7 +92,7 @@ export const StrategicPartners = () => {
             <button
               onClick={handlePrev}
               aria-label={t('sections.partnerPrev', 'Partener anterior')}
-              className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
+              className="h-12 w-12 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <IconChevronLeft size={20} />
             </button>
@@ -102,7 +102,7 @@ export const StrategicPartners = () => {
             <button
               onClick={handleNext}
               aria-label={t('sections.partnerNext', 'Partener următor')}
-              className="h-11 w-11 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
+              className="h-12 w-12 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <IconChevronRight size={20} />
             </button>
@@ -151,7 +151,7 @@ export const StrategicPartners = () => {
             ))}
           </div>
 
-          <div className="flex justify-center gap-2">
+          <div className="flex justify-center gap-1 sm:gap-2 flex-wrap">
             {Array.from({ length: maxIndex + 1 }, (_, page) => page).map((page) => (
               <button
                 key={`partners-page-${page}`}
@@ -160,10 +160,14 @@ export const StrategicPartners = () => {
                   setCurrentIndex(page);
                 }}
                 aria-label={t('sections.partnerSet', `Mergi la setul ${page + 1}`, { page: page + 1 })}
-                className={`h-2.5 rounded-full transition-all ${
-                  currentIndex === page ? 'w-7 bg-slate-blue' : 'w-2.5 bg-inactive-gray hover:bg-accent-blue'
-                }`}
-              />
+                className="h-12 w-12 flex items-center justify-center group"
+              >
+                <div
+                  className={`rounded-full transition-all duration-300 ${
+                    currentIndex === page ? 'w-7 h-2.5 bg-slate-blue' : 'w-2.5 h-2.5 bg-inactive-gray group-hover:bg-accent-blue'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>

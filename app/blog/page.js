@@ -9,16 +9,26 @@ export async function generateMetadata() {
   const isTr = locale === 'tr';
   const isEn = locale === 'en';
 
-  const title = isTr
-    ? 'Blog: Sektör Güncellemeleri, Rehberler ve İzlenebilirlik Trendleri | Traceability'
-    : isEn
-    ? 'Blog: Industry Updates, Guides and Traceability Trends | Traceability'
-    : 'Blog: Noutăți, Ghiduri și Tendințe în Trasabilitate | Traceability';
-  const description = isTr
-    ? 'Endüstriyel izlenebilirlik, MES, RFID, kalite kontrolü ve modern üretim ekipleri için pratik rehberler hakkında Traceability blog yazılarını keşfedin.'
-    : isEn
-    ? 'Explore Traceability blog articles about industrial traceability, MES, RFID, quality control and practical guides for modern manufacturing teams.'
-    : 'Descoperă articole Traceability despre trasabilitate industrială, MES, RFID, controlul calității și ghiduri practice pentru echipele de producție moderne.';
+  let title = 'Blog: Noutăți, Ghiduri și Tendințe în Trasabilitate | Traceability';
+  if (isTr) {
+    title = 'Blog: Sektör Güncellemeleri, Rehberler ve İzlenebilirlik Trendleri | Traceability';
+  } else if (isEn) {
+    title = 'Blog: Industry Updates, Guides and Traceability Trends | Traceability';
+  }
+
+  let description = 'Descoperă articole Traceability despre trasabilitate industrială, MES, RFID, controlul calității și ghiduri practice pentru echipele de producție moderne.';
+  if (isTr) {
+    description = 'Endüstriyel izlenebilirlik, MES, RFID, kalite kontrolü ve modern üretim ekipleri için pratik rehberler hakkında Traceability blog yazılarını keşfedin.';
+  } else if (isEn) {
+    description = 'Explore Traceability blog articles about industrial traceability, MES, RFID, quality control and practical guides for modern manufacturing teams.';
+  }
+
+  let ogLocale = 'ro_RO';
+  if (isTr) {
+    ogLocale = 'tr_TR';
+  } else if (isEn) {
+    ogLocale = 'en_US';
+  }
 
   return {
     title,
@@ -31,12 +41,21 @@ export async function generateMetadata() {
       description,
       type: 'website',
       url: 'https://traceability.ro/blog',
-      locale: isTr ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
+      locale: ogLocale,
+      images: [
+        {
+          url: 'https://traceability.ro/siskon-logo-header.svg',
+          width: 800,
+          height: 600,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ['https://traceability.ro/siskon-logo-header.svg'],
     },
   };
 }

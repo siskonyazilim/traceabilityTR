@@ -9,16 +9,26 @@ export async function generateMetadata() {
   const isTr = locale === 'tr';
   const isEn = locale === 'en';
 
-  const title = isTr
-    ? 'İletişim | Endüstriyel İzlenebilirlik Danışmanlığı | Traceability'
-    : isEn
-    ? 'Contact Traceability | Industrial Traceability Consulting and Implementation'
-    : 'Contact Traceability | Consultanță și Implementare Trasabilitate Industrială';
-  const description = isTr
-    ? 'Endüstriyel izlenebilirlik danışmanlığı, MES/ERP entegrasyonu, RFID ve WMS uygulamaları için Traceability ile iletişime geçin.'
-    : isEn
-    ? 'Contact Traceability for industrial traceability consulting, MES/ERP integration, RFID and WMS implementations tailored to your production processes.'
-    : 'Contactează Traceability pentru consultanță în trasabilitate industrială, integrare MES/ERP, implementare RFID și WMS adaptate proceselor tale de producție.';
+  let title = 'Contact Traceability | Consultanță și Implementare Trasabilitate Industrială';
+  if (isTr) {
+    title = 'İletişim | Endüstriyel İzlenebilirlik Danışmanlığı | Traceability';
+  } else if (isEn) {
+    title = 'Contact Traceability | Industrial Traceability Consulting and Implementation';
+  }
+
+  let description = 'Contactează Traceability pentru consultanță în trasabilitate industrială, integrare MES/ERP, implementare RFID și WMS adaptate proceselor tale de producție.';
+  if (isTr) {
+    description = 'Endüstriyel izlenebilirlik danışmanlığı, MES/ERP entegrasyonu, RFID ve WMS uygulamaları için Traceability ile iletişime geçin.';
+  } else if (isEn) {
+    description = 'Contact Traceability for industrial traceability consulting, MES/ERP integration, RFID and WMS implementations tailored to your production processes.';
+  }
+
+  let ogLocale = 'ro_RO';
+  if (isTr) {
+    ogLocale = 'tr_TR';
+  } else if (isEn) {
+    ogLocale = 'en_US';
+  }
 
   return {
     title,
@@ -31,12 +41,21 @@ export async function generateMetadata() {
       description,
       type: 'website',
       url: 'https://traceability.ro/contact',
-      locale: isTr ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
+      locale: ogLocale,
+      images: [
+        {
+          url: 'https://traceability.ro/siskon-logo-header.svg',
+          width: 800,
+          height: 600,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ['https://traceability.ro/siskon-logo-header.svg'],
     },
   };
 

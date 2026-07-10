@@ -55,6 +55,11 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
+  let ogImage = 'https://traceability.ro/siskon-logo-header.svg';
+  if (project.image) {
+    ogImage = project.image.startsWith('http') ? project.image : `https://traceability.ro${project.image}`;
+  }
+
   return {
     title,
     description,
@@ -67,11 +72,20 @@ export async function generateMetadata({ params }) {
       type: 'article',
       url: pageUrl,
       locale: ogLocale,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: [ogImage],
     },
   };
 }

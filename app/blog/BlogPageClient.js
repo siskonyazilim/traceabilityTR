@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import Container from '../../components/ui/Container';
 import BlogCard from '../../components/ui/BlogCard';
 import PagePrimaryCta from '../../components/ui/PagePrimaryCta';
+import SectionHeader from '../../components/ui/SectionHeader';
 import { blogPosts } from '../../data/blogPosts';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
@@ -39,11 +40,16 @@ export default function BlogPageClient() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pb-16">
       <div className="pt-24 md:pt-28">
 
       <Container size="xl">
-        <div className="py-10 md:py-14">
+        <SectionHeader
+          title={t('blogPage.heroTitle', 'Noutăți, ghiduri și tendințe în trasabilitate')}
+          subtitle={t('blogPage.heroSubtitle', 'Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.')}
+          titleTag="h1"
+        />
+        <div className="py-2 md:py-4">
           {paginatedPosts.length > 0 ? (
             <>
               <motion.div
@@ -77,7 +83,7 @@ export default function BlogPageClient() {
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}
-                      className={`min-w-11 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 ${
+                      className={`min-w-12 min-h-[48px] px-4 py-3 rounded-lg font-semibold transition-all duration-200 ${
                         currentPage === page
                           ? 'bg-secondary-blue text-white shadow-[0_10px_22px_rgba(0,25,210,0.24)]'
                           : 'bg-gray-light text-primary-black hover:bg-slate-200'

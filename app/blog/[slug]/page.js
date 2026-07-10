@@ -39,6 +39,11 @@ export async function generateMetadata({ params }) {
     openGraphLocale = 'en_US';
   }
 
+  let ogImage = 'https://traceability.ro/siskon-logo-header.svg';
+  if (post.image) {
+    ogImage = post.image.startsWith('http') ? post.image : `https://traceability.ro${post.image}`;
+  }
+
   return {
     title,
     description,
@@ -51,11 +56,20 @@ export async function generateMetadata({ params }) {
       type: 'article',
       url: pageUrl,
       locale: openGraphLocale,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: [ogImage],
     },
   };
 }
@@ -164,11 +178,11 @@ export default async function BlogDetailPage({ params }) {
                     OnSuite Trace
                   </span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">
+                <h2 className="text-xl md:text-2xl font-extrabold tracking-tight">
                   {locale === 'tr' && 'Uçtan Uca İzlenebilirlik Çözümümüzle Tanışın'}
                   {locale === 'en' && 'Meet Our End-to-End Traceability Solution'}
                   {locale === 'ro' && 'Descoperiți Soluția Noastră de Trasabilitate End-to-End'}
-                </h3>
+                </h2>
                 <p className="text-gray-light/85 text-sm md:text-base leading-relaxed">
                   {locale === 'tr' && 'OnSuite Trace, tüm üretim süreçlerinizi tek bir platformdan yönetmenize olanak tanır. "Sürekli Kontrol, Sıfır Hata" mottosuyla işletmeniz için uçtan uca dijital izlenebilirlik sağlıyoruz.'}
                   {locale === 'en' && 'OnSuite Trace allows you to manage all your production processes from a single platform. We provide end-to-end digital traceability for your business with the motto "Continuous Control, Zero Defects".'}

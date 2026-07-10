@@ -42,6 +42,11 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
+  let ogImage = 'https://traceability.ro/siskon-logo-header.svg';
+  if (partner.logo) {
+    ogImage = partner.logo.startsWith('http') ? partner.logo : `https://traceability.ro${partner.logo}`;
+  }
+
   return {
     title,
     description,
@@ -54,11 +59,20 @@ export async function generateMetadata({ params }) {
       type: 'article',
       url: pageUrl,
       locale: ogLocale,
+      images: [
+        {
+          url: ogImage,
+          width: 800,
+          height: 600,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: [ogImage],
     },
   };
 }
@@ -109,8 +123,11 @@ export default async function PartnerDetailPage({ params }) {
           {/* Hero */}
           <div className="grid grid-cols-1 lg:grid-cols-[1.618fr_1fr] gap-8 lg:gap-12 xl:gap-16 items-start mb-12">
             <div className="text-left lg:pr-2 xl:pr-6">
+              <p className="text-secondary-blue text-xs md:text-sm uppercase tracking-[0.12em] font-semibold mb-3">
+                {f(locale, 'partnerDetailPage', 'partnerSuffix')}
+              </p>
               <h1 className="text-3xl md:text-4xl xl:text-[2.8rem] font-semibold text-primary-black leading-tight">
-                {`${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')}`}
+                {partner.name}
               </h1>
 
               <div className="mt-6 space-y-6">

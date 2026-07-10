@@ -84,7 +84,7 @@ export const Footer = () => {
               <a href="https://www.linkedin.com/company/siskonyazilimveotomasyon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="h-11 w-11 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <img src="/social/linkedin.svg" alt="LinkedIn" className="h-[18px] w-[18px]" />
               </a>
-              <a href="http://youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" className="h-11 w-11 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+              <a href="https://youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" className="h-11 w-11 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <img src="/social/youtube.svg" alt="YouTube" className="h-[18px] w-[18px]" />
               </a>
               <a href="https://x.com/siskonsoftware" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)" className="h-11 w-11 rounded-full border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
@@ -98,7 +98,7 @@ export const Footer = () => {
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-white">{t('footer.navigation', 'Navigare')}</h4>
+            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.navigation', 'Navigare')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href={toLocalePath('/')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
@@ -166,7 +166,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-white">{t('footer.contactTitle', 'Contact')}</h4>
+            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.contactTitle', 'Contact')}</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="tel:+40368402002" className="text-gray-light hover:text-accent-blue transition-colors">

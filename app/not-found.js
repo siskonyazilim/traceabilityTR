@@ -17,7 +17,7 @@ export default function NotFound() {
       <Container className="relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-3xl shadow-soft p-8 md:p-12 text-center">
-            <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-accent-blue font-semibold mb-4">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-secondary-blue font-semibold mb-4">
               {t('notFound.codeLabel', 'Error')}
             </p>
 
@@ -43,7 +43,7 @@ export default function NotFound() {
             </div>
 
             <div className="pt-6 border-t border-slate-200">
-              <p className="text-sm text-slate-500 mb-3">{t('notFound.quickLinks', 'Poți încerca și aceste pagini:')}</p>
+              <p className="text-sm text-slate-700 mb-3">{t('notFound.quickLinks', 'Poți încerca și aceste pagini:')}</p>
               <div className="flex flex-wrap items-center justify-center gap-2.5">
                 <Link href="/blog" className="px-4 py-2 text-sm rounded-full border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
                   {t('header.news', 'Știri')}

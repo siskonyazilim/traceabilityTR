@@ -9,16 +9,27 @@ export async function generateMetadata() {
   const isTr = locale === 'tr';
   const isEn = locale === 'en';
 
-  const title = isTr
-    ? 'Referans Projeler | Endüstriyel İzlenebilirlik Başarı Hikayeleri | Traceability'
-    : isEn
-    ? 'Reference Projects | Industrial Traceability Success Stories'
-    : 'Proiecte de Referință | Implementări de Trasabilitate cu Impact';
-  const description = isTr
-    ? 'Traceability tarafından otomotiv, gıda ve endüstriyel üretim sektörlerinde ölçülebilir ROI ve kalite kazanımlarıyla gerçekleştirilen izlenebilirlik projelerini inceleyin.'
-    : isEn
-    ? 'Explore real-world traceability projects delivered by Traceability across automotive, food and industrial manufacturing with measurable ROI and quality gains.'
-    : 'Explorează proiecte reale de trasabilitate livrate de Traceability în automotive, alimentar și producție industrială, cu ROI măsurabil și îmbunătățiri de calitate.';
+  let title = 'Proiecte de Referință | Implementări de Trasabilitate cu Impact';
+  if (isTr) {
+    title = 'Referans Projeler | Endüstriyel İzlenebilirlik Başarı Hikayeleri | Traceability';
+  } else if (isEn) {
+    title = 'Reference Projects | Industrial Traceability Success Stories';
+  }
+
+  let description = 'Explorează proiecte reale de trasabilitate livrate de Traceability în automotive, alimentar și producție industrială, cu ROI măsurabil și îmbunătățiri de calitate.';
+  if (isTr) {
+    description = 'Traceability tarafından otomotiv, gıda ve endüstriyel üretim sektörlerinde ölçülebilir ROI ve kalite kazanımlarıyla gerçekleştirilen izlenebilirlik projelerini inceleyin.';
+  } else if (isEn) {
+    description = 'Explore real-world traceability projects delivered by Traceability across automotive, food and industrial manufacturing with measurable ROI and quality gains.';
+  }
+
+  let ogLocale = 'ro_RO';
+  if (isTr) {
+    ogLocale = 'tr_TR';
+  } else if (isEn) {
+    ogLocale = 'en_US';
+  }
+
   const listUrl = isEn
     ? 'https://traceability.ro/reference-projects'
     : 'https://traceability.ro/proiecte-de-referinta';
@@ -34,12 +45,21 @@ export async function generateMetadata() {
       description,
       type: 'website',
       url: listUrl,
-      locale: isTr ? 'tr_TR' : isEn ? 'en_US' : 'ro_RO',
+      locale: ogLocale,
+      images: [
+        {
+          url: 'https://traceability.ro/siskon-logo-header.svg',
+          width: 800,
+          height: 600,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ['https://traceability.ro/siskon-logo-header.svg'],
     },
   };
 }

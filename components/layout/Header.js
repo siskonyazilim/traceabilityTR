@@ -241,7 +241,7 @@ export const Header = () => {
               type="button"
               onClick={() => handleLocaleChange(nextLanguage)}
               aria-label={t('language.switchAria', 'Schimbă limba')}
-              className={`lg:hidden h-10 px-2.5 rounded-xl flex items-center gap-2 text-xs font-bold transition-all duration-300 ${
+              className={`lg:hidden h-12 px-3.5 rounded-xl flex items-center gap-2 text-xs font-bold transition-all duration-300 ${
                 useTransparentHeader
                   ? 'text-white bg-white/5 ring-1 ring-white/25 hover:bg-white/15 hover:ring-white/40'
                   : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
@@ -258,7 +258,7 @@ export const Header = () => {
               aria-label={isOpen ? t('header.closeMenu', 'Închide meniul') : t('header.openMenu', 'Deschide meniul')}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
-              className={`lg:hidden p-2.5 rounded-lg transition-colors ${
+              className={`lg:hidden p-3 rounded-lg transition-colors ${
                 useTransparentHeader ? 'text-white' : 'text-primary-black'
               }`}
             >
@@ -276,14 +276,14 @@ export const Header = () => {
                   <button
                     type="button"
                     onClick={() => handleNavClick(item.href)}
-                    className="w-full text-left px-4 py-3 text-base text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
+                    className="w-full text-left px-4 py-4 text-base text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
                   >
                     {item.label}
                   </button>
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-3 text-base text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
+                    className="block px-4 py-4 text-base text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-lg transition-colors"
                   >
                     {item.label}
                   </Link>

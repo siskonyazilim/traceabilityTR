@@ -22,16 +22,27 @@ export async function generateMetadata() {
 
   const isEn = locale === 'en';
   const isTr = locale === 'tr';
-  const title = isEn
-    ? 'Industrial Traceability & MES Solutions for Smart Factories | Traceability'
-    : isTr
-    ? 'Akıllı Fabrikalar için Endüstriyel İzlenebilirlik & MES Çözümleri | Traceability'
-    : 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability';
-  const description = isEn
-    ? 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.'
-    : isTr
-    ? 'Traceability; RFID, RTLS, WMS, Poka Yoke ve uçtan uca MES/ERP entegrasyonu ile akıllı fabrikalar için endüstriyel izlenebilirlik, MES ve üretim otomasyon çözümleri sunar.'
-    : 'Traceability.ro livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
+
+  let title = 'Soluții de Trasabilitate Industrială & MES pentru Fabrici Inteligente | Traceability';
+  if (isEn) {
+    title = 'Industrial Traceability & MES Solutions for Smart Factories | Traceability';
+  } else if (isTr) {
+    title = 'Akıllı Fabrikalar için Endüstriyel İzlenebilirlik & MES Çözümleri | Traceability';
+  }
+
+  let description = 'Traceability.ro livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
+  if (isEn) {
+    description = 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.';
+  } else if (isTr) {
+    description = 'Traceability; RFID, RTLS, WMS, Poka Yoke ve uçtan uca MES/ERP entegrasyonu ile akıllı fabrikalar için endüstriyel izlenebilirlik, MES ve üretim otomasyon çözümleri sunar.';
+  }
+
+  let ogLocale = 'ro_RO';
+  if (isEn) {
+    ogLocale = 'en_US';
+  } else if (isTr) {
+    ogLocale = 'tr_TR';
+  }
 
   return {
     title,
@@ -48,12 +59,21 @@ export async function generateMetadata() {
       description,
       type: 'website',
       url: 'https://traceability.ro',
-      locale: isEn ? 'en_US' : isTr ? 'tr_TR' : 'ro_RO',
+      locale: ogLocale,
+      images: [
+        {
+          url: 'https://traceability.ro/siskon-logo-header.svg',
+          width: 800,
+          height: 600,
+          alt: 'Traceability Logo',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ['https://traceability.ro/siskon-logo-header.svg'],
     },
     alternates: {
       canonical: 'https://traceability.ro',
