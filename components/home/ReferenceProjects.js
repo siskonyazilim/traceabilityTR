@@ -176,29 +176,6 @@ export const ReferenceProjects = () => {
               </article>
             ))}
           </div>
-
-          {/* Enhanced Pagination Dots */}
-          <div className="flex items-center justify-center mt-10 gap-1 sm:gap-2 flex-wrap">
-            {Array.from({ length: maxIndex + 1 }, (_, page) => page).map((page) => (
-              <button
-                key={`projects-page-${page}`}
-                onClick={() => {
-                  pauseAutoPlay();
-                  setCurrentIndex(page);
-                }}
-                className="h-12 w-12 flex items-center justify-center group"
-                aria-label={t('sections.referenceProjectsGoTo', `Mergi la pagina ${page + 1}`, { page: page + 1 })}
-              >
-                <div
-                  className={`rounded-full transition-all duration-300 ${
-                    currentIndex === page
-                      ? 'w-10 h-3 bg-secondary-blue shadow-md'
-                      : 'w-3 h-3 bg-slate-300 group-hover:bg-accent-blue'
-                  }`}
-                />
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* View All Button */}

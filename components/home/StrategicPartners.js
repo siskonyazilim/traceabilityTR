@@ -150,26 +150,6 @@ export const StrategicPartners = () => {
               </Link>
             ))}
           </div>
-
-          <div className="flex justify-center gap-1 sm:gap-2 flex-wrap">
-            {Array.from({ length: maxIndex + 1 }, (_, page) => page).map((page) => (
-              <button
-                key={`partners-page-${page}`}
-                onClick={() => {
-                  pauseAutoPlay();
-                  setCurrentIndex(page);
-                }}
-                aria-label={t('sections.partnerSet', `Mergi la setul ${page + 1}`, { page: page + 1 })}
-                className="h-12 w-12 flex items-center justify-center group"
-              >
-                <div
-                  className={`rounded-full transition-all duration-300 ${
-                    currentIndex === page ? 'w-7 h-2.5 bg-slate-blue' : 'w-2.5 h-2.5 bg-inactive-gray group-hover:bg-accent-blue'
-                  }`}
-                />
-              </button>
-            ))}
-          </div>
         </div>
       </Container>
     </section>
