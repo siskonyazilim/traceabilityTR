@@ -99,7 +99,7 @@ export const Footer = () => {
           {/* Links */}
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">{t('footer.navigation', 'Navigare')}</h3>
-            <ul className="space-y-2">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6">
               <li>
                 <Link href={toLocalePath('/')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.home', 'Pagina Principală')}
