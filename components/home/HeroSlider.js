@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -36,9 +36,30 @@ const slides = [
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
+  const [forceDesktopVideo, setForceDesktopVideo] = useState(false);
+  const videoRef = useRef(null);
   const { locale, t } = useLanguage();
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
   const activeSlide = localizedSlides[current];
+  const useMobileSource = Boolean(activeSlide?.mobileVideo) && !forceDesktopVideo && activeSlide?.id !== 1;
+
+  const ensureVideoPlayback = useCallback(() => {
+    const videoEl = videoRef.current;
+    if (!videoEl) return;
+
+    // Keep muted/inline flags explicit for stricter mobile browsers.
+    videoEl.muted = true;
+    videoEl.defaultMuted = true;
+    videoEl.playsInline = true;
+    videoEl.setAttribute('webkit-playsinline', 'true');
+
+    const playPromise = videoEl.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {
+        // Browser may still block autoplay until visibility/interaction changes.
+      });
+    }
+  }, []);
 
   useEffect(() => {
     // Mobile payload is lower by default because autoplay stays disabled.
@@ -55,6 +76,53 @@ export const HeroSlider = () => {
     return () => clearInterval(timer);
   }, [isAutoPlay, localizedSlides.length]);
 
+  useEffect(() => {
+    setForceDesktopVideo(false);
+  }, [current]);
+
+  useEffect(() => {
+    ensureVideoPlayback();
+
+    // Retry once after render/layout settles on mobile devices.
+    const retryTimer = globalThis.setTimeout(() => {
+      ensureVideoPlayback();
+    }, 220);
+
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        ensureVideoPlayback();
+      }
+    };
+
+    const onUserActivation = () => {
+      ensureVideoPlayback();
+    };
+
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    globalThis.addEventListener('pageshow', onUserActivation);
+    globalThis.addEventListener('focus', onUserActivation);
+    globalThis.addEventListener('touchstart', onUserActivation, { passive: true });
+
+    return () => {
+      globalThis.clearTimeout(retryTimer);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      globalThis.removeEventListener('pageshow', onUserActivation);
+      globalThis.removeEventListener('focus', onUserActivation);
+      globalThis.removeEventListener('touchstart', onUserActivation);
+    };
+  }, [current, ensureVideoPlayback, forceDesktopVideo]);
+
+  const recoverFromMobileStall = useCallback(() => {
+    const isMobileViewport = globalThis.innerWidth <= 1023;
+    if (!isMobileViewport || forceDesktopVideo || !activeSlide?.video) {
+      ensureVideoPlayback();
+      return;
+    }
+
+    // If mobile rendition stalls, fall back to desktop source.
+    setForceDesktopVideo(true);
+  }, [activeSlide?.video, ensureVideoPlayback, forceDesktopVideo]);
+
   const goToSlide = (index) => {
     setCurrent(index);
     setIsAutoPlay(false);
@@ -65,14 +133,20 @@ export const HeroSlider = () => {
       {/* Active slide only for reduced network and CPU */}
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
+          onLoadedData={ensureVideoPlayback}
+          onCanPlay={ensureVideoPlayback}
+          onStalled={recoverFromMobileStall}
+          onWaiting={recoverFromMobileStall}
+          onError={recoverFromMobileStall}
           className="absolute inset-0 w-full h-full object-cover"
         >
-          {activeSlide.mobileVideo ? (
+          {useMobileSource ? (
             <source src={activeSlide.mobileVideo} media="(max-width: 1023px)" type="video/webm" />
           ) : null}
           <source src={activeSlide.video} type="video/webm" />

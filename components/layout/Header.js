@@ -137,9 +137,6 @@ export const Header = () => {
   ];
 
   const currentLangIndex = languageOptions.findIndex((option) => option.code === locale);
-  const nextLangIndex = (currentLangIndex + 1) % languageOptions.length;
-  const nextLanguage = languageOptions[nextLangIndex].code;
-  const mobileNextLanguage = languageOptions[nextLangIndex];
   const currentLanguage = languageOptions[currentLangIndex] || languageOptions[0];
 
   let headerBackgroundClass = 'bg-white border-b border-slate-blue/10 shadow-[0_10px_32px_rgba(10,10,43,0.08)]';
@@ -237,19 +234,34 @@ export const Header = () => {
               )}
             </div>
 
-            <button
-              type="button"
-              onClick={() => handleLocaleChange(nextLanguage)}
-              aria-label={t('language.switchAria', 'Schimbă limba')}
-              className={`lg:hidden h-12 px-3.5 rounded-xl flex items-center gap-2 text-xs font-bold transition-all duration-300 ${
-                useTransparentHeader
-                  ? 'text-white bg-white/5 ring-1 ring-white/25 hover:bg-white/15 hover:ring-white/40'
-                  : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
-              }`}
-            >
-              <img src={mobileNextLanguage.flagSrc} alt={mobileNextLanguage.label} width="20" height="16" className="h-4 w-5 rounded-[2px] object-cover" />
-              <span>{mobileNextLanguage.label}</span>
-            </button>
+            <div className="lg:hidden relative w-[92px]">
+              <label htmlFor="mobile-language-select" className="sr-only">
+                {t('language.switchAria', 'Schimbă limba')}
+              </label>
+              <select
+                id="mobile-language-select"
+                value={locale}
+                onChange={(event) => handleLocaleChange(event.target.value)}
+                className={`h-12 w-full rounded-xl pl-3 pr-8 text-xs font-bold appearance-none transition-all duration-300 cursor-pointer ${
+                  useTransparentHeader
+                    ? 'text-white bg-white/5 ring-1 ring-white/25 hover:bg-white/15 hover:ring-white/40'
+                    : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
+                }`}
+                aria-label={t('language.switchAria', 'Schimbă limba')}
+              >
+                {languageOptions.map((option) => (
+                  <option key={option.code} value={option.code} className="text-primary-black bg-white">
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <IconChevronDown
+                size={14}
+                className={`pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 ${
+                  useTransparentHeader ? 'text-white' : 'text-primary-black'
+                }`}
+              />
+            </div>
 
             {/* Mobile Menu Button */}
             <button
