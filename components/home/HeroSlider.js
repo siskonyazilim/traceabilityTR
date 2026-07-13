@@ -33,6 +33,25 @@ const slides = [
   },
 ];
 
+function splitIntoTwoBalancedLines(text) {
+  const normalized = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!normalized) return ['', ''];
+
+  const sentenceSplit = normalized.split(/(?<=[.!?])\s+/);
+  if (sentenceSplit.length >= 2) {
+    return [sentenceSplit[0].trim(), sentenceSplit.slice(1).join(' ').trim()];
+  }
+
+  const words = normalized.split(' ');
+  if (words.length < 4) return [normalized, ''];
+
+  const middle = Math.floor(words.length / 2);
+  const lineOne = words.slice(0, middle).join(' ').trim();
+  const lineTwo = words.slice(middle).join(' ').trim();
+
+  return [lineOne, lineTwo];
+}
+
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
@@ -42,6 +61,7 @@ export const HeroSlider = () => {
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
   const activeSlide = localizedSlides[current];
   const useMobileSource = Boolean(activeSlide?.mobileVideo) && !forceDesktopVideo && activeSlide?.id !== 1;
+  const firstSlideSubtitleLines = useMemo(() => splitIntoTwoBalancedLines(localizedSlides[0]?.subtitle), [localizedSlides]);
 
   const ensureVideoPlayback = useCallback(() => {
     const videoEl = videoRef.current;
@@ -166,8 +186,15 @@ export const HeroSlider = () => {
             </h1>
 
             <div className="text-white mt-6 sm:mt-7">
-              <p suppressHydrationWarning className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl mx-auto">
-                {activeSlide.subtitle}
+              <p suppressHydrationWarning className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl lg:max-w-5xl mx-auto">
+                {activeSlide.id === 1 ? (
+                  <>
+                    <span className="block lg:whitespace-nowrap">{firstSlideSubtitleLines[0]}</span>
+                    {firstSlideSubtitleLines[1] ? <span className="block lg:whitespace-nowrap">{firstSlideSubtitleLines[1]}</span> : null}
+                  </>
+                ) : (
+                  activeSlide.subtitle
+                )}
               </p>
             </div>
 
