@@ -168,86 +168,13 @@ export default function ContactPageClient() {
         >
           <div className="mb-10 md:mb-12 rounded-3xl border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
             <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">{t('contactPage.eyebrow', 'Contact')}</p>
-            <h1 className="text-2xl md:text-4xl font-semibold tracking-tight leading-[1.08] mb-4">{t('contactPage.heroTitle', 'Să discutăm despre procesul tău de trasabilitate')}</h1>
-            <p className="text-base md:text-lg text-white/90 max-w-3xl">{t('contactPage.heroSubtitle', 'Alege biroul potrivit sau trimite-ne un mesaj. Revenim rapid cu o propunere adaptată fluxurilor tale operaționale.')}</p>
-          </div>
-
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary-black mb-10 md:mb-12 text-center">
-            {t('contactPage.officesTitle', 'Birourile Noastre')}
-          </h2>
-
-          <div className="grid grid-cols-1 gap-8 md:gap-10 mb-12 md:mb-16">
-            {offices.map((office, index) => (
-              <motion.div
-                key={office.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.06, duration: 0.25 }}
-                viewport={{ once: true }}
-                className="grid grid-cols-1 md:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-2xl overflow-hidden"
-              >
-                <div className="min-h-[320px] lg:min-h-[380px] bg-white p-6 md:p-8 lg:p-10 flex flex-col justify-center">
-                    <h3 className="text-xl md:text-2xl font-semibold text-primary-black mb-5 md:mb-6">
-                      {office.name}
-                    </h3>
-
-                    <div className="w-full border-t border-primary-black border-opacity-20 mb-6 md:mb-8" />
-
-                    <div className="space-y-4 md:space-y-5 text-primary-black">
-                      <div className="flex gap-3">
-                        <img
-                          src="/icon/icon-map-pin.svg"
-                          alt={t('contactPage.locationAlt', 'Locație')}
-                          className="w-5 h-5 flex-shrink-0 mt-1"
-                        />
-                        <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
-                          {office.address}
-                        </p>
-                      </div>
-
-                      {office.phone && (
-                        <div className="flex gap-3 items-center">
-                          <IconPhone className="text-accent-blue flex-shrink-0" size={20} />
-                          <a
-                            href={`tel:${office.phone}`}
-                            className="text-base hover:text-accent-blue transition-colors"
-                          >
-                            {office.phone}
-                          </a>
-                        </div>
-                      )}
-
-                      <div className="flex gap-3 items-center">
-                        <IconMail className="text-accent-blue flex-shrink-0" size={20} />
-                        <a
-                          href={`mailto:${office.email}`}
-                          className="text-base hover:text-accent-blue transition-colors"
-                        >
-                          {office.email}
-                        </a>
-                      </div>
-                    </div>
-                </div>
-
-                <div className="h-[320px] lg:h-[380px] bg-gray-light">
-                  <iframe
-                    title={`${office.name} ${t('contactPage.mapTitleSuffix', 'hartă')}`}
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    allowFullScreen=""
-                    src={office.mapEmbedUrl || `https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
-                  />
-                </div>
-              </motion.div>
-            ))}
+            <h1 className="text-2xl md:text-4xl font-semibold tracking-tight leading-[1.08]">{t('contactPage.heroTitle', 'Să discutăm despre procesul tău de trasabilitate')}</h1>
           </div>
         </motion.div>
       </Container>
 
       <Container size="xl">
-        <div className="pb-16 md:pb-24">
+        <div className="pb-10 md:pb-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -445,6 +372,82 @@ export default function ContactPageClient() {
             )}
             </form>
           </motion.div>
+        </div>
+      </Container>
+
+      <Container size="xl">
+        <div className="pb-16 md:pb-24">
+          <h2 className="text-2xl md:text-3xl font-semibold text-primary-black mb-10 md:mb-12 text-center">
+            {t('contactPage.officesTitle', 'Birourile Noastre')}
+          </h2>
+
+          <div className="grid grid-cols-1 gap-8 md:gap-10">
+            {offices.map((office, index) => (
+              <motion.div
+                key={office.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.06, duration: 0.25 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-2xl overflow-hidden"
+              >
+                <div className="min-h-[320px] lg:min-h-[380px] bg-white p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+                  <h3 className="text-xl md:text-2xl font-semibold text-primary-black mb-5 md:mb-6">
+                    {office.name}
+                  </h3>
+
+                  <div className="w-full border-t border-primary-black border-opacity-20 mb-6 md:mb-8" />
+
+                  <div className="space-y-4 md:space-y-5 text-primary-black">
+                    <div className="flex gap-3">
+                      <img
+                        src="/icon/icon-map-pin.svg"
+                        alt={t('contactPage.locationAlt', 'Locație')}
+                        className="w-5 h-5 flex-shrink-0 mt-1"
+                      />
+                      <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
+                        {office.address}
+                      </p>
+                    </div>
+
+                    {office.phone && (
+                      <div className="flex gap-3 items-center">
+                        <IconPhone className="text-accent-blue flex-shrink-0" size={20} />
+                        <a
+                          href={`tel:${office.phone}`}
+                          className="text-base hover:text-accent-blue transition-colors"
+                        >
+                          {office.phone}
+                        </a>
+                      </div>
+                    )}
+
+                    <div className="flex gap-3 items-center">
+                      <IconMail className="text-accent-blue flex-shrink-0" size={20} />
+                      <a
+                        href={`mailto:${office.email}`}
+                        className="text-base hover:text-accent-blue transition-colors"
+                      >
+                        {office.email}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="h-[320px] lg:h-[380px] bg-gray-light">
+                  <iframe
+                    title={`${office.name} ${t('contactPage.mapTitleSuffix', 'hartă')}`}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen=""
+                    src={office.mapEmbedUrl || `https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </Container>
       </div>
