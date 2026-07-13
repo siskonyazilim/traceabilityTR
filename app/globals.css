@@ -323,6 +323,9 @@ section {
 .blog-rich p {
   max-width: none;
   margin-bottom: 1.2rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .blog-rich h2 {
@@ -333,6 +336,7 @@ section {
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.01em;
+  text-align: left;
 }
 
 .blog-rich h3 {
@@ -342,6 +346,7 @@ section {
   font-size: clamp(1.2rem, 1.1rem + 0.25vw, 1.4rem);
   font-weight: 700;
   line-height: 1.35;
+  text-align: left;
 }
 
 .blog-rich ul,
@@ -352,6 +357,9 @@ section {
 
 .blog-rich li {
   margin-bottom: 0.55rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .blog-rich strong {
