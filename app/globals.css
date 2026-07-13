@@ -237,6 +237,22 @@ section {
   height: 0.85rem;
 }
 
+.card-description-copy {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.card-description-block {
+  min-height: 6.75rem;
+}
+
+@media (min-width: 768px) {
+  .card-description-block {
+    min-height: 7.5rem;
+  }
+}
+
 .legal-doc {
   color: #335a7b;
   font-size: 1rem;

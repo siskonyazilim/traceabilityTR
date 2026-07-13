@@ -7,7 +7,7 @@ import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { solutions, products } from '../../data/solutions';
-import { localizeProducts, localizeSolutions } from '../../lib/i18n/contentLocalization';
+import { getFirstSentenceText, localizeProducts, localizeSolutions } from '../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 const iconMap = {
@@ -28,15 +28,9 @@ const solutionFontAwesomeMap = {
   'link': 'fa fa-cogs fa-5x fa-fw',
 };
 
-function getCardPreviewText(item, maxLength = 210) {
+function getCardPreviewText(item) {
   const source = item?.detail || item?.summary || item?.description || '';
-  const normalized = String(source).replace(/\s+/g, ' ').trim();
-
-  if (normalized.length <= maxLength) {
-    return normalized;
-  }
-
-  return `${normalized.slice(0, maxLength).trim()}...`;
+  return getFirstSentenceText(source);
 }
 
 export const SolutionsTabs = () => {
@@ -138,8 +132,8 @@ export const SolutionsTabs = () => {
                   <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.5rem] flex items-center">
                     {solution.title}
                   </h3>
-                  <p className="text-gray-text text-sm leading-7 flex-1 max-w-[42ch]">
-                    {getCardPreviewText(solution, 220)}
+                  <p className="card-description-copy card-description-block text-gray-text text-sm leading-7 flex-1 max-w-[42ch]">
+                    {getCardPreviewText(solution)}
                   </p>
                   <span className="card-cta-mini mt-4">
                     {detailChipLabel}
@@ -182,8 +176,8 @@ export const SolutionsTabs = () => {
                     <h3 className="text-lg font-bold text-primary-black mb-2 group-hover:text-accent-blue transition-colors min-h-[3rem] flex items-center justify-center">
                       {product.title}
                     </h3>
-                    <p className="text-gray-text text-sm leading-7 max-w-[42ch] mx-auto h-[7rem] line-clamp-4 overflow-hidden">
-                      {getCardPreviewText(product, 180)}
+                    <p className="card-description-copy card-description-block text-gray-text text-sm leading-7 max-w-[42ch] mx-auto flex-1">
+                      {getCardPreviewText(product)}
                     </p>
                     <span className="card-cta-mini mt-4 mx-auto">
                       {detailChipProductsLabel}

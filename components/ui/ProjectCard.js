@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
+import { getFirstSentenceText } from '../../lib/i18n/contentLocalization';
 
 export const ProjectCard = ({ project, currentPage = 1 }) => {
   const { locale, t } = useLanguage();
@@ -126,8 +127,8 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
             {project.title}
           </h3>
 
-          <p className="text-gray-text text-sm md:text-base leading-relaxed mb-5 flex-1 max-w-none mx-auto">
-            {project.description}
+          <p className="card-description-copy card-description-block text-gray-text text-sm md:text-base leading-relaxed mb-5 flex-1 max-w-none mx-auto">
+            {getFirstSentenceText(project.description)}
           </p>
 
           <div className="mt-auto flex flex-col items-center gap-3">

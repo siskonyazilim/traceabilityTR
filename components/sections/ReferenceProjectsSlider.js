@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
+import { getFirstSentenceText } from '../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 export default function ReferenceProjectsSlider({
@@ -158,8 +159,8 @@ export default function ReferenceProjectsSlider({
                   <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem]">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-gray-text leading-7 line-clamp-2 flex-1 max-w-[44ch] mx-auto">
-                    {project.description}
+                  <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 flex-1 max-w-[44ch] mx-auto">
+                    {getFirstSentenceText(project.description)}
                   </p>
                   <span className="card-cta-mini mt-auto">
                     <span>{detailsLabel}</span>

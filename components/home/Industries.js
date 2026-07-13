@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import { useLanguage } from '../i18n/LanguageProvider';
-import { getTechnologyCapabilities } from '../../lib/i18n/contentLocalization';
+import { getFirstSentenceText, getTechnologyCapabilities } from '../../lib/i18n/contentLocalization';
 
 const industries = [
   {
@@ -75,8 +75,8 @@ export default function Industries() {
                   {industry.name}
                 </h3>
 
-                <p className="text-gray-text text-sm leading-relaxed text-center flex-grow">
-                  {industry.description}
+                <p className="card-description-copy card-description-block text-gray-text text-sm leading-relaxed flex-grow">
+                  {getFirstSentenceText(industry.description)}
                 </p>
               </div>
             </div>

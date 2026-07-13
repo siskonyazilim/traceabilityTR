@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
+import { getFirstSentenceText } from '../../lib/i18n/contentLocalization';
 
 export const BlogCard = ({
   post,
@@ -69,8 +70,8 @@ export const BlogCard = ({
             {post.title}
           </h3>
 
-          <p className="text-slate-600 text-sm leading-7 mb-4 max-w-[46ch] min-h-[96px]">
-            {post.excerpt}
+          <p className="card-description-copy card-description-block text-slate-600 text-sm leading-7 mb-4 max-w-[46ch]">
+            {getFirstSentenceText(post.excerpt)}
           </p>
 
           <span className="card-cta-mini mt-auto mx-auto">

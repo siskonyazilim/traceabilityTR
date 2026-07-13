@@ -5,7 +5,7 @@ import Container from '../ui/Container';
 import SectionHeader from '../ui/SectionHeader';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { IconBarcode, IconHistory, IconTarget } from '../ui/Icons';
-import { getTechnologyCapabilities } from '../../lib/i18n/contentLocalization';
+import { getFirstSentenceText, getTechnologyCapabilities } from '../../lib/i18n/contentLocalization';
 
 const capabilities = [
   {
@@ -59,8 +59,8 @@ export default function TechnologyCapabilities() {
               <h3 className="text-[1.45rem] font-bold text-primary-black text-center mb-3 leading-tight">
                 {capability.title}
               </h3>
-              <p className="text-gray-text text-base leading-8 text-center max-w-[46ch] mx-auto">
-                {capability.description}
+              <p className="card-description-copy card-description-block text-gray-text text-base leading-8 max-w-[46ch] mx-auto">
+                {getFirstSentenceText(capability.description)}
               </p>
             </div>
               );

@@ -7,7 +7,7 @@ import SectionHeader from '../ui/SectionHeader';
 import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { strategicPartners } from '../../data/partners';
-import { localizePartners } from '../../lib/i18n/contentLocalization';
+import { getFirstSentenceText, localizePartners } from '../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 export const StrategicPartners = () => {
@@ -136,8 +136,8 @@ export const StrategicPartners = () => {
                     <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] flex items-center justify-center">
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-gray-text leading-7 line-clamp-3 min-h-[5.2rem] max-w-none">
-                      {partner.description}
+                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 max-w-none">
+                      {getFirstSentenceText(partner.description)}
                     </p>
                     <span className="card-cta-mini mt-auto mx-auto">
                       {t('sections.details', 'Detalii')}

@@ -8,7 +8,7 @@ import Button from '../ui/Button';
 import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { referenceProjects } from '../../data/references';
-import { localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
+import { getFirstSentenceText, localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
 import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/referenceProjectOrdering';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 
@@ -162,8 +162,8 @@ export const ReferenceProjects = () => {
                     <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem]">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-gray-text leading-7 line-clamp-2 flex-1 max-w-[44ch] mx-auto">
-                      {project.description}
+                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 flex-1 max-w-[44ch] mx-auto">
+                      {getFirstSentenceText(project.description)}
                     </p>
                     <span className="card-cta-mini mt-auto">
                       <span>{t('sections.details', 'Detalii')}</span>
