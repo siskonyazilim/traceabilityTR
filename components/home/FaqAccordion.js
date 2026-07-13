@@ -64,9 +64,6 @@ export const FaqAccordion = () => {
       <Container size="xl" className="relative z-10">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-secondary-blue text-xs md:text-sm uppercase tracking-[0.18em] font-semibold mb-4">
-            {faqBundle.eyebrow}
-          </p>
           <h2 className="text-primary-black text-[clamp(1.375rem,1.1rem+0.9vw,2rem)] font-semibold leading-[1.15] tracking-tight mb-6">
             {faqBundle.title}
           </h2>

@@ -115,7 +115,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
           </div>
         </div>
 
-        <div className="p-6 md:p-7 flex-1 flex flex-col">
+        <div className="p-6 md:p-7 flex-1 flex flex-col items-center text-center">
           <div className="mb-3">
             <span className="text-xs font-semibold text-white px-3 py-1 rounded-full bg-slate-blue">
               {project.sector}
@@ -126,11 +126,11 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
             {project.title}
           </h3>
 
-          <p className="text-gray-text text-sm md:text-base leading-relaxed mb-5 flex-1 max-w-none">
+          <p className="text-gray-text text-sm md:text-base leading-relaxed mb-5 flex-1 max-w-none mx-auto">
             {project.description}
           </p>
 
-          <div className="mt-auto flex items-end justify-between gap-3">
+          <div className="mt-auto flex flex-col items-center gap-3">
             <span className="card-cta-mini">
               {projectDetailsLabel}
               <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
-import { IconArrowLeft } from '../ui/Icons';
+import { IconArrowLeft, IconArrowRight } from '../ui/Icons';
 /* eslint-disable react/prop-types */
 
 function getLocalizedLabels(locale, type) {
@@ -196,27 +196,41 @@ function NavSection({ item, detailBaseHref, prevLabel, nextLabel }) {
   }
 
   return (
-    <section className="mt-8 border-t border-slate-200 pt-6">
-      <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center">
+    <section className="clear-both mt-16 border-t border-slate-200 pt-10">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {item.prevSlug ? (
           <Link
             href={`${detailBaseHref}/${item.prevSlug}`}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-xs md:text-sm font-semibold text-[#364c73] hover:border-accent-blue hover:text-accent-blue transition-colors"
+            className="group flex flex-col items-start gap-2 rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
           >
-            <span aria-hidden="true">←</span>
-            <span>{item.prevTitle ? `${prevLabel}: ${item.prevTitle}` : prevLabel}</span>
+            <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
+              <IconArrowLeft size={16} />
+              <span>{prevLabel}</span>
+            </span>
+            <span className="text-base font-bold text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
+              {item.prevTitle || prevLabel}
+            </span>
           </Link>
-        ) : <span />}
+        ) : (
+          <div className="hidden sm:block" />
+        )}
 
         {item.nextSlug ? (
           <Link
             href={`${detailBaseHref}/${item.nextSlug}`}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-xs md:text-sm font-semibold text-[#364c73] hover:border-accent-blue hover:text-accent-blue transition-colors"
+            className="group flex flex-col items-end gap-2 rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
           >
-            <span>{item.nextTitle ? `${nextLabel}: ${item.nextTitle}` : nextLabel}</span>
-            <span aria-hidden="true">→</span>
+            <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
+              <span>{nextLabel}</span>
+              <IconArrowRight size={16} />
+            </span>
+            <span className="text-base font-bold text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
+              {item.nextTitle || nextLabel}
+            </span>
           </Link>
-        ) : <span />}
+        ) : (
+          <div className="hidden sm:block" />
+        )}
       </div>
     </section>
   );

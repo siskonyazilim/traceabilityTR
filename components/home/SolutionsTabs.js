@@ -163,7 +163,7 @@ export const SolutionsTabs = () => {
                 className="rounded-2xl border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 bg-white group h-full relative overflow-hidden p-5 md:p-6"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10 h-full flex flex-col">
+                <div className="relative z-10 h-full flex flex-col items-center text-center">
                   <div className="h-28 w-full flex items-center justify-center overflow-hidden mb-4">
                     <img
                       src={product.image}
@@ -178,14 +178,14 @@ export const SolutionsTabs = () => {
                       🎯
                     </div>
                   </div>
-                  <div className="flex-1 h-full flex flex-col min-w-0">
-                    <h3 className="text-lg font-bold text-primary-black mb-2 group-hover:text-accent-blue transition-colors min-h-[3rem]">
+                  <div className="flex-1 h-full flex flex-col min-w-0 items-center text-center">
+                    <h3 className="text-lg font-bold text-primary-black mb-2 group-hover:text-accent-blue transition-colors min-h-[3rem] flex items-center justify-center">
                       {product.title}
                     </h3>
-                    <p className="text-gray-text text-sm leading-7 flex-1 max-w-[42ch]">
+                    <p className="text-gray-text text-sm leading-7 max-w-[42ch] mx-auto h-[7rem] line-clamp-4 overflow-hidden">
                       {getCardPreviewText(product, 180)}
                     </p>
-                    <span className="card-cta-mini mt-4">
+                    <span className="card-cta-mini mt-4 mx-auto">
                       {detailChipProductsLabel}
                       <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

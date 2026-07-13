@@ -3,21 +3,21 @@
     {
       id: 1,
       title: 'End-to-End Traceability Solutions for Smart Factories',
-      subtitle: 'Our implementation approach balances risk management with opportunity discovery, building resilient operations that perform across changing market cycles.',
+      subtitle: 'Digitally monitor all production processes from raw material intake to shipment. Access product, process, and quality data instantly and historically through a single platform.',
     },
     {
       id: 2,
       title: 'Real-Time Control, Zero Defects',
-      subtitle: 'Our adaptive methodology turns production challenges into measurable gains through data-driven quality and operational visibility.',
+      subtitle: 'Detect errors the moment they occur with barcode, RFID, and camera-based verification. Prevent wrong product, wrong assembly, and wrong shipment risks during production.',
     },
     {
       id: 3,
       title: 'POKA YOKE',
-      subtitle: 'We work closely with teams to understand operational objectives and design tailored solutions while maintaining a strict execution quality bar.',
+      subtitle: 'Prevent operator-driven errors before they occur with intelligent validation mechanisms. Ensure the right part is used at the right station in the right sequence.',
     },
   ],
   faq: {
-    eyebrow: 'FAQ',
+    
     title: 'Our Perspective on Traceability',
     items: [
       {
@@ -201,7 +201,7 @@
     3: {
       title: 'Organic Track and Trace',
       description: 'Food traceability solution that identifies source inputs and process states across production and distribution while supporting compliance requirements.',
-      detail: 'While Organic T&T ensures product traceability, it also provides:',
+      detail: 'Organic Track and Trace provides end-to-end visibility from raw material intake to finished-goods dispatch, linking lot, process, and quality data in one flow. In addition to ensuring product traceability, it helps teams accelerate audits, reduce recall scope, and improve day-to-day operational control.',
       detailSections: [
         {
           heading: 'OPERATIONAL EFFICIENCY',

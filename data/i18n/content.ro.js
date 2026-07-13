@@ -4,23 +4,23 @@ export const contentRo = {
       id: 1,
       title: 'Soluții de Trasabilitate End-to-End pentru Fabrici Inteligente',
       subtitle:
-        'Procesul metodic de investiții echilibrează gestionarea riscurilor cu identificarea oportunităților, creând portofolii rezistente, concepute pentru a performa în ciclurile pieței.',
+        'Monitorizați digital toate procesele de producție, de la intrarea materiei prime până la expediere. Accesați instant și istoric datele de produs, proces și calitate dintr-o singură platformă.',
     },
     {
       id: 2,
       title: 'Control în Timp Real, Zero Defecțiuni',
       subtitle:
-        'Abordarea noastră adaptivă transformă provocările în oportunități, oferind valoare durabilă și rezultate excepționale pentru clienții noștri în diverse condiții economice.',
+        'Detectați erorile în momentul apariției cu verificări bazate pe coduri de bare, RFID și camere. Preveniți în producție riscurile de produs greșit, montaj greșit și livrare greșită.',
     },
     {
       id: 3,
       title: 'POKA YOKE',
       subtitle:
-        'Lucrăm îndeaproape cu investitorii pentru a înțelege obiectivele acestora, creând soluții personalizate care abordează nevoile specifice, menținând în același timp angajamentul nostru față de excelență.',
+        'Preveniți erorile operatorului înainte să apară prin mecanisme inteligente de validare. Asigurați utilizarea piesei corecte la stația corectă, în secvența corectă.',
     },
   ],
   faq: {
-    eyebrow: 'FAQ',
+    eyebrow: '',
     title: 'Perspectivele noastre asupra trasabilitatii',
     items: [
       {

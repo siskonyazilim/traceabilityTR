@@ -57,23 +57,23 @@ export const BlogCard = ({
           )}
         </div>
 
-        <div className="p-6 md:p-7 flex-1 flex flex-col">
-          <div className="flex items-center gap-2 mb-3">
+        <div className="p-6 md:p-7 flex-1 flex flex-col items-center text-center">
+          <div className="flex items-center justify-center gap-2 mb-3">
             <span className="text-xs font-semibold text-secondary-blue uppercase">
               {post.category}
             </span>
             <span className="text-xs text-inactive-gray">{date}</span>
           </div>
 
-          <h3 className="text-xl font-bold text-slate-800 mb-3 line-clamp-2 group-hover:text-secondary-blue transition-colors">
+          <h3 className="text-xl font-bold text-slate-800 mb-3 line-clamp-2 group-hover:text-secondary-blue transition-colors min-h-[3.5rem] flex items-center justify-center">
             {post.title}
           </h3>
 
-          <p className="rounded-xl border border-slate-100 bg-white/80 px-4 py-3 text-slate-600 text-sm leading-7 mb-4 max-w-[46ch] min-h-[96px]">
+          <p className="text-slate-600 text-sm leading-7 mb-4 max-w-[46ch] min-h-[96px]">
             {post.excerpt}
           </p>
 
-          <span className="card-cta-mini mt-auto">
+          <span className="card-cta-mini mt-auto mx-auto">
             {readMoreLabel}
             <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

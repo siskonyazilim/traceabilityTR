@@ -158,11 +158,11 @@ export const ReferenceProjects = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 p-6 flex flex-col">
+                  <div className="flex-1 p-6 flex flex-col items-center text-center">
                     <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem]">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-gray-text leading-7 line-clamp-2 flex-1 max-w-[44ch]">
+                    <p className="text-sm text-gray-text leading-7 line-clamp-2 flex-1 max-w-[44ch] mx-auto">
                       {project.description}
                     </p>
                     <span className="card-cta-mini mt-auto">

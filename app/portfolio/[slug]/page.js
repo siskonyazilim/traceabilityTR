@@ -2,8 +2,9 @@
 import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import { referenceProjects } from '../../../data/references';
-import { IconArrowLeft, IconChevronLeft, IconChevronRight } from '../../../components/ui/Icons';
+import { IconArrowLeft } from '../../../components/ui/Icons';
 import ProjectGallerySlider from '../../../components/ui/ProjectGallerySlider';
+import ReferenceProjectsSlider from '../../../components/sections/ReferenceProjectsSlider';
 import { cookies } from 'next/headers';
 import { localizeReferenceProjects } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
@@ -122,11 +123,6 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
 
   if (!project) notFound();
 
-  const currentIndex = localizedProjects.findIndex((p) => p.slug === slug);
-  const totalProjects = localizedProjects.length;
-  const prevProject = localizedProjects[(currentIndex - 1 + totalProjects) % totalProjects];
-  const nextProject = localizedProjects[(currentIndex + 1) % totalProjects];
-
   const titleMatchedNarrativeSlugs = new Set([
     'candy-hoover-test-data-cooker-lines-traceability',
     'pmi-palletizing-automation-automatic-labeling',
@@ -197,54 +193,18 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
             title={project.title}
           />
 
-          {/* Previous / Next Navigation */}
-          <nav className="clear-both mt-16 pt-12 border-t border-gray-light">
-            <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-6 sm:gap-0">
-              <Link
-                href={toLocalePath(`/portfolio/${prevProject.slug}`, locale)}
-                className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors"
-              >
-                <IconChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
-                <div className="text-left">
-                  <span className="block text-sm text-gray-text font-medium">
-                    {f(locale, 'portfolioDetailPage', 'previousProject')}
-                  </span>
-                  <span className="mt-2 inline-flex h-14 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm">
-                    <img
-                      src={prevProject.logo || prevProject.image}
-                      alt={prevProject.title}
-                      className="max-h-8 w-full object-contain"
-                    />
-                  </span>
-                  <h3 className="mt-2 max-w-xs text-xs font-bold text-primary-black leading-tight group-hover:text-accent-blue transition-colors">
-                    {prevProject.title}
-                  </h3>
-                </div>
-              </Link>
-
-              <Link
-                href={toLocalePath(`/portfolio/${nextProject.slug}`, locale)}
-                className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors self-end sm:self-auto"
-              >
-                <div className="text-right">
-                  <span className="block text-sm text-gray-text font-medium">
-                    {f(locale, 'portfolioDetailPage', 'nextProject')}
-                  </span>
-                  <span className="mt-2 ml-auto inline-flex h-14 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm">
-                    <img
-                      src={nextProject.logo || nextProject.image}
-                      alt={nextProject.title}
-                      className="max-h-8 w-full object-contain"
-                    />
-                  </span>
-                  <h3 className="mt-2 ml-auto max-w-xs text-xs font-bold text-primary-black leading-tight text-right group-hover:text-accent-blue transition-colors">
-                    {nextProject.title}
-                  </h3>
-                </div>
-                <IconChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </nav>
+          <ReferenceProjectsSlider
+            projects={localizedProjects}
+            locale={locale}
+            currentSlug={project.slug}
+            detailBasePath="/portfolio"
+            labels={{
+              title: f(locale, 'portfolioDetailPage', 'relatedProjects'),
+              prevAria: f(locale, 'portfolioDetailPage', 'previousProject'),
+              nextAria: f(locale, 'portfolioDetailPage', 'nextProject'),
+              details: f(locale, 'portfolioDetailPage', 'details'),
+            }}
+          />
 
           {/* CTA */}
           <PagePrimaryCta

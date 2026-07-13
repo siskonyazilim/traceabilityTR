@@ -179,7 +179,7 @@ export const products = [
     color: "accent-yellow",
     image: "/resmi/bio-04.png",
     description: "Trasabilitatea alimentelor este capacitatea de a urmări producția de alimente în toate etapele, inclusiv producția și distribuția. Trasabilitatea pentru industria alimentară este un sistem în care poate fi identificată sursa tuturor intrărilor de proces, inclusiv materiile prime. Chiar și reglementările legale sunt prioritare, atunci când se ia în considerare trasabilitatea alimentelor, dar există și beneficii comerciale foarte importante.",
-    detail: "În timp ce Organic T&T asigură trasabilitatea produsului, de asemenea, oferă:",
+    detail: "Organic Track and Trace oferă vizibilitate end-to-end, de la recepția materiilor prime până la livrarea produsului finit, corelând loturile, parametrii de proces și indicatorii de calitate într-un flux unic. Pe lângă trasabilitatea produsului, accelerează auditurile, reduce impactul rechemărilor și îmbunătățește controlul operațional zilnic.",
     detailSections: [
       {
         heading: "EFICIENȚĂ OPERAȚIONALĂ",

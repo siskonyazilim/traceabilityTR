@@ -471,4 +471,20 @@ export const blogPosts = [
       <p>Am prezentat <strong>Dashboard-ul IoT</strong>, solutiile noastre de transformare digitala si trasabilitate la <strong>al 7-lea Seminar de Tehnologii de Automatizare in Logistica</strong>, organizat de Asociatia de Logistica <strong>LODER</strong> si <strong>SICK</strong>.</p>
     `,
   },
+  {
+    id: 14,
+    title: 'Procedura Chestny ZNAK: Sistemul Digital de Trasabilitate al Rusiei',
+    titleTr: "Chestny ZNAK Proseduru: Rusya'nin Dijital Izlenebilirlik Sistemi",
+    slug: 'chestny-znak-procedure-russias-digital-traceability-system',
+    category: 'Știri',
+    categoryEn: 'News',
+    date: '2024-12-05',
+    author: 'Admin',
+    image: '/images/blog/CHESTNY-ZNAK-Track-and-Trace-System-of-Russia.webp',
+    excerpt: 'Lansat in 2019, Chestny ZNAK este o platforma digitala obligatorie de trasabilitate care permite urmarirea produselor prin identificatori unici pe intregul lant de aprovizionare.',
+    content: `
+      <p>Pentru a combate contrafacerea și pentru a crește încrederea consumatorilor, Chestny ZNAK oferă un sistem digital de trasabilitate obligatoriu la nivelul Federației Ruse.</p>
+      <p>Articolul complet este disponibil în variantele localizate EN/TR/RO și explică sectoarele acoperite, pașii de implementare și impactul asupra conformității.</p>
+    `,
+  },
 ];

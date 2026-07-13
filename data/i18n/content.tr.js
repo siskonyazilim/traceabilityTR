@@ -3,21 +3,21 @@ export const contentTr = {
     {
       id: 1,
       title: 'Akıllı Fabrikalar İçin Uçtan Uca İzlenebilirlik Çözümleri',
-      subtitle: 'Uygulama yaklaşımımız; risk yönetimini ve fırsat keşfini dengelerken değişen piyasa koşullarında güçlü performans gösteren dayanıklı operasyonlar inşa eder.',
+      subtitle: 'Hammadde girişinden sevkiyata kadar tüm üretim süreçlerini dijital olarak izleyin. Ürün, proses ve kalite verilerine tek platform üzerinden anında ve geçmişe dönük olarak ulaşın.',
     },
     {
       id: 2,
       title: 'Gerçek Zamanlı Kontrol, Sıfır Hata',
-      subtitle: 'Uyarlanabilir metodolojimiz, üretim zorluklarını veri odaklı kalite ve operasyonel görünürlük sayesinde ölçülebilir kazanımlara dönüştürür.',
+      subtitle: 'Barkod, RFID ve kamera tabanlı doğrulamalar ile hataları oluştuğu anda tespit edin. Yanlış ürün, yanlış montaj ve yanlış sevkiyat risklerini üretim sırasında önleyin.',
     },
     {
       id: 3,
       title: 'POKA YOKE',
-      subtitle: 'Operasyonel hedefleri anlamak ve yüksek kalite standardını koruyarak özelleştirilmiş çözümler tasarlamak için ekiplerle yakın çalışırız.',
+      subtitle: 'Akıllı doğrulama mekanizmaları ile operatör kaynaklı hataları oluşmadan önleyin. Doğru parçanın doğru istasyonda ve doğru sırayla kullanılmasını güvence altına alın.',
     },
   ],
   faq: {
-    eyebrow: 'SSS',
+    eyebrow: '',
     title: 'İzlenebilirlik Hakkındaki Görüşlerimiz',
     items: [
       {
@@ -201,7 +201,7 @@ export const contentTr = {
     3: {
       title: 'Organic Track and Trace',
       description: 'Uyum gereksinimlerini desteklerken üretim ve dağıtım boyunca kaynak girdileri ve süreç durumlarını tanımlayan gıda izlenebilirlik çözümü.',
-      detail: 'Organic T&T ürünün izlenebilirliğini sağlarken aynı zamanda;',
+      detail: 'Organic Track and Trace, hammadde kabulünden sevkiyata kadar parti, proses ve kalite verilerini tek akışta birleştirerek uçtan uca görünürlük sağlar. Ürün izlenebilirliğini güvence altına almanın yanında denetim süreçlerini hızlandırır, geri çağırma kapsamını daraltır ve günlük operasyonel kontrolü güçlendirir.',
       detailSections: [
         {
           heading: 'OPERASYONEL VERİMLİLİK',

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { strategicPartners } from '../../../data/partners';
-import { IconArrowLeft, IconChevronLeft, IconChevronRight } from '../../../components/ui/Icons';
+import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
 import PartnerStorySlider from '../../../components/ui/PartnerStorySlider';
 import { cookies } from 'next/headers';
 import { localizePartners } from '../../../lib/i18n/contentLocalization';
@@ -99,19 +99,6 @@ export default async function PartnerDetailPage({ params }) {
   const nextPartner = localizedPartners[(currentIndex + 1) % totalPartners];
   const showStorySlider = Array.isArray(partner.storySlides) && partner.storySlides.length > 0;
 
-  const toCardSummary = (value) => {
-    const text = String(value || '').replace(/\s+/g, ' ').trim();
-    if (!text) {
-      return '';
-    }
-
-    const firstSentence = text.split(/[.!?]/)[0]?.trim() || text;
-    return firstSentence.length > 120 ? `${firstSentence.slice(0, 117)}...` : `${firstSentence}.`;
-  };
-
-  const prevSummary = toCardSummary(prevPartner.fullDescription || prevPartner.description);
-  const nextSummary = toCardSummary(nextPartner.fullDescription || nextPartner.description);
-
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
       <Container size="xl">
@@ -162,50 +149,32 @@ export default async function PartnerDetailPage({ params }) {
           ) : null}
 
           {/* Previous / Next Navigation */}
-          <nav className="pt-8 border-t border-gray-200">
-            <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-6 sm:gap-0">
+          <nav className="clear-both mt-16 border-t border-slate-200 pt-10">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <Link
                 href={toLocalePath(`${detailBasePath}/${prevPartner.slug}`, locale)}
-                className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors"
+                className="group flex flex-col items-start gap-2 rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
               >
-                <IconChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
-                <div className="text-left">
-                  <span className="block text-sm text-gray-text font-medium">
-                    {f(locale, 'partnerDetailPage', 'previousPartner')}
-                  </span>
-                  <span className="mt-2 inline-flex h-14 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm">
-                    <img
-                      src={prevPartner.detailLogo || prevPartner.logo}
-                      alt={prevPartner.name}
-                      className="max-h-8 w-full object-contain"
-                    />
-                  </span>
-                  <p className="mt-2 max-w-xs text-sm text-gray-text leading-relaxed">
-                    {prevSummary}
-                  </p>
-                </div>
+                <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
+                  <IconArrowLeft size={16} />
+                  <span>{f(locale, 'partnerDetailPage', 'previousPartner')}</span>
+                </span>
+                <span className="text-base font-bold text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
+                  {prevPartner.name}
+                </span>
               </Link>
 
               <Link
                 href={toLocalePath(`${detailBasePath}/${nextPartner.slug}`, locale)}
-                className="group flex items-center gap-3 text-secondary-blue hover:text-accent-blue transition-colors self-end sm:self-auto"
+                className="group flex flex-col items-end gap-2 rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
               >
-                <div className="text-right">
-                  <span className="block text-sm text-gray-text font-medium">
-                    {f(locale, 'partnerDetailPage', 'nextPartner')}
-                  </span>
-                  <span className="mt-2 ml-auto inline-flex h-14 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm">
-                    <img
-                      src={nextPartner.detailLogo || nextPartner.logo}
-                      alt={nextPartner.name}
-                      className="max-h-8 w-full object-contain"
-                    />
-                  </span>
-                  <p className="mt-2 ml-auto max-w-xs text-sm text-gray-text leading-relaxed">
-                    {nextSummary}
-                  </p>
-                </div>
-                <IconChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
+                  <span>{f(locale, 'partnerDetailPage', 'nextPartner')}</span>
+                  <IconArrowRight size={16} />
+                </span>
+                <span className="text-base font-bold text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
+                  {nextPartner.name}
+                </span>
               </Link>
             </div>
           </nav>
