@@ -300,5 +300,6 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
         </article>
       </Container>
     </div>
+    </>
   );
 }
