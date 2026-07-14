@@ -70,17 +70,17 @@ export default function ContactPage() {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+40 368 402 002",
-        "contactType": "customer service",
-        "areaServed": "RO",
-        "availableLanguage": ["Romanian", "English"]
-      },
-      {
-        "@type": "ContactPoint",
         "telephone": "+90 232 245 00 76",
         "contactType": "customer service",
         "areaServed": "TR",
-        "availableLanguage": ["Turkish", "English"]
+        "availableLanguage": ["Turkish", "Romanian", "English"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+40 368 402 002",
+        "contactType": "customer service",
+        "areaServed": "RO",
+        "availableLanguage": ["Romanian", "Turkish", "English"]
       }
     ],
     "location": [
