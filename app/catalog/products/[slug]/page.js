@@ -138,64 +138,63 @@ export default async function CatalogProductDetailPage({ params }) {
     }
   }
 
-  const graphSchema = {
+  const softwareSchema = {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "SoftwareApplication",
+    "@id": `${pageUrl}#software`,
+    "name": withNavigation.title,
+    "operatingSystem": "Cloud, Windows Server, Linux",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Manufacturing Execution System (MES)",
+    "description": withNavigation.summary || withNavigation.description,
+    "image": absoluteImage,
+    "url": pageUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Siskon Otomasyon ve Yazılım A.Ş.",
+      "url": "https://siskon.com.tr"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "0",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "description": offerDescriptionByLocale[locale] || offerDescriptionByLocale.ro
+    },
+    "featureList": featureListStr
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    "itemListElement": [
       {
-        "@type": "SoftwareApplication",
-        "@id": `${pageUrl}#software`,
-        "name": withNavigation.title,
-        "operatingSystem": "Cloud, Windows Server, Linux",
-        "applicationCategory": "BusinessApplication",
-        "applicationSubCategory": "Manufacturing Execution System (MES)",
-        "description": withNavigation.summary || withNavigation.description,
-        "image": absoluteImage,
-        "url": pageUrl,
-        "publisher": {
-          "@type": "Organization",
-          "name": "Siskon Otomasyon ve Yazılım A.Ş.",
-          "url": "https://siskon.com.tr"
-        },
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "EUR",
-          "price": "0",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock",
-          "description": offerDescriptionByLocale[locale] || offerDescriptionByLocale.ro
-        },
-        "featureList": featureListStr
+        "@type": "ListItem",
+        "position": 1,
+        "name": homeLabelByLocale[locale] || homeLabelByLocale.ro,
+        "item": homeUrl
       },
       {
-        "@type": "BreadcrumbList",
-        "@id": `${pageUrl}#breadcrumb`,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": homeLabelByLocale[locale] || homeLabelByLocale.ro,
-            "item": homeUrl
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": productsLabelByLocale[locale] || productsLabelByLocale.ro,
-            "item": productsUrl
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": withNavigation.title,
-            "item": pageUrl
-          }
-        ]
+        "@type": "ListItem",
+        "position": 2,
+        "name": productsLabelByLocale[locale] || productsLabelByLocale.ro,
+        "item": productsUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": withNavigation.title,
+        "item": pageUrl
       }
     ]
   };
 
   return (
     <>
-      <JsonLd data={graphSchema} />
+      <JsonLd data={softwareSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <CatalogDetailPage item={withNavigation} type="product" locale={locale} />
     </>
   );
