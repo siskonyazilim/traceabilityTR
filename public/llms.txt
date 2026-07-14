@@ -1,10 +1,13 @@
-# Traceability LLM discovery index
+# Traceability LLM Discovery Index
 
-site: https://traceability.com.tr
-sitemap: https://traceability.com.tr/sitemap.xml
-robots: https://traceability.com.tr/robots.txt
+This file describes machine-readable discovery endpoints for Traceability.
 
-llm-files:
-- tr: https://traceability.com.tr/llm.tr.txt
-- en: https://traceability.com.tr/llm.en.txt
-- ro: https://traceability.com.tr/llm.ro.txt
+## Site
+- [Homepage](https://traceability.com.tr/)
+- [Sitemap](https://traceability.com.tr/sitemap.xml)
+- [Robots](https://traceability.com.tr/robots.txt)
+
+## Language-Specific LLM Files
+- [Turkish](https://traceability.com.tr/llm.tr.txt)
+- [English](https://traceability.com.tr/llm.en.txt)
+- [Romanian](https://traceability.com.tr/llm.ro.txt)
