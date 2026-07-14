@@ -1,0 +1,10 @@
+# Traceability LLM discovery index
+
+site: https://traceability.com.tr
+sitemap: https://traceability.com.tr/sitemap.xml
+robots: https://traceability.com.tr/robots.txt
+
+llm-files:
+- tr: https://traceability.com.tr/llm.tr.txt
+- en: https://traceability.com.tr/llm.en.txt
+- ro: https://traceability.com.tr/llm.ro.txt

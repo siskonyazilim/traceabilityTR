@@ -1,0 +1,20 @@
+# Traceability - Turkish LLM Discovery
+
+language: tr
+site: https://traceability.com.tr/
+sitemap: https://traceability.com.tr/sitemap.xml
+robots: https://traceability.com.tr/robots.txt
+
+primary-pages:
+- https://traceability.com.tr/
+- https://traceability.com.tr/blog
+- https://traceability.com.tr/contact
+- https://traceability.com.tr/proiecte-de-referinta
+
+content-sections:
+- blog: https://traceability.com.tr/blog/{slug}
+- solution-details: https://traceability.com.tr/solutions/{slug}
+- catalog-solutions: https://traceability.com.tr/catalog/solutions/{slug}
+- catalog-products: https://traceability.com.tr/catalog/products/{slug}
+- reference-projects: https://traceability.com.tr/portfolio/{slug}
+- solution-partners: https://traceability.com.tr/solution-partners/{slug}

@@ -1,0 +1,20 @@
+# Traceability - English LLM Discovery
+
+language: en
+site: https://traceability.com.tr/en
+sitemap: https://traceability.com.tr/sitemap.xml
+robots: https://traceability.com.tr/robots.txt
+
+primary-pages:
+- https://traceability.com.tr/en
+- https://traceability.com.tr/en/blog
+- https://traceability.com.tr/en/contact
+- https://traceability.com.tr/en/reference-projects
+
+content-sections:
+- blog: https://traceability.com.tr/en/blog/{slug}
+- solution-details: https://traceability.com.tr/en/solutions/{slug}
+- catalog-solutions: https://traceability.com.tr/en/catalog/solutions/{slug}
+- catalog-products: https://traceability.com.tr/en/catalog/products/{slug}
+- reference-projects: https://traceability.com.tr/en/portfolio/{slug}
+- solution-partners: https://traceability.com.tr/en/solution-partners/{slug}

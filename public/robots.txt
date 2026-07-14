@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Optional explicit allows for AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://traceability.com.tr/sitemap.xml
+Host: https://traceability.com.tr
