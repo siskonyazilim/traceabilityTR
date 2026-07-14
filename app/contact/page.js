@@ -58,9 +58,64 @@ export async function generateMetadata() {
       images: ['https://traceability.com.tr/siskon-logo-header.svg'],
     },
   };
-
-
 }
+
 export default function ContactPage() {
-  return <ContactPageClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Traceability",
+    "url": "https://traceability.com.tr",
+    "logo": "https://traceability.com.tr/siskon-logo-header.svg",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+40 368 402 002",
+        "contactType": "customer service",
+        "areaServed": "RO",
+        "availableLanguage": ["Romanian", "English"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+90 232 245 00 76",
+        "contactType": "customer service",
+        "areaServed": "TR",
+        "availableLanguage": ["Turkish", "English"]
+      }
+    ],
+    "location": [
+      {
+        "@type": "Place",
+        "name": "România - Brașov Office",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Strada Turnului Nr. 25, Corp M.U.M., Scara 3, Birou 5, Etaj 2",
+          "addressLocality": "Brașov",
+          "postalCode": "500152",
+          "addressCountry": "RO"
+        }
+      },
+      {
+        "@type": "Place",
+        "name": "Turcia - İzmir Office",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dokuz Eylül Üniversitesi Merkez Kampüsü DEPARK Beta Binası, Adatepe Mahallesi Doğuş Caddesi No:207/AG, Kat: 2 No:202",
+          "addressLocality": "Buca/İzmir",
+          "postalCode": "35390",
+          "addressCountry": "TR"
+        }
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ContactPageClient />
+    </>
+  );
 }
