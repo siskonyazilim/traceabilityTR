@@ -61,7 +61,6 @@ function validatePayload(payload) {
   const firstName = String(payload?.firstName || '').trim();
   const lastName = String(payload?.lastName || '').trim();
   const email = String(payload?.email || '').trim();
-  const website = String(payload?.website || '').trim();
   const message = String(payload?.message || '').trim();
   const locale = String(payload?.locale || 'ro').trim();
   const sourceSite = String(payload?.sourceSite || '').trim();
@@ -78,7 +77,6 @@ function validatePayload(payload) {
   phone,
   company,
   email,
-  website,
   message,
   sourceSite,
   locale,
@@ -248,7 +246,6 @@ export async function POST(request) {
   const { subject, text, html } = buildContactEmail({
     fullName,
     email: payload.email,
-    website: payload.website,
     message: payload.message,
     locale: payload.locale,
   });

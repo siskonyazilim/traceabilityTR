@@ -109,7 +109,6 @@ export default function ContactPageClient() {
           phone: data.phone,
           company: data.company,
           email: data.email,
-          website: data.website || '',
           message: data.message,
             
           sourceSite: window.location.hostname,
@@ -329,29 +328,6 @@ export default function ContactPageClient() {
                     </span>
                   )}
                 </div>
-
-            <div>
-              <label htmlFor="website" className="block text-sm font-semibold text-primary-black mb-2">
-                {t('contactPage.website', 'Website (opțional)')}
-              </label>
-              <input
-                id="website"
-                {...register('website', {
-                  pattern: {
-                    value: /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/[\w\-./?%&=]*)?$/,
-                    message: t('contactPage.errors.urlInvalid', 'URL invalid'),
-                  },
-                })}
-                type="text"
-                aria-invalid={errors.website ? 'true' : 'false'}
-                aria-describedby={errors.website ? 'website-error' : undefined}
-                className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
-                placeholder={t('contactPage.placeholders.website', 'https://www.example.com')}
-              />
-              {errors.website && (
-                <span id="website-error" role="alert" className="text-accent-red text-sm">{errors.website.message}</span>
-              )}
-            </div>
 
             {/* Honeypot */}
             <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
