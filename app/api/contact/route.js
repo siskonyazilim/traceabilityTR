@@ -61,6 +61,8 @@ function validatePayload(payload) {
   const firstName = String(payload?.firstName || '').trim();
   const lastName = String(payload?.lastName || '').trim();
   const email = String(payload?.email || '').trim();
+  const phone = String(payload?.phone || '').trim();
+  const company = String(payload?.company || '').trim();
   const message = String(payload?.message || '').trim();
   const locale = String(payload?.locale || 'ro').trim();
   const sourceSite = String(payload?.sourceSite || '').trim();
