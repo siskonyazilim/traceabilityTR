@@ -15,6 +15,21 @@ export const FaqAccordion = () => {
   const triggerRefs = useRef(new Map());
   const panelRefs = useRef(new Map());
 
+  const jsonLd = useMemo(() => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqBundle.items.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+  }, [faqBundle]);
+
   useEffect(() => {
     if (openId === null) {
       return;
@@ -56,8 +71,13 @@ export const FaqAccordion = () => {
   };
 
   return (
-    <section id="faq" className="section-block bg-gradient-to-br from-slate-50 via-white to-slate-50 font-sans relative overflow-hidden">
-      {/* Background Decoration */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <section id="faq" className="section-block bg-gradient-to-br from-slate-50 via-white to-slate-50 font-sans relative overflow-hidden">
+        {/* Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-1 bg-accent-blue opacity-30"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent-blue/5 rounded-md blur-3xl"></div>
 
@@ -187,7 +207,8 @@ export const FaqAccordion = () => {
           </div>
         </div>
       </Container>
-    </section>
+      </section>
+    </>
   );
 };
 

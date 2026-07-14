@@ -61,5 +61,59 @@ export async function generateMetadata() {
 }
 
 export default function HomePage() {
-  return <HomePageClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://traceability.com.tr/#website",
+        "url": "https://traceability.com.tr/",
+        "name": "Traceability",
+        "description": "Industrial Traceability & MES Solutions",
+        "publisher": {
+          "@id": "https://traceability.com.tr/#organization"
+        },
+        "inLanguage": ["tr", "en", "ro"]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://traceability.com.tr/#organization",
+        "name": "Traceability",
+        "url": "https://traceability.com.tr",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://traceability.com.tr/siskon-logo-header.svg"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+40 368 402 002",
+            "contactType": "customer service",
+            "areaServed": "RO",
+            "availableLanguage": ["Romanian", "English"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+90 232 245 00 76",
+            "contactType": "customer service",
+            "areaServed": "TR",
+            "availableLanguage": ["Turkish", "English"]
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/siskon/"
+        ]
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HomePageClient />
+    </>
+  );
 }
