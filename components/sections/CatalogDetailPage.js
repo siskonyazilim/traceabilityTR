@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { IconArrowLeft, IconArrowRight } from '../ui/Icons';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 /* eslint-disable react/prop-types */
 
 function getLocalizedLabels(locale, type) {
@@ -190,7 +191,7 @@ function DetailSection({ section }) {
   );
 }
 
-function NavSection({ item, detailBaseHref, prevLabel, nextLabel }) {
+function NavSection({ item, detailBaseHref, prevLabel, nextLabel, locale }) {
   if (item.disableNavigation) {
     return <section className="mt-8 border-t border-slate-200 pt-2" />;
   }
@@ -200,7 +201,7 @@ function NavSection({ item, detailBaseHref, prevLabel, nextLabel }) {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {item.prevSlug ? (
           <Link
-            href={`${detailBaseHref}/${item.prevSlug}`}
+            href={toLocalePath(`${detailBaseHref}/${item.prevSlug}`, locale)}
             className="group flex flex-col items-start gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
           >
             <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
@@ -217,7 +218,7 @@ function NavSection({ item, detailBaseHref, prevLabel, nextLabel }) {
 
         {item.nextSlug ? (
           <Link
-            href={`${detailBaseHref}/${item.nextSlug}`}
+            href={toLocalePath(`${detailBaseHref}/${item.nextSlug}`, locale)}
             className="group flex flex-col items-end gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
           >
             <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
@@ -295,7 +296,10 @@ export default function CatalogDetailPage({ item, type, locale }) {
     listHeading,
     contentParagraphs,
   } = getDetailBodyState(item, paragraphs, detailSections);
-  const homeHref = type === 'product' ? '/?tab=products#traceability-solutions' : '/?tab=solutions#traceability-solutions';
+  const homeHref = toLocalePath(
+    type === 'product' ? '/?tab=products#traceability-solutions' : '/?tab=solutions#traceability-solutions',
+    locale,
+  );
   const visual = getItemVisual(item, type);
   const heroGridClass = item.largeVisual ? 'md:grid-cols-[minmax(0,1fr)_620px]' : 'md:grid-cols-[minmax(0,1fr)_500px]';
   const heroImageSizeClass = item.largeVisual ? 'h-64 md:h-80' : 'h-56 md:h-64';
@@ -347,14 +351,14 @@ export default function CatalogDetailPage({ item, type, locale }) {
               section={section}
             />
           ))}
-          <NavSection item={item} detailBaseHref={detailBaseHref} prevLabel={navLabels.prev} nextLabel={navLabels.next} />
+          <NavSection item={item} detailBaseHref={detailBaseHref} prevLabel={navLabels.prev} nextLabel={navLabels.next} locale={locale} />
         </article>
 
         <section className="mx-auto mt-14 w-full text-center">
             <h2 className="text-3xl md:text-4xl font-semibold text-[#0d2a60] tracking-[-0.02em]">{labels.ctaTitle}</h2>
             <p className="mt-5 text-[#4d6687] text-base md:text-lg max-w-3xl mx-auto">{labels.ctaSubtitle}</p>
             <div className="mt-8 flex justify-center">
-              <Button as={Link} href="/contact" variant="solid" className="bg-secondary-blue hover:bg-accent-blue text-white px-10 py-3 rounded-md">
+              <Button as={Link} href={toLocalePath('/contact', locale)} variant="solid" className="bg-secondary-blue hover:bg-accent-blue text-white px-10 py-3 rounded-md">
                 {labels.ctaPrimary}
               </Button>
             </div>

@@ -60,7 +60,7 @@ export function middleware(request) {
 		return NextResponse.rewrite(rewriteUrl);
 	}
 
-	if (localeCookie !== DEFAULT_LOCALE) {
+	if (!localeCookie) {
 		const response = NextResponse.next();
 		response.cookies.set('locale', DEFAULT_LOCALE, {
 			path: '/',
