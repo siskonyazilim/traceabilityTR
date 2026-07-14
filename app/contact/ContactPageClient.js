@@ -115,6 +115,8 @@ export default function ContactPageClient() {
           sourceSite: window.location.hostname,
 
           locale,
+          csrfToken,
+          submittedAt: formMountedAt.current,
         };
 
       if (turnstileSiteKey && turnstileToken) {
