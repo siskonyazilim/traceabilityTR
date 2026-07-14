@@ -89,7 +89,7 @@ export const BlogPreview = () => {
           <button
             onClick={handlePrev}
             aria-label={t('sections.blogPrev', 'Articol anterior')}
-            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
+            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-md border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
           >
             <IconChevronLeft size={20} />
           </button>
@@ -97,7 +97,7 @@ export const BlogPreview = () => {
           <button
             onClick={handleNext}
             aria-label={t('sections.blogNext', 'Articol următor')}
-            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
+            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-md border border-gray-light bg-white text-primary-black hover:bg-gradient-to-r hover:from-secondary-blue hover:to-accent-blue hover:text-white hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
           >
             <IconChevronRight size={20} />
           </button>

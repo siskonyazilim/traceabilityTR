@@ -37,22 +37,22 @@ export async function generateMetadata({ params }) {
 
   const title = `${item.title} | Traceability`;
   const description = item.summary || item.description;
-  let ogImage = 'https://traceability.ro/siskon-logo-header.svg';
+  let ogImage = 'https://traceability.com.tr/siskon-logo-header.svg';
   if (item.image) {
-    ogImage = item.image.startsWith('http') ? item.image : `https://traceability.ro${item.image}`;
+    ogImage = item.image.startsWith('http') ? item.image : `https://traceability.com.tr${item.image}`;
   }
 
   return {
     title,
     description,
     alternates: {
-      canonical: `https://traceability.ro/catalog/solutions/${item.slug}`,
+      canonical: `https://traceability.com.tr/catalog/solutions/${item.slug}`,
     },
     openGraph: {
       title,
       description,
       type: 'article',
-      url: `https://traceability.ro/catalog/solutions/${item.slug}`,
+      url: `https://traceability.com.tr/catalog/solutions/${item.slug}`,
       locale: toOgLocale(locale),
       images: [
         {

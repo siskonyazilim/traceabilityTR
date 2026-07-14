@@ -15,7 +15,7 @@ const solutions = {
     h1: 'Soluții RFID pentru Trasabilitate și Control în Timp Real',
     description: 'Sistem complet RFID pentru trasabilitatea produselor, gestionarea stocurilor și automatizarea proceselor de producție.',
     metaDescription: 'Implementare RFID pentru trasabilitate industrială - identificare automată, urmărire în timp real, reducere erori cu 95%. Soluții pentru automotive, depozit, producție.',
-    keywords: 'RFID trasabilitate, RFID industrial, RFID depozit, RFID automotive, identificare automată, tracking RFID',
+    keywords: 'RFID izlenebilirlik, endüstriyel RFID, depo RFID, otomotiv RFID, otomatik tanımlama, RFID ile takip',
     icon: '📡',
     benefits: [
       'Identificare automată fără contact',
@@ -51,7 +51,7 @@ const solutions = {
     h1: 'Sistem RTLS pentru Localizare Precisă în Fabrică',
     description: 'Tehnologie RTLS (Real-Time Location System) pentru urmărirea activelor, persoanelor și materialelor în timp real.',
     metaDescription: 'Sistem RTLS pentru localizare în timp real - tracking active, optimizare flux producție, reducere timp căutare. Precizie până la 30cm.',
-    keywords: 'RTLS, localizare timp real, tracking active, UWB, indoor positioning, warehouse tracking',
+    keywords: 'RTLS, gerçek zamanlı konumlandırma, varlık takibi, UWB, kapalı alan konumlandırma, depo takibi',
     icon: '📍',
     benefits: [
       'Localizare precisă (precizie până la 30cm)',
@@ -87,7 +87,7 @@ const solutions = {
     h1: 'Sistem WMS pentru Gestionare Inteligentă a Depozitului',
     description: 'Software WMS complet pentru optimizarea operațiunilor de depozit, gestionare stocuri și trasabilitate completă.',
     metaDescription: 'WMS pentru depozit - management stocuri, optimizare picking, trasabilitate lot, integrare ERP. Creștere eficiență 60%, reducere erori 85%.',
-    keywords: 'WMS, warehouse management, gestionare depozit, management stocuri, picking optimization, inventory management',
+    keywords: 'WMS, depo yönetim sistemi, stok yönetimi, sipariş toplama optimizasyonu, envanter yönetimi',
     icon: '🏢',
     benefits: [
       'Gestionare completă intrări/ieșiri',
@@ -123,7 +123,7 @@ const solutions = {
     h1: 'POKA YOKE - Prevenirea Erorilor în Producție',
     description: 'Sistem automatizat de prevenire a erorilor umane și de proces în producție, bazat pe senzori și validare automată.',
     metaDescription: 'Sistem POKA YOKE pentru prevenire erori producție - validare automată, zero defecte, reducere remaniere 80%. Soluții pentru asamblare, control calitate.',
-    keywords: 'poka yoke, prevenire erori, zero defecte, quality control, error proofing, manufacturing quality',
+    keywords: 'poka yoke, hata önleme, sıfır hata, kalite kontrol, error proofing, üretim kalitesi',
     icon: '🛡️',
     benefits: [
       'Eliminare erori înainte de producere',
@@ -159,7 +159,7 @@ const solutions = {
     h1: 'Sisteme de Procesare Imagini pentru Control Calitate Automat',
     description: 'Tehnologie vision pentru detectarea automată a defectelor, măsurători precise și control 100% al calității produselor.',
     metaDescription: 'Procesare imagini industrială - detectare defecte, control calitate automat, măsurători precise. Viteză 1000+ produse/minut, acuratețe 99.9%.',
-    keywords: 'procesare imagini, vision control, detectare defecte, control calitate automat, machine vision, optical inspection',
+    keywords: 'görüntü işleme, vision control, hata tespiti, otomatik kalite kontrol, makine görmesi, optik denetim',
     icon: '📷',
     benefits: [
       'Control 100% al producției',
@@ -195,7 +195,7 @@ const solutions = {
     h1: 'Integrare Completă Sisteme de Trasabilitate cu MES și ERP',
     description: 'Servicii de integrare pentru conectarea sistemelor de trasabilitate cu MES, ERP, WMS și alte aplicații enterprise.',
     metaDescription: 'Integrare sisteme trasabilitate - conectare MES, ERP, WMS, SCADA. API modern, real-time data, sincronizare automată. Suport SAP, Oracle, Microsoft.',
-    keywords: 'integrare MES, integrare ERP, API integration, SAP integration, sistem integration, middleware',
+    keywords: 'MES entegrasyonu, ERP entegrasyonu, API entegrasyonu, SAP entegrasyonu, sistem entegrasyonu, ara katman yazılımı',
     icon: '🔗',
     benefits: [
       'Flux automat de date între sisteme',
@@ -252,7 +252,7 @@ export async function generateMetadata({ params }) {
 
   const metaDescription = solution.metaDescription || solution.description;
   const pageTitle = `${solution.title} | Traceability`;
-  const pageUrl = `https://traceability.ro/solutions/${slug}`;
+  const pageUrl = `https://traceability.com.tr/solutions/${slug}`;
 
   let ogLocale = 'ro_RO';
   if (locale === 'tr') {
@@ -276,7 +276,7 @@ export async function generateMetadata({ params }) {
       locale: ogLocale,
       images: [
         {
-          url: 'https://traceability.ro/siskon-logo-header.svg',
+          url: 'https://traceability.com.tr/siskon-logo-header.svg',
           width: 800,
           height: 600,
           alt: pageTitle,
@@ -287,7 +287,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: pageTitle,
       description: metaDescription,
-      images: ['https://traceability.ro/siskon-logo-header.svg'],
+      images: ['https://traceability.com.tr/siskon-logo-header.svg'],
     },
   };
 }
@@ -326,7 +326,7 @@ export default async function SolutionDetailPage({ params }) {
     provider: {
       '@type': 'Organization',
       name: 'Traceability',
-      url: 'https://traceability.ro',
+      url: 'https://traceability.com.tr',
     },
     areaServed: 'RO',
     hasOfferCatalog: {
@@ -368,7 +368,7 @@ export default async function SolutionDetailPage({ params }) {
             </div>
 
             {/* ROI Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16 bg-gradient-to-br from-primary-black to-secondary-blue rounded-3xl p-5 md:p-8 text-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16 bg-gradient-to-br from-primary-black to-secondary-blue rounded-lg p-5 md:p-8 text-white">
               {Object.entries(solution.roi).map(([key, value]) => (
                 <div key={key} className="text-center">
                   <div className="text-4xl font-bold mb-2">{value}</div>
@@ -382,7 +382,7 @@ export default async function SolutionDetailPage({ params }) {
               <h2 className="text-xl font-semibold text-primary-black mb-8">{labels.benefits}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {solution.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-gray-200">
+                  <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg border-2 border-gray-200">
                     <IconCheck className="text-accent-blue flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-text">{benefit}</span>
                   </div>
@@ -395,7 +395,7 @@ export default async function SolutionDetailPage({ params }) {
               <h2 className="text-xl font-semibold text-primary-black mb-8">{labels.useCases}</h2>
               <div className="space-y-6">
                 {solution.useCases.map((useCase, index) => (
-                  <div key={index} className="bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-accent-blue transition-colors">
+                  <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-accent-blue transition-colors">
                     <h3 className="text-lg font-semibold text-primary-black mb-3">{useCase.title}</h3>
                     <p className="text-gray-text leading-relaxed">{useCase.description}</p>
                   </div>
@@ -408,7 +408,7 @@ export default async function SolutionDetailPage({ params }) {
               <h2 className="text-xl font-semibold text-primary-black mb-8">{labels.technologies}</h2>
               <div className="flex flex-wrap gap-3">
                 {solution.technologies.map((tech, index) => (
-                  <span key={index} className="px-6 py-3 bg-accent-blue/10 text-accent-blue rounded-full font-semibold">
+                  <span key={index} className="px-6 py-3 bg-accent-blue/10 text-accent-blue rounded-md font-semibold">
                     {tech}
                   </span>
                 ))}
@@ -416,7 +416,7 @@ export default async function SolutionDetailPage({ params }) {
             </div>
 
             {/* CTA */}
-            <div className="bg-gradient-to-br from-slate-50 to-white p-12 rounded-3xl border-2 border-gray-200">
+            <div className="bg-gradient-to-br from-slate-50 to-white p-12 rounded-lg border-2 border-gray-200">
               <PagePrimaryCta
                 className="text-center"
                 title={labels.ctaTitle}

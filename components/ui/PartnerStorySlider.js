@@ -33,7 +33,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
 
   if (normalizedSlides.length === 0) {
     return (
-      <section className="mb-14 rounded-2xl border border-dashed border-slate-300 bg-slate-50/60 px-6 py-8 text-center">
+      <section className="mb-14 rounded-lg border border-dashed border-slate-300 bg-slate-50/60 px-6 py-8 text-center">
         <h3 className="text-xl md:text-2xl font-semibold text-primary-black mb-2">
           {locale === 'en' ? 'Brand Gallery and Story' : 'Galerie si Poveste de Brand'}
         </h3>
@@ -60,7 +60,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
 
   return (
     <section className="mb-14">
-      <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+      <div className="relative overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
         <div className="grid grid-cols-1 lg:grid-cols-5">
           <div className={hasStoryContent ? 'lg:col-span-3' : 'lg:col-span-5'}>
             <div className={`relative w-full bg-slate-100 ${hasStoryContent ? 'h-[320px] md:h-[420px] lg:h-[460px]' : 'h-[340px] md:h-[460px] lg:h-[560px]'}`}>
@@ -93,7 +93,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
           aria-label={locale === 'en' ? 'Previous slide' : 'Slide anterior'}
           onClick={goPrev}
           disabled={normalizedSlides.length < 2}
-          className={`absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
+          className={`absolute left-3 top-1/2 -translate-y-1/2 rounded-md bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
             normalizedSlides.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
           }`}
         >
@@ -104,7 +104,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
           aria-label={locale === 'en' ? 'Next slide' : 'Slide urmator'}
           onClick={goNext}
           disabled={normalizedSlides.length < 2}
-          className={`absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
+          className={`absolute right-3 top-1/2 -translate-y-1/2 rounded-md bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
             normalizedSlides.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
           }`}
         >

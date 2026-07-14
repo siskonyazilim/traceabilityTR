@@ -12,7 +12,7 @@ export const Button = ({
   const isNativeButton = Component === 'button';
   const resolvedType = isNativeButton ? (type || 'button') : undefined;
 
-  const baseStyles = 'inline-flex items-center justify-center rounded-full font-semibold transition-[background-color,color,border-color,box-shadow,transform] duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60';
+  const baseStyles = 'inline-flex items-center justify-center rounded-md font-semibold transition-[background-color,color,border-color,box-shadow,transform] duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60';
   const stateStyles = 'shadow-[var(--shadow-btn-rest)] hover:shadow-[var(--shadow-btn-hover)] active:shadow-[var(--shadow-btn-active)]';
 
   // UI state matrix: default -> hover -> focus-visible -> active -> disabled.

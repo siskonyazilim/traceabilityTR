@@ -50,12 +50,12 @@ export default function CookieBanner() {
   return (
     isVisible ? (
       <div className="fixed bottom-3 left-3 right-3 md:bottom-5 md:left-auto md:right-5 z-50 md:w-full md:max-w-sm">
-          <div className="bg-white/95 backdrop-blur-md rounded-xl shadow-soft-lg border border-slate-200 overflow-hidden">
+          <div className="bg-white/95 backdrop-blur-md rounded-lg shadow-soft-lg border border-slate-200 overflow-hidden">
             <div className="px-4 pt-4 pb-3 flex items-start justify-between gap-3">
               <p className="text-sm font-semibold text-primary-black">{t('cookie.title', 'Cookie Preference')}</p>
               <button
                 onClick={declineCookies}
-                className="text-gray-400 hover:text-gray-600 transition-colors p-1.5 hover:bg-gray-100 rounded-full"
+                className="text-gray-400 hover:text-gray-600 transition-colors p-1.5 hover:bg-gray-100 rounded-md"
                 aria-label={t('cookie.close', 'Close')}
               >
                 <IconX size={18} />

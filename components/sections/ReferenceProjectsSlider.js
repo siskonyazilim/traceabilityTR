@@ -103,7 +103,7 @@ export default function ReferenceProjectsSlider({
               <button
                 type="button"
                 onClick={handlePrev}
-                className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
+                className="h-12 w-12 rounded-md bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
                 aria-label={labels.prevAria || 'Proiect anterior'}
               >
                 <IconChevronLeft size={24} className="group-hover:text-accent-blue transition-colors" />
@@ -114,7 +114,7 @@ export default function ReferenceProjectsSlider({
               <button
                 type="button"
                 onClick={handleNext}
-                className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
+                className="h-12 w-12 rounded-md bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
                 aria-label={labels.nextAria || 'Proiect urmator'}
               >
                 <IconChevronRight size={24} className="group-hover:text-accent-blue transition-colors" />
@@ -131,7 +131,7 @@ export default function ReferenceProjectsSlider({
             >
               <Link
                 href={toLocalePath(`${detailBasePath}/${project.slug}`, locale)}
-                className="h-full flex flex-col rounded-3xl border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
+                className="h-full flex flex-col rounded-lg border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
               >
                 <div className="relative h-44 bg-white overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -148,11 +148,11 @@ export default function ReferenceProjectsSlider({
                     />
                   </div>
                   {project.referenceDateLabel && (
-                    <div className="absolute bottom-3 left-3 rounded-full bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                    <div className="absolute bottom-3 left-3 rounded-md bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
                       {project.referenceDateLabel}
                     </div>
                   )}
-                  <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-gradient-to-br from-accent-blue to-accent-green shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 w-3 h-3 rounded-md bg-gradient-to-br from-accent-blue to-accent-green shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 <div className="flex-1 p-6 flex flex-col items-center text-center">

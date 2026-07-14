@@ -86,8 +86,8 @@ export const PerformanceMetrics = () => {
     <section className="py-16 md:py-24 bg-gradient-to-br from-primary-black via-dark-bg to-primary-black relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pattern-dots opacity-10"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-blue/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-blue/10 rounded-md blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-blue/10 rounded-md blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
 
       <Container size="xl" className="relative z-10">
         <div className="text-center mb-16">

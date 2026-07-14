@@ -65,6 +65,8 @@
     "firstName": "First Name",
     "lastName": "Last Name",
     "email": "Email",
+    "phone": "Phone",
+    "company": "Company Name",
     "website": "Website (optional)",
     "message": "Message",
     "privacyText": "I agree with the",
@@ -92,6 +94,9 @@
       "emailRequired": "Email is required",
       "emailInvalid": "Invalid email",
       "urlInvalid": "Invalid URL",
+      "phoneRequired": "Phone number is required",      
+      "companyRequired": "Company name is required",
+      "companyMin": "Minimum 2 characters",
       "messageRequired": "Message is required",
       "messageMin": "Minimum 10 characters",
       "privacyRequired": "You must accept the privacy policy",
@@ -103,7 +108,9 @@
       "lastName": "Doe",
       "email": "email@example.com",
       "website": "https://www.example.com",
-      "message": "Write your message here..."
+      "message": "Write your message here...",
+      "phone": "+1 555 555 5555",
+      "company": "ABC Corporation"
     }
   },
   "blogPage": {

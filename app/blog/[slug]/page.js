@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
 
   const title = `${post.title} | ${f(locale, 'blogDetailPage', 'blogSuffix')}`;
   const description = post.excerpt;
-  const pageUrl = `https://traceability.ro/blog/${post.slug}`;
+  const pageUrl = `https://traceability.com.tr/blog/${post.slug}`;
 
   let openGraphLocale = 'ro_RO';
   if (locale === 'tr') {
@@ -39,9 +39,9 @@ export async function generateMetadata({ params }) {
     openGraphLocale = 'en_US';
   }
 
-  let ogImage = 'https://traceability.ro/siskon-logo-header.svg';
+  let ogImage = 'https://traceability.com.tr/siskon-logo-header.svg';
   if (post.image) {
-    ogImage = post.image.startsWith('http') ? post.image : `https://traceability.ro${post.image}`;
+    ogImage = post.image.startsWith('http') ? post.image : `https://traceability.com.tr${post.image}`;
   }
 
   return {
@@ -148,7 +148,7 @@ export default async function BlogDetailPage({ params }) {
             </div>
           </header>
 
-          <figure className="relative mb-8 aspect-video w-full overflow-hidden rounded-xl md:float-right md:mb-6 md:ml-8 md:w-[46%] lg:w-[42%] xl:w-[40%]">
+          <figure className="relative mb-8 aspect-video w-full overflow-hidden rounded-lg md:float-right md:mb-6 md:ml-8 md:w-[46%] lg:w-[42%] xl:w-[40%]">
             <Image
               src={post.image}
               alt={post.title}
@@ -166,15 +166,15 @@ export default async function BlogDetailPage({ params }) {
           />
 
           {/* OnSuite Trace Redirection CTA */}
-          <div className="mt-12 rounded-2xl bg-gradient-to-br from-primary-black to-dark-bg p-8 text-white shadow-xl md:p-10 border border-slate-blue/10 relative overflow-hidden">
+          <div className="mt-12 rounded-lg bg-gradient-to-br from-primary-black to-dark-bg p-8 text-white shadow-xl md:p-10 border border-slate-blue/10 relative overflow-hidden">
             {/* Ambient decorative background patterns */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,181,247,0.15),transparent_48%)] pointer-events-none" />
-            <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-accent-blue/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-accent-blue/10 rounded-md blur-3xl pointer-events-none" />
             
             <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div className="space-y-3 max-w-3xl">
                 <div className="inline-flex items-center gap-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-accent-blue px-2.5 py-1 bg-accent-blue/10 rounded-full border border-accent-blue/20">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-accent-blue px-2.5 py-1 bg-accent-blue/10 rounded-md border border-accent-blue/20">
                     OnSuite Trace
                   </span>
                 </div>
@@ -197,7 +197,7 @@ export default async function BlogDetailPage({ params }) {
                   rel="noopener noreferrer"
                   variant="solid"
                   size="lg"
-                  className="bg-secondary-blue text-white hover:bg-accent-blue font-semibold text-sm rounded-full inline-flex items-center gap-2 whitespace-nowrap min-w-max shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="bg-secondary-blue text-white hover:bg-accent-blue font-semibold text-sm rounded-md inline-flex items-center gap-2 whitespace-nowrap min-w-max shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   <span>
                     {locale === 'tr' && "OnSuite Trace'i Keşfedin"}
@@ -218,7 +218,7 @@ export default async function BlogDetailPage({ params }) {
               {prevPost ? (
                 <Link
                   href={`/blog/${prevPost.slug}`}
-                  className="group flex flex-col items-start gap-2 rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
+                  className="group flex flex-col items-start gap-2 rounded-lg border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
                 >
                   <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
                     <IconArrowLeft size={16} />
@@ -239,7 +239,7 @@ export default async function BlogDetailPage({ params }) {
               {nextPost ? (
                 <Link
                   href={`/blog/${nextPost.slug}`}
-                  className="group flex flex-col items-end gap-2 rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
+                  className="group flex flex-col items-end gap-2 rounded-lg border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
                 >
                   <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
                     <span>

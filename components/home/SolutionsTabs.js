@@ -82,7 +82,7 @@ export const SolutionsTabs = () => {
             id="solutions-tab"
             aria-selected={activeTab === 'solutions'}
             aria-controls="solutions-panel"
-            className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+            className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-md text-sm sm:text-base font-semibold transition-all duration-300 ${
               activeTab === 'solutions'
                 ? 'bg-secondary-blue text-white shadow-lg'
                 : 'bg-white border border-gray-light text-inactive-gray hover:text-secondary-blue hover:border-secondary-blue shadow-soft'
@@ -98,7 +98,7 @@ export const SolutionsTabs = () => {
             aria-selected={activeTab === 'products'}
             aria-controls="products-panel"
             aria-labelledby="products-tab-button"
-            className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+            className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-md text-sm sm:text-base font-semibold transition-all duration-300 ${
               activeTab === 'products'
                 ? 'bg-accent-blue text-white shadow-lg'
                 : 'bg-white border border-gray-light text-inactive-gray hover:text-accent-blue hover:border-accent-blue shadow-soft'
@@ -115,7 +115,7 @@ export const SolutionsTabs = () => {
               <Link
                 key={solution.id}
                 href={toLocalePath(`${catalogBasePath}/solutions/${solution.slug}`, locale)}
-                className="bg-gradient-to-b from-white to-slate-50/55 rounded-2xl p-6 md:p-7 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 group relative overflow-hidden h-full flex flex-col"
+                className="bg-gradient-to-b from-white to-slate-50/55 rounded-lg p-6 md:p-7 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 group relative overflow-hidden h-full flex flex-col"
               >
                 {/* Gradient Overlay on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -154,7 +154,7 @@ export const SolutionsTabs = () => {
               <Link
                 key={product.id}
                 href={toLocalePath(`${catalogBasePath}/products/${product.slug}`, locale)}
-                className="rounded-2xl border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 bg-white group h-full relative overflow-hidden p-5 md:p-6"
+                className="rounded-lg border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 bg-white group h-full relative overflow-hidden p-5 md:p-6"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10 h-full flex flex-col items-center text-center">

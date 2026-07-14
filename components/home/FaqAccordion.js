@@ -59,7 +59,7 @@ export const FaqAccordion = () => {
     <section id="faq" className="section-block bg-gradient-to-br from-slate-50 via-white to-slate-50 font-sans relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-1 bg-accent-blue opacity-30"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent-blue/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent-blue/5 rounded-md blur-3xl"></div>
 
       <Container size="xl" className="relative z-10">
         {/* Header */}
@@ -73,7 +73,7 @@ export const FaqAccordion = () => {
         {/* FAQ Grid - 2 columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Column - First 4 questions */}
-          <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
+          <div className="bg-white rounded-lg shadow-soft overflow-hidden">
             {faqBundle.items.slice(0, 4).map((faq, index) => (
               <div
                 key={faq.id}
@@ -101,7 +101,7 @@ export const FaqAccordion = () => {
                     {faq.question}
                   </h3>
                   <span
-                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45 shadow-md shadow-secondary-blue/20' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300`}
+                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45 shadow-md shadow-secondary-blue/20' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-11 h-11 rounded-md flex items-center justify-center transition-all duration-300`}
                   >
                     <IconPlus size={24} />
                   </span>
@@ -130,7 +130,7 @@ export const FaqAccordion = () => {
           </div>
 
           {/* Right Column - Last 4 questions */}
-          <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
+          <div className="bg-white rounded-lg shadow-soft overflow-hidden">
             {faqBundle.items.slice(4, 8).map((faq, index) => (
               <div
                 key={faq.id}
@@ -158,7 +158,7 @@ export const FaqAccordion = () => {
                     {faq.question}
                   </h3>
                   <span
-                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45 shadow-md shadow-secondary-blue/20' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300`}
+                    className={`${openId === faq.id ? 'text-secondary-blue bg-secondary-blue/10 rotate-45 shadow-md shadow-secondary-blue/20' : 'text-slate-500 bg-slate-100 group-hover:bg-accent-blue/10 group-hover:text-accent-blue'} flex-shrink-0 w-11 h-11 rounded-md flex items-center justify-center transition-all duration-300`}
                   >
                     <IconPlus size={24} />
                   </span>

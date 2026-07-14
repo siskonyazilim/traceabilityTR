@@ -11,12 +11,12 @@ export default function NotFound() {
   return (
     <div className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-white via-[#f8fbff] to-white relative overflow-hidden flex items-center">
       <div className="absolute inset-0 pattern-dots opacity-30"></div>
-      <div className="absolute -top-24 -left-16 w-72 h-72 bg-accent-blue/15 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-24 -right-16 w-80 h-80 bg-secondary-blue/10 rounded-full blur-3xl"></div>
+      <div className="absolute -top-24 -left-16 w-72 h-72 bg-accent-blue/15 rounded-md blur-3xl"></div>
+      <div className="absolute -bottom-24 -right-16 w-80 h-80 bg-secondary-blue/10 rounded-md blur-3xl"></div>
 
       <Container className="relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-3xl shadow-soft p-8 md:p-12 text-center">
+          <div className="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-lg shadow-soft p-8 md:p-12 text-center">
             <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-secondary-blue font-semibold mb-4">
               {t('notFound.codeLabel', 'Error')}
             </p>
@@ -45,13 +45,13 @@ export default function NotFound() {
             <div className="pt-6 border-t border-slate-200">
               <p className="text-sm text-slate-700 mb-3">{t('notFound.quickLinks', 'Poți încerca și aceste pagini:')}</p>
               <div className="flex flex-wrap items-center justify-center gap-2.5">
-                <Link href="/blog" className="px-4 py-2 text-sm rounded-full border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
+                <Link href="/blog" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
                   {t('header.news', 'Știri')}
                 </Link>
-                <Link href="/proiecte-de-referinta" className="px-4 py-2 text-sm rounded-full border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
+                <Link href="/proiecte-de-referinta" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
                   {t('sections.referenceProjectsTitle', 'Proiecte de referință')}
                 </Link>
-                <Link href="/#traceability-solutions" className="px-4 py-2 text-sm rounded-full border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
+                <Link href="/#traceability-solutions" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
                   {t('sections.solutionsTab', 'Soluții')}
                 </Link>
               </div>

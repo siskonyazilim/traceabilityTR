@@ -197,7 +197,7 @@ export const Header = () => {
                   setIsLangOpen((prev) => !prev);
                 }}
                 aria-label={t('language.switchAria', 'Schimbă limba')}
-                className={`w-full h-10 flex items-center justify-between rounded-xl px-3 text-xs font-bold transition-all duration-300 ${
+                className={`w-full h-10 flex items-center justify-between rounded-lg px-3 text-xs font-bold transition-all duration-300 ${
                   useTransparentHeader
                     ? 'text-white bg-white/5 ring-1 ring-white/20 hover:bg-white/15 hover:ring-white/35'
                     : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
@@ -211,7 +211,7 @@ export const Header = () => {
               </button>
 
               {isLangOpen && (
-                <div className="absolute right-0 mt-2 w-full rounded-xl bg-white/95 backdrop-blur-md shadow-lg ring-1 ring-slate-200/80 overflow-hidden z-50 animate-fade-in">
+                <div className="absolute right-0 mt-2 w-full rounded-lg bg-white/95 backdrop-blur-md shadow-lg ring-1 ring-slate-200/80 overflow-hidden z-50 animate-fade-in">
                   {languageOptions.map((option) => (
                     <button
                       type="button"
@@ -242,7 +242,7 @@ export const Header = () => {
                 id="mobile-language-select"
                 value={locale}
                 onChange={(event) => handleLocaleChange(event.target.value)}
-                className={`h-12 w-full rounded-xl pl-3 pr-8 text-xs font-bold appearance-none transition-all duration-300 cursor-pointer ${
+                className={`h-12 w-full rounded-lg pl-3 pr-8 text-xs font-bold appearance-none transition-all duration-300 cursor-pointer ${
                   useTransparentHeader
                     ? 'text-white bg-white/5 ring-1 ring-white/25 hover:bg-white/15 hover:ring-white/40'
                     : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
@@ -281,7 +281,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div id="mobile-navigation" className="lg:hidden bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
+          <div id="mobile-navigation" className="lg:hidden bg-white/95 backdrop-blur-md rounded-lg shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
             {navItems.map((item) => (
               <div key={item.label} className="mb-3">
                 {item.href.startsWith('#') ? (

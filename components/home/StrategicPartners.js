@@ -78,8 +78,8 @@ export const StrategicPartners = () => {
   return (
     <section id="our-strategic-solution-partners" className="section-block bg-gradient-to-br from-[#f6f7f8] via-white to-[#f6f7f8] relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-10 left-10 w-72 h-72 bg-accent-blue/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-secondary-blue/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-10 left-10 w-72 h-72 bg-accent-blue/5 rounded-md blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-secondary-blue/5 rounded-md blur-3xl"></div>
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
@@ -92,7 +92,7 @@ export const StrategicPartners = () => {
             <button
               onClick={handlePrev}
               aria-label={t('sections.partnerPrev', 'Partener anterior')}
-              className="h-12 w-12 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
+              className="h-12 w-12 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <IconChevronLeft size={20} />
             </button>
@@ -102,7 +102,7 @@ export const StrategicPartners = () => {
             <button
               onClick={handleNext}
               aria-label={t('sections.partnerNext', 'Partener următor')}
-              className="h-12 w-12 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
+              className="h-12 w-12 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <IconChevronRight size={20} />
             </button>
@@ -112,7 +112,7 @@ export const StrategicPartners = () => {
             {visiblePartners.map((partner, index) => (
               <Link key={partner.id} href={toLocalePath(`${detailBasePath}/${partner.slug}`, locale)}>
                 <article
-                  className="h-full rounded-2xl bg-gradient-to-b from-white to-slate-50/70 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
+                  className="h-full rounded-lg bg-gradient-to-b from-white to-slate-50/70 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                 >
                   {/* Logo */}
                   <div className="h-40 flex items-center justify-center p-6 bg-white relative overflow-hidden">

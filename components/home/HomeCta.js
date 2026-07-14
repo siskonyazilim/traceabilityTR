@@ -12,7 +12,7 @@ export const HomeCta = () => {
     <section className="py-16 md:py-28 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pattern-dots opacity-20"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] md:w-[1000px] h-[360px] md:h-[500px] bg-accent-blue/8 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] md:w-[1000px] h-[360px] md:h-[500px] bg-accent-blue/8 rounded-md blur-3xl"></div>
 
       <Container size="xl" className="relative z-10">
         <div className="text-center max-w-5xl mx-auto">

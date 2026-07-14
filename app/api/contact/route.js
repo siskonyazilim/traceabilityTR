@@ -64,6 +64,7 @@ function validatePayload(payload) {
   const website = String(payload?.website || '').trim();
   const message = String(payload?.message || '').trim();
   const locale = String(payload?.locale || 'ro').trim();
+  const sourceSite = String(payload?.sourceSite || '').trim();
 
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -71,7 +72,17 @@ function validatePayload(payload) {
     return null;
   }
 
-  return { firstName, lastName, email, website, message, locale };
+  return {
+  firstName,
+  lastName,
+  phone,
+  company,
+  email,
+  website,
+  message,
+  sourceSite,
+  locale,
+};
 }
 
 export async function POST(request) {

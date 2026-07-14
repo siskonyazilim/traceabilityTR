@@ -58,7 +58,7 @@ export default function Industries() {
               key={industry.id}
               className="group relative h-full"
             >
-              <div className="bg-white rounded-2xl border-2 border-gray-200 p-5 md:p-8 hover:border-accent-blue transition-all duration-300 hover:shadow-xl h-full flex flex-col">
+              <div className="bg-white rounded-lg border-2 border-gray-200 p-5 md:p-8 hover:border-accent-blue transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 {/* Icon */}
                 <div className="mb-6 text-center flex justify-center">
                   <img

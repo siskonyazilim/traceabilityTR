@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
 
   const title = `${project.title} | ${f(locale, 'portfolioDetailPage', 'projectSuffix')} | Traceability`;
   const description = project.description;
-  const pageUrl = `https://traceability.ro/portfolio/${project.slug}`;
+  const pageUrl = `https://traceability.com.tr/portfolio/${project.slug}`;
 
   let ogLocale = 'ro_RO';
   if (locale === 'tr') {
@@ -56,9 +56,9 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
-  let ogImage = 'https://traceability.ro/siskon-logo-header.svg';
+  let ogImage = 'https://traceability.com.tr/siskon-logo-header.svg';
   if (project.image) {
-    ogImage = project.image.startsWith('http') ? project.image : `https://traceability.ro${project.image}`;
+    ogImage = project.image.startsWith('http') ? project.image : `https://traceability.com.tr${project.image}`;
   }
 
   return {
@@ -150,7 +150,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,1fr)_320px] md:items-start md:gap-10">
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <span className="text-xs font-semibold text-white uppercase bg-accent-blue px-3 py-1 rounded-full">
+                  <span className="text-xs font-semibold text-white uppercase bg-accent-blue px-3 py-1 rounded-md">
                     {project.sector}
                   </span>
                 </div>
@@ -181,7 +181,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
             </div>
             {project.referenceDateLabel && (
               <div className="mt-6 flex justify-end">
-                <span className="rounded-full bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap">
+                <span className="rounded-md bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap">
                   {project.referenceDateLabel}
                 </span>
               </div>

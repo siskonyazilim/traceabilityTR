@@ -67,6 +67,8 @@
     "firstName": "Ad",
     "lastName": "Soyad",
     "email": "E-posta",
+    "phone": "Telefon",
+    "company": "Şirket Adı",
     "website": "Web Sitesi (isteğe bağlı)",
     "message": "Mesaj",
     "privacyText": "Kabul ediyorum",
@@ -98,14 +100,19 @@
       "messageMin": "En az 10 karakter",
       "privacyRequired": "Gizlilik politikasını kabul etmelisiniz",
       "submitFailed": "Bir hata oluştu. Lütfen tekrar deneyin.",
-      "networkError": "Ağ hatası. Bağlantınızı kontrol edin."
+      "networkError": "Ağ hatası. Bağlantınızı kontrol edin.",
+      "phoneRequired": "Telefon numarası zorunludur",
+      "companyRequired": "Şirket adı zorunludur",
+      "companyMin": "En az 2 karakter giriniz"
     },
     "placeholders": {
       "firstName": "Ahmet",
       "lastName": "Yılmaz",
       "email": "eposta@ornek.com",
       "website": "https://www.ornek.com",
-      "message": "Mesajınızı buraya yazın..."
+      "message": "Mesajınızı buraya yazın...",
+      "phone": "+90 555 555 55 55",
+      "company": "ABC Otomotiv"
     }
   },
   "blogPage": {

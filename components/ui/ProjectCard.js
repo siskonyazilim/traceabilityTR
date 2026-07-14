@@ -98,7 +98,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
     >
       <Link
         href={detailHref}
-        className="group bg-white rounded-2xl border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full flex flex-col"
+        className="group bg-white rounded-lg border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full flex flex-col"
       >
         {/* Project Image */}
         <div className="h-44 flex items-center justify-center overflow-hidden relative">
@@ -118,7 +118,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
 
         <div className="p-6 md:p-7 flex-1 flex flex-col items-center text-center">
           <div className="mb-3">
-            <span className="text-xs font-semibold text-white px-3 py-1 rounded-full bg-slate-blue">
+            <span className="text-xs font-semibold text-white px-3 py-1 rounded-md bg-slate-blue">
               {project.sector}
             </span>
           </div>
@@ -139,7 +139,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
               </svg>
             </span>
             {project.referenceDateLabel && (
-              <span className="rounded-full bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap">
+              <span className="rounded-md bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap">
                 {project.referenceDateLabel}
               </span>
             )}

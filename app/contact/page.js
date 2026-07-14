@@ -34,17 +34,17 @@ export async function generateMetadata() {
     title,
     description,
     alternates: {
-      canonical: 'https://traceability.ro/contact',
+      canonical: 'https://traceability.com.tr/contact',
     },
     openGraph: {
       title,
       description,
       type: 'website',
-      url: 'https://traceability.ro/contact',
+      url: 'https://traceability.com.tr/contact',
       locale: ogLocale,
       images: [
         {
-          url: 'https://traceability.ro/siskon-logo-header.svg',
+          url: 'https://traceability.com.tr/siskon-logo-header.svg',
           width: 800,
           height: 600,
           alt: title,
@@ -55,7 +55,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://traceability.ro/siskon-logo-header.svg'],
+      images: ['https://traceability.com.tr/siskon-logo-header.svg'],
     },
   };
 

@@ -65,6 +65,8 @@
     "firstName": "Prenume",
     "lastName": "Nume",
     "email": "Email",
+    "phone": "Telefon",    
+    "company": "Nume Companie",
     "website": "Website (opțional)",
     "message": "Mesaj",
     "privacyText": "Sunt de acord cu",
@@ -91,6 +93,9 @@
       "lastNameMin": "Min 2 caractere",
       "emailRequired": "Email-ul este necesar",
       "emailInvalid": "Email invalid",
+      "phoneRequired": "Numărul de telefon este obligatoriu",
+      "companyRequired": "Numele companiei este obligatoriu",
+      "companyMin": "Minimum 2 caractere",
       "urlInvalid": "URL invalid",
       "messageRequired": "Mesajul este necesar",
       "messageMin": "Min 10 caractere",
@@ -103,7 +108,9 @@
       "lastName": "Popescu",
       "email": "email@example.com",
       "website": "https://www.example.com",
-      "message": "Scrie-ți mesajul aici..."
+      "message": "Scrie-ți mesajul aici...",
+      "phone": "+40 700 000 000",
+      "company": "ABC SRL"
     }
   },
   "blogPage": {

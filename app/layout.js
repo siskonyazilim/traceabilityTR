@@ -30,7 +30,7 @@ export async function generateMetadata() {
     title = 'Akıllı Fabrikalar için Endüstriyel İzlenebilirlik & MES Çözümleri | Traceability';
   }
 
-  let description = 'Traceability.ro livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
+  let description = 'Traceability.com.tr livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
   if (isEn) {
     description = 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.';
   } else if (isTr) {
@@ -47,8 +47,8 @@ export async function generateMetadata() {
   return {
     title,
     description,
-    keywords: 'trasabilitate industrială, MES, industrie 4.0, RFID, RTLS, WMS, POKA YOKE, fabrici inteligente, automotive, alimentar, farmaceutic, quality control, warehouse management',
-    metadataBase: new URL('https://traceability.ro'),
+    keywords: 'endüstriyel izlenebilirlik, MES, endüstri 4.0, RFID, RTLS, WMS, POKA YOKE, akıllı fabrikalar, otomotiv, gıda, ilaç, kalite kontrol, depo yönetimi',
+    metadataBase: new URL('https://traceability.com.tr'),
     icons: {
       icon: '/favicon.svg',
       shortcut: '/favicon.svg',
@@ -58,11 +58,11 @@ export async function generateMetadata() {
       title,
       description,
       type: 'website',
-      url: 'https://traceability.ro',
+      url: 'https://traceability.com.tr',
       locale: ogLocale,
       images: [
         {
-          url: 'https://traceability.ro/siskon-logo-header.svg',
+          url: 'https://traceability.com.tr/siskon-logo-header.svg',
           width: 800,
           height: 600,
           alt: 'Traceability Logo',
@@ -73,10 +73,10 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://traceability.ro/siskon-logo-header.svg'],
+      images: ['https://traceability.com.tr/siskon-logo-header.svg'],
     },
     alternates: {
-      canonical: 'https://traceability.ro',
+      canonical: 'https://traceability.com.tr',
     },
   };
 }

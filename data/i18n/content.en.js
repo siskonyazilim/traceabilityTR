@@ -1141,7 +1141,7 @@
         <p><strong>SISKON Traceability Solutions</strong> enable you to manage all your production processes from a single platform.</p>
         <p><strong>SISKON Traceability Products</strong> electronically link test results, measurements, materials used, set and actual process data, visual inspections, repairs, and data from sampling stations to individual products based on serial numbers. This enables real-time monitoring of production processes, historical reporting, and analytical measurements. They support operational processes such as material flow, work orders, tool management, and energy usage, ensuring the digital collection of critical information beyond automated processes. Through horizontal and vertical integrations, all production processes can be digitally visualized and managed.</p>
         <p>With the motto <strong>"Continuous Control, Zero Errors"</strong>, we ensure end-to-end digital traceability for your business.</p>
-        <p><strong>Keywords</strong>: Industry 4.0, Traceability, What is Traceability?, Traceability Definition</p>
+        <p><strong>Keywords</strong>: Endüstri 4.0, Traceability, What is Traceability?, İzlenebilirlik Tanımı</p>
       `,
       category: 'News',
     },
@@ -1164,7 +1164,7 @@
         <p>This system, adaptable to various industries and applications, can add value to your business processes. Introduce your brand to us and confidently advance toward Industry 4.0.</p>
 
         <p>SISKON continues to code the future.</p>
-        <p><strong>Keywords</strong>: Barcode, BOMI Group, Industry 4.0, Scanning, SISKON</p>
+        <p><strong>Keywords</strong>: Barkod, BOMI Group, Endüstri 4.0, Tarama, SISKON</p>
       `,
       category: 'News',
     },
@@ -1222,7 +1222,7 @@
         </ul>
 
         <p><strong>Source</strong>: <a href="https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html">https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html</a></p>
-        <p><strong>Keywords</strong>: Industry 4.0, Industrial Transformation, SISKON, TUSIAD SD2</p>
+        <p><strong>Keywords</strong>: Endüstri 4.0, Endüstriyel Dönüşüm, SISKON, TUSIAD SD2</p>
       `,
       category: 'News',
     },

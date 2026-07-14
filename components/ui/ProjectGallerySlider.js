@@ -24,7 +24,7 @@ export default function ProjectGallerySlider({ images = [], title = 'Project', d
 
   return (
     <section className="mb-8">
-      <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+      <div className="relative overflow-hidden rounded-lg border border-slate-200 bg-slate-100">
         <div className="relative aspect-video w-full">
           <img
             src={normalizedImages[safeIndex]}
@@ -38,7 +38,7 @@ export default function ProjectGallerySlider({ images = [], title = 'Project', d
           aria-label="Previous image"
           onClick={goPrev}
           disabled={normalizedImages.length < 2}
-          className={`absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
+          className={`absolute left-3 top-1/2 -translate-y-1/2 rounded-md bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
             normalizedImages.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
           }`}
         >
@@ -49,7 +49,7 @@ export default function ProjectGallerySlider({ images = [], title = 'Project', d
           aria-label="Next image"
           onClick={goNext}
           disabled={normalizedImages.length < 2}
-          className={`absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
+          className={`absolute right-3 top-1/2 -translate-y-1/2 rounded-md bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
             normalizedImages.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
           }`}
         >

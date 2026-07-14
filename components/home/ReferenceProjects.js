@@ -92,7 +92,7 @@ export const ReferenceProjects = () => {
     <section id="reference-projects" className="section-block bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/30 to-transparent"></div>
-      <div className="absolute top-20 right-0 w-96 h-96 bg-accent-green/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 right-0 w-96 h-96 bg-accent-green/5 rounded-md blur-3xl"></div>
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
@@ -105,7 +105,7 @@ export const ReferenceProjects = () => {
           <div className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20 hidden md:block">
             <button
               onClick={handlePrev}
-              className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
+              className="h-12 w-12 rounded-md bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
               aria-label={t('sections.referenceProjectsPrev', 'Proiect anterior')}
             >
               <IconChevronLeft size={24} className="group-hover:text-accent-blue transition-colors" />
@@ -115,7 +115,7 @@ export const ReferenceProjects = () => {
           <div className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20 hidden md:block">
             <button
               onClick={handleNext}
-              className="h-12 w-12 rounded-full bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
+              className="h-12 w-12 rounded-md bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
               aria-label={t('sections.referenceProjectsNext', 'Proiect următor')}
             >
               <IconChevronRight size={24} className="group-hover:text-accent-blue transition-colors" />
@@ -131,7 +131,7 @@ export const ReferenceProjects = () => {
               >
                 <Link
                   href={toLocalePath(`/portfolio/${project.slug}`, locale)}
-                  className="h-full flex flex-col rounded-3xl border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
+                  className="h-full flex flex-col rounded-lg border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
                 >
                   {/* Image with Overlay Effect */}
                   <div className="relative h-44 bg-white overflow-hidden">
@@ -149,12 +149,12 @@ export const ReferenceProjects = () => {
                       />
                     </div>
                     {project.referenceDateLabel && (
-                      <div className="absolute bottom-3 left-3 rounded-full bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                      <div className="absolute bottom-3 left-3 rounded-md bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
                         {project.referenceDateLabel}
                       </div>
                     )}
                     {/* Corner Badge */}
-                    <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-gradient-to-br from-accent-blue to-accent-green shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute top-4 right-4 w-3 h-3 rounded-md bg-gradient-to-br from-accent-blue to-accent-green shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
 
                   {/* Content */}

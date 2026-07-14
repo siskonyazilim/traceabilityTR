@@ -23,7 +23,7 @@ export default function ContactPageClient() {
         'Strada Turnului Nr. 25\nCorp M.U.M., Scara 3, Birou 5, Etaj 2\n500152 Brasov\nJud. Brasov\nRomania'
       ),
       phone: '+40 368 402 002',
-      email: 'info@traceability.ro',
+      email: 'info@traceability.com.tr',
       mapEmbedUrl:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.3812984624165!2d25.6221473!3d45.6632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b910e74964b%3A0xac8086acca35f96a!2sSiskon%20Software%20and%20Automation%20SRL!5e0!3m2!1sen!2str!4v1783058783861!5m2!1sen!2str',
       mapQuery: 'Strada Turnului Nr. 25, Corp M.U.M., Scara 3, Birou 5, Etaj 2, 500152 Brasov, Jud. Brasov, Romania',
@@ -103,17 +103,19 @@ export default function ContactPageClient() {
     setErrorMessage('');
 
     try {
-      const payload = {
-        firstName: data.firstName,
-        lastName: data.lastName,
-        email: data.email,
-        website: data.website || '',
-        message: data.message,
-        locale,
-        _hp: data._hp || '',
-        csrfToken,
-        submittedAt: formMountedAt.current,
-      };
+          const payload = {
+          firstName: data.firstName,
+          lastName: data.lastName,
+          phone: data.phone,
+          company: data.company,
+          email: data.email,
+          website: data.website || '',
+          message: data.message,
+            
+          sourceSite: window.location.hostname,
+
+          locale,
+        };
 
       if (turnstileSiteKey && turnstileToken) {
         payload.turnstileToken = turnstileToken;
@@ -166,7 +168,7 @@ export default function ContactPageClient() {
           viewport={{ once: true }}
           className="pt-4 md:pt-6 pb-14 md:pb-20"
         >
-          <div className="mb-10 md:mb-12 rounded-3xl border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
+          <div className="mb-10 md:mb-12 rounded-lg border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
             <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">{t('contactPage.eyebrow', 'Contact')}</p>
             <h1 className="text-2xl md:text-4xl font-semibold tracking-tight leading-[1.08]">{t('contactPage.heroTitle', 'Să discutăm despre procesul tău de trasabilitate')}</h1>
           </div>
@@ -180,7 +182,7 @@ export default function ContactPageClient() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-2xl p-6 md:p-10 lg:p-12 shadow-[0_14px_34px_rgba(10,10,43,0.08)]"
+            className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-lg p-6 md:p-10 lg:p-12 shadow-[0_14px_34px_rgba(10,10,43,0.08)]"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-8 text-center">
               {t('contactPage.formTitle', 'Trimitere Mesaj')}
@@ -231,29 +233,100 @@ export default function ContactPageClient() {
               </div>
             </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-primary-black mb-2">
-                {t('contactPage.email', 'Email')} *
-              </label>
-              <input
-                id="email"
-                {...register('email', {
-                  required: t('contactPage.errors.emailRequired', 'Email-ul este necesar'),
-                  pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: t('contactPage.errors.emailInvalid', 'Email invalid'),
-                  },
-                })}
-                type="email"
-                aria-invalid={errors.email ? 'true' : 'false'}
-                aria-describedby={errors.email ? 'email-error' : undefined}
-                className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
-                placeholder={t('contactPage.placeholders.email', 'email@example.com')}
-              />
-              {errors.email && (
-                <span id="email-error" role="alert" className="text-accent-red text-sm">{errors.email.message}</span>
-              )}
-            </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-semibold text-primary-black mb-2"
+                >
+                  {t('contactPage.phone', 'Telefon')}
+                </label>
+
+                  <input
+                    id="phone"
+                  {...register('phone', {
+                    required: t(
+                      'contactPage.errors.phoneRequired',
+                      'Telefon numarası zorunludur'
+                    ),
+                  })}
+                    type="tel"
+                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                    placeholder={t(
+                    'contactPage.placeholders.phone',
+                    '+90 555 555 55 55'
+                  )}
+                  />
+
+                  {errors.phone && (
+                    <span className="text-accent-red text-sm">
+                      {errors.phone.message}
+                    </span>
+                  )}
+                </div>
+
+                <div>
+                  <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-primary-black mb-2">
+                    {t('contactPage.email', 'Email')} *
+                  </label>
+                  <input
+                    id="email"
+                    {...register('email', {
+                      required: t('contactPage.errors.emailRequired', 'Email-ul este necesar'),
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: t('contactPage.errors.emailInvalid', 'Email invalid'),
+                      },
+                    })}
+                    type="email"
+                    aria-invalid={errors.email ? 'true' : 'false'}
+                    aria-describedby={errors.email ? 'email-error' : undefined}
+                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                    placeholder={t('contactPage.placeholders.email', 'email@example.com')}
+                  />
+                  {errors.email && (
+                    <span id="email-error" role="alert" className="text-accent-red text-sm">{errors.email.message}</span>
+                  )}
+                </div>
+                </div>
+              </div>
+
+
+                  <div>
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-semibold text-primary-black mb-2"
+                  >
+                    {t('contactPage.company', 'Şirket Adı')} *
+                  </label>
+
+                  <input
+                    id="company"
+                      {...register('company', {
+                      required: t(
+                        'contactPage.errors.companyRequired',
+                        'Şirket adı zorunludur'
+                      ),
+                      minLength: {
+                        value: 2,
+                        message: t(
+                          'contactPage.errors.companyMin',
+                          'En az 2 karakter giriniz'
+                        ),
+                      },
+                    })}
+                    type="text"
+                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                    placeholder="ABC Otomotiv"
+                  />
+
+                  {errors.company && (
+                    <span className="text-accent-red text-sm">
+                      {errors.company.message}
+                    </span>
+                  )}
+                </div>
 
             <div>
               <label htmlFor="website" className="block text-sm font-semibold text-primary-black mb-2">
@@ -389,7 +462,7 @@ export default function ContactPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.06, duration: 0.25 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-1 md:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-2xl overflow-hidden"
+                className="grid grid-cols-1 md:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-lg overflow-hidden"
               >
                 <div className="min-h-[320px] lg:min-h-[380px] bg-white p-6 md:p-8 lg:p-10 flex flex-col justify-center">
                   <h3 className="text-xl md:text-2xl font-semibold text-primary-black mb-5 md:mb-6">

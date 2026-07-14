@@ -225,7 +225,7 @@ export const HeroSlider = () => {
             aria-current={current === index ? 'true' : undefined}
           >
             <div
-              className={`h-3 rounded-full transition-all duration-200 ${
+              className={`h-3 rounded-md transition-all duration-200 ${
                 current === index
                   ? 'bg-slate-blue w-8'
                   : 'bg-inactive-gray bg-opacity-70 w-3 group-hover:bg-accent-blue'

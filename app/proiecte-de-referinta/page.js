@@ -31,8 +31,8 @@ export async function generateMetadata() {
   }
 
   const listUrl = isEn
-    ? 'https://traceability.ro/reference-projects'
-    : 'https://traceability.ro/proiecte-de-referinta';
+    ? 'https://traceability.com.tr/reference-projects'
+    : 'https://traceability.com.tr/proiecte-de-referinta';
 
   return {
     title,
@@ -48,7 +48,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://traceability.ro/siskon-logo-header.svg',
+          url: 'https://traceability.com.tr/siskon-logo-header.svg',
           width: 800,
           height: 600,
           alt: title,
@@ -59,7 +59,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://traceability.ro/siskon-logo-header.svg'],
+      images: ['https://traceability.com.tr/siskon-logo-header.svg'],
     },
   };
 }
