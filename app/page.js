@@ -154,7 +154,13 @@ export default function HomePage() {
           }
         ],
         "sameAs": [
-          "https://www.linkedin.com/company/siskonyazilimveotomasyon/"
+          "https://www.linkedin.com/company/siskonyazilimveotomasyon",
+          "https://www.linkedin.com/company/siskonromania/",
+          "https://x.com/siskonyazilim",
+          "https://x.com/siskonromania",
+          "https://www.instagram.com/siskonyazilimveotomasyon/",
+          "https://www.instagram.com/siskon_romania",
+          "https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg"
         ]
       }
     ]
