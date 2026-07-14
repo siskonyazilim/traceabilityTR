@@ -76,6 +76,59 @@ export default function HomePage() {
         "inLanguage": ["tr", "en", "ro"]
       },
       {
+        "@type": "WebPage",
+        "@id": "https://traceability.com.tr/#webpage",
+        "url": "https://traceability.com.tr/",
+        "name": "Traceability | End-to-End Industrial Traceability and MES",
+        "isPartOf": {
+          "@id": "https://traceability.com.tr/#website"
+        },
+        "about": {
+          "@id": "https://traceability.com.tr/#softwareapplication"
+        },
+        "breadcrumb": {
+          "@id": "https://traceability.com.tr/#breadcrumb"
+        },
+        "inLanguage": ["tr", "en", "ro"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://traceability.com.tr/#softwareapplication",
+        "name": "Traceability Industrial Traceability Platform",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://traceability.com.tr/",
+        "description": "End-to-end industrial traceability and MES software applications for smart factories including RFID, RTLS, WMS, Poka Yoke and ERP/MES integrations.",
+        "creator": {
+          "@id": "https://traceability.com.tr/#organization"
+        },
+        "publisher": {
+          "@id": "https://traceability.com.tr/#organization"
+        },
+        "featureList": [
+          "End-to-end production traceability",
+          "MES integration",
+          "ERP integration",
+          "RFID-based tracking",
+          "RTLS location tracking",
+          "WMS integration",
+          "Poka Yoke quality control"
+        ],
+        "availableLanguage": ["tr", "en", "ro"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://traceability.com.tr/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Traceability",
+            "item": "https://traceability.com.tr/"
+          }
+        ]
+      },
+      {
         "@type": "Organization",
         "@id": "https://traceability.com.tr/#organization",
         "name": "Traceability",
