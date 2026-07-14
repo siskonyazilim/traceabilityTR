@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { DEFAULT_LOCALE, isSupportedLocale } from './lib/i18n/dictionaries';
+import { DEFAULT_LOCALE } from './lib/i18n/dictionaries';
 
 const LOCALE_PREFIXES = new Set(['tr', 'en', 'ro']);
 
@@ -14,13 +14,6 @@ function getLocaleFromPath(pathname) {
 		return segment;
 	}
 	return null;
-}
-
-function withLocalePrefix(pathname, locale) {
-	if (pathname === '/') {
-		return `/${locale}`;
-	}
-	return `/${locale}${pathname}`;
 }
 
 function stripLocalePrefix(pathname, locale) {
@@ -49,7 +42,6 @@ export function middleware(request) {
 
 	const localeFromPath = getLocaleFromPath(pathname);
 	const localeCookie = cookies.get('locale')?.value;
-	const currentLocale = isSupportedLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
 
 	if (localeFromPath) {
 		if (localeCookie !== localeFromPath) {
@@ -68,13 +60,7 @@ export function middleware(request) {
 		return NextResponse.rewrite(rewriteUrl);
 	}
 
-	if (currentLocale !== DEFAULT_LOCALE && LOCALE_PREFIXES.has(currentLocale)) {
-		const redirectUrl = nextUrl.clone();
-		redirectUrl.pathname = withLocalePrefix(pathname, currentLocale);
-		return NextResponse.redirect(redirectUrl);
-	}
-
-	if (!isSupportedLocale(localeCookie)) {
+	if (localeCookie !== DEFAULT_LOCALE) {
 		const response = NextResponse.next();
 		response.cookies.set('locale', DEFAULT_LOCALE, {
 			path: '/',
