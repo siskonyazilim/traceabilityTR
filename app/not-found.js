@@ -16,7 +16,7 @@ export default function NotFound() {
 
       <Container className="relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-lg shadow-soft p-8 md:p-12 text-center">
+          <div className="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-md shadow-soft p-8 md:p-12 text-center">
             <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-secondary-blue font-semibold mb-4">
               {t('notFound.codeLabel', 'Error')}
             </p>

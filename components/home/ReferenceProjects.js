@@ -131,7 +131,7 @@ export const ReferenceProjects = () => {
               >
                 <Link
                   href={toLocalePath(`/portfolio/${project.slug}`, locale)}
-                  className="h-full flex flex-col rounded-lg border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
+                  className="h-full flex flex-col rounded-md border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
                 >
                   {/* Image with Overlay Effect */}
                   <div className="relative h-44 bg-white overflow-hidden">

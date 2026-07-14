@@ -116,7 +116,7 @@ function getNavigationLabels(locale, type) {
 
 function DetailVisual({ visual, sizeClass = 'h-48 md:h-56' }) {
   return (
-    <div className={`${sizeClass} rounded-lg border border-slate-200 bg-white flex items-center justify-center overflow-hidden`}>
+    <div className={`${sizeClass} rounded-md border border-slate-200 bg-white flex items-center justify-center overflow-hidden`}>
       {visual.src ? (
         <img
           src={visual.src}
@@ -201,7 +201,7 @@ function NavSection({ item, detailBaseHref, prevLabel, nextLabel }) {
         {item.prevSlug ? (
           <Link
             href={`${detailBaseHref}/${item.prevSlug}`}
-            className="group flex flex-col items-start gap-2 rounded-lg border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
+            className="group flex flex-col items-start gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
           >
             <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
               <IconArrowLeft size={16} />
@@ -218,7 +218,7 @@ function NavSection({ item, detailBaseHref, prevLabel, nextLabel }) {
         {item.nextSlug ? (
           <Link
             href={`${detailBaseHref}/${item.nextSlug}`}
-            className="group flex flex-col items-end gap-2 rounded-lg border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
+            className="group flex flex-col items-end gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
           >
             <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
               <span>{nextLabel}</span>
@@ -311,7 +311,7 @@ export default function CatalogDetailPage({ item, type, locale }) {
           <IconArrowLeft /> {labels.backToHome}
         </Link>
 
-        <article className="mx-auto w-full rounded-lg border border-slate-200 bg-[#f9fbfd] p-6 md:p-10 shadow-soft">
+        <article className="mx-auto w-full rounded-md border border-slate-200 bg-[#f9fbfd] p-6 md:p-10 shadow-soft">
           <header className={`mb-6 ${item.hideHeaderDivider ? '' : 'border-b border-slate-200 pb-4'}`}>
             <div className={`grid grid-cols-1 gap-8 ${heroGridClass} md:gap-10 ${alignHeroCenter ? 'items-center' : 'items-start'}`}>
               <div className={`${headingOffsetClass} text-center`}>

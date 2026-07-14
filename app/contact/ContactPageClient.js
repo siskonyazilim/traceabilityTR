@@ -168,7 +168,7 @@ export default function ContactPageClient() {
           viewport={{ once: true }}
           className="pt-4 md:pt-6 pb-14 md:pb-20"
         >
-          <div className="mb-10 md:mb-12 rounded-lg border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
+          <div className="mb-10 md:mb-12 rounded-md border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
             <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">{t('contactPage.eyebrow', 'Contact')}</p>
             <h1 className="text-2xl md:text-4xl font-semibold tracking-tight leading-[1.08]">{t('contactPage.heroTitle', 'Să discutăm despre procesul tău de trasabilitate')}</h1>
           </div>
@@ -182,7 +182,7 @@ export default function ContactPageClient() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-lg p-6 md:p-10 lg:p-12 shadow-[0_14px_34px_rgba(10,10,43,0.08)]"
+            className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-md p-6 md:p-10 lg:p-12 shadow-[0_14px_34px_rgba(10,10,43,0.08)]"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-8 text-center">
               {t('contactPage.formTitle', 'Trimitere Mesaj')}
@@ -203,7 +203,7 @@ export default function ContactPageClient() {
                   type="text"
                   aria-invalid={errors.firstName ? 'true' : 'false'}
                   aria-describedby={errors.firstName ? 'firstName-error' : undefined}
-                  className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                  className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
                   placeholder={t('contactPage.placeholders.firstName', 'Ion')}
                 />
                 {errors.firstName && (
@@ -224,7 +224,7 @@ export default function ContactPageClient() {
                   type="text"
                   aria-invalid={errors.lastName ? 'true' : 'false'}
                   aria-describedby={errors.lastName ? 'lastName-error' : undefined}
-                  className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                  className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
                   placeholder={t('contactPage.placeholders.lastName', 'Popescu')}
                 />
                 {errors.lastName && (
@@ -251,7 +251,7 @@ export default function ContactPageClient() {
                     ),
                   })}
                     type="tel"
-                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
                     placeholder={t(
                     'contactPage.placeholders.phone',
                     '+90 555 555 55 55'
@@ -282,7 +282,7 @@ export default function ContactPageClient() {
                     type="email"
                     aria-invalid={errors.email ? 'true' : 'false'}
                     aria-describedby={errors.email ? 'email-error' : undefined}
-                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
                     placeholder={t('contactPage.placeholders.email', 'email@example.com')}
                   />
                   {errors.email && (
@@ -317,7 +317,7 @@ export default function ContactPageClient() {
                       },
                     })}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
                     placeholder="ABC Otomotiv"
                   />
 
@@ -343,7 +343,7 @@ export default function ContactPageClient() {
                 type="text"
                 aria-invalid={errors.website ? 'true' : 'false'}
                 aria-describedby={errors.website ? 'website-error' : undefined}
-                className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white"
+                className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
                 placeholder={t('contactPage.placeholders.website', 'https://www.example.com')}
               />
               {errors.website && (
@@ -370,7 +370,7 @@ export default function ContactPageClient() {
                 rows="6"
                 aria-invalid={errors.message ? 'true' : 'false'}
                 aria-describedby={errors.message ? 'message-error' : undefined}
-                className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-lg focus:outline-none focus:border-accent-blue bg-white resize-none"
+                className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white resize-none"
                 placeholder={t('contactPage.placeholders.message', 'Scrie-ți mesajul aici...')}
               />
               {errors.message && (
@@ -426,7 +426,7 @@ export default function ContactPageClient() {
                 animate={{ opacity: 1, y: 0 }}
                 role="status"
                 aria-live="polite"
-                className="bg-accent-green bg-opacity-20 border-2 border-accent-green text-accent-green px-4 py-3 rounded-lg text-center font-semibold"
+                className="bg-accent-green bg-opacity-20 border-2 border-accent-green text-accent-green px-4 py-3 rounded-md text-center font-semibold"
               >
                 {t('contactPage.success', '✓ Mesajul dvs. a fost trimis cu succes!')}
               </motion.div>
@@ -438,7 +438,7 @@ export default function ContactPageClient() {
                 animate={{ opacity: 1, y: 0 }}
                 role="alert"
                 aria-live="assertive"
-                className="bg-accent-red bg-opacity-10 border-2 border-accent-red text-accent-red px-4 py-3 rounded-lg text-center font-semibold"
+                className="bg-accent-red bg-opacity-10 border-2 border-accent-red text-accent-red px-4 py-3 rounded-md text-center font-semibold"
               >
                 {errorMessage}
               </motion.div>
@@ -462,7 +462,7 @@ export default function ContactPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.06, duration: 0.25 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-1 md:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-lg overflow-hidden"
+                className="grid grid-cols-1 md:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-md overflow-hidden"
               >
                 <div className="min-h-[320px] lg:min-h-[380px] bg-white p-6 md:p-8 lg:p-10 flex flex-col justify-center">
                   <h3 className="text-xl md:text-2xl font-semibold text-primary-black mb-5 md:mb-6">

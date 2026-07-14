@@ -24,7 +24,7 @@ export default function ProjectGallerySlider({ images = [], title = 'Project', d
 
   return (
     <section className="mb-8">
-      <div className="relative overflow-hidden rounded-lg border border-slate-200 bg-slate-100">
+      <div className="relative overflow-hidden rounded-md border border-slate-200 bg-slate-100">
         <div className="relative aspect-video w-full">
           <img
             src={normalizedImages[safeIndex]}
@@ -70,7 +70,7 @@ export default function ProjectGallerySlider({ images = [], title = 'Project', d
             type="button"
             onClick={() => setActiveIndex(index)}
             aria-label={`Go to image ${index + 1}`}
-            className={`h-14 w-24 overflow-hidden rounded-lg border transition ${
+            className={`h-14 w-24 overflow-hidden rounded-md border transition ${
               safeIndex === index
                 ? 'border-secondary-blue ring-2 ring-secondary-blue/30'
                 : 'border-slate-200 hover:border-slate-300'

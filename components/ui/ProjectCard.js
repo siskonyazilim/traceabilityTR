@@ -98,7 +98,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
     >
       <Link
         href={detailHref}
-        className="group bg-white rounded-lg border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full flex flex-col"
+        className="group bg-white rounded-md border border-gray-light shadow-md hover:shadow-xl hover:border-accent-blue transition-all overflow-hidden h-full flex flex-col"
       >
         {/* Project Image */}
         <div className="h-44 flex items-center justify-center overflow-hidden relative">

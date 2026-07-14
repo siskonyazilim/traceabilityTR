@@ -131,7 +131,7 @@ export default function ReferenceProjectsSlider({
             >
               <Link
                 href={toLocalePath(`${detailBasePath}/${project.slug}`, locale)}
-                className="h-full flex flex-col rounded-lg border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
+                className="h-full flex flex-col rounded-md border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
               >
                 <div className="relative h-44 bg-white overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

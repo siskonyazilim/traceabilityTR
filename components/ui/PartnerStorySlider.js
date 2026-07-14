@@ -33,7 +33,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
 
   if (normalizedSlides.length === 0) {
     return (
-      <section className="mb-14 rounded-lg border border-dashed border-slate-300 bg-slate-50/60 px-6 py-8 text-center">
+      <section className="mb-14 rounded-md border border-dashed border-slate-300 bg-slate-50/60 px-6 py-8 text-center">
         <h3 className="text-xl md:text-2xl font-semibold text-primary-black mb-2">
           {locale === 'en' ? 'Brand Gallery and Story' : 'Galerie si Poveste de Brand'}
         </h3>
@@ -60,7 +60,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
 
   return (
     <section className="mb-14">
-      <div className="relative overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+      <div className="relative overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm">
         <div className="grid grid-cols-1 lg:grid-cols-5">
           <div className={hasStoryContent ? 'lg:col-span-3' : 'lg:col-span-5'}>
             <div className={`relative w-full bg-slate-100 ${hasStoryContent ? 'h-[320px] md:h-[420px] lg:h-[460px]' : 'h-[340px] md:h-[460px] lg:h-[560px]'}`}>
@@ -119,7 +119,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
             type="button"
             onClick={() => setActiveIndex(index)}
             aria-label={locale === 'en' ? `Go to slide ${index + 1}` : `Mergi la slide ${index + 1}`}
-            className={`h-14 w-24 overflow-hidden rounded-lg border transition ${
+            className={`h-14 w-24 overflow-hidden rounded-md border transition ${
               safeIndex === index
                 ? 'border-secondary-blue ring-2 ring-secondary-blue/30'
                 : 'border-slate-200 hover:border-slate-300'

@@ -73,7 +73,7 @@ export const FaqAccordion = () => {
         {/* FAQ Grid - 2 columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Column - First 4 questions */}
-          <div className="bg-white rounded-lg shadow-soft overflow-hidden">
+          <div className="bg-white rounded-md shadow-soft overflow-hidden">
             {faqBundle.items.slice(0, 4).map((faq, index) => (
               <div
                 key={faq.id}
@@ -130,7 +130,7 @@ export const FaqAccordion = () => {
           </div>
 
           {/* Right Column - Last 4 questions */}
-          <div className="bg-white rounded-lg shadow-soft overflow-hidden">
+          <div className="bg-white rounded-md shadow-soft overflow-hidden">
             {faqBundle.items.slice(4, 8).map((faq, index) => (
               <div
                 key={faq.id}

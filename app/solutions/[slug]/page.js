@@ -368,7 +368,7 @@ export default async function SolutionDetailPage({ params }) {
             </div>
 
             {/* ROI Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16 bg-gradient-to-br from-primary-black to-secondary-blue rounded-lg p-5 md:p-8 text-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16 bg-gradient-to-br from-primary-black to-secondary-blue rounded-md p-5 md:p-8 text-white">
               {Object.entries(solution.roi).map(([key, value]) => (
                 <div key={key} className="text-center">
                   <div className="text-4xl font-bold mb-2">{value}</div>
@@ -382,7 +382,7 @@ export default async function SolutionDetailPage({ params }) {
               <h2 className="text-xl font-semibold text-primary-black mb-8">{labels.benefits}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {solution.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg border-2 border-gray-200">
+                  <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-md border-2 border-gray-200">
                     <IconCheck className="text-accent-blue flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-text">{benefit}</span>
                   </div>
@@ -395,7 +395,7 @@ export default async function SolutionDetailPage({ params }) {
               <h2 className="text-xl font-semibold text-primary-black mb-8">{labels.useCases}</h2>
               <div className="space-y-6">
                 {solution.useCases.map((useCase, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-accent-blue transition-colors">
+                  <div key={index} className="bg-white p-6 rounded-md border-2 border-gray-200 hover:border-accent-blue transition-colors">
                     <h3 className="text-lg font-semibold text-primary-black mb-3">{useCase.title}</h3>
                     <p className="text-gray-text leading-relaxed">{useCase.description}</p>
                   </div>
@@ -416,7 +416,7 @@ export default async function SolutionDetailPage({ params }) {
             </div>
 
             {/* CTA */}
-            <div className="bg-gradient-to-br from-slate-50 to-white p-12 rounded-lg border-2 border-gray-200">
+            <div className="bg-gradient-to-br from-slate-50 to-white p-12 rounded-md border-2 border-gray-200">
               <PagePrimaryCta
                 className="text-center"
                 title={labels.ctaTitle}

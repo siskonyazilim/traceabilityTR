@@ -83,7 +83,7 @@ export default function BlogPageClient() {
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}
-                      className={`min-w-12 min-h-[48px] px-4 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                      className={`min-w-12 min-h-[48px] px-4 py-3 rounded-md font-semibold transition-all duration-200 ${
                         currentPage === page
                           ? 'bg-secondary-blue text-white shadow-[0_10px_22px_rgba(0,25,210,0.24)]'
                           : 'bg-gray-light text-primary-black hover:bg-slate-200'

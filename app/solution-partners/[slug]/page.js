@@ -130,7 +130,7 @@ export default async function PartnerDetailPage({ params }) {
             </div>
 
             <div className="lg:self-stretch flex items-center justify-center">
-              <div className="w-full h-full min-h-72 md:min-h-80 xl:min-h-96 flex items-center justify-center overflow-hidden relative px-4 md:px-6 rounded-lg border border-slate-200 bg-white">
+              <div className="w-full h-full min-h-72 md:min-h-80 xl:min-h-96 flex items-center justify-center overflow-hidden relative px-4 md:px-6 rounded-md border border-slate-200 bg-white">
                 <img
                   src={partner.detailLogo || partner.logo}
                   alt={partner.name}
@@ -153,7 +153,7 @@ export default async function PartnerDetailPage({ params }) {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <Link
                 href={toLocalePath(`${detailBasePath}/${prevPartner.slug}`, locale)}
-                className="group flex flex-col items-start gap-2 rounded-lg border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
+                className="group flex flex-col items-start gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
               >
                 <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
                   <IconArrowLeft size={16} />
@@ -166,7 +166,7 @@ export default async function PartnerDetailPage({ params }) {
 
               <Link
                 href={toLocalePath(`${detailBasePath}/${nextPartner.slug}`, locale)}
-                className="group flex flex-col items-end gap-2 rounded-lg border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
+                className="group flex flex-col items-end gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
               >
                 <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
                   <span>{f(locale, 'partnerDetailPage', 'nextPartner')}</span>

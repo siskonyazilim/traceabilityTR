@@ -34,7 +34,7 @@ export const BlogCard = ({
     <article className="h-full">
       <Link
         href={toLocalePath(`/blog/${post.slug}`, locale)}
-        className="group flex h-full flex-col rounded-lg border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/70 shadow-soft hover:shadow-soft-lg hover:border-sky-300 transition-all overflow-hidden"
+        className="group flex h-full flex-col rounded-md border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/70 shadow-soft hover:shadow-soft-lg hover:border-sky-300 transition-all overflow-hidden"
       >
         {/* Blog image */}
         <div className="aspect-video bg-gradient-to-br from-sky-100 via-blue-100 to-cyan-100 flex items-center justify-center overflow-hidden relative">

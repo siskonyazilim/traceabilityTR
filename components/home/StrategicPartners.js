@@ -112,7 +112,7 @@ export const StrategicPartners = () => {
             {visiblePartners.map((partner, index) => (
               <Link key={partner.id} href={toLocalePath(`${detailBasePath}/${partner.slug}`, locale)}>
                 <article
-                  className="h-full rounded-lg bg-gradient-to-b from-white to-slate-50/70 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
+                  className="h-full rounded-md bg-gradient-to-b from-white to-slate-50/70 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                 >
                   {/* Logo */}
                   <div className="h-40 flex items-center justify-center p-6 bg-white relative overflow-hidden">
