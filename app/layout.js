@@ -2,6 +2,7 @@ import './globals.css'
 import 'font-awesome/css/font-awesome.min.css'
 import { Layout } from '../components/layout/Layout'
 import { LanguageProvider } from '../components/i18n/LanguageProvider'
+import BreadcrumbSchema from '../components/seo/BreadcrumbSchema'
 import { cookies } from 'next/headers'
 import { Kanit } from 'next/font/google'
 import { DEFAULT_LOCALE, isSupportedLocale } from '../lib/i18n/dictionaries'
@@ -143,6 +144,7 @@ export default async function RootLayout({ children }) {
   idleTimer = setTimeout(init, 3500);
 })();` }}
         />
+        <BreadcrumbSchema />
       </head>
       <body className={kanit.variable}>
         <noscript>

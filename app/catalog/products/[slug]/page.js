@@ -92,5 +92,25 @@ export default async function CatalogProductDetailPage({ params }) {
     nextTitle: currentIndex < localizedProducts.length - 1 ? localizedProducts[currentIndex + 1].title : null,
   };
 
-  return <CatalogDetailPage item={withNavigation} type="product" locale={locale} />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": item.title,
+    "description": item.summary || item.description,
+    "image": item.image ? (item.image.startsWith('http') ? item.image : `https://traceability.com.tr${item.image}`) : undefined,
+    "brand": {
+      "@type": "Brand",
+      "name": "Traceability"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <CatalogDetailPage item={withNavigation} type="product" locale={locale} />
+    </>
+  );
 }
