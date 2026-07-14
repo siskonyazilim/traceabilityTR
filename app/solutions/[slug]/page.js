@@ -4,9 +4,10 @@ import { cookies } from 'next/headers';
 import Container from '../../../components/ui/Container';
 import { IconArrowLeft, IconCheck } from '../../../components/ui/Icons';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
-import { localizeSolutionDetail } from '../../../lib/i18n/contentLocalization';
+import { localizeSolutionDetail, getFaqBundle } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
-import { DEFAULT_LOCALE, isSupportedLocale } from '../../../lib/i18n/dictionaries';
+import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
+import JsonLd from '../../../components/seo/JsonLd';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
 const solutions = {
@@ -317,38 +318,101 @@ export default async function SolutionDetailPage({ params }) {
     roi: f(locale, 'solutionDetailPage', 'roi', {}),
   };
 
-  // Schema.org markup
-  const schemaData = {
+  const relativePath = `/solutions/${slug}`;
+  const relativeHomePath = '/';
+  const pageUrl = `https://traceability.com.tr${toLocalePath(relativePath, locale)}`;
+  const homeUrl = `https://traceability.com.tr${toLocalePath(relativeHomePath, locale)}`;
+
+  const serviceTypeByLocale = {
+    tr: "Endüstriyel İzlenebilirlik ve Otomasyon Sistemleri",
+    en: "Industrial Traceability and Automation Systems",
+    ro: "Sisteme de Trasabilitate și Automatizare Industrială",
+  };
+  const homeLabelByLocale = {
+    tr: "Anasayfa",
+    en: "Home",
+    ro: "Acasă",
+  };
+  const areaServedByLocale = {
+    tr: "Türkiye",
+    en: "Global",
+    ro: "România",
+  };
+
+  const faqBundle = getFaqBundle([], locale);
+  // Get 3 relevant FAQs (using general translated FAQ questions and answers)
+  const faqItems = (faqBundle?.items || []).slice(0, 3);
+
+  const graphSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: solution.title,
-    description: solution.description,
-    provider: {
-      '@type': 'Organization',
-      name: 'Traceability',
-      url: 'https://traceability.com.tr',
-    },
-    areaServed: 'RO',
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: labels.catalog,
-      itemListElement: solution.useCases.map((useCase, index) => ({
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: useCase.title,
-          description: useCase.description,
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${pageUrl}#service`,
+        name: solution.title,
+        serviceType: serviceTypeByLocale[locale] || serviceTypeByLocale.ro,
+        description: solution.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Siskon Otomasyon ve Yazılım A.Ş.',
+          url: 'https://siskon.com.tr',
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: areaServedByLocale[locale] || areaServedByLocale.ro,
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: labels.catalog,
+          itemListElement: solution.useCases.map((useCase) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: useCase.title,
+              description: useCase.description,
+            },
+          })),
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': homeLabelByLocale[locale] || homeLabelByLocale.ro,
+            'item': homeUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': solution.title,
+            'item': pageUrl,
+          },
+        ],
+      },
+    ],
+  };
+
+  if (faqItems.length > 0) {
+    graphSchema['@graph'].push({
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faqItems.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
         },
       })),
-    },
-  };
+    });
+  }
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+      <JsonLd data={graphSchema} />
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
         <Container size="xl">
           <Link href="/#traceability-solutions" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">

@@ -12,6 +12,7 @@ import { getReferenceNarrative } from '../../../lib/i18n/referenceNarratives';
 import { sortReferenceProjects, withReferenceProjectTimeline } from '../../../lib/referenceProjectOrdering';
 import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
+import JsonLd from '../../../components/seo/JsonLd';
 /* eslint-disable react/prop-types */
 
 export async function generateMetadata({ params }) {
@@ -136,8 +137,91 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     || (project.image?.includes('/Logos/') ? '/resmi/Factory.jpg' : project.image);
   const sliderImages = [featuredImage, ...(Array.isArray(project.gallery) ? project.gallery : [])];
 
+  const pageUrl = `https://traceability.com.tr${toLocalePath(`/portfolio/${project.slug}`, locale)}`;
+  const homeUrl = `https://traceability.com.tr${toLocalePath('/', locale)}`;
+  const projectsUrl = `https://traceability.com.tr${localizedListPath}`;
+
+  const homeLabelByLocale = {
+    tr: "Anasayfa",
+    en: "Home",
+    ro: "Acasă",
+  };
+
+  const projectsLabelByLocale = {
+    tr: "Referans Projelerimiz",
+    en: "Reference Projects",
+    ro: "Proiecte de Referință",
+  };
+
+  const absoluteMainImage = featuredImage.startsWith('http') ? featuredImage : `https://traceability.com.tr${featuredImage}`;
+  const absoluteGalleryImages = [
+    absoluteMainImage,
+    ...(Array.isArray(project.gallery) ? project.gallery : []).map(img => 
+      img.startsWith('http') ? img : `https://traceability.com.tr${img}`
+    )
+  ];
+
+  const graphSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${pageUrl}#article`,
+        "headline": project.title,
+        "alternativeHeadline": project.description,
+        "image": absoluteGalleryImages,
+        "datePublished": "2026-01-15T09:00:00+03:00",
+        "dateModified": "2026-07-14T10:00:00+03:00",
+        "author": {
+          "@type": "Organization",
+          "name": "Siskon Mühendislik Ekibi",
+          "url": "https://siskon.com.tr"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Siskon Otomasyon ve Yazılım A.Ş.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://traceability.com.tr/siskon-logo-header.svg"
+          }
+        },
+        "description": project.description,
+        "about": (project.technologies || []).map(tech => ({
+          "@type": "Thing",
+          "name": tech
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": homeLabelByLocale[locale] || homeLabelByLocale.ro,
+            "item": homeUrl
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": projectsLabelByLocale[locale] || projectsLabelByLocale.ro,
+            "item": projectsUrl
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": project.title,
+            "item": pageUrl
+          }
+        ]
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen bg-white pt-24 pb-16">
+    <>
+      <JsonLd data={graphSchema} />
+      <div className="min-h-screen bg-white pt-24 pb-16">
       <Container size="xl">
         {/* Back Button */}
         <Link href={backHref} className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">

@@ -2,7 +2,9 @@ import { notFound } from 'next/navigation';
 import { cookies } from 'next/headers';
 import CatalogDetailPage from '../../../../components/sections/CatalogDetailPage';
 import { solutions } from '../../../../data/solutions';
-import { localizeSolutions } from '../../../../lib/i18n/contentLocalization';
+import { localizeSolutions, getFaqBundle } from '../../../../lib/i18n/contentLocalization';
+import { toLocalePath } from '../../../../lib/i18n/dictionaries';
+import JsonLd from '../../../../components/seo/JsonLd';
 /* eslint-disable react/prop-types */
 
 function normalizeLocale(value) {
@@ -92,5 +94,103 @@ export default async function CatalogSolutionDetailPage({ params }) {
     nextTitle: currentIndex < localizedSolutions.length - 1 ? localizedSolutions[currentIndex + 1].title : null,
   };
 
-  return <CatalogDetailPage item={withNavigation} type="solution" locale={locale} />;
+  const solutionPath = `/catalog/solutions/${slug}`;
+  const relativeHomePath = '/';
+  const relativeSolutionsPath = '/?tab=solutions#traceability-solutions';
+
+  const pageUrl = `https://traceability.com.tr${toLocalePath(solutionPath, locale)}`;
+  const homeUrl = `https://traceability.com.tr${toLocalePath(relativeHomePath, locale)}`;
+  const solutionsUrl = `https://traceability.com.tr${toLocalePath(relativeSolutionsPath, locale)}`;
+
+  const serviceTypeByLocale = {
+    tr: "Endüstriyel İzlenebilirlik ve Otomasyon Sistemleri",
+    en: "Industrial Traceability and Automation Systems",
+    ro: "Sisteme de Trasabilitate și Automatizare Industrială",
+  };
+  const homeLabelByLocale = {
+    tr: "Anasayfa",
+    en: "Home",
+    ro: "Acasă",
+  };
+  const solutionsLabelByLocale = {
+    tr: "Çözümler",
+    en: "Solutions",
+    ro: "Soluții",
+  };
+  const areaServedByLocale = {
+    tr: "Türkiye",
+    en: "Global",
+    ro: "România",
+  };
+
+  const faqBundle = getFaqBundle([], locale);
+  const faqItems = (faqBundle?.items || []).slice(0, 3);
+
+  const graphSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${pageUrl}#service`,
+        name: item.title,
+        serviceType: serviceTypeByLocale[locale] || serviceTypeByLocale.ro,
+        description: item.description || item.summary,
+        provider: {
+          '@type': 'Organization',
+          name: 'Siskon Otomasyon ve Yazılım A.Ş.',
+          url: 'https://siskon.com.tr',
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: areaServedByLocale[locale] || areaServedByLocale.ro,
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': homeLabelByLocale[locale] || homeLabelByLocale.ro,
+            'item': homeUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': solutionsLabelByLocale[locale] || solutionsLabelByLocale.ro,
+            'item': solutionsUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': item.title,
+            'item': pageUrl,
+          },
+        ],
+      },
+    ],
+  };
+
+  if (faqItems.length > 0) {
+    graphSchema['@graph'].push({
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faqItems.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  return (
+    <>
+      <JsonLd data={graphSchema} />
+      <CatalogDetailPage item={withNavigation} type="solution" locale={locale} />
+    </>
+  );
 }
