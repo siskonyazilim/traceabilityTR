@@ -121,7 +121,7 @@ export default async function RootLayout({ children }) {
     var s = document.createElement('script');
     s.id = 'gtm-script';
     s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KH28SB29';
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-547XQ7CS';
     document.head.appendChild(s);
     cleanup();
   }
@@ -150,7 +150,7 @@ export default async function RootLayout({ children }) {
         <noscript>
           <iframe
             title="gtm-noscript"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KH28SB29"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-547XQ7CS"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
