@@ -654,7 +654,7 @@ export const contentEn = {
       content: "<h2>RFID Gate with Digital Kanban</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'pmi-barcode-gate': {
-      title: "PMI - Barcode Gate",
+      title: "PMI – Automatic Shipment Barcode Verification System",
       sector: "Tobacco",
       description: "During the shipping process, a barcode-gate system installed at the exit ramp automatically reads all pallet labels.",
       content: "<h2>Barcode Gate</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",

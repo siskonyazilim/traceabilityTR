@@ -657,7 +657,7 @@ export const contentTr = {
       content: '<h2>Dijital Kanban ile RFID Kapı</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
     },
     'pmi-barcode-gate': {
-      title: 'PMI - Barkod Kapı',
+      title: 'PMI – Otomatik Sevkiyat Barkod Doğrulama Sistemi',
       sector: 'Tütün',
       description: 'Sevkiyat sürecinde çıkış rampasına kurulan barkod kapı sistemi, tüm palet etiketlerini otomatik olarak okumaktadır.',
       content: '<h2>Barkod Kapı</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',

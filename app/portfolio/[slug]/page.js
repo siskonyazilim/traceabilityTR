@@ -14,6 +14,21 @@ import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i1
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 import JsonLd from '../../../components/seo/JsonLd';
 import PhiniaDetailPage from '../../../components/sections/PhiniaDetailPage';
+import DuruDetailPage from '../../../components/sections/DuruDetailPage';
+import BshCarriersDetailPage from '../../../components/sections/BshCarriersDetailPage';
+import DemirDokumDetailPage from '../../../components/sections/DemirDokumDetailPage';
+import HaierDetailPage from '../../../components/sections/HaierDetailPage';
+import PmiBarcodeGateDetailPage from '../../../components/sections/PmiBarcodeGateDetailPage';
+
+import trDetails from '../../../data/i18n/references/details.tr.json';
+import enDetails from '../../../data/i18n/references/details.en.json';
+import roDetails from '../../../data/i18n/references/details.ro.json';
+
+const detailsByLocale = {
+  tr: trDetails,
+  en: enDetails,
+  ro: roDetails,
+};
 /* eslint-disable react/prop-types */
 
 export async function generateMetadata({ params }) {
@@ -219,6 +234,8 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     ]
   };
 
+  const projectDetails = detailsByLocale[locale]?.[slug] || detailsByLocale.tr[slug] || {};
+
   if (slug === 'phinia-laser-marking-machine-traceability-integration') {
     return (
       <>
@@ -227,6 +244,77 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
           locale={locale}
           backHref={backHref}
           localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'duru-bulgur-product-carton-pallet-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <DuruDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'bsh-carriers-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <BshCarriersDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'turk-demir-dokum-rfid-gate-with-digital-kanban') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <DemirDokumDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'haier-europe-single-product-traceability-oven-assembly-line') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <HaierDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'pmi-barcode-gate') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
         />
       </>
     );

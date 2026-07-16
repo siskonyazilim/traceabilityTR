@@ -10,7 +10,7 @@ import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 /* eslint-disable react/prop-types */
 
-export default function PhiniaDetailPage({ locale = 'tr', backHref, localizedProjects, dict }) {
+export default function BshCarriersDetailPage({ locale = 'tr', backHref, localizedProjects, dict }) {
   const currentDict = dict || {};
 
   let onsuiteUrl = 'https://onsuite.com.tr/ro/modules/trace';
@@ -41,9 +41,9 @@ export default function PhiniaDetailPage({ locale = 'tr', backHref, localizedPro
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-primary-black leading-tight tracking-tight mb-6">
-                  <span className="md:whitespace-nowrap">{currentDict.heroTitleLine1}</span>
+                  <span>{currentDict.heroTitleLine1}</span>
                   <br className="hidden md:inline" />{" "}
-                  <span className="md:whitespace-nowrap">{currentDict.heroTitleLine2}</span>
+                  <span>{currentDict.heroTitleLine2}</span>
                 </h1>
 
                 <p className="text-gray-text text-base md:text-lg max-w-[48ch] leading-relaxed mb-6 text-justify">
@@ -87,12 +87,12 @@ export default function PhiniaDetailPage({ locale = 'tr', backHref, localizedPro
                 </div>
               </div>
 
-              {/* Phinia Logo */}
+              {/* BSH Logo */}
               <div className="flex items-center justify-center lg:justify-end w-full py-4">
                 <img
-                  src="/Logos/phinia.svg"
-                  alt="Phinia Logo"
-                  className="w-full max-w-[360px] sm:max-w-[480px] md:max-w-[540px] h-auto object-contain"
+                  src="/Logos/BSH_Bosch_und_Siemens_Hausger%C3%A4te_logo.svg"
+                  alt="BSH Logo"
+                  className="w-full max-w-[240px] sm:max-w-[300px] md:max-w-[360px] h-auto object-contain"
                 />
               </div>
 
@@ -358,7 +358,7 @@ export default function PhiniaDetailPage({ locale = 'tr', backHref, localizedPro
             <ReferenceProjectsSlider
               projects={localizedProjects}
               locale={locale}
-              currentSlug="phinia-laser-marking-machine-traceability-integration"
+              currentSlug="bsh-carriers-traceability"
               detailBasePath="/portfolio"
               labels={{
                 title: currentDict.relatedProjects,

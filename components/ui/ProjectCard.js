@@ -15,7 +15,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   const slugPrefixLogoMap = {
     'delphi-': '/Logos/delphi.svg',
     'candy-hoover-': '/Logos/candy-hoover-group-srl-vector-logo.svg',
-    'pmi-': '/Logos/pmi.svg',
+    'pmi-': '/Logos/philip-morris-international-pmi-seeklogo.png',
     'haier-': '/Logos/haier_europa_2025.svg',
     'mey-diageo-': '/Logos/mey-diageo.svg',
     'bsh-': '/Logos/BSH_Bosch_und_Siemens_Hausger%C3%A4te_logo.svg',
@@ -63,6 +63,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   const isDemirdokumLogo = projectVisual.toLowerCase().includes('demirdokum');
   const isGroupeAtlanticLogo = projectVisual.toLowerCase().includes('atlantic');
   const isStackpoleLogo = projectVisual.toLowerCase().includes('stackpole');
+  const isPmiLogo = projectVisual.toLowerCase().includes('philip-morris') || projectVisual.toLowerCase().includes('pmi');
   let projectVisualClass = 'object-contain p-5';
 
   if (isTurkTuborgLogo) {
@@ -77,6 +78,8 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
     projectVisualClass = 'object-contain p-5 md:p-6';
   } else if (isStackpoleLogo) {
     projectVisualClass = 'object-contain p-6 md:p-7';
+  } else if (isPmiLogo) {
+    projectVisualClass = 'object-contain p-4 scale-75';
   } else if (isRasterImage) {
     projectVisualClass = 'object-cover';
   }

@@ -1,0 +1,385 @@
+{
+  "phinia-laser-marking-machine-traceability-integration": {
+    "backToProjects": "Back to Reference Projects",
+    "sector": "Sector",
+    "location": "Location",
+    "year": "Year",
+    "scope": "Scope",
+    "scopeVal": "Turnkey",
+    "tagValue": "Automotive",
+    "locationValue": "İzmir · ESBAŞ",
+    "heroTitleLine1": "A single serial number for each part,",
+    "heroTitleLine2": "a single traceable identity.",
+    "heroSub": "Developed for Phinia's İzmir ESBAŞ Free Zone factory, the 3-axis laser marking machine combines marking and camera verification in a single automated flow, communicating bi-directionally with Oracle.",
+    "contextEyebrow": "Customer and Context",
+    "contextTitle": "Zero-tolerance production in the free zone",
+    "contextP1": "Phinia's factory in the İzmir ESBAŞ Free Zone manufactures for the automotive sector. In this type of production, the origin of each part, the line it came from, and the quality control it passed must be retrospectively traceable.",
+    "contextP2": "The project was implemented to uniquely mark each manufactured product and ensure end-to-end traceability. At the center of the task was not only the marking itself, but also guaranteeing that the marking was read correctly.",
+    "problemEyebrow": "Needs / Problems",
+    "problemTitle": "Two separate steps, two separate risks",
+    "problemLede": "When marking and verification were carried out as disconnected steps open to manual check, two types of gaps arose.",
+    "problemList": [
+      { "bold": "Unique marking requirement.", "text": "Each part needed to be marked with its own serial number, and this number had to be transferred to the central system." },
+      { "bold": "Unreadable code risk.", "text": "When verification was done manually as a separate step, a faulty or unreadable code could pass through the line unnoticed." },
+      { "bold": "Traceability gap.", "text": "The disconnection between marking and data recording meant a missing chain in retrospective query." }
+    ],
+    "solutionEyebrow": "Solution",
+    "solutionTitle": "Marking and verification, single flow",
+    "solutionLede": "The machine, developed turnkey including mechanical design for Phinia, was designed with 3-axis motion capability to operate flexibly. Serial numbers are received from Oracle, engraved on the part, and verified with the camera within the same flow.",
+    "steps": [
+      { "no": "01", "title": "Get serial number", "text": "The unique serial number to be printed is retrieved from Oracle." },
+      { "no": "02", "title": "Laser marking", "text": "The 3-axis servo structure positions the part, and the code is laser-engraved." },
+      { "no": "03", "title": "Camera verification", "text": "Code content, quality grade, and position are automatically checked." },
+      { "no": "04", "title": "Confirm back to Oracle", "text": "Confirmation data of compliant parts is written back to Oracle." }
+    ],
+    "oracleLoop": {
+      "serialNo": "serial number",
+      "confirmData": "confirmation data",
+      "machine": "Laser Marking Machine"
+    },
+    "techEyebrow": "Technology / Equipment Used",
+    "techTitle": "Turnkey system architecture",
+    "techGrid": [
+      { "tag": "MARKING", "title": "Laser marking device", "text": "Marking unit that permanently engraves the unique serial number on the part." },
+      { "tag": "MOTION", "title": "3-axis servo structure", "text": "Servo-driven motion in X-Y-Z axes for flexible positioning." },
+      { "tag": "CONTROL", "title": "PLC field automation", "text": "PLC managing all field signals and workflow within the station." },
+      { "tag": "INTERFACE", "title": "SCADA application with C#", "text": "SCADA developed specifically for operator interface and process monitoring." },
+      { "tag": "VERIFICATION", "title": "Camera-based control", "text": "Automatic verification of code content, grade, and position via image processing." },
+      { "tag": "DATA", "title": "Oracle integration", "text": "Bi-directional data exchange with serial number request and confirmation data." }
+    ],
+    "integrationEyebrow": "Integrations",
+    "integrationTitle": "Bi-directional integration with Oracle",
+    "integrationDesc": "The system runs fully integrated with Oracle: serial numbers are retrieved from Oracle, and confirmation data of compliant parts is sent back to Oracle after marking and verification.",
+    "integrationList": [
+      { "bold": "Serial Number Retrieval", "text": "Serial numbers are automatically requested from the Oracle ERP system and transferred to the machine." },
+      { "bold": "Confirmation Pushed", "text": "Data of approved parts that successfully pass camera control is written back to the Oracle system instantly." }
+    ],
+    "resultsEyebrow": "Benefits / Results",
+    "resultsTitle": "Full digitalization of business processes",
+    "resultsGrid": [
+      { "title": "100% Data Accuracy", "text": "Thanks to camera verification and Oracle integration, the risk of faulty code printing or missing data was completely prevented." },
+      { "title": "Operational Speed", "text": "By combining marking and camera verification steps on a single machine, cycle times were optimized." },
+      { "title": "Full Traceability", "text": "The history and quality test results of each manufactured part were permanently recorded in the central system." }
+    ],
+    "closerTitle": "Zero errors with high-performance laser technology and intelligent camera systems.",
+    "relatedProjects": "Related Projects",
+    "ctaTitle": "Want to transform your production processes too?",
+    "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+    "ctaPrimary": "Get in Touch"
+  },
+  "duru-bulgur-product-carton-pallet-traceability": {
+    "backToProjects": "Back to Reference Projects",
+    "sector": "Sector",
+    "location": "Location",
+    "year": "Year",
+    "scope": "Scope",
+    "scopeVal": "Turnkey",
+    "tagValue": "Food",
+    "locationValue": "Karaman",
+    "heroTitleLine1": "From raw material to shipment,",
+    "heroTitleLine2": "complete traceability at every step.",
+    "heroSub": "Implemented at Duru Bulgur's Karaman factory, the Product / Box / Pallet Traceability system tracks the entire process from packaging to shipment on a single digital platform, operating fully integrated with ERP.",
+    "contextEyebrow": "Customer and Context",
+    "contextTitle": "New standard in food safety",
+    "contextP1": "Duru Bulgur's Karaman factory produces bulgur and pulse products. The project was implemented to ensure product, box, and pallet level traceability across the entire process from packaging to shipment on the production lines.",
+    "contextP2": "The established system aims to eliminate shipment errors while improving inventory management accuracy in the food supply chain.",
+    "problemEyebrow": "Needs / Problems",
+    "problemTitle": "Tracking difficulties and error risks",
+    "problemLede": "The lack of tracking for packaged food products in the box and pallet hierarchy posed operational risks.",
+    "problemList": [
+      { "bold": "Manual Tracking Risk", "text": "Manual tracking of product, box, and pallet relationships after packaging created a traceability gap." },
+      { "bold": "Shipment Errors", "text": "Lack of visibility on which product was loaded onto which pallet could lead to shipment errors." },
+      { "bold": "Recall Difficulty", "text": "In case of potential quality or contamination issues, target-specific product recall was extremely difficult." }
+    ],
+    "solutionEyebrow": "Solution",
+    "solutionTitle": "Product, Box, and Pallet Traceability",
+    "solutionLede": "The Product | Carton | Pallet traceability application was successfully implemented on production lines at Duru Bulgur's Karaman factory. Product – Box – Pallet – Warehouse – Customer steps were made traceable and manageable on a single platform based on the unique serial number.",
+    "steps": [
+      { "no": "01", "title": "Product Marking", "text": "During the packaging stage, products are uniquely marked and gain a traceable identity." },
+      { "no": "02", "title": "Box & Pallet Association", "text": "Which product goes into which box, and which box onto which pallet is fully recorded (Aggregation)." },
+      { "no": "03", "title": "Warehouse Transfers", "text": "Internal warehouse transfer movements between different locations are instantly recorded using handheld terminals." },
+      { "no": "04", "title": "Customer Shipment", "text": "Shipment transfers made to customers are recorded, completing the end-to-end data chain." }
+    ],
+    "techEyebrow": "Technology / Equipment Used",
+    "techTitle": "Field and data management infrastructure",
+    "techGrid": [
+      { "tag": "AUTOMATION", "title": "PLC field automation", "text": "PLC structure managing field automation and production line workflow." },
+      { "tag": "INTERFACE", "title": "SCADA application with C#", "text": "Custom C# application for operator interface, label matching, and process monitoring." },
+      { "tag": "HARDWARE", "title": "Industrial Barcode Readers", "text": "Industrial scanners that read product, carton, and pallet barcodes/labels with high precision." },
+      { "tag": "MOBILE", "title": "Handheld Terminal Application", "text": "Recording warehouse transfers, inventory movements, and customer shipments on-site via handheld terminals." },
+      { "tag": "SOFTWARE", "title": "OnSuite Trace Platform", "text": "Central software layer where traceability and process management are controlled." },
+      { "tag": "DATA", "title": "ERP integration", "text": "Bi-directional sharing of transfer data and stock status integrated with the ERP system." }
+    ],
+    "integrationEyebrow": "Integrations",
+    "integrationTitle": "Bi-directional integration with ERP",
+    "integrationDesc": "The traceability application runs fully integrated with Duru Bulgur's existing ERP system: field data, stock movements, and transfer info are instantly pushed to the ERP.",
+    "integrationList": [
+      { "bold": "Push to ERP System", "text": "All warehouse transfer and shipment data recorded from field terminals are instantly written to the ERP." },
+      { "bold": "Process Control & Tracking", "text": "Product-box-pallet relationships are synchronized with ERP stock status and tracked via a single platform." }
+    ],
+    "resultsEyebrow": "Benefits / Results",
+    "resultsTitle": "End-to-end digital control",
+    "resultsGrid": [
+      { "title": "End-to-end traceability", "text": "The entire chain from packaging to customer became traceable end-to-end based on the unique product serial number." },
+      { "title": "Zero manual errors", "text": "Product-box-pallet relations and warehouse/customer movements are auto-recorded, eliminating manual tracking errors." },
+      { "title": "Fast recall capability", "text": "In case of a potential recall, precise backward tracking capability maximized shipment accuracy and operational safety." }
+    ],
+    "closerTitle": "Seamless data flow from packaging to warehouse, and warehouse to customer.",
+    "relatedProjects": "Related Projects",
+    "ctaTitle": "Want to transform your production processes too?",
+    "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+    "ctaPrimary": "Get in Touch"
+  },
+  "bsh-carriers-traceability": {
+    "backToProjects": "Back to Reference Projects",
+    "sector": "Sector",
+    "location": "Location",
+    "year": "Year",
+    "scope": "Scope",
+    "scopeVal": "Turnkey",
+    "tagValue": "Home Appliances",
+    "locationValue": "Çerkezköy",
+    "heroTitleLine1": "Correct glass, correct bracket,",
+    "heroTitleLine2": "zero-defect assembly.",
+    "heroSub": "Implemented at BSH's Çerkezköy oven factory; brackets mounted on oven glass are tracked by carrier/basket ID, recording the glass-bracket-product component relationship integrated with SAP ERP.",
+    "contextEyebrow": "Customer and Context",
+    "contextTitle": "Precision assembly control in oven production",
+    "contextP1": "In the project implemented at BSH's oven production factory in Çerkezköy, the brackets mounted on the oven glass were tracked and recorded based on the basket ID.",
+    "contextP2": "The project was carried out to ensure the traceability of the glass–bracket–product component relationship and to prevent assembly errors.",
+    "problemEyebrow": "Needs / Problems",
+    "problemTitle": "Component matching difficulties",
+    "problemLede": "There was a risk of incorrect matching of glass and bracket components during oven door assembly.",
+    "problemList": [
+      { "bold": "Incorrect Matching Risk", "text": "Incorrect matching of glass and bracket components in oven production and lack of verification for these matches." },
+      { "bold": "Manual Tracking Constraints", "text": "Insufficient manual tracking of the component-product relationship, creating a traceability gap." },
+      { "bold": "Defective Part Detection", "text": "Inability to detect and block incorrect component pairings in real time during assembly." }
+    ],
+    "solutionEyebrow": "Solution",
+    "solutionTitle": "Bracket and Basket Traceability",
+    "solutionLede": "Brackets were tracked according to basket IDs. Baskets were scanned at the glass bonding station, verifying oven glass lot numbers against bracket lot numbers. At the assembly stage, the lot number of the relevant glass trolley was associated with the oven's unique serial number.",
+    "steps": [
+      { "no": "01", "title": "Basket Tracking", "text": "Brackets mounted on oven glass are made traceable based on their basket IDs." },
+      { "no": "02", "title": "Lot Verification", "text": "Baskets are scanned at the glass bonding station, verifying oven glass lot numbers against bracket lot numbers." },
+      { "no": "03", "title": "Product Association", "text": "At the assembly stage, the lot number of the relevant glass trolley is associated with the oven's unique serial number." },
+      { "no": "04", "title": "SAP Confirmation", "text": "Confirmation data for compliant parts that successfully pass all matches is written back to the SAP ERP system." }
+    ],
+    "techEyebrow": "Technology / Equipment Used",
+    "techTitle": "Automation and control architecture",
+    "techGrid": [
+      { "tag": "AUTOMATION", "title": "PLC field automation", "text": "PLC infrastructure managing workflow and field signals at the glass bonding station." },
+      { "tag": "INTERFACE", "title": "SCADA application with C#", "text": "C# application for verification, product association, and operator displays." },
+      { "tag": "HARDWARE", "title": "Industrial Barcode Readers", "text": "High-precision barcode readers scanning glass and bracket lot numbers, as well as basket IDs." },
+      { "tag": "SOFTWARE", "title": "OnSuite Trace Platform", "text": "Central software layer providing traceability, lot tracking, and process control." },
+      { "tag": "DATA", "title": "SAP ERP Integration", "text": "Bi-directional data integration of matching and production confirmations with the SAP system." },
+      { "tag": "VERIFICATION", "title": "Station Control", "text": "Automatic stop mechanism that halts the line via PLC in case of incorrect bracket usage." }
+    ],
+    "integrationEyebrow": "Integrations",
+    "integrationTitle": "SAP ERP Integration",
+    "integrationDesc": "The process monitoring and verification system runs fully integrated with BSH's SAP ERP infrastructure; production confirmations and lot-matching data are written back to SAP.",
+    "integrationList": [
+      { "bold": "SAP Production Confirmation", "text": "Confirmation data for compliant parts is written to the SAP ERP system in real time after verification." },
+      { "bold": "Lot Match Verification", "text": "Glass and bracket lot numbers are validated against SAP inventory and recipe definitions before proceeding." }
+    ],
+    "resultsEyebrow": "Benefits / Results",
+    "resultsTitle": "Zero-defect assembly and complete traceability",
+    "resultsGrid": [
+      { "title": "Correct component matching", "text": "The correct match of glass and bracket components during assembly is auto-verified, reducing incorrect part usage to zero." },
+      { "title": "Serial number level tracking", "text": "Component-product relationships are recorded at the product serial number level, ensuring full backward traceability." },
+      { "title": "Process safety", "text": "The line-stopping control on incorrect matches completely prevents non-compliant products from moving to the next station." }
+    ],
+    "closerTitle": "Seamless process safety from glass to bracket, assembly to SAP.",
+    "relatedProjects": "Related Projects",
+    "ctaTitle": "Want to transform your production processes too?",
+    "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+    "ctaPrimary": "Get in Touch"
+  },
+  "turk-demir-dokum-rfid-gate-with-digital-kanban": {
+    "backToProjects": "Back to Reference Projects",
+    "sector": "Sector",
+    "location": "Location",
+    "year": "Year",
+    "scope": "Scope",
+    "scopeVal": "Turnkey",
+    "tagValue": "Home Appliances",
+    "locationValue": "Bilecik",
+    "heroTitleLine1": "Seamless digital kanban,",
+    "heroTitleLine2": "powered by RFID technology.",
+    "heroSub": "Implemented at Turk Demir Dokum's Bilecik factory; the RFID Gate and Kanban system optimizes warehouse material preparation processes based on the pull methodology.",
+    "contextEyebrow": "Customer and Context",
+    "contextTitle": "Line feeding optimization in boiler production",
+    "contextP1": "Turk Demir Dokum's Bilecik factory produces combi boilers. The project was implemented to optimize warehouse material preparation processes based on demands from production lines.",
+    "contextP2": "With the RFID gate application, the material flow has been transformed into a demand-driven digital kanban structure, synchronized with the production tempo.",
+    "problemEyebrow": "Needs / Problems",
+    "problemTitle": "Line feeding and order delays",
+    "problemLede": "Managing production line material needs with manual methods caused delays and preparation errors.",
+    "problemList": [
+      { "bold": "Delay Risks", "text": "Delays experienced in manual material ordering and preparation processes, risking line downtime." },
+      { "bold": "Inaccurate Orders & Excess Stock", "text": "Incorrect transfer of requirements leading to excess inventory or incorrect material feeding in the warehouse." },
+      { "bold": "Production Rhythm Mismatch", "text": "Inability to synchronize the material flow with real-time production speed and line consumption rates." }
+    ],
+    "solutionEyebrow": "Solution",
+    "solutionTitle": "RFID Gate & Pull Methodology",
+    "solutionLede": "An RFID Gate application was implemented to optimize warehouse material preparation based on production line needs. More than 300 transport bins were RFID-tagged, automatically generating warehouse material orders as they exited through the RFID gate.",
+    "steps": [
+      { "no": "01", "title": "RFID Tagging", "text": "Over 300 transport boxes/bins are equipped with high-precision industrial RFID tags." },
+      { "no": "02", "title": "RFID Gate Scanning", "text": "Tags are automatically scanned as the boxes pass through the RFID Gate at the production area exit." },
+      { "no": "03", "title": "Automated Ordering", "text": "Scanned boxes turn into real-time order demands, auto-triggering material replenishment orders to the warehouse." },
+      { "no": "04", "title": "Handheld Terminal Control", "text": "Warehouse staff prepares and ships the correct parts error-free using RFID handheld terminals." }
+    ],
+    "techEyebrow": "Technology / Equipment Used",
+    "techTitle": "RFID and warehouse integration infrastructure",
+    "techGrid": [
+      { "tag": "AUTOMATION", "title": "RFID Gate reading system", "text": "RFID antenna and transit gate positioned at the production area exit, scanning boxes in motion." },
+      { "tag": "RFID", "title": "Industrial RFID tags", "text": "UHF RFID tags mounted on over 300 transport bins, resistant to harsh workshop conditions." },
+      { "tag": "MOBILE", "title": "RFID handheld terminals", "text": "Mobile devices where warehouse staff performs material picking and transfer steps on-site." },
+      { "tag": "SOFTWARE", "title": "OnSuite Trace Platform", "text": "Central software that converts RFID transit data into order demands and manages the process." },
+      { "tag": "DATA", "title": "SAP ERP integration", "text": "Instant transfer of generated warehouse material order records to the SAP ERP system." },
+      { "tag": "METHODOLOGY", "title": "Digital Kanban Control", "text": "Pull control that triggers material flow according to the consumption rate of the production line." }
+    ],
+    "integrationEyebrow": "Integrations",
+    "integrationTitle": "SAP ERP Integration",
+    "integrationDesc": "The RFID Gate system runs instantly integrated with Turk Demir Dokum's SAP ERP; order records generated from field transits are automatically processed in SAP.",
+    "integrationList": [
+      { "bold": "SAP Material Order", "text": "An automatic transfer order is created in SAP based on reading data of boxes passing through the RFID gate." },
+      { "bold": "Stock Synchronization", "text": "The status of boxes shipped from the warehouse to the line is updated instantly in SAP inventory." }
+    ],
+    "resultsEyebrow": "Benefits / Results",
+    "resultsTitle": "Automated line feeding and optimized warehouse processes",
+    "resultsGrid": [
+      { "title": "Zero manual orders", "text": "Warehouse material preparation is automated with the RFID gate, completely eliminating manual order needs." },
+      { "title": "Pull methodology", "text": "Managing material flow according to the pull basis synchronized with production tempo prevented excess stocking." },
+      { "title": "Speed and accuracy", "text": "Maximum efficiency in warehouse material prep speed and shipment accuracy has been achieved thanks to the digital kanban structure." }
+    ],
+    "closerTitle": "Seamless and error-free material flow from warehouse to production line with RFID technology.",
+    "relatedProjects": "Related Projects",
+    "ctaTitle": "Want to transform your production processes too?",
+    "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+    "ctaPrimary": "Get in Touch"
+  },
+  "haier-europe-single-product-traceability-oven-assembly-line": {
+    "backToProjects": "Back to Reference Projects",
+    "sector": "Sector",
+    "location": "Location",
+    "year": "Year",
+    "scope": "Scope",
+    "scopeVal": "Turnkey",
+    "tagValue": "Electronics",
+    "locationValue": "Eskişehir",
+    "heroTitleLine1": "Automated test control,",
+    "heroTitleLine2": "unique product traceability.",
+    "heroSub": "Implemented at Haier Europe's Eskişehir cooking appliances factory; serial numbers are associated with RFID to automate safety tests independently of operators, pushing data to the global MES system.",
+    "contextEyebrow": "Customer and Context",
+    "contextTitle": "Digital transformation on oven assembly lines",
+    "contextP1": "A traceability system was applied to the new oven assembly lines at the cooking appliances factory of Haier Europe, a global leader in home appliances, located in Eskişehir.",
+    "contextP2": "Within the scope of the project, the assembly line automation software was also developed by Siskon, connecting all test stations into a central traceability structure.",
+    "problemEyebrow": "Needs / Problems",
+    "problemTitle": "Secure test verification and registration needs",
+    "problemLede": "Electrical and leak safety tests of each oven produced on the new assembly lines had to be verified independently of operator intervention.",
+    "problemList": [
+      { "bold": "Operator Dependence", "text": "Human error and data inconsistency risks arising from manual execution of safety tests." },
+      { "bold": "Lack of Association", "text": "Inability to automatically associate electrical, gas leak, and flame control test results with unique product serial numbers." },
+      { "bold": "Line Control Gaps", "text": "Lack of an automatic locking mechanism to prevent untested or failed products from advancing along the assembly line." }
+    ],
+    "solutionEyebrow": "Solution",
+    "solutionTitle": "RFID-Based Station & Automated Test Control",
+    "solutionLede": "The product barcode is matched with the RFID tag at the line start. Electrical, gas leak, and flame control tests are carried out in automated operator-independent stations, matching results with serial numbers and pushing them to MES.",
+    "steps": [
+      { "no": "01", "title": "RFID Association", "text": "At the line start, the serial number from the product barcode is matched with the carrier's RFID tag." },
+      { "no": "02", "title": "Automated Tests", "text": "Ovens are automatically tested at electrical, gas leak, and flame control test stations, independent of operator intervention." },
+      { "no": "03", "title": "Data Matching", "text": "Real-time test results collected from stations are automatically associated with the product's unique serial number." },
+      { "no": "04", "title": "MES Confirmation", "text": "Successfully completed test confirmations are instantly pushed to Haier Europe's Global MES system." }
+    ],
+    "techEyebrow": "Technology / Equipment Used",
+    "techTitle": "9-axis servo and robotic data integration",
+    "techGrid": [
+      { "tag": "AUTOMATION", "title": "Assembly line automation software", "text": "Control software managing the entire assembly line workflow and machine stations." },
+      { "tag": "ROBOTICS", "title": "9-axis servo & robotic system", "text": "Robotic equipment performing precise positioning and mechanical tasks at the stations." },
+      { "tag": "RFID", "title": "RFID traceability infrastructure", "text": "RFID system matching serial numbers at the line start and tracking station transits." },
+      { "tag": "STATION", "title": "Automated test units", "text": "Test equipment conducting electrical, gas leak, and flame control tests without human intervention." },
+      { "tag": "COMMUNICATION", "title": "Industrial networks", "text": "High-speed field data exchange over EtherCAT, TCP/IP, and Profinet protocols." },
+      { "tag": "DATA", "title": "OnSuite Trace & MES integration", "text": "Data layer where the OnSuite Trace platform runs fully integrated with Haier Global MES." }
+    ],
+    "integrationEyebrow": "Integrations",
+    "integrationTitle": "Haier Global MES Integration",
+    "integrationDesc": "The developed traceability system runs instantly integrated with Haier Europe's Global MES (Manufacturing Execution System); all test data and confirmations are pushed to MES.",
+    "integrationList": [
+      { "bold": "MES Test Record", "text": "Electrical, gas leak, and flame control test results are written to the MES system based on the product serial number." },
+      { "bold": "Process Locking", "text": "Transition of failed or incomplete products to the next station is blocked based on the MES confirmation state." }
+    ],
+    "resultsEyebrow": "Benefits / Results",
+    "resultsTitle": "Zero-error safety and real-time production tracking",
+    "resultsGrid": [
+      { "title": "Unique product traceability", "text": "End-to-end digital traceability based on serial numbers was provided for each product starting from the line entry." },
+      { "title": "Operator-independent quality", "text": "Electrical, gas leak, and flame control tests are automated, reducing human error rates to zero." },
+      { "title": "MES data integrity", "text": "All quality and test records on the production line are instantly sent to the MES system for centralized reporting." }
+    ],
+    "closerTitle": "Highest safety standards combined with robotic automation and automated tests.",
+    "relatedProjects": "Related Projects",
+    "ctaTitle": "Want to transform your production processes too?",
+    "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+    "ctaPrimary": "Get in Touch"
+  },
+  "pmi-barcode-gate": {
+    "backToProjects": "Back to Reference Projects",
+    "sector": "Sector",
+    "location": "Location",
+    "year": "Year",
+    "scope": "Scope",
+    "scopeVal": "Turnkey",
+    "tagValue": "Tobacco",
+    "locationValue": "Torbalı / İzmir",
+    "heroTitleLine1": "Barcode verification gate,",
+    "heroTitleLine2": "zero-defect shipment.",
+    "heroSub": "Implemented at PMI's Torbalı (İzmir) factory, the Automatic Shipment Barcode Verification System scans pallet labels at the shipment exit, verifies them against shipment orders, and updates SAP-WMS.",
+    "contextEyebrow": "Customer and Context",
+    "contextTitle": "Fully automated control at shipment exits",
+    "contextP1": "PMI's Torbalı (İzmir) factory is a cigarette manufacturing facility. The produced items are shipped on a pallet basis via exit ramps during the shipment process.",
+    "contextP2": "The project was implemented to automate the pallet verification and shipment order matching process at the shipment exit.",
+    "problemEyebrow": "Needs / Problems",
+    "problemTitle": "Shipment errors and control difficulties",
+    "problemLede": "Checking pallets manually against correct work orders at shipment ramps caused delays and increased shipment error risks.",
+    "problemList": [
+      { "bold": "Shipment Error Risk", "text": "The risk of incomplete or incorrect barcode products being shipped without detection." },
+      { "bold": "Manual Matching", "text": "Operational inefficiency caused by manually matching pallet labels with shipment work orders." },
+      { "bold": "WMS Synchronization", "text": "Inability to process pallets exiting from ramps into the WMS system instantly and automatically." }
+    ],
+    "solutionEyebrow": "Solution",
+    "solutionTitle": "Barcode Gate System & Automated Verification",
+    "solutionLede": "The barcode gate system installed at the exit ramp automatically reads all pallet labels. The system automatically retrieves shipment orders from SAP-WMS, compares them with pallet labels, and writes data to WMS on match.",
+    "steps": [
+      { "no": "01", "title": "Work Order Integration", "text": "Work orders belonging to the shipment plan are automatically loaded from the SAP-WMS system." },
+      { "no": "02", "title": "Ramp Barcode Scanning", "text": "The Barcode Gate on the exit ramp automatically reads all pallet labels passing over it." },
+      { "no": "03", "title": "Match & Verification", "text": "Pallet labels are compared with shipment orders to instantly query content accuracy." },
+      { "no": "04", "title": "WMS Confirmation", "text": "Matched pallet barcodes and the shipment number are instantly sent to the SAP-WMS system." }
+    ],
+    "techEyebrow": "Technology / Equipment Used",
+    "techTitle": "Industrial scanners and SCADA verification",
+    "techGrid": [
+      { "tag": "HARDWARE", "title": "Industrial Barcode Readers", "text": "Industrial scanners that read pallet barcodes on the fly at exit ramps without errors." },
+      { "tag": "AUTOMATION", "title": "PLC field automation", "text": "PLC system managing pallet transits, sensors, and gate flow at the ramp." },
+      { "tag": "INTERFACE", "title": "SCADA application with C#", "text": "SCADA software managing matching logic, operator alert screens, and system data integration." },
+      { "tag": "INTEGRATION", "title": "WMS data layer", "text": "Integration interface where matched pallet barcodes and shipment numbers are pushed to the WMS system." },
+      { "tag": "SAFETY", "title": "Operator Alert System", "text": "Control mechanism providing visual/audible warnings to the operator in case of mismatched or incorrect labels." },
+      { "tag": "DATA", "title": "SAP ERP integration", "text": "SAP connection that enables the system to automatically retrieve shipment work orders." }
+    ],
+    "integrationEyebrow": "Integrations",
+    "integrationTitle": "SAP-WMS Integration",
+    "integrationDesc": "The automatic shipment barcode verification system runs with bi-directional and real-time integration with PMI's SAP-WMS infrastructure; data is verified independent of the operator.",
+    "integrationList": [
+      { "bold": "Work Order Retrieval", "text": "Shipment work orders in the SAP-WMS system are automatically pulled into the system, ready for verification." },
+      { "bold": "Shipment Confirmation", "text": "Verified pallet barcodes and associated shipment numbers are written back to the SAP-WMS system in real time." }
+    ],
+    "resultsEyebrow": "Benefits / Results",
+    "resultsTitle": "100% Verified automated shipment",
+    "resultsGrid": [
+      { "title": "Automated pallet verification", "text": "100% automated pallet verification is achieved at the shipment exit, eliminating the need for manual checks." },
+      { "title": "Zero shipment errors", "text": "Shipment of products with missing, wrong, or incorrect barcodes from shipment ramps is completely prevented." },
+      { "title": "Operator warnings", "text": "Shipment operations are secured with an instant warning mechanism when an incorrect pallet is detected." }
+    ],
+    "closerTitle": "Seamless data flow from exit ramps to the warehouse and error-free shipment.",
+    "relatedProjects": "Related Projects",
+    "ctaTitle": "Want to transform your production processes too?",
+    "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+    "ctaPrimary": "Get in Touch"
+  }
+}

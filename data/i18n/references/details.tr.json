@@ -1,0 +1,385 @@
+{
+  "phinia-laser-marking-machine-traceability-integration": {
+    "backToProjects": "Referans Projelere Dön",
+    "sector": "Sektör",
+    "location": "Konum",
+    "year": "Yıl",
+    "scope": "Kapsam",
+    "scopeVal": "Anahtar Teslim",
+    "tagValue": "Otomotiv",
+    "locationValue": "İzmir · ESBAŞ",
+    "heroTitleLine1": "Her parçaya tek bir seri numarası,",
+    "heroTitleLine2": "tek bir izlenebilir kimlik.",
+    "heroSub": "Phinia'nın İzmir ESBAŞ Serbest Bölge fabrikası için geliştirilen 3 eksenli lazer markalama tezgahı; markalama ve kamera doğrulamasını tek bir otomatik akışta birleştirir ve Oracle ile çift yönlü konuşur.",
+    "contextEyebrow": "Müşteri ve Bağlam",
+    "contextTitle": "Serbest bölgede, sıfır tolerans üretim",
+    "contextP1": "Phinia'nın İzmir ESBAŞ Serbest Bölge'deki fabrikası otomotiv sektörüne yönelik üretim yapıyor. Bu tür üretimde her parçanın nereden geldiği, hangi hattan çıktığı ve hangi kontrolden geçtiği geriye dönük olarak sorgulanabilir olmalı.",
+    "contextP2": "Proje, üretilen her ürünün tekil olarak markalanması ve baştan sona izlenebilirliğinin sağlanması amacıyla hayata geçirildi. Markalamanın kendisi kadar, o markalamanın doğru okunabildiğinin garanti altına alınması da işin merkezindeydi.",
+    "problemEyebrow": "İhtiyaç / Problem",
+    "problemTitle": "İki ayrı adım, iki ayrı risk",
+    "problemLede": "Markalama ve doğrulama birbirinden kopuk, elle kontrole açık adımlar hâlinde yürüdüğünde, arada iki türlü boşluk oluşuyordu.",
+    "problemList": [
+      { "bold": "Tekil markalama zorunluluğu.", "text": "Her parçanın kendi seri numarasıyla markalanması ve bu numaranın merkezi sisteme aktarılması gerekiyordu." },
+      { "bold": "Okunamayan kod riski.", "text": "Doğrulama ayrı bir adım olarak elle yapıldığında, hatalı ya da okunamayan kod fark edilmeden hattan geçebiliyordu." },
+      { "bold": "İzlenebilirlik boşluğu.", "text": "Markalama ile veri kaydı arasındaki kopukluk, geriye dönük sorgulamada eksik zincir anlamına geliyordu." }
+    ],
+    "solutionEyebrow": "Çözüm",
+    "solutionTitle": "Markalama ve doğrulama, tek akış",
+    "solutionLede": "Phinia için mekanik tasarımı dahil anahtar teslim geliştirilen tezgah; esnek çalışabilmesi için 3 eksenli hareket kapasitesiyle tasarlandı. Seri numaraları Oracle'dan alınır, parçaya işlenir ve aynı akış içinde kamera ile doğrulanır.",
+    "steps": [
+      { "no": "01", "title": "Seri no alınır", "text": "Basılacak tekil seri numarası Oracle'dan çekilir." },
+      { "no": "02", "title": "Lazer markalama", "text": "3 eksenli servo yapı parçayı konumlar, kod lazerle işlenir." },
+      { "no": "03", "title": "Kamera doğrulama", "text": "Kod içeriği, derece ve konum otomatik kontrol edilir." },
+      { "no": "04", "title": "Onay geri yazılır", "text": "Uygun parçaların onay verisi Oracle'a geri gönderilir." }
+    ],
+    "oracleLoop": {
+      "serialNo": "seri numarası",
+      "confirmData": "onay verisi",
+      "machine": "Lazer Markalama Tezgahı"
+    },
+    "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+    "techTitle": "Anahtar teslim sistem mimarisi",
+    "techGrid": [
+      { "tag": "MARKALAMA", "title": "Lazer markalama cihazı", "text": "Parçaya tekil seri numarasını kalıcı olarak işleyen markalama ünitesi." },
+      { "tag": "HAREKET", "title": "3 eksenli servo yapı", "text": "Esnek konumlandırma için X-Y-Z eksenlerinde servo tahrikli hareket." },
+      { "tag": "KONTROL", "title": "PLC saha otomasyonu", "text": "İstasyon içindeki tüm saha sinyallerini ve iş akışını yöneten PLC." },
+      { "tag": "ARAYÜZ", "title": "C# ile SCADA uygulaması", "text": "Operatör arayüzü ve süreç izleme için özel geliştirilmiş SCADA." },
+      { "tag": "DOĞRULAMA", "title": "Kamera tabanlı kontrol", "text": "Kod içeriği, derece ve konum doğrulaması görüntü işleme ile otomatik." },
+      { "tag": "VERİ", "title": "Oracle entegrasyonu", "text": "Seri numarası talebi ve onay verisiyle çift yönlü veri alışverişi." }
+    ],
+    "integrationEyebrow": "Entegrasyonlar",
+    "integrationTitle": "Oracle ile çift yönlü entegrasyon",
+    "integrationDesc": "Sistem Oracle ile çift yönlü entegre çalışmaktadır: seri numaraları Oracle'dan alınmakta, markalama ve kontrol sonrası uygun parçaların onay verileri Oracle'a geri gönderilmektedir.",
+    "integrationList": [
+      { "bold": "Seri Numarası Alımı", "text": "Seri numaraları Oracle ERP sisteminden otomatik olarak talep edilir ve tezgaha aktarılır." },
+      { "bold": "Onay Verisi Gönderimi", "text": "Kamera kontrolünden geçen onaylanmış parçaların bilgileri anlık olarak Oracle sistemine geri yazılır." }
+    ],
+    "resultsEyebrow": "Kazanımlar / Sonuçlar",
+    "resultsTitle": "İş süreçlerinde tam dijitalleşme",
+    "resultsGrid": [
+      { "title": "%100 Veri Doğruluğu", "text": "Kamera doğrulaması ve Oracle entegrasyonu sayesinde hatalı kod basımı veya kayıp veri riski tamamen engellendi." },
+      { "title": "Operasyonel Hız", "text": "Markalama ve kamera kontrol adımlarının tek bir tezgahta birleştirilmesiyle çevrim süreleri optimize edildi." },
+      { "title": "Tam İzlenebilirlik", "text": "Üretilen her bir parçanın geçmişi ve kalite test sonuçları merkezi sisteme kalıcı olarak kaydedildi." }
+    ],
+    "closerTitle": "Yüksek performanslı lazer teknolojisi ve akıllı kamera sistemleriyle sıfır hata.",
+    "relatedProjects": "Benzer Projeler",
+    "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+    "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+    "ctaPrimary": "İletişime Geç"
+  },
+  "duru-bulgur-product-carton-pallet-traceability": {
+    "backToProjects": "Referans Projelere Dön",
+    "sector": "Sektör",
+    "location": "Konum",
+    "year": "Yıl",
+    "scope": "Kapsam",
+    "scopeVal": "Anahtar Teslim",
+    "tagValue": "Gıda",
+    "locationValue": "Karaman",
+    "heroTitleLine1": "Hammaddeden sevkiyata,",
+    "heroTitleLine2": "her adımda tam izlenebilirlik.",
+    "heroSub": "Duru Bulgur'un Karaman'daki fabrikasında hayata geçirilen Ürün / Koli / Palet İzlenebilirlik sistemi; ambalajlamadan sevkiyata tüm süreci tek bir dijital platformda izler ve ERP ile entegre çalışır.",
+    "contextEyebrow": "Müşteri ve Bağlam",
+    "contextTitle": "Gıda güvenliğinde yeni standart",
+    "contextP1": "Duru Bulgur'un Karaman'daki fabrikası, bulgur ve bakliyat ürünleri üretmektedir. Proje, fabrikadaki üretim hatlarında ambalajlamadan sevkiyata kadar tüm süreçte ürün, koli ve palet düzeyinde izlenebilirlik sağlamak amacıyla hayata geçirilmiştir.",
+    "contextP2": "Kurulan sistem, gıda zincirindeki envanter yönetim doğruluğunu artırırken sevkiyat hatalarını tamamen ortadan kaldırmayı hedefler.",
+    "problemEyebrow": "İhtiyaç / Problem",
+    "problemTitle": "İzleme zorlukları ve hata riskleri",
+    "problemLede": "Paketlenen gıda ürünlerinin, kolileme ve paletleme hiyerarşisinde izlenememesi operasyonel riskler barındırıyordu.",
+    "problemList": [
+      { "bold": "Manuel Takip Riski", "text": "Ambalajlama sonrasında ürün, koli ve palet ilişkilerinin manuel takibi izlenebilirlik boşluğu oluşturuyordu." },
+      { "bold": "Sevkiyat Hataları", "text": "Hangi ürünün hangi palete girdiğinin bilinmemesi sevkiyat hatalarına yol açabiliyordu." },
+      { "bold": "Geri Çağırma (Recall) Zorluğu", "text": "Olası kalite veya bulaşma durumlarında hedefe yönelik geri izleme yapmak oldukça zordu." }
+    ],
+    "solutionEyebrow": "Çözüm",
+    "solutionTitle": "Ürün, Koli ve Palet İzlenebilirliği",
+    "solutionLede": "Ürün | Koli | Palet izlenebilirlik uygulaması, Duru Bulgur'un Karaman fabrikasındaki üretim hatlarında başarıyla hayata geçirildi. Ürün – Koli – Palet – Depo – Müşteri adımları, ürün seri numarasına dayalı tek bir platformda izlenebilir ve yönetilebilir hâle getirildi.",
+    "steps": [
+      { "no": "01", "title": "Ürün Markalama", "text": "Ambalajlama aşamasında ürünler tekil olarak markalanır ve kimlik kazanır." },
+      { "no": "02", "title": "Koli ve Palet Eşleme", "text": "Hangi ürünün hangi koliye girdiği ve kolilerin hangi palete yerleştirildiği kayıt altına alınır (Agregasyon)." },
+      { "no": "03", "title": "Depo Transferleri", "text": "Farklı lokasyonlar arasındaki depo içi transfer hareketleri el terminalleri kullanılarak anlık kaydedilir." },
+      { "no": "04", "title": "Müşteri Sevkiyatı", "text": "Müşterilere yapılan sevkiyat transferleri kaydedilerek baştan sona veri zinciri tamamlanır." }
+    ],
+    "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+    "techTitle": "Saha ve veri yönetim altyapısı",
+    "techGrid": [
+      { "tag": "OTOMASYON", "title": "PLC saha otomasyonu", "text": "Saha otomasyonunu ve üretim hattı iş akışını yöneten PLC yapısı." },
+      { "tag": "ARAYÜZ", "title": "C# ile SCADA uygulaması", "text": "Operatör arayüzü, etiket eşleme ve süreç izleme için özel C# uygulaması." },
+      { "tag": "DONANIM", "title": "Barkod Okuyucular", "text": "Ürün, karton ve palet barkod/etiketlerini yüksek hassasiyetle okuyan endüstriyel tarayıcılar." },
+      { "tag": "MOBİL", "title": "El Terminali Uygulaması", "text": "Depo transferleri, stok hareketleri ve müşteri sevkiyatlarının sahada el terminalleriyle kaydedilmesi." },
+      { "tag": "YAZILIM", "title": "OnSuite Trace Platformu", "text": "İzlenebilirlik ve süreç yönetiminin merkezi olarak kontrol edildiği yazılım katmanı." },
+      { "tag": "VERİ", "title": "ERP entegrasyonu", "text": "ERP sistemiyle entegre şekilde transfer verilerinin ve stok durumunun çift yönlü paylaşımı." }
+    ],
+    "integrationEyebrow": "Entegrasyonlar",
+    "integrationTitle": "ERP sistemi ile çift yönlü entegrasyon",
+    "integrationDesc": "İzlenebilirlik uygulaması, Duru Bulgur'un mevcut ERP sistemiyle tam entegre şekilde çalışmaktadır: saha verileri, stok hareketleri ve transfer bilgileri ERP'ye anlık olarak aktarılır.",
+    "integrationList": [
+      { "bold": "ERP Sistemine Aktarım", "text": "Saha el terminallerinden kaydedilen tüm depo transfer ve sevkiyat verileri anlık olarak ERP'ye yazılır." },
+      { "bold": "Süreç Kontrolü ve Takip", "text": "Ürün-koli-palet ilişkileri ERP stok durumu ile senkronize edilerek tek platformdan izlenir." }
+    ],
+    "resultsEyebrow": "Kazanımlar / Sonuçlar",
+    "resultsTitle": "Uçtan uca dijital kontrol",
+    "resultsGrid": [
+      { "title": "Uçtan uca izlenebilirlik", "text": "Ambalajlamadan sevkiyata kadar tüm süreç, ürün seri numarasına dayalı tek bir platformda uçtan uca izlenebilir hale geldi." },
+      { "title": "Sıfır manuel hata", "text": "Ürün-koli-palet ilişkileri ve depo/müşteri hareketleri otomatik kaydedilerek manuel takibin getirdiği tüm hatalar ortadan kaldırıldı." },
+      { "title": "Hızlı geri izleme (Recall)", "text": "Olası bir geri çağırma durumunda nokta atışı geri izleme yeteneğiyle sevkiyat doğruluğu ve operasyon güvenliği en üst düzeye çıkarıldı." }
+    ],
+    "closerTitle": "Ambalajlamadan depoya, depodan müşteriye kesintisiz veri akışı.",
+    "relatedProjects": "Benzer Projeler",
+    "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+    "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+    "ctaPrimary": "İletişime Geç"
+  },
+  "bsh-carriers-traceability": {
+    "backToProjects": "Referans Projelere Dön",
+    "sector": "Sektör",
+    "location": "Konum",
+    "year": "Yıl",
+    "scope": "Kapsam",
+    "scopeVal": "Anahtar Teslim",
+    "tagValue": "Beyaz Eşya",
+    "locationValue": "Çerkezköy",
+    "heroTitleLine1": "Doğru cam, doğru braket,",
+    "heroTitleLine2": "sıfır hata montaj.",
+    "heroSub": "BSH'nin Çerkezköy fırın fabrikasında hayata geçirilen projede; fırın camına monte edilen braketler sepet kimliğine göre takip edilerek cam-braket-ürün bileşen ilişkisi SAP entegrasyonu ile kayıt altına alınmaktadır.",
+    "contextEyebrow": "Müşteri ve Bağlam",
+    "contextTitle": "Fırın üretiminde hassas montaj kontrolü",
+    "contextP1": "BSH'nin Çerkezköy'deki fırın üretimi yapan fabrikasında hayata geçirilen projede, fırın camına monte edilen braketler sepet kimliğine göre takip edilmiş ve kayıt altına alınmıştır.",
+    "contextP2": "Proje, cam–braket–ürün bileşen ilişkisinin izlenebilirliğini sağlamak ve montaj hatalarını önlemek amacıyla gerçekleştirilmiştir.",
+    "problemEyebrow": "İhtiyaç / Problem",
+    "problemTitle": "Bileşen eşleşme zorlukları",
+    "problemLede": "Fırın kapaklarının montajında cam ile braketlerin yanlış eşleşmesi riskleri mevcuttu.",
+    "problemList": [
+      { "bold": "Yanlış Eşleşme Riski", "text": "Fırın üretiminde cam ve braket bileşenlerinin yanlış eşleşmesi ve bu eşleşmelerin kontrol edilememesi." },
+      { "bold": "Manuel Takip Kısıtları", "text": "Bileşen-ürün ilişkisinin manuel takibinin yetersiz olması ve izlenebilirlik boşluğu yaratması." },
+      { "bold": "Hatalı Parça Tespiti", "text": "Montaj sırasında hatalı eşleşmelerin anlık olarak fark edilip engellenememesi." }
+    ],
+    "solutionEyebrow": "Çözüm",
+    "solutionTitle": "Braket ve Sepet İzlenebilirliği",
+    "solutionLede": "Fırın camına monte edilen braketler, sepet kimliğine göre takip edildi ve kayıt altına alındı. Cam yapıştırma istasyonunda sepetler taranarak cam lot numaraları ile braket lot numaraları arasındaki eşleşme doğrulandı. Ürün montajı sırasında ilgili cam arabasının lot numarası ürün seri numarasıyla ilişkilendirildi.",
+    "steps": [
+      { "no": "01", "title": "Sepet Takibi", "text": "Fırın camına monte edilen braketler, sepet kimliklerine (sepet ID) göre izlenebilir hale getirilir." },
+      { "no": "02", "title": "Lot Doğrulama", "text": "Cam yapıştırma istasyonunda sepetler taranır, cam lot numaraları ile braket lot numaraları doğrulanır." },
+      { "no": "03", "title": "Ürün İlişkilendirme", "text": "Montaj aşamasında, ilgili cam arabasının lot numarası fırının kendi seri numarasıyla ilişkilendirilir." },
+      { "no": "04", "title": "SAP Onay Yazımı", "text": "Tüm eşleşmeleri başarıyla tamamlanan uygun parçaların onay verileri SAP ERP sistemine geri yazılır." }
+    ],
+    "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+    "techTitle": "Otomasyon ve kontrol mimarisi",
+    "techGrid": [
+      { "tag": "OTOMASYON", "title": "PLC saha otomasyonu", "text": "Cam yapıştırma istasyonundaki iş akışını ve saha sinyallerini yöneten PLC altyapısı." },
+      { "tag": "ARAYÜZ", "title": "C# ile SCADA uygulaması", "text": "Eşleşme doğrulaması, ürün ilişkilendirmeleri ve operatör ekranları için C# uygulaması." },
+      { "tag": "DONANIM", "title": "Endüstriyel Barkod Okuyucular", "text": "Cam ve braket lot numaralarını, sepet ID'lerini okuyan yüksek hassasiyetli barkod okuyucular." },
+      { "tag": "YAZILIM", "title": "OnSuite Trace Platformu", "text": "İzlenebilirlik, lot takibi ve süreç kontrolünün sağlandığı merkezi yazılım katmanı." },
+      { "tag": "VERİ", "title": "SAP ERP Entegrasyonu", "text": "Eşleşme ve üretim onaylarının SAP sistemiyle çift yönlü veri entegrasyonu." },
+      { "tag": "DOĞRULAMA", "title": "İstasyon Kontrolü", "text": "Yanlış braket kullanımında PLC üzerinden hattı durduran otomatik durdurma mekanizması." }
+    ],
+    "integrationEyebrow": "Entegrasyonlar",
+    "integrationTitle": "SAP ERP Entegrasyonu",
+    "integrationDesc": "Süreç izleme ve doğrulama sistemi, BSH'nin SAP ERP altyapısıyla tam entegre çalışmaktadır; üretim onayları ve lot eşleme verileri SAP'ye geri gönderilmektedir.",
+    "integrationList": [
+      { "bold": "SAP Üretim Onayı", "text": "Markalama ve doğrulama sonrasında uygun parçaların onay verileri SAP ERP sistemine anlık olarak yazılır." },
+      { "bold": "Lot Eşleme Doğrulaması", "text": "Cam ve braket lot numaraları SAP envanter ve reçete tanımlarıyla doğrulanarak işleme izin verilir." }
+    ],
+    "resultsEyebrow": "Kazanımlar / Sonuçlar",
+    "resultsTitle": "Sıfır hatalı montaj ve tam izlenebilirlik",
+    "resultsGrid": [
+      { "title": "Doğru bileşen eşleşmesi", "text": "Cam ve braket bileşenlerinin montajda doğru eşleşmesi otomatik olarak doğrulanarak yanlış parça kullanımı sıfıra indirilmiştir." },
+      { "title": "Seri numarası bazlı takip", "text": "Bileşen-ürün ilişkisi ürünün seri numarası düzeyinde kayıt altına alınarak tam geriye dönük izlenebilirlik sağlanmıştır." },
+      { "title": "Süreç güvenliği", "text": "Hatalı eşleşmelerde hattı durdurma kontrolü ile kalitesiz ürünün bir sonraki istasyona geçişi tamamen önlenmiştir." }
+    ],
+    "closerTitle": "Camdan brakete, montajdan SAP'ye kesintisiz süreç güvenliği.",
+    "relatedProjects": "Benzer Projeler",
+    "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+    "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+    "ctaPrimary": "İletişime Geç"
+  },
+  "turk-demir-dokum-rfid-gate-with-digital-kanban": {
+    "backToProjects": "Referans Projelere Dön",
+    "sector": "Sektör",
+    "location": "Konum",
+    "year": "Yıl",
+    "scope": "Kapsam",
+    "scopeVal": "Anahtar Teslim",
+    "tagValue": "Beyaz Eşya",
+    "locationValue": "Bilecik",
+    "heroTitleLine1": "RFID teknolojisiyle,",
+    "heroTitleLine2": "kesintisiz dijital kanban.",
+    "heroSub": "Türk Demir Döküm'ün Bilecik fabrikasında hayata geçirilen RFID Kapı ve Kanban sistemi; üretim hatlarının depo malzeme hazırlama süreçlerini çekme (pull) metodolojisine göre optimize eder.",
+    "contextEyebrow": "Müşteri ve Bağlam",
+    "contextTitle": "Kombi üretiminde hat besleme optimizasyonu",
+    "contextP1": "Türk Demir Döküm'ün Bilecik'teki fabrikasında kombi üretimi yapılmaktadır. Proje, üretim hatlarından gelen taleplere dayalı olarak depo malzeme hazırlama süreçlerini optimize etmek amacıyla hayata geçirilmiştir.",
+    "contextP2": "RFID kapısı uygulaması ile malzeme akışı üretim temposuna tam uyumlu, talep odaklı dijital kanban yapısına kavuşturulmuştur.",
+    "problemEyebrow": "İhtiyaç / Problem",
+    "problemTitle": "Hat besleme ve sipariş gecikmeleri",
+    "problemLede": "Üretim hatlarının malzeme ihtiyaçlarının manuel yöntemlerle yönetilmesi gecikmelere ve hatalara zemin hazırlıyordu.",
+    "problemList": [
+      { "bold": "Gecikme Riskleri", "text": "Manuel malzeme sipariş ve hazırlama süreçlerinde yaşanan gecikmeler ve hat duruşu riskleri." },
+      { "bold": "Hatalı Sipariş ve Stok", "text": "Gereksinimlerin hatalı iletilmesi sonucu depoda fazla stok veya yanlış malzeme ikmali." },
+      { "bold": "Üretim Ritmi Uyumsuzluğu", "text": "Malzeme akışının anlık üretim temposuna ve hat tüketim hızına senkronize edilememesi." }
+    ],
+    "solutionEyebrow": "Çözüm",
+    "solutionTitle": "RFID Kapı ve Çekme (Pull) Metodolojisi",
+    "solutionLede": "Bir RFID Kapı uygulaması hayata geçirilerek, üretim hatlarından gelen gereksinimlere dayalı olarak, depo malzeme hazırlama süreçleri optimize edildi. 300'den fazla taşıma birimine RFID etiketi takılarak RFID kapısından çıkan kutuların depo malzeme siparişlerini otomatik oluşturması sağlandı.",
+    "steps": [
+      { "no": "01", "title": "RFID Etiketleme", "text": "300'den fazla taşıma kutusu/kasası yüksek hassasiyetli endüstriyel RFID etiketleriyle donatılır." },
+      { "no": "02", "title": "RFID Gate Okuma", "text": "Kutular üretim alanı çıkışındaki RFID Kapısından (Gate) geçtiği anda etiketler otomatik olarak taranır." },
+      { "no": "03", "title": "Otomatik Sipariş", "text": "Taranan kutular anlık sipariş talebine dönüşerek depoya otomatik malzeme ikmal emri iletilir." },
+      { "no": "04", "title": "El Terminali Kontrolü", "text": "Depo personeli, RFID el terminalleriyle siparişe uygun parçaları hatasız hazırlar ve sevk eder." }
+    ],
+    "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+    "techTitle": "RFID ve depo entegrasyon altyapısı",
+    "techGrid": [
+      { "tag": "OTOMASYON", "title": "RFID Gate okuma sistemi", "text": "Üretim alanı çıkışına konumlandırılan, kutuları hareket halindeyken okuyan RFID anten ve geçiş kapısı." },
+      { "tag": "RFID", "title": "Endüstriyel RFID etiketleri", "text": "300'den fazla taşıma kasasına monte edilen, zorlu saha şartlarına dayanıklı UHF RFID etiketleri." },
+      { "tag": "MOBİL", "title": "RFID el terminalleri", "text": "Depo personelinin malzeme toplama ve transfer adımlarını sahada gerçekleştirdiği mobil cihazlar." },
+      { "tag": "YAZILIM", "title": "OnSuite Trace Platformu", "text": "RFID geçiş verilerini sipariş taleplerine dönüştüren ve süreci yöneten merkezi yazılım." },
+      { "tag": "VERİ", "title": "SAP ERP entegrasyonu", "text": "Oluşturulan depo malzeme sipariş kayıtlarının SAP ERP sistemine anlık olarak aktarımı." },
+      { "tag": "METODOLOJİ", "title": "Dijital Kanban Kontrolü", "text": "Üretim hattının tüketim hızına göre malzeme akışını tetikleyen çekme (pull) kontrolü." }
+    ],
+    "integrationEyebrow": "Entegrasyonlar",
+    "integrationTitle": "SAP ERP Entegrasyonu",
+    "integrationDesc": "RFID Kapı sistemi, Türk Demir Döküm'ün SAP ERP yapısıyla anlık entegre çalışmaktadır; saha geçişlerinden üretilen sipariş kayıtları otomatik olarak SAP'ye işlenir.",
+    "integrationList": [
+      { "bold": "SAP Malzeme Siparişi", "text": "RFID kapısından geçen kutuların okuma verileriyle SAP üzerinde otomatik transfer emri oluşturulur." },
+      { "bold": "Stok Senkronizasyonu", "text": "Depodan hatta sevk edilen kutuların durumları SAP envanteri ile anlık olarak güncellenir." }
+    ],
+    "resultsEyebrow": "Kazanımlar / Sonuçlar",
+    "resultsTitle": "Otomatik hat besleme ve optimize depo süreçleri",
+    "resultsGrid": [
+      { "title": "Sıfır manuel sipariş", "text": "RFID kapısıyla depo malzeme hazırlama süreçleri otomatikleştirilerek manuel sipariş ihtiyacı tamamen ortadan kaldırılmıştır." },
+      { "title": "Çekme (Pull) metodolojisi", "text": "Malzeme akışının üretim temposuna uyumlu şekilde çekme esasına göre yönetilmesiyle fazla stoklama önlenmiştir." },
+      { "title": "Hız ve doğruluk", "text": "Dijital kanban yapısı sayesinde depo malzeme hazırlama hızında ve sevkiyat doğruluğunda maksimum verim elde edilmiştir." }
+    ],
+    "closerTitle": "RFID teknolojisiyle depodan üretim hattına kesintisiz ve hatasız malzeme akışı.",
+    "relatedProjects": "Benzer Projeler",
+    "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+    "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+    "ctaPrimary": "İletişime Geç"
+  },
+  "haier-europe-single-product-traceability-oven-assembly-line": {
+    "backToProjects": "Referans Projelere Dön",
+    "sector": "Sektör",
+    "location": "Konum",
+    "year": "Yıl",
+    "scope": "Kapsam",
+    "scopeVal": "Anahtar Teslim",
+    "tagValue": "Elektronik",
+    "locationValue": "Eskişehir",
+    "heroTitleLine1": "Otomatik test kontrolü,",
+    "heroTitleLine2": "tekil ürün izlenebilirliği.",
+    "heroSub": "Haier Europe'un Eskişehir pişirme cihazları fabrikasında hayata geçirilen ocak montaj hattı projesinde; seri numaraları RFID ile ilişkilendirilir, test süreçleri operatörden bağımsız yürütülür ve global MES sistemine aktarılır.",
+    "contextEyebrow": "Müşteri ve Bağlam",
+    "contextTitle": "Ocak montaj hatlarında dijital dönüşüm",
+    "contextP1": "Beyaz eşya üretiminde küresel bir lider olan Haier Europe'un Eskişehir'deki ocak (pişirme cihazları) fabrikasında hayata geçirilen projede, yeni ocak montaj hatlarına izlenebilirlik sistemi uygulanmıştır.",
+    "contextP2": "Proje kapsamında montaj hattı otomasyon yazılımı da tarafımızca geliştirilmiş olup, tüm test istasyonları merkezi izlenebilirlik yapısına bağlanmıştır.",
+    "problemEyebrow": "İhtiyaç / Problem",
+    "problemTitle": "Güvenli test doğrulama ve kayıt ihtiyacı",
+    "problemLede": "Yeni montaj hatlarında üretilen her bir ocağın elektriksel ve sızdırmazlık güvenlik testlerinin operatör inisiyatifinden bağımsız olarak doğrulanması gerekiyordu.",
+    "problemList": [
+      { "bold": "Operatör Bağımlılığı", "text": "Güvenlik testlerinin manuel yürütülmesinin getirdiği insan kaynaklı hata ve kayıtlarda tutarsızlık riskleri." },
+      { "bold": "Eşleştirme Eksikliği", "text": "Elektrik, gaz kaçak ve alev kontrol test sonuçlarının ürün seri numarasıyla otomatik eşleştirilememesi." },
+      { "bold": "Hat Kontrol Boşluğu", "text": "Test istasyonlarından geçmeyen veya testten kalmış ürünlerin montaj hattı boyunca ilerlemesini önleyecek otomatik kilit altyapısının bulunmaması." }
+    ],
+    "solutionEyebrow": "Çözüm",
+    "solutionTitle": "RFID Tabanlı İstasyon ve Otomatik Test Kontrolü",
+    "solutionLede": "Ürün barkodundaki seri numarası, hat başında RFID ile ilişkilendirilmekte ve izlenebilirlik RFID sistemi üzerinden sağlanmaktadır. Üretim sürecinde elektrik testleri, gaz kaçak testleri ve alev kontrol testleri, hat boyunca belirlenen istasyonlarda operatörden bağımsız olarak otomatik gerçekleştirilmektedir.",
+    "steps": [
+      { "no": "01", "title": "RFID İlişkilendirme", "text": "Hat başında ürün barkodundaki seri numarası, taşıyıcı üzerindeki RFID etiketiyle eşleştirilir ve süreç izlenir." },
+      { "no": "02", "title": "Otomatik Testler", "text": "Ocaklar; elektrik testi, gaz kaçak testi ve alev kontrol testi istasyonlarında operatörden bağımsız test edilir." },
+      { "no": "03", "title": "Veri Eşleştirme", "text": "İstasyonlardan toplanan anlık test sonuçları, ürünün tekil seri numarası ile otomatik olarak ilişkilendirilir." },
+      { "no": "04", "title": "MES Onay Kaydı", "text": "Başarıyla tamamlanan test onayları, Haier Europe'un Global MES sistemine anlık olarak aktarılır." }
+    ],
+    "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+    "techTitle": "9 eksenli servo ve robotik veri entegrasyonu",
+    "techGrid": [
+      { "tag": "OTOMASYON", "title": "Montaj hattı otomasyon yazılımı", "text": "Tüm montaj hattı iş akışını ve makine istasyonlarını yöneten kontrol yazılımı." },
+      { "tag": "ROBOTİK", "title": "9 eksenli servo & robotik sistem", "text": "İstasyonlardaki hassas konumlandırma ve mekanik işlemleri yürüten robotik donanımlar." },
+      { "tag": "RFID", "title": "RFID izlenebilirlik altyapısı", "text": "Hat başında seri numaralarını eşleyen ve istasyon geçişlerini izleyen RFID sistemi." },
+      { "tag": "İSTASYON", "title": "Otomatik test üniteleri", "text": "Elektrik, gaz kaçak ve alev kontrol testlerini insan inisiyatifi olmaksızın yürüten test donanımları." },
+      { "tag": "HABERLEŞME", "title": "Endüstriyel haberleşme ağları", "text": "EtherCAT, TCP/IP ve Profinet protokolleri üzerinden yüksek hızlı saha veri alışverişi." },
+      { "tag": "VERİ", "title": "OnSuite Trace ve MES entegrasyonu", "text": "OnSuite Trace platformunun Haier Global MES sistemiyle entegre çalıştığı veri katmanı." }
+    ],
+    "integrationEyebrow": "Entegrasyonlar",
+    "integrationTitle": "Haier Global MES Entegrasyonu",
+    "integrationDesc": "Geliştirilen izlenebilirlik sistemi, Haier Europe'un Global MES (Manufacturing Execution System) yapısıyla anlık entegre çalışmaktadır; tüm test verileri ve onaylar MES sistemine gönderilir.",
+    "integrationList": [
+      { "bold": "MES Test Kaydı", "text": "Elektrik, gaz kaçak ve alev kontrol test sonuçları seri numarası bazında MES sistemine yazılır." },
+      { "bold": "Süreç Kilitleme", "text": "Testlerden geçmeyen veya eksik kalan ürünlerin sonraki istasyona geçişi MES onay durumuna göre engellenir." }
+    ],
+    "resultsEyebrow": "Kazanımlar / Sonuçlar",
+    "resultsTitle": "Sıfır hata güvenlik ve anlık üretim takibi",
+    "resultsGrid": [
+      { "title": "Tekil ürün izlenebilirliği", "text": "Her ürün için hat başından itibaren seri numarasına dayalı uçtan uca dijital izlenebilirlik sağlanmıştır." },
+      { "title": "Operatörden bağımsız kalite", "text": "Elektrik, gaz ve alev kontrol testleri otomatik hale getirilerek insan kaynaklı hata payı sıfıra indirilmiştir." },
+      { "title": "MES veri bütünlüğü", "text": "Üretim hattındaki tüm kalite ve test kayıtları anlık olarak MES sistemine aktarılarak raporlanabilir duruma getirilmiştir." }
+    ],
+    "closerTitle": "Robotik otomasyon ve otomatik testlerle kombine edilmiş en yüksek güvenlik standartları.",
+    "relatedProjects": "Benzer Projeler",
+    "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+    "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+    "ctaPrimary": "İletişime Geç"
+  },
+  "pmi-barcode-gate": {
+    "backToProjects": "Referans Projelere Dön",
+    "sector": "Sektör",
+    "location": "Konum",
+    "year": "Yıl",
+    "scope": "Kapsam",
+    "scopeVal": "Anahtar Teslim",
+    "tagValue": "Tütün",
+    "locationValue": "Torbalı / İzmir",
+    "heroTitleLine1": "Barkod doğrulama kapısı,",
+    "heroTitleLine2": "sıfır hatalı sevkiyat.",
+    "heroSub": "PMI'ın Torbalı (İzmir) fabrikasında hayata geçirilen Otomatik Sevkiyat Barkod Doğrulama Sistemi; sevkiyat çıkışındaki palet etiketlerini okuyarak sevkiyat emirleriyle doğrular ve SAP-WMS sistemine aktarır.",
+    "contextEyebrow": "Müşteri ve Bağlam",
+    "contextTitle": "Sevkiyat çıkışlarında tam otomatik kontrol",
+    "contextP1": "PMI'ın Torbalı (İzmir) fabrikası, sigara üretimi yapan bir tesistir. Üretilen ürünler, sevkiyat sürecinde çıkış rampaları üzerinden palet bazında sevk edilmektedir.",
+    "contextP2": "Proje, bu sevkiyat çıkışındaki palet doğrulama ve sevkiyat emri eşleştirme sürecini otomatikleştirmek amacıyla hayata geçirilmiştir.",
+    "problemEyebrow": "İhtiyaç / Problem",
+    "problemTitle": "Hatalı sevkiyat ve kontrol zorlukları",
+    "problemLede": "Sevkiyat rampalarında paletlerin doğru iş emirleriyle manuel kontrol edilmesi zaman kaybına ve sevkiyat hatalarına yol açabiliyordu.",
+    "problemList": [
+      { "bold": "Hatalı Sevkiyat Riski", "text": "Eksik veya hatalı barkodlu ürünlerin sevkiyatının fark edilmeden gerçekleşmesi riskleri." },
+      { "bold": "Manuel Karşılaştırma", "text": "Palet etiketlerinin sevkiyat iş emirleriyle manuel olarak eşleştirilmesinin getirdiği operasyonel hantallık." },
+      { "bold": "WMS Senkronizasyonu", "text": "Rampalardan çıkan paletlerin WMS sistemine anlık olarak, otomatik şekilde işlenememesi." }
+    ],
+    "solutionEyebrow": "Çözüm",
+    "solutionTitle": "Barkod Kapı Sistemi ve Otomatik Doğrulama",
+    "solutionLede": "Sevkiyat sürecinde çıkış rampasına kurulan barkod kapı sistemi, tüm palet etiketlerini otomatik olarak okur. Sistem, sevkiyat iş emirlerini SAP-WMS'ten otomatik çekerek palet etiketleriyle karşılaştırır ve eşleşme durumunda WMS'e veri aktarır.",
+    "steps": [
+      { "no": "01", "title": "İş Emri Entegrasyonu", "text": "Sevkiyat planına ait iş emirleri SAP-WMS sistemi üzerinden otomatik olarak sisteme yüklenir." },
+      { "no": "02", "title": "Rampa Barkod Okuma", "text": "Çıkış rampasındaki barkod kapısı (Barcode Gate), rampa üzerinden geçen tüm palet etiketlerini otomatik okur." },
+      { "no": "03", "title": "Eşleşme ve Doğrulama", "text": "Okunan palet etiketleri, sevkiyat emirleriyle karşılaştırılarak içeriğin doğruluğu anlık sorgulanır." },
+      { "no": "04", "title": "WMS Onay Aktarımı", "text": "Eşleşen palet barkodları ve sevkiyat numarası anlık olarak SAP-WMS sistemine gönderilir." }
+    ],
+    "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+    "techTitle": "Endüstriyel tarayıcılar ve SCADA doğrulaması",
+    "techGrid": [
+      { "tag": "DONANIM", "title": "Endüstriyel Barkod Okuyucular", "text": "Çıkış rampalarında palet barkodlarını hareket halindeyken hatasız okuyan endüstriyel tarayıcılar." },
+      { "tag": "OTOMASYON", "title": "PLC saha otomasyonu", "text": "Rampadaki palet geçişlerini, sensörleri ve kapı akışını yöneten PLC sistemi." },
+      { "tag": "ARAYÜZ", "title": "C# ile SCADA uygulaması", "text": "Eşleştirme mantığını, operatör uyarı ekranlarını ve sistem veri entegrasyonunu yöneten SCADA yazılımı." },
+      { "tag": "ENTEGRASYON", "title": "WMS veri katmanı", "text": "Eşleşen palet barkodlarının ve sevkiyat numaralarının WMS sistemine iletildiği entegrasyon arabirimi." },
+      { "tag": "GÜVENLİK", "title": "Operatör Uyarı Sistemi", "text": "Eşleşmeyen veya hatalı etiket durumlarında operatöre görsel/sesli uyarı veren kontrol mekanizması." },
+      { "tag": "VERİ", "title": "SAP ERP entegrasyonu", "text": "Sevkiyat iş emirlerinin sistem tarafından otomatik olarak çekilmesini sağlayan SAP bağlantısı." }
+    ],
+    "integrationEyebrow": "Entegrasyonlar",
+    "integrationTitle": "SAP-WMS Entegrasyonu",
+    "integrationDesc": "Otomatik sevkiyat barkod doğrulama sistemi, PMI'ın SAP-WMS altyapısıyla çift yönlü ve anlık entegre çalışmaktadır; veriler operatörden bağımsız doğrulanır.",
+    "integrationList": [
+      { "bold": "İş Emri Alımı", "text": "SAP-WMS sistemindeki sevkiyat iş emirleri sisteme otomatik olarak çekilerek karşılaştırmaya hazır hale getirilir." },
+      { "bold": "Sevkiyat Onayı Yazımı", "text": "Doğrulanan palet barkodları ve ilişkili sevkiyat numaraları anlık olarak SAP-WMS sistemine geri yazılır." }
+    ],
+    "resultsEyebrow": "Kazanımlar / Sonuçlar",
+    "resultsTitle": "%100 Doğrulanmış otomatik sevkiyat",
+    "resultsGrid": [
+      { "title": "Otomatik palet doğrulaması", "text": "Sevkiyat çıkışında %100 otomatik palet doğrulaması sağlanarak manuel kontrol ihtiyacı ortadan kaldırılmıştır." },
+      { "title": "Sıfır hatalı sevkiyat", "text": "Eksik, yanlış veya hatalı barkodlu ürünlerin sevkiyat rampalarından çıkışı tamamen önlenmiştir." },
+      { "title": "Operatör uyarıları", "text": "Hatalı bir palet algılandığında anlık uyarı mekanizmasıyla sevkiyat operasyonları güvence altına alınmıştır." }
+    ],
+    "closerTitle": "Çıkış rampalarından depoya kesintisiz veri akışı ve hatasız sevkiyat.",
+    "relatedProjects": "Benzer Projeler",
+    "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+    "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+    "ctaPrimary": "İletişime Geç"
+  }
+}
