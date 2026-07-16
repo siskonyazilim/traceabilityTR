@@ -1,4 +1,4 @@
-﻿export const contentEn = {
+export const contentEn = {
   heroSlides: [
     {
       id: 1,
@@ -196,7 +196,7 @@
     2: {
       title: 'A+++ Track and Trace',
       description: 'Designed for white goods manufacturing with modules for product tracking, critical component tracking and route tracking on assembly lines.',
-      detail: 'A+++ Track and Trace (A+++ T&T) ensures end-to-end traceability by recording data coming from both internal systems and supply chain partners, all the processes the product goes through, and the process data.\n\nThe "A+++ Track and Trace" solution, specially developed for the white goods (home appliances) industry by Siskon, provides end-to-end product traceability with its product tracking on assembly lines, critical component tracking, route tracking, and other modules.\n\nA+++ T&T aims to increase profitability and efficiency with the "do it right the first time" principle by ensuring that potential quality or production-related problems are detected before they become critical.\n\nA+++ T&T helps companies operating in the white goods industry to provide product quality cost-effectively and proactively, while also meeting the requirements of development-regulating structures such as ISO 9001, a quality management standard.',
+      detail: 'A+++ Track and Trace ensures end-to-end product traceability with assembly line tracking, critical component tracking, and route tracking. It records data from internal systems and supply chain partners, all the processes the product goes through, and the process data.\n\nThe "A+++ Track and Trace" solution, specially developed for the white goods (home appliances) industry by Siskon, provides end-to-end product traceability with its product tracking on assembly lines, critical component tracking, route tracking, and other modules.\n\nA+++ T&T aims to increase profitability and efficiency with the "do it right the first time" principle by ensuring that potential quality or production-related problems are detected before they become critical.\n\nA+++ T&T helps companies operating in the white goods industry to provide product quality cost-effectively and proactively, while also meeting the requirements of development-regulating structures such as ISO 9001, a quality management standard.',
     },
     3: {
       title: 'Organic Track and Trace',
@@ -233,7 +233,7 @@
     4: {
       title: 'Capsule Track and Trace',
       description: 'Enables pharmaceutical traceability from raw material intake to warehouse delivery using RFID, 1D barcodes and Data Matrix technologies.',
-      detail: 'Capsule Track and Trace, specially developed for the pharmaceutical industry by Siskon, aims to help companies track products on a unique number basis from raw material entry to warehouse delivery, manufacture wider and more complex varieties, accelerate the distribution of medicines as well as the connection with patients, and even make it closer than before.',
+      detail: 'Capsule Track and Trace enables pharmaceutical traceability on a unique number basis from raw material intake to warehouse delivery. Developed by Siskon, it aims to accelerate distribution and strengthen the connection with patients.',
       detailSections: [
         {
           heading: 'Main benefits of Capsule T&T:',
