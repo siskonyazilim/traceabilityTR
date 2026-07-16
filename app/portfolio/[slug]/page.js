@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import { referenceProjects } from '../../../data/references';
@@ -13,6 +13,7 @@ import { sortReferenceProjects, withReferenceProjectTimeline } from '../../../li
 import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 import JsonLd from '../../../components/seo/JsonLd';
+import PhiniaDetailPage from '../../../components/sections/PhiniaDetailPage';
 /* eslint-disable react/prop-types */
 
 export async function generateMetadata({ params }) {
@@ -217,6 +218,19 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
       }
     ]
   };
+
+  if (slug === 'phinia-laser-marking-machine-traceability-integration') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PhiniaDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+        />
+      </>
+    );
+  }
 
   return (
     <>

@@ -6,6 +6,7 @@ import BreadcrumbSchema from '../components/seo/BreadcrumbSchema'
 import { cookies } from 'next/headers'
 import { Kanit } from 'next/font/google'
 import { DEFAULT_LOCALE, isSupportedLocale } from '../lib/i18n/dictionaries'
+import Script from 'next/script'
 /* eslint-disable react/prop-types */
 
 const kanit = Kanit({
@@ -93,16 +94,19 @@ export default async function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script
+        <BreadcrumbSchema />
+      </head>
+      <body className={kanit.variable}>
+        <Script
           id="cerezgo-script"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
           data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0szME7AHM2StfwPjoKkg0DOCFRSHeqEBQs3+SrK7/9T1h3iFvw33e+o="
           data-id="nt"
-          async
-          defer
+          strategy="afterInteractive"
         />
-        <script
+        <Script
           id="gtm-deferred"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: `(function(){
   var initialized = false;
   var idleTimer = null;
@@ -144,9 +148,6 @@ export default async function RootLayout({ children }) {
   idleTimer = setTimeout(init, 3500);
 })();` }}
         />
-        <BreadcrumbSchema />
-      </head>
-      <body className={kanit.variable}>
         <noscript>
           <iframe
             title="gtm-noscript"
