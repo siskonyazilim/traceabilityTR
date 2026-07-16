@@ -296,15 +296,7 @@ export default function HaierDetailPage({ locale = 'tr', backHref, localizedProj
             </div>
           </div>
 
-          {/* ============ CLOSER / QUOTE BLOCK ============ */}
-          {currentDict.closerTitle && (
-            <div className="my-12 px-8 py-8 rounded-md bg-gradient-to-r from-slate-50 to-blue-50/40 border border-slate-200 relative overflow-hidden">
-              <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-secondary-blue to-accent-blue rounded-l-md" />
-              <blockquote className="text-lg md:text-xl font-semibold text-primary-black leading-relaxed italic pl-4">
-                &ldquo;{currentDict.closerTitle}&rdquo;
-              </blockquote>
-            </div>
-          )}
+
 
           {/* OnSuite Trace Redirection CTA */}
           <div className="mt-12 rounded-md bg-gradient-to-br from-primary-black to-dark-bg p-8 text-white shadow-xl md:p-10 border border-slate-blue/10 relative overflow-hidden">
