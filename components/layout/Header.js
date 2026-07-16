@@ -131,6 +131,7 @@ export const Header = () => {
   const navItems = [
     { label: t('header.solutions', 'Soluțiile Noastre'), href: '#solutions-tab' },
     { label: t('header.industries', 'Industrii'), href: '#products-tab' },
+    { label: t('header.projects', 'Proiecte de Referință'), href: '#reference-projects' },
     { label: t('header.partners', 'Parteneri de Soluții'), href: '#our-strategic-solution-partners' },
     { label: t('header.contact', 'Contact'), href: toLocalePath('/contact') },
     { label: t('header.news', 'Blog'), href: toLocalePath('/blog') },
