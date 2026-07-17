@@ -21,6 +21,7 @@ import ref_18 from './haier-europe-sorting-line-installation-traceability.json';
 import ref_19 from './haier-europe-assembly-line-installation-traceability.json';
 import ref_20 from './bomi-group-camera-based-multi-code-reading-system-tr.json';
 import ref_21 from './pmi-palletizing-automation-automatic-labeling.json';
+import ref_22 from './pmi-embosser-rfid.json';
 
 const enDetails = {
   'phinia-laser-marking-machine-traceability-integration': ref_0,
@@ -45,6 +46,7 @@ const enDetails = {
   'haier-europe-assembly-line-installation-traceability': ref_19,
   'bomi-group-camera-based-multi-code-reading-system-tr': ref_20,
   'pmi-palletizing-automation-automatic-labeling': ref_21,
+  'pmi-embosser-rfid': ref_22,
 };
 
 export default enDetails;

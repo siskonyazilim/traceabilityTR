@@ -35,6 +35,7 @@ import HaierSortingDetailPage from '../../../components/sections/HaierSortingDet
 import HaierAssemblyDetailPage from '../../../components/sections/HaierAssemblyDetailPage';
 import BomiGroupDetailPage from '../../../components/sections/BomiGroupDetailPage';
 import PmiPalletizingDetailPage from '../../../components/sections/PmiPalletizingDetailPage';
+import PmiEmbosserDetailPage from '../../../components/sections/PmiEmbosserDetailPage';
 
 import trDetails from '../../../data/i18n/references/tr/index.js';
 import enDetails from '../../../data/i18n/references/en/index.js';
@@ -67,6 +68,7 @@ export async function generateMetadata({ params }) {
     'delphi-technologies-managementul-depozitelor': 'delphi-technologies',
     'pmi-rfid-pentru-stantare': 'pmi-rfid',
     'philsa-palletizing-automation-automatic-labeling': 'pmi-palletizing-automation-automatic-labeling',
+    'philsa-embosser-rfid': 'pmi-embosser-rfid',
   };
 
   const slug = legacySlugMap[rawSlug] || rawSlug;
@@ -144,6 +146,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     'delphi-technologies-managementul-depozitelor': 'delphi-technologies',
     'pmi-rfid-pentru-stantare': 'pmi-rfid',
     'philsa-palletizing-automation-automatic-labeling': 'pmi-palletizing-automation-automatic-labeling',
+    'philsa-embosser-rfid': 'pmi-embosser-rfid',
   };
 
   const slug = legacySlugMap[rawSlug] || rawSlug;
@@ -342,6 +345,20 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
       <>
         <JsonLd data={graphSchema} />
         <PmiPalletizingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'pmi-embosser-rfid') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiEmbosserDetailPage
           locale={locale}
           backHref={backHref}
           localizedProjects={localizedProjects}
