@@ -26,7 +26,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
     'borgwarner-': '/Logos/borgwarner-seeklogo.svg',
     'turk-demir-dokum-': '/Logos/demirdokum-seeklogo.svg',
     'bosch-': '/Logos/Bosch-logo.svg',
-    'nemak-': '/Logos/nemak.svg',
+    'nemak-': '/Logos/nemak-seeklogo-removebg-preview.png',
     'bomi-group-': '/Logos/Bomi.svg',
   };
 
@@ -56,7 +56,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
     return project.image || '/images/companies/fabrika.jpg';
   })();
 
-  const isRasterImage = /\.(png|jpe?g|webp|gif|avif)$/i.test(projectVisual);
+  const isRasterImage = /\.(png|jpe?g|webp|gif|avif)$/i.test(projectVisual) && !projectVisual.includes('/Logos/');
   const isNuhunAnkaraLogo = projectVisual.includes('/Logos/nuhun-ankara-makarnasi.webp');
   const isCandyHooverLogo = projectVisual.includes('/Logos/candy-hoover-group-srl-vector-logo.svg');
   const isTurkTuborgLogo = projectVisual.includes('/Logos/turk_tuborg.png');
@@ -64,9 +64,12 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   const isGroupeAtlanticLogo = projectVisual.toLowerCase().includes('atlantic');
   const isStackpoleLogo = projectVisual.toLowerCase().includes('stackpole');
   const isPmiLogo = projectVisual.toLowerCase().includes('philip-morris') || projectVisual.toLowerCase().includes('pmi');
+  const isOrkideLogo = projectVisual.toLowerCase().includes('orkide');
   let projectVisualClass = 'object-contain p-5';
 
-  if (isTurkTuborgLogo) {
+  if (isOrkideLogo) {
+    projectVisualClass = 'object-contain p-1 scale-[1.35]';
+  } else if (isTurkTuborgLogo) {
     projectVisualClass = 'object-contain p-4 md:p-5';
   } else if (isCandyHooverLogo) {
     projectVisualClass = 'object-contain p-2 scale-110';
