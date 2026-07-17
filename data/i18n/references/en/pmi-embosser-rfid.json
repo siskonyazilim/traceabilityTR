@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Tobacco",
+  "locationValue": "Torbali / Izmir",
+  "heroTitleLine1": "RFID-controlled triggering,",
+  "heroTitleLine2": "error-free production aligned with work orders.",
+  "heroSub": "In the project implemented at PMI's cigarette manufacturing plant in Torbali, Izmir, embosser rollers printing on cigarettes were tracked via an RFID-based system. PLC integration with machines was established to guarantee the use of the correct roller according to the work order.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Reliable RFID tracking for embosser rollers",
+  "contextP1": "In the project implemented at PMI's cigarette manufacturing plant in Torbali, Izmir, embosser rollers printing on cigarettes were tracked via an RFID-based system.",
+  "contextP2": "The project was carried out to guarantee the use of rollers complying with the work order in production and to prevent the use of incorrect rollers.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Risks of incorrect roller use and faulty printing",
+  "problemLede": "Embosser rollers had to comply with the SKU of the product being produced as stated in the work order. Manual checks carried the risk of error, and using incorrect rollers led to faulty prints and scrap.",
+  "problemList": [
+    {
+      "bold": "Incompatible Roller Usage",
+      "text": "Using rollers that did not match the product's SKU in the work order jeopardized quality."
+    },
+    {
+      "bold": "Error and Scrap Risk",
+      "text": "Incorrect roller usage directly led to faulty printing and significant scrap (waste) problems."
+    },
+    {
+      "bold": "Lack of Reliable Control",
+      "text": "There was a need for a reliable, non-manual (automated) control structure that would prevent production from starting without proper matching."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "RFID-based verification and automatic machine interlocking",
+  "solutionLede": "RFID tags were placed on the embosser rollers which print on cigarettes. Triggered by the machine, the RFID tag of the roller was read, and matching was checked against the SKU in the work order. In case of a mismatch, the machine was automatically stopped and an alarm was issued to the operator.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "RFID Labeling",
+      "text": "Durable RFID tags were placed on all embosser rollers."
+    },
+    {
+      "no": "02",
+      "title": "Triggering and Reading",
+      "text": "With the production trigger from the machine, RFID readers scan the tag on the roller."
+    },
+    {
+      "no": "03",
+      "title": "SKU Matching Check",
+      "text": "The read data is matched with the SKU in the work order; if verification is successful, production proceeds."
+    },
+    {
+      "no": "04",
+      "title": "Automatic Stopping",
+      "text": "When a mismatch is detected, the system immediately stops the machine via the PLC and gives an emergency alarm."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "RFID hardware and PLC-based trigger infrastructure",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "RFID Tags",
+      "text": "RFID tags mounted on embosser rollers, suitable for operation in in-machine environments."
+    },
+    {
+      "tag": "READER",
+      "title": "RFID Antennas and Readers",
+      "text": "Equipment that scans the tag on the roller in seconds upon the trigger signal from the machine."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Structure",
+      "text": "System executing field automation, RFID reading triggers, and the machine stop command on mismatch."
+    },
+    {
+      "tag": "DEVICE",
+      "title": "Handheld Terminals",
+      "text": "Mobile RFID terminals used for additional field operations and roller identifications."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP Work Order Integration",
+  "integrationDesc": "The system operates integrated with SAP; work order and SKU information is received via SAP and matched with RFID readings, while matching and production control results are shared with SAP.",
+  "integrationList": [
+    {
+      "bold": "SAP Integration",
+      "text": "SKU and work order data is fetched from SAP to verify the production decision, and execution outcomes are sent back to SAP."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Secure printing process free from human errors",
+  "resultsGrid": [
+    {
+      "title": "Prevention of Incorrect Rollers",
+      "text": "Roller and work order matching is automatically verified via RFID, eliminating operator discretion."
+    },
+    {
+      "title": "Reduction of Waste and Scrap",
+      "text": "The risk of scrap production leading to quality losses due to faulty printing was significantly reduced."
+    },
+    {
+      "title": "Process Security",
+      "text": "Production security was ensured by not allowing the machine to operate without an established match (with a wrong roller)."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Need equipment tracking and verification?",
+  "ctaSubtitle": "Get in touch with us to discuss how our RFID-based tracking solutions can be adapted to your factory.",
+  "ctaPrimary": "Get in Touch"
+}

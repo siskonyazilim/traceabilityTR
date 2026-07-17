@@ -19,15 +19,31 @@ import BshCarriersDetailPage from '../../../components/sections/BshCarriersDetai
 import DemirDokumDetailPage from '../../../components/sections/DemirDokumDetailPage';
 import HaierDetailPage from '../../../components/sections/HaierDetailPage';
 import PmiBarcodeGateDetailPage from '../../../components/sections/PmiBarcodeGateDetailPage';
+import BshAssemblyLineTraceabilityDetailPage from '../../../components/sections/BshAssemblyLineTraceabilityDetailPage';
+import BshOvenDoorTraceabilityDetailPage from '../../../components/sections/BshOvenDoorTraceabilityDetailPage';
+import BshGlassShelfTrackingDetailPage from '../../../components/sections/BshGlassShelfTrackingDetailPage';
+import AjinomotoBlockchainDetailPage from '../../../components/sections/AjinomotoBlockchainDetailPage';
+import WhirlpoolSortingDetailPage from '../../../components/sections/WhirlpoolSortingDetailPage';
+import VestelLabelingDetailPage from '../../../components/sections/VestelLabelingDetailPage';
+import MeyDiageoDetailPage from '../../../components/sections/MeyDiageoDetailPage';
+import MaxionMoldTrackingDetailPage from '../../../components/sections/MaxionMoldTrackingDetailPage';
+import BoschTrolleyTrackingDetailPage from '../../../components/sections/BoschTrolleyTrackingDetailPage';
+import BorgwarnerLaserDetailPage from '../../../components/sections/BorgwarnerLaserDetailPage';
+import OrkideQualityDetailPage from '../../../components/sections/OrkideQualityDetailPage';
+import NemakPartsDetailPage from '../../../components/sections/NemakPartsDetailPage';
+import HaierSortingDetailPage from '../../../components/sections/HaierSortingDetailPage';
+import HaierAssemblyDetailPage from '../../../components/sections/HaierAssemblyDetailPage';
+import BomiGroupDetailPage from '../../../components/sections/BomiGroupDetailPage';
+import PmiPalletizingDetailPage from '../../../components/sections/PmiPalletizingDetailPage';
 
-import trDetails from '../../../data/i18n/references/details.tr.json';
-import enDetails from '../../../data/i18n/references/details.en.json';
-import roDetails from '../../../data/i18n/references/details.ro.json';
+import trDetails from '../../../data/i18n/references/tr/index.js';
+import enDetails from '../../../data/i18n/references/en/index.js';
+import roDetails from '../../../data/i18n/references/ro/index.js';
 
 const detailsByLocale = {
-  tr: trDetails,
-  en: enDetails,
-  ro: roDetails,
+  tr: trDetails.default || trDetails,
+  en: enDetails.default || enDetails,
+  ro: roDetails.default || roDetails,
 };
 /* eslint-disable react/prop-types */
 
@@ -50,6 +66,7 @@ export async function generateMetadata({ params }) {
     'nuhun-ankara-trasabilitate': 'nuhun-ankara',
     'delphi-technologies-managementul-depozitelor': 'delphi-technologies',
     'pmi-rfid-pentru-stantare': 'pmi-rfid',
+    'philsa-palletizing-automation-automatic-labeling': 'pmi-palletizing-automation-automatic-labeling',
   };
 
   const slug = legacySlugMap[rawSlug] || rawSlug;
@@ -126,6 +143,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     'nuhun-ankara-trasabilitate': 'nuhun-ankara',
     'delphi-technologies-managementul-depozitelor': 'delphi-technologies',
     'pmi-rfid-pentru-stantare': 'pmi-rfid',
+    'philsa-palletizing-automation-automatic-labeling': 'pmi-palletizing-automation-automatic-labeling',
   };
 
   const slug = legacySlugMap[rawSlug] || rawSlug;
@@ -235,7 +253,6 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   };
 
   const projectDetails = detailsByLocale[locale]?.[slug] || detailsByLocale.tr[slug] || {};
-
   if (slug === 'phinia-laser-marking-machine-traceability-integration') {
     return (
       <>
@@ -311,6 +328,230 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
       <>
         <JsonLd data={graphSchema} />
         <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'pmi-palletizing-automation-automatic-labeling') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiPalletizingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'bsh-assembly-line-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <BshAssemblyLineTraceabilityDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'bsh-oven-door-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <BshOvenDoorTraceabilityDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'bsh-glass-shelf-tracking') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <BshGlassShelfTrackingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <AjinomotoBlockchainDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'whirlpool-sorting-barcode-control') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <WhirlpoolSortingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'vestel-automatic-labeling-verification') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <VestelLabelingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'mey-diageo-tracking-and-localization-project') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <MeyDiageoDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'maxion-inci-celik-rfid-mold-tracking') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <MaxionMoldTrackingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'bosch-trolley-tracking-rfid-gate') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <BoschTrolleyTrackingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'borgwarner-laser-marking') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <BorgwarnerLaserDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'orkide-quality-control-application') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <OrkideQualityDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'nemak-parts-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <NemakPartsDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'haier-europe-sorting-line-installation-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <HaierSortingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'haier-europe-assembly-line-installation-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <HaierAssemblyDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'bomi-group-camera-based-multi-code-reading-system-tr') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <BomiGroupDetailPage
           locale={locale}
           backHref={backHref}
           localizedProjects={localizedProjects}

@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Tutun",
+  "locationValue": "Torbali / Izmir",
+  "heroTitleLine1": "Declanșare controlată prin RFID,",
+  "heroTitleLine2": "producție fără erori conform ordinului de lucru.",
+  "heroSub": "În proiectul implementat la fabrica producătoare de țigări PMI din Torbali, Izmir, rolele de embosare care imprimă pe țigări au fost urmărite printr-un sistem bazat pe RFID. S-a realizat integrarea PLC cu mașinile pentru a garanta utilizarea rolei corecte conform ordinului de lucru.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Urmărire RFID fiabilă pentru rolele de embosare",
+  "contextP1": "În proiectul implementat la fabrica producătoare de țigări PMI din Torbali, Izmir, rolele de embosare care imprimă pe țigări au fost urmărite printr-un sistem bazat pe RFID.",
+  "contextP2": "Proiectul a fost realizat pentru a garanta utilizarea rolelor potrivite cu ordinul de lucru în producție și pentru a preveni utilizarea rolelor incorecte.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Riscurile utilizării incorecte a rolelor și a tipăririi defectuoase",
+  "problemLede": "Rolele de embosare trebuiau să se potrivească cu SKU-ul produsului fabricat conform ordinului de lucru. Verificările manuale purtau riscul de erori, iar utilizarea rolelor greșite ducea la printuri defectuoase și rebuturi.",
+  "problemList": [
+    {
+      "bold": "Utilizarea Incompatibilă a Rolelor",
+      "text": "Folosirea rolelor care nu se potriveau cu SKU-ul din ordinul de lucru periclita calitatea."
+    },
+    {
+      "bold": "Risc de Erori și Rebuturi",
+      "text": "Utilizarea greșită a rolelor a dus direct la tipărirea cu erori și la probleme semnificative de rebuturi (deșeuri)."
+    },
+    {
+      "bold": "Lipsa unui Control Fiabil",
+      "text": "Era necesară o structură de control fiabilă, independentă de factorul uman, care să prevină începerea producției fără o corespondență corectă."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Verificare bazată pe RFID și interblocare automată a mașinii",
+  "solutionLede": "Tagurile RFID au fost montate pe rolele de embosare care imprimă pe țigări. La declanșarea de către mașină, s-a citit tagul RFID al rolei și s-a verificat potrivirea cu SKU-ul din ordinul de lucru. În cazul unei nepotriviri, mașina a fost oprită automat și o alarmă a fost transmisă operatorului.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Etichetare RFID",
+      "text": "Taguri RFID rezistente au fost plasate pe toate rolele de embosare."
+    },
+    {
+      "no": "02",
+      "title": "Declanșare și Citire",
+      "text": "Cu declanșatorul de producție dat de mașină, cititoarele RFID scanează tag-ul de pe rolă."
+    },
+    {
+      "no": "03",
+      "title": "Verificare Potrivire SKU",
+      "text": "Informația citită este potrivită cu SKU-ul din ordinul de lucru; dacă verificarea este reușită, producția avansează."
+    },
+    {
+      "no": "04",
+      "title": "Oprire Automată",
+      "text": "Când se detectează o nepotrivire, sistemul oprește imediat mașina prin intermediul PLC și emite o alarmă de urgență."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Hardware RFID și infrastructură de declanșare bazată pe PLC",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Tag-uri RFID",
+      "text": "Taguri RFID montate pe role de embosare, potrivite pentru funcționare în mediul din interiorul mașinii."
+    },
+    {
+      "tag": "CITITOR",
+      "title": "Antene și Cititoare RFID",
+      "text": "Echipamente care scanează tag-ul de pe rolă în câteva secunde la semnalul de declanșare din partea mașinii."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură PLC",
+      "text": "Sistemul care execută automatizarea, declanșările de citire RFID și comanda de oprire a mașinilor la nepotrivire."
+    },
+    {
+      "tag": "DISPOZITIV",
+      "title": "Terminale Mobile",
+      "text": "Terminale mobile RFID utilizate pentru identificarea adițională a rolelor și operațiuni conexe."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea cu Ordinul de Lucru SAP",
+  "integrationDesc": "Sistemul funcționează integrat cu SAP; informațiile ordinelor de lucru și SKU sunt primite de la SAP și corelate, iar rezultatele sunt trimise înapoi la SAP.",
+  "integrationList": [
+    {
+      "bold": "Integrare SAP",
+      "text": "Datele SKU și ordinele de lucru sunt aduse din SAP pentru a verifica decizia de producție, iar rezultatele de execuție sunt trimise înapoi către SAP."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Proces de tipărire securizat, fără erori umane",
+  "resultsGrid": [
+    {
+      "title": "Prevenirea Rolelor Greșite",
+      "text": "Potrivirea rola și a ordinului de lucru este verificată automat prin RFID, eliminând discreția operatorului."
+    },
+    {
+      "title": "Reducerea Rebuturilor",
+      "text": "Riscul producției de rebuturi care duce la pierderi de calitate din cauza imprimării defectuoase a fost redus semnificativ."
+    },
+    {
+      "title": "Securitatea Procesului",
+      "text": "Securitatea producției a fost asigurată prin nepermiterea funcționării mașinii fără o potrivire stabilită cu o rolă."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Aveți nevoie de urmărire și verificare a echipamentelor?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum soluțiile noastre de urmărire RFID pot fi adaptate fabricii dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

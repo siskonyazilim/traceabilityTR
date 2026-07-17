@@ -472,7 +472,7 @@ export const referenceProjects = [
     id: 20,
     title: "NEMAK - Trasabilitatea pieselor",
     slug: "nemak-parts-traceability",
-    logo: "/Logos/nemak.svg",
+    logo: "/Logos/nemak-seeklogo-removebg-preview.png",
     sector: "Industria auto",
     image: "/images/companies/Nemak/nemak-slovakia_2019_4_only-new-plant-scaled.jpg",
     heroImage: "/images/companies/Nemak/nemak-slovakia_2019_4_only-new-plant-scaled.jpg",

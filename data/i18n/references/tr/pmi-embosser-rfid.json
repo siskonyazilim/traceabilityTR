@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Tütün",
+  "locationValue": "Torbalı / İzmir",
+  "heroTitleLine1": "RFID kontrollü tetikleme,",
+  "heroTitleLine2": "iş emrine uygun hatasız üretim.",
+  "heroSub": "PMI'ın İzmir Torbalı'daki sigara üretim fabrikasında hayata geçirilen projede, sigara üzerine baskı yapan embosser ruloları RFID tabanlı bir sistemle takip edildi. İş emrine uygun rulo kullanımını güvence altına almak için makinelerle PLC entegrasyonu sağlandı.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Embosser ruloları için güvenilir RFID takibi",
+  "contextP1": "PMI'ın sigara üretimi yapan İzmir Torbalı fabrikasında hayata geçirilen projede, sigara üzerine baskı yapan embosser ruloları RFID tabanlı bir sistemle takip edilmiştir.",
+  "contextP2": "Proje, üretimde iş emrine uygun rulonun kullanıldığını güvence altına almak ve yanlış rulo kullanımını önlemek amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Yanlış rulo kullanımı ve hatalı baskı riskleri",
+  "problemLede": "Embosser rulolarının, üretilen ürünün iş emrindeki SKU'suna uygun olması gerekiyordu. Manuel kontroller hata riski taşıyor, yanlış rulo kullanımı hatalı baskıya ve fireye neden oluyordu.",
+  "problemList": [
+    {
+      "bold": "Uyumsuz Rulo Kullanımı",
+      "text": "Üretilen ürünün iş emrindeki SKU'suna uymayan ruloların kullanılması kaliteyi tehlikeye atıyordu."
+    },
+    {
+      "bold": "Hata ve Fire Riski",
+      "text": "Yanlış rulo kullanımı doğrudan hatalı baskıya ve ciddi oranda ıskarta (hurda) sorunlarına yol açıyordu."
+    },
+    {
+      "bold": "Güvenilir Kontrol Eksikliği",
+      "text": "Eşleşme sağlanmadan üretimin başlamasını engelleyecek, insandan bağımsız (otomatize) bir kontrol yapısına ihtiyaç vardı."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "RFID tabanlı doğrulama ve otomatik makine müdahalesi",
+  "solutionLede": "Sigara üzerine baskı yapan embosser rulolarının üzerine RFID etiketleri yerleştirildi. Makineden alınan tetikleme ile rulonun RFID etiketi okundu ve iş emrinde gelen SKU ile eşleşme kontrolü sağlandı. Eşleşme hatasında makine otomatik olarak durdurularak operatöre alarm verilmesi sağlandı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "RFID Etiketleme",
+      "text": "Tüm embosser ruloları üzerine dayanıklı RFID etiketleri (tag) yerleştirildi."
+    },
+    {
+      "no": "02",
+      "title": "Tetrikleme ve Okuma",
+      "text": "Makineden alınan üretim tetiklemesi ile RFID okuyucular rulodaki etiketi okur."
+    },
+    {
+      "no": "03",
+      "title": "SKU Eşleşme Kontrolü",
+      "text": "Okunan bilgi ile iş emrindeki SKU eşleştirilir; doğrulama başarılı ise üretime geçilir."
+    },
+    {
+      "no": "04",
+      "title": "Otomatik Durdurma",
+      "text": "Eşleşmenin sağlanmadığı tespit edildiğinde, PLC üzerinden sistem makineyi hemen durdurur ve acil alarm verir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "RFID donanımları ile PLC tabanlı tetikleme altyapısı",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "RFID Etiketleri",
+      "text": "Embosser rulolarına monte edilen, makine içi ortamlarda çalışmaya uygun RFID tagler."
+    },
+    {
+      "tag": "OKUYUCU",
+      "title": "RFID Anten ve Okuyucular",
+      "text": "Makineden gelen tetikleme sinyaliyle rulodaki tagi saniyesinde okuyan donanımlar."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha otomasyonunu, RFID okuma tetiklemelerini ve hatalı eşleşmede makine durdurma komutunu yürüten sistem."
+    },
+    {
+      "tag": "CİHAZ",
+      "title": "El Terminalleri",
+      "text": "Saha içi ek işlemlerde ve rulo tanımlamalarında kullanılan mobil RFID terminalleri."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP İş Emri Entegrasyonu",
+  "integrationDesc": "Sistem SAP ile entegre çalışmaktadır; iş emri ve SKU bilgileri SAP üzerinden alınarak RFID okumalarıyla eşleştirilmekte, eşleştirme ve üretim kontrol sonuçları SAP ile paylaşılmaktadır.",
+  "integrationList": [
+    {
+      "bold": "SAP Entegrasyonu",
+      "text": "SKU ve iş emri verileri SAP'den alınıp üretim kararı doğrulanır ve üretim sonuçları yine SAP'ye iletilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "İnsan hatalarından arındırılmış güvenli baskı süreci",
+  "resultsGrid": [
+    {
+      "title": "Yanlış Rulo Kullanımı Engeli",
+      "text": "RFID ile rulo ve iş emri eşleştirmesi otomatik doğrulanarak operatör inisiyatifinden çıkarıldı."
+    },
+    {
+      "title": "Fire ve Hurda Azalımı",
+      "text": "Hatalı baskıya bağlı olan ve kalite kayıplarına yol açan hurda üretim riski önemli ölçüde azaldı."
+    },
+    {
+      "title": "Süreç Güvenliği",
+      "text": "Eşleşme sağlanmadan (yanlış rulo ile) makinenin çalışmasına izin verilmediği için üretim güvenliği güvence altına alındı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Ekipman takibi ve doğrulama ihtiyacınız mı var?",
+  "ctaSubtitle": "RFID tabanlı takip çözümlerimizin fabrikanıza nasıl uyarlanabileceğini görüşmek için bize ulaşın.",
+  "ctaPrimary": "İletişime Geç"
+}

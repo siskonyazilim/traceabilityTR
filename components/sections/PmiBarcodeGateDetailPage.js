@@ -6,11 +6,19 @@ import Button from '../ui/Button';
 import { IconArrowLeft } from '../ui/Icons';
 import ReferenceProjectsSlider from './ReferenceProjectsSlider';
 import PagePrimaryCta from '../ui/PagePrimaryCta';
-import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 /* eslint-disable react/prop-types */
 
-export default function PmiBarcodeGateDetailPage({ locale = 'tr', backHref, localizedProjects, dict }) {
+export default function PmiBarcodeGateDetailPage({
+  locale = 'tr',
+  backHref,
+  localizedProjects,
+  dict,
+  fixedYear = '2023',
+  currentSlug = 'pmi-barcode-gate',
+  logoSrc = '/Logos/philip-morris-international-pmi-seeklogo.png',
+  logoAlt = 'PMI Logo',
+}) {
   const currentDict = dict || {};
 
   let onsuiteUrl = 'https://onsuite.com.tr/ro/modules/trace';
@@ -73,7 +81,7 @@ export default function PmiBarcodeGateDetailPage({ locale = 'tr', backHref, loca
                       {currentDict.year}
                     </div>
                     <div className="font-semibold text-primary-black text-sm sm:text-base mt-1">
-                      2023
+                      {fixedYear}
                     </div>
                   </div>
                   <div>
@@ -90,8 +98,8 @@ export default function PmiBarcodeGateDetailPage({ locale = 'tr', backHref, loca
               {/* PMI Logo */}
               <div className="flex items-center justify-center lg:justify-end w-full py-4">
                 <img
-                  src="/Logos/philip-morris-international-pmi-seeklogo.png"
-                  alt="PMI Logo"
+                  src={logoSrc}
+                  alt={logoAlt}
                   className="w-full max-w-[400px] sm:max-w-[520px] md:max-w-[600px] h-auto object-contain"
                 />
               </div>
@@ -350,7 +358,7 @@ export default function PmiBarcodeGateDetailPage({ locale = 'tr', backHref, loca
             <ReferenceProjectsSlider
               projects={localizedProjects}
               locale={locale}
-              currentSlug="pmi-barcode-gate"
+              currentSlug={currentSlug}
               detailBasePath="/portfolio"
               labels={{
                 title: currentDict.relatedProjects,
