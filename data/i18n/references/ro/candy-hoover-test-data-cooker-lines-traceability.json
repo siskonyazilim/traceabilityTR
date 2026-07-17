@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Înapoi la proiectele de referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Eskisehir",
+  "heroTitleLine1": "Candy Hoover",
+  "heroTitleLine2": "Trasabilitatea Stațiilor de Test",
+  "heroSub": "În fabrica de aparate de gătit Candy Hoover din Eskisehir, datele de test din linia de producție au fost colectate automat și corelate cu fiecare produs.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Gestionare digitală și trasabilă a datelor de test",
+  "contextP1": "În proiectul implementat în fabrica de aparate de gătit Candy Hoover din Eskisehir, datele de test generate pe linia de producție au fost colectate automat și asociate produsului.",
+  "contextP2": "Obiectivul a fost gestionarea datelor de test într-un mod digital și complet trasabil.",
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Înregistrare manuală, risc de erori și urmărire limitată",
+  "problemLede": "Datele testelor electrice și de scurgeri de gaz erau introduse manual în Excel. Această abordare producea pierderi de timp, erori de introducere și îngreuna trasabilitatea fiabilă la nivel de produs.",
+  "problemList": [
+    {
+      "bold": "Introducere manuală în Excel",
+      "text": "Procesarea manuală a datelor de test creștea volumul operațional și încetinea fluxul."
+    },
+    {
+      "bold": "Erori de introducere",
+      "text": "Introducerea manuală creștea riscul de probleme de calitate și fiabilitate."
+    },
+    {
+      "bold": "Trasabilitate slabă pe produs",
+      "text": "Fără corelarea robustă produs-rezultat, trasabilitatea rămânea limitată."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Colectare automată a datelor și corelare cu seria produsului",
+  "solutionLede": "Prin integrarea echipamentelor de test, datele de test electric și de scurgeri de gaz au fost colectate automat și legate de produsul corect prin citirea numărului de serie.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Sosirea produsului la stație",
+      "text": "Când produsul ajunge la stația de test, numărul de serie este citit cu scannerul de coduri de bare."
+    },
+    {
+      "no": "02",
+      "title": "Colectare automată din echipamente",
+      "text": "Rezultatele sunt preluate automat din echipamentele de test electric și de scurgeri de gaz."
+    },
+    {
+      "no": "03",
+      "title": "Corelare cu numărul de serie",
+      "text": "Datele colectate sunt corelate cu numărul de serie citit al produsului."
+    },
+    {
+      "no": "04",
+      "title": "Înregistrare și monitorizare centrală",
+      "text": "Datele sunt înregistrate în OnSuite Trace și devin disponibile pentru monitorizare și raportare."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente utilizate",
+  "techTitle": "Echipamente de test, scanere cod de bare, PLC și OnSuite Trace",
+  "techGrid": [
+    {
+      "tag": "TEST",
+      "title": "Echipamente pentru test electric și scurgeri de gaz",
+      "text": "Infrastructură de test din producție care generează automat rezultatele de test."
+    },
+    {
+      "tag": "IDENTIFICARE",
+      "title": "Scanere cod de bare",
+      "text": "Citesc numărul de serie la intrarea în stație pentru corelarea corectă a datelor."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Integrare PLC",
+      "text": "Coordonează fluxul din teren și schimbul de date dintre echipamente și aplicație."
+    },
+    {
+      "tag": "MANAGEMENT",
+      "title": "OnSuite Trace",
+      "text": "Platformă centrală pentru trasabilitate și vizibilitatea proceselor."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Flux integrat între stații de test, MES și platforma de trasabilitate",
+  "integrationDesc": "Sistemul combină rezultatele din stațiile de test cu numerele de serie ale produselor și funcționează integrat cu sistemul Global MES Candy Hoover și cu OnSuite Trace.",
+  "integrationList": [
+    {
+      "bold": "Corelare echipament-produs",
+      "text": "Rezultatele echipamentelor sunt corelate cu seriile scanate și salvate în înregistrarea produsului corect."
+    },
+    {
+      "bold": "Integrare Global MES",
+      "text": "Datele colectate sunt sincronizate cu Global MES pentru vizibilitate centralizată."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Eliminarea proceselor manuale și trasabilitate fiabilă",
+  "resultsGrid": [
+    {
+      "title": "Colectare automată a datelor",
+      "text": "Introducerea manuală în Excel a fost eliminată, iar colectarea datelor de test a devenit complet automată."
+    },
+    {
+      "title": "Reducerea erorilor și a timpilor pierduți",
+      "text": "Erorile de introducere și pierderile de timp cauzate de operații manuale au fost reduse semnificativ."
+    },
+    {
+      "title": "Trasabilitate la nivel de produs",
+      "text": "Corelarea automată cu numărul de serie a îmbunătățit semnificativ trasabilitatea și raportarea."
+    }
+  ],
+  "relatedProjects": "Proiecte similare",
+  "ctaTitle": "Doriți stații de test complet trasabile și orientate pe date?",
+  "ctaSubtitle": "Contactați-ne pentru colectare automată de date de test, corelare corectă pe produs și integrare MES.",
+  "ctaPrimary": "Contactați-ne"
+}

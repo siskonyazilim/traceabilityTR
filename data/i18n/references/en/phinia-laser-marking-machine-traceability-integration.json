@@ -1,0 +1,132 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Turnkey",
+  "tagValue": "Automotive",
+  "locationValue": "İzmir · ESBAŞ",
+  "heroTitleLine1": "A single serial number for each part,",
+  "heroTitleLine2": "a single traceable identity.",
+  "heroSub": "Developed for Phinia's İzmir ESBAŞ Free Zone factory, the 3-axis laser marking machine combines marking and camera verification in a single automated flow, communicating bi-directionally with Oracle.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Zero-tolerance production in the free zone",
+  "contextP1": "Phinia's factory in the İzmir ESBAŞ Free Zone manufactures for the automotive sector. In this type of production, the origin of each part, the line it came from, and the quality control it passed must be retrospectively traceable.",
+  "contextP2": "The project was implemented to uniquely mark each manufactured product and ensure end-to-end traceability. At the center of the task was not only the marking itself, but also guaranteeing that the marking was read correctly.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Two separate steps, two separate risks",
+  "problemLede": "When marking and verification were carried out as disconnected steps open to manual check, two types of gaps arose.",
+  "problemList": [
+    {
+      "bold": "Unique marking requirement.",
+      "text": "Each part needed to be marked with its own serial number, and this number had to be transferred to the central system."
+    },
+    {
+      "bold": "Unreadable code risk.",
+      "text": "When verification was done manually as a separate step, a faulty or unreadable code could pass through the line unnoticed."
+    },
+    {
+      "bold": "Traceability gap.",
+      "text": "The disconnection between marking and data recording meant a missing chain in retrospective query."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Marking and verification, single flow",
+  "solutionLede": "The machine, developed turnkey including mechanical design for Phinia, was designed with 3-axis motion capability to operate flexibly. Serial numbers are received from Oracle, engraved on the part, and verified with the camera within the same flow.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Get serial number",
+      "text": "The unique serial number to be printed is retrieved from Oracle."
+    },
+    {
+      "no": "02",
+      "title": "Laser marking",
+      "text": "The 3-axis servo structure positions the part, and the code is laser-engraved."
+    },
+    {
+      "no": "03",
+      "title": "Camera verification",
+      "text": "Code content, quality grade, and position are automatically checked."
+    },
+    {
+      "no": "04",
+      "title": "Confirm back to Oracle",
+      "text": "Confirmation data of compliant parts is written back to Oracle."
+    }
+  ],
+  "oracleLoop": {
+    "serialNo": "serial number",
+    "confirmData": "confirmation data",
+    "machine": "Laser Marking Machine"
+  },
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Turnkey system architecture",
+  "techGrid": [
+    {
+      "tag": "MARKING",
+      "title": "Laser marking device",
+      "text": "Marking unit that permanently engraves the unique serial number on the part."
+    },
+    {
+      "tag": "MOTION",
+      "title": "3-axis servo structure",
+      "text": "Servo-driven motion in X-Y-Z axes for flexible positioning."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "PLC field automation",
+      "text": "PLC managing all field signals and workflow within the station."
+    },
+    {
+      "tag": "INTERFACE",
+      "title": "SCADA application with C#",
+      "text": "SCADA developed specifically for operator interface and process monitoring."
+    },
+    {
+      "tag": "VERIFICATION",
+      "title": "Camera-based control",
+      "text": "Automatic verification of code content, grade, and position via image processing."
+    },
+    {
+      "tag": "DATA",
+      "title": "Oracle integration",
+      "text": "Bi-directional data exchange with serial number request and confirmation data."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Bi-directional integration with Oracle",
+  "integrationDesc": "The system runs fully integrated with Oracle: serial numbers are retrieved from Oracle, and confirmation data of compliant parts is sent back to Oracle after marking and verification.",
+  "integrationList": [
+    {
+      "bold": "Serial Number Retrieval",
+      "text": "Serial numbers are automatically requested from the Oracle ERP system and transferred to the machine."
+    },
+    {
+      "bold": "Confirmation Pushed",
+      "text": "Data of approved parts that successfully pass camera control is written back to the Oracle system instantly."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Full digitalization of business processes",
+  "resultsGrid": [
+    {
+      "title": "100% Data Accuracy",
+      "text": "Thanks to camera verification and Oracle integration, the risk of faulty code printing or missing data was completely prevented."
+    },
+    {
+      "title": "Operational Speed",
+      "text": "By combining marking and camera verification steps on a single machine, cycle times were optimized."
+    },
+    {
+      "title": "Full Traceability",
+      "text": "The history and quality test results of each manufactured part were permanently recorded in the central system."
+    }
+  ],
+  "closerTitle": "Zero errors with high-performance laser technology and intelligent camera systems.",
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

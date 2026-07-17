@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir ESBAŞ",
+  "heroTitleLine1": "Tekil Üründe Tam Görünürlük,",
+  "heroTitleLine2": "Ray Montajda Anlık Operasyon Takibi",
+  "heroSub": "Delphi Technologies'in İzmir ESBAŞ Serbest Bölge'deki fabrikasında hayata geçirilen projede, ray montaj hattındaki ürünlerin tezgahlardaki tüm operasyonlar boyunca tekil olarak izlenebilirliği sağlanmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Ray montaj hattında tekil ürün izlenebilirliği",
+  "contextP1": "Delphi Technologies'in İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv yan sanayine yönelik üretim yapmaktadır. Bu fabrikada hayata geçirilen projede, ray montaj hattındaki ürünlerin tezgahlardaki tüm operasyonlar boyunca tekil olarak izlenebilirliği sağlanmıştır.",
+  "contextP2": "Amaç, ürünlerin operasyon bazındaki durumunu gerçek zamanlı görünür kılarak süreç takibini ve kalite kontrolünü güçlendirmekti.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Operasyon ve durum takibinde görünürlük eksikliği",
+  "problemLede": "Ray montaj hattındaki ürünlerin hangi operasyonda ve hangi durumda olduğunun tekil ürün bazında izlenebilmesi gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Tekil Takip Gereksinimi",
+      "text": "Ürünlerin baştan itibaren tekil olarak tanımlanıp tüm operasyonlarda izlenebilmesi gerekiyordu."
+    },
+    {
+      "bold": "Süreç Takibi Zorluğu",
+      "text": "Üretim ilerleyişi ve operasyon durumunun izlenememesi süreç yönetimini zorlaştırıyordu."
+    },
+    {
+      "bold": "Kalite Kontrol Riski",
+      "text": "Görünürlük eksikliği kalite kontrol kararlarında gecikme ve risk oluşturuyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Markalama ile başlayan operasyon bazlı tekil ürün takibi",
+  "solutionLede": "Ürünler ray montaj hattına girmeden önce markalanarak tekil olarak tanımlandı. Tezgahlardaki tüm operasyonlarda ürünler izlenerek her ürünün hangi operasyonda ve hangi durumda olduğu kayıt altına alındı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Ön Markalama",
+      "text": "Ürünler hatta giriş öncesinde markalanır ve tekil kimlikle sisteme alınır."
+    },
+    {
+      "no": "02",
+      "title": "Operasyon Tanıma",
+      "text": "Barkod okuyucular ürünleri her istasyonda operasyon bazında tanır."
+    },
+    {
+      "no": "03",
+      "title": "Durum Kayıtları",
+      "text": "Her ürünün operasyon durumu ve üretim seviyesi anlık olarak kayıt altına alınır."
+    },
+    {
+      "no": "04",
+      "title": "Görünürlük ve İzleme",
+      "text": "Seri üretimde her ürünün güncel durumu operasyon bazında görünür hale getirilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Barkod, PLC ve C# SCADA tabanlı saha altyapısı",
+  "techGrid": [
+    {
+      "tag": "OKUMA",
+      "title": "Barkod Okuyucular",
+      "text": "Ürünleri operasyon bazında tanıyarak tekil izlenebilirlik akışını başlatır."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha akışını yönetir, operasyon geçişlerini kontrol eder ve süreç tutarlılığı sağlar."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "Operasyon durumlarının izlenmesini, raporlanmasını ve Oracle ile veri alışverişini yönetir."
+    },
+    {
+      "tag": "PLATFORM",
+      "title": "OnSuite Trace",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezi olarak yürütüldüğü platform katmanıdır."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Oracle ile merkezi süreç yönetimi",
+  "integrationDesc": "Sistem Oracle ile entegre çalışmaktadır; ürünlerin operasyon bazlı izlenebilirlik ve durum verileri Oracle ile paylaşılarak süreç merkezi olarak izlenmekte ve yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Oracle Entegrasyonu",
+      "text": "Ürünlerin operasyon ve durum verileri Oracle ile paylaşılır, süreç merkezi olarak yönetilir."
+    },
+    {
+      "bold": "OnSuite Trace Yönetimi",
+      "text": "Tekil ürün izleme ve süreç görünürlüğü OnSuite Trace üzerinde uçtan uca yönetilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Tekil ürün seviyesinde uçtan uca izlenebilirlik",
+  "resultsGrid": [
+    {
+      "title": "Operasyon Bazlı Görünürlük",
+      "text": "Her ürünün hangi seviyede ve hangi durumda olduğu operasyon bazında görünür hale geldi."
+    },
+    {
+      "title": "Kolaylaşan Takip ve Kalite Kontrol",
+      "text": "Süreç görünürlüğündeki eksiklik giderilerek üretim takibi ve kalite kontrolü kolaylaştı."
+    },
+    {
+      "title": "Uçtan Uca Tekil İzleme",
+      "text": "Ürünler hatta girişten itibaren tekil kimlikle izlenerek uçtan uca izlenebilirlik sağlandı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Montaj hattınızda tekil ürün görünürlüğünü artırmak ister misiniz?",
+  "ctaSubtitle": "Barkod, SCADA ve OnSuite Trace tabanlı çözümlerimizle operasyon bazlı izlenebilirliği güçlendirelim.",
+  "ctaPrimary": "İletişime Geç"
+}

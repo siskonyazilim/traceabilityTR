@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Test Verisini Otomatikleştir",
+  "heroTitleLine2": "Ürün Bazında Güvenilir Takip",
+  "heroSub": "Üretim hattındaki test verileri otomatik toplanıp seri numarasıyla eşleştirilerek manuel hatalar azaltılmış ve sürdürülebilir izlenebilirlik altyapısı kurulmuştur.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Test verilerinin dijital ve izlenebilir yönetimi",
+  "contextP1": "Beyaz eşya sektöründe faaliyet gösteren Candy Hoover'ın Eskişehir'deki pişirici cihazlar fabrikasında hayata geçirilen projede, üretim hattındaki test verilerinin otomatik olarak toplanması ve ürünle eşleştirilmesi sağlanmıştır.",
+  "contextP2": "Proje, test verilerinin dijital ve izlenebilir biçimde yönetilmesini amaçlamıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel kayıt, hata riski ve izleme zorluğu",
+  "problemLede": "Elektrik ve gaz kaçak test verileri manuel olarak Excel'e işleniyordu. Bu yöntem hem zaman kaybına ve veri giriş hatalarına açıktı hem de test sonuçlarının ürün bazında güvenilir biçimde izlenmesini zorlaştırıyordu.",
+  "problemList": [
+    {
+      "bold": "Manuel Excel Girişi",
+      "text": "Test verilerinin manuel işlenmesi operasyonel yük oluşturuyor ve süreci yavaşlatıyordu."
+    },
+    {
+      "bold": "Veri Giriş Hataları",
+      "text": "Elle giriş yapılan verilerde hata olasılığı kalite ve güvenilirlik riskini artırıyordu."
+    },
+    {
+      "bold": "Ürün Bazında İzleme Eksikliği",
+      "text": "Test sonuçlarının ürün bazında güvenilir biçimde izlenmesi zorlaşıyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Test cihazlarından otomatik veri toplama ve seri no eşleştirme",
+  "solutionLede": "Test cihazlarıyla entegrasyon sağlanarak elektrik ve gaz kaçak test verileri otomatik olarak toplandı. Ürün istasyona geldiğinde seri numarası okunarak sonuçlar doğru ürünle eşleştirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "İstasyona Ürün Gelişi",
+      "text": "Ürün test istasyonuna geldiğinde barkod okuyucu ile seri numarası okunur."
+    },
+    {
+      "no": "02",
+      "title": "Cihaz Verisi Toplama",
+      "text": "Elektrik ve gaz kaçak test cihazlarından sonuçlar otomatik olarak alınır."
+    },
+    {
+      "no": "03",
+      "title": "Seri Numarası Eşleştirme",
+      "text": "Toplanan test verileri okunan ürün seri numarasıyla eşleştirilir."
+    },
+    {
+      "no": "04",
+      "title": "Merkezi Kayıt ve İzleme",
+      "text": "Veriler OnSuite Trace üzerinde kayıt altına alınarak izlenebilir ve raporlanabilir hale getirilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Test cihazları, barkod okuyucu, PLC ve OnSuite Trace",
+  "techGrid": [
+    {
+      "tag": "TEST",
+      "title": "Elektrik ve Gaz Kaçak Test Cihazları",
+      "text": "Elektriksel ve gaz kaçak test sonuçlarını otomatik üreten saha test altyapısı."
+    },
+    {
+      "tag": "TANIMLAMA",
+      "title": "Barkod Okuyucular",
+      "text": "Ürün istasyona geldiğinde seri numarasını okuyarak veri eşleştirmeyi başlatır."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Entegrasyonu",
+      "text": "Saha akışını yönetir ve test cihazları ile uygulama arasındaki veri akışını koordine eder."
+    },
+    {
+      "tag": "YÖNETİM",
+      "title": "OnSuite Trace",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezi platformda yürütülmesini sağlar."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Test istasyonları, Global MES ve izlenebilirlik platformu entegrasyonu",
+  "integrationDesc": "Sistem Candy Hoover'ın Global MES Sistemi ile entegre çalışmaktadır. Test cihazlarından alınan veriler seri numarasıyla eşleştirilerek OnSuite Trace üzerinde merkezi olarak yönetilir.",
+  "integrationList": [
+    {
+      "bold": "Test Cihazı - Ürün Eşleşmesi",
+      "text": "Cihaz sonuçları okunan seri numarasıyla eşleştirilerek doğru ürün kaydına yazılır."
+    },
+    {
+      "bold": "Global MES Entegrasyonu",
+      "text": "Toplanan veriler Candy Hoover'ın Global MES Sistemi ile entegre edilerek merkezi görünürlük sağlanır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Otomatik veri toplama ve güvenilir ürün bazlı test izlenebilirliği",
+  "resultsGrid": [
+    {
+      "title": "Manuel Sürecin Kaldırılması",
+      "text": "Test verilerinin manuel Excel'e işlenmesi ortadan kaldırılarak veri toplama otomatik hale getirilmiştir."
+    },
+    {
+      "title": "Hata ve Zaman Kaybının Azalması",
+      "text": "Veri giriş hataları ve manuel süreçlerden kaynaklı zaman kaybı önlenmiştir."
+    },
+    {
+      "title": "İzlenebilirlik ve Raporlama",
+      "text": "Test sonuçları ürün seri numarasıyla otomatik eşleştirilmiş; izlenebilirlik ve raporlama güçlendirilmiştir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Test istasyonlarınızı tam izlenebilir ve veri odaklı hale getirmek ister misiniz?",
+  "ctaSubtitle": "Test verilerinin otomatik toplanması, ürünle doğru eşleştirilmesi ve MES entegrasyonu için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

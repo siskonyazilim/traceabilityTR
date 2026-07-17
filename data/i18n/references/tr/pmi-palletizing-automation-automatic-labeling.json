@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Tütün",
+  "locationValue": "Torbalı / İzmir",
+  "heroTitleLine1": "Otomatik paletleme ve etiketleme,",
+  "heroTitleLine2": "koli–palet eşleştirmesiyle güvence altına alınmış akış.",
+  "heroSub": "PMI'ın İzmir Torbalı'daki sigara üretim fabrikasında hayata geçirilen projede, paletleme alanındaki otomasyon ve etiketleme süreçleri yenilendi. Koli–palet eşleştirmesini güvence altına almak ve üretim emri yönetimini otomatikleştirmek amacıyla SCADA ve PLC altyapısı güncellendi, SAP WMS ile tam entegrasyon sağlandı.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Tütün sektöründe paletleme ve sevkiyat otomasyonu",
+  "contextP1": "PMI'ın sigara üretimi yapan İzmir Torbalı fabrikasında hayata geçirilen projede, paletleme alanındaki otomasyon ve etiketleme süreçleri yenilenmiştir. Üretilen ürünler koli ve palet bazında hazırlanarak sevkiyata yönlendirilmektedir.",
+  "contextP2": "Proje, bu paletleme ve etiketleme sürecini otomatikleştirmek, koli–palet eşleştirmesini güvence altına almak ve üretim emri ile sorting süreçlerini hata riskinden arındırmak amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Hatalı etiketleme ve manuel sorting riskleri",
+  "problemLede": "Paletleme ve etiketleme süreçlerinin daha güvenilir, otomatik ve izlenebilir hâle getirilmesi gerekiyordu. Palet etiketlerinin doğru basılması, kolilerin doğru paletlerle eşleştirilmesi ve üretim emri ile sorting süreçlerinin manuel yürütülmesinden kaynaklanan hata riskinin ortadan kaldırılması ihtiyacı vardı.",
+  "problemList": [
+    {
+      "bold": "Yanlış Etiket Basımı",
+      "text": "Palet etiketlerinin manuel seçimle basılması, yanlış müşteri veya ürün etiketinin sevkedilme riskini taşıyordu."
+    },
+    {
+      "bold": "Hatalı Koli–Palet Eşleştirmesi",
+      "text": "Kolilerin manuel olarak paletlere yerleştirilmesi, yanlış koli–palet eşleşmesi ve hatalı sevkiyat riskine yol açıyordu."
+    },
+    {
+      "bold": "Blacklist Dışındaki Ürünler",
+      "text": "Geçişine izin verilmeyen ürünlerin sistemde otomatik engellenmemesi, operasyonel hatalar doğuruyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Yenilenen SCADA, palet etiketlemesi ve blacklist yönetimi",
+  "solutionLede": "Projede paletleme alanındaki SCADA sistemi yenilendi ve paletleme sistemini yöneten PLC yapısı güncellendi. Etiket yazıcıları ile palet etiketleri basıldı, koli etiketleri okunarak koli–palet eşleşmesi sağlandı. Üretim emri başlatma işlemleri düzenlendi ve sorting hatları otomatik olarak planlandı. Ayrıca, geçişine izin verilmeyen ürünleri engelleyen bir blacklist (kara liste) uygulaması kuruldu. Sistem, SAP WMS ile entegre çalışacak şekilde yapılandırıldı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Üretim Emri Başlatma",
+      "text": "SCADA arayüzünden üretim emri başlatılır; sorting hatları montaj planına göre otomatik programlanır."
+    },
+    {
+      "no": "02",
+      "title": "Palet Etiketi Basımı",
+      "text": "Paletleme noktasında etiket yazıcısı ilgili palet etiketini otomatik olarak basar."
+    },
+    {
+      "no": "03",
+      "title": "Koli–Palet Eşleştirme",
+      "text": "Koli barkodları okunur ve ilgili paletle eşleştirilir; blacklist kontrolü ile izin verilmeyen ürünler engellenir."
+    },
+    {
+      "no": "04",
+      "title": "SAP WMS Aktarımı",
+      "text": "Eşleştirme ve etiketleme verileri SAP WMS sistemine anlık olarak aktarılır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "C# SCADA ve PLC tabanlı paletleme altyapısı",
+  "techGrid": [
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "Palet etiket basımı, koli–palet eşleştirmesi, üretim emri yönetimi ve blacklist kontrolünü yürüten SCADA."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Paletleme Sistemi",
+      "text": "Paletleme ve sorting akışını fiziksel olarak yöneten, SCADA ile entegre çalışan PLC yapısı."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Etiket Yazıcıları",
+      "text": "Palet etiketlerini otomatik basan endüstriyel termal etiket yazıcıları."
+    },
+    {
+      "tag": "OKUYUCU",
+      "title": "Barkod Okuyucular",
+      "text": "Koli barkodlarını okuyarak palet eşleştirme ve doğrulama sürecini başlatan okuyucular."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP WMS Entegrasyonu",
+  "integrationDesc": "Sistem SAP WMS ile entegre çalışmaktadır; palet–koli eşleştirme, üretim emri ve sorting verileri SAP WMS ile paylaşılarak paletleme ve sevkiyat süreçleri merkezi olarak yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "SAP WMS Entegrasyonu",
+      "text": "Paletleme onayları, etiketleme verileri ve koli–palet eşleştirme kayıtları SAP WMS ile çift yönlü ve anlık senkronize edilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Hatasız paletleme ve otomatik sevkiyat hazırlığı",
+  "resultsGrid": [
+    {
+      "title": "Güvenceli Koli–Palet Eşleştirmesi",
+      "text": "Otomatik okuma ve eşleştirme ile yanlış koli–palet eşleşmesi ve hatalı sevkiyat riski sıfırlanmıştır."
+    },
+    {
+      "title": "Blacklist Kontrolü",
+      "text": "Geçişine izin verilmeyen ürünler sistemde otomatik olarak tespit edilip engellenerek sevkiyat güvenliği artırılmıştır."
+    },
+    {
+      "title": "Otomatik Sorting Planlaması",
+      "text": "Üretim emrine göre sorting hatları manuel müdahale olmadan otomatik programlanmaktadır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

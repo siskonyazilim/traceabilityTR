@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "Menderes / İzmir",
+  "heroTitleLine1": "Depoda Dijital Düzen,",
+  "heroTitleLine2": "Hızlı ve Hatasız Operasyon",
+  "heroSub": "Delphi Technologies'in Menderes'teki (İzmir) yedek parça deposunda hayata geçirilen projede, depo operasyonlarını yöneten bir depo yönetim sistemi (WMS) kurulmuştur.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Yedek parça deposunda uçtan uca WMS yönetimi",
+  "contextP1": "Delphi Technologies'in Menderes'teki (İzmir) yedek parça deposunda hayata geçirilen projede, depo operasyonlarını yöneten bir depo yönetim sistemi (WMS) kurulmuştur.",
+  "contextP2": "Proje, parça yerleştirme, müşteri siparişlerinin toplanması ve raf dengesi gibi temel depo süreçlerinin dijital ve izlenebilir biçimde yönetilmesini amaçlamıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel depo yönetiminde hata ve tutarsızlık riski",
+  "problemLede": "Parça yerleştirme, sipariş toplama ve stok/raf dengesi takibinin güvenilir ve izlenebilir yürütülmesi gerekiyordu. Manuel akış bu süreçlerde hata riski oluşturuyordu.",
+  "problemList": [
+    {
+      "bold": "Yanlış Yerleştirme",
+      "text": "Parçaların elle yönetilmesi yanlış lokasyona yerleştirme riskini artırıyordu."
+    },
+    {
+      "bold": "Hatalı Sipariş Toplama",
+      "text": "Müşteri siparişlerinin manuel toplanması doğruluk problemlerine yol açabiliyordu."
+    },
+    {
+      "bold": "Stok Tutarsızlığı",
+      "text": "Stok ve raf dengesinin manuel takibi güncel ve güvenilir veri üretmekte yetersiz kalıyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "WMS ve el terminali ile anlık depo operasyonları",
+  "solutionLede": "Depo süreçlerini uçtan uca kapsayan bir WMS kuruldu. Parça yerleştirme, sipariş toplama ve raf dengesi operasyonları sistem üzerinden yönetilirken saha işlemleri el terminali uygulamasıyla anlık yürütülüp kayıt altına alındı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "WMS Kurulumu",
+      "text": "Depo süreçlerini merkezden yöneten depo yönetim sistemi devreye alındı."
+    },
+    {
+      "no": "02",
+      "title": "Parça Yerleştirme Yönetimi",
+      "text": "Parça giriş ve yerleştirme adımları sistem kurallarıyla dijital olarak yönetildi."
+    },
+    {
+      "no": "03",
+      "title": "Sipariş Toplama Operasyonları",
+      "text": "Müşteri siparişleri el terminali üzerinden doğrulamalı şekilde toplandı."
+    },
+    {
+      "no": "04",
+      "title": "Raf Dengesi ve Kayıt",
+      "text": "Raf/stok dengesi hareketleri anlık izlenerek tüm depo hareketleri kayda alındı."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "WMS ve mobil saha uygulamaları",
+  "techGrid": [
+    {
+      "tag": "YAZILIM",
+      "title": "WMS Uygulaması",
+      "text": "Depo süreçlerini, lokasyon kurallarını ve operasyon akışlarını yöneten merkezi uygulama katmanı."
+    },
+    {
+      "tag": "SAHA",
+      "title": "El Terminali Uygulaması",
+      "text": "Parça yerleştirme, sipariş toplama ve raf dengesi işlemlerinin sahada yürütüldüğü mobil operasyon aracı."
+    },
+    {
+      "tag": "İZLEME",
+      "title": "Anlık Hareket Kaydı",
+      "text": "Depo içindeki her hareketin anlık olarak kayıt altına alınmasını sağlayan operasyonel izleme yapısı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ile depo verilerinin kurumsal senkronizasyonu",
+  "integrationDesc": "Sistem SAP ile entegre çalışmaktadır; parça, sipariş ve stok verileri SAP ile paylaşılarak depo hareketleri ve raf dengesi kurumsal sistemle güncel biçimde senkronize edilmekte ve merkezi olarak yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "SAP Parça ve Sipariş Verisi",
+      "text": "Parça ve sipariş verileri SAP ile çift yönlü paylaşılır, depo operasyonlarında doğruluk artırılır."
+    },
+    {
+      "bold": "Stok Senkronizasyonu",
+      "text": "Stok ve raf dengesi hareketleri kurumsal sistemle güncel tutulur ve merkezden yönetilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Depo süreçlerinde hız, doğruluk ve izlenebilirlik",
+  "resultsGrid": [
+    {
+      "title": "Dijital ve İzlenebilir Süreçler",
+      "text": "Parça yerleştirme, sipariş toplama ve raf dengesi süreçleri dijital ve izlenebilir hale getirildi."
+    },
+    {
+      "title": "Hata Riskinde Azalma",
+      "text": "Yanlış yerleştirme, hatalı sipariş toplama ve stok tutarsızlığı riskleri azaltıldı."
+    },
+    {
+      "title": "Operasyonel Verim",
+      "text": "Sahada anlık ve doğru yürütülen işlemler sayesinde depo operasyonlarında hız ve doğruluk artırıldı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Depo operasyonlarınızı uçtan uca dijitalleştirmek ister misiniz?",
+  "ctaSubtitle": "WMS ve saha uygulamalarımızla depo süreçlerinizde hız, doğruluk ve tam izlenebilirlik sağlayalım.",
+  "ctaPrimary": "İletişime Geç"
+}

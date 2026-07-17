@@ -1,0 +1,122 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Gıda",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Tarladan sofraya güven,",
+  "heroTitleLine2": "blokzincir ile değiştirilemez izlenebilirlik.",
+  "heroSub": "Organik sirke üretimi yapan, Eskişehir'deki müşteri fabrikasında hayata geçirilen projede, şişeleme aşamasındaki organik sirke parametreleri toplanarak bireysel şişe numaralarıyla ilişkilendirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Gıda zincirinde mutlak şeffaflık",
+  "contextP1": "Organik sirke üretimi yapan, Eskişehir'deki müşteri fabrikasında hayata geçirilen projede, şişeleme aşamasındaki organik sirke parametreleri toplanarak bireysel şişe numaralarıyla ilişkilendirilmiştir.",
+  "contextP2": "Proje, ürün bazında izlenebilirliği ve son kullanıcıya kadar uzanan şeffaflığı sağlamak amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Veri güvenliği ve şeffaflık gereksinimi",
+  "problemLede": "Şişeleme sürecindeki üretim parametrelerinin her şişe bazında kayıt altına alınması ve bu verilerin sonradan değiştirilemez, güvenilir biçimde saklanması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Veri Güvenliği ve Değiştirilemezlik",
+      "text": "Üretim parametrelerinin manipülasyona karşı güvenli ve değiştirilemez bir altyapıda saklanması ihtiyacı."
+    },
+    {
+      "bold": "Son Kullanıcı Güven Açığı",
+      "text": "Tüketicilere satın aldıkları ürünün üretim ve dolum geçmişini kanıtlanabilir biçimde sunma zorluğu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Blokzincir entegrasyonu ve QR kod",
+  "solutionLede": "Şişeleme aşamasındaki organik sirke parametreleri toplanarak bireysel şişe numaralarıyla ilişkilendirildi. Toplanan verilerin şeffaflığını ve değiştirilemezliğini güvence altına almak için veriler bir blokzincir ağına aktarıldı. Son kullanıcılar, şişe üzerindeki QR kodu tarayarak söz konusu sirkenin dolum parametrelerini şeffaf biçimde görüntüleyebilmekte ve üretim detaylarına erişebilmektedir. SAP sistemiyle entegre çalışan uygulama, bulut sunucularında çalışmasıyla da öne çıkmaktadır.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Parametre Toplama",
+      "text": "Dolum aşamasındaki organik sirke parametreleri anlık toplanır."
+    },
+    {
+      "no": "02",
+      "title": "Tekil Şişe Eşleme",
+      "text": "Toplanan veriler, şişenin üzerindeki benzersiz numara ile ilişkilendirilir."
+    },
+    {
+      "no": "03",
+      "title": "Blockchain Kaydı",
+      "text": "Eşleşen veriler, değiştirilemezlik için blokzincir (blockchain) ağına aktarılır."
+    },
+    {
+      "no": "04",
+      "title": "QR Kod Sorgulama",
+      "text": "Tüketici, şişedeki QR kodu okutarak tüm üretim parametrelerini sorgular."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Blokzincir ve bulut tabanlı sistem yapısı",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Kontrol Yapısı",
+      "text": "Üretim ve dolum hattındaki süreç adımlarını yöneten PLC yapısı."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Barkod Okuyucular",
+      "text": "Şişe üzerindeki benzersiz numaraları tarayan endüstriyel okuyucular."
+    },
+    {
+      "tag": "GÜVENLİK",
+      "title": "Blokzincir (Blockchain)",
+      "text": "Verilerin değiştirilemez ve manipüle edilemez şekilde saklandığı ağ altyapısı."
+    },
+    {
+      "tag": "ERİŞİM",
+      "title": "QR Kod Yapısı",
+      "text": "Son kullanıcıların üretim parametrelerini sorgulamasını sağlayan web arayüzü."
+    },
+    {
+      "tag": "BULUT",
+      "title": "Bulut Sunucu Altyapısı",
+      "text": "Uygulamanın yüksek erişilebilirlikle bulut üzerinde çalışmasını sağlayan mimari."
+    },
+    {
+      "tag": "VERİ",
+      "title": "SAP Entegrasyonu",
+      "text": "Saha ve blokzincir verilerinin kurumsal SAP sistemiyle entegre yönetimi."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ve Blokzincir Entegrasyonu",
+  "integrationDesc": "Sistem SAP ile entegre çalışmaktadır. Toplanan üretim ve izlenebilirlik verileri blokzincir ağına aktarılarak değiştirilemez biçimde saklanmaktadır. Bu sayede veriler her aşamada şeffaf ve güvenlidir.",
+  "integrationList": [
+    {
+      "bold": "Blokzincir Kaydı",
+      "text": "Şişe dolum verileri ve üretim parametreleri blockchain ağına değiştirilemez olarak yazılır."
+    },
+    {
+      "bold": "SAP Bağlantısı",
+      "text": "Üretim siparişleri ve ürün master verileri SAP ERP üzerinden sisteme beslenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Blokzincir ile mutlak güven",
+  "resultsGrid": [
+    {
+      "title": "Ürün Bazında İzlenebilirlik",
+      "text": "Her organik sirke şişesi için dolum parametreleri tekil olarak kayıt altına alınarak tam izlenebilirlik kurulmuştur."
+    },
+    {
+      "title": "Değiştirilemez Veri Güvenliği",
+      "text": "Üretim verileri blokzincir üzerinde saklanarak manipülasyon riskine karşı %100 koruma altına alınmıştır."
+    },
+    {
+      "title": "Tüketici Şeffaflığı",
+      "text": "QR kod ile son kullanıcılara dolum detaylarını sorgulama imkanı sunularak marka güvenilirliği artırılmıştır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Correct mold matching,",
+  "heroTitleLine2": "zero defect production.",
+  "heroSub": "In the project implemented at Maxion Inci Steel's wheel factory in Manisa, production molds were tracked with an RFID-based system. The project aimed to ensure correct matching of molds based on recipes and prevent the use of incorrect molds.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Mold control and process security in wheel production",
+  "contextP1": "In the project implemented at Maxion Inci Steel's wheel factory in Manisa, production molds were tracked with an RFID-based system. The project aimed to ensure correct matching of molds based on recipes and prevent the use of incorrect molds.",
+  "contextP2": "Ensuring mold accuracy in production is of critical importance for product quality and line efficiency.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Incorrect mold usage and quality risks",
+  "problemLede": "In wheel production, it had to be guaranteed that the mold suitable for each recipe was used. Manual mold selection brought the risk of incorrect mold usage and related quality/scrap issues. In addition, the inability to reliably monitor the useful life of molds made maintenance and planning difficult.",
+  "problemList": [
+    {
+      "bold": "Mold Matching Errors",
+      "text": "The risk of starting production with the wrong mold due to manual controls, leading to scrap."
+    },
+    {
+      "bold": "Mold Life Tracking Difficulty",
+      "text": "Inability to automatically track mold stroke cycles and maintenance schedules."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "PLC integrated operation permit with RFID reading",
+  "solutionLede": "In the project using RFID equipment, integration with the existing PLC was provided to match molds on a recipe basis, preventing the use of incorrect molds. During recipe changes, mold IDs are read via RFID to verify matching; when matched, the machine is granted permission to operate. Mold lifetimes are also tracked through the RFID-based system.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Recipe Input",
+      "text": "The wheel production recipe is selected from the PLC system by the operator."
+    },
+    {
+      "no": "02",
+      "title": "RFID Mold Reading",
+      "text": "The RFID tag on the mold is scanned by the RFID reader on the wheel machine."
+    },
+    {
+      "no": "03",
+      "title": "Logical Verification",
+      "text": "The PLC system compares the read mold ID with the recipe requirements."
+    },
+    {
+      "no": "04",
+      "title": "Operation Permit",
+      "text": "When the match is correct, the machine is permitted to run and production starts."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Industrial RFID and PLC infrastructure",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Boron-Oil Resistant RFID Tags",
+      "text": "RFID tags with high durability against boron oil and chemicals in harsh production environments."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "RFID Devices and Readers",
+      "text": "RFID hardware reading mold IDs precisely and transmitting them to the PLC."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "Existing PLC Integration",
+      "text": "PLC system logically comparing mold data with recipes and unlocking the machine."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Mold Life Tracking Module",
+      "text": "Software layer tracking lifetime and planning maintenance according to mold cycle counts."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Field PLC and Logical Lock Integration",
+  "integrationDesc": "The system runs integrated with the customer's existing PLC infrastructure. After the mold ID is scanned and verified via RFID, the PLC logical lock is opened, allowing the machine to run.",
+  "integrationList": [
+    {
+      "bold": "PLC Field Logical Control",
+      "text": "The mold match is locked at the PLC level, physically preventing starting production with the wrong mold."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Error-free production and data-driven maintenance",
+  "resultsGrid": [
+    {
+      "title": "Zero Wrong Molds",
+      "text": "Incorrect mold usage is completely prevented thanks to automatic RFID matching and PLC locking."
+    },
+    {
+      "title": "Quality and Scrap Savings",
+      "text": "Production scrap and quality deviations resulting from incorrect mold installations are eliminated."
+    },
+    {
+      "title": "Predictive Maintenance",
+      "text": "Mold maintenance planning has become data-driven by tracking mold lifetimes and stroke counts."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

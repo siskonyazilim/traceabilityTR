@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Full Visibility Per Item,",
+  "heroTitleLine2": "Real-Time Operation Tracking on Rail Assembly",
+  "heroSub": "At Delphi Technologies' Izmir ESBAS Free Zone plant, individual traceability was provided for products on the rail assembly line across all machine operations.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Individual product traceability on the rail assembly line",
+  "contextP1": "Delphi Technologies' Izmir ESBAS Free Zone plant manufactures for the automotive supplier industry. In this project, products on the rail assembly line were tracked individually across all machine operations.",
+  "contextP2": "The goal was to make operation-level status visible in real time and strengthen process follow-up and quality control.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Visibility gap in operation and status tracking",
+  "problemLede": "It was necessary to track, at individual-item level, which operation each rail-assembly product was in and its current status.",
+  "problemList": [
+    {
+      "bold": "Need for Individual Tracking",
+      "text": "Products had to be uniquely identified from the start and tracked across all operations."
+    },
+    {
+      "bold": "Process Follow-up Difficulty",
+      "text": "Lack of production progress and operation-status tracking made process management difficult."
+    },
+    {
+      "bold": "Quality Control Risk",
+      "text": "Visibility gaps created delay and risk in quality-control decisions."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Operation-level individual tracking starting with pre-marking",
+  "solutionLede": "Products were marked and uniquely identified before entering the rail assembly line. Across all machine operations, each product's operation and current status were recorded.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Pre-Marking",
+      "text": "Products are marked before line entry and registered with unique identity."
+    },
+    {
+      "no": "02",
+      "title": "Operation Recognition",
+      "text": "Barcode readers recognize products at each station by operation."
+    },
+    {
+      "no": "03",
+      "title": "Status Recording",
+      "text": "Operation status and production level of each product are recorded in real time."
+    },
+    {
+      "no": "04",
+      "title": "Visibility and Monitoring",
+      "text": "Current status of each product in serial production becomes visible by operation."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Barcode, PLC, and C# SCADA-based field infrastructure",
+  "techGrid": [
+    {
+      "tag": "READING",
+      "title": "Barcode Readers",
+      "text": "Recognize products by operation and trigger individual-traceability flow."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Structure",
+      "text": "Manages field flow, controls operation transitions, and ensures process consistency."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Manages status monitoring, reporting, and Oracle data exchange."
+    },
+    {
+      "tag": "PLATFORM",
+      "title": "OnSuite Trace",
+      "text": "Platform layer where traceability and process management are executed centrally."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Central process management with Oracle",
+  "integrationDesc": "The system is integrated with Oracle; operation-level traceability and status data are shared with Oracle so the process is centrally monitored and managed.",
+  "integrationList": [
+    {
+      "bold": "Oracle Integration",
+      "text": "Operation and status data of products are shared with Oracle for centralized management."
+    },
+    {
+      "bold": "OnSuite Trace Management",
+      "text": "Individual product tracking and process visibility are managed end to end on OnSuite Trace."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "End-to-end traceability at individual product level",
+  "resultsGrid": [
+    {
+      "title": "Operation-Level Visibility",
+      "text": "Status and production level of each item became visible by operation."
+    },
+    {
+      "title": "Easier Follow-up and Quality Control",
+      "text": "By closing visibility gaps, production follow-up and quality control became easier."
+    },
+    {
+      "title": "Full Individual Tracking",
+      "text": "Items were tracked with unique identity from line entry, achieving end-to-end traceability."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to improve individual product visibility on your assembly line?",
+  "ctaSubtitle": "Let us strengthen operation-level traceability with our barcode, SCADA, and OnSuite Trace-based solutions.",
+  "ctaPrimary": "Contact Us"
+}

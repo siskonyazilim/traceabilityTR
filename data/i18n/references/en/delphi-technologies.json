@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Menderes / Izmir",
+  "heroTitleLine1": "Digital Order in Warehouse,",
+  "heroTitleLine2": "Fast and Accurate Operations",
+  "heroSub": "At Delphi Technologies' spare-parts warehouse in Menderes (Izmir), a warehouse management system (WMS) was implemented to manage warehouse operations.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "End-to-end WMS management in spare-parts warehouse",
+  "contextP1": "At Delphi Technologies' spare-parts warehouse in Menderes (Izmir), a warehouse management system (WMS) was implemented to manage warehouse operations.",
+  "contextP2": "The project aimed to manage core warehouse processes such as part put-away, customer order picking, and shelf balance in a digital and traceable manner.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Error and inconsistency risk in manual warehouse management",
+  "problemLede": "Part put-away, order picking, and stock/shelf balance tracking had to be reliable and traceable. Manual flows created high operational risk.",
+  "problemList": [
+    {
+      "bold": "Wrong Put-away",
+      "text": "Manual handling increased the risk of placing parts in wrong locations."
+    },
+    {
+      "bold": "Incorrect Order Picking",
+      "text": "Manual customer order picking could lead to fulfillment accuracy issues."
+    },
+    {
+      "bold": "Stock Inconsistency",
+      "text": "Manual stock and shelf-balance tracking struggled to provide up-to-date reliable data."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Real-time warehouse operations with WMS and handheld terminals",
+  "solutionLede": "An end-to-end WMS was deployed for warehouse processes. While part put-away, picking, and shelf-balance operations were managed by the system, field operations were executed in real time via handheld terminal applications and fully recorded.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "WMS Deployment",
+      "text": "A central warehouse management system was commissioned to control process flow."
+    },
+    {
+      "no": "02",
+      "title": "Put-away Management",
+      "text": "Inbound and put-away steps were digitally managed with system rules."
+    },
+    {
+      "no": "03",
+      "title": "Order Picking Operations",
+      "text": "Customer orders were picked through handheld devices with operational validation."
+    },
+    {
+      "no": "04",
+      "title": "Shelf Balance and Logging",
+      "text": "Shelf/stock balance movements were tracked in real time and every warehouse move was recorded."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "WMS and mobile field applications",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "WMS Application",
+      "text": "Central application layer managing warehouse process rules, locations, and operational flows."
+    },
+    {
+      "tag": "FIELD",
+      "title": "Handheld Terminal Application",
+      "text": "Mobile operational tool used for put-away, picking, and shelf-balance tasks in the warehouse."
+    },
+    {
+      "tag": "MONITORING",
+      "title": "Real-Time Movement Logging",
+      "text": "Operational tracking structure that records every movement in the warehouse instantly."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Enterprise synchronization of warehouse data with SAP",
+  "integrationDesc": "The system operates integrated with SAP; part, order, and stock data are shared with SAP so warehouse movements and shelf balance stay synchronized with the enterprise system and are centrally managed.",
+  "integrationList": [
+    {
+      "bold": "SAP Part and Order Data",
+      "text": "Part and order data are shared bi-directionally with SAP to improve warehouse execution accuracy."
+    },
+    {
+      "bold": "Stock Synchronization",
+      "text": "Stock and shelf-balance movements are kept up to date with enterprise systems and centrally controlled."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Speed, accuracy, and traceability in warehouse operations",
+  "resultsGrid": [
+    {
+      "title": "Digital and Traceable Processes",
+      "text": "Put-away, order picking, and shelf-balance workflows became digital and traceable."
+    },
+    {
+      "title": "Reduced Error Risk",
+      "text": "Risks of wrong placement, incorrect picking, and stock inconsistency were reduced."
+    },
+    {
+      "title": "Operational Efficiency",
+      "text": "Real-time and accurate field execution increased warehouse speed and correctness."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to digitize your warehouse operations end to end?",
+  "ctaSubtitle": "Let us provide speed, accuracy, and full traceability in your warehouse with our WMS and field applications.",
+  "ctaPrimary": "Contact Us"
+}

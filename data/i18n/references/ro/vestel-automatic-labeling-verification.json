@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Etichetare de precizie,",
+  "heroTitleLine2": "zero erori de expediere.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de mașini de spălat rufe Vestel din Manisa, s-a asigurat etichetarea și verificarea automată a produselor provenite de pe linie.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Securitatea etichetelor în linia mașinilor de spălat",
+  "contextP1": "În cadrul proiectului implementat la fabrica de mașini de spălat rufe Vestel din Manisa, s-a asigurat etichetarea și verificarea automată a produselor provenite de pe linie.",
+  "contextP2": "Proiectul a fost realizat pentru a garanta că eticheta corectă a clientului este aplicată pe produsul corect.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Etichetare incorectă și riscuri de expediere",
+  "problemLede": "Pentru fiecare produs provenit de pe linie, eticheta clientului corespunzătoare tipului de produs trebuia imprimată corect și verificată potrivirea etichetei cu produsul.",
+  "problemList": [
+    {
+      "bold": "Erori de Selectare Manuală",
+      "text": "Riscuri de imprimare incorectă a etichetelor cauzate de selectarea și aplicarea manuală a etichetelor."
+    },
+    {
+      "bold": "Risc de Expediere Defectuoasă",
+      "text": "Posibilitatea ca produsele etichetate incorect să ocolească procesele de control al calității și să fie expediate din greșeală."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Aplicare automată pe bază de cod de bare",
+  "solutionLede": "Codul de bare al produsului venit de pe linie a fost citit de un cititor de coduri de bare. În funcție de produsul citit, lucrarea corespunzătoare a fost selectată automat în aplicatorul de palet și s-a imprimat codul de bare al clientului corespunzător produsului. Eticheta imprimată a fost potrivită cu produsul și verificată. Aplicația a fost pusă în funcțiune prin integrarea ei în sistemele existente ale clientului.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Citire Produs",
+      "text": "Codul de bare al mașinii de spălat care vine de pe linie este scanat prin cititor automat."
+    },
+    {
+      "no": "02",
+      "title": "Selectare Lucrare",
+      "text": "În funcție de produsul citit, lucrarea de etichetare este selectată automat în aplicator."
+    },
+    {
+      "no": "03",
+      "title": "Etichetare Automată",
+      "text": "Aplicatorul de palet imprimă eticheta cu cod de bare personalizată pentru produs."
+    },
+    {
+      "no": "04",
+      "title": "Verificare Potrivire",
+      "text": "Eticheta imprimată este potrivită cu codul de bare al produsului și verificată în sisteme integrate."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Infrastructură de etichetare și automatizare",
+  "techGrid": [
+    {
+      "tag": "ETICHETARE",
+      "title": "Aplicator Palet",
+      "text": "Aplicator care permite imprimarea și aplicarea automată a etichetelor personalizate pe tipuri de produse."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Management Câmp PLC",
+      "text": "PLC care gestionează fluxul mecanic și logic al liniei, controlând declanșarea aplicatorului."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Cititor Cod de Bare",
+      "text": "Scanner industrial care citește instantaneu codurile de bare ale mașinilor de spălat de pe linie."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Strat de Integrare",
+      "text": "Integrare bidirecțională cu sistemele de automatizare și management al datelor din fabrică."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea Sistemelor Clientului",
+  "integrationDesc": "Aplicația funcționează integrată cu sistemele existente ale clientului; informațiile despre produs și datele de etichetare/verificare sunt partajate cu aceste sisteme, permițând gestionarea centralizată a procesului.",
+  "integrationList": [
+    {
+      "bold": "Partajare Date",
+      "text": "Rezultatele potrivirii și verificării sunt transmise instantaneu către sistemele centrale și raportate."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Etichetare fără erori și flux eficient",
+  "resultsGrid": [
+    {
+      "title": "Prevenirea Etichetării Incorecte",
+      "text": "Imprimarea incorectă a etichetelor este eliminată prin selectarea și potrivirea automată a etichetelor clienților."
+    },
+    {
+      "title": "Acuratețe Operațională",
+      "text": "Procentul de acuratețe a etichetării este maximizat prin eliminarea punctelor de control manual."
+    },
+    {
+      "title": "Accelerarea Procesului",
+      "text": "Timpul de oprire a liniei este minimizat datorită integrării aplicatorului automat de palet."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria auto",
+  "locationValue": "Menderes / Izmir",
+  "heroTitleLine1": "Ordine Digitală în Depozit,",
+  "heroTitleLine2": "Operațiuni Rapide și Corecte",
+  "heroSub": "În depozitul de piese de schimb Delphi Technologies din Menderes (Izmir), a fost implementat un sistem WMS pentru gestionarea operațiunilor de depozit.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Management WMS end-to-end în depozitul de piese",
+  "contextP1": "În depozitul de piese de schimb Delphi Technologies din Menderes (Izmir), a fost implementat un sistem WMS pentru gestionarea operațiunilor de depozit.",
+  "contextP2": "Proiectul a vizat managementul digital și trasabil al proceselor de bază: plasare piese, picking comenzi clienți și echilibru raft-stoc.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Risc de erori și inconsistență în managementul manual al depozitului",
+  "problemLede": "Plasarea pieselor, picking-ul comenzilor și monitorizarea echilibrului stoc/raft trebuiau să fie fiabile și trasabile. Fluxurile manuale generau riscuri operaționale ridicate.",
+  "problemList": [
+    {
+      "bold": "Plasare Greșită",
+      "text": "Gestionarea manuală creștea riscul plasării pieselor în locații incorecte."
+    },
+    {
+      "bold": "Picking Incorect",
+      "text": "Picking-ul manual al comenzilor putea produce erori de livrare."
+    },
+    {
+      "bold": "Inconsistență de Stoc",
+      "text": "Urmărirea manuală a stocului și echilibrului de raft nu oferea date suficient de actuale și fiabile."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Operațiuni în timp real cu WMS și terminale mobile",
+  "solutionLede": "A fost implementat un WMS care acoperă end-to-end procesele de depozit. În timp ce operațiunile de plasare, picking și echilibru raft au fost gestionate din sistem, activitățile din teren au fost executate în timp real prin terminale mobile și înregistrate complet.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Implementare WMS",
+      "text": "A fost pus în funcțiune un sistem central WMS pentru controlul fluxurilor de depozit."
+    },
+    {
+      "no": "02",
+      "title": "Management Plasare Piese",
+      "text": "Pașii de intrare și plasare au fost gestionați digital pe baza regulilor de sistem."
+    },
+    {
+      "no": "03",
+      "title": "Operațiuni de Picking",
+      "text": "Comenzile clienților au fost colectate prin terminale mobile cu validări operaționale."
+    },
+    {
+      "no": "04",
+      "title": "Echilibru Raft și Înregistrare",
+      "text": "Mișcările de echilibru raft/stoc au fost urmărite în timp real, iar fiecare mișcare a fost înregistrată."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "WMS și aplicații mobile de teren",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație WMS",
+      "text": "Strat central software ce gestionează regulile de proces, locațiile și fluxurile operaționale de depozit."
+    },
+    {
+      "tag": "TEREN",
+      "title": "Aplicație Terminal Mobil",
+      "text": "Instrument operațional mobil folosit pentru plasare piese, picking comenzi și echilibru de raft."
+    },
+    {
+      "tag": "MONITORIZARE",
+      "title": "Înregistrare Mișcări în Timp Real",
+      "text": "Structură de monitorizare care înregistrează instant fiecare mișcare din depozit."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Sincronizare corporativă a datelor de depozit cu SAP",
+  "integrationDesc": "Sistemul funcționează integrat cu SAP; datele de piese, comenzi și stoc sunt partajate cu SAP, astfel mișcările de depozit și echilibrul de raft rămân sincronizate cu sistemul corporativ și sunt gestionate central.",
+  "integrationList": [
+    {
+      "bold": "Date Piese și Comenzi în SAP",
+      "text": "Datele de piese și comenzi sunt schimbate bidirecțional cu SAP pentru acuratețe operațională crescută."
+    },
+    {
+      "bold": "Sincronizare Stoc",
+      "text": "Mișcările de stoc și echilibrul de raft sunt menținute la zi în sistemele corporative și controlate central."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Viteză, acuratețe și trasabilitate în operațiunile de depozit",
+  "resultsGrid": [
+    {
+      "title": "Procese Digitale și Trasabile",
+      "text": "Fluxurile de plasare piese, picking comenzi și echilibru raft au devenit digitale și trasabile."
+    },
+    {
+      "title": "Reducerea Riscului de Eroare",
+      "text": "Au fost reduse riscurile de plasare greșită, picking incorect și inconsistență de stoc."
+    },
+    {
+      "title": "Eficiență Operațională",
+      "text": "Execuția corectă și în timp real în teren a crescut viteza și acuratețea operațiunilor de depozit."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să digitalizați end-to-end operațiunile de depozit?",
+  "ctaSubtitle": "Oferim viteză, acuratețe și trasabilitate completă în depozit prin soluțiile noastre WMS și aplicații de teren.",
+  "ctaPrimary": "Contactați-ne"
+}

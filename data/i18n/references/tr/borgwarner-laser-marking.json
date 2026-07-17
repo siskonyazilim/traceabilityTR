@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir ESBAŞ",
+  "heroTitleLine1": "Hassas lazer markalama,",
+  "heroTitleLine2": "akıllı kamera doğrulamalı akış.",
+  "heroSub": "Borgwarner'ın İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv yan sanayine yönelik üretim yapmaktadır. Bu fabrikada hayata geçirilen projede, üretilen her ürünün tekil olarak lazerle markalanması ve izlenebilirliğinin sağlanması hedeflenmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Otomotiv yan sanayinde tekil izlenebilirlik",
+  "contextP1": "Borgwarner'ın İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv yan sanayine yönelik üretim yapmaktadır. Bu fabrikada hayata geçirilen projede, üretilen her ürünün tekil olarak lazerle markalanması ve izlenebilirliğinin sağlanması hedeflenmiştir.",
+  "contextP2": "Markalama doğruluğunun ve veritabanı entegrasyonunun otomatik yapılması, kalite süreçlerinin korunması için büyük öneme sahiptir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Ayrı adımlar ve izlenebilirlik boşluğu riski",
+  "problemLede": "Üretilen her parçanın tekil seri numarasıyla markalanması, markalama doğruluğunun güvence altına alınması ve elde edilen izlenebilirlik verilerinin merkezi sisteme aktarılması gerekiyordu. Markalama ile doğrulamanın birbirinden ayrı ve kontrole açık adımlar hâlinde ilerlemesi; hem hatalı ya da okunamayan kod hem de izlenebilirlikte boşluk riski doğuruyordu.",
+  "problemList": [
+    {
+      "bold": "Okunamayan Kod Riski",
+      "text": "Lazer gücü veya yüzey pürüzlülüğü nedeniyle okunamayan veya hatalı kod basımının anında tespit edilememesi."
+    },
+    {
+      "bold": "Süreç Kopukluğu",
+      "text": "Markalama ve kamera doğrulama adımlarının ayrı kontrol edilmesi nedeniyle oluşan iş gücü ve zaman kaybı."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Oracle entegrasyonlu ve 3 eksenli otomatik markalama hücresi",
+  "solutionLede": "Borgwarner için markalama ve tanımlama süreçlerini destekleyecek bir lazer markalama makinesi geliştirildi. Makine, farklı ürünlere uyum sağlayabilecek esneklikte, 3 eksenli hareket kapasitesiyle tasarlandı. Ürünlere basılacak seri numaraları Oracle'dan alınacak şekilde sistem Oracle ile entegre edildi. Markalamanın ardından kod içeriği, derece ve konum doğrulamaları kamera aracılığıyla otomatik olarak yapıldı; uygun bulunan parçaların onay verileri Oracle'a geri iletildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Seri No Çekme",
+      "text": "Sistem basılacak tekil seri numarası Oracle veritabanından anlık çeker."
+    },
+    {
+      "no": "02",
+      "title": "3 Eksenli Markalama",
+      "text": "Servo eksen yapısıyla hareket eden lazer, parçayı belirlenen konuma markalar."
+    },
+    {
+      "no": "03",
+      "title": "Kamera Doğrulama",
+      "text": "Kamera; basılan kodun içeriğini, kalitesini (grade) ve konumunu tarar."
+    },
+    {
+      "no": "04",
+      "title": "Oracle Onayı",
+      "text": "Doğrulamadan geçen parçaların onay bilgisi Oracle veritabanına kaydedilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Mekanik tasarım ve kontrol altyapısı",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Lazer Markalama Cihazı",
+      "text": "Parça metal yüzeylerine kalıcı ve yüksek çözünürlüklü markalama yapan lazer ünitesi."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "3 Eksenli Servo Hareket",
+      "text": "Farklı ürün geometrilerine göre lazer kafasını konumlandıran servo eksen mekanizması."
+    },
+    {
+      "tag": "OPTİK",
+      "title": "Kamera Tabanlı Kontrol",
+      "text": "Markalanan 2D kodların içeriğini ve basım kalitesini (grade) anlık ölçen vizyon sistemi."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "Oracle entegrasyonunu, SCADA süreçlerini ve izlenebilirlik adımlarını yöneten ana platform."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Oracle ERP ile Çift Yönlü Veri Akışı",
+  "integrationDesc": "Sistem Oracle ile çift yönlü entegre çalışmaktadır: seri numaraları Oracle'dan alınmakta, markalama ve kontrol sonrasında uygun parçaların onay verileri yeniden Oracle'a gönderilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Oracle Çift Yönlü Bağlantı",
+      "text": "Seri numarası sorgulama ve onay bildirim adımları Oracle ERP sistemi ile doğrudan haberleşir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Yüksek güvenilirlikte parça izlenebilirliği",
+  "resultsGrid": [
+    {
+      "title": "Tekil Ürün Takibi",
+      "text": "Üretilen her ürünün lazer koduyla veritabanında tekil olarak izlenmesi sağlanmıştır."
+    },
+    {
+      "title": "Hatalı Kod Önleme",
+      "text": "Otomatik kamera doğrulaması sayesinde hatalı, eksik veya okunamayan kodlu parça çıkışı engellenmiştir."
+    },
+    {
+      "title": "Tek Akışta Yönetim",
+      "text": "Markalama ve kontrol süreçleri tek makinede birleştirilerek döngü süreleri optimize edilmiştir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

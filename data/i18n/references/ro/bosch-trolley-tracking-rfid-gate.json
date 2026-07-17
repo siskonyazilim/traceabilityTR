@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Flux de materiale aprobat,",
+  "heroTitleLine2": "poartă RFID controlată de barieră fizică.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de tehnologie termică de producere a centralelor termice Bosch din Manisa, cărucioarele cu kituri pregătite conform ordinelor de lucru au fost eliberate pentru producție într-un mod controlat. Proiectul a fost realizat pentru a garanta tranziția doar a cărucioarelor cu kituri aprobate la ieșirea din depozit.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Controlul ieșirii din depozit în producția de centrale termice",
+  "contextP1": "În cadrul proiectului implementat la fabrica de tehnologie termică de producere a centralelor termice Bosch din Manisa, cărucioarele cu kituri pregătite conform ordinelor de lucru au fost eliberate pentru producție într-un mod controlat.",
+  "contextP2": "Proiectul a fost realizat pentru a garanta tranziția doar a cărucioarelor cu kituri aprobate la ieșirea din depozit.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Ieșiri incorecte de materiale și dificultăți de control manual",
+  "problemLede": "Doar cărucioarele cu kituri aprobate, corespunzătoare ordinului de lucru respectiv, trebuiau să plece în producție. Efectuarea manuală a acestui control presupunea riscul ca cărucioare incorecte sau neaprobate să treacă în producție, ducând la erori de materiale și de producție. Era necesară o structură de control fiabilă care să poată bloca fizic trecerea la ieșirea din depozit.",
+  "problemList": [
+    {
+      "bold": "Tranziție de Materiale Neaprobată",
+      "text": "Riscul ca cărucioarele cu kituri neverificate sau incomplete să fie trimise în producție fără validarea ordinului de lucru."
+    },
+    {
+      "bold": "Lipsa Controlului Fizic",
+      "text": "Imposibilitatea de a bloca fizic trecerea în cazurile în care controlul exclusiv software este insuficient."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Controlul barierei cu validare prin poartă RFID",
+  "solutionLede": "Capetele de citire/scriere RFID poziționate la ieșirea din depozit au permis eliberarea cărucioarelor cu kituri pregătite conform ordinelor de lucru. Pentru a face acest control posibil din punct de vedere fizic, a fost instalat un sistem de barieră la intrarea și ieșirea din depozit. Aplicația, care comunică bidirecțional cu sistemul de management al depozitului, a scanat etichetele RFID ale cărucioarelor de kit sosite, a interogat sistemul și a permis ieșirea doar a cărucioarelor aprobate.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Pregătire & Etichetare",
+      "text": "Căruciorul cu kituri pregătit conform ordinului de lucru este identificat prin eticheta metalică RFID de pe el."
+    },
+    {
+      "no": "02",
+      "title": "Scanare Poartă RFID",
+      "text": "Căruciorul care se apropie de bariera de ieșire din depozit este scanat de poarta RFID."
+    },
+    {
+      "no": "03",
+      "title": "Interogare Bidirecțională",
+      "text": "Aplicația SCADA interoghează codul RFID citit în sistemul de management al depozitului."
+    },
+    {
+      "no": "04",
+      "title": "Deschidere Barieră",
+      "text": "Când se primește aprobarea de ieșire, SCADA deschide bariera, permițând trecerea căruciorului."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Control acces RFID și arhitectură SCADA",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Etichete RFID pe Metal",
+      "text": "700 de etichete RFID specializate care funcționează cu eficiență ridicată pe suprafețele metalice."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Capete Citire/Scriere RFID",
+      "text": "Cititoare industriale RFID poziționate la porțile de intrare și ieșire din depozit."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "Sistem de Barieră Acces",
+      "text": "Integrarea barierei care blochează fizic trecerea cărucioarelor de kit neautorizate."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA C#",
+      "text": "Software principal care validează scanările RFID cu sistemul depozitului și gestionează barierele."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Sistemul de Management al Depozitului și Integrarea SAP",
+  "integrationDesc": "Aplicația comunică bidirecțional cu sistemul de management al depozitului și funcționează integrată cu SAP. Etichetele RFID ale cărucioarelor de kit sosite sunt citite pentru a interoga sistemul, aprobarea de ieșire este acordată prin această integrare, iar înregistrările sunt trimise în SAP.",
+  "integrationList": [
+    {
+      "bold": "Integrare SAP ERP",
+      "text": "Aprobările de ieșire a cărucioarelor și mișcările de materiale sunt sincronizate și înregistrate instantaneu în SAP."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Asigurare fizică și zero erori de materiale",
+  "resultsGrid": [
+    {
+      "title": "Flux de Materiale Aprobat",
+      "text": "Acuratețea este asigurată permițând doar trecerea cărucioarelor validate în producție la ieșirea din depozit."
+    },
+    {
+      "title": "Securitate prin Barieră Fizică",
+      "text": "Datorită sistemului de barieră, trecerea cărucioarelor neaprobate este complet blocată fizic."
+    },
+    {
+      "title": "Decizii Instantanee",
+      "text": "Integrarea bidirecțională cu sistemul de management al depozitului a permis luarea deciziilor de trecere fără întârzieri."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

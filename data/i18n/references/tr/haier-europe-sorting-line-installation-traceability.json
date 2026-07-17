@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Otomatik sorting hattı,",
+  "heroTitleLine2": "Andon ekranlarıyla canlı izlenebilir akış.",
+  "heroSub": "Haier Europe'un Eskişehir'deki pişirme cihazları fabrikasında hayata geçirilen projede, montaj ve ambalaj sonrası ürünlerin otomatik olarak sıralanması ve sevkiyata hazırlanması sağlanmıştır. Proje, ambalaj çıkışından depoya kadar olan akışın otomatikleştirilmesi ve canlı izlenebilirliği amacıyla gerçekleştirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Beyaz eşyada sevkiyat öncesi otomatik yönlendirme",
+  "contextP1": "Beyaz eşya üretiminde küresel bir lider olan Haier Europe'un Eskişehir'deki pişirme cihazları fabrikasında hayata geçirilen projede, montaj ve ambalaj sonrası ürünlerin otomatik olarak sıralanması ve sevkiyata hazırlanması sağlanmıştır.",
+  "contextP2": "Proje, ambalaj çıkışından depoya kadar olan lojistik akışın otomatikleştirilmesi, yanlış ürün sevkiyatlarının önlenmesi ve canlı izlenebilirliğin sağlanması amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel sıralama hataları ve süreç görünürlüğü eksikliği",
+  "problemLede": "Montaj ve tamir hatlarından gelen ürünlerin ambalajlama sonrası doğru sıralama hatlarına yönlendirilmesi ve bu akışın kontrollü, izlenebilir biçimde yürütülmesi gerekiyordu. Sıralama ve yönlendirmenin manuel yürütülmesi, yanlış hatta yönlendirme, verimsizlik ve süreç görünürlüğünün zayıf kalması riskini taşıyordu.",
+  "problemList": [
+    {
+      "bold": "Yanlış Hat Yönlendirmeleri",
+      "text": "Ürünlerin montaj planına uygun olmayan sıralama hatlarına yönlendirilerek karışıklık yaratması."
+    },
+    {
+      "bold": "Görünürlük Eksikliği",
+      "text": "Forklift operatörlerinin hangi hatta hangi üründen ne kadar biriktiğini anlık görememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Barkod okumalı otomatik sıralama ve Andon takibi",
+  "solutionLede": "SISKON tarafından kurulan sistemde, montaj ve tamir hatlarından gelen ürünler asansör aracılığıyla ambalaj hattına gönderilmekte; ambalajlama sonrası ürünler otomatik olarak sıralama hattına yönlendirilmektedir. Montaj hattı planına göre sıralama hatları otomatik olarak programlanmakta, sıralama hattında barkodla taranan ürünler ilgili hatlara yönlendirilmektedir. Hatlarda biriken ürünler forklift operatörleri tarafından alınarak depoya gönderilmektedir. Tüm süreç, sahada bulunan Andon TV'leri aracılığıyla canlı olarak izlenebilmektedir.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Ambalaja Sevk",
+      "text": "Montajdan çıkan ürünler asansör sistemiyle otomatik olarak ambalaj hattına taşınır."
+    },
+    {
+      "no": "02",
+      "title": "Barkod Taraması",
+      "text": "Ambalaj çıkışındaki ürünlerin barkodları taranarak montaj planı bilgileri sorgulanır."
+    },
+    {
+      "no": "03",
+      "title": "Otomatik Sorting",
+      "text": "Ürünler, montaj planına göre programlanmış sıralama hatlarına otomatik yönlendirilir."
+    },
+    {
+      "no": "04",
+      "title": "Andon İzleme",
+      "text": "Forklift operatörleri hat doluluklarını Andon ekranlarından izleyerek depoya taşır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Sorting donanımları ve canlı Andon takip altyapısı",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Otomasyonlu Sıralama Yapısı",
+      "text": "Ürünleri belirlenen hatlara fiziksel olarak yönlendiren mekanik konveyör ve sorting yapısı."
+    },
+    {
+      "tag": "OKUYUCU",
+      "title": "Barkod Okuma İstasyonları",
+      "text": "Hattın üstünde konumlanarak ürün seri numaralarını otomatik okuyan endüstriyel okuyucular."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Kontrol Altyapısı",
+      "text": "Montaj planlarını alan ve sorting yönlendirmelerini yöneten saha PLC üniteleri."
+    },
+    {
+      "tag": "GÖRSEL",
+      "title": "Andon Bilgi TV Ekranları",
+      "text": "Forklift operatörleri için hat doluluklarını ve sevk emirlerini gösteren büyük ekranlar."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Haier Global MES Entegrasyonu",
+  "integrationDesc": "Sistem, Haier Europe'un Global MES (Üretim Yürütme Sistemi) ile tam entegre çalışmaktadır. Sıralama sonuçları, barkod eşleşmeleri ve depoya sevk verileri bu entegrasyon üzerinden canlı aktarılır.",
+  "integrationList": [
+    {
+      "bold": "Global MES Entegrasyonu",
+      "text": "Sıralama verileri ve ambalaj çıkış onayları global MES sistemine anlık aktarılarak güncellenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Hatasız yönlendirme ve canlı lojistik kontrol",
+  "resultsGrid": [
+    {
+      "title": "Otomatik Akış Yönetimi",
+      "text": "Ambalaj sonrasından depoya kadar olan akış insan inisiyatifinden çıkarılarak otomatikleştirilmiştir."
+    },
+    {
+      "title": "Doğru Sıralama Hatları",
+      "text": "Montaj planına göre otomatik programlanan sorting sayesinde yönlendirme hataları sıfırlanmıştır."
+    },
+    {
+      "title": "Andon ile Hızlı Sevk",
+      "text": "Forklift operatörlerinin Andon ekranlarından anlık takibiyle hatlarda şişme ve gecikmeler önlenmiştir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

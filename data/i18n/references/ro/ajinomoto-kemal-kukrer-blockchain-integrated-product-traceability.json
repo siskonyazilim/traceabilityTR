@@ -1,0 +1,122 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Alimente",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Încredere de la fermă la furculiță,",
+  "heroTitleLine2": "trasabilitate imutabilă cu blockchain.",
+  "heroSub": "În cadrul proiectului implementat la fabrica clientului din Eskișehir care produce oțet organic, parametrii oțetului organic în etapa de îmbuteliere au fost colectați și asociați cu numerele individuale ale sticlelor.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Transparență absolută în lanțul alimentar",
+  "contextP1": "În cadrul proiectului implementat la fabrica clientului din Eskișehir care produce oțet organic, parametrii oțetului organic în etapa de îmbuteliere au fost colectați și asociați cu numerele individuale ale sticlelor.",
+  "contextP2": "Proiectul a fost realizat pentru a asigura trasabilitatea la nivel de produs și transparența extinsă până la utilizatorul final.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Cerințe de securitate a datelor și transparență",
+  "problemLede": "Parametrii de producție din procesul de îmbuteliere trebuiau înregistrați pentru fiecare sticlă, iar aceste date trebuiau stocate într-un mod fiabil, imutabil.",
+  "problemList": [
+    {
+      "bold": "Securitatea Datelor și Imutabilitatea",
+      "text": "Nevoia de a stoca parametrii de producție într-o infrastructură securizată și imutabilă împotriva manipulării."
+    },
+    {
+      "bold": "Breșa de Încredere a Utilizatorului Final",
+      "text": "Dificultatea de a prezenta consumatorilor istoricul de producție și îmbuteliere al produsului achiziționat într-un mod demonstrabil."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Integrare Blockchain și cod QR",
+  "solutionLede": "Parametrii oțetului organic în etapa de îmbuteliere au fost colectați și asociați cu numerele individuale ale sticlelor. Pentru a garanta transparența și imutabilitatea, datele colectate au fost transferate într-o rețea blockchain. Utilizatorii finali pot scana codul QR de pe sticlă pentru a vizualiza în mod transparent parametrii de umplere ai oțetului respectiv și pentru a accesa detaliile de producție. Funcționând integrat cu sistemul SAP, aplicația se remarcă și prin rularea pe servere cloud.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Colectare Parametri",
+      "text": "Parametrii oțetului organic în etapa de umplere sunt colectați în timp real."
+    },
+    {
+      "no": "02",
+      "title": "Potrivire Sticlă Unică",
+      "text": "Datele colectate sunt asociate cu numărul unic de pe sticlă."
+    },
+    {
+      "no": "03",
+      "title": "Înregistrare Blockchain",
+      "text": "Datele potrivite sunt transferate în rețeaua blockchain pentru imutabilitate."
+    },
+    {
+      "no": "04",
+      "title": "Interogare Cod QR",
+      "text": "Consumatorul scanează codul QR de pe sticlă pentru a interoga toți parametrii de producție."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Blockchain și structura sistemului bazată pe cloud",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură Control PLC",
+      "text": "Structură PLC care gestionează etapele procesului pe linia de producție și umplere."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare Cod de Bare",
+      "text": "Cititoare industriale care scanează numerele unice de pe sticle."
+    },
+    {
+      "tag": "SECURITATE",
+      "title": "Blockchain",
+      "text": "Infrastructură de rețea în care datele sunt stocate într-un mod imutabil și protejat."
+    },
+    {
+      "tag": "ACCES",
+      "title": "Structură Cod QR",
+      "text": "Interfață web care le permite utilizatorilor finali să interogheze parametrii de producție."
+    },
+    {
+      "tag": "CLOUD",
+      "title": "Infrastructură Server Cloud",
+      "text": "Arhitectură care permite aplicației să ruleze în cloud cu disponibilitate ridicată."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare SAP",
+      "text": "Managementul integrat al datelor din teren și blockchain cu sistemul corporativ SAP."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare SAP și Blockchain",
+  "integrationDesc": "Sistemul funcționează integrat cu SAP. Datele de producție și trasabilitate colectate sunt transferate în rețeaua blockchain și stocate permanent într-un format imutabil, asigurând transparența și securitatea datelor.",
+  "integrationList": [
+    {
+      "bold": "Registru Blockchain",
+      "text": "Datele de umplere a sticlelor și parametrii de producție sunt scrise în mod imutabil în rețeaua blockchain."
+    },
+    {
+      "bold": "Conexiune SAP",
+      "text": "Comenzile de producție și datele master de produs sunt introduse în sistem prin SAP ERP."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Încredere absolută cu blockchain",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate pe Produs",
+      "text": "Parametrii de umplere pentru fiecare sticlă de oțet organic sunt înregistrați individual, stabilind trasabilitate completă."
+    },
+    {
+      "title": "Securitatea Datelor Imutabilă",
+      "text": "Datele de producție sunt stocate pe blockchain, protejate 100% împotriva oricăror riscuri de manipulare."
+    },
+    {
+      "title": "Transparență Consumator",
+      "text": "Credibilitatea mărcii este sporită prin permiterea utilizatorilor finali să interogheze detaliile de umplere folosind un cod QR."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

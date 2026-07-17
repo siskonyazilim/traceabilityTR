@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Anahtar Teslim",
+  "tagValue": "Tütün",
+  "locationValue": "Torbalı / İzmir",
+  "heroTitleLine1": "Barkod doğrulama kapısı,",
+  "heroTitleLine2": "sıfır hatalı sevkiyat.",
+  "heroSub": "PMI'ın Torbalı (İzmir) fabrikasında hayata geçirilen Otomatik Sevkiyat Barkod Doğrulama Sistemi; sevkiyat çıkışındaki palet etiketlerini okuyarak sevkiyat emirleriyle doğrular ve SAP-WMS sistemine aktarır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Sevkiyat çıkışlarında tam otomatik kontrol",
+  "contextP1": "PMI'ın Torbalı (İzmir) fabrikası, sigara üretimi yapan bir tesistir. Üretilen ürünler, sevkiyat sürecinde çıkış rampaları üzerinden palet bazında sevk edilmektedir.",
+  "contextP2": "Proje, bu sevkiyat çıkışındaki palet doğrulama ve sevkiyat emri eşleştirme sürecini otomatikleştirmek amacıyla hayata geçirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Hatalı sevkiyat ve kontrol zorlukları",
+  "problemLede": "Sevkiyat rampalarında paletlerin doğru iş emirleriyle manuel kontrol edilmesi zaman kaybına ve sevkiyat hatalarına yol açabiliyordu.",
+  "problemList": [
+    {
+      "bold": "Hatalı Sevkiyat Riski",
+      "text": "Eksik veya hatalı barkodlu ürünlerin sevkiyatının fark edilmeden gerçekleşmesi riskleri."
+    },
+    {
+      "bold": "Manuel Karşılaştırma",
+      "text": "Palet etiketlerinin sevkiyat iş emirleriyle manuel olarak eşleştirilmesinin getirdiği operasyonel hantallık."
+    },
+    {
+      "bold": "WMS Senkronizasyonu",
+      "text": "Rampalardan çıkan paletlerin WMS sistemine anlık olarak, otomatik şekilde işlenememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Barkod Kapı Sistemi ve Otomatik Doğrulama",
+  "solutionLede": "Sevkiyat sürecinde çıkış rampasına kurulan barkod kapı sistemi, tüm palet etiketlerini otomatik olarak okur. Sistem, sevkiyat iş emirlerini SAP-WMS'ten otomatik çekerek palet etiketleriyle karşılaştırır ve eşleşme durumunda WMS'e veri aktarır.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "İş Emri Entegrasyonu",
+      "text": "Sevkiyat planına ait iş emirleri SAP-WMS sistemi üzerinden otomatik olarak sisteme yüklenir."
+    },
+    {
+      "no": "02",
+      "title": "Rampa Barkod Okuma",
+      "text": "Çıkış rampasındaki barkod kapısı (Barcode Gate), rampa üzerinden geçen tüm palet etiketlerini otomatik okur."
+    },
+    {
+      "no": "03",
+      "title": "Eşleşme ve Doğrulama",
+      "text": "Okunan palet etiketleri, sevkiyat emirleriyle karşılaştırılarak içeriğin doğruluğu anlık sorgulanır."
+    },
+    {
+      "no": "04",
+      "title": "WMS Onay Aktarımı",
+      "text": "Eşleşen palet barkodları ve sevkiyat numarası anlık olarak SAP-WMS sistemine gönderilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Endüstriyel tarayıcılar ve SCADA doğrulaması",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Endüstriyel Barkod Okuyucular",
+      "text": "Çıkış rampalarında palet barkodlarını hareket halindeyken hatasız okuyan endüstriyel tarayıcılar."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC saha otomasyonu",
+      "text": "Rampadaki palet geçişlerini, sensörleri ve kapı akışını yöneten PLC sistemi."
+    },
+    {
+      "tag": "ARAYÜZ",
+      "title": "C# ile SCADA uygulaması",
+      "text": "Eşleştirme mantığını, operatör uyarı ekranlarını ve sistem veri entegrasyonunu yöneten SCADA yazılımı."
+    },
+    {
+      "tag": "ENTEGRASYON",
+      "title": "WMS veri katmanı",
+      "text": "Eşleşen palet barkodlarının ve sevkiyat numaralarının WMS sistemine iletildiği entegrasyon arabirimi."
+    },
+    {
+      "tag": "GÜVENLİK",
+      "title": "Operatör Uyarı Sistemi",
+      "text": "Eşleşmeyen veya hatalı etiket durumlarında operatöre görsel/sesli uyarı veren kontrol mekanizması."
+    },
+    {
+      "tag": "VERİ",
+      "title": "SAP ERP entegrasyonu",
+      "text": "Sevkiyat iş emirlerinin sistem tarafından otomatik olarak çekilmesini sağlayan SAP bağlantısı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP-WMS Entegrasyonu",
+  "integrationDesc": "Otomatik sevkiyat barkod doğrulama sistemi, PMI'ın SAP-WMS altyapısıyla çift yönlü ve anlık entegre çalışmaktadır; veriler operatörden bağımsız doğrulanır.",
+  "integrationList": [
+    {
+      "bold": "İş Emri Alımı",
+      "text": "SAP-WMS sistemindeki sevkiyat iş emirleri sisteme otomatik olarak çekilerek karşılaştırmaya hazır hale getirilir."
+    },
+    {
+      "bold": "Sevkiyat Onayı Yazımı",
+      "text": "Doğrulanan palet barkodları ve ilişkili sevkiyat numaraları anlık olarak SAP-WMS sistemine geri yazılır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "%100 Doğrulanmış otomatik sevkiyat",
+  "resultsGrid": [
+    {
+      "title": "Otomatik palet doğrulaması",
+      "text": "Sevkiyat çıkışında %100 otomatik palet doğrulaması sağlanarak manuel kontrol ihtiyacı ortadan kaldırılmıştır."
+    },
+    {
+      "title": "Sıfır hatalı sevkiyat",
+      "text": "Eksik, yanlış veya hatalı barkodlu ürünlerin sevkiyat rampalarından çıkışı tamamen önlenmiştir."
+    },
+    {
+      "title": "Operatör uyarıları",
+      "text": "Hatalı bir palet algılandığında anlık uyarı mekanizmasıyla sevkiyat operasyonları güvence altına alınmıştır."
+    }
+  ],
+  "closerTitle": "Çıkış rampalarından depoya kesintisiz veri akışı ve hatasız sevkiyat.",
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

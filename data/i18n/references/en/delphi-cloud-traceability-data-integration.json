@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Delphi Technologies",
+  "heroTitleLine2": "Traceability Data Cloud Integration",
+  "heroSub": "At Delphi Technologies' automotive supplier plant in Izmir ESBAS Free Zone, production traceability data was integrated with the company's global cloud system.",
+  "contextEyebrow": "Client and Context",
+  "contextTitle": "From local systems to global visibility",
+  "contextP1": "In this project, traceability data generated in production was integrated from local systems into Delphi's global cloud platform.",
+  "contextP2": "The goal was to make field traceability data globally visible instead of keeping it only in local environments.",
+  "problemEyebrow": "Need / Problem",
+  "problemTitle": "Local data silos blocked global access",
+  "problemLede": "Traceability data was stored only in local Oracle systems at the plant, preventing global accessibility and visibility.",
+  "problemList": [
+    {
+      "bold": "Local Limitation",
+      "text": "Data remaining in plant-level systems prevented enterprise-wide access."
+    },
+    {
+      "bold": "Limited Global Visibility",
+      "text": "Cross-location centralized monitoring and reporting was difficult."
+    },
+    {
+      "bold": "Integration Requirement",
+      "text": "Local traceability records had to be integrated into Delphi's global cloud model."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Central flow from Oracle to global cloud",
+  "solutionLede": "Traceability data stored in local Oracle systems was integrated into Delphi's global cloud system.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Local Data Capture",
+      "text": "Field production and traceability data is captured in local Oracle systems."
+    },
+    {
+      "no": "02",
+      "title": "Integration Layer",
+      "text": "A data integration layer prepares and routes Oracle records."
+    },
+    {
+      "no": "03",
+      "title": "Global Cloud Transfer",
+      "text": "Prepared records are transferred into Delphi's global cloud platform."
+    },
+    {
+      "no": "04",
+      "title": "Central Monitoring",
+      "text": "Global users gain centralized visibility and reporting across locations."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "Local Oracle and global cloud integration layer",
+  "techGrid": [
+    {
+      "tag": "DATA",
+      "title": "Local Oracle Systems",
+      "text": "Primary local data source for field traceability records."
+    },
+    {
+      "tag": "INTEGRATION",
+      "title": "Data Integration Layer",
+      "text": "Managed secure transfer and mapping between Oracle and cloud systems."
+    },
+    {
+      "tag": "CLOUD",
+      "title": "Global Cloud Platform",
+      "text": "Central global environment for visibility, access, and analytics."
+    },
+    {
+      "tag": "MANAGEMENT",
+      "title": "OnSuite Trace",
+      "text": "Supports centralized traceability and process management workflows."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Local Oracle integrated with global cloud",
+  "integrationDesc": "The solution integrates local Oracle systems with Delphi's global cloud platform, enabling centralized visibility and access to traceability data.",
+  "integrationList": [
+    {
+      "bold": "Oracle - Cloud Integration",
+      "text": "Local Oracle traceability data is transferred to the global cloud system via integration services."
+    },
+    {
+      "bold": "Central Access",
+      "text": "Locations access the same traceability records through one global view."
+    }
+  ],
+  "resultsEyebrow": "Impact",
+  "resultsTitle": "Global visibility and reporting capability",
+  "resultsGrid": [
+    {
+      "title": "Global Accessibility",
+      "text": "Traceability data became accessible globally instead of being limited to local systems."
+    },
+    {
+      "title": "Central Visibility",
+      "text": "Production and traceability information became centrally visible across locations."
+    },
+    {
+      "title": "Reporting Capability",
+      "text": "Centralized monitoring and reporting became possible through the global cloud platform."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to make your traceability data globally visible?",
+  "ctaSubtitle": "Contact us for secure and scalable integration between local systems and global platforms.",
+  "ctaPrimary": "Contact Us"
+}

@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Tütün",
+  "locationValue": "İzmir Torbalı",
+  "heroTitleLine1": "Doğru Filtre",
+  "heroTitleLine2": "Doğru Üretim Güvencesi",
+  "heroSub": "PMI'ın sigara üretimi yapan İzmir Torbalı fabrikasında hayata geçirilen projede, filtre fabrikasında üretilen filtrelerin sigara üretim makinelerine beslenmesi aşamasında izlenebilirlik ve doğru malzeme kullanımı hedeflenmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Filtreden üretime güvenli eşleştirme",
+  "contextP1": "PMI'ın sigara üretimi yapan İzmir Torbalı fabrikasında hayata geçirilen projede, filtre fabrikasında üretilen filtrelerin sigara üretim makinelerine beslenmesi aşamasında izlenebilirlik ve doğru malzeme kullanımı hedeflenmiştir.",
+  "contextP2": "Proje, filtre üretiminden sigara üretimine kadar olan akışta filtre-iş emri eşleşmesini güvence altına almak amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel kontrolde hata ve kalite riski",
+  "problemLede": "Sigara üretiminde makineye beslenen filtrenin, ilgili iş emrine ve ürün reçetesine (BOM) uygun olması gerekiyordu. Manuel kontrol yaklaşımı kalite risklerini artırıyordu.",
+  "problemList": [
+    {
+      "bold": "SKU Uygunluğu",
+      "text": "Beslenen filtrenin doğru SKU'ya sahip olup olmadığının manuel kontrolü hata riski taşıyordu."
+    },
+    {
+      "bold": "SKT Doğrulaması",
+      "text": "Filtrenin son kullanma tarihi (SKT) uygunluğunu manuel doğrulamak güvenilir ve sürdürülebilir değildi."
+    },
+    {
+      "bold": "Başlatma Güvencesi",
+      "text": "Eşleşme doğrulanmadan üretimin başlamasını engelleyecek sistematik bir yapıya ihtiyaç vardı."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "RFID + SAP + PLC ile otomatik eşleşme kontrolü",
+  "solutionLede": "Filtreler filtre fabrikasında makineden çıkarken üretim tarihi, SKT, adet ve SKU bilgileriyle etiketlendi. Sigara üretim makinesine besleme sırasında SAP'den iş emri ve BOM verileri alınarak filtre malzeme kodu ile otomatik eşleşme doğrulaması yapıldı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Filtre Etiketleme",
+      "text": "Filtre üzerine üretim tarihi, son kullanma tarihi (SKT), adet ve SKU bilgileri yazılır."
+    },
+    {
+      "no": "02",
+      "title": "İş Emri Okuma",
+      "text": "Makine besleme anında SAP'den iş emri ve ürün reçetesi (BOM) bilgileri okunur."
+    },
+    {
+      "no": "03",
+      "title": "SKU ve SKT Eşleşmesi",
+      "text": "RFID ile okunan filtre bilgisi, SAP'den gelen malzeme kodu ve SKT koşullarıyla karşılaştırılır."
+    },
+    {
+      "no": "04",
+      "title": "Makine Çalışma İzni",
+      "text": "Doğru SKU ve uygun SKT sağlandığında PLC üzerinden makineye çalışma izni verilir; aksi durumda üretim engellenir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Saha doğrulama ve makine kontrol altyapısı",
+  "techGrid": [
+    {
+      "tag": "OKUMA",
+      "title": "RFID Okuyucular",
+      "text": "Filtre makineye beslendiğinde etiket üzerindeki kritik bilgileri anlık olarak okur."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha otomasyonunu ve makine çalışma izni kararını yöneten kontrol katmanıdır."
+    },
+    {
+      "tag": "SAHA",
+      "title": "El Terminali",
+      "text": "Saha süreçlerinde doğrulama ve operasyonel veri işlemleri için kullanılır."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ile uçtan uca iş emri doğrulaması",
+  "integrationDesc": "Sistem SAP ile entegre çalışmaktadır; iş emri, ürün reçetesi (BOM) ve filtre malzeme kodu SAP üzerinden alınarak filtre etiket bilgisiyle eşleştirilmekte, eşleştirme ve makine çalışma izni sonuçları SAP ile ilişkilendirilmektedir.",
+  "integrationList": [
+    {
+      "bold": "SAP İş Emri ve BOM",
+      "text": "Filtre malzeme kodu, iş emri ve reçete bilgileri SAP'den çekilerek RFID okuma verisiyle otomatik eşleştirilir."
+    },
+    {
+      "bold": "Makine Kontrolü",
+      "text": "Eşleşme sonucu PLC katmanına iletilir ve çalışma izni kararı gerçek zamanlı uygulanır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Kaliteyi güvence altına alan otomatik doğrulama",
+  "resultsGrid": [
+    {
+      "title": "Yanlış SKU Önleme",
+      "text": "Filtre-iş emri eşleşmesi otomatik doğrulandığı için yanlış filtre kullanımı engellendi."
+    },
+    {
+      "title": "SKT Uygunluğu",
+      "text": "Süresi uygun olmayan filtrelerin üretime girmesi sistem tarafından bloklandı."
+    },
+    {
+      "title": "Operatörden Bağımsız Kontrol",
+      "text": "Eşleşme doğrulanmadan makinenin çalışmasına izin verilmemesi kalite güvencesini artırdı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Filtre ve malzeme doğrulama süreçlerinizi dijitalleştirmek ister misiniz?",
+  "ctaSubtitle": "RFID tabanlı izlenebilirlik ve iş emri doğrulama çözümlerimizi fabrikanıza uyarlayalım.",
+  "ctaPrimary": "İletişime Geç"
+}

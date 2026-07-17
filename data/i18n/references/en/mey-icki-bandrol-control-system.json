@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Food",
+  "locationValue": "Turkey",
+  "heroTitleLine1": "Mey Alcoholic Beverages",
+  "heroTitleLine2": "Bandrol Camera Control System",
+  "heroSub": "Bandrol checks on shipment-ready cartons across Mey Diageo plants were automated with a camera-based system.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Central assurance for legal bandrol compliance",
+  "contextP1": "Bandrol checks on shipment-ready cartons across Mey Diageo plants were automated with a camera-based system.",
+  "contextP2": "The project ensured that the legally required bandrol is present on every carton.",
+  "problemEyebrow": "Need / Problem",
+  "problemTitle": "Risk of shipping cartons with missing bandrol",
+  "problemLede": "Bandrol presence had to be checked reliably and cartons with missing bandrol had to be prevented from entering shipment flow.",
+  "problemList": [
+    {
+      "bold": "Manual Check Risk",
+      "text": "Manual bandrol inspection increased the probability of human error."
+    },
+    {
+      "bold": "Legal Compliance Pressure",
+      "text": "Shipping a carton with missing bandrol created legal risk."
+    },
+    {
+      "bold": "Operational Safety Need",
+      "text": "Bandrol control had to run automatically and consistently across the line."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Camera-based automatic control with reject separation",
+  "solutionLede": "Work order selection automatically sends the relevant camera job; carton serial reading, bandrol presence check, and automatic reject routing are managed in one flow.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Work Order and Camera Job Matching",
+      "text": "The camera job is loaded automatically according to the selected work order."
+    },
+    {
+      "no": "02",
+      "title": "Carton Serial Reading",
+      "text": "Carton serial numbers are read by barcode scanners as cartons pass the station."
+    },
+    {
+      "no": "03",
+      "title": "Bandrol Presence Check",
+      "text": "The camera unit performs automatic presence/absence inspection."
+    },
+    {
+      "no": "04",
+      "title": "Automatic Reject Routing",
+      "text": "Cartons with missing bandrol are diverted to reject line; only compliant cartons continue."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Barcode scanners, camera control unit, reject mechanism, PLC",
+  "techGrid": [
+    {
+      "tag": "IDENTIFICATION",
+      "title": "Barcode Scanners",
+      "text": "Read carton serial numbers and trigger the control data flow."
+    },
+    {
+      "tag": "VISION",
+      "title": "Camera Control Unit",
+      "text": "Automatically inspects bandrol presence and returns result signals."
+    },
+    {
+      "tag": "SEPARATION",
+      "title": "Reject Mechanism",
+      "text": "Automatically removes cartons with missing bandrol from shipment stream."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC and OnSuite Trace",
+      "text": "Manages field logic and central traceability of inspection outcomes."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Central process control with SAP and traceability system",
+  "integrationDesc": "The system is integrated with SAP. Work order is selected in traceability system, camera job is loaded automatically, and serial + inspection results are linked centrally in SAP.",
+  "integrationList": [
+    {
+      "bold": "Work-Order-Based Camera Job Control",
+      "text": "Camera parameters are loaded automatically based on selected work order."
+    },
+    {
+      "bold": "SAP Result Correlation",
+      "text": "Carton serial numbers and bandrol inspection outcomes are centrally correlated and reported in SAP."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Legal compliance, shipment accuracy, process safety",
+  "resultsGrid": [
+    {
+      "title": "Eliminated Manual Error Risk",
+      "text": "Camera-based automation removed manual-inspection-related error risk."
+    },
+    {
+      "title": "Prevented Missing-Bandrol Shipments",
+      "text": "Automatic reject routing prevented non-compliant cartons from reaching shipment."
+    },
+    {
+      "title": "Central and Secure Flow",
+      "text": "Serial reading plus automatic separation improved shipment accuracy and operational safety."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to automate bandrol control with legal compliance?",
+  "ctaSubtitle": "Contact us for camera-based control, automatic reject routing, and SAP integration.",
+  "ctaPrimary": "Contact Us"
+}

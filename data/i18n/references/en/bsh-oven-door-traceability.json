@@ -1,0 +1,109 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Home Appliances",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Precise door assembly,",
+  "heroTitleLine2": "zero errors and full traceability in production.",
+  "heroSub": "In the project implemented at BSH's oven production factory in Çerkezköy, the oven doors mounted on the products were tracked and recorded based on the lot information obtained from the door carts.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Component tracking and production accuracy",
+  "contextP1": "In the project implemented at BSH's oven production factory in Çerkezköy, the oven doors mounted on the products were tracked and recorded based on the lot information obtained from the door carts.",
+  "contextP2": "The project was carried out to ensure the traceability of the door-product component relationship.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Manual tracking and matching risks",
+  "problemLede": "In oven production, the oven door mounted on the product had to match the correct product and this match had to be traceable on a product basis.",
+  "problemList": [
+    {
+      "bold": "Manual Tracking Constraints",
+      "text": "The manual tracking of the door-product relationship being insufficient and carrying the risk of a traceability gap."
+    },
+    {
+      "bold": "Incorrect Component Use",
+      "text": "Inability to automatically prevent the risk of using the wrong door during production."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Lot-based matching and automatic verification",
+  "solutionLede": "Integration with the traceability system was achieved by matching product serial numbers with lot information obtained from the door carts. Data regarding the oven doors supplied on a lot basis to the production floor and mounted on products with specific serial numbers was recorded. Thanks to product-door matching, the use of correct doors in correct products was guaranteed.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Lot Barcode Reading",
+      "text": "Lot labels on the door carts are scanned using a barcode reader."
+    },
+    {
+      "no": "02",
+      "title": "Serial No Matching",
+      "text": "The serial number of the assembled product is associated with the door lot information."
+    },
+    {
+      "no": "03",
+      "title": "SCADA Verification",
+      "text": "The C#-based SCADA application checks the accuracy of the match in real time."
+    },
+    {
+      "no": "04",
+      "title": "SAP Confirmation Record",
+      "text": "After all checks are completed, data of the approved parts is written to the SAP system."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Field automation and software architecture",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Automation",
+      "text": "PLC infrastructure managing the field flow, station states, and sensor data."
+    },
+    {
+      "tag": "INTERFACE",
+      "title": "C# SCADA Application",
+      "text": "Specifically developed SCADA for matching logic, data verification, and operator screens."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Barcode Readers",
+      "text": "Industrial scanners that read lot labels on door carts and product serial numbers."
+    },
+    {
+      "tag": "DATA",
+      "title": "SAP Integration",
+      "text": "Integrated sharing of process confirmations and lot data with the SAP system."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "OnSuite Trace Platform",
+      "text": "Central software layer controlling traceability and process management."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP ERP Integration",
+  "integrationDesc": "The system runs integrated with SAP; after verification, confirmation data of compliant parts is sent back to SAP. This establishes full synchronization between the production floor and corporate data.",
+  "integrationList": [
+    {
+      "bold": "SAP Confirmation Data",
+      "text": "Successfully verified product and door match confirmations are instantly transmitted to SAP."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Controlled assembly with zero errors",
+  "resultsGrid": [
+    {
+      "title": "Prevention of Faulty Assembly",
+      "text": "The accuracy of the mounted doors is automatically checked, zeroing the risk of incorrect assembly."
+    },
+    {
+      "title": "Tracking at Serial No Level",
+      "text": "The door-product relationship is written directly to the product's serial number, ensuring full traceability."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

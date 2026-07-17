@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "La cheie",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Sticlă corectă, suport corect,",
+  "heroTitleLine2": "asamblare fără defecte.",
+  "heroSub": "Implementat la fabrica de cuptoare BSH din Çerkezköy; suporturile montate pe sticla cuptorului sunt urmărite după ID-ul coșului de transport, înregistrând relația sticlă-suport-produs în mod integrat cu SAP.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Control de asamblare de precizie în producția de cuptoare",
+  "contextP1": "În proiectul implementat la fabrica de cuptoare BSH din Çerkezköy, suporturile montate pe sticla cuptorului au fost urmărite și înregistrate pe baza ID-ului coșului.",
+  "contextP2": "Proiectul a fost realizat pentru a asigura trasabilitatea relației sticlă–suport–produs și pentru a preveni erorile de asamblare.",
+  "problemEyebrow": "Nevoi / Probleme",
+  "problemTitle": "Dificultăți în potrivirea componentelor",
+  "problemLede": "Exista riscul unei potriviri incorecte a componentelor de sticlă și suport în timpul asamblării ușii cuptorului.",
+  "problemList": [
+    {
+      "bold": "Risc de Potrivire Incorectă",
+      "text": "Potrivirea incorectă a componentelor de sticlă și suport în producția de cuptoare și lipsa verificării acestor potriviri."
+    },
+    {
+      "bold": "Limitări de Urmărire Manuală",
+      "text": "Urmărirea manuală insuficientă a relației componentă-produs, creând o lacună de trasabilitate."
+    },
+    {
+      "bold": "Detectarea Pieselor Defecte",
+      "text": "Imposibilitatea de a detecta și bloca asocierile incorecte de componente în timp real în timpul asamblării."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Trasabilitatea Suporturilor și Coșurilor",
+  "solutionLede": "Suporturile au fost urmărite în funcție de ID-urile coșurilor. Coșurile au fost scanate la stația de lipire a sticlei, verificând numerele de lot ale sticlei cu cele ale suporturilor. În etapa de asamblare, numărul de lot al căruciorului de sticlă relevant a fost asociat cu numărul de serie unic al cuptorului.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Urmărirea Coșurilor",
+      "text": "Suporturile montate pe sticla cuptorului sunt făcute trasabile pe baza ID-urilor coșurilor de transport."
+    },
+    {
+      "no": "02",
+      "title": "Verificarea Lotului",
+      "text": "Coșurile sunt scanate la stația de lipire, verificând numerele de lot ale sticlei cu cele ale suporturilor."
+    },
+    {
+      "no": "03",
+      "title": "Asocierea Produsului",
+      "text": "În etapa de asamblare, numărul de lot al căruciorului de sticlă relevant este asociat cu numărul de serie unic al cuptorului."
+    },
+    {
+      "no": "04",
+      "title": "Confirmarea SAP",
+      "text": "Datele de confirmare pentru piesele conforme care trec cu succes de toate potrivirile sunt scrise înapoi în sistemul SAP ERP."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente Utilizate",
+  "techTitle": "Arhitectură de automatizare și control",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Automatizare de câmp cu PLC",
+      "text": "Infrastructură PLC care gestionează fluxul de lucru și semnalele la stația de lipire a sticlei."
+    },
+    {
+      "tag": "INTERFAȚĂ",
+      "title": "Aplicație SCADA cu C#",
+      "text": "Aplicație C# pentru verificare, asocierea produselor și ecranele operatorului."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare de Coduri de Bare",
+      "text": "Cititoare de coduri de bare de înaltă precizie care scanează codurile de lot de sticlă și suport, precum și ID-urile coșurilor."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Central software layer care asigură trasabilitatea, urmărirea loturilor și controlul procesului."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare SAP ERP",
+      "text": "Integrare bidirecțională de date pentru potriviri și confirmări de producție cu sistemul SAP."
+    },
+    {
+      "tag": "VERIFICARE",
+      "title": "Controlul Stației",
+      "text": "Mecanism de oprire automată care oprește linia prin PLC în caz de utilizare incorectă a suportului."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare SAP ERP",
+  "integrationDesc": "Sistemul de monitorizare și verificare a procesului funcționează complet integrat cu infrastructura SAP ERP a BSH; confirmările de producție și datele de potrivire a loturilor sunt scrise înapoi în SAP.",
+  "integrationList": [
+    {
+      "bold": "Confirmare Producție SAP",
+      "text": "Datele de confirmare pentru piesele conforme sunt scrise în sistemul SAP ERP în timp real după verificare."
+    },
+    {
+      "bold": "Verificarea Potrivirii Lotului",
+      "text": "Numerele de lot de sticlă și suport sunt validate cu stocul SAP și definițiile de rețetă înainte de a continua."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Asamblare fără defecte și trasabilitate completă",
+  "resultsGrid": [
+    {
+      "title": "Potrivirea corectă a componentelor",
+      "text": "Potrivirea corectă a componentelor de sticlă și suport în timpul asamblării este auto-verificată, reducând utilizarea pieselor incorecte la zero."
+    },
+    {
+      "title": "Urmărire la nivel de număr de serie",
+      "text": "Relațiile componentă-produs sunt înregistrate la nivelul numărului de serie al produsului, asigurând o trasabilitate retrospectivă completă."
+    },
+    {
+      "title": "Siguranța procesului",
+      "text": "Controlul de oprire a liniei la potriviri incorecte previne complet trecerea produselor neconforme la următoarea stație."
+    }
+  ],
+  "closerTitle": "Siguranță fără cusur a procesului de la sticlă la suport, de la asamblare la SAP.",
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

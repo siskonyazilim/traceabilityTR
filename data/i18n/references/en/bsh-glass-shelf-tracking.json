@@ -1,0 +1,109 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Home Appliances",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Precise assembly tracking,",
+  "heroTitleLine2": "correct component matching and quality assurance.",
+  "heroSub": "In the project implemented at BSH's refrigerator production factory in Çerkezköy, the glass shelves mounted on products were tracked and recorded based on lot information.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Part tracking in refrigerator production",
+  "contextP1": "In the project implemented at BSH's refrigerator production factory in Çerkezköy, the glass shelves mounted on products were tracked and recorded based on lot information.",
+  "contextP2": "The project was carried out to ensure the traceability of the glass shelf-product component relationship.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Incorrect component matching risks",
+  "problemLede": "In refrigerator production, the glass shelf component had to match the correct product and this match had to be traceable on a product basis.",
+  "problemList": [
+    {
+      "bold": "Manual Tracking Gaps",
+      "text": "The manual tracking of the component-product relationship being insufficient and carrying the risk of a traceability gap."
+    },
+    {
+      "bold": "Incorrect Assembly Risk",
+      "text": "Inability to instantly prevent incorrect component use and faulty matching during production."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Lot-based tracking and SAP synchronization",
+  "solutionLede": "Glass shelves mounted on products were tracked and recorded based on lot numbers. By scanning glass shelf carts at the relevant station, glass shelf lot numbers were associated with the product serial number, establishing integration with the traceability system. This structure secured the component-product match, ensuring the use of correct glass shelves in correct products. Confirmation data for compliant parts was written back to SAP.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Cart Scanning",
+      "text": "Glass shelf carts at the station are scanned to automatically retrieve lot information."
+    },
+    {
+      "no": "02",
+      "title": "Serial No Association",
+      "text": "Scanned glass shelf lot numbers are automatically paired with the product serial number."
+    },
+    {
+      "no": "03",
+      "title": "SCADA Control",
+      "text": "The SCADA application checks matching accuracy and prevents incorrect parts."
+    },
+    {
+      "no": "04",
+      "title": "SAP Confirmation Push",
+      "text": "Approved assembly and part relationships are instantly written to the SAP system."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Field integration and control infrastructure",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Structure",
+      "text": "PLC infrastructure that checks station states and guides the field flow."
+    },
+    {
+      "tag": "INTERFACE",
+      "title": "C# SCADA Application",
+      "text": "C# application for matching verification, process monitoring, and operator screens."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Industrial Barcode Readers",
+      "text": "Precision scanners that read glass shelf lot numbers and product serial numbers."
+    },
+    {
+      "tag": "DATA",
+      "title": "SAP ERP Integration",
+      "text": "Bi-directional sharing of confirmation data and lot matches with the SAP system."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "OnSuite Trace Platform",
+      "text": "Central software layer controlling traceability and process management."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP ERP Integration",
+  "integrationDesc": "The system runs integrated with SAP; after verification, confirmation data of compliant parts is written back to SAP. This structure secures information integrity between field data and the corporate system.",
+  "integrationList": [
+    {
+      "bold": "SAP Confirmation Data",
+      "text": "Confirmation records for compliant parts passing assembly verification are instantly transmitted to SAP."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Advanced quality control and traceability",
+  "resultsGrid": [
+    {
+      "title": "Correct Match Assurance",
+      "text": "The correct matching of the glass shelf component with the product is automatically verified, preventing incorrect parts."
+    },
+    {
+      "title": "End-to-End Traceability",
+      "text": "The component-product relationship is permanently recorded directly at the product serial number level."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

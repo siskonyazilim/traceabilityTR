@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Anahtar Teslim",
+  "tagValue": "Elektronik",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Otomatik test kontrolü,",
+  "heroTitleLine2": "tekil ürün izlenebilirliği.",
+  "heroSub": "Haier Europe'un Eskişehir pişirme cihazları fabrikasında hayata geçirilen ocak montaj hattı projesinde; seri numaraları RFID ile ilişkilendirilir, test süreçleri operatörden bağımsız yürütülür ve global MES sistemine aktarılır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Ocak montaj hatlarında dijital dönüşüm",
+  "contextP1": "Beyaz eşya üretiminde küresel bir lider olan Haier Europe'un Eskişehir'deki ocak (pişirme cihazları) fabrikasında hayata geçirilen projede, yeni ocak montaj hatlarına izlenebilirlik sistemi uygulanmıştır.",
+  "contextP2": "Proje kapsamında montaj hattı otomasyon yazılımı da tarafımızca geliştirilmiş olup, tüm test istasyonları merkezi izlenebilirlik yapısına bağlanmıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Güvenli test doğrulama ve kayıt ihtiyacı",
+  "problemLede": "Yeni montaj hatlarında üretilen her bir ocağın elektriksel ve sızdırmazlık güvenlik testlerinin operatör inisiyatifinden bağımsız olarak doğrulanması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Operatör Bağımlılığı",
+      "text": "Güvenlik testlerinin manuel yürütülmesinin getirdiği insan kaynaklı hata ve kayıtlarda tutarsızlık riskleri."
+    },
+    {
+      "bold": "Eşleştirme Eksikliği",
+      "text": "Elektrik, gaz kaçak ve alev kontrol test sonuçlarının ürün seri numarasıyla otomatik eşleştirilememesi."
+    },
+    {
+      "bold": "Hat Kontrol Boşluğu",
+      "text": "Test istasyonlarından geçmeyen veya testten kalmış ürünlerin montaj hattı boyunca ilerlemesini önleyecek otomatik kilit altyapısının bulunmaması."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "RFID Tabanlı İstasyon ve Otomatik Test Kontrolü",
+  "solutionLede": "Ürün barkodundaki seri numarası, hat başında RFID ile ilişkilendirilmekte ve izlenebilirlik RFID sistemi üzerinden sağlanmaktadır. Üretim sürecinde elektrik testleri, gaz kaçak testleri ve alev kontrol testleri, hat boyunca belirlenen istasyonlarda operatörden bağımsız olarak otomatik gerçekleştirilmektedir.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "RFID İlişkilendirme",
+      "text": "Hat başında ürün barkodundaki seri numarası, taşıyıcı üzerindeki RFID etiketiyle eşleştirilir ve süreç izlenir."
+    },
+    {
+      "no": "02",
+      "title": "Otomatik Testler",
+      "text": "Ocaklar; elektrik testi, gaz kaçak testi ve alev kontrol testi istasyonlarında operatörden bağımsız test edilir."
+    },
+    {
+      "no": "03",
+      "title": "Veri Eşleştirme",
+      "text": "İstasyonlardan toplanan anlık test sonuçları, ürünün tekil seri numarası ile otomatik olarak ilişkilendirilir."
+    },
+    {
+      "no": "04",
+      "title": "MES Onay Kaydı",
+      "text": "Başarıyla tamamlanan test onayları, Haier Europe'un Global MES sistemine anlık olarak aktarılır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "9 eksenli servo ve robotik veri entegrasyonu",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "Montaj hattı otomasyon yazılımı",
+      "text": "Tüm montaj hattı iş akışını ve makine istasyonlarını yöneten kontrol yazılımı."
+    },
+    {
+      "tag": "ROBOTİK",
+      "title": "9 eksenli servo & robotik sistem",
+      "text": "İstasyonlardaki hassas konumlandırma ve mekanik işlemleri yürüten robotik donanımlar."
+    },
+    {
+      "tag": "RFID",
+      "title": "RFID izlenebilirlik altyapısı",
+      "text": "Hat başında seri numaralarını eşleyen ve istasyon geçişlerini izleyen RFID sistemi."
+    },
+    {
+      "tag": "İSTASYON",
+      "title": "Otomatik test üniteleri",
+      "text": "Elektrik, gaz kaçak ve alev kontrol testlerini insan inisiyatifi olmaksızın yürüten test donanımları."
+    },
+    {
+      "tag": "HABERLEŞME",
+      "title": "Endüstriyel haberleşme ağları",
+      "text": "EtherCAT, TCP/IP ve Profinet protokolleri üzerinden yüksek hızlı saha veri alışverişi."
+    },
+    {
+      "tag": "VERİ",
+      "title": "OnSuite Trace ve MES entegrasyonu",
+      "text": "OnSuite Trace platformunun Haier Global MES sistemiyle entegre çalıştığı veri katmanı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Haier Global MES Entegrasyonu",
+  "integrationDesc": "Geliştirilen izlenebilirlik sistemi, Haier Europe'un Global MES (Manufacturing Execution System) yapısıyla anlık entegre çalışmaktadır; tüm test verileri ve onaylar MES sistemine gönderilir.",
+  "integrationList": [
+    {
+      "bold": "MES Test Kaydı",
+      "text": "Elektrik, gaz kaçak ve alev kontrol test sonuçları seri numarası bazında MES sistemine yazılır."
+    },
+    {
+      "bold": "Süreç Kilitleme",
+      "text": "Testlerden geçmeyen veya eksik kalan ürünlerin sonraki istasyona geçişi MES onay durumuna göre engellenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Sıfır hata güvenlik ve anlık üretim takibi",
+  "resultsGrid": [
+    {
+      "title": "Tekil ürün izlenebilirliği",
+      "text": "Her ürün için hat başından itibaren seri numarasına dayalı uçtan uca dijital izlenebilirlik sağlanmıştır."
+    },
+    {
+      "title": "Operatörden bağımsız kalite",
+      "text": "Elektrik, gaz ve alev kontrol testleri otomatik hale getirilerek insan kaynaklı hata payı sıfıra indirilmiştir."
+    },
+    {
+      "title": "MES veri bütünlüğü",
+      "text": "Üretim hattındaki tüm kalite ve test kayıtları anlık olarak MES sistemine aktarılarak raporlanabilir duruma getirilmiştir."
+    }
+  ],
+  "closerTitle": "Robotik otomasyon ve otomatik testlerle kombine edilmiş en yüksek güvenlik standartları.",
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

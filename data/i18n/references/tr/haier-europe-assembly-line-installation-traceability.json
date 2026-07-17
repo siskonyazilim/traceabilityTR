@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Yeni montaj hatları,",
+  "heroTitleLine2": "uçtan uca dijital süreç takibi.",
+  "heroSub": "Haier Europe'un Eskişehir'deki pişirme cihazları fabrikasında hayata geçirilen projede, montaj hatlarındaki manuel planlama, takip ve kontrol süreçleri tamamen otomatik hâle getirilmiştir. Proje kapsamında yeni montaj hatları kurulmuş ve süreç uçtan uca izlenebilir kılınmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Üretimde dijitalleşme ve yenilenen konveyör sistemleri",
+  "contextP1": "Beyaz eşya üretiminde küresel bir lider olan Haier Europe'un Eskişehir'deki pişirme cihazları fabrikasında hayata geçirilen projede, montaj hatlarındaki manuel planlama, takip ve kontrol süreçleri tamamen otomatik hâle getirilmiştir.",
+  "contextP2": "Proje kapsamında yeni montaj hatları kurulmuş, konveyör sistemleri tamamen yenilenmiş ve ambalajdan depoya kadar tüm süreç uçtan uca izlenebilir kılınmıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel izleme boşlukları ve test-tamir entegrasyonu ihtiyacı",
+  "problemLede": "Montaj hatlarında planlama, takip ve kontrol süreçleri manuel yürütülüyordu; bu durum süreç görünürlüğünü zayıflatıyor, hata ve verimsizlik riski taşıyordu. Üretimin başından depoya kadar her ürünün tekil olarak izlenebildiği, test ve tamir süreçlerini de kapsayan otomatik bir yapıya ihtiyaç vardı.",
+  "problemList": [
+    {
+      "bold": "Zayıf Süreç Görünürlüğü",
+      "text": "Planlama ve takibin manuel yapılması nedeniyle üretim darboğazlarının anlık tespit edilememesi."
+    },
+    {
+      "bold": "Kayıtsız Tamir Aksiyonları",
+      "text": "Testten kalan hatalı ürünlerin gördüğü işlemlerin merkezi olarak kaydedilememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Test-tamir döngülü uçtan uca dijital montaj yönetimi",
+  "solutionLede": "Haier Europe'un pişirme cihazları fabrikasına yeni montaj hatları kuruldu ve konveyör sistemleri tamamen yenilendi. Montaj hatlarındaki manuel planlama, takip ve kontrol süreçleri otomatik hâle getirilerek tüm montaj süreci dijital olarak izlenebilir kılındı. Montaj hattının başından depoya kadar, benzersiz kimlikler temelinde tüm ürünler için uçtan uca izlenebilirlik sağlandı. Üretim boyunca test verileri toplandı; test sonucuna göre uygun olmayan ürünler tamire ayrıldı ve uygulanan tamir aksiyonları sisteme kaydedildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Benzersiz Kimlik Atama",
+      "text": "Montaj hattının başında her ürüne tekil kimlik (barkod/DPM) atanarak takibi başlatılır."
+    },
+    {
+      "no": "02",
+      "title": "Test Verisi Toplama",
+      "text": "Ürünler test istasyonlarından geçerken test sonuçları otomatik olarak veritabanına yazılır."
+    },
+    {
+      "no": "03",
+      "title": "Tamir Yönlendirmesi",
+      "text": "Testten geçemeyen ürünler otomatik olarak tamir hattına ayrılarak bloke edilir."
+    },
+    {
+      "no": "04",
+      "title": "Kayıt ve Depoya Sevk",
+      "text": "Uygulanan tamir işlemleri sisteme kaydedildikten sonra ürünler onaylanarak depoya sevk edilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "C# SCADA ve saha entegrasyon donanımları",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Yeni Montaj ve Konveyör",
+      "text": "Mekanik akışı sağlayan ve PLC kontrollü çalışan modern konveyör hat altyapısı."
+    },
+    {
+      "tag": "KONTROL",
+      "title": "PLC Saha Akış Yönetimi",
+      "text": "Ürünlerin hatlar arasındaki asansör ve konveyör hareketlerini yöneten PLC'ler."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "Test istasyonlarıyla haberleşen, tamir kayıtlarını alan ve onayları yöneten SCADA."
+    },
+    {
+      "tag": "TAKİP",
+      "title": "OnSuite Trace Platformu",
+      "text": "Tüm test verilerini ve tamir aksiyonlarını tekil ürün kimliğiyle bağlayan ana yazılım."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Haier Global MES Sistemi Entegrasyonu",
+  "integrationDesc": "Sistem Haier Europe'un Global MES Sistemi ile tam entegre çalışmaktadır. Test sonuçları, üretim onayları ve tamir kayıtları global sisteme doğrudan anlık olarak iletilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Global MES Entegrasyonu",
+      "text": "Montaj hattı onayları, kalite test verileri ve tamir geçmişi MES sistemiyle çift yönlü senkronize edilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Uçtan uca şeffaf montaj ve maksimum verim",
+  "resultsGrid": [
+    {
+      "title": "Uçtan Uca İzlenebilirlik",
+      "text": "Hattın başından depoya kadar her ürünün test sonuçları ve lojistik hareketleri anlık takip edilebilir."
+    },
+    {
+      "title": "Geri İzlenebilir Kalite",
+      "text": "Kusurlu ürünlerin tamir adımları ve test sonuçları geriye dönük raporlanabilir."
+    },
+    {
+      "title": "Operasyonel Verimlilik",
+      "text": "Manuel planlama ve takibin dijitalleşmesiyle montaj hattı döngü süreleri optimize edilmiştir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

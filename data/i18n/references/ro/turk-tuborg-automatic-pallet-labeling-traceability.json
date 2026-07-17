@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Înapoi la proiectele de referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și integrare",
+  "tagValue": "Alimente",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Turk Tuborg",
+  "heroTitleLine2": "Etichetare automată a paleților și trasabilitate",
+  "heroSub": "În fabrica Turk Tuborg din Izmir, etichetarea paleților ieșiți de pe linie a fost automatizată, asigurând trasabilitate la nivel de palet.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Etichetare automată și trasabilitate la nivel de palet",
+  "contextP1": "Fabrica Turk Tuborg din Izmir produce băuturi alcoolice. În acest proiect, etichetarea paleților ieșiți de pe linie a fost automatizată, oferind trasabilitate la nivel de palet.",
+  "contextP2": "Obiectivul a fost transformarea procesului într-un flux automat, verificabil și aliniat cu ordinul de lucru.",
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Etichetarea manuală genera riscuri de eroare și livrare",
+  "problemLede": "Etichetele paleților erau tipărite manual de operatori. Această abordare creștea dependența de operator și riscul de etichete greșite sau livrări eronate.",
+  "problemList": [
+    {
+      "bold": "Dependență de operator",
+      "text": "Execuția manuală făcea procesul mai greu de standardizat și controlat."
+    },
+    {
+      "bold": "Risc de etichetă greșită",
+      "text": "Etichetele incorecte puteau provoca nepotriviri între produs și palet."
+    },
+    {
+      "bold": "Risc pentru acuratețea livrării",
+      "text": "Etichetele nealiniate cu ordinul de lucru puteau afecta corectitudinea expedierii."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Etichetare automată validată, bazată pe ordin SAP",
+  "solutionLede": "A fost instalat un aplicator de paleți pentru tipărire automată pe 3 laturi. Eticheta este selectată conform ordinului SAP, iar după tipărire este verificată prin scanare.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Selectarea ordinului de lucru",
+      "text": "Eticheta ce urmează a fi tipărită este determinată pe baza ordinului de lucru primit din SAP."
+    },
+    {
+      "no": "02",
+      "title": "Tipărire automată pe 3 laturi",
+      "text": "Aplicatorul etichetează automat paletul pe trei direcții."
+    },
+    {
+      "no": "03",
+      "title": "Verificare post-tipărire",
+      "text": "După tipărire, eticheta este citită și validată pentru corectitudine."
+    },
+    {
+      "no": "04",
+      "title": "Scenariu de continuitate",
+      "text": "În caz de defect al aplicatorului, etichetarea manuală poate fi activată pentru continuitate operațională."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente utilizate",
+  "techTitle": "Aplicator paleți, PLC, SCADA C# și integrare SAP",
+  "techGrid": [
+    {
+      "tag": "ETICHETARE",
+      "title": "Aplicator de paleți",
+      "text": "Echipament din teren care tipărește și aplică automat etichete pe 3 laturi."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură PLC",
+      "text": "Gestionează fluxul în teren, stările echipamentelor și secvențele de etichetare."
+    },
+    {
+      "tag": "APLICAȚIE",
+      "title": "SCADA C#",
+      "text": "Coordonează selecția ordinului, tipărirea, verificarea și schimbul de date cu SAP."
+    },
+    {
+      "tag": "INTEGRARE",
+      "title": "SAP",
+      "text": "Furnizează datele de etichetă pe baza ordinului de lucru și primește rezultatele procesului."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Management centralizat al etichetelor prin SAP",
+  "integrationDesc": "Sistemul este integrat cu SAP; eticheta paletului este determinată conform ordinului de lucru selectat, iar rezultatele de tipărire și validare sunt transmise centralizat.",
+  "integrationList": [
+    {
+      "bold": "Integrare cu ordinul SAP",
+      "text": "Conținutul etichetei și fluxul de tipărire sunt guvernate automat de ordinul SAP."
+    },
+    {
+      "bold": "Feedback tipărire-validare",
+      "text": "Rezultatele de scanare și validare post-tipărire sunt partajate în SAP pentru trasabilitate completă."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Etichetă corectă, expediere corectă, operațiuni continue",
+  "resultsGrid": [
+    {
+      "title": "Reducerea dependenței de operator",
+      "text": "Automatizarea etichetării paleților a eliminat dependența de inițiativa manuală a operatorului."
+    },
+    {
+      "title": "Acuratețe ridicată a expedierii",
+      "text": "Tipărirea automată pe bază de ordin și verificarea post-tipărire au redus riscul de etichete și livrări eronate."
+    },
+    {
+      "title": "Continuitate operațională",
+      "text": "Opțiunea de etichetare manuală permite continuarea procesului chiar și la defectarea aplicatorului."
+    }
+  ],
+  "relatedProjects": "Proiecte similare",
+  "ctaTitle": "Doriți etichetare de paleți automată și verificabilă?",
+  "ctaSubtitle": "Contactați-ne pentru integrare SAP pe ordin de lucru, etichetare automată și verificare post-tipărire.",
+  "ctaPrimary": "Contactați-ne"
+}

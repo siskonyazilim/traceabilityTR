@@ -467,8 +467,8 @@ export const contentTr = {
     'delphi-technologies': {
       title: 'Delphi Technologies - Depo Yönetimi',
       sector: 'Otomotiv',
-      description: 'Delphi Technologies için üretim çıktısından sevkiyata kadar tam görünürlük sağlayan entegre bir depo yönetimi ve izlenebilirlik çözümü geliştirdik.',
-      content: '<h2>Depo Yönetimi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik doldurulması yanlış veri girişini önledi. Ayrıca sistem, hangi ürünlerin hangi ambalaj hattına geldiğini önceden gösterdiğinden, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%50</li><li>Hata -%80</li><li>Üretkenlik +%55</li></ul>',
+      description: 'Menderes yedek parça deposunda kurulan WMS ve el terminali altyapısıyla parça yerleştirme, sipariş toplama ve raf dengesi süreçlerinin dijital ve izlenebilir yönetimi sağlanmıştır.',
+      content: '<h2>Delphi Technologies - Depo Yönetimi</h2><p>Depo operasyonları WMS ve el terminali uygulamaları ile anlık yürütülmüş; manuel yönetimden kaynaklanan yanlış yerleştirme, hatalı sipariş toplama ve stok tutarsızlığı riskleri azaltılarak hız ve doğruluk artırılmıştır.</p>',
     },
     'pmi-rfid': {
       title: 'PMI - Damgalama için RFID',
@@ -477,10 +477,10 @@ export const contentTr = {
       content: '<h2>Damgalama için RFID</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%38</li><li>Hata -%65</li><li>Üretkenlik +%42</li></ul>',
     },
     'delphi-monitorizare-individuala-rampa-injectie': {
-      title: 'Delphi Technologies - Yakıt Rayı Montaj Hattında Bireysel Ürün Takibi',
+      title: 'Delphi Technologies - Ray Montaj Tekil Ürün İzleme',
       sector: 'Otomotiv',
-      description: 'Yakıt rayı montaj hattında her ürün için tam izlenebilirlik ve MES entegrasyonuyla bireysel ürün izleme.',
-      content: '<h2>Yakıt Rayı Montaj Hattında Bireysel Ürün İzleme</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış girişleri önledi. Ayrıca sistem, ambalaj hatlarına gelen ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%44</li><li>Hata -%68</li><li>Üretkenlik +%41</li></ul>',
+      description: 'Ray montaj hattındaki ürünlerin markalama ile tekil tanımlanıp operasyon bazında anlık izlenmesi sayesinde süreç görünürlüğü ve kalite kontrolü güçlendirilmiştir.',
+      content: '<h2>Delphi Technologies - Ray Montaj Tekil Ürün İzleme</h2><p>Ürünler hatta girişten önce markalanarak tekil kimlikle izlenmiş; barkod, PLC, C# SCADA ve Oracle entegrasyonu ile her ürünün operasyon ve durum bilgisi merkezi olarak yönetilir hale getirilmiştir.</p>',
     },
     'mey-diageo-control-camera-etichete': {
       title: 'Mey Diageo - Kamera Tabanlı Etiket Kontrolü',
@@ -495,10 +495,10 @@ export const contentTr = {
       content: '<h2>Filtre Takibi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p><h3>Sonuçlar</h3><ul><li>Verimlilik +%36</li><li>Hata -%59</li><li>Üretkenlik +%34</li></ul>',
     },
     'delphi-prototype-line-traceability': {
-      title: 'Delphi Technologies - Prototip Hattı İzlenebilirliği',
+      title: 'Delphi Technologies - Prototip Hattı İzlenebilirlik',
       sector: 'Otomotiv',
-      description: 'Delphi Technologies prototip hattı için tam bileşen takibi ve üretim sistemleriyle entegrasyon içeren izlenebilirlik.',
-      content: '<h2>Prototip Hattı İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+      description: 'Müşteriye özel prototip ürünlerin markalama ile tekil tanımlanıp tüm operasyonlarda takip edildiği, görünürlük ve planlama gücü sağlayan Delphi Technologies izlenebilirlik projesi.',
+      content: '<h2>Delphi Technologies - Prototip Hattı İzlenebilirlik</h2><p>Prototip ürünler hatta girmeden markalanıp tekil olarak tanımlanmış; barkod, PLC, C# SCADA ve Oracle entegrasyonu ile operasyon bazlı durum takibi merkezi olarak izlenebilir hale getirilmiştir.</p>',
     },
     'tirsan-product-traceability': {
       title: 'Tirsan - Ürün İzlenebilirliği',
@@ -513,16 +513,16 @@ export const contentTr = {
       content: '<h2>İzlenebilirlik Verilerinin Bulut Entegrasyonu</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
     },
     'candy-hoover-test-data-production-efficiency-tracking': {
-      title: 'Candy Hoover - Test Verisi Toplama ve Üretim Verimliliği Takibi',
-      sector: 'Elektronik',
-      description: 'Fabrika içi ürün izlenebilirliği ve barkod tabanlı test sonuçları, görsel muayeneler ve yeniden işleme süreçleriyle birlikte kaydedildi. Üretim, duruş ve hurda verileri toplandı; üretim verimliliğinin gerçek zamanlı izlenmesi sağlandı.',
-      content: '<h2>Test Verisi Toplama ve Üretim Verimliliği Takibi</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+      title: 'Candy Hoover - Test İstasyonları İzlenebilirlik',
+      sector: 'Beyaz Eşya',
+      description: 'Candy Hoover test istasyonlarında elektrik ve gaz kaçak verilerinin otomatik toplanması, ürün seri numarasıyla eşleştirilmesi ve Global MES entegrasyonu ile izlenebilirlik sağlandı.',
+      content: '<h2>Test İstasyonları İzlenebilirlik</h2><p>Eskişehir tesisindeki projede test cihazlarından gelen elektrik ve gaz kaçak verileri otomatik toplandı, seri numarasıyla eşleştirilerek ürün bazında güvenilir izlenebilirlik elde edildi.</p>',
     },
     'turk-tuborg-automatic-pallet-labeling-traceability': {
       title: 'Türk Tuborg - Otomatik Palet Etiketleme ve İzlenebilirlik',
       sector: 'Gıda',
-      description: 'Türk Tuborg için tam ERP entegrasyonu ve üretim sürecinin gerçek zamanlı izlenmesiyle otomatik palet etiketleme ve izlenebilirlik.',
-      content: '<h2>Otomatik Palet Etiketleme ve İzlenebilirlik</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+      description: 'Türk Tuborg’da palet etiketleme süreci SAP iş emri entegrasyonu ile otomatikleştirilmiş, 3 yönlü etiket basım ve doğrulama ile palet düzeyinde izlenebilirlik sağlanmıştır.',
+      content: '<h2>Otomatik Palet Etiketleme ve İzlenebilirlik</h2><p>İzmir tesisinde palet etiketleri SAP iş emrine göre otomatik basılmakta, basım sonrası okunarak doğrulanmakta ve arıza anlarında manuel etiketleme seçeneğiyle süreç kesintisiz sürdürülmektedir.</p>',
     },
     'delphi-rfid-datamatrix-rail-assembly-integration': {
       title: 'Delphi Technologies - Ray Montajının RFID-DataMatrix Entegrasyonu',
@@ -531,16 +531,16 @@ export const contentTr = {
       content: '<h2>Ray Montajının RFID-DataMatrix Entegrasyonu</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
     },
     'candy-hoover-test-data-cooker-lines-traceability': {
-      title: 'Candy Hoover - Ocak Hatları için Test Verisi Toplama ve İzlenebilirlik',
+      title: 'Candy Hoover - Ocak Hatları Test Veri Toplama ve İzlenebilirlik',
       sector: 'Elektronik',
-      description: 'Candy Hoover ocak hatları için otomatik kalite izleme ve üretim sistemleriyle entegrasyon içeren test verisi toplama ve izlenebilirlik.',
-      content: '<h2>Ocak Hatları için Test Verisi Toplama ve İzlenebilirlik</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+      description: 'Candy Hoover ocak hatlarında test verilerinin otomatik toplanması, ürünle eşleştirilmesi ve hat başından sevkiyata kadar uçtan uca izlenebilirlik sağlanmıştır.',
+      content: '<h2>Ocak Hatları Test Veri Toplama ve İzlenebilirlik</h2><p>Eskişehir tesisinde elektrik ve gaz kaçak test verileri cihazlardan otomatik toplanmış, ürün seri numarasıyla eşleştirilmiş ve ocaklar hat başından sevkiyata kadar izlenebilir hale getirilmiştir.</p>',
     },
     'delphi-tool-tip-traceability': {
-      title: 'Delphi Technologies - Takım Ucu İzlenebilirliği',
+      title: 'Delphi Technologies - Takım Ucu İzlenebilirlik',
       sector: 'Otomotiv',
-      description: 'Üretim kalitesi ve süreç güvenilirliğini artırmak amacıyla Delphi Technologies için takım ucu izlenebilirliği.',
-      content: '<h2>Takım Ucu İzlenebilirliği</h2><p>Bu projede, ürüne özgü reçete bilgisinin otomatik tamamlanması yanlış veri girişlerini önledi. Ayrıca sistem, ambalaj hattına ulaşan ürünler hakkında önceden bilgi sağladığından, ambalaj hatları için gerekli malzeme ikmali önceden hazırlandı ve hat durmaları engellendi.</p>',
+      description: 'Datamatrix tabanlı takım ucu takibiyle ürün-takım eşleşmesi, takım ömrü ve bileme süreçlerinin izlenebilir hale getirildiği Delphi Technologies projesi.',
+      content: '<h2>Delphi Technologies - Takım Ucu İzlenebilirlik</h2><p>Takım uçlarının Datamatrix ile tekil kimliklendirilmesi, üretimde otomatik eşleşme doğrulaması ve Oracle entegre takım ömrü-bileme kayıt yönetimi sayesinde kalite ve süreç güvenilirliği artırılmıştır.</p>',
     },
     'pmi-palletizing-automation-automatic-labeling': {
       title: 'PMI - Paletleme Otomasyonu ve Otomatik Etiketleme',
@@ -705,19 +705,19 @@ export const contentTr = {
       content: '<h2>Paletleme Otomasyonu ve Otomatik Etiketleme</h2><p>Sistem, paletleme ve etiketleme adımlarını otomatikleştirerek verilerin merkezi sistemlerle senkronizasyonunu sağlar.</p>',
     },
     'philsa-filter-tracking': {
-      title: 'Philsa - Filtre Takip',
+      title: 'PMI - Filtre Takip RFID Projesi',
       sector: 'Tütün',
-      description: 'Sigara üretiminde doğru bileşenlerin kullanılmasını sağlamak için filtre takip uygulaması.',
-      content: '<h2>Filtre Takip</h2><p>Proje, filtrelerin gerçek zamanlı olarak takip edilmesini ve kalite hatalarını önlemek için üretim emirleriyle ilişkilendirilmesini sağlar.</p>',
+      description: 'RFID tabanlı filtre takip ve SAP-BOM doğrulaması ile yanlış SKU ve uygunsuz SKT kullanımını engelleyen üretim güvence sistemi.',
+      content: '<h2>PMI - Filtre Takip RFID Projesi</h2><p>Filtrelerin RFID ile okunup SAP iş emri ve BOM verileriyle otomatik eşleştirilmesi sayesinde yalnızca doğru SKU ve uygun SKT koşullarındaki filtrelerle üretime izin verilir.</p>',
     },
     'mey-icki-bandrol-control-system': {
-      title: 'Mey İçki - Bandrol Kamera Kontrol Sistemi',
+      title: 'Mey Alkollü İçkiler - Bandrol Kamera Kontrol Sistemi',
       sector: 'Gıda',
-      description: 'Otomatik doğrulama ve uygun olmayan ambalajlamayı önlemek için bandrol kontrol sistemi.',
-      content: '<h2>Bandrol Kontrol Sistemi</h2><p>Sistem, ambalaj hattındaki bandrolün varlığını ve doğruluğunu kontrol eder ve herhangi bir sapma durumunda akışı durdurur.</p>',
+      description: 'Mey Diageo fabrikalarında koli bandrol kontrolü kamera tabanlı olarak otomatikleştirilmiş; eksik bandrollü koliler reject hattına ayrılarak sevkiyat güvenliği artırılmıştır.',
+      content: '<h2>Bandrol Kamera Kontrol Sistemi</h2><p>İş emrine göre kamera job yönetimi, seri numara okuma, otomatik bandrol kontrolü ve reject ayrımı ile yalnızca uygun kolilerin sevkiyata devam etmesi sağlanmıştır.</p>',
     },
-    'philsa-embosser-rfid': {
-      title: 'Philsa - Embosser RFID',
+    'pmi-embosser-rfid': {
+      title: 'PMI - Embosser RFID',
       sector: 'Tütün',
       description: 'Konfigürasyonların ve üretim siparişlerinin gerçek zamanlı doğrulanması ile Embosser ekipmanı için RFID entegrasyonu.',
       content: '<h2>Embosser RFID</h2><p>Embosser için RFID uygulaması, üretim parametrelerini doğrular ve otomatik kilitlemelerle yanlış ayarların çalışmasını önler.</p>',

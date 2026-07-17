@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Eskisehir",
+  "heroTitleLine1": "Linie de sortare automată,",
+  "heroTitleLine2": "flux trasabil live cu ecrane Andon.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de aparate de gătit Haier Europe din Eskisehir, s-a asigurat sortarea automată a produselor și pregătirea pentru expediere după asamblare și ambalare. Proiectul a fost realizat pentru a automatiza fluxul de la ieșirea din ambalare la depozit și pentru a oferi trasabilitate live.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Rutare automată înainte de expediere în electrocasnice",
+  "contextP1": "În cadrul proiectului implementat la fabrica de aparate de gătit a Haier Europe, un lider global în producția de electrocasnice, din Eskisehir, produsele au fost sortate automat și pregătite pentru expediere după asamblare și ambalare.",
+  "contextP2": "Proiectul a fost realizat pentru a automatiza fluxul logistic de la ieșirea din ambalare la depozit, pentru a preveni expedierile de produse incorecte și pentru a oferi trasabilitate live.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Erori de sortare manuală și lipsa vizibilității procesului",
+  "problemLede": "Era necesară direcționarea produselor care veneau de la liniile de asamblare și reparare către liniile de sortare corecte după ambalare și rularea acestui flux într-un mod controlat și trasabil. Rularea manuală a sortării și rutării presupunea riscul direcționării către o linie incorectă, ineficiență și o vizibilitate redusă a procesului.",
+  "problemList": [
+    {
+      "bold": "Rutare Incorectă pe Linii",
+      "text": "Produse direcționate către linii de sortare care nu corespund planului de asamblare, creând confuzie."
+    },
+    {
+      "bold": "Lipsa Vizibilității",
+      "text": "Imposibilitatea operatorilor de stivuitor de a vedea în timp real cât de mult din ce produs s-a acumulat pe ce linie."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Sortare automată cu scanare coduri de bare și urmărire Andon",
+  "solutionLede": "În sistemul instalat de SISKON, produsele care vin de la liniile de asamblare și reparare sunt trimise la linia de ambalare printr-un elevator; produsele post-ambalare sunt direcționate automat către linia de sortare. Liniile de sortare sunt programate automat pe baza planului liniei de asamblare, iar produsele scanate prin coduri de bare pe linia de sortare sunt direcționate către liniile corespunzătoare. Produsele acumulate pe linii sunt preluate de operatorii de stivuitor și trimise în depozit. Întregul proces poate fi monitorizat live prin ecranele Andon de pe teren.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Trimitere la Ambalare",
+      "text": "Produsele de la asamblare sunt mutate automat pe linia de ambalare printr-un sistem de elevator."
+    },
+    {
+      "no": "02",
+      "title": "Scanare Coduri de Bare",
+      "text": "Produsele de la ieșirea din ambalare sunt scanate pentru a interoga detaliile planului de asamblare."
+    },
+    {
+      "no": "03",
+      "title": "Sortare Automată",
+      "text": "Produsele sunt direcționate automat către liniile de sortare programate conform planului."
+    },
+    {
+      "no": "04",
+      "title": "Monitorizare Andon",
+      "text": "Operatorii de stivuitor monitorizează ratele de umplere a liniilor de pe ecranele Andon și le mută."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Echipament de sortare și infrastructură de urmărire Andon",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Structură de Sortare Automată",
+      "text": "Transportor mecanic și structură de sortare care direcționează fizic produsele pe linii."
+    },
+    {
+      "tag": "CITITOR",
+      "title": "Stații de Scanare",
+      "text": "Cititoare industriale poziționate deasupra liniei care scanează automat numerele de serie."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Infrastructură de Control PLC",
+      "text": "Unități PLC de teren care primesc planurile de asamblare și gestionează rutarea."
+    },
+    {
+      "tag": "VIZUAL",
+      "title": "Ecrane TV Andon",
+      "text": "Afișaje mari care arată ratele de umplere ale liniilor și comenzile de expediere pentru stivuitoriști."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea Haier Global MES",
+  "integrationDesc": "Sistemul funcționează complet integrat cu sistemul Global MES (Manufacturing Execution System) al Haier Europe. Rezultatele sortării, potrivirile codurilor de bare și datele de expediere în depozit sunt transmise live.",
+  "integrationList": [
+    {
+      "bold": "Integrare MES Globală",
+      "text": "Datele de sortare și aprobările de ieșire din ambalare sunt transmise și actualizate instantaneu în sistemul MES."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Rutare fără erori și control logistic live",
+  "resultsGrid": [
+    {
+      "title": "Management Automat de Flux",
+      "text": "Fluxul de la post-ambalare la depozit este eliminat din inițiativa umană și automatizat."
+    },
+    {
+      "title": "Linii de Sortare Precise",
+      "text": "Erorile de rutare sunt reduse la zero datorită sortării programate automat pe baza planului."
+    },
+    {
+      "title": "Expediere Rapidă cu Andon",
+      "text": "Congestia liniilor și întârzierile sunt prevenite prin operatorii de stivuitor care urmăresc ratele în timp real."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

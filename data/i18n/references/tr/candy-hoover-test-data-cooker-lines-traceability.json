@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Elektronik",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Hat Başından Sevkiyata",
+  "heroTitleLine2": "Ocak Hatlarında Uçtan Uca İzlenebilirlik",
+  "heroSub": "Test verilerinin otomatik toplanması, seri numarasıyla eşleştirilmesi ve ürünlerin tüm üretim akışında takip edilmesiyle ocak hatlarında kesintisiz izlenebilirlik sağlanmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Ocak hatlarında uçtan uca izlenebilirlik",
+  "contextP1": "Beyaz eşya sektöründe faaliyet gösteren Candy Hoover'ın Eskişehir'deki pişirici cihazlar fabrikasında hayata geçirilen projede, ocak hatlarındaki test verilerinin otomatik olarak toplanması, ürünle eşleştirilmesi ve ocakların hat başından sevkiyata kadar izlenebilirliğinin sağlanması hedeflenmiştir.",
+  "contextP2": "Proje, test verilerinin dijital ve izlenebilir biçimde yönetilmesini amaçlamıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel test kaydı ve hat boyunca izleme gereksinimi",
+  "problemLede": "Elektrik ve gaz kaçak test verileri manuel olarak Excel'e işleniyordu. Bu yöntem hem zaman kaybına ve veri giriş hatalarına açıktı hem de test sonuçlarının ürün bazında güvenilir biçimde izlenmesini zorlaştırıyordu.",
+  "problemList": [
+    {
+      "bold": "Manuel Excel Girişi",
+      "text": "Test verilerinin manuel işlenmesi operasyonel yük oluşturuyor ve süreci yavaşlatıyordu."
+    },
+    {
+      "bold": "Veri Giriş Hataları",
+      "text": "Elle giriş yapılan verilerde hata olasılığı kalite ve güvenilirlik riskini artırıyordu."
+    },
+    {
+      "bold": "Uçtan Uca İzleme İhtiyacı",
+      "text": "Ocakların üretim hattı boyunca ürün bazında izlenmesi ve üretimin hat başından sevkiyata kadar takip edilmesi gerekiyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Hat başından sevkiyata otomatik veri ve ürün eşleştirme",
+  "solutionLede": "Ürünler hat başında seri numarasıyla sisteme alınarak izlenebilirlik başlatıldı. Test cihazlarıyla entegrasyon sayesinde elektrik ve gaz kaçak verileri otomatik toplandı, sonuçlar ürün seri numarasıyla eşleştirildi ve ocaklar hat başından sevkiyata kadar izlendi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Hat Başında Ürün Kaydı",
+      "text": "Ürünler üretim hattı başlangıcında seri numarasıyla sisteme alınır ve izlenebilirlik akışı başlatılır."
+    },
+    {
+      "no": "02",
+      "title": "Cihaz Verisi Toplama",
+      "text": "Elektrik ve gaz kaçak test cihazlarından sonuçlar otomatik olarak alınır."
+    },
+    {
+      "no": "03",
+      "title": "Seri Numarası Eşleştirme",
+      "text": "Toplanan test verileri okunan ürün seri numarasıyla eşleştirilir."
+    },
+    {
+      "no": "04",
+      "title": "Uçtan Uca Takip",
+      "text": "Ocaklar hat başından sevkiyata kadar izlenir; tüm süreç boyunca ürün bazında takip ve raporlama sağlanır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Test cihazları, barkod okuyucular, PLC ve OnSuite Trace",
+  "techGrid": [
+    {
+      "tag": "TEST",
+      "title": "Elektrik ve Gaz Kaçak Test Cihazları",
+      "text": "Elektriksel ve gaz kaçak test sonuçlarını otomatik üreten saha test altyapısı."
+    },
+    {
+      "tag": "TANIMLAMA",
+      "title": "Barkod Okuyucular",
+      "text": "Hat başında ve test istasyonlarında ürün seri numarası okunarak eşleştirme doğruluğu sağlanır."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Entegrasyonu",
+      "text": "Saha akışını yönetir ve test cihazları ile uygulama arasındaki veri akışını koordine eder."
+    },
+    {
+      "tag": "YÖNETİM",
+      "title": "OnSuite Trace",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezi platformda yürütülmesini sağlar."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Global MES ile ürün-seri no odaklı merkezi yönetim",
+  "integrationDesc": "Sistem, Candy Hoover'ın Global MES sistemi ile entegre çalışmaktadır; toplanan test verileri ve izlenebilirlik kayıtları ürün seri numarasıyla eşleştirilerek Global MES üzerinden merkezi olarak yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Test Cihazı - Ürün Eşleşmesi",
+      "text": "Cihaz sonuçları okunan seri numarasıyla eşleştirilerek doğru ürün kaydına yazılır."
+    },
+    {
+      "bold": "Merkezi MES Yönetimi",
+      "text": "Toplanan test verileri ve izlenebilirlik kayıtları Global MES ile paylaşılır, süreç merkezi olarak yönetilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Otomatik test verisi ve uçtan uca ocak izlenebilirliği",
+  "resultsGrid": [
+    {
+      "title": "Otomatik Veri Toplama",
+      "text": "Test verilerinin manuel Excel'e işlenmesi kaldırılarak veri toplama tamamen otomatik hale getirilmiştir."
+    },
+    {
+      "title": "Hata ve Zaman Kaybının Azalması",
+      "text": "Veri giriş hataları ve manuel işlem kaynaklı zaman kaybı önemli ölçüde önlenmiştir."
+    },
+    {
+      "title": "Hat Boyunca Uçtan Uca İzlenebilirlik",
+      "text": "Ocakların hat başından sevkiyata kadar izlenmesiyle uçtan uca izlenebilirlik sağlanmış, üretim verimliliğinin takibi için veriye dayalı zemin oluşturulmuştur."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Ocak hatlarınızda test verisi ve izlenebilirliği uçtan uca yönetmek ister misiniz?",
+  "ctaSubtitle": "Hat başından sevkiyata kadar otomatik veri toplama, ürün eşleştirme ve MES entegrasyonu için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

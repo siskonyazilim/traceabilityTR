@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir ESBAŞ",
+  "heroTitleLine1": "RFID'den Datamatrix'e",
+  "heroTitleLine2": "Tek Akışta Tam İzlenebilirlik",
+  "heroSub": "Farklı izleme yöntemleri tek seri numarası altında birleştirilerek ray montaj hattında operasyonlar arası kesintisiz ve güvenilir ürün takibi sağlanmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "RFID ve Datamatrix'in tek akışta birleştirilmesi",
+  "contextP1": "Delphi Technologies'in İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv yan sanayine yönelik üretim yapmaktadır. Bu fabrikada hayata geçirilen projede, ray montaj hattında RFID ve Datamatrix tabanlı izlenebilirlik yöntemleri tek bir yapıda birleştirilmiştir.",
+  "contextP2": "Amaç, farklı operasyonlarda kullanılan iki izleme yöntemini tek seri numarası altında birleştirerek ürünün tüm hat boyunca kesintisiz izlenmesini sağlamaktı.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "İki farklı izleme yönteminde kopukluk riski",
+  "problemLede": "Üretim sürecinde bir kısım operasyon RFID etiketleri, bir kısmı ise Datamatrix kodları üzerinden yürüyordu.",
+  "problemList": [
+    {
+      "bold": "Parçalı İzleme",
+      "text": "RFID ve Datamatrix akışlarının bağımsız kalması ürünün operasyonlar boyunca tekil izlenmesini zorlaştırıyordu."
+    },
+    {
+      "bold": "İzlenebilirlik Boşluğu",
+      "text": "Yöntemler arası veri kopukluğu, ürün geçmişinde boşluk riski oluşturuyordu."
+    },
+    {
+      "bold": "Tek Akış Gereksinimi",
+      "text": "RFID ve Datamatrix operasyonlarının aynı seri numarası temelinde birleştirilmesi gerekiyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "RFID serisinden Datamatrix'e kesintisiz izlenebilirlik",
+  "solutionLede": "Markalama istasyonunda RFID etiketindeki seri numarası Datamatrix koduna dönüştürüldü; sonraki operasyonlarda izlenebilirlik Datamatrix üzerinden sürdürüldü.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "RFID Okuma",
+      "text": "Ürün üzerindeki RFID etiketlerinden seri numarası bilgisi okunur."
+    },
+    {
+      "no": "02",
+      "title": "Datamatrix Dönüşümü",
+      "text": "Markalama istasyonunda RFID seri numarası Datamatrix koduna dönüştürülüp basılır."
+    },
+    {
+      "no": "03",
+      "title": "Operasyon Takibi",
+      "text": "Sonraki operasyonlarda Datamatrix kodları okutularak izlenebilirlik akışı sürdürülür."
+    },
+    {
+      "no": "04",
+      "title": "Tekil Geçmiş Birleştirme",
+      "text": "RFID ve Datamatrix operasyon verileri tek seri numarası temelinde birleştirilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "RFID, lazer markalama, kod okuma ve PLC altyapısı",
+  "techGrid": [
+    {
+      "tag": "RFID",
+      "title": "RFID Okuyucular",
+      "text": "Ürün üzerindeki RFID etiketlerinden seri numarası bilgisini okuyarak süreci başlatır."
+    },
+    {
+      "tag": "MARKALAMA",
+      "title": "Lazer Yazıcı",
+      "text": "RFID seri bilgisini Datamatrix koduna dönüştürüp ürün üzerine markalar."
+    },
+    {
+      "tag": "KOD OKUMA",
+      "title": "Datamatrix Okuyucular",
+      "text": "Sonraki istasyonlarda Datamatrix kodlarını okuyarak izlenebilirliği devam ettirir."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Yönetimi",
+      "text": "RFID ve Datamatrix okumalarını PLC üzerinden tek izlenebilirlik akışında birleştirir."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Oracle ile merkezi veri paylaşımı",
+  "integrationDesc": "Sistem Oracle ile entegre çalışmaktadır; RFID ve Datamatrix operasyonlarından elde edilen izlenebilirlik verileri seri numarası temelinde Oracle ile paylaşılmaktadır.",
+  "integrationList": [
+    {
+      "bold": "Oracle Entegrasyonu",
+      "text": "Operasyon verileri Oracle tarafına aktarılarak süreç merkezi olarak izlenir ve yönetilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Uçtan uca süreç bütünlüğü",
+  "resultsGrid": [
+    {
+      "title": "Kesintisiz İzlenebilirlik",
+      "text": "Ürün, markalamadan itibaren tüm operasyonlar boyunca kesintisiz izlenebilir hale getirilmiştir."
+    },
+    {
+      "title": "Yöntemler Arası Birleşim",
+      "text": "RFID ve Datamatrix tabanlı operasyonlar tek seri numarası altında birleştirilmiştir."
+    },
+    {
+      "title": "Süreç Bütünlüğü",
+      "text": "İki farklı izleme yöntemi arasındaki kopukluk giderilerek uçtan uca süreç bütünlüğü sağlanmıştır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "İzlenebilirlik yapınızı tek akışta birleştirmek ister misiniz?",
+  "ctaSubtitle": "RFID, Datamatrix ve kurumsal sistem entegrasyonunu süreçlerinize nasıl uygulayabileceğimizi konuşalım.",
+  "ctaPrimary": "İletişime Geç"
+}

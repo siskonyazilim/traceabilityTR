@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "White Goods",
+  "locationValue": "Eskisehir",
+  "heroTitleLine1": "Candy Hoover",
+  "heroTitleLine2": "Test Stations Traceability",
+  "heroSub": "At Candy Hoover's cooker appliance factory in Eskisehir, test data from the production line was automatically collected and matched to each product.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Digital and traceable test data management",
+  "contextP1": "In this project implemented at Candy Hoover's cooker appliance factory in Eskisehir, test data generated on the production line was automatically collected and associated with each product.",
+  "contextP2": "The objective was to manage test data in a digital and fully traceable way.",
+  "problemEyebrow": "Need / Problem",
+  "problemTitle": "Manual logging, error risk, and limited traceability",
+  "problemLede": "Electrical and gas leakage test data was manually entered into Excel. This caused time loss, increased data entry errors, and made reliable product-level traceability difficult.",
+  "problemList": [
+    {
+      "bold": "Manual Excel Entry",
+      "text": "Manually processing test data created operational load and slowed down the workflow."
+    },
+    {
+      "bold": "Data Entry Errors",
+      "text": "Manual inputs increased the risk of quality and reliability issues."
+    },
+    {
+      "bold": "Weak Product-Level Tracking",
+      "text": "Without robust product-result matching, traceability remained limited."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Automatic test data capture and serial-number matching",
+  "solutionLede": "By integrating test devices, electrical and gas leakage data was captured automatically and linked to the correct product via serial number reading.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Product Arrives at Station",
+      "text": "When a product reaches the test station, its serial number is read by barcode scanner."
+    },
+    {
+      "no": "02",
+      "title": "Automatic Device Data Capture",
+      "text": "Results are automatically collected from electrical and gas leakage test devices."
+    },
+    {
+      "no": "03",
+      "title": "Serial Number Matching",
+      "text": "Captured test data is matched to the read product serial number."
+    },
+    {
+      "no": "04",
+      "title": "Central Recording and Monitoring",
+      "text": "Data is recorded in OnSuite Trace and becomes available for monitoring and reporting."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Test devices, barcode scanners, PLC, and OnSuite Trace",
+  "techGrid": [
+    {
+      "tag": "TEST",
+      "title": "Electrical and Gas Leakage Test Devices",
+      "text": "Shop-floor equipment producing electrical and gas leakage test results automatically."
+    },
+    {
+      "tag": "IDENTIFICATION",
+      "title": "Barcode Scanners",
+      "text": "Read product serial numbers at station entry to trigger correct data matching."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Integration",
+      "text": "Coordinates station flow and manages data exchange between devices and software."
+    },
+    {
+      "tag": "MANAGEMENT",
+      "title": "OnSuite Trace",
+      "text": "Central platform for traceability operations and process visibility."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Integrated flow across test stations, MES, and traceability platform",
+  "integrationDesc": "The system combines test station outputs with product serial numbers and works integrated with Candy Hoover's Global MES System and OnSuite Trace.",
+  "integrationList": [
+    {
+      "bold": "Device-to-Product Matching",
+      "text": "Device results are matched with scanned serial numbers and saved to the correct product record."
+    },
+    {
+      "bold": "Global MES Integration",
+      "text": "Collected data is synchronized with Candy Hoover's Global MES to support centralized visibility."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Eliminated manual work and improved test traceability",
+  "resultsGrid": [
+    {
+      "title": "Automated Data Collection",
+      "text": "Manual Excel entry was removed and test data collection became fully automated."
+    },
+    {
+      "title": "Reduced Errors and Time Loss",
+      "text": "Data entry errors and time losses caused by manual operations were significantly reduced."
+    },
+    {
+      "title": "Product-Level Traceability",
+      "text": "Automatic serial-number matching improved traceability and reporting reliability."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to make your test stations fully traceable and data-driven?",
+  "ctaSubtitle": "Contact us for automatic test data collection, accurate product matching, and MES integration.",
+  "ctaPrimary": "Contact Us"
+}

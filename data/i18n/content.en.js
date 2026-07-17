@@ -510,16 +510,16 @@ export const contentEn = {
       content: "<h2>Cloud Integration of Traceability Data</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'candy-hoover-test-data-production-efficiency-tracking': {
-      title: "Candy Hoover - Test Data Collection and Production Efficiency Tracking",
-      sector: "Electronics",
-      description: "Product traceability within the factory and barcode-based test results, together with visual inspections and rework processes, were recorded. Production, downtime, and scrap data were collected, enabling real-time monitoring of production efficiency.",
-      content: "<h2>Test Data Collection and Production Efficiency Tracking</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
+      title: "Candy Hoover - Test Stations Traceability",
+      sector: "White Goods",
+      description: "Electrical and gas leakage test data is captured automatically, matched with product serial numbers, and integrated with Global MES to ensure full traceability.",
+      content: "<h2>Test Stations Traceability</h2><p>At the Eskisehir plant, test data from devices is captured automatically and linked to product serial numbers, eliminating manual Excel processing and improving reliable product-level traceability.</p>",
     },
     'turk-tuborg-automatic-pallet-labeling-traceability': {
       title: "Turk Tuborg - Automatic Pallet Labeling and Traceability",
       sector: "Food",
-      description: "Automatic pallet labeling and traceability for Turk Tuborg, with full ERP integration and real-time monitoring of the production process.",
-      content: "<h2>Automatic Pallet Labeling and Traceability</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
+      description: "At Turk Tuborg, pallet labeling is automated via SAP work-order integration, with 3-side print and verification to ensure pallet-level traceability.",
+      content: "<h2>Automatic Pallet Labeling and Traceability</h2><p>At the Izmir plant, pallet labels are printed automatically according to SAP work orders, verified by scan after print, and supported with manual fallback for uninterrupted operation.</p>",
     },
     'delphi-rfid-datamatrix-rail-assembly-integration': {
       title: "Delphi Technologies - RFID-DataMatrix Integration of Rail Assembly",
@@ -528,10 +528,10 @@ export const contentEn = {
       content: "<h2>RFID-DataMatrix Integration of Rail Assembly</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
     },
     'candy-hoover-test-data-cooker-lines-traceability': {
-      title: "Candy Hoover - Test Data Collection and Traceability for Cooker Lines",
-      sector: "Electronics",
-      description: "Test data collection and traceability for Candy Hoover cooker lines, with automated quality monitoring and integration with production systems.",
-      content: "<h2>Test Data Collection and Traceability for Cooker Lines</h2><p>In this project, automatic completion of product-specific recipe information prevented incorrect data entries. Moreover, because the system provided advance information about products reaching the packaging line, the required material supply for packaging lines was prepared in advance, preventing line stoppages.</p>",
+      title: "Candy Hoover - Test Stations Traceability",
+      sector: "White Goods",
+      description: "At Candy Hoover test stations, electrical and gas leakage data is captured automatically, matched with product serial numbers, and integrated with Global MES for full traceability.",
+      content: "<h2>Test Stations Traceability</h2><p>In the Eskisehir factory project, electrical and gas leakage test data was captured directly from test devices, matched with each product serial number, and recorded automatically, eliminating manual Excel entry and improving product-level traceability.</p>",
     },
     'delphi-tool-tip-traceability': {
       title: "Delphi Technologies - Tool Tip Traceability",
@@ -695,26 +695,32 @@ export const contentEn = {
       description: "Automatic barcode control on the sorting line to prevent the passage of non-conforming products.",
       content: "<h2>Sorting Line Barcode Control</h2><p>Products are automatically scanned in the sorting flow, and data is validated in real-time with production systems to block non-conformities.</p>",
     },
-    'philsa-palletizing-automation-automatic-labeling': {
-      title: "Philsa - Palletizing Automation and Automatic Labeling",
+    'pmi-palletizing-automation-automatic-labeling': {
+      title: "PMI - Palletizing Automation and Automatic Labeling",
       sector: "Tobacco",
       description: "Palletizing and labeling automation to increase shipping speed and eliminate operational errors.",
       content: "<h2>Palletizing Automation and Automatic Labeling</h2><p>The system automates palletizing and labeling steps, ensuring synchronization of data with central systems.</p>",
     },
-    'philsa-filter-tracking': {
-      title: "Philsa - Filter Tracking",
+    'pmi-embosser-rfid': {
+      title: "PMI - Embosser RFID",
       sector: "Tobacco",
-      description: "Filter tracking application to ensure the use of correct components in cigarette production.",
-      content: "<h2>Filter Tracking</h2><p>The project ensures real-time tracking of filters and their correlation with production orders to prevent quality errors.</p>",
+      description: "RFID integration for Embosser equipment, with real-time validation of configurations and production orders.",
+      content: "<h2>Embosser RFID</h2><p>The RFID application for Embosser validates production parameters and prevents running incorrect settings through automatic lockouts.</p>",
+    },
+    'philsa-filter-tracking': {
+      title: "PMI - Filter Tracking RFID Project",
+      sector: "Tobacco",
+      description: "RFID-based filter tracking with SAP-BOM validation to prevent wrong SKU and expired filter usage in cigarette production.",
+      content: "<h2>PMI - Filter Tracking RFID Project</h2><p>RFID tag data is automatically matched with SAP work order and BOM data so production starts only when SKU and expiry checks pass.</p>",
     },
     'mey-icki-bandrol-control-system': {
-      title: "Mey İçki - Excise Stamp Control System",
+      title: "Mey Alcoholic Beverages - Bandrol Camera Control System",
       sector: "Food",
-      description: "Excise stamp control system for automatic verification and prevention of non-conforming packaging.",
-      content: "<h2>Excise Stamp Control System</h2><p>The system checks the presence and correctness of the excise stamp in the packaging line and stops the flow in case of deviation.</p>",
+      description: "Bandrol control on cartons across Mey Diageo plants is automated with camera inspection; non-compliant cartons are rejected before shipment.",
+      content: "<h2>Bandrol Camera Control System</h2><p>Work-order-driven camera job setup, carton serial reading, automatic bandrol inspection, and reject separation ensure only compliant cartons proceed to shipment.</p>",
     },
-    'philsa-embosser-rfid': {
-      title: "Philsa - Embosser RFID",
+    'pmi-embosser-rfid': {
+      title: "PMI - Embosser RFID",
       sector: "Tobacco",
       description: "RFID integration for Embosser equipment, with real-time validation of configurations and production orders.",
       content: "<h2>Embosser RFID</h2><p>The RFID application for Embosser validates production parameters and prevents running incorrect settings through automatic lockouts.</p>",

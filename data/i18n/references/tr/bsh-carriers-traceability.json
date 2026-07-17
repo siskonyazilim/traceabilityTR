@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Anahtar Teslim",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Doğru cam, doğru braket,",
+  "heroTitleLine2": "sıfır hata montaj.",
+  "heroSub": "BSH'nin Çerkezköy fırın fabrikasında hayata geçirilen projede; fırın camına monte edilen braketler sepet kimliğine göre takip edilerek cam-braket-ürün bileşen ilişkisi SAP entegrasyonu ile kayıt altına alınmaktadır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Fırın üretiminde hassas montaj kontrolü",
+  "contextP1": "BSH'nin Çerkezköy'deki fırın üretimi yapan fabrikasında hayata geçirilen projede, fırın camına monte edilen braketler sepet kimliğine göre takip edilmiş ve kayıt altına alınmıştır.",
+  "contextP2": "Proje, cam–braket–ürün bileşen ilişkisinin izlenebilirliğini sağlamak ve montaj hatalarını önlemek amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Bileşen eşleşme zorlukları",
+  "problemLede": "Fırın kapaklarının montajında cam ile braketlerin yanlış eşleşmesi riskleri mevcuttu.",
+  "problemList": [
+    {
+      "bold": "Yanlış Eşleşme Riski",
+      "text": "Fırın üretiminde cam ve braket bileşenlerinin yanlış eşleşmesi ve bu eşleşmelerin kontrol edilememesi."
+    },
+    {
+      "bold": "Manuel Takip Kısıtları",
+      "text": "Bileşen-ürün ilişkisinin manuel takibinin yetersiz olması ve izlenebilirlik boşluğu yaratması."
+    },
+    {
+      "bold": "Hatalı Parça Tespiti",
+      "text": "Montaj sırasında hatalı eşleşmelerin anlık olarak fark edilip engellenememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Braket ve Sepet İzlenebilirliği",
+  "solutionLede": "Fırın camına monte edilen braketler, sepet kimliğine göre takip edildi ve kayıt altına alındı. Cam yapıştırma istasyonunda sepetler taranarak cam lot numaraları ile braket lot numaraları arasındaki eşleşme doğrulandı. Ürün montajı sırasında ilgili cam arabasının lot numarası ürün seri numarasıyla ilişkilendirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Sepet Takibi",
+      "text": "Fırın camına monte edilen braketler, sepet kimliklerine (sepet ID) göre izlenebilir hale getirilir."
+    },
+    {
+      "no": "02",
+      "title": "Lot Doğrulama",
+      "text": "Cam yapıştırma istasyonunda sepetler taranır, cam lot numaraları ile braket lot numaraları doğrulanır."
+    },
+    {
+      "no": "03",
+      "title": "Ürün İlişkilendirme",
+      "text": "Montaj aşamasında, ilgili cam arabasının lot numarası fırının kendi seri numarasıyla ilişkilendirilir."
+    },
+    {
+      "no": "04",
+      "title": "SAP Onay Yazımı",
+      "text": "Tüm eşleşmeleri başarıyla tamamlanan uygun parçaların onay verileri SAP ERP sistemine geri yazılır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Otomasyon ve kontrol mimarisi",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC saha otomasyonu",
+      "text": "Cam yapıştırma istasyonundaki iş akışını ve saha sinyallerini yöneten PLC altyapısı."
+    },
+    {
+      "tag": "ARAYÜZ",
+      "title": "C# ile SCADA uygulaması",
+      "text": "Eşleşme doğrulaması, ürün ilişkilendirmeleri ve operatör ekranları için C# uygulaması."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Endüstriyel Barkod Okuyucular",
+      "text": "Cam ve braket lot numaralarını, sepet ID'lerini okuyan yüksek hassasiyetli barkod okuyucular."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "İzlenebilirlik, lot takibi ve süreç kontrolünün sağlandığı merkezi yazılım katmanı."
+    },
+    {
+      "tag": "VERİ",
+      "title": "SAP ERP Entegrasyonu",
+      "text": "Eşleşme ve üretim onaylarının SAP sistemiyle çift yönlü veri entegrasyonu."
+    },
+    {
+      "tag": "DOĞRULAMA",
+      "title": "İstasyon Kontrolü",
+      "text": "Yanlış braket kullanımında PLC üzerinden hattı durduran otomatik durdurma mekanizması."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ERP Entegrasyonu",
+  "integrationDesc": "Süreç izleme ve doğrulama sistemi, BSH'nin SAP ERP altyapısıyla tam entegre çalışmaktadır; üretim onayları ve lot eşleme verileri SAP'ye geri gönderilmektedir.",
+  "integrationList": [
+    {
+      "bold": "SAP Üretim Onayı",
+      "text": "Markalama ve doğrulama sonrasında uygun parçaların onay verileri SAP ERP sistemine anlık olarak yazılır."
+    },
+    {
+      "bold": "Lot Eşleme Doğrulaması",
+      "text": "Cam ve braket lot numaraları SAP envanter ve reçete tanımlarıyla doğrulanarak işleme izin verilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Sıfır hatalı montaj ve tam izlenebilirlik",
+  "resultsGrid": [
+    {
+      "title": "Doğru bileşen eşleşmesi",
+      "text": "Cam ve braket bileşenlerinin montajda doğru eşleşmesi otomatik olarak doğrulanarak yanlış parça kullanımı sıfıra indirilmiştir."
+    },
+    {
+      "title": "Seri numarası bazlı takip",
+      "text": "Bileşen-ürün ilişkisi ürünün seri numarası düzeyinde kayıt altına alınarak tam geriye dönük izlenebilirlik sağlanmıştır."
+    },
+    {
+      "title": "Süreç güvenliği",
+      "text": "Hatalı eşleşmelerde hattı durdurma kontrolü ile kalitesiz ürünün bir sonraki istasyona geçişi tamamen önlenmiştir."
+    }
+  ],
+  "closerTitle": "Camdan brakete, montajdan SAP'ye kesintisiz süreç güvenliği.",
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

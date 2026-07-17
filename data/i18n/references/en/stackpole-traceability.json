@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Turkey",
+  "heroTitleLine1": "End-to-End Production Tracking,",
+  "heroTitleLine2": "Individual Product Assurance for Stackpole",
+  "heroSub": "In the project implemented for Stackpole, operation-level traceability was established throughout production, improving process visibility and quality assurance.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Central traceability for uninterrupted production flow",
+  "contextP1": "In the Stackpole production environment, the goal was to track products individually across production steps, protect operation sequence integrity, and centrally manage process data.",
+  "contextP2": "The project created real-time visibility for quality and operations teams by making product history traceable from production to shipment.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Risk of tracking gaps across operations",
+  "problemLede": "Inability to track product movement reliably at individual level across operations created risks for process control and quality validation.",
+  "problemList": [
+    {
+      "bold": "Process Visibility",
+      "text": "Lack of real-time status visibility during operation transitions made follow-up difficult."
+    },
+    {
+      "bold": "Validation Need",
+      "text": "A systematic mechanism was needed to validate that products follow the correct operation sequence."
+    },
+    {
+      "bold": "Quality Assurance Risk",
+      "text": "Fragmented historical records made quality review and root-cause analysis harder."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Operation-based individual product traceability infrastructure",
+  "solutionLede": "Products were recognized by operation in the production flow and recorded at each step in the system. This enabled end-to-end traceability of product history and strengthened operation validation.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Product Identification",
+      "text": "Products were introduced into the traceability flow with unique identity."
+    },
+    {
+      "no": "02",
+      "title": "Operation Reading",
+      "text": "Product status and operation transitions were validated automatically at each station."
+    },
+    {
+      "no": "03",
+      "title": "Real-Time Logging",
+      "text": "Process data was collected in real time and stored in a central system."
+    },
+    {
+      "no": "04",
+      "title": "Backward Traceability",
+      "text": "Product history and operation chain became reportable and auditable."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Field automation and traceability software layer",
+  "techGrid": [
+    {
+      "tag": "READING",
+      "title": "Code Recognition Infrastructure",
+      "text": "Enables automatic product recognition and validation at operation points."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC-Based Flow Control",
+      "text": "Manages operation transitions and maintains consistency in field processes."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Traceability Application",
+      "text": "Collects operation data, stores product history, and provides reporting."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Data synchronization with enterprise systems",
+  "integrationDesc": "Traceability data was structured for enterprise sharing, making product, operation, and status information centrally manageable.",
+  "integrationList": [
+    {
+      "bold": "Operation Data Sharing",
+      "text": "Product flow data is transferred to central systems, enabling one-point process monitoring."
+    },
+    {
+      "bold": "Reporting and Analytics",
+      "text": "Collected traceability data is kept ready for quality and production analytics."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Improved visibility and control in Stackpole production",
+  "resultsGrid": [
+    {
+      "title": "End-to-End Tracking",
+      "text": "Products became traceable by operation across the complete production process."
+    },
+    {
+      "title": "Stronger Process Control",
+      "text": "Operation transition validation increased production flow control capability."
+    },
+    {
+      "title": "Quality Analysis Support",
+      "text": "Individual product history accelerated quality investigations and root-cause analysis."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to strengthen individual product traceability on your line?",
+  "ctaSubtitle": "We can adapt the Stackpole project approach to your factory and increase process visibility.",
+  "ctaPrimary": "Contact Us"
+}

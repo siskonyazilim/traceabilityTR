@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir Çiğli",
+  "heroTitleLine1": "Kesikli üretimde,",
+  "heroTitleLine2": "Datamatrix tabanlı parça-konteyner ilişkisi.",
+  "heroSub": "NEMAK'ın Çiğli'deki (İzmir) fabrikasında hayata geçirilen kesikli üretim izlenebilirlik sisteminde, yarı mamuller tüm üretim ve lojistik süreci boyunca takip edilmektedir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Döküm sanayinde yarı mamul hareketleri",
+  "contextP1": "NEMAK'ın Çiğli'deki (İzmir) fabrikası, döküm yöntemiyle otomotiv yan sanayine yönelik parça üretimi yapmaktadır. Bu fabrikada hayata geçirilen kesikli üretim izlenebilirlik sisteminde, yarı mamuller tüm üretim ve lojistik süreci boyunca takip edilmektedir.",
+  "contextP2": "Kesikli üretimde her bir parçanın lojistik hareketlerini ve depolama durumunu anlık olarak kontrol etmek, operasyonel verimliliği artırmak ve kayıpları önlemek için kritik öneme sahiptir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Konteyner takibi zorlukları ve verimsizlik",
+  "problemLede": "Kesikli üretim yapısında yarı mamullerin üretim ve lojistik süreci boyunca izlenebilmesi, hangi parçanın hangi konteynerde bulunduğunun her aşamada bilinmesi gerekiyordu. Bu ilişkinin manuel takibi, izlenebilirlik boşluğu ve konteyner hareketlerinde verimsizlik riski taşıyor; sürecin gerçek zamanlı görünürlüğe kavuşturulması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Konteyner Eşleştirme Boşluğu",
+      "text": "Hangi parçanın hangi taşıma konteynerinde olduğunun anlık olarak bilinememesi."
+    },
+    {
+      "bold": "Lojistik Gecikmeler",
+      "text": "Birikmiş veya yanlış sevk edilen konteynerlerin depo akışında aksamalara yol açması."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Datamatrix eşleştirmeli gerçek zamanlı web kontrolü",
+  "solutionLede": "Her ürüne bir Datamatrix kodu markalanır; parçalar operasyonlar arasında hareket ederken okutularak ilgili konteyneriyle ilişkilendirilir. Bu sayede her konteynerin hassas takibi sağlanırken, birikmiş konteynerlerin depoya verimli biçimde nakliyesi gerçekleştirilir. Tüm akış, sistem aracılığıyla gerçek zamanlı olarak izlenebilmekte; böylece tam şeffaflık ve operasyonel kontrol sağlanmaktadır.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Datamatrix Markalama",
+      "text": "Üretilen parçalar döküm sonrasında kalıcı Datamatrix kod ile markalanır."
+    },
+    {
+      "no": "02",
+      "title": "Konteyner Eşleştirme",
+      "text": "Parçalar konteynerlere konulurken kodları okunarak konteyner ID'si ile eşleştirilir."
+    },
+    {
+      "no": "03",
+      "title": "Rota Taraması",
+      "text": "Operasyonlar arası geçişte okutulan parçalar üzerinden konteyner rotası doğrulanır."
+    },
+    {
+      "no": "04",
+      "title": "Web SCADA İzleme",
+      "text": "Tüm hareketler ve doluluk oranları web tabanlı SCADA ekranlarından anlık takip edilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Vizyon donanımları ve Web SCADA yapısı",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Endüstriyel Kod Okuyucular",
+      "text": "Zorlu dökümhane koşullarında metal yüzeylerdeki Datamatrix kodları okuyabilen saha donanımları."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Yönetimi",
+      "text": "Kod okuma tetiklemelerini ve konfigürasyonlarını yöneten kontrol üniteleri."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "Web SCADA Arayüzü",
+      "text": "Tarayıcı bağımsız, anlık üretim ve konteyner hareketlerinin görüntülendiği kullanıcı ekranları."
+    },
+    {
+      "tag": "TAKİP",
+      "title": "OnSuite Trace Altyapısı",
+      "text": "Parça-konteyner eşleştirmelerini tutan ve lojistik hareketlerin izlenebilirliğini sağlayan çekirdek yazılım."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "NEMAK Global MES Entegrasyonu",
+  "integrationDesc": "Uygulama, NEMAK Global MES (Üretim Yürütme Sistemi) ile entegre çalışmaktadır. Sahadan toplanan parça izlenebilirlik verileri ve konteyner hareketleri doğrudan global MES sistemine aktarılarak entegrasyon sağlanmaktadır.",
+  "integrationList": [
+    {
+      "bold": "Global MES Bağlantısı",
+      "text": "Üretim onayları ve lojistik hareketler NEMAK'ın global yönetim sistemine anlık senkronize edilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Uçtan uca şeffaflık ve operasyonel verimlilik",
+  "resultsGrid": [
+    {
+      "title": "Parça-Konteyner İlişkisi",
+      "text": "Her yarı mamulün hangi konteynerde olduğu net şekilde bilinerek parça takibi hassaslaştırılmıştır."
+    },
+    {
+      "title": "Nakliye Optimizasyonu",
+      "text": "Birikmiş konteynerlerin tespiti sayesinde depoya taşıma operasyonları daha planlı yürütülür."
+    },
+    {
+      "title": "Gerçek Zamanlı Görünürlük",
+      "text": "Web SCADA ekranları ile üretim ve ambar hareketleri her an her yerden anlık izlenebilir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

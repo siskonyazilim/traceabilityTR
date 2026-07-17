@@ -78,7 +78,7 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   } else if (isDemirdokumLogo) {
     projectVisualClass = 'object-contain p-5 md:p-6';
   } else if (isGroupeAtlanticLogo) {
-    projectVisualClass = 'object-contain p-5 md:p-6';
+    projectVisualClass = 'object-contain p-2 md:p-3 scale-[1.35]';
   } else if (isStackpoleLogo) {
     projectVisualClass = 'object-contain p-6 md:p-7';
   } else if (isPmiLogo) {

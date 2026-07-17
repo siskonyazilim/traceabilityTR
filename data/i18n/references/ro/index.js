@@ -22,6 +22,19 @@ import ref_19 from './haier-europe-assembly-line-installation-traceability.json'
 import ref_20 from './bomi-group-camera-based-multi-code-reading-system-tr.json';
 import ref_21 from './pmi-palletizing-automation-automatic-labeling.json';
 import ref_22 from './pmi-embosser-rfid.json';
+import ref_23 from './groupe-atlantic-busbar-traceability.json';
+import ref_24 from './delphi-rfid-datamatrix-rail-assembly-integration.json';
+import ref_25 from './delphi-cloud-traceability-data-integration.json';
+import ref_26 from './candy-hoover-test-data-cooker-lines-traceability.json';
+import ref_27 from './candy-hoover-test-data-production-efficiency-tracking.json';
+import ref_28 from './turk-tuborg-automatic-pallet-labeling-traceability.json';
+import ref_29 from './mey-icki-bandrol-control-system.json';
+import ref_30 from './philsa-filter-tracking.json';
+import ref_31 from './delphi-tool-tip-traceability.json';
+import ref_32 from './delphi-prototype-line-traceability.json';
+import ref_33 from './delphi-technologies.json';
+import ref_34 from './delphi-monitorizare-individuala-rampa-injectie.json';
+import ref_35 from './stackpole-traceability.json';
 
 const roDetails = {
   'phinia-laser-marking-machine-traceability-integration': ref_0,
@@ -47,6 +60,19 @@ const roDetails = {
   'bomi-group-camera-based-multi-code-reading-system-tr': ref_20,
   'pmi-palletizing-automation-automatic-labeling': ref_21,
   'pmi-embosser-rfid': ref_22,
+  'groupe-atlantic-busbar-traceability': ref_23,
+  'delphi-rfid-datamatrix-rail-assembly-integration': ref_24,
+  'delphi-cloud-traceability-data-integration': ref_25,
+  'candy-hoover-test-data-cooker-lines-traceability': ref_26,
+  'candy-hoover-test-data-production-efficiency-tracking': ref_27,
+  'turk-tuborg-automatic-pallet-labeling-traceability': ref_28,
+  'mey-icki-bandrol-control-system': ref_29,
+  'philsa-filter-tracking': ref_30,
+  'delphi-tool-tip-traceability': ref_31,
+  'delphi-prototype-line-traceability': ref_32,
+  'delphi-technologies': ref_33,
+  'delphi-monitorizare-individuala-rampa-injectie': ref_34,
+  'stackpole-traceability': ref_35,
 };
 
 export default roDetails;

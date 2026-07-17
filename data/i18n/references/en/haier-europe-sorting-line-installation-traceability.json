@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Home Appliances",
+  "locationValue": "Eskisehir",
+  "heroTitleLine1": "Automatic sorting line,",
+  "heroTitleLine2": "live traceable flow with Andon screens.",
+  "heroSub": "In the project implemented at Haier Europe's cooking appliances factory in Eskisehir, automatic sorting of products and preparation for shipment after assembly and packaging were ensured. The project was carried out to automate the flow from packaging exit to the warehouse and to provide live traceability.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Automatic routing before shipment in home appliances",
+  "contextP1": "In the project implemented at the cooking appliances factory of Haier Europe, a global leader in home appliance production, in Eskisehir, products were automatically sorted and prepared for shipment after assembly and packaging.",
+  "contextP2": "The project was carried out to automate the logistics flow from packaging exit to the warehouse, prevent incorrect product shipments, and provide live traceability.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Manual sorting errors and lack of process visibility",
+  "problemLede": "It was necessary to route products coming from assembly and repair lines to the correct sorting lines after packaging and to run this flow in a controlled and traceable manner. Executing sorting and routing manually carried the risk of routing to the incorrect line, inefficiency, and weak process visibility.",
+  "problemList": [
+    {
+      "bold": "Incorrect Line Routing",
+      "text": "Products being routed to sorting lines that do not match the assembly plan, creating confusion."
+    },
+    {
+      "bold": "Lack of Visibility",
+      "text": "Inability of forklift operators to see in real time how much of which product has accumulated on which line."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Automatic sorting with barcode scanning and Andon tracking",
+  "solutionLede": "In the system installed by SISKON, products coming from assembly and repair lines are sent to the packaging line via an elevator; post-packaging products are automatically routed to the sorting line. Sorting lines are programmed automatically based on the assembly line plan, and products scanned via barcode on the sorting line are routed to the corresponding lines. Accumulated products on the lines are picked up by forklift operators and sent to the warehouse. The entire process can be monitored live via Andon TVs in the field.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Routing to Packaging",
+      "text": "Products coming from assembly are automatically moved to the packaging line via an elevator system."
+    },
+    {
+      "no": "02",
+      "title": "Barcode Scanning",
+      "text": "Products at the packaging exit are scanned by barcode to query assembly plan details."
+    },
+    {
+      "no": "03",
+      "title": "Automatic Sorting",
+      "text": "Products are automatically routed to sorting lines programmed according to the assembly plan."
+    },
+    {
+      "no": "04",
+      "title": "Andon Monitoring",
+      "text": "Forklift operators monitor line fill rates from Andon screens and move them to the warehouse."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Sorting equipment and live Andon tracking infrastructure",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Automated Sorting Structure",
+      "text": "Mechanical conveyor and sorting structure physically routing products to designated lines."
+    },
+    {
+      "tag": "READER",
+      "title": "Barcode Scanning Stations",
+      "text": "Industrial readers positioned above the line automatically scanning product serial numbers."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Control Infrastructure",
+      "text": "Field PLC units receiving assembly plans and managing sorting routing."
+    },
+    {
+      "tag": "VISUAL",
+      "title": "Andon Info TV Screens",
+      "text": "Large displays showing line fill rates and dispatch orders for forklift operators."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Haier Global MES Integration",
+  "integrationDesc": "The system runs fully integrated with Haier Europe's Global MES (Manufacturing Execution System). Sorting results, barcode matches, and warehouse dispatch data are transmitted live through this integration.",
+  "integrationList": [
+    {
+      "bold": "Global MES Integration",
+      "text": "Sorting data and packaging exit approvals are instantly transmitted and updated in the global MES system."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Error-free routing and live logistics control",
+  "resultsGrid": [
+    {
+      "title": "Automated Flow Management",
+      "text": "The flow from post-packaging to the warehouse is removed from human initiative and automated."
+    },
+    {
+      "title": "Accurate Sorting Lines",
+      "text": "Routing errors are zeroed out thanks to sorting automatically programmed based on the assembly plan."
+    },
+    {
+      "title": "Fast Dispatch with Andon",
+      "text": "Line congestion and delays are prevented by forklift operators tracking fill rates in real time on Andon screens."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

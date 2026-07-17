@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "La cheie",
+  "tagValue": "Alimente",
+  "locationValue": "Karaman",
+  "heroTitleLine1": "De la materia primă la expediere,",
+  "heroTitleLine2": "trasabilitate completă la fiecare pas.",
+  "heroSub": "Implementat la fabrica Duru Bulgur din Karaman, sistemul de trasabilitate Produs / Cutie / Palet urmărește întregul proces de la ambalare până la expediere pe o singură platformă digitală, funcționând complet integrat cu ERP.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Un nou standard în siguranța alimentară",
+  "contextP1": "Fabrica Duru Bulgur din Karaman produce produse de bulgur și legume uscate. Proiectul a fost implementat pentru a asigura trasabilitatea la nivel de produs, cutie și palet pe tot parcursul procesului, de la ambalare până la expediere pe liniile de producție.",
+  "contextP2": "Sistemul stabilit își propune să elimine erorile de expediere, îmbunătățind în același timp acuratețea gestionării stocurilor în lanțul de aprovizionare alimentar.",
+  "problemEyebrow": "Nevoi / Probleme",
+  "problemTitle": "Dificultăți de urmărire și riscuri de eroare",
+  "problemLede": "Lipsa urmării produselor alimentare ambalate în ierarhia cutie-palet prezenta riscuri operaționale.",
+  "problemList": [
+    {
+      "bold": "Risc de Urmărire Manuală",
+      "text": "Urmărirea manuală a relațiilor dintre produs, cutie și palet după ambalare crea o lacună de trasabilitate."
+    },
+    {
+      "bold": "Erori de Expediere",
+      "text": "Lipsa de vizibilitate asupra produsului care intra în fiecare palet putea duce la erori de expediere."
+    },
+    {
+      "bold": "Dificultate în Rechemare",
+      "text": "În cazul unor potențiale probleme de calitate sau contaminare, rechemarea direcționată a produselor era extrem de dificilă."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Trasabilitate Produs, Cutie și Palet",
+  "solutionLede": "Aplicația de trasabilitate Produs | Carton | Palet a fost implementată cu succes pe liniile de producție de la fabrica Duru Bulgur din Karaman. Pașii Produs – Cutie – Palet – Depozit – Client au fost făcuți urmăribili pe o singură platformă bazată pe un număr unic de serie.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Marcare Produs",
+      "text": "În etapa de ambalare, produsele sunt marcate individual și dobândesc o identitate trasabilă."
+    },
+    {
+      "no": "02",
+      "title": "Asociere Cutie & Palet",
+      "text": "Se înregistrează ce produs intră în ce cutie și ce cutie este așezată pe ce palet (Agregare)."
+    },
+    {
+      "no": "03",
+      "title": "Transferuri de Depozit",
+      "text": "Mișcările de transfer intern de depozit între diferite locații sunt înregistrate instantaneu folosind terminale portabile."
+    },
+    {
+      "no": "04",
+      "title": "Expediere Client",
+      "text": "Sunt înregistrate transferurile de expediere către clienți, completând lanțul de date end-to-end."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente Utilizate",
+  "techTitle": "Infrastructură de management de teren și date",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Automatizare de câmp cu PLC",
+      "text": "Structură PLC care gestionează automatizarea terenului și fluxul de lucru al liniei de producție."
+    },
+    {
+      "tag": "INTERFAȚĂ",
+      "title": "Aplicație SCADA cu C#",
+      "text": "Aplicație personalizată în C# pentru interfața operatorului, potrivirea etichetelor și monitorizarea procesului."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare Industriale",
+      "text": "Scannere industriale care citesc codurile de bare/etichetele de produs, carton și palet cu înaltă precizie."
+    },
+    {
+      "tag": "MOBIL",
+      "title": "Aplicație Terminal Portabil",
+      "text": "Înregistrarea transferurilor de depozit, a mișcărilor de stoc și a expedierilor către clienți la fața locului prin terminale portabile."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Stratul software central unde sunt controlate trasabilitatea și managementul proceselor."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare ERP",
+      "text": "Partajarea bidirecțională a datelor de transfer și a stării stocurilor, integrată cu sistemul ERP."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare bidirecțională cu ERP",
+  "integrationDesc": "Aplicația de trasabilitate funcționează complet integrată cu sistemul ERP existent al Duru Bulgur: datele de teren, mișcările de stoc și informațiile de transfer sunt transmise instantaneu către ERP.",
+  "integrationList": [
+    {
+      "bold": "Transmitere în Sistemul ERP",
+      "text": "Toate datele de transfer de depozit și expediere înregistrate de pe terminalele portabile sunt scrise instantaneu în ERP."
+    },
+    {
+      "bold": "Controlul și Urmărirea Procesului",
+      "text": "Relațiile produs-cutie-palet sunt sincronizate cu starea stocurilor ERP și urmărite printr-o singură platformă."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Control digital end-to-end",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate end-to-end",
+      "text": "Întregul lanț de la ambalare la client a devenit trasabil end-to-end pe baza numărului de serie unic al produsului."
+    },
+    {
+      "title": "Zero erori manuale",
+      "text": "Relațiile produs-cutie-palet și mișcările depozit/client sunt înregistrate automat, eliminând erorile de urmărire manuală."
+    },
+    {
+      "title": "Capacitate de rechemare rapidă",
+      "text": "În cazul unei potențiale rechemări, capacitatea de urmărire precisă înapoi a maximizat acuratețea expedierii și siguranța operațională."
+    }
+  ],
+  "closerTitle": "Flux continuu de date de la ambalare la depozit, și de la depozit la client.",
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

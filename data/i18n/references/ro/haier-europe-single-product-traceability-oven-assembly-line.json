@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "La cheie",
+  "tagValue": "Electronice",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Control automat al testelor,",
+  "heroTitleLine2": "trasabilitate individuală a produsului.",
+  "heroSub": "Implementat la fabrica de aparate de gătit Haier Europe din Eskişehir; numerele de serie sunt asociate cu RFID pentru a automatiza testele de siguranță independent de operatori, transmițând datele către sistemul global MES.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Transformare digitală pe liniile de asamblare a cuptoarelor",
+  "contextP1": "Sistemul de trasabilitate a fost aplicat pe noile linii de asamblare a cuptoarelor de la fabrica de aparate de gătit a Haier Europe, lider global în electrocasnice, situată în Eskişehir.",
+  "contextP2": "În cadrul proiectului, software-ul de automatizare a liniei de asamblare a fost dezvoltat de Siskon, conectând toate stațiile de testare în structura de trasabilitate centrală.",
+  "problemEyebrow": "Nevoi / Probleme",
+  "problemTitle": "Verificare sigură a testelor și înregistrare",
+  "problemLede": "Testele de siguranță electrică și de etanșeitate ale fiecărui cuptor produs pe noile linii de asamblare trebuiau verificate independent de intervenția operatorului.",
+  "problemList": [
+    {
+      "bold": "Dependența de Operator",
+      "text": "Riscuri de eroare umane și inconsistență a datelor generate de execuția manuală a testelor de siguranță."
+    },
+    {
+      "bold": "Lipsa Asocierii",
+      "text": "Imposibilitatea de a asocia automat rezultatele testelor electrice, de scurgere de gaz și de control al flăcării cu numerele de serie unice ale produselor."
+    },
+    {
+      "bold": "Lacune de Control ale Liniei",
+      "text": "Lipsa unui mecanism de blocare automată pentru a preveni trecerea produselor netestate sau respinse la stația următoare."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Stație pe bază de RFID și Control Automat al Testelor",
+  "solutionLede": "Codul de bare al produsului este asociat cu eticheta RFID la începutul liniei. Testele electrice, de scurgeri de gaz și de flacără sunt efectuate în stații automate independente de operator, rezultatele fiind corelate cu numerele de serie și trimise către MES.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Asociere RFID",
+      "text": "La începutul liniei, numărul de serie din codul de bare al produsului este corelat cu eticheta RFID a suportului."
+    },
+    {
+      "no": "02",
+      "title": "Teste Automate",
+      "text": "Cuptoarele sunt testate automat în stațiile de testare electrică, de scurgeri de gaz și de control al flăcării, fără intervenția operatorului."
+    },
+    {
+      "no": "03",
+      "title": "Corelarea Datelor",
+      "text": "Rezultatele testelor în timp real colectate de la stații sunt asociate automat cu numărul de serie unic al produsului."
+    },
+    {
+      "no": "04",
+      "title": "Confirmare MES",
+      "text": "Confirmările de testare finalizate cu succes sunt trimise instantaneu către sistemul Global MES al Haier Europe."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente Utilizate",
+  "techTitle": "9 axe servo și integrare robotică a datelor",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Software de automatizare a liniei",
+      "text": "Software de control care gestionează întregul flux de lucru al liniei de asamblare și stațiile de mașini."
+    },
+    {
+      "tag": "ROBOTICĂ",
+      "title": "Sistem servo pe 9 axe și robotic",
+      "text": "Echipamente robotice care efectuează poziționarea precisă și sarcinile mecanice la stații."
+    },
+    {
+      "tag": "RFID",
+      "title": "Infrastructură de trasabilitate RFID",
+      "text": "Sistem RFID care corelează numerele de serie la începutul liniei și urmărește tranzitul prin stații."
+    },
+    {
+      "tag": "STAȚIE",
+      "title": "Unități de testare automate",
+      "text": "Echipamente de testare care efectuează testele electrice, de gaz și flacără fără intervenție umană."
+    },
+    {
+      "tag": "COMUNICARE",
+      "title": "Rețele industriale de comunicare",
+      "text": "Schimb de date de câmp de mare viteză prin protocoalele EtherCAT, TCP/IP și Profinet."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare OnSuite Trace și MES",
+      "text": "Stratul de date în care platforma OnSuite Trace funcționează complet integrată cu sistemul MES global al Haier."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare Haier Global MES",
+  "integrationDesc": "Sistemul de trasabilitate dezvoltat funcționează integrat instantaneu cu structura MES Globală (Manufacturing Execution System) a Haier Europe; toate datele și confirmările sunt trimise la MES.",
+  "integrationList": [
+    {
+      "bold": "Înregistrare Teste MES",
+      "text": "Rezultatele testelor electrice, de scurgeri de gaz și flacără sunt scrise în sistemul MES pe baza numărului de serie al produsului."
+    },
+    {
+      "bold": "Blocare Proces",
+      "text": "Tranziția produselor respinse sau incomplete la următoarea stație este blocată pe baza stării de confirmare din MES."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Siguranță fără erori și urmărire în timp real a producției",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate unică a produsului",
+      "text": "A fost asigurată trasabilitatea digitală end-to-end pe baza numărului de serie pentru fiecare produs, începând de la intrarea pe linie."
+    },
+    {
+      "title": "Calitate independentă de operator",
+      "text": "Testele electrice, de gaz și flacără sunt automatizate, reducând riscul de erori umane la zero."
+    },
+    {
+      "title": "Integritate date MES",
+      "text": "Toate înregistrările de calitate și testare de pe linie sunt trimise instantaneu către MES pentru raportare centralizată."
+    }
+  ],
+  "closerTitle": "Cele mai înalte standarde de siguranță combinate cu automatizarea robotică și testele automate.",
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

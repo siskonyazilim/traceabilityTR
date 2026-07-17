@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Home Appliances",
+  "locationValue": "Eskisehir",
+  "heroTitleLine1": "New assembly lines,",
+  "heroTitleLine2": "end-to-end digital process tracking.",
+  "heroSub": "In the project implemented at Haier Europe's cooking appliances factory in Eskisehir, manual planning, tracking, and control processes on the assembly lines were made fully automatic. In the scope of the project, new assembly lines were installed and the process was made traceable end-to-end.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Digitalization in manufacturing and renewed conveyor systems",
+  "contextP1": "In the project implemented at the cooking appliances factory of Haier Europe, a global leader in home appliances, in Eskisehir, manual planning, tracking, and control processes on the assembly lines were made fully automatic.",
+  "contextP2": "Within the scope of the project, new assembly lines were installed, conveyor systems were completely renewed, and the entire process from packaging to the warehouse was made traceable end-to-end.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Manual tracking gaps and test-repair integration needs",
+  "problemLede": "Planning, tracking, and control processes on the assembly lines were carried out manually; this weakened process visibility and carried the risk of errors and inefficiency. There was a need for an automated structure where each product could be tracked individually from the start of production to the warehouse, including test and repair processes.",
+  "problemList": [
+    {
+      "bold": "Weak Process Visibility",
+      "text": "Inability to instantly detect production bottlenecks due to manual planning and tracking."
+    },
+    {
+      "bold": "Unrecorded Repair Actions",
+      "text": "Inability to centrally record repair operations performed on defective products that failed tests."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "End-to-end digital assembly management with test-repair loop",
+  "solutionLede": "New assembly lines were installed and conveyor systems were completely renewed at Haier Europe's cooking appliances factory. Manual planning, tracking, and control processes on the assembly lines were automated, making the entire assembly process digitally traceable. End-to-end traceability was achieved for all products on the basis of unique identities from the start of the assembly line to the warehouse. Test data was collected throughout production; products that failed tests were routed to repair, and the repair actions taken were recorded in the system.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Unique ID Assignment",
+      "text": "A unique identity (barcode/DPM) is assigned to each product at the start of the line."
+    },
+    {
+      "no": "02",
+      "title": "Test Data Collection",
+      "text": "As products pass through test stations, test results are automatically written to the database."
+    },
+    {
+      "no": "03",
+      "title": "Repair Routing",
+      "text": "Products that fail tests are automatically diverted to the repair line and blocked."
+    },
+    {
+      "no": "04",
+      "title": "Recording & Dispatch",
+      "text": "Once repair actions are logged, products are approved and dispatched to the warehouse."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "C# SCADA and field integration hardware",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "New Assembly & Conveyor",
+      "text": "Modern conveyor line infrastructure providing mechanical flow and operating under PLC control."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "PLC Field Flow Management",
+      "text": "PLCs managing elevator and conveyor movements of products between lines."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "SCADA communicating with test stations, receiving repair logs, and managing approvals."
+    },
+    {
+      "tag": "TRACKING",
+      "title": "OnSuite Trace Platform",
+      "text": "Main software linking all test data and repair actions to the unique product identity."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Haier Global MES System Integration",
+  "integrationDesc": "The system runs fully integrated with Haier Europe's Global MES System. Test results, production approvals, and repair records are directly transmitted to the global system in real time.",
+  "integrationList": [
+    {
+      "bold": "Global MES Integration",
+      "text": "Assembly line approvals, quality test data, and repair history are bi-directionally synchronized with the MES system."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "End-to-end transparent assembly and maximum efficiency",
+  "resultsGrid": [
+    {
+      "title": "End-to-End Traceability",
+      "text": "Test results and logistics movements of each product can be monitored instantly from start of line to warehouse."
+    },
+    {
+      "title": "Traceable Quality",
+      "text": "Repair steps and test results of defective products can be retrospectively reported."
+    },
+    {
+      "title": "Operational Efficiency",
+      "text": "Assembly line cycle times are optimized through the digitalization of manual planning and tracking."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

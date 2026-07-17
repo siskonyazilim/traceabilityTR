@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Turnkey",
+  "tagValue": "Home Appliances",
+  "locationValue": "Bilecik",
+  "heroTitleLine1": "Seamless digital kanban,",
+  "heroTitleLine2": "powered by RFID technology.",
+  "heroSub": "Implemented at Turk Demir Dokum's Bilecik factory; the RFID Gate and Kanban system optimizes warehouse material preparation processes based on the pull methodology.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Line feeding optimization in boiler production",
+  "contextP1": "Turk Demir Dokum's Bilecik factory produces combi boilers. The project was implemented to optimize warehouse material preparation processes based on demands from production lines.",
+  "contextP2": "With the RFID gate application, the material flow has been transformed into a demand-driven digital kanban structure, synchronized with the production tempo.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Line feeding and order delays",
+  "problemLede": "Managing production line material needs with manual methods caused delays and preparation errors.",
+  "problemList": [
+    {
+      "bold": "Delay Risks",
+      "text": "Delays experienced in manual material ordering and preparation processes, risking line downtime."
+    },
+    {
+      "bold": "Inaccurate Orders & Excess Stock",
+      "text": "Incorrect transfer of requirements leading to excess inventory or incorrect material feeding in the warehouse."
+    },
+    {
+      "bold": "Production Rhythm Mismatch",
+      "text": "Inability to synchronize the material flow with real-time production speed and line consumption rates."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "RFID Gate & Pull Methodology",
+  "solutionLede": "An RFID Gate application was implemented to optimize warehouse material preparation based on production line needs. More than 300 transport bins were RFID-tagged, automatically generating warehouse material orders as they exited through the RFID gate.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "RFID Tagging",
+      "text": "Over 300 transport boxes/bins are equipped with high-precision industrial RFID tags."
+    },
+    {
+      "no": "02",
+      "title": "RFID Gate Scanning",
+      "text": "Tags are automatically scanned as the boxes pass through the RFID Gate at the production area exit."
+    },
+    {
+      "no": "03",
+      "title": "Automated Ordering",
+      "text": "Scanned boxes turn into real-time order demands, auto-triggering material replenishment orders to the warehouse."
+    },
+    {
+      "no": "04",
+      "title": "Handheld Terminal Control",
+      "text": "Warehouse staff prepares and ships the correct parts error-free using RFID handheld terminals."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "RFID and warehouse integration infrastructure",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "RFID Gate reading system",
+      "text": "RFID antenna and transit gate positioned at the production area exit, scanning boxes in motion."
+    },
+    {
+      "tag": "RFID",
+      "title": "Industrial RFID tags",
+      "text": "UHF RFID tags mounted on over 300 transport bins, resistant to harsh workshop conditions."
+    },
+    {
+      "tag": "MOBILE",
+      "title": "RFID handheld terminals",
+      "text": "Mobile devices where warehouse staff performs material picking and transfer steps on-site."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "OnSuite Trace Platform",
+      "text": "Central software that converts RFID transit data into order demands and manages the process."
+    },
+    {
+      "tag": "DATA",
+      "title": "SAP ERP integration",
+      "text": "Instant transfer of generated warehouse material order records to the SAP ERP system."
+    },
+    {
+      "tag": "METHODOLOGY",
+      "title": "Digital Kanban Control",
+      "text": "Pull control that triggers material flow according to the consumption rate of the production line."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP ERP Integration",
+  "integrationDesc": "The RFID Gate system runs instantly integrated with Turk Demir Dokum's SAP ERP; order records generated from field transits are automatically processed in SAP.",
+  "integrationList": [
+    {
+      "bold": "SAP Material Order",
+      "text": "An automatic transfer order is created in SAP based on reading data of boxes passing through the RFID gate."
+    },
+    {
+      "bold": "Stock Synchronization",
+      "text": "The status of boxes shipped from the warehouse to the line is updated instantly in SAP inventory."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Automated line feeding and optimized warehouse processes",
+  "resultsGrid": [
+    {
+      "title": "Zero manual orders",
+      "text": "Warehouse material preparation is automated with the RFID gate, completely eliminating manual order needs."
+    },
+    {
+      "title": "Pull methodology",
+      "text": "Managing material flow according to the pull basis synchronized with production tempo prevented excess stocking."
+    },
+    {
+      "title": "Speed and accuracy",
+      "text": "Maximum efficiency in warehouse material prep speed and shipment accuracy has been achieved thanks to the digital kanban structure."
+    }
+  ],
+  "closerTitle": "Seamless and error-free material flow from warehouse to production line with RFID technology.",
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

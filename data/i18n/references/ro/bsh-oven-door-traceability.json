@@ -1,0 +1,109 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Asamblarea precisă a ușii,",
+  "heroTitleLine2": "zero erori și trasabilitate completă în producție.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de producție a cuptoarelor BSH din Çerkezköy, ușile de cuptor montate pe produse au fost urmărite și înregistrate pe baza informațiilor despre lot obținute de la cărucioarele pentru uși.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Urmărirea componentelor și acuratețea producției",
+  "contextP1": "În cadrul proiectului implementat la fabrica de producție a cuptoarelor BSH din Çerkezköy, ușile de cuptor montate pe produse au fost urmărite și înregistrate pe baza informațiilor despre lot obținute de la cărucioarele pentru uși.",
+  "contextP2": "Proiectul a fost realizat pentru a asigura trasabilitatea relației componentă ușă-produs.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Riscuri de urmărire manuală și potrivire",
+  "problemLede": "În producția de cuptoare, ușa de cuptor montată pe produs trebuia să se potrivească cu produsul corect, iar această potrivire trebuia să fie trasabilă la nivel de produs.",
+  "problemList": [
+    {
+      "bold": "Limitări de Urmărire Manuală",
+      "text": "Urmărirea manuală a relației ușă-produs fiind insuficientă și prezentând riscul unei breșe de trasabilitate."
+    },
+    {
+      "bold": "Utilizare Incorectă a Componentei",
+      "text": "Imposibilitatea de a preveni automat riscul de utilizare a unei uși greșite în timpul producției."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Potrivire bazată pe lot și verificare automată",
+  "solutionLede": "Integrarea cu sistemul de trasabilitate a fost realizată prin potrivirea numerelor de serie ale produselor cu informațiile despre lot obținute de la cărucioarele pentru uși. Datele privind ușile de cuptor furnizate pe loturi la etajul de producție și montate pe produse cu numere de serie specifice au fost înregistrate. Datorită potrivirii produs-ușă, utilizarea ușilor corecte în produsele corecte a fost garantată.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Citire Cod de Bare Lot",
+      "text": "Etichetele de lot de pe cărucioarele pentru uși sunt scanate folosind un cititor de coduri de bare."
+    },
+    {
+      "no": "02",
+      "title": "Potrivire Număr Serie",
+      "text": "Numărul de serie al produsului asamblat este asociat cu informațiile despre lotul ușii."
+    },
+    {
+      "no": "03",
+      "title": "Verificare SCADA",
+      "text": "Aplicația SCADA bazată pe C# verifică acuratețea potrivirii în timp real."
+    },
+    {
+      "no": "04",
+      "title": "Înregistrare Confirmare SAP",
+      "text": "După finalizarea tuturor verificărilor, datele pieselor aprobate sunt scrise în sistemul SAP."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Automatizare de teren și arhitectură software",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Automatizare Câmp PLC",
+      "text": "Infrastructură PLC care gestionează fluxul de lucru, stările stațiilor și datele senzorilor."
+    },
+    {
+      "tag": "INTERFAȚĂ",
+      "title": "Aplicație SCADA C#",
+      "text": "SCADA dezvoltată special pentru logica de potrivire, verificarea datelor și ecranele operatorului."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare Cod de Bare",
+      "text": "Scannere industriale care citesc etichetele de lot de pe cărucioare și numerele de serie ale produselor."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare SAP",
+      "text": "Partajarea integrată a confirmărilor de proces și a datelor de lot cu sistemul SAP."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Stratul software central de control al trasabilității și managementului proceselor."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare SAP ERP",
+  "integrationDesc": "Sistemul funcționează integrat cu SAP; după verificare, datele de confirmare ale pieselor conforme sunt trimise înapoi în SAP. Acest lucru stabilește o sincronizare completă între terenul de producție și datele corporative.",
+  "integrationList": [
+    {
+      "bold": "Date de Confirmare SAP",
+      "text": "Confirmările de potrivire produs-ușă verificate cu succes sunt transmise instantaneu către SAP."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Asamblare controlată cu zero erori",
+  "resultsGrid": [
+    {
+      "title": "Prevenirea Asamblării Defectuoase",
+      "text": "Acuratețea ușilor montate este verificată automat, eliminând riscul de asamblare incorectă."
+    },
+    {
+      "title": "Urmărire la Nivel de Număr Serie",
+      "text": "Relația ușă-produs este scrisă direct pe numărul de serie al produsului, asigurând trasabilitate completă."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

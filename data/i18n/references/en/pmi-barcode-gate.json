@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Turnkey",
+  "tagValue": "Tobacco",
+  "locationValue": "Torbalı / İzmir",
+  "heroTitleLine1": "Barcode verification gate,",
+  "heroTitleLine2": "zero-defect shipment.",
+  "heroSub": "Implemented at PMI's Torbalı (İzmir) factory, the Automatic Shipment Barcode Verification System scans pallet labels at the shipment exit, verifies them against shipment orders, and updates SAP-WMS.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Fully automated control at shipment exits",
+  "contextP1": "PMI's Torbalı (İzmir) factory is a cigarette manufacturing facility. The produced items are shipped on a pallet basis via exit ramps during the shipment process.",
+  "contextP2": "The project was implemented to automate the pallet verification and shipment order matching process at the shipment exit.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Shipment errors and control difficulties",
+  "problemLede": "Checking pallets manually against correct work orders at shipment ramps caused delays and increased shipment error risks.",
+  "problemList": [
+    {
+      "bold": "Shipment Error Risk",
+      "text": "The risk of incomplete or incorrect barcode products being shipped without detection."
+    },
+    {
+      "bold": "Manual Matching",
+      "text": "Operational inefficiency caused by manually matching pallet labels with shipment work orders."
+    },
+    {
+      "bold": "WMS Synchronization",
+      "text": "Inability to process pallets exiting from ramps into the WMS system instantly and automatically."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Barcode Gate System & Automated Verification",
+  "solutionLede": "The barcode gate system installed at the exit ramp automatically reads all pallet labels. The system automatically retrieves shipment orders from SAP-WMS, compares them with pallet labels, and writes data to WMS on match.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Work Order Integration",
+      "text": "Work orders belonging to the shipment plan are automatically loaded from the SAP-WMS system."
+    },
+    {
+      "no": "02",
+      "title": "Ramp Barcode Scanning",
+      "text": "The Barcode Gate on the exit ramp automatically reads all pallet labels passing over it."
+    },
+    {
+      "no": "03",
+      "title": "Match & Verification",
+      "text": "Pallet labels are compared with shipment orders to instantly query content accuracy."
+    },
+    {
+      "no": "04",
+      "title": "WMS Confirmation",
+      "text": "Matched pallet barcodes and the shipment number are instantly sent to the SAP-WMS system."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Industrial scanners and SCADA verification",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Industrial Barcode Readers",
+      "text": "Industrial scanners that read pallet barcodes on the fly at exit ramps without errors."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC field automation",
+      "text": "PLC system managing pallet transits, sensors, and gate flow at the ramp."
+    },
+    {
+      "tag": "INTERFACE",
+      "title": "SCADA application with C#",
+      "text": "SCADA software managing matching logic, operator alert screens, and system data integration."
+    },
+    {
+      "tag": "INTEGRATION",
+      "title": "WMS data layer",
+      "text": "Integration interface where matched pallet barcodes and shipment numbers are pushed to the WMS system."
+    },
+    {
+      "tag": "SAFETY",
+      "title": "Operator Alert System",
+      "text": "Control mechanism providing visual/audible warnings to the operator in case of mismatched or incorrect labels."
+    },
+    {
+      "tag": "DATA",
+      "title": "SAP ERP integration",
+      "text": "SAP connection that enables the system to automatically retrieve shipment work orders."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP-WMS Integration",
+  "integrationDesc": "The automatic shipment barcode verification system runs with bi-directional and real-time integration with PMI's SAP-WMS infrastructure; data is verified independent of the operator.",
+  "integrationList": [
+    {
+      "bold": "Work Order Retrieval",
+      "text": "Shipment work orders in the SAP-WMS system are automatically pulled into the system, ready for verification."
+    },
+    {
+      "bold": "Shipment Confirmation",
+      "text": "Verified pallet barcodes and associated shipment numbers are written back to the SAP-WMS system in real time."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "100% Verified automated shipment",
+  "resultsGrid": [
+    {
+      "title": "Automated pallet verification",
+      "text": "100% automated pallet verification is achieved at the shipment exit, eliminating the need for manual checks."
+    },
+    {
+      "title": "Zero shipment errors",
+      "text": "Shipment of products with missing, wrong, or incorrect barcodes from shipment ramps is completely prevented."
+    },
+    {
+      "title": "Operator warnings",
+      "text": "Shipment operations are secured with an instant warning mechanism when an incorrect pallet is detected."
+    }
+  ],
+  "closerTitle": "Seamless data flow from exit ramps to the warehouse and error-free shipment.",
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

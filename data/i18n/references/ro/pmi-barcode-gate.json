@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "La cheie",
+  "tagValue": "Tutun",
+  "locationValue": "Torbalı / İzmir",
+  "heroTitleLine1": "Poartă de verificare a codurilor de bare,",
+  "heroTitleLine2": "expediere fără defecte.",
+  "heroSub": "Implementat la fabrica PMI din Torbalı (İzmir); sistemul automat de verificare a codurilor de bare scanează etichetele de paleți la ieșire, le verifică cu comenzile de expediere și actualizează SAP-WMS.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Control complet automatizat la ieșirile de expediere",
+  "contextP1": "Fabrica PMI din Torbalı (İzmir) este o unitate de producție de țigări. Produsele sunt expediate pe bază de paleți prin rampele de ieșire în timpul procesului de expediere.",
+  "contextP2": "Proiectul a fost implementat pentru a automatiza procesul de verificare a paleților și de potrivire a comenzilor la ieșirea de expediere.",
+  "problemEyebrow": "Nevoi / Probleme",
+  "problemTitle": "Erori de expediere și dificultăți de control",
+  "problemLede": "Verificarea manuală a paleților în raport cu comenzile corecte de lucru la rampele de expediere genera întârzieri și riscuri de erori.",
+  "problemList": [
+    {
+      "bold": "Risc de Eroare de Expediere",
+      "text": "Riscul ca produse cu coduri de bare lipsă sau incorecte să fie expediate fără detectare."
+    },
+    {
+      "bold": "Potrivire Manuală",
+      "text": "Ineficiență operațională cauzată de potrivirea manuală a etichetelor de paleți cu comenzile de lucru."
+    },
+    {
+      "bold": "Sincronizare WMS",
+      "text": "Imposibilitatea de a procesa instantaneu și automat în sistemul WMS paleții care ies de pe rampe."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Sistem de Poartă cu Coduri de Bare și Verificare Automată",
+  "solutionLede": "Sistemul de poartă cu coduri de bare instalat la rampa de ieșire citește automat toate etichetele de paleți. Sistemul preia automat comenzile de expediere din SAP-WMS, le compară cu etichetele de paleți și trimite datele la WMS pe bază de potrivire.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Integrare Comenzi de Lucru",
+      "text": "Comenzile de lucru aparținând planului de expediere sunt încărcate automat din sistemul SAP-WMS."
+    },
+    {
+      "no": "02",
+      "title": "Scanare Coduri de Bare la Rampă",
+      "text": "Poarta de coduri de bare de pe rampa de ieșire scanează automat toate etichetele paleților care trec peste ea."
+    },
+    {
+      "no": "03",
+      "title": "Potrivire și Verificare",
+      "text": "Etichetele de paleți scanate sunt comparate cu comenzile de expediere pentru a interoga instantaneu acuratețea conținutului."
+    },
+    {
+      "no": "04",
+      "title": "Confirmare WMS",
+      "text": "Codurile de bare ale paleților potriviți și numărul de expediere sunt trimise instantaneu către sistemul SAP-WMS."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente Utilizate",
+  "techTitle": "Scannere industriale și verificare SCADA",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare de Coduri de Bare",
+      "text": "Scannere industriale care citesc codurile de bare ale paleților din mers, fără erori, la rampele de ieșire."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Automatizare de câmp cu PLC",
+      "text": "Sistem PLC care gestionează tranzitul paleților, senzorii și fluxul porții la rampă."
+    },
+    {
+      "tag": "INTERFAȚĂ",
+      "title": "Aplicație SCADA cu C#",
+      "text": "Software SCADA care gestionează logica de potrivire, ecranele de alertă pentru operator și integrarea datelor."
+    },
+    {
+      "tag": "INTEGRARE",
+      "title": "Strat de date WMS",
+      "text": "Interfață de integrare unde codurile de bare ale paleților potriviți și numerele de expediere sunt transmise către WMS."
+    },
+    {
+      "tag": "SIGURANȚĂ",
+      "title": "Sistem de Alertă Operator",
+      "text": "Mecanism de control care oferă avertismente vizuale/acustice operatorului în caz de etichete nepotrivite sau incorecte."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare SAP ERP",
+      "text": "Conexiune SAP care permite sistemului să preia automat comenzile de lucru de expediere."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare SAP-WMS",
+  "integrationDesc": "Sistemul automat de verificare a codurilor de bare de expediere funcționează cu integrare bidirecțională și în tempo real cu infrastructura SAP-WMS a PMI; datele sunt verificate independent de operator.",
+  "integrationList": [
+    {
+      "bold": "Confirmare Expediere",
+      "text": "Codurile de bare ale paleților verificați și numerele de expediere asociate sunt scrise înapoi în sistemul SAP-WMS în timp real."
+    },
+    {
+      "bold": "Preluare Comenzi de Lucru",
+      "text": "Comenzile de lucru de expediere din sistemul SAP-WMS sunt preluate automat în sistem, gata pentru verificare."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Expediere automatizată verificată 100%",
+  "resultsGrid": [
+    {
+      "title": "Verificare automată a paleților",
+      "text": "Verificarea paleților 100% automată este realizată la ieșire, eliminând verificările manuale."
+    },
+    {
+      "title": "Expediere fără erori",
+      "text": "Expedierea produselor cu coduri de bare lipsă, greșite sau incorecte de pe rampele de expediere este complet prevenită."
+    },
+    {
+      "title": "Avertizări operator",
+      "text": "Operațiunile de expediere sunt securizate cu un mecanism de avertizare instantanee atunci când este detectat un palet incorect."
+    }
+  ],
+  "closerTitle": "Flux de date fără cusur de la rampele de ieșire la depozit și expediere fără erori.",
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

@@ -34,6 +34,13 @@ import NemakPartsDetailPage from '../../../components/sections/NemakPartsDetailP
 import HaierSortingDetailPage from '../../../components/sections/HaierSortingDetailPage';
 import HaierAssemblyDetailPage from '../../../components/sections/HaierAssemblyDetailPage';
 import BomiGroupDetailPage from '../../../components/sections/BomiGroupDetailPage';
+import GroupeAtlanticDetailPage from '../../../components/sections/GroupeAtlanticDetailPage';
+import DelphiRailAssemblyIntegrationDetailPage from '../../../components/sections/DelphiRailAssemblyIntegrationDetailPage';
+import DelphiCloudIntegrationDetailPage from '../../../components/sections/DelphiCloudIntegrationDetailPage';
+import CandyHooverTestStationsDetailPage from '../../../components/sections/CandyHooverTestStationsDetailPage';
+import CandyHooverProductionTestStationsDetailPage from '../../../components/sections/CandyHooverProductionTestStationsDetailPage';
+import TurkTuborgPalletLabelingDetailPage from '../../../components/sections/TurkTuborgPalletLabelingDetailPage';
+import MeyBandrolControlDetailPage from '../../../components/sections/MeyBandrolControlDetailPage';
 import PmiPalletizingDetailPage from '../../../components/sections/PmiPalletizingDetailPage';
 import PmiEmbosserDetailPage from '../../../components/sections/PmiEmbosserDetailPage';
 
@@ -368,6 +375,114 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     );
   }
 
+  if (slug === 'philsa-filter-tracking') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+          fixedYear="2017"
+          currentSlug="philsa-filter-tracking"
+          logoSrc="/Logos/philip-morris-international-pmi-seeklogo.png"
+          logoAlt="PMI Logo"
+        />
+      </>
+    );
+  }
+
+  if (slug === 'delphi-tool-tip-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+          fixedYear="2016"
+          currentSlug="delphi-tool-tip-traceability"
+          logoSrc={project.logo}
+          logoAlt="Delphi Technologies Logo"
+        />
+      </>
+    );
+  }
+
+  if (slug === 'delphi-prototype-line-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+          fixedYear="2016"
+          currentSlug="delphi-prototype-line-traceability"
+          logoSrc={project.logo}
+          logoAlt="Delphi Technologies Logo"
+        />
+      </>
+    );
+  }
+
+  if (slug === 'delphi-technologies') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+          fixedYear="2016"
+          currentSlug="delphi-technologies"
+          logoSrc={project.logo}
+          logoAlt="Delphi Technologies Logo"
+        />
+      </>
+    );
+  }
+
+  if (slug === 'delphi-monitorizare-individuala-rampa-injectie') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+          fixedYear="2015"
+          currentSlug="delphi-monitorizare-individuala-rampa-injectie"
+          logoSrc={project.logo}
+          logoAlt="Delphi Technologies Logo"
+        />
+      </>
+    );
+  }
+
+  if (slug === 'stackpole-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+          fixedYear="2015"
+          currentSlug="stackpole-traceability"
+          logoSrc={project.logo}
+          logoAlt="Stackpole Logo"
+        />
+      </>
+    );
+  }
+
   if (slug === 'bsh-assembly-line-traceability') {
     return (
       <>
@@ -569,6 +684,104 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
       <>
         <JsonLd data={graphSchema} />
         <BomiGroupDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'groupe-atlantic-busbar-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <GroupeAtlanticDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'delphi-rfid-datamatrix-rail-assembly-integration') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <DelphiRailAssemblyIntegrationDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'delphi-cloud-traceability-data-integration') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <DelphiCloudIntegrationDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'candy-hoover-test-data-cooker-lines-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <CandyHooverTestStationsDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'candy-hoover-test-data-production-efficiency-tracking') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <CandyHooverProductionTestStationsDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'turk-tuborg-automatic-pallet-labeling-traceability') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <TurkTuborgPalletLabelingDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (slug === 'mey-icki-bandrol-control-system') {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <MeyBandrolControlDetailPage
           locale={locale}
           backHref={backHref}
           localizedProjects={localizedProjects}

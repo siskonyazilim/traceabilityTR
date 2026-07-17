@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Anahtar Teslim",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Bilecik",
+  "heroTitleLine1": "RFID teknolojisiyle,",
+  "heroTitleLine2": "kesintisiz dijital kanban.",
+  "heroSub": "Türk Demir Döküm'ün Bilecik fabrikasında hayata geçirilen RFID Kapı ve Kanban sistemi; üretim hatlarının depo malzeme hazırlama süreçlerini çekme (pull) metodolojisine göre optimize eder.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Kombi üretiminde hat besleme optimizasyonu",
+  "contextP1": "Türk Demir Döküm'ün Bilecik'teki fabrikasında kombi üretimi yapılmaktadır. Proje, üretim hatlarından gelen taleplere dayalı olarak depo malzeme hazırlama süreçlerini optimize etmek amacıyla hayata geçirilmiştir.",
+  "contextP2": "RFID kapısı uygulaması ile malzeme akışı üretim temposuna tam uyumlu, talep odaklı dijital kanban yapısına kavuşturulmuştur.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Hat besleme ve sipariş gecikmeleri",
+  "problemLede": "Üretim hatlarının malzeme ihtiyaçlarının manuel yöntemlerle yönetilmesi gecikmelere ve hatalara zemin hazırlıyordu.",
+  "problemList": [
+    {
+      "bold": "Gecikme Riskleri",
+      "text": "Manuel malzeme sipariş ve hazırlama süreçlerinde yaşanan gecikmeler ve hat duruşu riskleri."
+    },
+    {
+      "bold": "Hatalı Sipariş ve Stok",
+      "text": "Gereksinimlerin hatalı iletilmesi sonucu depoda fazla stok veya yanlış malzeme ikmali."
+    },
+    {
+      "bold": "Üretim Ritmi Uyumsuzluğu",
+      "text": "Malzeme akışının anlık üretim temposuna ve hat tüketim hızına senkronize edilememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "RFID Kapı ve Çekme (Pull) Metodolojisi",
+  "solutionLede": "Bir RFID Kapı uygulaması hayata geçirilerek, üretim hatlarından gelen gereksinimlere dayalı olarak, depo malzeme hazırlama süreçleri optimize edildi. 300'den fazla taşıma birimine RFID etiketi takılarak RFID kapısından çıkan kutuların depo malzeme siparişlerini otomatik oluşturması sağlandı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "RFID Etiketleme",
+      "text": "300'den fazla taşıma kutusu/kasası yüksek hassasiyetli endüstriyel RFID etiketleriyle donatılır."
+    },
+    {
+      "no": "02",
+      "title": "RFID Gate Okuma",
+      "text": "Kutular üretim alanı çıkışındaki RFID Kapısından (Gate) geçtiği anda etiketler otomatik olarak taranır."
+    },
+    {
+      "no": "03",
+      "title": "Otomatik Sipariş",
+      "text": "Taranan kutular anlık sipariş talebine dönüşerek depoya otomatik malzeme ikmal emri iletilir."
+    },
+    {
+      "no": "04",
+      "title": "El Terminali Kontrolü",
+      "text": "Depo personeli, RFID el terminalleriyle siparişe uygun parçaları hatasız hazırlar ve sevk eder."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "RFID ve depo entegrasyon altyapısı",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "RFID Gate okuma sistemi",
+      "text": "Üretim alanı çıkışına konumlandırılan, kutuları hareket halindeyken okuyan RFID anten ve geçiş kapısı."
+    },
+    {
+      "tag": "RFID",
+      "title": "Endüstriyel RFID etiketleri",
+      "text": "300'den fazla taşıma kasasına monte edilen, zorlu saha şartlarına dayanıklı UHF RFID etiketleri."
+    },
+    {
+      "tag": "MOBİL",
+      "title": "RFID el terminalleri",
+      "text": "Depo personelinin malzeme toplama ve transfer adımlarını sahada gerçekleştirdiği mobil cihazlar."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "RFID geçiş verilerini sipariş taleplerine dönüştüren ve süreci yöneten merkezi yazılım."
+    },
+    {
+      "tag": "VERİ",
+      "title": "SAP ERP entegrasyonu",
+      "text": "Oluşturulan depo malzeme sipariş kayıtlarının SAP ERP sistemine anlık olarak aktarımı."
+    },
+    {
+      "tag": "METODOLOJİ",
+      "title": "Dijital Kanban Kontrolü",
+      "text": "Üretim hattının tüketim hızına göre malzeme akışını tetikleyen çekme (pull) kontrolü."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ERP Entegrasyonu",
+  "integrationDesc": "RFID Kapı sistemi, Türk Demir Döküm'ün SAP ERP yapısıyla anlık entegre çalışmaktadır; saha geçişlerinden üretilen sipariş kayıtları otomatik olarak SAP'ye işlenir.",
+  "integrationList": [
+    {
+      "bold": "SAP Malzeme Siparişi",
+      "text": "RFID kapısından geçen kutuların okuma verileriyle SAP üzerinde otomatik transfer emri oluşturulur."
+    },
+    {
+      "bold": "Stok Senkronizasyonu",
+      "text": "Depodan hatta sevk edilen kutuların durumları SAP envanteri ile anlık olarak güncellenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Otomatik hat besleme ve optimize depo süreçleri",
+  "resultsGrid": [
+    {
+      "title": "Sıfır manuel sipariş",
+      "text": "RFID kapısıyla depo malzeme hazırlama süreçleri otomatikleştirilerek manuel sipariş ihtiyacı tamamen ortadan kaldırılmıştır."
+    },
+    {
+      "title": "Çekme (Pull) metodolojisi",
+      "text": "Malzeme akışının üretim temposuna uyumlu şekilde çekme esasına göre yönetilmesiyle fazla stoklama önlenmiştir."
+    },
+    {
+      "title": "Hız ve doğruluk",
+      "text": "Dijital kanban yapısı sayesinde depo malzeme hazırlama hızında ve sevkiyat doğruluğunda maksimum verim elde edilmiştir."
+    }
+  ],
+  "closerTitle": "RFID teknolojisiyle depodan üretim hattına kesintisiz ve hatasız malzeme akışı.",
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

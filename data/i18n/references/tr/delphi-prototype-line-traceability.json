@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir ESBAŞ",
+  "heroTitleLine1": "Prototipte Tam Görünürlük,",
+  "heroTitleLine2": "Operasyon Bazlı Anlık Takip",
+  "heroSub": "Delphi Technologies'in İzmir ESBAŞ Serbest Bölge'deki fabrikasında hayata geçirilen projede, müşteriler için özel üretilen prototip ürünlerin tezgahlardaki tüm operasyonlar boyunca izlenebilirliği sağlanmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Prototip hattında baştan sona izlenebilir üretim",
+  "contextP1": "Delphi Technologies'in İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv yan sanayine yönelik üretim yapmaktadır. Bu fabrikada hayata geçirilen projede, müşteriler için özel olarak üretilen prototip ürünlerin tezgahlardaki tüm operasyonlar boyunca izlenebilirliği sağlanmıştır.",
+  "contextP2": "Amaç, prototip ürünlerin üretim sürecindeki ilerleyişini operasyon bazında anlık izlenebilir hale getirerek süreç takibini ve planlamayı güçlendirmektir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Prototip sürecinde durum görünürlüğü eksikliği",
+  "problemLede": "Müşteriye özel üretilen prototip ürünlerin üretim sürecinde hangi seviyede ve hangi durumda olduğu net biçimde görülemiyordu.",
+  "problemList": [
+    {
+      "bold": "İlerleyiş Takibi",
+      "text": "Prototip üretiminin ilerleyişi ve operasyon durumu izlenemediği için süreç takibi zorlaşıyordu."
+    },
+    {
+      "bold": "Planlama Güçlüğü",
+      "text": "Güncel durum görünürlüğünün yetersizliği, planlama ve iş önceliklendirme süreçlerinde risk oluşturuyordu."
+    },
+    {
+      "bold": "Tekil Kimlik İhtiyacı",
+      "text": "Prototip ürünlerin baştan itibaren tekil tanımlanıp tüm operasyonlarda izlenebileceği bir yapıya ihtiyaç vardı."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Markalama ile başlayan uçtan uca prototip takibi",
+  "solutionLede": "Prototip ürünler hattına girmeden önce markalanıp tekil olarak tanımlandı. Tezgahlardaki tüm operasyonlarda ürünler izlenerek her prototipin hangi operasyonda ve hangi durumda olduğu kayıt altına alındı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Ön Markalama",
+      "text": "Prototip ürünler hatta giriş öncesi markalanarak tekil kimlikle sisteme alınır."
+    },
+    {
+      "no": "02",
+      "title": "Operasyon Tanıma",
+      "text": "Barkod okuyucular ürünleri operasyon noktalarında otomatik tanır ve doğrular."
+    },
+    {
+      "no": "03",
+      "title": "Durum Kaydı",
+      "text": "Her ürünün bulunduğu operasyon ve güncel işlem durumu anlık olarak kayıt altına alınır."
+    },
+    {
+      "no": "04",
+      "title": "Süreç Görünürlüğü",
+      "text": "Prototip üretiminin seviyesi ve güncel durumu tüm aşamalarda izlenebilir hale getirilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Barkod, PLC ve C# SCADA temelli saha altyapısı",
+  "techGrid": [
+    {
+      "tag": "OKUMA",
+      "title": "Barkod Okuyucular",
+      "text": "Prototip ürünleri operasyon bazında tanıyarak izlenebilirlik akışını tetikler."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha akışını ve operasyon geçişlerini yöneterek gerçek zamanlı süreç kontrolü sağlar."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "Operasyon durumlarının izlenmesini, raporlanmasını ve Oracle ile veri alışverişini yönetir."
+    },
+    {
+      "tag": "PLATFORM",
+      "title": "OnSuite Trace",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezi olarak yürütüldüğü uygulama katmanıdır."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Oracle ile merkezi veri paylaşımı",
+  "integrationDesc": "Sistem Oracle ile entegre çalışmaktadır; prototip ürünlerin operasyon bazlı izlenebilirlik ve durum verileri Oracle ile paylaşılarak süreç merkezi olarak izlenmekte ve yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Oracle Entegrasyonu",
+      "text": "Operasyon, durum ve ilerleyiş verileri Oracle ile paylaşılır; merkezde raporlama ve yönetim sağlanır."
+    },
+    {
+      "bold": "OnSuite Trace Yönetimi",
+      "text": "Süreç görünürlüğü ve operasyon takibi OnSuite Trace üzerinde uçtan uca izlenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Prototip üretimde görünürlük ve planlama gücü",
+  "resultsGrid": [
+    {
+      "title": "Anlık Durum Görünürlüğü",
+      "text": "Prototip ürünlerin hangi seviyede ve hangi durumda olduğu tüm operasyonlarda görünür hale geldi."
+    },
+    {
+      "title": "Kolaylaşan Takip ve Planlama",
+      "text": "Süreç görünürlüğündeki eksiklik giderilerek prototip üretiminin takibi ve planlaması kolaylaştı."
+    },
+    {
+      "title": "Operasyon Bazlı İzlenebilirlik",
+      "text": "Baştan itibaren tekil tanımlama ile prototip hattında operasyon bazında tam izlenebilirlik sağlandı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Prototip üretim süreçlerinizi anlık ve güvenilir takip etmek ister misiniz?",
+  "ctaSubtitle": "OnSuite Trace tabanlı izlenebilirlik çözümleriyle prototip hattınızda uçtan uca görünürlük sağlayalım.",
+  "ctaPrimary": "İletişime Geç"
+}

@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Food",
+  "locationValue": "Various Factories",
+  "heroTitleLine1": "Seamless tracking from case to pallet,",
+  "heroTitleLine2": "secure infrastructure with offline support.",
+  "heroSub": "In order to ensure case-pallet traceability in all of Mey Diageo's factories, a robust, user-friendly and flexible traceability system has been implemented as part of renewing the existing system.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Data integrity in multi-factory structures",
+  "contextP1": "In order to ensure case-pallet traceability in all of Mey Diageo's factories, a robust, user-friendly and flexible traceability system has been implemented as part of renewing the existing system.",
+  "contextP2": "The project aimed to enable traceability extending from case to pallet across all factories.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Network interruptions and system continuity",
+  "problemLede": "Renewal of the existing traceability system was required to reliably ensure traceability from case to pallet. In addition, restricted ERP access during network drops required a flexible, continuously operating structure to prevent production downtime.",
+  "problemList": [
+    {
+      "bold": "ERP Connection Risks",
+      "text": "The risk of production stopping in cases where connection with the central ERP system is lost."
+    },
+    {
+      "bold": "Lack of Central Reporting",
+      "text": "Inability to centrally monitor cases and pallets produced in a multi-factory structure in real time."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Bi-directional matching with offline support",
+  "solutionLede": "To enable case-to-pallet traceability, barcodes of cases from production lines are scanned and paired with matching pallet barcodes. Fully integrated with SAP, the system operates offline during network drops, ensuring uninterrupted production. The application runs in all Mey Diageo factories and production lines, monitored from headquarters in Istanbul, with production reports generated centrally.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Case Scanning",
+      "text": "Barcodes of cases coming from the production line are scanned via industrial readers."
+    },
+    {
+      "no": "02",
+      "title": "Pallet Matching",
+      "text": "Scanned case info is matched with the corresponding pallet ID."
+    },
+    {
+      "no": "03",
+      "title": "Offline Operation",
+      "text": "If a network drop occurs, the system automatically continues operating in local memory."
+    },
+    {
+      "no": "04",
+      "title": "SAP Sync",
+      "text": "When connection is restored, all accumulated data is automatically pushed to SAP."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Continuous production and labeling architecture",
+  "techGrid": [
+    {
+      "tag": "INTERFACE",
+      "title": "C# SCADA Application",
+      "text": "Interface managing case-pallet matching, labeling flow, and SAP integration."
+    },
+    {
+      "tag": "LABELING",
+      "title": "Case and Pallet Applicators",
+      "text": "Industrial machines automatically printing and applying case and pallet labels."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Industrial Barcode Readers",
+      "text": "Field readers scanning case and pallet barcodes with high speed and accuracy."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "OnSuite Trace Platform",
+      "text": "Traceability software featuring offline capability and central reporting."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP ERP and Offline Synchronization",
+  "integrationDesc": "The system operates fully integrated with SAP bi-directionally. During network drops, the application switches to offline mode to keep production running without interruption, and syncs data once the connection is restored.",
+  "integrationList": [
+    {
+      "bold": "Offline Data Buffer",
+      "text": "Interruption period data stored in the local database is transferred to SAP when connection is established."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Continuous production and central visibility",
+  "resultsGrid": [
+    {
+      "title": "End-to-End Traceability",
+      "text": "The entire packaging hierarchy from case to pallet is automatically recorded."
+    },
+    {
+      "title": "Offline Reliability",
+      "text": "Factory production does not stop even during network or SAP drops, preserving data integrity."
+    },
+    {
+      "title": "Central Reporting",
+      "text": "Traceability data from all factories can be monitored in real time from headquarters in Istanbul."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

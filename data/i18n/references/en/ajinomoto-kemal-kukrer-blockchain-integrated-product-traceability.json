@@ -1,0 +1,122 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Food",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Trust from farm to table,",
+  "heroTitleLine2": "immutable traceability with blockchain.",
+  "heroSub": "In the project implemented at the customer factory in Eskişehir producing organic vinegar, the organic vinegar parameters at the bottling stage were collected and associated with individual bottle numbers.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Absolute transparency in the food chain",
+  "contextP1": "In the project implemented at the customer factory in Eskişehir producing organic vinegar, the organic vinegar parameters at the bottling stage were collected and associated with individual bottle numbers.",
+  "contextP2": "The project was carried out to ensure product-based traceability and transparency extending to the end user.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Data security and transparency requirements",
+  "problemLede": "The production parameters in the bottling process needed to be recorded on a per-bottle basis, and this data had to be stored in a reliable, unalterable way.",
+  "problemList": [
+    {
+      "bold": "Data Security and Immutability",
+      "text": "The need to store production parameters in a secure and unalterable infrastructure against manipulation."
+    },
+    {
+      "bold": "End User Trust Gap",
+      "text": "The difficulty of presenting the production and bottling history of the purchased product to consumers in a provable way."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Blockchain integration and QR code",
+  "solutionLede": "Organic vinegar parameters at the bottling stage were collected and associated with individual bottle numbers. To guarantee transparency and immutability, the collected data was transferred to a blockchain network. End users can scan the QR code on the bottle to transparently view the filling parameters of the respective vinegar and access production details. Operating integrated with SAP, the application is also notable for running on cloud servers.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Parameter Collection",
+      "text": "Organic vinegar parameters at the filling stage are collected in real time."
+    },
+    {
+      "no": "02",
+      "title": "Unique Bottle Pairing",
+      "text": "Collected data is associated with the unique number on the bottle."
+    },
+    {
+      "no": "03",
+      "title": "Blockchain Recording",
+      "text": "Matched data is transferred to the blockchain network for immutability."
+    },
+    {
+      "no": "04",
+      "title": "QR Code Query",
+      "text": "Consumers scan the QR code on the bottle to query all production parameters."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Blockchain and cloud-based system structure",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Control Structure",
+      "text": "PLC structure managing process steps in the production and filling line."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Barcode Readers",
+      "text": "Industrial readers scanning the unique numbers on the bottles."
+    },
+    {
+      "tag": "SECURITY",
+      "title": "Blockchain",
+      "text": "Network infrastructure where data is stored in an unalterable and tamper-proof way."
+    },
+    {
+      "tag": "ACCESS",
+      "title": "QR Code Structure",
+      "text": "Web interface enabling end users to query production parameters."
+    },
+    {
+      "tag": "CLOUD",
+      "title": "Cloud Server Infrastructure",
+      "text": "Architecture enabling the application to run on the cloud with high availability."
+    },
+    {
+      "tag": "DATA",
+      "title": "SAP Integration",
+      "text": "Integrated management of field and blockchain data with the corporate SAP system."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP and Blockchain Integration",
+  "integrationDesc": "The system runs integrated with SAP. Collected production and traceability data is transferred to the blockchain network and stored permanently in an unalterable format, ensuring data transparency and security.",
+  "integrationList": [
+    {
+      "bold": "Blockchain Registry",
+      "text": "Bottle filling data and production parameters are written immutably to the blockchain network."
+    },
+    {
+      "bold": "SAP Connection",
+      "text": "Production orders and product master data are fed into the system via SAP ERP."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Absolute trust with blockchain",
+  "resultsGrid": [
+    {
+      "title": "Product-Based Traceability",
+      "text": "Filling parameters for each organic vinegar bottle are individually recorded, establishing full traceability."
+    },
+    {
+      "title": "Immutable Data Security",
+      "text": "Production data is stored on the blockchain, protected 100% against any manipulation risks."
+    },
+    {
+      "title": "Consumer Transparency",
+      "text": "Brand credibility is enhanced by allowing end users to query filling details using a QR code."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

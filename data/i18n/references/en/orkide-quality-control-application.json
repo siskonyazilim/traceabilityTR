@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Food",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Flawless packaging control,",
+  "heroTitleLine2": "camera-based automatic inspection.",
+  "heroSub": "In the project implemented at ORKIDE's factory in Izmir, operating in the food sector, a camera-based quality control system was installed on the produced products. The project was carried out to automatically inspect that certain components (labels, caps, etc.) on the products are complete.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Packaging assurance in oil filling lines",
+  "contextP1": "In the project implemented at ORKIDE's factory in Izmir, operating in the food sector, a camera-based quality control system was installed on the produced products. The project was carried out to automatically inspect that certain components (labels, caps, etc.) on the products are complete.",
+  "contextP2": "Automating and standardizing quality control processes is of vital importance in terms of protecting brand prestige and preventing defective product output.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Missing components and manual control risks",
+  "problemLede": "It was necessary to reliably check that components such as labels and caps were complete on the produced products. Conducting this control manually carried the risk of errors; defects like missing labels or caps going unnoticed posed a risk for quality and customer satisfaction.",
+  "problemList": [
+    {
+      "bold": "Missing Cap/Label Defects",
+      "text": "The risk of missing caps or labels going unnoticed during the high-speed flow of the line."
+    },
+    {
+      "bold": "Defective Product Shipping",
+      "text": "The possibility of products with defective packaging being packed and reaching the customer."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Automatic vision system with presence-absence detection",
+  "solutionLede": "A camera system was installed on the production line, and presence-absence checks were automatically performed on the products. The camera checked if components such as labels and caps were present, detecting missing or defective products. Thus, the quality control process was removed from operator initiative, becoming automatic and consistent.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Product Detection",
+      "text": "The product is triggered when it enters the camera field of view at the quality control point."
+    },
+    {
+      "no": "02",
+      "title": "Image Processing",
+      "text": "The camera system captures the product image instantly and starts component verification."
+    },
+    {
+      "no": "03",
+      "title": "Presence Check",
+      "text": "The software analyzes if the label and cap are present in the designated locations."
+    },
+    {
+      "no": "04",
+      "title": "Defective Rejection",
+      "text": "If a missing or defective component is detected, the system takes rejection action via PLC."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Camera-based automatic inspection architecture",
+  "techGrid": [
+    {
+      "tag": "VISION",
+      "title": "Camera-Based Control Unit",
+      "text": "Industrial smart camera system verifying cap and label presence at high speed."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Architecture",
+      "text": "PLC managing the rejection cylinder and line flow according to image analysis results."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Sensors and Triggering",
+      "text": "Industrial sensors ensuring the camera captures images with precise timing."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Central Monitoring Interface",
+      "text": "Software where quality control statistics and defective product data are monitored in real time."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Central Quality Tracking Systems Integration",
+  "integrationDesc": "The system is integrated with the customer's existing systems; inspection results are shared with these systems, allowing the quality control process to be monitored and managed centrally.",
+  "integrationList": [
+    {
+      "bold": "Quality Reporting",
+      "text": "The type and frequency of defects such as missing caps or labels are instantly recorded in the central database."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Flawless product output and consistent inspection",
+  "resultsGrid": [
+    {
+      "title": "Zero Defect Outflow",
+      "text": "No products with missing labels or caps are allowed to leave the factory."
+    },
+    {
+      "title": "Standardized Quality Control",
+      "text": "Inspections are carried out 24/7 with the same sensitivity, independent of human initiative."
+    },
+    {
+      "title": "Traceability Report",
+      "text": "Deviations in production machines can be detected early thanks to defective product statistics."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

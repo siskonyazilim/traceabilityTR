@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Precision laser marking,",
+  "heroTitleLine2": "smart camera-validated flow.",
+  "heroSub": "In the project implemented at Borgwarner's factory in Izmir ESBAS Free Zone, individual laser marking and traceability of each produced product were aimed.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Individual traceability in the automotive supply industry",
+  "contextP1": "Borgwarner's factory in Izmir ESBAS Free Zone produces for the automotive supply industry. In the project implemented at this factory, individual laser marking and traceability of each produced product were aimed.",
+  "contextP2": "Automatic execution of marking accuracy and database integration is of great importance for maintaining quality processes.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Separate steps and traceability gap risk",
+  "problemLede": "Each produced part had to be marked with a unique serial number, ensuring marking accuracy and transmitting the traceability data to the central system. Marking and verification progressing as separate, uncoupled steps carried the risk of incorrect or unreadable codes and gaps in traceability.",
+  "problemList": [
+    {
+      "bold": "Unreadable Code Risk",
+      "text": "Inability to instantly detect unreadable or incorrect code printing caused by laser power or surface roughness."
+    },
+    {
+      "bold": "Process Disconnection",
+      "text": "Loss of labor and time resulting from separate execution of marking and camera verification steps."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Oracle integrated 3-axis automatic marking cell",
+  "solutionLede": "A laser marking machine supporting marking and identification processes was developed for Borgwarner. The machine was designed with 3-axis motion capability to adapt to different products. The system was integrated with Oracle to retrieve serial numbers to print. Following marking, code content, grade, and position verifications were automatically performed via camera, with approval data for valid parts sent back to Oracle.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Serial Retrieval",
+      "text": "The system pulls the unique serial number to print from the Oracle database in real time."
+    },
+    {
+      "no": "02",
+      "title": "3-Axis Marking",
+      "text": "The laser, moving via the servo axis structure, marks the part at the designated position."
+    },
+    {
+      "no": "03",
+      "title": "Camera Verification",
+      "text": "The camera scans the printed code's content, quality grade, and position."
+    },
+    {
+      "no": "04",
+      "title": "Oracle Approval",
+      "text": "The approval info of verified parts is recorded back to the Oracle database."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Mechanical design and control infrastructure",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Laser Marking Device",
+      "text": "Laser unit performing permanent, high-resolution marking on metal surfaces."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "3-Axis Servo Motion",
+      "text": "Servo axis mechanism positioning the laser head according to different product geometries."
+    },
+    {
+      "tag": "OPTICS",
+      "title": "Camera-Based Control",
+      "text": "Vision system instantly measuring the content and print quality grade of marked 2D codes."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "OnSuite Trace Platform",
+      "text": "Main platform managing Oracle integration, SCADA processes, and traceability steps."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Bi-directional Data Flow with Oracle ERP",
+  "integrationDesc": "The system operates bi-directionally integrated with Oracle: serial numbers are retrieved from Oracle, and after marking and inspection, the approval data for suitable parts are sent back to Oracle.",
+  "integrationList": [
+    {
+      "bold": "Oracle Bi-directional Sync",
+      "text": "Serial number queries and approval notification steps communicate directly with the Oracle ERP system."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "High reliability part traceability",
+  "resultsGrid": [
+    {
+      "title": "Individual Part Tracking",
+      "text": "Each produced part is tracked individually in the database with its laser code."
+    },
+    {
+      "title": "Faulty Code Prevention",
+      "text": "Automatic camera verification prevented the release of parts with incorrect, incomplete, or unreadable codes."
+    },
+    {
+      "title": "Single-Flow Management",
+      "text": "Marking and inspection processes are unified in a single machine, optimizing cycle times."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "La cheie",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Bilecik",
+  "heroTitleLine1": "Kanban digital continuu,",
+  "heroTitleLine2": "prin tehnologia RFID.",
+  "heroSub": "Implementat la fabrica Turk Demir Dokum din Bilecik; sistemul de poartă RFID și Kanban optimizează procesele de pregătire a materialelor din depozit pe baza metodologiei de tragere (pull).",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Optimizarea alimentării liniei în producția de cazane",
+  "contextP1": "La fabrica Turk Demir Dokum din Bilecik se produc centrale termice. Proiectul a fost implementat pentru a optimiza procesele de pregătire a materialelor din depozit pe baza cererilor de la liniile de producție.",
+  "contextP2": "Prin aplicația de poartă RFID, fluxul de materiale a fost adus la o structură de kanban digital orientat spre cerere, sincronizat cu ritmul de producție.",
+  "problemEyebrow": "Nevoi / Probleme",
+  "problemTitle": "Alimentarea liniei și întârzierile comenzilor",
+  "problemLede": "Gestionarea nevoilor de materiale ale liniilor de producție prin metode manuale genera întârzieri și erori.",
+  "problemList": [
+    {
+      "bold": "Riscuri de Întârziere",
+      "text": "Întârzieri în procesele manuale de comandă și pregătire a materialelor, riscând opriri de producție."
+    },
+    {
+      "bold": "Comenzi Eronate și Stoc",
+      "text": "Transmiterea greșită a cerințelor ducând la stocuri excesive sau alimentare incorectă în depozit."
+    },
+    {
+      "bold": "Nepotrivire cu Ritmul Producției",
+      "text": "Imposibilitatea de a sincroniza fluxul de materiale cu viteza de producție în timp real și consumul de la linii."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Poarta RFID și Metodologia de Tragere (Pull)",
+  "solutionLede": "O aplicație de poartă RFID a fost implementată pentru a optimiza pregătirea materialelor din depozit pe baza nevoilor liniei. Peste 300 de containere au been etichetate RFID, generând automat comenzi de materiale în depozit pe măsură ce ieșeau prin poarta RFID.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Etichetare RFID",
+      "text": "Peste 300 de cutii/containere de transport sunt echipate cu etichete RFID industriale de înaltă precizie."
+    },
+    {
+      "no": "02",
+      "title": "Scanare Poartă RFID",
+      "text": "Etichetele sunt scanate automat pe măsură ce cutiile trec prin Poarta RFID la ieșirea din zona de producție."
+    },
+    {
+      "no": "03",
+      "title": "Comandă Automată",
+      "text": "Cutiile scanate devin cereri de comandă în timp real, declanșând automat ordine de reaprovizionare în depozit."
+    },
+    {
+      "no": "04",
+      "title": "Control Terminal Portabil",
+      "text": "Personalul din depozit pregătește și expediază piesele corecte fără erori folosind terminale portabile RFID."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente Utilizate",
+  "techTitle": "Infrastructură de integrare RFID și depozit",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Sistem de citire poartă RFID",
+      "text": "Antenă RFID și poartă de tranzit plasate la ieșirea din producție, scanând cutiile în mișcare."
+    },
+    {
+      "tag": "RFID",
+      "title": "Etichete RFID industriale",
+      "text": "Etichete UHF RFID montate pe peste 300 de containere de transport, rezistente la condiții dificile."
+    },
+    {
+      "tag": "MOBIL",
+      "title": "Terminale portabile RFID",
+      "text": "Dispozitive mobile cu care personalul depozitului efectuează pregătirea materialelor și transferul la fața locului."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Software central care convertește datele de tranzit RFID în cereri de comandă și gestionează procesul."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare SAP ERP",
+      "text": "Transfer instantaneu al înregistrărilor de comenzi de depozit generate către sistemul SAP ERP."
+    },
+    {
+      "tag": "METODOLOGIE",
+      "title": "Control Kanban Digital",
+      "text": "Control de tip pull care declanșează fluxul de materiale în funcție de rata de consum a liniei de producție."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare SAP ERP",
+  "integrationDesc": "Sistemul Porții RFID funcționează integrat instantaneu cu SAP ERP de la Turk Demir Dokum; înregistrările de comenzi din tranzitul pe teren sunt procesate automat în SAP.",
+  "integrationList": [
+    {
+      "bold": "Comandă Material SAP",
+      "text": "O comandă de transfer automată este creată în SAP pe baza datelor de citire a cutiilor care trec prin poarta RFID."
+    },
+    {
+      "bold": "Sincronizare Stoc",
+      "text": "Starea cutiilor expediate din depozit la linie este actualizată instantaneu în inventarul SAP."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Alimentare automată a liniei și depozit optimizat",
+  "resultsGrid": [
+    {
+      "title": "Fără comenzi manuale",
+      "text": "Pregătirea materialelor este automatizată prin poarta RFID, eliminând complet nevoia de comenzi manuale."
+    },
+    {
+      "title": "Metodologia Pull",
+      "text": "Gestionarea fluxului de materiale pe baza tragerii sincronizate cu ritmul de producție a prevenit stocarea excesivă."
+    },
+    {
+      "title": "Viteză și acuratețe",
+      "text": "A fost obținută o eficiență maximă în viteza de pregătire și acuratețea expedierii datorită structurii de kanban digital."
+    }
+  ],
+  "closerTitle": "Flux continuu și fără erori de materiale de la depozit la linia de producție prin tehnologia RFID.",
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Home Appliances",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Approved material flow,",
+  "heroTitleLine2": "physical barrier-controlled RFID gate.",
+  "heroSub": "In the project implemented at Bosch's combi boiler production thermotechnology factory in Manisa, kit trolleys prepared according to work orders were released to production in a controlled manner. The project was carried out to guarantee the transition of only approved kit trolleys to production at the warehouse exit.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Warehouse exit control in combi boiler production",
+  "contextP1": "In the project implemented at Bosch's combi boiler production thermotechnology factory in Manisa, kit trolleys prepared according to work orders were released to production in a controlled manner.",
+  "contextP2": "The project was carried out to guarantee the transition of only approved kit trolleys to production at the warehouse exit.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Incorrect material outputs and manual control difficulties",
+  "problemLede": "Only approved kit trolleys matching the relevant work order were supposed to leave for production. Conducting this control manually carried the risk of incorrect or unapproved trolleys passing to production, resulting in material and production errors. A reliable control structure that could physically block transition at the warehouse exit was needed.",
+  "problemList": [
+    {
+      "bold": "Unapproved Material Transition",
+      "text": "The risk of unverified or incomplete kit trolleys being sent out to production without work order validation."
+    },
+    {
+      "bold": "Lack of Physical Control",
+      "text": "Inability to physically block transition in cases where software control alone is insufficient."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Barrier control with RFID gate validation",
+  "solutionLede": "RFID read/write heads positioned at the warehouse exit enabled the release of kit trolleys prepared according to work orders. To make this control physically possible, a barrier system was installed at the warehouse entry and exit. The application, communicating bi-directionally with the warehouse management system, scanned the RFID tags of incoming kit trolleys, queried the system, and allowed only approved trolleys to exit.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Preparation & Labeling",
+      "text": "The kit trolley prepared according to the work order is identified by the metal RFID tag on it."
+    },
+    {
+      "no": "02",
+      "title": "RFID Gate Scan",
+      "text": "The trolley approaching the warehouse exit barrier is scanned by the RFID gate."
+    },
+    {
+      "no": "03",
+      "title": "Bi-directional Query",
+      "text": "The SCADA application queries the read RFID code from the warehouse management system."
+    },
+    {
+      "no": "04",
+      "title": "Barrier Opening",
+      "text": "When exit approval is received, SCADA opens the barrier, allowing the kit trolley to pass."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "RFID access control and SCADA architecture",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "RFID-on-Metal Tags",
+      "text": "700 specialized RFID tags performing with high efficiency on the metal surfaces of kit trolleys."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "RFID Read/Write Heads",
+      "text": "Industrial RFID reader hardware positioned at the warehouse entrance and exit gates."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "Barrier Access System",
+      "text": "Barrier integration physically blocking the transition of unauthorized kit trolleys."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Main software validating RFID scans with the warehouse management system and managing barriers."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Warehouse Management and SAP Integration",
+  "integrationDesc": "The application communicates bi-directionally with the warehouse management system and operates integrated with SAP. RFID tags of incoming kit trolleys are read to query the system, exit approval is granted through this integration, and records are sent to SAP.",
+  "integrationList": [
+    {
+      "bold": "SAP ERP Integration",
+      "text": "Kit trolley exit approvals and material movements are instantly synchronized and recorded in the SAP system."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Physical assurance and zero material errors",
+  "resultsGrid": [
+    {
+      "title": "Approved Material Flow",
+      "text": "Accuracy is ensured by allowing only work-order-validated kit trolleys to pass to production at the warehouse exit."
+    },
+    {
+      "title": "Physical Barrier Security",
+      "text": "Thanks to the barrier system, the transition of unapproved kit trolleys is completely blocked physically."
+    },
+    {
+      "title": "Instant Decision Making",
+      "text": "Bi-directional integration with the warehouse management system enabled transition decisions without delays."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Anahtar Teslim",
+  "tagValue": "Gıda",
+  "locationValue": "Karaman",
+  "heroTitleLine1": "Hammaddeden sevkiyata,",
+  "heroTitleLine2": "her adımda tam izlenebilirlik.",
+  "heroSub": "Duru Bulgur'un Karaman'daki fabrikasında hayata geçirilen Ürün / Koli / Palet İzlenebilirlik sistemi; ambalajlamadan sevkiyata tüm süreci tek bir dijital platformda izler ve ERP ile entegre çalışır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Gıda güvenliğinde yeni standart",
+  "contextP1": "Duru Bulgur'un Karaman'daki fabrikası, bulgur ve bakliyat ürünleri üretmektedir. Proje, fabrikadaki üretim hatlarında ambalajlamadan sevkiyata kadar tüm süreçte ürün, koli ve palet düzeyinde izlenebilirlik sağlamak amacıyla hayata geçirilmiştir.",
+  "contextP2": "Kurulan sistem, gıda zincirindeki envanter yönetim doğruluğunu artırırken sevkiyat hatalarını tamamen ortadan kaldırmayı hedefler.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "İzleme zorlukları ve hata riskleri",
+  "problemLede": "Paketlenen gıda ürünlerinin, kolileme ve paletleme hiyerarşisinde izlenememesi operasyonel riskler barındırıyordu.",
+  "problemList": [
+    {
+      "bold": "Manuel Takip Riski",
+      "text": "Ambalajlama sonrasında ürün, koli ve palet ilişkilerinin manuel takibi izlenebilirlik boşluğu oluşturuyordu."
+    },
+    {
+      "bold": "Sevkiyat Hataları",
+      "text": "Hangi ürünün hangi palete girdiğinin bilinmemesi sevkiyat hatalarına yol açabiliyordu."
+    },
+    {
+      "bold": "Geri Çağırma (Recall) Zorluğu",
+      "text": "Olası kalite veya bulaşma durumlarında hedefe yönelik geri izleme yapmak oldukça zordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Ürün, Koli ve Palet İzlenebilirliği",
+  "solutionLede": "Ürün | Koli | Palet izlenebilirlik uygulaması, Duru Bulgur'un Karaman fabrikasındaki üretim hatlarında başarıyla hayata geçirildi. Ürün – Koli – Palet – Depo – Müşteri adımları, ürün seri numarasına dayalı tek bir platformda izlenebilir ve yönetilebilir hâle getirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Ürün Markalama",
+      "text": "Ambalajlama aşamasında ürünler tekil olarak markalanır ve kimlik kazanır."
+    },
+    {
+      "no": "02",
+      "title": "Koli ve Palet Eşleme",
+      "text": "Hangi ürünün hangi koliye girdiği ve kolilerin hangi palete yerleştirildiği kayıt altına alınır (Agregasyon)."
+    },
+    {
+      "no": "03",
+      "title": "Depo Transferleri",
+      "text": "Farklı lokasyonlar arasındaki depo içi transfer hareketleri el terminalleri kullanılarak anlık kaydedilir."
+    },
+    {
+      "no": "04",
+      "title": "Müşteri Sevkiyatı",
+      "text": "Müşterilere yapılan sevkiyat transferleri kaydedilerek baştan sona veri zinciri tamamlanır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Saha ve veri yönetim altyapısı",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC saha otomasyonu",
+      "text": "Saha otomasyonunu ve üretim hattı iş akışını yöneten PLC yapısı."
+    },
+    {
+      "tag": "ARAYÜZ",
+      "title": "C# ile SCADA uygulaması",
+      "text": "Operatör arayüzü, etiket eşleme ve süreç izleme için özel C# uygulaması."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Barkod Okuyucular",
+      "text": "Ürün, karton ve palet barkod/etiketlerini yüksek hassasiyetle okuyan endüstriyel tarayıcılar."
+    },
+    {
+      "tag": "MOBİL",
+      "title": "El Terminali Uygulaması",
+      "text": "Depo transferleri, stok hareketleri ve müşteri sevkiyatlarının sahada el terminalleriyle kaydedilmesi."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezi olarak kontrol edildiği yazılım katmanı."
+    },
+    {
+      "tag": "VERİ",
+      "title": "ERP entegrasyonu",
+      "text": "ERP sistemiyle entegre şekilde transfer verilerinin ve stok durumunun çift yönlü paylaşımı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "ERP sistemi ile çift yönlü entegrasyon",
+  "integrationDesc": "İzlenebilirlik uygulaması, Duru Bulgur'un mevcut ERP sistemiyle tam entegre şekilde çalışmaktadır: saha verileri, stok hareketleri ve transfer bilgileri ERP'ye anlık olarak aktarılır.",
+  "integrationList": [
+    {
+      "bold": "ERP Sistemine Aktarım",
+      "text": "Saha el terminallerinden kaydedilen tüm depo transfer ve sevkiyat verileri anlık olarak ERP'ye yazılır."
+    },
+    {
+      "bold": "Süreç Kontrolü ve Takip",
+      "text": "Ürün-koli-palet ilişkileri ERP stok durumu ile senkronize edilerek tek platformdan izlenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Uçtan uca dijital kontrol",
+  "resultsGrid": [
+    {
+      "title": "Uçtan uca izlenebilirlik",
+      "text": "Ambalajlamadan sevkiyata kadar tüm süreç, ürün seri numarasına dayalı tek bir platformda uçtan uca izlenebilir hale geldi."
+    },
+    {
+      "title": "Sıfır manuel hata",
+      "text": "Ürün-koli-palet ilişkileri ve depo/müşteri hareketleri otomatik kaydedilerek manuel takibin getirdiği tüm hatalar ortadan kaldırıldı."
+    },
+    {
+      "title": "Hızlı geri izleme (Recall)",
+      "text": "Olası bir geri çağırma durumunda nokta atışı geri izleme yeteneğiyle sevkiyat doğruluğu ve operasyon güvenliği en üst düzeye çıkarıldı."
+    }
+  ],
+  "closerTitle": "Ambalajlamadan depoya, depodan müşteriye kesintisiz veri akışı.",
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

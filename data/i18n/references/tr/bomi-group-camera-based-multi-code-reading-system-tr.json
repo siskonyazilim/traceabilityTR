@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "İlaç Lojistiği",
+  "locationValue": "İstanbul",
+  "heroTitleLine1": "Hızlı mal kabul ve sevkiyat,",
+  "heroTitleLine2": "kamera tabanlı çoklu kod okuyucu geçidi.",
+  "heroSub": "Dünyanın birçok ülkesinde faaliyet gösteren önde gelen farmasötik lojistik şirketlerinden BOMI Group'un İstanbul'daki deposunda hayata geçirilen projede, tesiste önceden manuel olarak yürütülen operasyonları otomatikleştiren kamera tabanlı çoklu kod okuma sistemi geliştirilmiştir. Proje, hem inbound hem de outbound süreçlerini kapsamaktadır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "İlaç lojistiğinde yüksek hacimli operasyonlar",
+  "contextP1": "Dünyanın birçok ülkesinde faaliyet gösteren önde gelen farmasötik lojistik şirketlerinden BOMI Group'un İstanbul'daki deposunda hayata geçirilen projede, tesiste önceden manuel olarak yürütülen operasyonları otomatikleştiren kamera tabanlı çoklu kod okuma sistemi geliştirilmiştir.",
+  "contextP2": "Proje, hem inbound (mal kabul) hem de outbound (sevkiyat) süreçlerini kapsayarak depodaki ürün hareketlerinin hızını ve doğruluğunu en üst düzeye çıkarmayı hedeflemiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Yavaş manuel okutmalar ve sevkiyat gecikmesi riskleri",
+  "problemLede": "Depoda inbound ve outbound operasyonları büyük ölçüde manuel yürütülüyor; binlerce ürünün tek tek taranmasını gerektiren iş akışları hem zaman kaybına hem de hata riskine yol açıyordu. Özellikle sevkiyat hazırlık aşamasında hız ve doğruluğu artıracak, izlenebilirliği güvence altına alacak otomatik bir çözüme ihtiyaç vardı.",
+  "problemList": [
+    {
+      "bold": "Manuel Tarama Yavaşlığı",
+      "text": "Sevkiyat ve mal kabul sırasında binlerce kutunun el barkod okuyucularıyla tek tek taranmasının yarattığı zaman kaybı."
+    },
+    {
+      "bold": "Hatalı Sevkiyat Riski",
+      "text": "Manuel veri girişleri ve gözden kaçan hatalı barkodlar nedeniyle yanlış kutuların sevkedilmesi riski."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Çoklu kod okuyucu vizyon geçidi ve anlık ERP eşleştirmesi",
+  "solutionLede": "Tesiste manuel yürütülen operasyonları otomatikleştiren kamera tabanlı çoklu kod okuma sistemi geliştirildi. Sistem, tek seferde birden fazla kodu okuyarak hem inbound hem de outbound süreçlerinde ürünleri hızlıca tanımaktadır. ERP entegrasyonu aracılığıyla sevkiyat hazırlık aşamasında izlenebilirlik sağlandı. Binlerce ürünün manuel taranmasını içeren iş akışları, sistemin devreye alınmasıyla tamamen otomatikleştirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Konveyör Besleme",
+      "text": "Mal kabul veya sevkiyattaki ürün kolileri konveyör sistemi üzerine yerleştirilir."
+    },
+    {
+      "no": "02",
+      "title": "Çoklu Kamera Taraması",
+      "text": "Ürünler vizyon tünelinden geçerken kamera birden fazla barkodu tek seferde okur."
+    },
+    {
+      "no": "03",
+      "title": "SCADA Analizi",
+      "text": "C# SCADA, okunan çoklu barkod verilerini işler ve doğruluk analizlerini yapar."
+    },
+    {
+      "no": "04",
+      "title": "ERP Güncellemesi",
+      "text": "Doğrulanan ürün hareketleri BOMI in-house ERP sistemine anlık kaydedilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Vizyon tüneli ve C# SCADA mimarisi",
+  "techGrid": [
+    {
+      "tag": "VİZYON",
+      "title": "Kameralı Çoklu Okuma",
+      "text": "Aynı anda görüş alanındaki tüm barkod ve 2D kodları yüksek doğrulukla çözen vizyon donanımı."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Konveyör ve Bariyer",
+      "text": "Kutuları okuma tüneline düzenli aralıklarla besleyen otomasyonlu konveyör yapısı."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Yönetimi",
+      "text": "Sensör tetiklemelerini, konveyör hızını ve kamera okuma zamanlamalarını yöneten PLC."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA & Entegratör",
+      "text": "Kameralarla haberleşen, çoklu okuma verilerini süzüp ERP sistemine aktaran SCADA."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "BOMI In-House ERP Sistemi Entegrasyonu",
+  "integrationDesc": "Sistem, BOMI Group'un kendi geliştirdiği (in-house) ERP sistemiyle entegre çalışmaktadır. Okunan ürün ve sevkiyat verileri ERP ile paylaşılarak sevkiyat hazırlık aşamasında izlenebilirlik sağlanmakta ve süreç merkezi olarak yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "In-House ERP Entegrasyonu",
+      "text": "Toplu okuma verileri doğrudan BOMI'nin ERP sunucularına aktarılarak mal kabul ve sevk onay süreçleri tetiklenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Yüksek hızlı lojistik akış ve sıfır hata",
+  "resultsGrid": [
+    {
+      "title": "Hızlı Sevkiyat Hazırlığı",
+      "text": "Toplu kod okuma tüneli sayesinde ürün hazırlama ve ambalaj süreleri önemli ölçüde kısaltılmıştır."
+    },
+    {
+      "title": "Hatasız Doğrulama",
+      "text": "Gözden kaçabilecek eksik veya hatalı kodlu ürünler sevkiyat öncesinde %100 doğrulukla elenir."
+    },
+    {
+      "title": "İzlenebilir Depo Akışı",
+      "text": "Inbound ve outbound süreçleri merkezi olarak izlenebilir kılınarak lojistik verimlilik artırılmıştır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

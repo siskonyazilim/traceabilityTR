@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Auto",
+  "locationValue": "Izmir Cigli",
+  "heroTitleLine1": "În producția discretă,",
+  "heroTitleLine2": "relație piesă-container bazată pe Datamatrix.",
+  "heroSub": "În sistemul de trasabilitate pentru producția discretă implementat la fabrica NEMAK din Cigli (Izmir), produsele semifinite sunt urmărite pe parcursul întregului proces de fabricație și loigistică.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Mișcări de produse semifinite în industria turnătoriei",
+  "contextP1": "Fabrica NEMAK din Cigli (Izmir) produce piese pentru industria furnizorilor de componente auto folosind metoda turnării. În sistemul de trasabilitate pentru producția discretă implementat la această fabrică, produsele semifinite sunt urmărite pe parcursul întregului proces de fabricație și logistică.",
+  "contextP2": "În producția discretă, controlul instantaneu al mișcărilor logistice și al stării de stocare a fiecărei piese este esențial pentru creșterea eficienței operaționale și prevenirea pierderilor.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Dificultăți de urmărire a containerelor și ineficiență",
+  "problemLede": "În structura de producție discretă, era necesară urmărirea produselor semifinite pe parcursul procesului de fabricație și logistică, știind în ce container se află fiecare piesă în fiecare etapă. Urmărirea manuală a acestei relații purta riscul apariției unor lacune de trasabilitate și a ineficienței în mișcările containerelor; procesul avea nevoie de vizibilitate în timp real.",
+  "problemList": [
+    {
+      "bold": "Lacună Potrivire Containere",
+      "text": "Imposibilitatea de a ști în timp real ce piesă se află în ce container de transport."
+    },
+    {
+      "bold": "Întârzieri Logistice",
+      "text": "Containerele acumulate sau rutate greșit care cauzează întreruperi în fluxul depozitului."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Control web în timp real cu potrivire Datamatrix",
+  "solutionLede": "Un cod Datamatrix este marcat pe fiecare produs; piesele sunt scanate și conectate la containerele lor respective pe măsură ce se deplasează între operațiuni. Acest lucru asigură urmărirea precisă a fiecărui container, permițând în același timp transportul eficient al containerelor acumulate la depozit. Întregul flux poate fi monitorizat în timp real prin sistem, oferind transparență deplină și control operațional.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Marcare Datamatrix",
+      "text": "Piesele produse sunt marcate cu un cod Datamatrix permanent după turnare."
+    },
+    {
+      "no": "02",
+      "title": "Conectare Container",
+      "text": "Pe măsură ce piesele sunt încărcate în containere, codurile lor sunt citite și potrivite cu ID-ul containerului."
+    },
+    {
+      "no": "03",
+      "title": "Verificare Rută",
+      "text": "Ruta containerului este verificată prin piesele scanate în timpul tranzițiilor."
+    },
+    {
+      "no": "04",
+      "title": "Monitorizare Web SCADA",
+      "text": "Toate mișcările și ratele de umplere sunt urmărite instantaneu de pe tablourile de bord Web SCADA."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Echipament de viziune și structură Web SCADA",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare Coduri Industriale",
+      "text": "Echipamente de teren capabile să citească coduri Datamatrix pe suprafețe metalice în condiții dure de turnătorie."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Management PLC Câmp",
+      "text": "Unități de control care gestionează declanșatoarele și configurațiile de citire a codurilor."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Interfață Web SCADA",
+      "text": "Ecrane de utilizator independente de browser în care sunt afișate mișcările de producție."
+    },
+    {
+      "tag": "URMĂRIRE",
+      "title": "Infrastructura OnSuite Trace",
+      "text": "Software de bază care menține potrivirea piesă-container și permite trasabilitatea."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea NEMAK Global MES",
+  "integrationDesc": "Aplicația funcționează integrată cu sistemul NEMAK Global MES (Manufacturing Execution System). Datele de trasabilitate a pieselor și mișcările containerelor colectate de pe teren sunt transmise direct sistemului global MES.",
+  "integrationList": [
+    {
+      "bold": "Conexiune MES Globală",
+      "text": "Aprobările de producție și mișcările logistice sunt sincronizate instantaneu în sistemul global."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Transparență completă și eficiență operațională",
+  "resultsGrid": [
+    {
+      "title": "Harta Piesă-Container",
+      "text": "Urmărirea pieselor este precisă știind clar ce container conține fiecare produs semifinit."
+    },
+    {
+      "title": "Optimizare Transport",
+      "text": "Datorită detectării containerelor acumulate, operațiunile de transport la depozit sunt derulate planificat."
+    },
+    {
+      "title": "Vizibilitate în Timp Real",
+      "text": "Cu Web SCADA, mișcările de producție și depozitare pot fi monitorizate instantaneu de oriunde."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

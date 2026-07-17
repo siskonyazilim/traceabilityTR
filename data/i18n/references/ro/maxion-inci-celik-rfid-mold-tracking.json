@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Auto",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Potrivirea corectă a matriței,",
+  "heroTitleLine2": "producție cu zero defecte.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de jante Maxion Inci Celik din Manisa, matrițele de producție au fost urmărite cu un sistem bazat pe RFID. Proiectul a avut ca scop asigurarea potrivirii corecte a matrițelor pe baza rețetelor și prevenirea utilizării matrițelor incorecte.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Controlul matriței și securitatea procesului în producția de jante",
+  "contextP1": "În cadrul proiectului implementat la fabrica de jante Maxion Inci Celik din Manisa, matrițele de producție au fost urmărite cu un sistem bazat pe RFID. Proiectul a avut ca scop asigurarea potrivirii corecte a matrițelor pe baza rețetelor și prevenirea utilizării matrițelor incorecte.",
+  "contextP2": "Asigurarea acurateței matriței în producție este de o importanță critică pentru calitatea produsului și eficiența liniei.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Utilizarea incorectă a matriței și riscurile de calitate",
+  "problemLede": "În producția de jante, trebuia garantat că se folosește matrița potrivită pentru fiecare rețetă. Selectarea manuală a matriței aducea riscul utilizării incorecte a acesteia și problemele aferente de calitate/deșeuri. În plus, imposibilitatea de a monitoriza fiabil durata de viață utilă a matrițelor îngreuna întreținerea și planificarea.",
+  "problemList": [
+    {
+      "bold": "Erori de Potrivire a Matriței",
+      "text": "Risc de pornire a producției cu o matriță greșită din cauza controalelor manuale, ducând la deșeuri."
+    },
+    {
+      "bold": "Dificultate în Urmărirea Vieții Matriței",
+      "text": "Imposibilitatea de a urmări automat ciclurile de rulare a matriței și programele de întreținere."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Permis de funcționare integrat PLC cu citire RFID",
+  "solutionLede": "În proiectul care folosește echipamente RFID, s-a asigurat integrarea cu PLC-ul existent pentru a potrivi matrițele pe baza rețetelor, prevenind utilizarea matrițelor incorecte. În timpul schimbărilor de rețetă, ID-urile matrițelor sunt citite prin RFID pentru a verifica potrivirea; când sunt potrivite, mașinii i se acordă permisiunea de a funcționa. Durata de viață a matrițelor este, de asemenea, urmărită prin sistemul bazat pe RFID.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Introducere Rețetă",
+      "text": "Rețeta de producție a jantei este selectată din sistemul PLC de către operator."
+    },
+    {
+      "no": "02",
+      "title": "Citire Matriță RFID",
+      "text": "Eticheta RFID de pe matriță este scanată de cititorul RFID de pe mașina de jante."
+    },
+    {
+      "no": "03",
+      "title": "Verificare Logică",
+      "text": "Sistemul PLC compară ID-ul citit al matriței cu cerințele rețetei."
+    },
+    {
+      "no": "04",
+      "title": "Permis de Funcționare",
+      "text": "Când potrivirea este corectă, mașinii i se permite să ruleze și producția începe."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Infrastructură RFID industrială și PLC",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Etichete RFID Rezistente la Ulei",
+      "text": "Etichete RFID cu durabilitate ridicată la ulei de bor și substanțe chimice în medii dure."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Dispozitive și Cititoare RFID",
+      "text": "Hardware RFID care citește precis ID-urile matrițelor și le transmite către PLC."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "Integrare PLC Existent",
+      "text": "Sistem PLC care compară logic datele matriței cu rețetele și deblochează mașina."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Modul Urmărire Viață Matriță",
+      "text": "Strat software care urmărește durata de viață și planifică întreținerea în funcție de cicluri."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare PLC de Câmp și Blocare Logică",
+  "integrationDesc": "Sistemul rulează integrat cu infrastructura PLC existentă a clientului. După ce ID-ul matriței este scanat și verificat prin RFID, blocarea logică a PLC este deschisă, permițând mașinii să ruleze.",
+  "integrationList": [
+    {
+      "bold": "Control Logic PLC",
+      "text": "Potrivirea matriței este blocată la nivelul PLC, prevenind fizic pornirea producției cu matrița greșită."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Producție fără erori și întreținere bazată pe date",
+  "resultsGrid": [
+    {
+      "title": "Zero Matrițe Greșite",
+      "text": "Utilizarea incorectă a matrițelor este complet prevenită datorită potrivirii automate RFID și blocării PLC."
+    },
+    {
+      "title": "Economii de Calitate",
+      "text": "Deșeurile de producție și abaterile de calitate rezultate din instalarea incorectă a matriței sunt eliminate."
+    },
+    {
+      "title": "Întreținere Predictivă",
+      "text": "Planificarea întreținerii matriței a devenit bazată pe date prin urmărirea duratei de viață și a ciclurilor."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

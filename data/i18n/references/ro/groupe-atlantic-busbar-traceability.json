@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Inapoi la Proiecte de Referinta",
+  "sector": "Sector",
+  "location": "Locatie",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software si Integrare",
+  "tagValue": "Metal",
+  "locationValue": "Izmir Gaziemir ESBAS",
+  "heroTitleLine1": "Groupe Atlantic",
+  "heroTitleLine2": "Trasabilitatea Barelor",
+  "heroSub": "La fabrica Groupe Atlantic din Izmir Gaziemir ESBAS Free Zone, produsele de pe barele de productie au fost urmarite pe operatiuni pana la ambalare.",
+  "contextEyebrow": "Client si Context",
+  "contextTitle": "Urmarire end-to-end pe barele de productie",
+  "contextP1": "Groupe Atlantic produce calorifere de baie in fabrica din Izmir. In acest proiect, produsele de pe barele de productie au fost urmarite operatiune cu operatiune.",
+  "contextP2": "Obiectivul a fost cresterea vizibilitatii produs-bara pana la ambalare si consolidarea controlului de proces.",
+  "problemEyebrow": "Nevoie / Problema",
+  "problemTitle": "Lipsa de vizibilitate in urmarirea manuala",
+  "problemLede": "In fiecare etapa era necesar sa se stie ce produse sunt pe fiecare bara si in ce operatiune se afla.",
+  "problemList": [
+    {
+      "bold": "Relatia Produs-Bara",
+      "text": "Urmarirea manuala ingreuna mentinerea corecta a relatiei dintre produs si bara."
+    },
+    {
+      "bold": "Starea Operatiunii",
+      "text": "Vizibilitatea limitata pe etape crea riscuri pentru controlul procesului."
+    },
+    {
+      "bold": "Gol de Trasabilitate",
+      "text": "Era necesara o structura digitala pentru trasabilitate continua pana la ambalare."
+    }
+  ],
+  "solutionEyebrow": "Solutie",
+  "solutionTitle": "Urmarire digitala a barelor pe operatiuni",
+  "solutionLede": "Barele de productie au fost urmarite, iar relatia produs-bara si starea operatiunii au fost inregistrate in timp real.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Citire Cod",
+      "text": "Barele si produsele sunt citite la tranzitiile de operatiune cu cititoare de teren."
+    },
+    {
+      "no": "02",
+      "title": "Inregistrare Operatiune",
+      "text": "Relatia produs-bara si starea operatiunii sunt actualizate instant."
+    },
+    {
+      "no": "03",
+      "title": "Procesare SCADA",
+      "text": "Datele de urmarire sunt procesate prin infrastructura SCADA existenta."
+    },
+    {
+      "no": "04",
+      "title": "Urmarire pana la Ambalare",
+      "text": "Barele si produsele sunt urmarite continuu pana la ambalare."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "Cititoare de cod, PLC si OnSuite Trace",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare de Cod",
+      "text": "Cititoare de teren pentru scanarea barelor si produselor."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Control PLC",
+      "text": "PLC-ul gestioneaza fluxul din teren si transmite datele catre proces."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Integrare SCADA",
+      "text": "Citirile sunt procesate in SCADA pentru trasabilitate pe operatiuni."
+    },
+    {
+      "tag": "PLATFORMA",
+      "title": "OnSuite Trace",
+      "text": "Trasabilitatea si managementul procesului sunt centralizate in OnSuite Trace."
+    }
+  ],
+  "integrationEyebrow": "Integrari",
+  "integrationTitle": "Integrare cu SCADA si ERP",
+  "integrationDesc": "Sistemul functioneaza integrat cu infrastructura SCADA si ERP a clientului. Datele de urmarire sunt procesate in SCADA si partajate cu ERP.",
+  "integrationList": [
+    {
+      "bold": "Integrare SCADA",
+      "text": "Datele de urmarire pentru bare si produse sunt procesate prin sistemul SCADA existent."
+    },
+    {
+      "bold": "Comunicare ERP",
+      "text": "Datele de trasabilitate si productie sunt partajate cu ERP pentru management centralizat."
+    }
+  ],
+  "resultsEyebrow": "Rezultate",
+  "resultsTitle": "Vizibilitate si control de proces imbunatatite",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate pe Operatiuni",
+      "text": "Barele si produsele au devenit trasabile pana la ambalare, operatiune cu operatiune."
+    },
+    {
+      "title": "Vizibilitate Produs-Bara",
+      "text": "Relatia produs-bara si starea operatiunii au devenit vizibile la fiecare etapa."
+    },
+    {
+      "title": "Mai Putina Urmarire Manuala",
+      "text": "Reducerea urmaririi manuale a consolidat controlul de proces si trasabilitatea."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriti sa va transformati si procesele de productie?",
+  "ctaSubtitle": "Contactati-ne pentru a discuta cum putem adapta o solutie similara pentru operatiunea dvs.",
+  "ctaPrimary": "Contactati-ne"
+}

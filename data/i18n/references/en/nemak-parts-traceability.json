@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir Cigli",
+  "heroTitleLine1": "In discrete manufacturing,",
+  "heroTitleLine2": "Datamatrix-based part-container relationship.",
+  "heroSub": "In the discrete manufacturing traceability system implemented at NEMAK's factory in Cigli (Izmir), semi-finished products are tracked throughout the entire manufacturing and logistics process.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Semi-finished product movements in the foundry industry",
+  "contextP1": "NEMAK's factory in Cigli (Izmir) produces parts for the automotive supply industry using the casting method. In the discrete manufacturing traceability system implemented at this factory, semi-finished products are tracked throughout the entire manufacturing and logistics process.",
+  "contextP2": "In discrete manufacturing, instantly controlling the logistics movements and storage status of each part is critical to increasing operational efficiency and preventing losses.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Container tracking difficulties and inefficiency",
+  "problemLede": "In the discrete manufacturing structure, it was necessary to track semi-finished products throughout the manufacturing and logistics process, knowing which part was in which container at every stage. Manual tracking of this relationship carried the risk of traceability gaps and inefficiency in container movements; the process needed real-time visibility.",
+  "problemList": [
+    {
+      "bold": "Container Matching Gap",
+      "text": "Inability to know in real time which part is in which transport container."
+    },
+    {
+      "bold": "Logistics Delays",
+      "text": "Accumulated or wrongly routed containers causing disruptions in the warehouse flow."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Real-time web control with Datamatrix matching",
+  "solutionLede": "A Datamatrix code is marked on each product; parts are scanned and linked to their respective containers as they move between operations. This ensures precise tracking of each container while allowing efficient transport of accumulated containers to the warehouse. The entire flow can be monitored in real time through the system, providing full transparency and operational control.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Datamatrix Marking",
+      "text": "Produced parts are marked with a permanent Datamatrix code after casting."
+    },
+    {
+      "no": "02",
+      "title": "Container Linking",
+      "text": "As parts are loaded into containers, their codes are read and matched with the container ID."
+    },
+    {
+      "no": "03",
+      "title": "Route Verification",
+      "text": "The container route is verified through the parts scanned during transitions between operations."
+    },
+    {
+      "no": "04",
+      "title": "Web SCADA Monitoring",
+      "text": "All movements and fill rates are tracked instantly from web-based SCADA dashboards."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Vision equipment and Web SCADA structure",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Industrial Code Readers",
+      "text": "Field hardware capable of reading Datamatrix codes on metal surfaces in harsh foundry conditions."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Management",
+      "text": "Control units managing code reading triggers and configurations."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Web SCADA Interface",
+      "text": "Browser-independent user screens where instant production and container movements are displayed."
+    },
+    {
+      "tag": "TRACKING",
+      "title": "OnSuite Trace Infrastructure",
+      "text": "Core software maintaining part-container matching and enabling logistics traceability."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "NEMAK Global MES Integration",
+  "integrationDesc": "The application operates integrated with the NEMAK Global MES (Manufacturing Execution System). Part traceability data and container movements collected from the field are directly transmitted to the global MES system.",
+  "integrationList": [
+    {
+      "bold": "Global MES Connection",
+      "text": "Production approvals and logistics movements are instantly synchronized to NEMAK's global management system."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "End-to-end transparency and operational efficiency",
+  "resultsGrid": [
+    {
+      "title": "Part-Container Mapping",
+      "text": "Part tracking is made precise by clearly knowing which container holds each semi-finished product."
+    },
+    {
+      "title": "Transportation Optimization",
+      "text": "Thanks to the detection of accumulated containers, transport operations to the warehouse are run in a planned manner."
+    },
+    {
+      "title": "Real-Time Visibility",
+      "text": "With Web SCADA screens, production and warehouse movements can be monitored instantly from anywhere."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

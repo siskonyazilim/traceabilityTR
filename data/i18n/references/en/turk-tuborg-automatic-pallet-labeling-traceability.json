@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Food",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Turk Tuborg",
+  "heroTitleLine2": "Automatic Pallet Labeling and Traceability",
+  "heroSub": "At Turk Tuborg's Izmir plant, pallet labeling was automated and pallet-level traceability was established.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Automated pallet-level labeling and traceability",
+  "contextP1": "Turk Tuborg's Izmir factory produces alcoholic beverages. In this project, labeling of outgoing pallets was automated and pallet-level traceability was enabled.",
+  "contextP2": "The goal was to move labeling away from operator dependency into an automated, verifiable, and work-order-compliant process.",
+  "problemEyebrow": "Need / Problem",
+  "problemTitle": "Manual labeling created error and shipment risks",
+  "problemLede": "Pallet labels were printed manually under operator control. This increased dependency on operators and introduced risks of incorrect labels and shipment errors.",
+  "problemList": [
+    {
+      "bold": "Operator Dependency",
+      "text": "Manual execution made the process less standardized and harder to control."
+    },
+    {
+      "bold": "Incorrect Label Risk",
+      "text": "Wrong labels could cause product-to-pallet information mismatch."
+    },
+    {
+      "bold": "Shipment Accuracy Risk",
+      "text": "Labels not aligned with work orders could negatively affect dispatch accuracy."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "SAP work-order-driven automated labeling with verification",
+  "solutionLede": "A pallet applicator was deployed for automatic labeling on three pallet sides. Label content is selected by SAP work order and verified after printing.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Work Order Selection",
+      "text": "The pallet label to be printed is determined by the work order received from SAP."
+    },
+    {
+      "no": "02",
+      "title": "3-Side Automatic Print",
+      "text": "The pallet applicator applies labels automatically on three sides of each pallet."
+    },
+    {
+      "no": "03",
+      "title": "Post-Print Verification",
+      "text": "After printing, the label is scanned and validated for correctness."
+    },
+    {
+      "no": "04",
+      "title": "Fallback for Continuity",
+      "text": "If applicator failure occurs, manual labeling can be activated to avoid downtime."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Pallet applicator, PLC, C# SCADA, and SAP integration",
+  "techGrid": [
+    {
+      "tag": "LABELING",
+      "title": "Pallet Applicator",
+      "text": "Shop-floor equipment that prints and applies labels automatically on three pallet sides."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC System",
+      "text": "Manages field flow, equipment states, and labeling sequence control."
+    },
+    {
+      "tag": "APPLICATION",
+      "title": "C# SCADA",
+      "text": "Controls work-order selection, print execution, verification, and SAP data exchange."
+    },
+    {
+      "tag": "INTEGRATION",
+      "title": "SAP",
+      "text": "Provides work-order-based label data and receives central process outcomes."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Centralized SAP work-order-based label governance",
+  "integrationDesc": "The system is integrated with SAP. The pallet label is selected according to SAP work order, and print/verification outcomes are shared back for centralized process control.",
+  "integrationList": [
+    {
+      "bold": "SAP Work Order Integration",
+      "text": "Label content and print flow are automatically driven by SAP work orders."
+    },
+    {
+      "bold": "Print and Verification Feedback",
+      "text": "Post-print scan and validation results are sent to SAP, strengthening traceability."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Right label, accurate shipment, continuous operation",
+  "resultsGrid": [
+    {
+      "title": "Reduced Operator Dependency",
+      "text": "Automated pallet labeling removed operational dependency on manual operator initiative."
+    },
+    {
+      "title": "Higher Shipment Accuracy",
+      "text": "Work-order-based automatic printing and verification reduced wrong-label and shipment errors."
+    },
+    {
+      "title": "Operational Continuity",
+      "text": "Manual labeling fallback keeps the process running even during applicator failures."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to automate and verify your pallet labeling process?",
+  "ctaSubtitle": "Contact us for SAP work-order integration, automated labeling, and post-print verification.",
+  "ctaPrimary": "Contact Us"
+}

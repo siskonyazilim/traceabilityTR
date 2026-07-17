@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Doğru kalıp eşleşmesi,",
+  "heroTitleLine2": "sıfır hatalı üretim.",
+  "heroSub": "Maxion İnci Çelik'in Manisa'daki jant fabrikasında hayata geçirilen projede, üretim kalıpları RFID tabanlı bir sistemle takip edilmiştir. Proje, kalıpların reçete bazında doğru şekilde eşleştirilmesini ve yanlış kalıp kullanımının önlenmesini amaçlamıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Jant üretiminde kalıp kontrolü ve süreç güvenliği",
+  "contextP1": "Maxion İnci Çelik'in Manisa'daki jant fabrikasında hayata geçirilen projede, üretim kalıpları RFID tabanlı bir sistemle takip edilmiştir. Proje, kalıpların reçete bazında doğru şekilde eşleştirilmesini ve yanlış kalıp kullanımının önlenmesini amaçlamıştır.",
+  "contextP2": "Üretimde kalıp doğruluğunun sağlanması, ürün kalitesi ve hat verimliliği açısından kritik öneme sahiptir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Yanlış kalıp kullanımı ve kalite riskleri",
+  "problemLede": "Jant üretiminde her reçeteye uygun kalıbın kullanıldığının güvence altına alınması gerekiyordu. Kalıp seçiminin manuel yürütülmesi, yanlış kalıp kullanımı ve buna bağlı kalite/hurda riskini beraberinde getiriyordu. Ayrıca kalıpların kullanım ömürlerinin sağlıklı biçimde izlenememesi, bakım ve planlamayı zorlaştırıyordu.",
+  "problemList": [
+    {
+      "bold": "Kalıp Eşleştirme Hataları",
+      "text": "Manuel kontroller nedeniyle yanlış kalıpla üretime başlanması ve hurda üretimi riski."
+    },
+    {
+      "bold": "Kalıp Ömrü İzleme Zorluğu",
+      "text": "Kalıpların çalışma sayılarının (stroke) ve bakım zamanlarının otomatik takip edilememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "RFID okuma ile PLC entegre çalışma izni",
+  "solutionLede": "RFID ekipmanları kullanılan projede, mevcut PLC ile entegrasyon sağlanarak kalıpların reçete bazında eşleştirmeleri yapılmış ve yanlış kalıp kullanımının önüne geçilmiştir. Reçete değişimlerinde kalıp ID'leri RFID ile okunarak eşleştirmenin sağlanıp sağlanmadığı kontrol edilmiş, eşleşme sağlandığında makineye çalışma izni verilmiştir. Ayrıca kalıp ömürleri RFID tabanlı sistem üzerinden takip edilebilmektedir.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Reçete Girişi",
+      "text": "Operatör tarafından jant üretim reçetesi PLC sisteminden seçilir."
+    },
+    {
+      "no": "02",
+      "title": "RFID Kalıp Okuma",
+      "text": "Kalıp üzerindeki RFID etiket jant makinesindeki RFID okuyucu ile taranır."
+    },
+    {
+      "no": "03",
+      "title": "Lojik Doğrulama",
+      "text": "PLC sistemi, okunan kalıp ID'si ile reçete gereksinimlerini karşılaştırır."
+    },
+    {
+      "no": "04",
+      "title": "Çalışma İzni",
+      "text": "Eşleşme doğru olduğunda makineye çalışma izni verilir ve üretim başlar."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Endüstriyel RFID ve PLC altyapısı",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Bor Yağına Dayanıklı RFID Etiketler",
+      "text": "Zorlu üretim ortamındaki bor yağı ve kimyasallara karşı yüksek dayanıklılığa sahip RFID etiketler."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "RFID Cihazları ve Okuyucular",
+      "text": "Kalıp ID'lerini hassas şekilde okuyan ve PLC'ye aktaran RFID donanımları."
+    },
+    {
+      "tag": "KONTROL",
+      "title": "Mevcut PLC Entegrasyonu",
+      "text": "Kalıp verilerini reçetelerle lojik düzeyde karşılaştıran ve kilit açan PLC sistemi."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "Kalıp Ömrü Takip Modülü",
+      "text": "Kalıpların çevrim sayılarına göre ömür takibini ve bakım planlamasını yapan yazılım katmanı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Saha PLC ve Lojik Kilit Entegrasyonu",
+  "integrationDesc": "Sistem, müşterinin mevcut PLC altyapısı ile entegre çalışmaktadır. Kalıp ID'si RFID ile taranıp doğrulandıktan sonra PLC lojik kilidi açılır ve makinenin çalışmasına izin verilir.",
+  "integrationList": [
+    {
+      "bold": "PLC Saha Lojik Kontrolü",
+      "text": "Kalıp eşleşmesi PLC düzeyinde kilitlenerek yanlış kalıpla üretime başlanması fiziksel olarak engellenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Hatasız üretim ve veriye dayalı bakım",
+  "resultsGrid": [
+    {
+      "title": "Sıfır Yanlış Kalıp",
+      "text": "Otomatik RFID eşleştirmesi ve PLC kilidi sayesinde yanlış kalıp kullanımı tamamen önlenmiştir."
+    },
+    {
+      "title": "Kalite ve Hurda Tasarrufu",
+      "text": "Hatalı kalıp kurulumlarından kaynaklanan üretim hurdaları ve kalite sapmaları sıfırlanmıştır."
+    },
+    {
+      "title": "Tahminleyici Bakım Altyapısı",
+      "text": "Kalıp ömürlerinin ve stroke sayılarının takibiyle kalıp bakım planlaması veriye dayalı hale gelmiştir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

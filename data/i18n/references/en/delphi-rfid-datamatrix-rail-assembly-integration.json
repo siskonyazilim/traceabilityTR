@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Delphi Technologies",
+  "heroTitleLine2": "Rail Assembly RFID-Datamatrix Integration",
+  "heroSub": "At Delphi Technologies' plant in Izmir ESBAS Free Zone, RFID- and Datamatrix-based traceability methods were unified into a single flow on the rail assembly line.",
+  "contextEyebrow": "Client and Context",
+  "contextTitle": "Bringing RFID and Datamatrix into one stream",
+  "contextP1": "Delphi Technologies manufactures for the automotive supplier industry at its Izmir ESBAS facility. In this project, RFID and Datamatrix tracking methods were integrated into one structure on the rail assembly line.",
+  "contextP2": "The objective was to ensure uninterrupted product traceability across all operations under a single serial identity.",
+  "problemEyebrow": "Need / Problem",
+  "problemTitle": "Gap risk between two tracking methods",
+  "problemLede": "Some operations ran on RFID tags while others ran on Datamatrix codes.",
+  "problemList": [
+    {
+      "bold": "Fragmented Tracking",
+      "text": "Keeping RFID and Datamatrix flows separate made full-operation continuity difficult."
+    },
+    {
+      "bold": "Traceability Gap",
+      "text": "Data discontinuity between methods created a risk of missing product history."
+    },
+    {
+      "bold": "Single Flow Requirement",
+      "text": "Both methods had to be merged into one traceability flow based on one serial identity."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Continuous flow from RFID serial to Datamatrix",
+  "solutionLede": "At marking, the serial number on RFID was converted into Datamatrix and tracking continued with Datamatrix in subsequent operations.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "RFID Reading",
+      "text": "Serial identity is read from RFID tags on products."
+    },
+    {
+      "no": "02",
+      "title": "Datamatrix Conversion",
+      "text": "At marking, RFID serial is transformed and printed as Datamatrix."
+    },
+    {
+      "no": "03",
+      "title": "Operation Tracking",
+      "text": "Datamatrix reads in following stations sustain the tracking flow."
+    },
+    {
+      "no": "04",
+      "title": "Unified Product History",
+      "text": "RFID- and Datamatrix-based operation data are merged under one serial identity."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "RFID, laser marking, code reading, and PLC",
+  "techGrid": [
+    {
+      "tag": "RFID",
+      "title": "RFID Readers",
+      "text": "Reads serial identity from RFID tags and starts the digital traceability flow."
+    },
+    {
+      "tag": "MARKING",
+      "title": "Laser Printer",
+      "text": "Converts RFID serial identity into Datamatrix and prints it onto product flow."
+    },
+    {
+      "tag": "CODE READING",
+      "title": "Datamatrix Readers",
+      "text": "Reads Datamatrix codes in subsequent operations for continuity."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Management",
+      "text": "Combines RFID and Datamatrix read events into a single process flow."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Central data sharing with Oracle",
+  "integrationDesc": "The system is integrated with Oracle; traceability data from RFID and Datamatrix operations is shared using a serial-based identity model.",
+  "integrationList": [
+    {
+      "bold": "Oracle Integration",
+      "text": "Operation data is sent to Oracle for centralized process monitoring and management."
+    }
+  ],
+  "resultsEyebrow": "Impact",
+  "resultsTitle": "End-to-end process integrity",
+  "resultsGrid": [
+    {
+      "title": "Continuous Traceability",
+      "text": "Products became continuously traceable from marking through all operations."
+    },
+    {
+      "title": "Method Convergence",
+      "text": "RFID and Datamatrix operation streams were unified under one serial identity."
+    },
+    {
+      "title": "Process Integrity",
+      "text": "Discontinuity between two methods was removed, ensuring full process integrity."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to unify your tracking methods in one flow?",
+  "ctaSubtitle": "Let us discuss how to combine RFID, Datamatrix, and enterprise integrations in your operation.",
+  "ctaPrimary": "Contact Us"
+}

@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir ESBAŞ",
+  "heroTitleLine1": "Takım Ucunda Dijital Kimlik,",
+  "heroTitleLine2": "Üretimde Doğru Eşleşme Güvencesi",
+  "heroSub": "Delphi Technologies'in İzmir ESBAŞ Serbest Bölge'deki fabrikasında hayata geçirilen projede, üretimde kullanılan takım uçları Datamatrix kod tabanlı sistemle takip edilerek doğru ürün-takım eşleşmesi, takım ömrü ve bileme süreci izlenebilir hale getirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Takım ucu akışında uçtan uca izlenebilirlik",
+  "contextP1": "Delphi Technologies'in İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv yan sanayine yönelik üretim yapmaktadır. Bu fabrikada hayata geçirilen projede, üretimde kullanılan takım uçları Datamatrix kod tabanlı bir sistemle takip edilmiştir.",
+  "contextP2": "Proje ile doğru ürün-takım eşleşmesi, takım ömrü ve tekrar kullanım için yürütülen bileme süreci izlenebilir ve yönetilebilir hale getirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Yanlış takım kullanımında kalite riski ve görünürlük kaybı",
+  "problemLede": "Üretimde her ürün için doğru takım ucunun kullanıldığının güvence altına alınması gerekiyordu. Manuel kontrol yaklaşımı hem hata riskini artırıyor hem de süreç görünürlüğünü azaltıyordu.",
+  "problemList": [
+    {
+      "bold": "Ürün-Takım Eşleşmesi",
+      "text": "Ürün ile takım ucunun manuel kontrolü yanlış takım kullanımı riskini yükseltiyordu."
+    },
+    {
+      "bold": "Takım Ömrü Takibi",
+      "text": "Takım uçlarının kullanım ömrü sağlıklı izlenemediği için planlama ve maliyet kontrolü zorlaşıyordu."
+    },
+    {
+      "bold": "Bileme Süreci İzleme",
+      "text": "Bilemeye gönderilen takım uçlarının geçmişini izlemek için güvenilir ve merkezi bir kayıt altyapısı gerekliydi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Datamatrix tabanlı tekil takım takibi ve otomatik doğrulama",
+  "solutionLede": "Takım uçları üzerine Datamatrix kod markalanarak her takım ucu tekil olarak tanımlandı. Üretim sırasında takım ucu okunup ilgili ürünle eşleştirme kontrolü yapıldı; ayrıca takım ömrü ve bileme kayıtları sistem üzerinde takip edilir hale getirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Tekil Kod Markalama",
+      "text": "Her takım ucu Datamatrix kod ile tekil kimliğe kavuşturuldu."
+    },
+    {
+      "no": "02",
+      "title": "Eşleşme Doğrulama",
+      "text": "Üretim anında takım ucu kodu okunarak ilgili ürünle otomatik eşleşme kontrolü yapıldı."
+    },
+    {
+      "no": "03",
+      "title": "Takım Ömrü Takibi",
+      "text": "Her takım ucunun kullanım çevrimi ve ömrü sistem üzerinde izlenerek veri odaklı yönetim sağlandı."
+    },
+    {
+      "no": "04",
+      "title": "Bileme Geçmişi",
+      "text": "Bilemeye gönderilen takım uçlarının süreç kayıtları tutularak bileme geçmişi izlenebilir hale getirildi."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Datamatrix okuma, saha otomasyonu ve SCADA altyapısı",
+  "techGrid": [
+    {
+      "tag": "KODLAMA",
+      "title": "Datamatrix Kodları",
+      "text": "Takım uçları üzerindeki tekil kimliği taşıyan kalıcı kod yapısıdır."
+    },
+    {
+      "tag": "OKUMA",
+      "title": "Kod Okuyucular",
+      "text": "Üretim sırasında takım ucu kodlarını okuyarak anlık doğrulama sağlar."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha akışını yönetir ve doğrulama adımlarını üretim süreciyle senkronize eder."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "Ürün-takım eşleştirmesi, takım ömrü takibi, bileme kayıtları ve Oracle veri alışverişini yönetir."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Oracle ile merkezi süreç yönetimi",
+  "integrationDesc": "Sistem Oracle ile entegre çalışmaktadır; ürün-takım eşleştirmesi, takım ömrü ve bileme süreçlerine ilişkin veriler Oracle ile paylaşılarak süreç merkezi olarak izlenmekte ve yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Oracle Entegrasyonu",
+      "text": "Üretim doğrulama ve takım yaşam döngüsü verileri Oracle ile çift yönlü paylaşılır."
+    },
+    {
+      "bold": "OnSuite Trace Platformu",
+      "text": "İzlenebilirlik ve süreç yönetimi OnSuite Trace üzerinde merkezi olarak yürütülür."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Kalite güvencesi ve veri odaklı takım yönetimi",
+  "resultsGrid": [
+    {
+      "title": "Yanlış Takım Kullanımının Önlenmesi",
+      "text": "Ürün-takım eşleşmesi otomatik doğrulandığı için yanlış takım kullanımına bağlı kalite riski azaltıldı."
+    },
+    {
+      "title": "Ömür Bazlı Planlama",
+      "text": "Takım uçlarının tekil kimlik üzerinden yaşam döngüsü takibiyle planlama ve maliyet kontrolü güçlendi."
+    },
+    {
+      "title": "Bileme Geçmişi Görünürlüğü",
+      "text": "Bileme kayıtlarının sistematik tutulmasıyla her takım ucunun geçmişi izlenebilir hale getirildi."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Takım yönetimi ve üretim doğrulama süreçlerinizi güçlendirmek ister misiniz?",
+  "ctaSubtitle": "Datamatrix tabanlı izlenebilirlik ve OnSuite Trace entegrasyonu ile süreçlerinizi güvence altına alalım.",
+  "ctaPrimary": "İletişime Geç"
+}

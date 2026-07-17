@@ -1,0 +1,121 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Control complet la fiecare stație,",
+  "heroTitleLine2": "trasabilitate end-to-end pe întreaga linie.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de producție a cuptoarelor BSH din Çerkezköy, s-a asigurat trasabilitatea pe liniile de asamblare pe baza numărului de serie al produsului.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Monitorizarea în timp real a proceselor de producție",
+  "contextP1": "În cadrul proiectului implementat la fabrica de producție a cuptoarelor BSH din Çerkezköy, s-a asigurat trasabilitatea pe liniile de asamblare pe baza numărului de serie al produsului.",
+  "contextP2": "Proiectul a fost realizat pentru a monitoriza procesul de producție la nivel de stație și pentru a efectua analize de performanță.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Dificultăți de urmărire și eficiență",
+  "problemLede": "Fiecare produs trebuia urmărit la nivel de stație pe liniile de asamblare și trebuia înregistrat ce produs a trecut prin ce stații.",
+  "problemList": [
+    {
+      "bold": "Lipsa Urmăririi pe Stație",
+      "text": "Imposibilitatea de a înregistra automat și precis prin ce stații au trecut produsele de-a lungul liniei."
+    },
+    {
+      "bold": "Dificultăți de Măsurare a Cycle Time",
+      "text": "Imposibilitatea de a identifica blocajele din cauza lipsei de măsurare a datelor de cycle time la nivel de stație și produs."
+    },
+    {
+      "bold": "Probleme de Echilibrare a Liniei",
+      "text": "Lucrările de echilibrare a liniei care nu se bazează pe date reale, limitând îmbunătățirea eficienței."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Monitorizare în timp real și analiză",
+  "solutionLede": "Trasabilitatea pe liniile de asamblare a fost realizată prin urmărirea numărului de serie al produsului la nivel de stație. Analizele de cycle time au ajutat la identificarea blocajelor la nivel de stație și de produs; diagramele box plot au vizualizat distribuțiile de durată pe stații, oferind previziuni pentru echilibrarea liniei. Prin integrarea SAP, datele master au fost preluate din SAP și integrate în sistem.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Citire Număr Serie",
+      "text": "Numerele de serie ale produselor sunt scanate automat la stații folosind cititoare de coduri de bare."
+    },
+    {
+      "no": "02",
+      "title": "Management Câmp PLC",
+      "text": "Structura PLC coordonează fluxul de lucru și declanșatoarele de citire în timp real."
+    },
+    {
+      "no": "03",
+      "title": "Analiză Cycle Time",
+      "text": "Timpii de ciclu sunt analizați pe baza citirilor din stații și a măsurătorilor de durată."
+    },
+    {
+      "no": "04",
+      "title": "Distribuție Box Plot",
+      "text": "Distribuțiile de durată sunt vizualizate cu diagrame box plot, oferind previziuni pentru echilibrarea liniei."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Infrastructură hardware de trasabilitate și analiză",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură Câmp PLC",
+      "text": "Infrastructură PLC care gestionează automatizarea câmpului, tranzițiile stațiilor și declanșatoarele de citire."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare Cod de Bare",
+      "text": "Scannere industriale care citesc numerele de serie ale produselor la stații cu mare precizie."
+    },
+    {
+      "tag": "ANALIZĂ",
+      "title": "Cycle Time și Box Plot",
+      "text": "Detectarea blocajelor și vizualizări grafice box plot prin măsurători de durată."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare SAP",
+      "text": "Transfer bidirecțional al datelor master de produs și producție prin SAP."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Stratul software central de control al trasabilității și managementului proceselor."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare bidirecțională SAP",
+  "integrationDesc": "Sistemul funcționează integrat bidirecțional cu SAP. Datele master de produs și producție sunt preluate prin SAP și transferate în sistemul de trasabilitate; procesele de urmărire și analiză la nivel de stație sunt desfășurate utilizând aceste date actualizate.",
+  "integrationList": [
+    {
+      "bold": "Preluare Date Master SAP",
+      "text": "Rețeta produsului și datele master sunt preluate automat prin SAP și sincronizate cu sistemul."
+    },
+    {
+      "bold": "Flux de Date Sursă Unică",
+      "text": "Se stabilesc legături consistente și actualizate între aplicația de teren și sistemul ERP corporativ."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Creșterea eficienței pe bază de date",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate Completă",
+      "text": "S-a asigurat trasabilitatea end-to-end la nivel de număr de serie al produsului pe stații."
+    },
+    {
+      "title": "Identificare Blocaje",
+      "text": "Blocajele au devenit clar vizibile prin analize de cycle time și diagrame box plot."
+    },
+    {
+      "title": "Echilibrare Linie",
+      "text": "Eficiența a fost îmbunătățită prin oferirea de previziuni pentru echilibrarea liniei pe baza distribuțiilor de durată."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

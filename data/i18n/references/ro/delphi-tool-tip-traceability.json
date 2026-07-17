@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria auto",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Identitate Digitală pe Vârfuri de Unealtă,",
+  "heroTitleLine2": "Potrivire Corectă în Producție",
+  "heroSub": "La fabrica Delphi Technologies din Izmir ESBAS Free Zone, vârfurile de unealtă folosite în producție au fost urmărite printr-un sistem bazat pe coduri Data Matrix, pentru a face trasabile potrivirea produs-unealtă, durata de viață și procesele de ascuțire.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Trasabilitate end-to-end în fluxul vârfului de unealtă",
+  "contextP1": "Fabrica Delphi Technologies din Izmir ESBAS Free Zone produce pentru industria auto. În acest proiect, vârfurile de unealtă utilizate în producție au fost urmărite printr-un sistem bazat pe Data Matrix.",
+  "contextP2": "Proiectul a făcut trasabile și gestionabile potrivirea produs-unealtă, monitorizarea duratei de viață și fluxul de ascuțire.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Risc de calitate și pierdere de vizibilitate din utilizarea greșită a uneltei",
+  "problemLede": "Era necesară garantarea utilizării vârfului de unealtă corect pentru fiecare produs. Controalele manuale creșteau riscul de eroare și reduceau vizibilitatea procesului.",
+  "problemList": [
+    {
+      "bold": "Potrivire Produs-Unealtă",
+      "text": "Verificarea manuală produs-vârf de unealtă creștea riscul de utilizare greșită."
+    },
+    {
+      "bold": "Monitorizare Durată de Viață",
+      "text": "Lipsa unei monitorizări sănătoase a duratei de viață îngreuna planificarea și controlul costurilor."
+    },
+    {
+      "bold": "Urmărirea Procesului de Ascuțire",
+      "text": "Era necesară o structură centrală fiabilă pentru istoricul uneltelor trimise la ascuțire."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Urmărire unică pe Data Matrix și validare automată",
+  "solutionLede": "Fiecare vârf de unealtă a fost marcat cu cod Data Matrix și identificat unic. În producție, codul a fost citit și potrivit cu produsul relevant; durata de viață și înregistrările de ascuțire au fost urmărite în sistem.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Marcare Cod Unic",
+      "text": "Fiecare vârf de unealtă a primit identitate unică prin cod Data Matrix."
+    },
+    {
+      "no": "02",
+      "title": "Validare Potrivire",
+      "text": "În producție, codul vârfului de unealtă este citit și corelat automat cu produsul relevant."
+    },
+    {
+      "no": "03",
+      "title": "Monitorizare Durată de Viață",
+      "text": "Ciclul de utilizare și durata fiecărui vârf sunt urmărite pentru management bazat pe date."
+    },
+    {
+      "no": "04",
+      "title": "Istoric de Ascuțire",
+      "text": "Înregistrările uneltelor trimise la ascuțire sunt stocate pentru trasabilitate completă."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Citire Data Matrix, automatizare de teren și infrastructură SCADA",
+  "techGrid": [
+    {
+      "tag": "CODARE",
+      "title": "Coduri Data Matrix",
+      "text": "Structură de cod permanentă care transportă identitatea unică pe vârfuri de unealtă."
+    },
+    {
+      "tag": "CITIRE",
+      "title": "Cititoare de Cod",
+      "text": "Citesc codurile vârfului de unealtă în timpul producției pentru validare instantă."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură PLC",
+      "text": "Gestionează fluxul în teren și sincronizează pașii de validare cu producția."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA C#",
+      "text": "Gestionează potrivirea produs-unealtă, durata de viață, înregistrările de ascuțire și schimbul de date cu Oracle."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Management centralizat al procesului cu Oracle",
+  "integrationDesc": "Sistemul funcționează integrat cu Oracle; datele privind potrivirea produs-unealtă, durata de viață și procesul de ascuțire sunt partajate cu Oracle pentru monitorizare și management centralizat.",
+  "integrationList": [
+    {
+      "bold": "Integrare Oracle",
+      "text": "Datele de validare în producție și ciclul de viață al uneltei sunt schimbate bidirecțional cu Oracle."
+    },
+    {
+      "bold": "Platforma OnSuite Trace",
+      "text": "Trasabilitatea și managementul proceselor sunt executate central pe OnSuite Trace."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Asigurarea calității și managementul uneltelor bazat pe date",
+  "resultsGrid": [
+    {
+      "title": "Prevenirea Utilizării Greșite a Uneltei",
+      "text": "Potrivirea automată produs-unealtă a redus riscul de calitate cauzat de utilizarea greșită."
+    },
+    {
+      "title": "Planificare pe Ciclul de Viață",
+      "text": "Urmărirea ciclului de viață pe identitate unică a întărit planificarea și controlul costurilor."
+    },
+    {
+      "title": "Vizibilitate Istoric Ascuțire",
+      "text": "Înregistrările sistematice au făcut trasabil istoricul fiecărui vârf de unealtă."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să consolidați managementul uneltelor și validarea producției?",
+  "ctaSubtitle": "Securizați procesele cu trasabilitate Data Matrix și integrare OnSuite Trace.",
+  "ctaPrimary": "Contactați-ne"
+}

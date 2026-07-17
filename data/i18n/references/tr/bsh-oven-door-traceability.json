@@ -1,0 +1,109 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Hassas kapı montajı,",
+  "heroTitleLine2": "üretimde sıfır hata ve tam izlenebilirlik.",
+  "heroSub": "BSH'nin Çerkezköy'deki fırın üretimi yapan fabrikasında hayata geçirilen projede, ürünlere monte edilen fırın kapıları kapı arabalarından elde edilen lot bilgilerine göre takip edilmiş ve kayıt altına alınmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Bileşen izleme ve üretim doğruluğu",
+  "contextP1": "BSH'nin Çerkezköy'deki fırın üretimi yapan fabrikasında hayata geçirilen projede, ürünlere monte edilen fırın kapıları kapı arabalarından elde edilen lot bilgilerine göre takip edilmiş ve kayıt altına alınmıştır.",
+  "contextP2": "Proje, kapı–ürün bileşen ilişkisinin izlenebilirliğini sağlamak amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel takip ve eşleşme riskleri",
+  "problemLede": "Fırın üretiminde ürüne monte edilen fırın kapısının doğru ürünle eşleşmesi ve bu eşleşmenin ürün bazında izlenebilir olması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Manuel Takip Kısıtları",
+      "text": "Kapı-ürün ilişkisinin manuel takibinin yetersiz olması ve izlenebilirlik boşluğu riski taşıması."
+    },
+    {
+      "bold": "Yanlış Bileşen Kullanımı",
+      "text": "Üretim sırasında yanlış kapı kullanımı riskinin otomatik olarak engellenememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Lot bazlı eşleştirme ve otomatik doğrulama",
+  "solutionLede": "Ürün seri numaralarının kapı arabalarından elde edilen lot bilgileriyle eşleştirilmesi aracılığıyla izlenebilirlik sistemiyle entegrasyon sağlandı. Üretim katına lot bazında tedarik edilen ve belirli seri numaralı ürünlere monte edilen fırın kapılarına ilişkin veriler kayıt altına alındı. Ürün–kapı eşleştirmesi sayesinde doğru kapıların doğru ürünlerde kullanılması güvence altına alındı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Lot Barkodu Okuma",
+      "text": "Kapı arabalarındaki lot etiketleri barkod okuyucu vasıtasıyla taranır."
+    },
+    {
+      "no": "02",
+      "title": "Seri No Eşleme",
+      "text": "Montajı yapılan ürünün seri numarası kapı lot bilgisiyle ilişkilendirilir."
+    },
+    {
+      "no": "03",
+      "title": "SCADA Doğrulaması",
+      "text": "C# tabanlı SCADA uygulaması eşleşmenin doğruluğunu anlık olarak kontrol eder."
+    },
+    {
+      "no": "04",
+      "title": "SAP Onay Kaydı",
+      "text": "Tüm kontroller tamamlandıktan sonra onaylanan parçaların verileri SAP sistemine yazılır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Saha otomasyonu ve yazılım mimarisi",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Otomasyonu",
+      "text": "Saha akışını, istasyon durumlarını ve sensör verilerini yöneten PLC altyapısı."
+    },
+    {
+      "tag": "ARAYÜZ",
+      "title": "C# SCADA Uygulaması",
+      "text": "Eşleştirme mantığı, veri doğrulama ve operatör ekranları için özel geliştirilmiş SCADA."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Barkod Okuyucular",
+      "text": "Kapı arabalarındaki lot etiketlerini ve ürün seri numaralarını okuyan endüstriyel tarayıcılar."
+    },
+    {
+      "tag": "VERİ",
+      "title": "SAP Entegrasyonu",
+      "text": "Süreç onaylarının ve lot verilerinin SAP sistemiyle entegre paylaşımı."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezi olarak kontrol edildiği yazılım katmanı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ERP Entegrasyonu",
+  "integrationDesc": "Sistem SAP ile entegre çalışmaktadır; doğrulama sonrası uygun parçaların onay verileri SAP'ye geri gönderilmektedir. Bu sayede üretim sahası ile kurumsal veriler arasında tam senkronizasyon kurulur.",
+  "integrationList": [
+    {
+      "bold": "SAP Onay Verisi",
+      "text": "Başarıyla doğrulanan ürün ve kapı eşleşme onayları anlık olarak SAP'ye iletilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Sıfır hata ile kontrollü montaj",
+  "resultsGrid": [
+    {
+      "title": "Hatalı Montajın Önlenmesi",
+      "text": "Ürüne monte edilen kapıların doğruluğu otomatik kontrol edilerek yanlış montaj riski sıfırlanmıştır."
+    },
+    {
+      "title": "Seri No Düzeyinde Takip",
+      "text": "Kapı-ürün ilişkisi doğrudan ürünün seri numarasına işlenerek tam izlenebilirlik sağlanmıştır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

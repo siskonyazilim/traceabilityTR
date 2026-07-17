@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Metal",
+  "locationValue": "İzmir Gaziemir ESBAŞ",
+  "heroTitleLine1": "Paketlemeye Kadar",
+  "heroTitleLine2": "Kesintisiz Bara Takibi",
+  "heroSub": "Üretim baraları üzerindeki ürünler operasyon bazında anlık takip edilerek paketlemeye kadar tam süreç görünürlüğü ve güvenilir izlenebilirlik sağlanmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Üretim Baralarında Uçtan Uca Takip",
+  "contextP1": "Groupe Atlantic'in İzmir Gaziemir ESBAŞ Serbest Bölge'deki fabrikası havlupan üretimi yapmaktadır. Bu fabrikada hayata geçirilen projede, üretim baraları üzerindeki ürünler operasyon bazında takip edilerek paketlemeye kadar olan sürecin izlenebilirliği sağlanmıştır.",
+  "contextP2": "Ürün-bara ilişkisinin operasyonlar boyunca izlenmesi ile süreç görünürlüğü artırılmış ve paketlemeye kadar kesintisiz takip hedeflenmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel takipte görünürlük kaybı riski",
+  "problemLede": "Üretim sürecinde hangi baranın üzerinde hangi ürünlerin bulunduğunun ve baraların hangi operasyonda olduğunun her aşamada bilinmesi gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Ürün-Bara İlişkisi",
+      "text": "Manuel takipte ürün ile bara ilişkisinin sürekli ve doğru biçimde korunması zorlaşıyordu."
+    },
+    {
+      "bold": "Operasyon Durumu",
+      "text": "Baraların hangi operasyonda olduğunun her adımda görünür olmaması süreç kontrolünde zorluk oluşturuyordu."
+    },
+    {
+      "bold": "İzlenebilirlik Boşluğu",
+      "text": "Paketlemeye kadar olan hatta kesintisiz izlenebilirlik için otomatize bir yapıya ihtiyaç vardı."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Operasyon bazlı dijital bara takibi",
+  "solutionLede": "Üretim baralarının takibi yapılarak her baranın üzerinde hangi ürünlerin bulunduğu ve baraların hangi operasyonda olduğu kayıt altına alındı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Kod Okuma",
+      "text": "Baralar ve ürünler saha tipi okuyucular ile operasyon geçişlerinde otomatik okunur."
+    },
+    {
+      "no": "02",
+      "title": "Operasyon Kaydı",
+      "text": "Okunan verilerle ürün-bara ilişkisi ve operasyon durumu sistemde anlık güncellenir."
+    },
+    {
+      "no": "03",
+      "title": "SCADA İşleme",
+      "text": "Bara ve ürün takip verileri mevcut SCADA altyapısı üzerinden işlenir."
+    },
+    {
+      "no": "04",
+      "title": "Paketlemeye Kadar Takip",
+      "text": "Baralar, üzerlerindeki ürünlerle birlikte paketleme aşamasına kadar uç noktaya kadar izlenir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Kod okuyucular, PLC ve OnSuite Trace",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Kod Okuyucular",
+      "text": "Baraların ve üzerlerindeki ürünlerin taranması için saha tipi okuyucular kullanılmıştır."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Yönetimi",
+      "text": "PLC saha akışlarını yönetir ve okuma verilerini sürece doğru şekilde aktarır."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "SCADA Entegrasyonu",
+      "text": "Okumalar mevcut SCADA sistemi üzerinden işlenerek operasyon bazlı izlenebilirlik sağlanır."
+    },
+    {
+      "tag": "PLATFORM",
+      "title": "OnSuite Trace",
+      "text": "İzlenebilirlik ve süreç yönetimi OnSuite Trace platformu üzerinde merkezileşir."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SCADA ve ERP ile entegre yapı",
+  "integrationDesc": "Sistem, müşterinin mevcut SCADA altyapısı ve ERP ile entegre çalışmaktadır. Bara ve ürün takip verileri mevcut SCADA üzerinden işlenmekte, izlenebilirlik ve üretim verileri ERP ile paylaşılmaktadır.",
+  "integrationList": [
+    {
+      "bold": "SCADA Entegrasyonu",
+      "text": "Bara ve ürün takip verileri mevcut SCADA sistemi üzerinden işlenmektedir."
+    },
+    {
+      "bold": "ERP Haberleşmesi",
+      "text": "İzlenebilirlik ve üretim verileri ERP ile paylaşılarak süreç merkezi olarak yönetilmektedir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Süreç kontrolünde güçlü görünürlük",
+  "resultsGrid": [
+    {
+      "title": "Operasyon Bazlı İzlenebilirlik",
+      "text": "Baralar ve üzerlerindeki ürünler operasyon bazında paketlemeye kadar izlenebilir hale geldi."
+    },
+    {
+      "title": "Ürün-Bara İlişkisi",
+      "text": "Ürün-bara ilişkisi ve operasyon durumu her aşamada görünür kılındı."
+    },
+    {
+      "title": "Manuel Takip Azalımı",
+      "text": "Manuel takip ihtiyacı azaltılarak süreç kontrolü ve izlenebilirlik güçlendirildi."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

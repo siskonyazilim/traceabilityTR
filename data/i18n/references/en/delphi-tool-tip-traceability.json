@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Digital Identity on Tool Tips,",
+  "heroTitleLine2": "Reliable Matching in Production",
+  "heroSub": "At Delphi Technologies' plant in Izmir ESBAS Free Zone, tool tips used in production were tracked with a Data Matrix-based system to make product-tool matching, tool life, and sharpening processes traceable.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "End-to-end traceability in tool-tip flow",
+  "contextP1": "Delphi Technologies' plant in Izmir ESBAS Free Zone manufactures for the automotive supplier industry. In this project, tool tips used in production were tracked with a Data Matrix-based system.",
+  "contextP2": "The project made product-tool matching, tool life monitoring, and sharpening flow traceable and manageable.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Quality risk and visibility loss from wrong tool usage",
+  "problemLede": "It was necessary to guarantee that the correct tool tip is used for each product in production. Manual checks increased error risk and reduced process visibility.",
+  "problemList": [
+    {
+      "bold": "Product-Tool Matching",
+      "text": "Manual product and tool-tip checks increased the risk of wrong tool usage."
+    },
+    {
+      "bold": "Tool Life Monitoring",
+      "text": "Lack of healthy tool-life tracking made planning and cost control difficult."
+    },
+    {
+      "bold": "Sharpening Process Tracking",
+      "text": "A reliable central record structure was needed to track the history of tools sent for sharpening."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Data Matrix-based unique tool tracking and automatic validation",
+  "solutionLede": "Each tool tip was marked with a Data Matrix code and uniquely identified. During production, the tool tip was read and matched with the relevant product; tool life and sharpening records were also tracked in the system.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Unique Code Marking",
+      "text": "Each tool tip was provided with a unique identity via Data Matrix code."
+    },
+    {
+      "no": "02",
+      "title": "Matching Validation",
+      "text": "During production, tool-tip code is read and automatically matched with the related product."
+    },
+    {
+      "no": "03",
+      "title": "Tool Life Monitoring",
+      "text": "Usage cycles and life of each tool tip are tracked for data-driven management."
+    },
+    {
+      "no": "04",
+      "title": "Sharpening History",
+      "text": "Process records of tools sent for sharpening are stored to make sharpening history traceable."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Data Matrix reading, field automation, and SCADA infrastructure",
+  "techGrid": [
+    {
+      "tag": "CODING",
+      "title": "Data Matrix Codes",
+      "text": "Permanent code structure carrying unique identity on tool tips."
+    },
+    {
+      "tag": "READING",
+      "title": "Code Readers",
+      "text": "Read tool-tip codes during production for instant verification."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Structure",
+      "text": "Manages field flow and synchronizes validation steps with production."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Manages product-tool matching, tool life tracking, sharpening records, and Oracle data exchange."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Central process management with Oracle",
+  "integrationDesc": "The system works integrated with Oracle; product-tool matching, tool life, and sharpening process data are shared with Oracle for centralized monitoring and management.",
+  "integrationList": [
+    {
+      "bold": "Oracle Integration",
+      "text": "Production validation and tool lifecycle data are exchanged with Oracle bi-directionally."
+    },
+    {
+      "bold": "OnSuite Trace Platform",
+      "text": "Traceability and process management are centrally executed on OnSuite Trace."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Quality assurance and data-driven tool management",
+  "resultsGrid": [
+    {
+      "title": "Prevention of Wrong Tool Usage",
+      "text": "Automatic product-tool matching reduced quality risk caused by wrong tool usage."
+    },
+    {
+      "title": "Lifecycle-Based Planning",
+      "text": "Lifecycle tracking over unique identities strengthened planning and cost control."
+    },
+    {
+      "title": "Sharpening History Visibility",
+      "text": "Systematic sharpening records made each tool tip's history traceable."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to strengthen tool management and production validation?",
+  "ctaSubtitle": "Secure your processes with Data Matrix-based traceability and OnSuite Trace integration.",
+  "ctaPrimary": "Contact Us"
+}

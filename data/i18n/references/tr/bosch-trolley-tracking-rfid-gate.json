@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Onaylı malzeme akışı,",
+  "heroTitleLine2": "fiziksel bariyer kontrollü RFID kapısı.",
+  "heroSub": "Bosch'un Manisa'daki kombi üretimi yapan ısı teknolojisi fabrikasında hayata geçirilen projede, iş emirlerine göre hazırlanan kit arabalarının üretime kontrollü biçimde çıkarılması sağlanmıştır. Proje, depo çıkışında yalnızca onaylı kit arabalarının üretime geçişini güvence altına almak amacıyla gerçekleştirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Kombi üretiminde depo çıkış kontrolü",
+  "contextP1": "Bosch'un Manisa'daki kombi üretimi yapan ısı teknolojisi fabrikasında hayata geçirilen projede, iş emirlerine göre hazırlanan kit arabalarının üretime kontrollü biçimde çıkarılması sağlanmıştır.",
+  "contextP2": "Proje, depo çıkışında yalnızca onaylı kit arabalarının üretime geçişini güvence altına almak amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Hatalı malzeme çıkışları ve manuel kontrol zorlukları",
+  "problemLede": "Üretime yalnızca ilgili iş emrine uygun, onaylı kit arabalarının çıkması gerekiyordu. Bu kontrolün manuel yürütülmesi, yanlış veya onaysız arabaların üretime geçmesi ve buna bağlı malzeme/üretim hataları riski taşıyordu. Depo çıkışında geçişi fiziksel olarak da engelleyebilen güvenilir bir kontrol yapısına ihtiyaç vardı.",
+  "problemList": [
+    {
+      "bold": "Onaysız Malzeme Geçişi",
+      "text": "İş emri doğrulaması yapılmamış veya eksik kit arabalarının üretime çıkarılması riski."
+    },
+    {
+      "bold": "Fiziksel Kontrol Eksikliği",
+      "text": "Sadece yazılımsal kontrolün yetersiz kaldığı durumlarda geçişin fiziksel olarak engellenememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "RFID kapı doğrulamalı bariyer kontrolü",
+  "solutionLede": "Depo çıkışına konumlanan RFID okuma/yazma kafaları, iş emirlerine göre hazırlanan kit arabalarının üretime çıkarılmasını sağladı. Bu kontrolü fiziksel olarak mümkün kılmak için depo giriş ve çıkışına bariyer sistemi kuruldu. Depo yönetim sistemiyle çift yönlü iletişim sağlayan uygulama, gelen kit arabalarının RFID etiketlerini taradı ve depo sistemini sorguladı; yalnızca onaylı arabaların çıkışına izin verdi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Hazırlık ve Etiketleme",
+      "text": "İş emrine göre hazırlanan kit arabası, üzerindeki metal RFID etiketle tanımlanır."
+    },
+    {
+      "no": "02",
+      "title": "RFID Kapı Taraması",
+      "text": "Depo çıkış bariyerine yaklaşan araba, RFID kapısı tarafından taranır."
+    },
+    {
+      "no": "03",
+      "title": "Çift Yönlü Sorgu",
+      "text": "SCADA uygulaması, okunan RFID kodunu depo yönetim sisteminden sorgular."
+    },
+    {
+      "no": "04",
+      "title": "Bariyer Açma",
+      "text": "Çıkış onayı alındığında SCADA bariyeri açarak kit arabasının geçişine izin verir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "RFID geçiş kontrolü ve SCADA mimarisi",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Metal Üstü RFID Etiketler",
+      "text": "Kit arabalarının metal yüzeylerinde yüksek performans gösteren 700 adet özel RFID etiket."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "RFID Okuma/Yazma Kafaları",
+      "text": "Depo giriş ve çıkış kapılarına konumlandırılan endüstriyel RFID okuyucu donanımlar."
+    },
+    {
+      "tag": "KONTROL",
+      "title": "Bariyer Geçiş Sistemi",
+      "text": "Yetkisiz kit arabalarının geçişini fiziksel olarak engelleyen bariyer entegrasyonu."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "RFID taramalarını depo yönetim sistemi ile doğrulayan ve bariyerleri yöneten ana yazılım."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Depo Yönetim Sistemi ve SAP Entegrasyonu",
+  "integrationDesc": "Uygulama, depo yönetim sistemiyle çift yönlü iletişim kurmakta ve SAP ile entegre çalışmaktadır. Gelen kit arabalarının RFID etiketleri okunarak sistem sorgulanmakta, çıkış onayı bu entegrasyon üzerinden verilmekte ve ilgili kayıtlar SAP'ye iletilmektedir.",
+  "integrationList": [
+    {
+      "bold": "SAP ERP Entegrasyonu",
+      "text": "Kit arabası çıkış onayları ve malzeme hareketleri SAP sistemiyle anlık senkronize edilerek kaydedilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Fiziksel güvence ve sıfır malzeme hatası",
+  "resultsGrid": [
+    {
+      "title": "Onaylı Malzeme Akışı",
+      "text": "Depo çıkışında sadece iş emri doğrulanmış kit arabalarının üretime geçişine izin verilerek doğruluk sağlanmıştır."
+    },
+    {
+      "title": "Fiziksel Bariyer Güvenliği",
+      "text": "Bariyer sistemi sayesinde onaysız kit arabalarının geçişi fiziksel olarak tamamen engellenmiştir."
+    },
+    {
+      "title": "Anlık Karar Verme",
+      "text": "Depo yönetim sistemi ile çift yönlü entegrasyon, geçiş kararlarının gecikmesiz verilmesini sağlamıştır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

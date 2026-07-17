@@ -1,0 +1,109 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Urmărirea precisă a asamblării,",
+  "heroTitleLine2": "potrivirea corectă a componentelor și asigurarea calității.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de producție a frigiderelor BSH din Çerkezköy, rafturile din sticlă montate pe produse au fost urmărite și înregistrate pe baza informațiilor despre lot.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Urmărirea pieselor în producția de frigidere",
+  "contextP1": "În cadrul proiectului implementat la fabrica de producție a frigiderelor BSH din Çerkezköy, rafturile din sticlă montate pe produse au fost urmărite și înregistrate pe baza informațiilor despre lot.",
+  "contextP2": "Proiectul a fost realizat pentru a asigura trasabilitatea relației componentă raft din sticlă-produs.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Riscuri de potrivire incorectă a componentelor",
+  "problemLede": "În producția de frigidere, componenta raft din sticlă trebuia să se potrivească cu produsul corect, iar această potrivire trebuia să fie trasabilă la nivel de produs.",
+  "problemList": [
+    {
+      "bold": "Breșe de Urmărire Manuală",
+      "text": "Urmărirea manuală a relației componentă-produs fiind insuficientă și prezentând riscul unei breșe de trasabilitate."
+    },
+    {
+      "bold": "Risc de Asamblare Incorectă",
+      "text": "Imposibilitatea de a preveni instantaneu utilizarea incorectă a componentelor și potrivirile greșite în timpul producției."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Urmărire bazată pe lot și sincronizare SAP",
+  "solutionLede": "Rafturile din sticlă montate pe produse au fost urmărite și înregistrate pe baza numerelor de lot. Prin scanarea cărucioarelor de rafturi la stația respectivă, numerele de lot ale rafturilor au fost asociate cu numărul de serie al produsului, stabilind integrarea cu sistemul de trasabilitate. Această structură a garantat potrivirea componentă-produs, asigurând utilizarea rafturilor din sticlă corecte în produsele corecte. Datele de confirmare pentru piesele conforme au fost scrise înapoi în SAP.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Scanare Cărucior",
+      "text": "Cărucioarele de rafturi din sticlă de la stație sunt scanate pentru a prelua automat informațiile despre lot."
+    },
+    {
+      "no": "02",
+      "title": "Asociere Număr Serie",
+      "text": "Numerele de lot ale rafturilor scanate sunt asociate automat cu numărul de serie al produsului."
+    },
+    {
+      "no": "03",
+      "title": "Control SCADA",
+      "text": "Aplicația SCADA verifică acuratețea potrivirii și previne utilizarea pieselor incorecte."
+    },
+    {
+      "no": "04",
+      "title": "Transmitere Confirmare SAP",
+      "text": "Relațiile de asamblare și piese aprobate sunt scrise instantaneu în sistemul SAP."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Integrare în teren și infrastructură de control",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură Câmp PLC",
+      "text": "Infrastructură PLC care controlează stările stațiilor și ghidează fluxul din teren."
+    },
+    {
+      "tag": "INTERFAȚĂ",
+      "title": "Aplicație SCADA C#",
+      "text": "Aplicație C# pentru verificarea potrivirii, monitorizarea procesului și ecranele operatorului."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare Cod de Bare",
+      "text": "Scannere de precizie care citesc numerele de lot ale rafturilor și numerele de serie ale produselor."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare SAP ERP",
+      "text": "Partajarea bidirecțională a datelor de confirmare și a potrivirilor de lot cu sistemul SAP."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Stratul software central de control al trasabilității și managementului proceselor."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare SAP ERP",
+  "integrationDesc": "Sistemul funcționează integrat cu SAP; după verificare, datele de confirmare ale pieselor conforme sunt scrise înapoi în SAP. Această structură garantează integritatea informațiilor între datele de pe teren și sistemul corporativ.",
+  "integrationList": [
+    {
+      "bold": "Date de Confirmare SAP",
+      "text": "Înregistrările de confirmare pentru piesele conforme care trec de verificarea asamblării sunt transmise instantaneu către SAP."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Control avansat al calității și trasabilitate",
+  "resultsGrid": [
+    {
+      "title": "Garanția Potrivirii Corecte",
+      "text": "Potrivirea corectă a raftului de sticlă cu produsul este verificată automat, prevenind piesele incorecte."
+    },
+    {
+      "title": "Trasabilitate End-to-End",
+      "text": "Relația componentă-produs este înregistrată permanent direct la nivelul numărului de serie al produsului."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Eskisehir",
+  "heroTitleLine1": "Linii noi de asamblare,",
+  "heroTitleLine2": "urmărire digitală a procesului cap-la-cap.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de aparate de gătit Haier Europe din Eskisehir, procesele manuale de planificare, urmărire și control de pe liniile de asamblare au fost complet automatizate. În cadrul proiectului, au fost instalate linii noi de asamblare și procesul a fost făcut trasabil cap-la-cap.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Digitalizarea în fabricație și sisteme de transportoare reînnoite",
+  "contextP1": "În cadrul proiectului implementat la fabrica de aparate de gătit a Haier Europe, un lider global în electrocasnice, din Eskisehir, procesele manuale de planificare, urmărire și control de pe liniile de asamblare au fost complet automatizate.",
+  "contextP2": "În cadrul proiectului, au fost instalate linii noi de asamblare, sistemele de transportoare au fost complet reînnoite, iar întregul proces de la ambalare la depozit a fost făcut trasabil cap-la-cap.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Lacune de urmărire manuală și nevoi de integrare test-reparație",
+  "problemLede": "Procesele de planificare, urmărire și control de pe liniile de asamblare se desfășurau manual; acest lucru a slăbit vizibilitatea procesului și a purtat riscul de erori și ineficiență. Era nevoie de o structură automatizată în care fiecare produs să poată fi urmărit individual de la începutul producției până la depozit, inclusiv procesele de testare și reparație.",
+  "problemList": [
+    {
+      "bold": "Vizibilitate Redusă a Procesului",
+      "text": "Imposibilitatea de a detecta instantaneu blocajele de producție din cauza planificării și urmăririi manuale."
+    },
+    {
+      "bold": "Reparații Neînregistrate",
+      "text": "Imposibilitatea de a înregistra centralizat operațiunile de reparație efectuate pe produsele defecte care au picat testele."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Management digital al asamblării cap-la-cap cu buclă de testare-reparație",
+  "solutionLede": "La fabrica de aparate de gătit Haier Europe au fost instalate linii noi de asamblare și sistemele de transportoare au fost complet reînnoite. Procesele manuale de planificare, urmărire și control de pe liniile de asamblare au fost automatizate, făcând întregul proces de asamblare trasabil digital. Trasabilitatea cap-la-cap a fost realizată pentru toate produsele pe baza unor identități unice de la începutul liniei până la depozit. Datele de testare au fost colectate pe parcursul producției; produsele care au picat testele au fost direcționate către reparații, iar acțiunile de reparație întreprinse au fost înregistrate.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Atribuire ID Unic",
+      "text": "O identitate unică (cod de bare/DPM) este atribuită fiecărui produs la începutul liniei."
+    },
+    {
+      "no": "02",
+      "title": "Colectare Date Test",
+      "text": "Pe măsură ce produsele trec prin stațiile de testare, rezultatele sunt scrise automat în baza de date."
+    },
+    {
+      "no": "03",
+      "title": "Rutare către Reparații",
+      "text": "Produsele care pică testele sunt deviate automat către linia de reparații și blocate."
+    },
+    {
+      "no": "04",
+      "title": "Înregistrare & Expediere",
+      "text": "Odată ce acțiunile de reparație sunt înregistrate, produsele sunt aprobate și expediate în depozit."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "SCADA C# și hardware de integrare pe teren",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Asamblare & Transportor Nou",
+      "text": "Infrastructură modernă a liniei de transport care oferă flux mecanic și funcționează sub control PLC."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "Management Flux PLC",
+      "text": "PLC-uri care gestionează mișcările de elevator și transportor ale produselor între linii."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA C#",
+      "text": "SCADA care comunică cu stațiile de testare, primește jurnalele de reparații și gestionează aprobările."
+    },
+    {
+      "tag": "URMĂRIRE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Software principal care conectează toate datele de testare și acțiunile de reparație la ID-ul unic."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea Sistemului Haier Global MES",
+  "integrationDesc": "Sistemul funcționează complet integrat cu sistemul Global MES al Haier Europe. Rezultatele testelor, aprobările de producție și reparațiile sunt transmise direct sistemului global în timp real.",
+  "integrationList": [
+    {
+      "bold": "Integrare MES Globală",
+      "text": "Aprobările liniei de asamblare, datele de testare și istoricul reparațiilor sunt sincronizate bidirecțional cu sistemul MES."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Asamblare transparentă cap-la-cap și eficiență maximă",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate Cap-la-Cap",
+      "text": "Rezultatele testelor și mișcările logistice pot fi monitorizate instantaneu de la începutul liniei la depozit."
+    },
+    {
+      "title": "Calitate Trasabilă",
+      "text": "Etapele de reparație și rezultatele testelor produselor defecte pot fi raportate retrospectiv."
+    },
+    {
+      "title": "Eficiență Operațională",
+      "text": "Timpii de ciclu ai liniei de asamblare sunt optimizați prin digitalizarea planificării și urmăririi manuale."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

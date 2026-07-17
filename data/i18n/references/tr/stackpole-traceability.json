@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "Türkiye",
+  "heroTitleLine1": "Üretimde Uçtan Uca İzleme,",
+  "heroTitleLine2": "Stackpole için Tekil Ürün Güvencesi",
+  "heroSub": "Stackpole için hayata geçirilen projede, üretim süreci boyunca ürünlerin operasyon bazında izlenebilirliği sağlanarak süreç görünürlüğü ve kalite güvence seviyesi artırılmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Kesintisiz üretim akışı için merkezi izlenebilirlik",
+  "contextP1": "Stackpole üretim ortamında ürünlerin üretim adımları boyunca tekil olarak takip edilmesi, doğru operasyon akışının korunması ve süreç verilerinin merkezi yönetimi hedeflenmiştir.",
+  "contextP2": "Proje, üretimden sevkiyata kadar ürün geçmişinin izlenebilir olmasını sağlayarak kalite ve operasyon ekipleri için anlık görünürlük oluşturmuştur.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Operasyon adımlarında izleme kopukluğu riski",
+  "problemLede": "Üretim adımlarındaki ürün hareketlerinin güvenilir ve tekil biçimde takip edilememesi, süreç kontrolü ve kalite doğrulamasında risk oluşturuyordu.",
+  "problemList": [
+    {
+      "bold": "Süreç Görünürlüğü",
+      "text": "Operasyon geçişlerinde ürün durumunun anlık görülememesi takip zorluğu yaratıyordu."
+    },
+    {
+      "bold": "Doğrulama İhtiyacı",
+      "text": "Ürünlerin doğru operasyon sırası ile ilerlediğinin sistematik şekilde doğrulanması gerekiyordu."
+    },
+    {
+      "bold": "Kalite Güvence Riski",
+      "text": "Geçmiş kayıtların parçalı kalması, kalite inceleme ve kök neden analizini zorlaştırıyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Operasyon bazlı tekil ürün izlenebilirlik altyapısı",
+  "solutionLede": "Ürünler üretim akışında operasyon bazlı tanınarak her adımda sistem üzerinde kayıt altına alındı. Böylece ürün geçmişi uçtan uca izlenebilir hale getirildi ve operasyon doğrulama süreci güçlendirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Ürün Tanımlama",
+      "text": "Ürünler izlenebilirlik akışına tekil kimlik ile dahil edildi."
+    },
+    {
+      "no": "02",
+      "title": "Operasyon Okuma",
+      "text": "Her istasyonda ürün durumu ve operasyon geçişi otomatik doğrulandı."
+    },
+    {
+      "no": "03",
+      "title": "Anlık Kayıt",
+      "text": "Süreç verileri gerçek zamanlı toplanarak merkezi sistemde tutuldu."
+    },
+    {
+      "no": "04",
+      "title": "Geri İzleme",
+      "text": "Ürün geçmişi ve operasyon zinciri raporlanabilir, denetlenebilir hale getirildi."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Saha otomasyonu ve izlenebilirlik yazılım katmanı",
+  "techGrid": [
+    {
+      "tag": "OKUMA",
+      "title": "Kod Tanıma Altyapısı",
+      "text": "Ürünlerin operasyon noktalarında otomatik tanınmasını ve doğrulanmasını sağlar."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Tabanlı Akış Yönetimi",
+      "text": "Operasyon geçişlerini yönetir, saha süreçlerinde tutarlılığı korur."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "İzlenebilirlik Uygulaması",
+      "text": "Operasyon verilerini toplar, ürün geçmişini saklar ve raporlar."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Kurumsal sistemlerle veri senkronizasyonu",
+  "integrationDesc": "İzlenebilirlik verileri kurumsal sistemlerle paylaşılacak şekilde yapılandırılmış; ürün, operasyon ve durum verileri merkezi olarak izlenebilir hale getirilmiştir.",
+  "integrationList": [
+    {
+      "bold": "Operasyon Verisi Paylaşımı",
+      "text": "Ürün akış verileri merkezi sistemlere aktarılır ve süreç takibi tek noktadan yönetilir."
+    },
+    {
+      "bold": "Raporlama ve Analiz",
+      "text": "Toplanan izlenebilirlik verileri kalite ve üretim analizlerinde kullanılmak üzere hazır tutulur."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Stackpole üretiminde görünürlük ve kontrol artışı",
+  "resultsGrid": [
+    {
+      "title": "Uçtan Uca Takip",
+      "text": "Ürünler üretim sürecinin tamamında operasyon bazında izlenebilir hale geldi."
+    },
+    {
+      "title": "Süreç Kontrol Gücü",
+      "text": "Operasyon geçiş doğrulamaları ile üretim akışının kontrol seviyesi yükseltildi."
+    },
+    {
+      "title": "Kalite Analiz Desteği",
+      "text": "Tekil ürün geçmişi sayesinde kalite incelemeleri ve kök neden analizleri hızlandı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim hattınızda tekil ürün izlenebilirliğini güçlendirmek ister misiniz?",
+  "ctaSubtitle": "Stackpole projesindeki yaklaşımı fabrikanıza uyarlayarak süreç görünürlüğünü artırabiliriz.",
+  "ctaPrimary": "İletişime Geç"
+}

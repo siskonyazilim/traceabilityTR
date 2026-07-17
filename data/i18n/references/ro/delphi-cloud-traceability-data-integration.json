@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Inapoi la Proiecte de Referinta",
+  "sector": "Sector",
+  "location": "Locatie",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software si Integrare",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Delphi Technologies",
+  "heroTitleLine2": "Integrarea in Cloud a Datelor de Trasabilitate",
+  "heroSub": "La fabrica Delphi Technologies din Izmir ESBAS Free Zone, datele de trasabilitate din productie au fost integrate cu sistemul global cloud al companiei.",
+  "contextEyebrow": "Client si Context",
+  "contextTitle": "Vizibilitate globala din sisteme locale",
+  "contextP1": "In acest proiect, datele de trasabilitate generate local au fost integrate in platforma cloud globala Delphi.",
+  "contextP2": "Obiectivul a fost eliminarea limitarii locale a datelor si obtinerea unei vizibilitati globale centralizate.",
+  "problemEyebrow": "Nevoie / Problema",
+  "problemTitle": "Date locale fara acces global",
+  "problemLede": "Datele de trasabilitate erau stocate doar in sistemele Oracle locale, ceea ce limita accesibilitatea si vizibilitatea globala.",
+  "problemList": [
+    {
+      "bold": "Limitare Locala",
+      "text": "Datele ramaneau in fabrica si nu puteau fi utilizate central la nivel global."
+    },
+    {
+      "bold": "Vizibilitate Redusa",
+      "text": "Raportarea unificata intre locatii era dificila fara integrare centrala."
+    },
+    {
+      "bold": "Necesitate de Integrare",
+      "text": "Datele locale de trasabilitate trebuiau transferate in cloudul global Delphi."
+    }
+  ],
+  "solutionEyebrow": "Solutie",
+  "solutionTitle": "Flux centralizat Oracle - cloud global",
+  "solutionLede": "Datele de trasabilitate din Oracle local au fost integrate in sistemul cloud global Delphi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Colectare Locala",
+      "text": "Datele de productie si trasabilitate sunt colectate in Oracle local."
+    },
+    {
+      "no": "02",
+      "title": "Strat de Integrare",
+      "text": "Un strat de integrare pregateste si mapeaza datele pentru transfer."
+    },
+    {
+      "no": "03",
+      "title": "Transfer in Cloud",
+      "text": "Datele sunt transferate in platforma cloud globala Delphi."
+    },
+    {
+      "no": "04",
+      "title": "Vizibilitate Centrala",
+      "text": "Locatiile obtin acces centralizat pentru monitorizare si raportare."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "Oracle local si strat de integrare cloud",
+  "techGrid": [
+    {
+      "tag": "DATE",
+      "title": "Sisteme Oracle Locale",
+      "text": "Sursa locala principala pentru datele de trasabilitate din productie."
+    },
+    {
+      "tag": "INTEGRARE",
+      "title": "Strat de Integrare",
+      "text": "Gestioneaza transferul securizat al datelor intre Oracle si cloud."
+    },
+    {
+      "tag": "CLOUD",
+      "title": "Platforma Cloud Globala",
+      "text": "Mediu central pentru acces global, vizibilitate si raportare."
+    },
+    {
+      "tag": "MANAGEMENT",
+      "title": "OnSuite Trace",
+      "text": "Sustine procesele de monitorizare centralizata a trasabilitatii."
+    }
+  ],
+  "integrationEyebrow": "Integrari",
+  "integrationTitle": "Integrare intre Oracle local si cloud global",
+  "integrationDesc": "Sistemul integreaza Oracle local cu platforma cloud globala Delphi, asigurand acces si vizibilitate centralizata pentru datele de trasabilitate.",
+  "integrationList": [
+    {
+      "bold": "Integrare Oracle - Cloud",
+      "text": "Datele locale de trasabilitate sunt transferate in cloud prin serviciile de integrare."
+    },
+    {
+      "bold": "Acces Central",
+      "text": "Echipele din locatii diferite folosesc aceeasi vedere globala a datelor."
+    }
+  ],
+  "resultsEyebrow": "Rezultate",
+  "resultsTitle": "Vizibilitate globala si raportare centralizata",
+  "resultsGrid": [
+    {
+      "title": "Accesibilitate Globala",
+      "text": "Datele de trasabilitate au devenit accesibile global, nu doar local."
+    },
+    {
+      "title": "Vizibilitate Centrala",
+      "text": "Datele de productie si trasabilitate au devenit vizibile central intre locatii."
+    },
+    {
+      "title": "Capabilitate de Raportare",
+      "text": "Cloudul global permite monitorizare si raportare centralizata in timp util."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriti vizibilitate globala pentru datele de trasabilitate?",
+  "ctaSubtitle": "Contactati-ne pentru integrare sigura intre sisteme locale si platforme globale.",
+  "ctaPrimary": "Contactati-ne"
+}

@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria auto",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Vizibilitate Completă în Fluxul Prototip,",
+  "heroTitleLine2": "Urmărire în Timp Real pe Operații",
+  "heroSub": "La fabrica Delphi Technologies din Izmir ESBAS Free Zone, a fost asigurată trasabilitatea produselor prototip realizate pentru clienți pe toate operațiile de la utilaje.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Producție trasabilă cap-coadă pe linia de prototip",
+  "contextP1": "Fabrica Delphi Technologies din Izmir ESBAS Free Zone produce pentru industria auto. În acest proiect, produsele prototip realizate special pentru clienți au devenit trasabile pe toate operațiile de la utilaje.",
+  "contextP2": "Obiectivul a fost să facă vizibil în timp real progresul prototipurilor la nivel de operație și să întărească urmărirea și planificarea procesului.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Lipsa vizibilității de status în fluxul prototip",
+  "problemLede": "Nu era clar în ce etapă și în ce stare se aflau produsele prototip dedicate clienților pe durata producției.",
+  "problemList": [
+    {
+      "bold": "Urmărirea Progresului",
+      "text": "Cum progresul și statusul operațional nu erau urmărite, monitorizarea procesului devenea dificilă."
+    },
+    {
+      "bold": "Dificultate de Planificare",
+      "text": "Vizibilitatea insuficientă asupra stării curente genera riscuri în planificare și prioritizare."
+    },
+    {
+      "bold": "Necesitatea Identității Unice",
+      "text": "Era necesară o structură în care produsele prototip să fie identificate unic de la început și urmărite în toate operațiile."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Urmărire end-to-end a prototipului începând cu marcarea",
+  "solutionLede": "Produsele prototip au fost marcate și identificate unic înainte de intrarea pe linie. În toate operațiile de la utilaje, pentru fiecare prototip s-au înregistrat operația și starea curentă.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Pre-Marcare",
+      "text": "Produsele prototip sunt marcate înainte de intrarea pe linie și înregistrate cu identitate unică."
+    },
+    {
+      "no": "02",
+      "title": "Recunoaștere Operațională",
+      "text": "Cititoarele de coduri de bare recunosc și validează automat produsele în punctele operaționale."
+    },
+    {
+      "no": "03",
+      "title": "Înregistrare Status",
+      "text": "Operația curentă și starea procesului pentru fiecare produs se înregistrează în timp real."
+    },
+    {
+      "no": "04",
+      "title": "Vizibilitate Proces",
+      "text": "Nivelul și starea curentă a producției prototip devin vizibile în fiecare etapă."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Infrastructură de teren bazată pe coduri de bare, PLC și C# SCADA",
+  "techGrid": [
+    {
+      "tag": "CITIRE",
+      "title": "Cititoare de Coduri de Bare",
+      "text": "Recunosc produsele prototip pe operații și declanșează fluxul de trasabilitate."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură PLC",
+      "text": "Gestionează fluxul de teren și tranzițiile operaționale pentru control în timp real."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA C#",
+      "text": "Gestionează monitorizarea statusului, raportarea și schimbul de date cu Oracle."
+    },
+    {
+      "tag": "PLATFORMĂ",
+      "title": "OnSuite Trace",
+      "text": "Stratul de aplicație în care trasabilitatea și managementul proceselor sunt executate centralizat."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Partajare centralizată a datelor cu Oracle",
+  "integrationDesc": "Sistemul funcționează integrat cu Oracle; datele de trasabilitate la nivel de operație și status pentru produsele prototip sunt partajate cu Oracle pentru monitorizare și management centralizat.",
+  "integrationList": [
+    {
+      "bold": "Integrare Oracle",
+      "text": "Datele de operație, status și progres sunt partajate cu Oracle pentru raportare și management centralizat."
+    },
+    {
+      "bold": "Management OnSuite Trace",
+      "text": "Vizibilitatea procesului și urmărirea operațională sunt gestionate end-to-end pe OnSuite Trace."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Vizibilitate și putere de planificare în producția de prototip",
+  "resultsGrid": [
+    {
+      "title": "Vizibilitate Status în Timp Real",
+      "text": "Etapa și starea produselor prototip au devenit vizibile în toate operațiile."
+    },
+    {
+      "title": "Urmărire și Planificare Simplificate",
+      "text": "Eliminarea lacunelor de vizibilitate a simplificat monitorizarea și planificarea producției prototip."
+    },
+    {
+      "title": "Trasabilitate la Nivel de Operație",
+      "text": "Prin identificare unică de la început, s-a obținut trasabilitate completă la nivel operațional."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți urmărire fiabilă în timp real pe fluxul dumneavoastră de prototipuri?",
+  "ctaSubtitle": "Obțineți vizibilitate end-to-end pe linia de prototip cu soluții de trasabilitate bazate pe OnSuite Trace.",
+  "ctaPrimary": "Contactați-ne"
+}

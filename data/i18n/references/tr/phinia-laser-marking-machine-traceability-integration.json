@@ -1,0 +1,132 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Anahtar Teslim",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir · ESBAŞ",
+  "heroTitleLine1": "Her parçaya tek bir seri numarası,",
+  "heroTitleLine2": "tek bir izlenebilir kimlik.",
+  "heroSub": "Phinia'nın İzmir ESBAŞ Serbest Bölge fabrikası için geliştirilen 3 eksenli lazer markalama tezgahı; markalama ve kamera doğrulamasını tek bir otomatik akışta birleştirir ve Oracle ile çift yönlü konuşur.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Serbest bölgede, sıfır tolerans üretim",
+  "contextP1": "Phinia'nın İzmir ESBAŞ Serbest Bölge'deki fabrikası otomotiv sektörüne yönelik üretim yapıyor. Bu tür üretimde her parçanın nereden geldiği, hangi hattan çıktığı ve hangi kontrolden geçtiği geriye dönük olarak sorgulanabilir olmalı.",
+  "contextP2": "Proje, üretilen her ürünün tekil olarak markalanması ve baştan sona izlenebilirliğinin sağlanması amacıyla hayata geçirildi. Markalamanın kendisi kadar, o markalamanın doğru okunabildiğinin garanti altına alınması da işin merkezindeydi.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "İki ayrı adım, iki ayrı risk",
+  "problemLede": "Markalama ve doğrulama birbirinden kopuk, elle kontrole açık adımlar hâlinde yürüdüğünde, arada iki türlü boşluk oluşuyordu.",
+  "problemList": [
+    {
+      "bold": "Tekil markalama zorunluluğu.",
+      "text": "Her parçanın kendi seri numarasıyla markalanması ve bu numaranın merkezi sisteme aktarılması gerekiyordu."
+    },
+    {
+      "bold": "Okunamayan kod riski.",
+      "text": "Doğrulama ayrı bir adım olarak elle yapıldığında, hatalı ya da okunamayan kod fark edilmeden hattan geçebiliyordu."
+    },
+    {
+      "bold": "İzlenebilirlik boşluğu.",
+      "text": "Markalama ile veri kaydı arasındaki kopukluk, geriye dönük sorgulamada eksik zincir anlamına geliyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Markalama ve doğrulama, tek akış",
+  "solutionLede": "Phinia için mekanik tasarımı dahil anahtar teslim geliştirilen tezgah; esnek çalışabilmesi için 3 eksenli hareket kapasitesiyle tasarlandı. Seri numaraları Oracle'dan alınır, parçaya işlenir ve aynı akış içinde kamera ile doğrulanır.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Seri no alınır",
+      "text": "Basılacak tekil seri numarası Oracle'dan çekilir."
+    },
+    {
+      "no": "02",
+      "title": "Lazer markalama",
+      "text": "3 eksenli servo yapı parçayı konumlar, kod lazerle işlenir."
+    },
+    {
+      "no": "03",
+      "title": "Kamera doğrulama",
+      "text": "Kod içeriği, derece ve konum otomatik kontrol edilir."
+    },
+    {
+      "no": "04",
+      "title": "Onay geri yazılır",
+      "text": "Uygun parçaların onay verisi Oracle'a geri gönderilir."
+    }
+  ],
+  "oracleLoop": {
+    "serialNo": "seri numarası",
+    "confirmData": "onay verisi",
+    "machine": "Lazer Markalama Tezgahı"
+  },
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Anahtar teslim sistem mimarisi",
+  "techGrid": [
+    {
+      "tag": "MARKALAMA",
+      "title": "Lazer markalama cihazı",
+      "text": "Parçaya tekil seri numarasını kalıcı olarak işleyen markalama ünitesi."
+    },
+    {
+      "tag": "HAREKET",
+      "title": "3 eksenli servo yapı",
+      "text": "Esnek konumlandırma için X-Y-Z eksenlerinde servo tahrikli hareket."
+    },
+    {
+      "tag": "KONTROL",
+      "title": "PLC saha otomasyonu",
+      "text": "İstasyon içindeki tüm saha sinyallerini ve iş akışını yöneten PLC."
+    },
+    {
+      "tag": "ARAYÜZ",
+      "title": "C# ile SCADA uygulaması",
+      "text": "Operatör arayüzü ve süreç izleme için özel geliştirilmiş SCADA."
+    },
+    {
+      "tag": "DOĞRULAMA",
+      "title": "Kamera tabanlı kontrol",
+      "text": "Kod içeriği, derece ve konum doğrulaması görüntü işleme ile otomatik."
+    },
+    {
+      "tag": "VERİ",
+      "title": "Oracle entegrasyonu",
+      "text": "Seri numarası talebi ve onay verisiyle çift yönlü veri alışverişi."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Oracle ile çift yönlü entegrasyon",
+  "integrationDesc": "Sistem Oracle ile çift yönlü entegre çalışmaktadır: seri numaraları Oracle'dan alınmakta, markalama ve kontrol sonrası uygun parçaların onay verileri Oracle'a geri gönderilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Seri Numarası Alımı",
+      "text": "Seri numaraları Oracle ERP sisteminden otomatik olarak talep edilir ve tezgaha aktarılır."
+    },
+    {
+      "bold": "Onay Verisi Gönderimi",
+      "text": "Kamera kontrolünden geçen onaylanmış parçaların bilgileri anlık olarak Oracle sistemine geri yazılır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "İş süreçlerinde tam dijitalleşme",
+  "resultsGrid": [
+    {
+      "title": "%100 Veri Doğruluğu",
+      "text": "Kamera doğrulaması ve Oracle entegrasyonu sayesinde hatalı kod basımı veya kayıp veri riski tamamen engellendi."
+    },
+    {
+      "title": "Operasyonel Hız",
+      "text": "Markalama ve kamera kontrol adımlarının tek bir tezgahta birleştirilmesiyle çevrim süreleri optimize edildi."
+    },
+    {
+      "title": "Tam İzlenebilirlik",
+      "text": "Üretilen her bir parçanın geçmişi ve kalite test sonuçları merkezi sisteme kalıcı olarak kaydedildi."
+    }
+  ],
+  "closerTitle": "Yüksek performanslı lazer teknolojisi ve akıllı kamera sistemleriyle sıfır hata.",
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

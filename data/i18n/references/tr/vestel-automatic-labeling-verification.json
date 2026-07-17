@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Hassas etiketleme,",
+  "heroTitleLine2": "sıfır hatalı sevkiyat.",
+  "heroSub": "Vestel'in Manisa'daki çamaşır makinesi fabrikasında hayata geçirilen projede, hattan gelen ürünlerin otomatik olarak etiketlenmesi ve doğrulanması sağlanmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Çamaşır makinesi hattında etiket güvenliği",
+  "contextP1": "Vestel'in Manisa'daki çamaşır makinesi fabrikasında hayata geçirilen projede, hattan gelen ürünlerin otomatik olarak etiketlenmesi ve doğrulanması sağlanmıştır.",
+  "contextP2": "Proje, doğru ürüne doğru müşteri etiketinin basılmasını güvence altına almak amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Yanlış etiketleme ve sevkiyat riskleri",
+  "problemLede": "Hattan gelen her ürüne, ürün tipine uygun müşteri etiketinin doğru biçimde basılması ve basılan etiketin ürünle eşleştiğinin doğrulanması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Manuel Seçim Hataları",
+      "text": "Etiket seçimi ve uygulamasının manuel olarak yürütülmesinden kaynaklanan yanlış etiket basım riskleri."
+    },
+    {
+      "bold": "Hatalı Sevkiyat Riski",
+      "text": "Yanlış etiketlenen ürünlerin kalite kontrol süreçlerinden kaçarak hatalı sevk edilmesi ihtimali."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Barkod okumalı otomatik aplikasyon",
+  "solutionLede": "Hattan gelen ürünün barkodu, barkod okuyucu ile okundu. Okunan ürüne göre palet aplikatöründe ilgili iş (job) otomatik olarak seçildi ve ürüne uygun müşteri barkodu basıldı. Basılan etiket ürünle eşleştirilerek doğrulandı. Uygulama, müşterinin mevcut sistemlerine entegre edilerek çalışır hâle getirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Ürün Okuma",
+      "text": "Hattan gelen çamaşır makinesinin barkodu otomatik okuyucu ile taranır."
+    },
+    {
+      "no": "02",
+      "title": "İş Seçimi",
+      "text": "Okunan ürüne göre etiketleme işi (job) aplikatörde otomatik seçilir."
+    },
+    {
+      "no": "03",
+      "title": "Otomatik Etiketleme",
+      "text": "Palet aplikatörü, ürüne özel müşteri barkod etiketini basar."
+    },
+    {
+      "no": "04",
+      "title": "Eşleştirme Doğrulama",
+      "text": "Basılan etiket ürün barkodu ile eşleştirilerek entegre sistemlerde doğrulanır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Etiketleme ve otomasyon altyapısı",
+  "techGrid": [
+    {
+      "tag": "ETİKETLEME",
+      "title": "Palet Aplikatörü",
+      "text": "Ürün tiplerine özel etiketlerin otomatik basımını ve yapıştırılmasını sağlayan aplikatör."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Yönetimi",
+      "text": "Hattın mekanik ve lojik akışını yöneten, aplikatör tetiklemesini kontrol eden PLC."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Barkod Okuyucu",
+      "text": "Hattan gelen çamaşır makinelerinin barkodlarını anlık okuyan endüstriyel tarayıcı."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "Entegrasyon Katmanı",
+      "text": "Mevcut fabrika otomasyon ve veri yönetim sistemleri ile çift yönlü entegrasyon."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Müşteri Sistem Entegrasyonu",
+  "integrationDesc": "Uygulama, müşterinin mevcut sistemlerine entegre edilerek çalışmaktadır; ürün bilgisi ve etiketleme/doğrulama verileri bu sistemlerle paylaşılarak süreç merkezi olarak yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Veri Paylaşımı",
+      "text": "Eşleştirme ve doğrulama sonuçları merkezi sistemlere anlık iletilerek raporlanır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Hatasız etiketleme ve verimli akış",
+  "resultsGrid": [
+    {
+      "title": "Yanlış Etiket Önleme",
+      "text": "Müşteri etiketlerinin otomatik seçimi ve eşleştirilmesiyle hatalı etiket basımı sıfırlanmıştır."
+    },
+    {
+      "title": "Operasyonel Doğruluk",
+      "text": "Manuel kontrollerin kaldırılmasıyla etiket doğruluk yüzdesi en üst düzeye çıkarılmıştır."
+    },
+    {
+      "title": "Süreç Hızlandırma",
+      "text": "Otomatik palet aplikatör entegrasyonu sayesinde hat duruş süreleri en aza indirilmiştir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Metal",
+  "locationValue": "Izmir Gaziemir ESBAS",
+  "heroTitleLine1": "Groupe Atlantic",
+  "heroTitleLine2": "Busbar Traceability",
+  "heroSub": "At Groupe Atlantic's plant in Izmir Gaziemir ESBAS Free Zone, products carried on production busbars were tracked by operation up to packaging.",
+  "contextEyebrow": "Client and Context",
+  "contextTitle": "End-to-End Tracking on Production Busbars",
+  "contextP1": "Groupe Atlantic manufactures towel warmers at its Izmir facility. In this project, products moving on production busbars were tracked operation by operation.",
+  "contextP2": "The goal was to maintain full product-busbar visibility up to packaging and improve process control.",
+  "problemEyebrow": "Need / Problem",
+  "problemTitle": "Visibility and control gaps in manual tracking",
+  "problemLede": "At every production stage, it had to be known which products were on which busbar and in which operation they were located.",
+  "problemList": [
+    {
+      "bold": "Product-Busbar Link",
+      "text": "Manual methods made it hard to maintain a reliable product-busbar relationship across all stages."
+    },
+    {
+      "bold": "Operational Status",
+      "text": "Limited stage visibility created process control risks."
+    },
+    {
+      "bold": "Traceability Gap",
+      "text": "A digital structure was needed to ensure uninterrupted traceability up to packaging."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Operation-based digital busbar tracking",
+  "solutionLede": "Production busbars were tracked and both product-busbar relationships and operation states were recorded in real time.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Code Reading",
+      "text": "Busbars and products are scanned at operation transitions with field readers."
+    },
+    {
+      "no": "02",
+      "title": "Operation Recording",
+      "text": "The product-busbar relationship and operation status are updated instantly."
+    },
+    {
+      "no": "03",
+      "title": "SCADA Processing",
+      "text": "Tracking data is processed through the existing SCADA infrastructure."
+    },
+    {
+      "no": "04",
+      "title": "Tracking to Packaging",
+      "text": "Busbars and products are monitored continuously until packaging."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "Code readers, PLC, and OnSuite Trace",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Code Readers",
+      "text": "Field readers scan busbars and products in real time."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Control",
+      "text": "PLC controls field flow and forwards data to the process layer."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "SCADA Integration",
+      "text": "All reads are processed in SCADA for operation-based traceability."
+    },
+    {
+      "tag": "PLATFORM",
+      "title": "OnSuite Trace",
+      "text": "Traceability and process management are centralized on OnSuite Trace."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Integrated with SCADA and ERP",
+  "integrationDesc": "The solution works integrated with the customer's SCADA and ERP systems. Busbar and product tracking data is processed in SCADA and shared with ERP.",
+  "integrationList": [
+    {
+      "bold": "SCADA Integration",
+      "text": "Busbar and product tracking data is processed through the existing SCADA system."
+    },
+    {
+      "bold": "ERP Communication",
+      "text": "Traceability and production data are shared with ERP for centralized management."
+    }
+  ],
+  "resultsEyebrow": "Impact",
+  "resultsTitle": "Higher process visibility and control",
+  "resultsGrid": [
+    {
+      "title": "Operation-Based Traceability",
+      "text": "Busbars and products became traceable operation by operation up to packaging."
+    },
+    {
+      "title": "Product-Busbar Visibility",
+      "text": "Product-busbar relationships and operation status became visible at each stage."
+    },
+    {
+      "title": "Reduced Manual Work",
+      "text": "Reduced manual tracking needs strengthened process control and traceability."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to transform your production processes as well?",
+  "ctaSubtitle": "Contact us to discuss how we can adapt a similar solution to your operation.",
+  "ctaPrimary": "Contact Us"
+}

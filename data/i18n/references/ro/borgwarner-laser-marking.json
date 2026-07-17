@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Auto",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Marcare precisă cu laser,",
+  "heroTitleLine2": "flux validat cu cameră inteligentă.",
+  "heroSub": "În cadrul proiectului implementat la fabrica Borgwarner din Zona Liberă ESBAS din Izmir, s-a urmărit marcarea individuală cu laser și trasabilitatea fiecărui produs fabricat.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Trasabilitate individuală în industria furnizorilor de componente auto",
+  "contextP1": "Fabrica Borgwarner din Zona Liberă ESBAS din Izmir produce pentru industria furnizorilor de componente auto. În cadrul proiectului implementat la această fabrică, s-a urmărit marcarea individuală cu laser și trasabilitatea fiecărui produs fabricat.",
+  "contextP2": "Execuția automată a preciziei marcării și integrarea bazei de date este de o mare importanță pentru menținerea proceselor de calitate.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Etape separate și risc de lacune în trasabilitate",
+  "problemLede": "Fiecare piesă fabricată trebuia marcată cu un număr de serie unic, asigurând precizia marcării și transmițând datele de trasabilitate la sistemul central. Marcarea și verificarea care progresau ca etape separate și necuplate purtau riscul unor coduri incorecte sau ilizibile și al unor lacune în trasabilitate.",
+  "problemList": [
+    {
+      "bold": "Risc de Cod Ilizibil",
+      "text": "Imposibilitatea de a detecta instantaneu imprimarea codurilor ilizibile sau incorecte din cauza puterii laserului sau a rugozității suprafeței."
+    },
+    {
+      "bold": "Deconectare Proces",
+      "text": "Pierdere de forță de muncă și timp rezultată din executarea separată a etapelor de marcare și verificare prin cameră."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Celulă de marcare automată cu 3 axe integrată cu Oracle",
+  "solutionLede": "O mașină de marcare cu laser care susține procesele de marcare și identificare a fost dezvoltată pentru Borgwarner. Mașina a fost proiectată cu o capacitate de mișcare pe 3 axe pentru a se adapta la diferite produse. Sistemul a fost integrat cu Oracle pentru a prelua numerele de serie de imprimat. În urma marcării, verificările conținutului codului, calității și poziției au fost efectuate automat prin cameră, cu datele de aprobare pentru piesele valide trimise înapoi la Oracle.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Preluare Serie",
+      "text": "Sistemul preia numărul de serie unic de imprimat din baza de date Oracle în timp real."
+    },
+    {
+      "no": "02",
+      "title": "Marcare pe 3 Axe",
+      "text": "Laserul, care se deplasează prin structura axei servo, marchează piesa în poziția desemnată."
+    },
+    {
+      "no": "03",
+      "title": "Verificare Cameră",
+      "text": "Camera scanează conținutul codului imprimat, calitatea (clasa) și poziția."
+    },
+    {
+      "no": "04",
+      "title": "Aprobare Oracle",
+      "text": "Informațiile de aprobare a pieselor verificate sunt înregistrate în baza de date Oracle."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Proiectare mecanică și infrastructură de control",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Dispozitiv Marcare Laser",
+      "text": "Unitate laser care realizează marcarea permanentă, de înaltă rezoluție, pe suprafețe metalice."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Mișcare Servo pe 3 Axe",
+      "text": "Mecanism cu axe servo care poziționează capul laser în funcție de diferite geometrii ale produselor."
+    },
+    {
+      "tag": "OPTICĂ",
+      "title": "Control pe Bază de Cameră",
+      "text": "Sistem de viziune care măsoară instantaneu conținutul și calitatea imprimării codurilor 2D marcate."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Platformă principală care gestionează integrarea Oracle, procesele SCADA și etapele de trasabilitate."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Flux de Date Bidirecțional cu Oracle ERP",
+  "integrationDesc": "Sistemul funcționează integrat bidirecțional cu Oracle: numerele de serie sunt preluate din Oracle, iar după marcare și inspecție, datele de aprobare pentru piesele conforme sunt trimise înapoi la Oracle.",
+  "integrationList": [
+    {
+      "bold": "Sincronizare Bidirecțională Oracle",
+      "text": "Interogările numerelor de serie și etapele de notificare a aprobării comunică direct cu sistemul Oracle ERP."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Trasabilitate de înaltă fiabilitate a pieselor",
+  "resultsGrid": [
+    {
+      "title": "Urmărire Individuală",
+      "text": "Fiecare piesă produsă este urmărită individual în baza de date cu codul său laser."
+    },
+    {
+      "title": "Prevenirea Codurilor Greșite",
+      "text": "Verificarea automată prin cameră a prevenit eliberarea pieselor cu coduri incorecte, incomplete sau ilizibile."
+    },
+    {
+      "title": "Management într-un Singur Flux",
+      "text": "Procesele de marcare și inspecție sunt unificate într-o singură mașină, optimizând timpii de ciclu."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

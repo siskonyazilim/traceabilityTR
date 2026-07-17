@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Gıda",
+  "locationValue": "Çeşitli Fabrikalar",
+  "heroTitleLine1": "Koliden palete kesintisiz takip,",
+  "heroTitleLine2": "çevrimdışı çalışabilen güvenli altyapı.",
+  "heroSub": "Mey Diageo'nun tüm fabrikalarında koli–palet izlenebilirliğini sağlamak amacıyla, mevcut izlenebilirlik sisteminin yenilenmesi kapsamında sağlam, kullanıcı dostu ve esnek bir izlenebilirlik sistemi hayata geçirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Çoklu fabrika yapısında veri bütünlüğü",
+  "contextP1": "Mey Diageo'nun tüm fabrikalarında koli–palet izlenebilirliğini sağlamak amacıyla, mevcut izlenebilirlik sisteminin yenilenmesi kapsamında sağlam, kullanıcı dostu ve esnek bir izlenebilirlik sistemi hayata geçirilmiştir.",
+  "contextP2": "Proje, üretimde koliden palete kadar uzanan izlenebilirliğin tüm fabrikalar genelinde etkinleştirilmesini hedeflemiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Ağ kesintileri ve sistem sürekliliği",
+  "problemLede": "Mevcut izlenebilirlik sisteminin yenilenmesi; koliden palete kadar izlenebilirliğin güvenilir biçimde sağlanması gerekiyordu. Ayrıca ağ kesintileri gibi durumlarda ERP erişiminin kısıtlanması, üretimin durmaması için kesintisiz çalışabilen esnek bir yapıya ihtiyaç doğuruyordu.",
+  "problemList": [
+    {
+      "bold": "ERP Bağlantı Riskleri",
+      "text": "Merkezi ERP sistemiyle bağlantının kesildiği durumlarda üretimin durma riskiyle karşı karşıya kalması."
+    },
+    {
+      "bold": "Merkezi Raporlama Eksikliği",
+      "text": "Çoklu fabrika yapısında üretilen koli ve paletlerin merkezi olarak anlık izlenememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Çevrimdışı (offline) çalışabilen çift yönlü eşleştirme",
+  "solutionLede": "Koliden palete izlenebilirliği etkinleştirmek amacıyla, hattaki üretimden gelen kolilerin barkodları barkod okuyucular ile taranmakta ve karşılık gelen palet barkodlarıyla eşleştirilmektedir. Sistem SAP ile her iki yönde tam entegre olup, ağ kesintileri gibi SAP erişiminin kısıtlı olduğu durumlarda çevrimdışı çalışarak kesintisiz üretime devam etmektedir. Uygulama, Mey Diageo'nun tüm fabrikalarında ve üretim hatlarında çalışmakta; İstanbul'daki genel merkezden izlenebilmekte ve üretime ilişkin raporlar merkezi olarak oluşturulmaktadır.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Koli Taraması",
+      "text": "Üretim hattından gelen kolilerin barkodları endüstriyel okuyucularla taranır."
+    },
+    {
+      "no": "02",
+      "title": "Palet Eşleştirme",
+      "text": "Taranan koli bilgileri karşılık gelen palet kimliği ile eşleştirilir."
+    },
+    {
+      "no": "03",
+      "title": "Çevrimdışı Çalışma",
+      "text": "Ağ kesintisi oluşursa sistem otomatik olarak lokal hafızada çalışmaya devam eder."
+    },
+    {
+      "no": "04",
+      "title": "SAP Senkronizasyonu",
+      "text": "Bağlantı geldiğinde biriken tüm veriler otomatik olarak SAP sistemine aktarılır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Kesintisiz üretim ve etiketleme mimarisi",
+  "techGrid": [
+    {
+      "tag": "ARAYÜZ",
+      "title": "C# SCADA Uygulaması",
+      "text": "Koli-palet eşleştirmelerini, etiketleme akışını ve SAP entegrasyonunu yöneten arayüz."
+    },
+    {
+      "tag": "ETİKETLEME",
+      "title": "Koli ve Palet Aplikatörleri",
+      "text": "Koli ve palet etiketlerini otomatik olarak basan ve uygulayan endüstriyel makineler."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Endüstriyel Barkod Okuyucular",
+      "text": "Koli ve palet barkodlarını yüksek hızda ve doğrulukla tarayan saha okuyucuları."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "Çevrimdışı çalışabilme ve merkezi raporlama yeteneklerine sahip izlenebilirlik yazılımı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ERP ve Çevrimdışı Senkronizasyon",
+  "integrationDesc": "Sistem SAP ile çift yönlü tam entegre çalışmaktadır; üretim ve izlenebilirlik verileri SAP ile her iki yönde paylaşılmaktadır. Ağ kesintileri gibi SAP erişiminin kısıtlandığı durumlarda uygulama çevrimdışı çalışmaya geçerek üretimi kesintiye uğratmadan sürdürmekte, bağlantı geri geldiğinde verileri senkronize etmektedir.",
+  "integrationList": [
+    {
+      "bold": "Çevrimdışı Veri Tamponu",
+      "text": "Lokal veritabanında saklanan kesinti dönemi verileri, bağlantı kurulduğunda SAP'ye aktarılır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Kesintisiz üretim ve merkezi görünürlük",
+  "resultsGrid": [
+    {
+      "title": "Uçtan Uca İzlenebilirlik",
+      "text": "Koliden palete kadar tüm paketleme hiyerarşisi otomatik olarak kayıt altına alınmıştır."
+    },
+    {
+      "title": "Çevrimdışı Güvenilirlik",
+      "text": "Ağ veya SAP kesintilerinde bile fabrika üretimi durmamakta, veri bütünlüğü korunmaktadır."
+    },
+    {
+      "title": "Merkezi Raporlama",
+      "text": "Tüm fabrikalardaki izlenebilirlik verileri İstanbul'daki genel merkezden anlık olarak izlenebilmektedir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

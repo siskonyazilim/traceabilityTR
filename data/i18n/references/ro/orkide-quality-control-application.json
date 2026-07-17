@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Alimente",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Control de ambalare impecabil,",
+  "heroTitleLine2": "inspecție automată bazată pe cameră.",
+  "heroSub": "În cadrul proiectului implementat la fabrica ORKIDE din Izmir, care activează în sectorul alimentar, s-a instalat un sistem de control al calității bazat pe cameră pe produsele fabricate. Proiectul a fost realizat pentru a inspecta automat dacă anumite componente (etichete, capace etc.) de pe produse sunt complete.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Asigurarea ambalării în liniile de îmbuteliere a uleiului",
+  "contextP1": "În cadrul proiectului implementat la fabrica ORKIDE din Izmir, care activează în sectorul alimentar, s-a instalat un sistem de control al calității bazat pe cameră pe produsele fabricate. Proiectul a fost realizat pentru a inspecta automat dacă anumite componente (etichete, capace etc.) de pe produse sunt complete.",
+  "contextP2": "Automatizarea și standardizarea proceselor de control al calității este de o importanță vitală în ceea ce privește protejarea prestigiului mărcii și prevenirea ieșirii produselor defecte.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Componente lipsă și riscuri de control manual",
+  "problemLede": "Era necesar să se verifice în mod fiabil dacă componente precum etichetele și capacele sunt complete pe produsele fabricate. Efectuarea manuală a acestui control presupunea riscul apariției erorilor; defecte precum etichetele sau capacele lipsă care treceau neobservate reprezentau un risc pentru calitate și satisfacția clienților.",
+  "problemList": [
+    {
+      "bold": "Defecte de Capac/Etichetă Lipsă",
+      "text": "Riscul ca capacele sau etichetele lipsă să treacă neobservate în timpul fluxului de mare viteză al liniei."
+    },
+    {
+      "bold": "Expedierea Produselor Defecte",
+      "text": "Posibilitatea ca produsele cu ambalaj defect să fie ambalate și să ajungă la client."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Sistem de viziune automat cu detecție prezență-absență",
+  "solutionLede": "Un sistem de camere a fost instalat pe linia de producție, iar verificările de prezență-absență au fost efectuate automat pe produse. Camera a verificat dacă componente precum etichetele și capacele sunt prezente, detectând produsele lipsă sau defecte. Astfel, procesul de control al calității a fost eliminat din inițiativa operatorului, devenind automat și consecvent.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Detectare Produs",
+      "text": "Produsul este declanșat când intră în câmpul vizual al camerei la punctul de control al calității."
+    },
+    {
+      "no": "02",
+      "title": "Procesare Imagine",
+      "text": "Sistemul de camere captează instantaneu imaginea produsului și începe verificarea componentelor."
+    },
+    {
+      "no": "03",
+      "title": "Verificare Prezență",
+      "text": "Software-ul analizează dacă eticheta și capacul sunt prezente în locațiile desemnate."
+    },
+    {
+      "no": "04",
+      "title": "Respingere Defecte",
+      "text": "Dacă este detectată o componentă lipsă sau defectă, sistemul ia măsuri de respingere prin PLC."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Arhitectură de inspecție automată bazată pe cameră",
+  "techGrid": [
+    {
+      "tag": "VIZIUNE",
+      "title": "Unitate Control bazată pe Cameră",
+      "text": "Sistem de camere inteligente industriale care verifică prezența capacului și a etichetei la viteză mare."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Arhitectură PLC Câmp",
+      "text": "PLC care gestionează cilindrul de respingere și fluxul liniei conform rezultatelor analizei imaginilor."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Senzori și Declanșare",
+      "text": "Senzori industriali care asigură captarea imaginilor de către cameră cu o sincronizare precisă."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Interfață Monitorizare Centrală",
+      "text": "Software în care statisticile de control al calității și datele despre produse sunt monitorizate."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea Sistemelor Centrale de Urmărire a Calității",
+  "integrationDesc": "Sistemul este integrat cu sistemele existente ale clientului; rezultatele inspecției sunt partajate cu aceste sisteme, permițând monitorizarea și gestionarea centralizată a procesului.",
+  "integrationList": [
+    {
+      "bold": "Raportare Calitate",
+      "text": "Tipul și frecvența defectelor precum capacele sau etichetele lipsă sunt înregistrate instantaneu în baza de date centrală."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Ieșire impecabilă a produselor și inspecție consecventă",
+  "resultsGrid": [
+    {
+      "title": "Zero Defecte la Ieșire",
+      "text": "Niciun produs cu etichete sau capace lipsă nu are voie să părăsească fabrica."
+    },
+    {
+      "title": "Controlul Calității Standardizat",
+      "text": "Inspecțiile sunt efectuate 24/7 cu aceeași sensibilitate, independent de inițiativa oamenilor."
+    },
+    {
+      "title": "Raport de Trasabilitate",
+      "text": "Abaterile mașinilor de producție pot fi detectate din timp datorită statisticilor produselor defecte."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

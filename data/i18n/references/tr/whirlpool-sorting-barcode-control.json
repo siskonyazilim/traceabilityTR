@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Kamera tabanlı ayrıştırma,",
+  "heroTitleLine2": "sıfır hatalı ürün geçişi.",
+  "heroSub": "Beyaz eşya sektöründe faaliyet gösteren Whirlpool'un Manisa'daki fabrikasında hayata geçirilen projede, sorting (ayrıştırma) noktasına kamera tabanlı bir okuyucu konumlandırılarak ürünlerin kontrollü geçişi sağlanmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Ayrıştırma noktalarında akıllı kontrol",
+  "contextP1": "Beyaz eşya sektöründe faaliyet gösteren Whirlpool'un Manisa'daki fabrikasında hayata geçirilen projede, sorting (ayrıştırma) noktasına kamera tabanlı bir okuyucu konumlandırılarak ürünlerin kontrollü geçişi sağlanmıştır.",
+  "contextP2": "Proje, hatalı veya geçişine izin verilmeyen ürünlerin otomatik olarak tespit edilip engellenmesi amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Hatalı geçişler ve kalite riskleri",
+  "problemLede": "Sorting noktasında ürünlerin doğru şekilde tanınması ve geçişine izin verilmeyen (kara listedeki) ürünlerin ayrıştırılması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Manuel Ayrıştırma Riskleri",
+      "text": "Ayrıştırma işlemlerinin manuel olarak yürütülmesinin getirdiği insan kaynaklı hata ve kalite riskleri."
+    },
+    {
+      "bold": "Kara Liste Kontrolü Eksikliği",
+      "text": "Hatalı veya geçişine izin verilmeyen ürünlerin hattan anlık olarak elenmesini sağlayacak otomatik bir kontrol yapısının bulunmaması."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Kamera tabanlı okuma ve kara liste filtresi",
+  "solutionLede": "Sorting noktasına yerleştirilen kamera tabanlı okuyucu aracılığıyla, geçiş yapan her ürünün hem görseli hem de seri numarası bilgisi sisteme gönderildi. Alınan ürün görüntüsü, ilgili ürünün seri numarasıyla eşleştirilerek kayıt altına aldı. Ürünün kara listede olması durumunda geçişi otomatik olarak engellendi. Uygulama, müşterinin mevcut sistemlerine entegre edilerek çalışır hâle getirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Kamera ile Okuma",
+      "text": "Sorting noktasından geçen ürünlerin seri numaraları kamera ile taranır."
+    },
+    {
+      "no": "02",
+      "title": "Görüntü Eşleştirme",
+      "text": "Çekilen ürün görüntüsü seri numarasıyla anlık olarak eşleştirilip kaydedilir."
+    },
+    {
+      "no": "03",
+      "title": "Kara Liste Sorgulama",
+      "text": "Ürün bilgileri kara liste filtresinden geçirilerek uygunluğu kontrol edilir."
+    },
+    {
+      "no": "04",
+      "title": "Otomatik Engelleme",
+      "text": "Kara listedeki ürünler algılandığı anda PLC üzerinden geçişleri fiziksel olarak durdurulur."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Görüntü işleme ve saha kontrol sistemi",
+  "techGrid": [
+    {
+      "tag": "DONANIM",
+      "title": "Kamera Tabanlı Okuyucu",
+      "text": "Sorting noktasından geçen ürünlerin seri numaralarını yüksek doğrulukla okuyan kamera."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Akış Kontrolü",
+      "text": "Ayrıştırma kapılarını, sensörleri ve geçiş kilitlerini yöneten PLC altyapısı."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "Görüntü-veri eşleşmelerini kaydeden ve kara liste kararlarını yöneten merkezi yazılım."
+    },
+    {
+      "tag": "KONTROL",
+      "title": "Kara Liste Kontrolü",
+      "text": "Hatalı ürünlerin geçişini önleyen ve PLC'ye durdurma emri gönderen kontrol mantığı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Müşteri Sistemleri Entegrasyonu",
+  "integrationDesc": "Uygulama, müşterinin mevcut sistemlerine entegre edilerek çalışmaktadır; seri numarasıyla eşleştirilen ürün görüntüsü ve kontrol verileri bu sistemlerle paylaşılarak geçiş kararları merkezi olarak yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Merkezi Yönetim Entegrasyonu",
+      "text": "Ayrıştırma kararları ve ürün eşleşme verileri müşterinin merkezi veri tabanıyla senkronize edilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Tam otomatik ve kontrollü ürün akışı",
+  "resultsGrid": [
+    {
+      "title": "Kara Liste Engellemesi",
+      "text": "Geçişine izin verilmeyen hatalı ürünlerin sorting noktasından ilerlemesi otomatik ve güvenilir biçimde önlenmiştir."
+    },
+    {
+      "title": "Görüntü ve Veri Eşleme",
+      "text": "Her ürünün görüntüsü seri numarasıyla otomatik eşleştirilerek geriye dönük görsel doğrulama imkanı sağlanmıştır."
+    },
+    {
+      "title": "Manuel İş yükünün Azalması",
+      "text": "Ayrıştırma kontrollerinin otomatik yapılmasıyla insan kaynaklı hatalar elenmiş ve operasyon hızlandırılmıştır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

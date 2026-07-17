@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Inapoi la Proiecte de Referinta",
+  "sector": "Sector",
+  "location": "Locatie",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software si Integrare",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Delphi Technologies",
+  "heroTitleLine2": "Integrare RFID-Datamatrix pe Linia de Sina",
+  "heroSub": "La fabrica Delphi Technologies din Zona Libera Izmir ESBAS, metodele de trasabilitate bazate pe RFID si Datamatrix au fost unificate intr-un singur flux pe linia de montaj sina.",
+  "contextEyebrow": "Client si Context",
+  "contextTitle": "RFID si Datamatrix intr-un singur flux",
+  "contextP1": "Delphi Technologies produce pentru industria auto la fabrica din Izmir ESBAS. In acest proiect, urmarirea RFID si Datamatrix a fost integrata intr-o singura structura pe linia de montaj sina.",
+  "contextP2": "Scopul a fost asigurarea trasabilitatii continue a produsului in toate operatiunile pe baza unei identitati unice de serie.",
+  "problemEyebrow": "Nevoie / Problema",
+  "problemTitle": "Risc de intrerupere intre doua metode",
+  "problemLede": "O parte din operatiuni functiona pe etichete RFID, iar o alta pe coduri Datamatrix.",
+  "problemList": [
+    {
+      "bold": "Urmarire Fragmentata",
+      "text": "Fluxurile separate RFID si Datamatrix ingreunau continuitatea urmaririi pe intreg procesul."
+    },
+    {
+      "bold": "Gol de Trasabilitate",
+      "text": "Discontinuitatea datelor intre metode crea riscul de lipsa in istoricul produsului."
+    },
+    {
+      "bold": "Necesitatea unui Flux Unic",
+      "text": "Cele doua metode trebuiau unificate intr-un flux unic bazat pe acelasi numar de serie."
+    }
+  ],
+  "solutionEyebrow": "Solutie",
+  "solutionTitle": "Trasabilitate continua de la RFID la Datamatrix",
+  "solutionLede": "In statia de marcare, seria din RFID a fost transformata in Datamatrix; urmarirea a continuat cu Datamatrix in operatiunile urmatoare.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Citire RFID",
+      "text": "Identitatea seriala este citita de pe eticheta RFID a produsului."
+    },
+    {
+      "no": "02",
+      "title": "Conversie Datamatrix",
+      "text": "In marcare, seria RFID este transformata si imprimata ca Datamatrix."
+    },
+    {
+      "no": "03",
+      "title": "Urmarire Operatiuni",
+      "text": "Citirile Datamatrix in statiile urmatoare mentin fluxul de trasabilitate."
+    },
+    {
+      "no": "04",
+      "title": "Istoric Unificat",
+      "text": "Datele RFID si Datamatrix sunt unite sub aceeasi identitate seriala."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "RFID, marcare laser, citire cod, PLC",
+  "techGrid": [
+    {
+      "tag": "RFID",
+      "title": "Cititoare RFID",
+      "text": "Citesc seria din eticheta RFID si pornesc fluxul digital de trasabilitate."
+    },
+    {
+      "tag": "MARCARE",
+      "title": "Imprimanta Laser",
+      "text": "Transforma seria RFID in Datamatrix si o marcheaza pe fluxul de produs."
+    },
+    {
+      "tag": "CITIRE COD",
+      "title": "Cititoare Datamatrix",
+      "text": "Citesc codurile Datamatrix in operatiile urmatoare pentru continuitate."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Management PLC",
+      "text": "Uneste citirile RFID si Datamatrix intr-un singur flux de proces."
+    }
+  ],
+  "integrationEyebrow": "Integrari",
+  "integrationTitle": "Partajare centralizata cu Oracle",
+  "integrationDesc": "Sistemul este integrat cu Oracle; datele de trasabilitate din operatiile RFID si Datamatrix sunt partajate central pe baza seriei.",
+  "integrationList": [
+    {
+      "bold": "Integrare Oracle",
+      "text": "Datele operationale sunt transferate in Oracle pentru monitorizare si management centralizat."
+    }
+  ],
+  "resultsEyebrow": "Rezultate",
+  "resultsTitle": "Integritate de proces cap-la-cap",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate Continua",
+      "text": "Produsele au devenit urmaribile continuu de la marcare pana la finalul operatiunilor."
+    },
+    {
+      "title": "Unificare Metode",
+      "text": "Fluxurile operationale RFID si Datamatrix au fost unificate pe aceeasi identitate seriala."
+    },
+    {
+      "title": "Coerenta Procesului",
+      "text": "Intreruperile dintre cele doua metode au fost eliminate, asigurand integritatea procesului."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriti sa unificati metodele de urmarire intr-un singur flux?",
+  "ctaSubtitle": "Discutam cum putem integra RFID, Datamatrix si sistemele enterprise in operatiunea dvs.",
+  "ctaPrimary": "Contactati-ne"
+}

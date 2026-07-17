@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Gıda",
+  "locationValue": "İzmir",
+  "heroTitleLine1": "Doğru Etiket",
+  "heroTitleLine2": "Doğru Sevkiyat Güvencesi",
+  "heroSub": "SAP iş emriyle tetiklenen otomatik palet etiketleme ve doğrulama akışı sayesinde hatalı etiket riski düşürülmüş, sevkiyat güvenliği güçlendirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Palet düzeyinde otomatik etiketleme ve izlenebilirlik",
+  "contextP1": "Türk Tuborg'un İzmir'deki fabrikası, alkollü içecek üretimi yapmaktadır. Bu fabrikada hayata geçirilen projede, hattan çıkan paletlerin etiketlenmesi otomatikleştirilerek palet düzeyinde izlenebilirlik sağlanmıştır.",
+  "contextP2": "Proje, etiketleme sürecini operatör bağımlılığından çıkarıp doğrulanabilir ve iş emriyle uyumlu bir yapıya dönüştürmeyi hedeflemiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Manuel etiketleme kaynaklı hata ve sevkiyat riski",
+  "problemLede": "Palet etiketleri operatör kontrolünde manuel olarak basılıyordu. Bu yöntem operatöre bağımlıydı ve yanlış etiket basımı ile hatalı sevkiyat riskini artırıyordu.",
+  "problemList": [
+    {
+      "bold": "Operatör Bağımlılığı",
+      "text": "Etiketleme sürecinin manuel yürütülmesi standardizasyonu zorlaştırıyordu."
+    },
+    {
+      "bold": "Yanlış Etiket Riski",
+      "text": "Hatalı etiket basımı ürün-palete ait bilgilerin karışmasına neden olabiliyordu."
+    },
+    {
+      "bold": "Sevkiyat Hatası Potansiyeli",
+      "text": "İş emriyle uyumsuz etiketler, sevkiyat doğruluğunu olumsuz etkileyebiliyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "SAP iş emrine bağlı otomatik ve doğrulamalı etiketleme",
+  "solutionLede": "Paletlerin otomatik etiketlenmesi için palet aplikatörü konumlandırıldı; etiketler paletin 3 yönüne otomatik basılırken, SAP'den gelen iş emrine göre etiket seçimi ve basım sonrası doğrulama devreye alındı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "İş Emri Seçimi",
+      "text": "SAP'den sisteme gelen iş emrine göre basılacak palet etiketi belirlenir."
+    },
+    {
+      "no": "02",
+      "title": "3 Yönlü Otomatik Basım",
+      "text": "Palet aplikatörü etiketi paletin üç yönüne otomatik olarak uygular."
+    },
+    {
+      "no": "03",
+      "title": "Basım Sonrası Doğrulama",
+      "text": "Basım tamamlandıktan sonra etiket okunur ve doğruluğu teyit edilir."
+    },
+    {
+      "no": "04",
+      "title": "Kesintisiz Yedek Senaryo",
+      "text": "Aplikatör arızasında manuel etiketleme opsiyonu devreye alınarak süreç kesintisiz sürdürülür."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Palet aplikatörü, PLC, C# SCADA ve SAP entegrasyonu",
+  "techGrid": [
+    {
+      "tag": "ETİKETLEME",
+      "title": "Palet Aplikatörü",
+      "text": "Paletin 3 yönüne otomatik etiket basımını gerçekleştiren saha ekipmanı."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha akışını yönetir, etiketleme sıralarını ve ekipman durumlarını kontrol eder."
+    },
+    {
+      "tag": "UYGULAMA",
+      "title": "C# SCADA",
+      "text": "İş emri seçimi, etiket basımı, doğrulama ve SAP veri alışverişini yönetir."
+    },
+    {
+      "tag": "ENTEGRASYON",
+      "title": "SAP",
+      "text": "Basılacak etiket bilgisini iş emrine göre sağlar ve süreç sonuçlarını merkezi olarak toplar."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ile merkezi iş emri odaklı etiket yönetimi",
+  "integrationDesc": "Sistem SAP ile entegre çalışmaktadır; basılacak palet etiketi SAP'den seçilen iş emrine göre belirlenmekte, basım ve doğrulama sonuçları SAP ile paylaşılarak etiketleme süreci merkezi olarak yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "SAP İş Emri Entegrasyonu",
+      "text": "Etiket içeriği ve basım akışı, SAP'den gelen iş emrine göre otomatik şekillenir."
+    },
+    {
+      "bold": "Basım ve Doğrulama Geri Bildirimi",
+      "text": "Basım sonrası okuma/doğrulama çıktıları SAP ile paylaşılır ve süreç izlenebilirliği güçlenir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Doğru etiket, doğru sevkiyat, kesintisiz operasyon",
+  "resultsGrid": [
+    {
+      "title": "Operatör Bağımlılığının Azalması",
+      "text": "Palet etiketleme süreci otomatikleştirilerek operatör inisiyatifine bağımlılık ortadan kaldırılmıştır."
+    },
+    {
+      "title": "Sevkiyat Doğruluğu",
+      "text": "İş emrine göre otomatik basım ve doğrulama sayesinde yanlış etiket ve hatalı sevkiyat riski düşürülmüştür."
+    },
+    {
+      "title": "Kesintisiz Süreç",
+      "text": "Manuel etiketleme opsiyonu ile aplikatör arızalarında dahi etiketleme operasyonu kesintisiz sürdürülebilmiştir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Palet etiketleme süreçlerinizi otomatik ve doğrulanabilir hale getirmek ister misiniz?",
+  "ctaSubtitle": "SAP iş emri entegrasyonu, otomatik etiketleme ve basım sonrası doğrulama için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

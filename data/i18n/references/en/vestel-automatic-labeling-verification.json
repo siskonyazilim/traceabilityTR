@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Home Appliances",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Precision labeling,",
+  "heroTitleLine2": "zero shipping errors.",
+  "heroSub": "In the project implemented at Vestel's washing machine factory in Manisa, automatic labeling and verification of products coming from the line were ensured.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Label security in the washing machine line",
+  "contextP1": "In the project implemented at Vestel's washing machine factory in Manisa, automatic labeling and verification of products coming from the line were ensured.",
+  "contextP2": "The project was carried out to guarantee that the correct customer label is applied to the correct product.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Incorrect labeling and shipping risks",
+  "problemLede": "For each product coming from the line, the customer label matching the product type had to be printed correctly and verified that the printed label matched the product.",
+  "problemList": [
+    {
+      "bold": "Manual Selection Errors",
+      "text": "Risks of incorrect label printing resulting from selecting and applying labels manually."
+    },
+    {
+      "bold": "Faulty Shipping Risk",
+      "text": "The possibility of incorrectly labeled products bypassing quality control processes and being shipped in error."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Barcode-read automatic application",
+  "solutionLede": "The barcode of the product coming from the line was read by a barcode reader. According to the read product, the relevant job was automatically selected in the pallet applicator and the customer barcode suitable for the product was printed. The printed label was matched with the product and verified. The application was made operational by integrating it into the customer's existing systems.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Product Reading",
+      "text": "The barcode of the washing machine coming from the line is scanned via automatic reader."
+    },
+    {
+      "no": "02",
+      "title": "Job Selection",
+      "text": "According to the read product, the labeling job is automatically selected in the applicator."
+    },
+    {
+      "no": "03",
+      "title": "Automatic Labeling",
+      "text": "The pallet applicator prints the customer barcode label custom to the product."
+    },
+    {
+      "no": "04",
+      "title": "Match Verification",
+      "text": "The printed label is matched with the product barcode and verified in integrated systems."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Labeling and automation infrastructure",
+  "techGrid": [
+    {
+      "tag": "LABELING",
+      "title": "Palet Applicator",
+      "text": "Applicator enabling automatic printing and application of labels custom to product types."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Management",
+      "text": "PLC managing the mechanical and logical flow of the line, controlling applicator triggering."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Barcode Reader",
+      "text": "Industrial scanner reading barcodes of washing machines coming from the line instantly."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Integration Layer",
+      "text": "Bi-directional integration with existing factory automation and data management systems."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Customer System Integration",
+  "integrationDesc": "The application works integrated with the customer's existing systems; product info and labeling/verification data are shared with these systems, allowing the process to be managed centrally.",
+  "integrationList": [
+    {
+      "bold": "Data Sharing",
+      "text": "Matching and verification results are instantly transmitted to central systems and reported."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Error-free labeling and efficient flow",
+  "resultsGrid": [
+    {
+      "title": "Incorrect Label Prevention",
+      "text": "Incorrect label printing is eliminated by automatically selecting and matching customer labels."
+    },
+    {
+      "title": "Operational Accuracy",
+      "text": "Label accuracy percentage is maximized by eliminating manual control points."
+    },
+    {
+      "title": "Process Acceleration",
+      "text": "Line downtime is minimized thanks to the automatic pallet applicator integration."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

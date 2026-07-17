@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Alimente",
+  "locationValue": "Diverse Fabrici",
+  "heroTitleLine1": "Urmărire fără probleme de la cutie la palet,",
+  "heroTitleLine2": "infrastructură securizată cu suport offline.",
+  "heroSub": "Pentru a asigura trasabilitatea cutie-palet în toate fabricile Mey Diageo, a fost implementat un sistem de trasabilitate robust, ușor de utilizat și flexibil ca parte a reînnoirii sistemului existent.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Integritatea datelor în structuri multi-fabrică",
+  "contextP1": "Pentru a asigura trasabilitatea cutie-palet în toate fabricile Mey Diageo, a fost implementat un sistem de trasabilitate robust, ușor de utilizat și flexibil ca parte a reînnoirii sistemului existent.",
+  "contextP2": "Proiectul a fost realizat pentru a asigura trasabilitatea extinsă de la cutie la palet în toate fabricile.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Întreruperi de rețea și continuitatea sistemului",
+  "problemLede": "Reînnoirea sistemului de trasabilitate existent a fost necesară pentru a asigura trasabilitatea de la cutie la palet. În plus, accesul restricționat la ERP în timpul căderilor de rețea a necesitat o structură flexibilă, cu funcționare continuă, pentru a preveni timpii morți în producție.",
+  "problemList": [
+    {
+      "bold": "Riscuri de Conexiune ERP",
+      "text": "Risc de oprire a producției în cazurile în care se pierde conexiunea cu sistemul ERP central."
+    },
+    {
+      "bold": "Lipsa Raportării Centralizate",
+      "text": "Imposibilitatea de a monitoriza centralizat cutiile și paleții produși într-o structură multi-fabrică în timp real."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Potrivire bidirecțională cu suport offline",
+  "solutionLede": "Pentru a activa trasabilitatea cutie-palet, codurile de bare ale cutiilor din liniile de producție sunt scanate și asociate cu codurile de bare ale paleților corespunzători. Integrat cu SAP, sistemul funcționează offline în timpul căderilor de rețea, asigurând o producție neîntreruptă. Aplicația rulează în toate fabricile Mey Diageo, monitorizată de la sediul central din Istanbul, cu rapoarte generate centralizat.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Scanare Cutie",
+      "text": "Codurile de bare ale cutiilor de pe linia de producție sunt scanate prin cititoare industriale."
+    },
+    {
+      "no": "02",
+      "title": "Potrivire Palet",
+      "text": "Informațiile despre cutia scanată sunt asociate cu ID-ul paletului corespunzător."
+    },
+    {
+      "no": "03",
+      "title": "Funcționare Offline",
+      "text": "Dacă apare o cădere de rețea, sistemul continuă automat să funcționeze în memoria locală."
+    },
+    {
+      "no": "04",
+      "title": "Sincronizare SAP",
+      "text": "Când conexiunea este restabilită, toate datele acumulate sunt trimise automat în SAP."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Arhitectură de producție și etichetare continuă",
+  "techGrid": [
+    {
+      "tag": "INTERFAȚĂ",
+      "title": "Aplicație SCADA C#",
+      "text": "Interfață care gestionează potrivirea cutie-palet, fluxul de etichetare și integrarea SAP."
+    },
+    {
+      "tag": "ETICHETARE",
+      "title": "Aplicatoare Cutie și Palet",
+      "text": "Mașini industriale care imprimă și aplică automat etichete pe cutii și paleți."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Cititoare Cod de Bare",
+      "text": "Cititoare din teren care scanează codurile de bare ale cutiilor și paleților cu viteză și precizie mare."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Software de trasabilitate cu capacitate offline și raportare centralizată."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "SAP ERP și Sincronizare Offline",
+  "integrationDesc": "Sistemul funcționează complet integrat bidirecțional cu SAP. În timpul căderilor de rețea, aplicația trece în modul offline pentru a menține producția în funcțiune fără întreruperi și sincronizează datele odată ce conexiunea este restabilită.",
+  "integrationList": [
+    {
+      "bold": "Tampon Date Offline",
+      "text": "Datele din perioada de întrerupere stocate în baza de date locală sunt transferate în SAP când se stabilește conexiunea."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Producție continuă și vizibilitate centralizată",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate End-to-End",
+      "text": "Întreaga ierarhie de ambalare de la cutie la palet este înregistrată automat."
+    },
+    {
+      "title": "Fiabilitate Offline",
+      "text": "Producția fabricii nu se oprește chiar și în timpul căderilor de rețea sau SAP, păstrând integritatea datelor."
+    },
+    {
+      "title": "Raportare Centralizată",
+      "text": "Datele de trasabilitate din toate fabricile pot fi monitorizate în timp real de la sediul central din Istanbul."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

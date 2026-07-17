@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir ESBAŞ",
+  "heroTitleLine1": "Yerel Veriden",
+  "heroTitleLine2": "Global Buluta Merkezi Görünürlük",
+  "heroSub": "Sahadan toplanan izlenebilirlik verileri bulut entegrasyonu ile global erişime açılarak lokasyonlar arası ortak görünürlük ve raporlama gücü oluşturulmuştur.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Yerelden globale izlenebilirlik görünürlüğü",
+  "contextP1": "Delphi Technologies'in İzmir ESBAŞ Serbest Bölge'deki otomotiv yan sanayi fabrikasında hayata geçirilen projede, üretimden elde edilen izlenebilirlik verilerinin şirketin global bulut sistemiyle entegre edilmesi sağlanmıştır.",
+  "contextP2": "Proje, saha izlenebilirlik verilerinin yerel ortamdan çıkarılıp global düzeyde görünür kılınmasını amaçlamıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Yerel sistemlerde sınırlı kalan veri erişimi",
+  "problemLede": "İzlenebilirlik verileri yalnızca fabrikadaki yerel Oracle sistemlerinde tutuluyor; bu durum verilerin global düzeyde erişilebilir ve görünür olmasını engelliyordu.",
+  "problemList": [
+    {
+      "bold": "Yerel Sınır",
+      "text": "Veriler yalnızca fabrika içi Oracle ortamında tutulduğu için merkezi erişim mümkün olmuyordu."
+    },
+    {
+      "bold": "Global Görünürlük Eksikliği",
+      "text": "Farklı lokasyonların aynı veri seti üzerinde bütüncül görünürlük elde etmesi zorlaşıyordu."
+    },
+    {
+      "bold": "Entegrasyon İhtiyacı",
+      "text": "Yerel izlenebilirlik verilerinin şirketin global bulut sistemiyle entegre edilmesi gerekiyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Oracle'dan global buluta merkezi veri akışı",
+  "solutionLede": "Fabrikadaki yerel Oracle sistemlerinde tutulan izlenebilirlik verileri, Delphi'nin global bulut sistemiyle entegre edildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Yerel Veri Toplama",
+      "text": "Saha üretim ve izlenebilirlik verileri yerel Oracle sistemlerinde toplanır."
+    },
+    {
+      "no": "02",
+      "title": "Entegrasyon Katmanı",
+      "text": "Tanımlanan entegrasyon katmanı, Oracle verilerini dönüşüm kurallarıyla hazırlar."
+    },
+    {
+      "no": "03",
+      "title": "Global Buluta Aktarım",
+      "text": "Hazırlanan izlenebilirlik verileri Delphi'nin global bulut platformuna aktarılır."
+    },
+    {
+      "no": "04",
+      "title": "Merkezi Görünürlük",
+      "text": "Global sistem üzerinden farklı lokasyonlar için merkezi izleme ve raporlama sağlanır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Yerel Oracle ve global bulut entegrasyon katmanı",
+  "techGrid": [
+    {
+      "tag": "VERİ",
+      "title": "Yerel Oracle Sistemleri",
+      "text": "Saha izlenebilirlik verilerinin üretildiği ve tutulduğu yerel veri altyapısı."
+    },
+    {
+      "tag": "ENTEGRASYON",
+      "title": "Veri Entegrasyon Katmanı",
+      "text": "Yerel Oracle ile global bulut platformu arasında güvenli veri aktarımını yöneten katman."
+    },
+    {
+      "tag": "BULUT",
+      "title": "Global Bulut Platformu",
+      "text": "İzlenebilirlik verilerinin merkezi görünürlük ve erişim için toplandığı global ortam."
+    },
+    {
+      "tag": "YÖNETİM",
+      "title": "OnSuite Trace",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezde izlenmesini destekleyen platform."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Yerel Oracle ile global bulutun birleşimi",
+  "integrationDesc": "Sistem, yerel Oracle sistemleri ile Delphi'nin global bulut platformunu entegre etmektedir. Yerel ortamda üretilen izlenebilirlik verileri global bulut sistemine aktarılarak merkezi erişim ve görünürlük sağlanmaktadır.",
+  "integrationList": [
+    {
+      "bold": "Oracle - Bulut Entegrasyonu",
+      "text": "Yerel Oracle verileri entegrasyon katmanı üzerinden global bulut sistemine taşınır."
+    },
+    {
+      "bold": "Merkezi Erişim",
+      "text": "Global sistem sayesinde farklı lokasyonlar aynı izlenebilirlik verilerine merkezi olarak erişir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Global görünürlük ve raporlama kabiliyeti",
+  "resultsGrid": [
+    {
+      "title": "Global Erişilebilirlik",
+      "text": "İzlenebilirlik verileri yerel ortamla sınırlı olmaktan çıkarılarak global düzeyde erişilebilir hale gelmiştir."
+    },
+    {
+      "title": "Merkezi Görünürlük",
+      "text": "Farklı lokasyonlar arasında üretim ve izlenebilirlik verileri için merkezi görünürlük sağlanmıştır."
+    },
+    {
+      "title": "Raporlama Gücü",
+      "text": "Global bulut sistemi üzerinden merkezi izleme ve raporlama imkanı elde edilmiştir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "İzlenebilirlik verilerinizi global düzeyde görünür kılmak ister misiniz?",
+  "ctaSubtitle": "Yerel sistemleriniz ile global platformlar arasında güvenli ve sürdürülebilir entegrasyon için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

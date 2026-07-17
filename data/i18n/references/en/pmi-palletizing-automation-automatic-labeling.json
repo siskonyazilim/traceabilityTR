@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Tobacco",
+  "locationValue": "Torbali / Izmir",
+  "heroTitleLine1": "Automatic palletizing and labeling,",
+  "heroTitleLine2": "secured flow with carton-pallet matching.",
+  "heroSub": "In the project implemented at PMI's cigarette manufacturing plant in Torbali, Izmir, the automation and labeling processes in the palletizing area were renewed. SCADA and PLC infrastructure was updated to secure carton-pallet matching and automate production order management, with full SAP WMS integration.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Palletizing and shipment automation in the tobacco sector",
+  "contextP1": "In the project implemented at PMI's cigarette manufacturing plant in Torbali, Izmir, the automation and labeling processes in the palletizing area were renewed. Produced products are prepared on a carton and pallet basis and directed for shipment.",
+  "contextP2": "The project was carried out to automate this palletizing and labeling process, secure carton-pallet matching, and eliminate the risk of errors from manually running production orders and sorting processes.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Wrong labeling and manual sorting risks",
+  "problemLede": "Palletizing and labeling processes needed to be made more reliable, automatic, and traceable. There was a need to ensure correct printing of pallet labels, match cartons to the correct pallets, and eliminate the risk of errors from manually running production orders and sorting processes.",
+  "problemList": [
+    {
+      "bold": "Wrong Label Printing",
+      "text": "Manual selection for pallet label printing carried the risk of shipping incorrect customer or product labels."
+    },
+    {
+      "bold": "Incorrect Carton-Pallet Matching",
+      "text": "Manual placement of cartons on pallets led to the risk of wrong carton-pallet matching and shipment errors."
+    },
+    {
+      "bold": "Blacklisted Products",
+      "text": "The lack of automatic blocking for products not permitted to pass created operational errors."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Renewed SCADA, pallet labeling, and blacklist management",
+  "solutionLede": "The SCADA system in the palletizing area was renewed and the PLC structure managing the palletizing system was updated. Pallet labels were printed with label printers, carton labels were read to achieve carton-pallet matching. Production order start processes were organized and sorting lines were automatically planned. Additionally, a blacklist application was set up to block products not permitted to pass. The system was configured to work integrated with SAP WMS.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Production Order Start",
+      "text": "A production order is started from the SCADA interface; sorting lines are automatically programmed per the assembly plan."
+    },
+    {
+      "no": "02",
+      "title": "Pallet Label Printing",
+      "text": "At the palletizing point, the label printer automatically prints the relevant pallet label."
+    },
+    {
+      "no": "03",
+      "title": "Carton-Pallet Matching",
+      "text": "Carton barcodes are read and matched with the relevant pallet; blacklist checks block any unauthorized products."
+    },
+    {
+      "no": "04",
+      "title": "SAP WMS Transfer",
+      "text": "Matching and labeling data is instantly transmitted to the SAP WMS system."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "C# SCADA and PLC-based palletizing infrastructure",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "SCADA managing pallet label printing, carton-pallet matching, production order management, and blacklist control."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Palletizing System",
+      "text": "PLC structure physically managing palletizing and sorting flow, operating integrated with SCADA."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Label Printers",
+      "text": "Industrial thermal label printers automatically printing pallet labels."
+    },
+    {
+      "tag": "READER",
+      "title": "Barcode Readers",
+      "text": "Readers scanning carton barcodes to initiate the pallet matching and verification process."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP WMS Integration",
+  "integrationDesc": "The system operates integrated with SAP WMS; pallet-carton matching, production order, and sorting data are shared with SAP WMS, and palletizing and shipping processes are centrally managed.",
+  "integrationList": [
+    {
+      "bold": "SAP WMS Integration",
+      "text": "Palletizing approvals, labeling data, and carton-pallet matching records are bi-directionally and instantly synchronized with SAP WMS."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Error-free palletizing and automatic shipment preparation",
+  "resultsGrid": [
+    {
+      "title": "Secured Carton-Pallet Matching",
+      "text": "The risk of wrong carton-pallet matching and erroneous shipments is zeroed out with automatic reading and matching."
+    },
+    {
+      "title": "Blacklist Control",
+      "text": "Products not permitted to pass are automatically detected and blocked, increasing shipment accuracy."
+    },
+    {
+      "title": "Automatic Sorting Planning",
+      "text": "Sorting lines are automatically programmed without manual intervention based on the production order."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

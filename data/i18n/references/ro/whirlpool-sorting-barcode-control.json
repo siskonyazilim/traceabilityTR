@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Electrocasnice",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Sortare bazată pe cameră,",
+  "heroTitleLine2": "rutare de produse cu zero defecte.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de electrocasnice Whirlpool din Manisa, s-a poziționat un cititor bazat pe cameră la punctul de sortare pentru a asigura tranzitul controlat al produselor.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Control inteligent la punctele de sortare",
+  "contextP1": "În cadrul proiectului implementat la fabrica de electrocasnice Whirlpool din Manisa, s-a poziționat un cititor bazat pe cameră la punctul de sortare pentru a asigura tranzitul controlat al produselor.",
+  "contextP2": "Proiectul a fost realizat pentru a detecta și bloca automat produsele defecte sau neautorizate.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Rutare incorectă și riscuri de calitate",
+  "problemLede": "La punctul de sortare, produsele trebuiau recunoscute corect, iar cele care nu aveau voie să treacă (pe lista neagră) trebuiau sortate.",
+  "problemList": [
+    {
+      "bold": "Riscuri de Sortare Manuală",
+      "text": "Erori cauzate de om și riscuri de calitate asociate cu desfășurarea manuală a operațiunilor de sortare."
+    },
+    {
+      "bold": "Lipsa Controlului Listei Negre",
+      "text": "Lipsa unei structuri de control automat pentru a selecta instantaneu produsele defecte sau neautorizate de pe linie."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Citire bazată pe cameră și filtru de listă neagră",
+  "solutionLede": "Prin cititorul bazat pe cameră plasat la punctul de sortare, atât imaginea, cât și informațiile despre numărul de serie al fiecărui produs care trece au fost trimise la sistem. Imaginea produsului capturată a fost potrivită cu numărul de serie al produsului și înregistrată. Dacă produsul era pe lista neagră, trecerea sa a fost blocată automat. Aplicația a fost pusă în funcțiune prin integrarea ei în sistemele existente ale clientului.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Citire pe Cameră",
+      "text": "Numerele de serie ale produselor care trec prin punctul de sortare sunt scanate prin cameră."
+    },
+    {
+      "no": "02",
+      "title": "Potrivire Imagine",
+      "text": "Imaginea produsului capturată este potrivită instantaneu cu numărul de serie și înregistrată."
+    },
+    {
+      "no": "03",
+      "title": "Interogare Listă Neagră",
+      "text": "Informațiile despre produs sunt trecute prin filtrul listei negre pentru a verifica conformitatea acestuia."
+    },
+    {
+      "no": "04",
+      "title": "Blocare Automată",
+      "text": "Când sunt detectate produse de pe lista neagră, trecerea lor este oprită fizic prin PLC."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Procesarea imaginii și sistemul de control în teren",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Cititor bazat pe Cameră",
+      "text": "Cameră care citește cu mare precizie numerele de serie ale produselor care trec prin punctul de sortare."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Control Flux Câmp PLC",
+      "text": "Infrastructură PLC care gestionează porțile de sortare, senzorii și blocajele de tranzit."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Platforma OnSuite Trace",
+      "text": "Software central care înregistrează potrivirile imagine-date și gestionează deciziile privind lista neagră."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "Verificare Listă Neagră",
+      "text": "Logică de control care previne trecerea produselor defecte și trimite comenzi de oprire către PLC."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea Sistemelor Clientului",
+  "integrationDesc": "Aplicația funcționează integrată cu sistemele existente ale clientului; imaginile produselor și datele de control potrivite cu numerele de serie sunt partajate cu aceste sisteme, permițând gestionarea centralizată a deciziilor de tranzit.",
+  "integrationList": [
+    {
+      "bold": "Integrare Management Centralizat",
+      "text": "Deciziile de sortare și datele de potrivire a produselor sunt sincronizate cu baza de date centrală a clientului."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Flux de produse complet automatizat și controlat",
+  "resultsGrid": [
+    {
+      "title": "Blocarea Listei Negre",
+      "text": "Avansarea produselor neautorizate sau defecte dincolo de punctul de sortare este prevenită automat și în mod fiabil."
+    },
+    {
+      "title": "Asociere Imagine și Date",
+      "text": "Imaginea fiecărui produs este asociată automat cu numărul său de serie, permițând verificarea vizuală retrospectivă."
+    },
+    {
+      "title": "Volum de Muncă Manual Redus",
+      "text": "Automatizarea controalelor de sortare a eliminat erorile umane și a accelerat operațiunea."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

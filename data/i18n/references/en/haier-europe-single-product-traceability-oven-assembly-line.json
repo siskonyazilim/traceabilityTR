@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Turnkey",
+  "tagValue": "Electronics",
+  "locationValue": "Eskişehir",
+  "heroTitleLine1": "Automated test control,",
+  "heroTitleLine2": "unique product traceability.",
+  "heroSub": "Implemented at Haier Europe's Eskişehir cooking appliances factory; serial numbers are associated with RFID to automate safety tests independently of operators, pushing data to the global MES system.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Digital transformation on oven assembly lines",
+  "contextP1": "A traceability system was applied to the new oven assembly lines at the cooking appliances factory of Haier Europe, a global leader in home appliances, located in Eskişehir.",
+  "contextP2": "Within the scope of the project, the assembly line automation software was also developed by Siskon, connecting all test stations into a central traceability structure.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Secure test verification and registration needs",
+  "problemLede": "Electrical and leak safety tests of each oven produced on the new assembly lines had to be verified independently of operator intervention.",
+  "problemList": [
+    {
+      "bold": "Operator Dependence",
+      "text": "Human error and data inconsistency risks arising from manual execution of safety tests."
+    },
+    {
+      "bold": "Lack of Association",
+      "text": "Inability to automatically associate electrical, gas leak, and flame control test results with unique product serial numbers."
+    },
+    {
+      "bold": "Line Control Gaps",
+      "text": "Lack of an automatic locking mechanism to prevent untested or failed products from advancing along the assembly line."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "RFID-Based Station & Automated Test Control",
+  "solutionLede": "The product barcode is matched with the RFID tag at the line start. Electrical, gas leak, and flame control tests are carried out in automated operator-independent stations, matching results with serial numbers and pushing them to MES.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "RFID Association",
+      "text": "At the line start, the serial number from the product barcode is matched with the carrier's RFID tag."
+    },
+    {
+      "no": "02",
+      "title": "Automated Tests",
+      "text": "Ovens are automatically tested at electrical, gas leak, and flame control test stations, independent of operator intervention."
+    },
+    {
+      "no": "03",
+      "title": "Data Matching",
+      "text": "Real-time test results collected from stations are automatically associated with the product's unique serial number."
+    },
+    {
+      "no": "04",
+      "title": "MES Confirmation",
+      "text": "Successfully completed test confirmations are instantly pushed to Haier Europe's Global MES system."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "9-axis servo and robotic data integration",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "Assembly line automation software",
+      "text": "Control software managing the entire assembly line workflow and machine stations."
+    },
+    {
+      "tag": "ROBOTICS",
+      "title": "9-axis servo & robotic system",
+      "text": "Robotic equipment performing precise positioning and mechanical tasks at the stations."
+    },
+    {
+      "tag": "RFID",
+      "title": "RFID traceability infrastructure",
+      "text": "RFID system matching serial numbers at the line start and tracking station transits."
+    },
+    {
+      "tag": "STATION",
+      "title": "Automated test units",
+      "text": "Test equipment conducting electrical, gas leak, and flame control tests without human intervention."
+    },
+    {
+      "tag": "COMMUNICATION",
+      "title": "Industrial networks",
+      "text": "High-speed field data exchange over EtherCAT, TCP/IP, and Profinet protocols."
+    },
+    {
+      "tag": "DATA",
+      "title": "OnSuite Trace & MES integration",
+      "text": "Data layer where the OnSuite Trace platform runs fully integrated with Haier Global MES."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Haier Global MES Integration",
+  "integrationDesc": "The developed traceability system runs instantly integrated with Haier Europe's Global MES (Manufacturing Execution System); all test data and confirmations are pushed to MES.",
+  "integrationList": [
+    {
+      "bold": "MES Test Record",
+      "text": "Electrical, gas leak, and flame control test results are written to the MES system based on the product serial number."
+    },
+    {
+      "bold": "Process Locking",
+      "text": "Transition of failed or incomplete products to the next station is blocked based on the MES confirmation state."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Zero-error safety and real-time production tracking",
+  "resultsGrid": [
+    {
+      "title": "Unique product traceability",
+      "text": "End-to-end digital traceability based on serial numbers was provided for each product starting from the line entry."
+    },
+    {
+      "title": "Operator-independent quality",
+      "text": "Electrical, gas leak, and flame control tests are automated, reducing human error rates to zero."
+    },
+    {
+      "title": "MES data integrity",
+      "text": "All quality and test records on the production line are instantly sent to the MES system for centralized reporting."
+    }
+  ],
+  "closerTitle": "Highest safety standards combined with robotic automation and automated tests.",
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

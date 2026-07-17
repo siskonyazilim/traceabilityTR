@@ -1,0 +1,121 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Her istasyonda tam kontrol,",
+  "heroTitleLine2": "hat genelinde uçtan uca izlenebilirlik.",
+  "heroSub": "BSH'nin Çerkezköy'deki fırın üretimi yapan fabrikasında hayata geçirilen projede, montaj hatlarında ürün seri numarası bazında izlenebilirlik sağlanmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Üretim süreçlerinin anlık takibi",
+  "contextP1": "BSH'nin Çerkezköy'deki fırın üretimi yapan fabrikasında hayata geçirilen projede, montaj hatlarında ürün seri numarası bazında izlenebilirlik sağlanmıştır.",
+  "contextP2": "Proje, üretim sürecinin istasyon düzeyinde izlenmesi ve performans analizinin yapılabilmesi amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Takip ve verimlilik zorlukları",
+  "problemLede": "Montaj hatlarında her ürünün istasyon bazında takip edilebilmesi ve hangi ürünün hangi istasyonlardan geçtiğinin kayıt altına alınması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "İstasyon Bazlı Takip Eksikliği",
+      "text": "Ürünlerin hat boyunca hangi istasyonlardan geçtiğinin otomatik ve doğru şekilde kayıt altına alınamaması."
+    },
+    {
+      "bold": "Cycle Time Ölçüm Zorlukları",
+      "text": "İstasyon ve ürün bazlı süre (cycle time) verilerinin ölçülememesi nedeniyle darboğazların tespit edilememesi."
+    },
+    {
+      "bold": "Hat Dengeleme Problemleri",
+      "text": "Gerçek verilere dayanmayan hat dengeleme çalışmalarının verimlilik artışını kısıtlaması."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Gerçek zamanlı izleme ve analitik",
+  "solutionLede": "Ürün seri numarasının istasyon bazında takip edilmesiyle montaj hatlarında izlenebilirlik sağlandı. Cycle time analizleri ile istasyon ve ürün bazlı darboğazlar tespit edildi; box plot grafikleriyle istasyon bazlı süre dağılımları görselleştirilerek istasyon dengelemede öngörü sağlandı. SAP entegrasyonu ile master veriler SAP üzerinden alınarak sisteme entegre edildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Seri No Okuma",
+      "text": "İstasyonlarda ürün seri numaraları barkod okuyucular vasıtasıyla otomatik taranır."
+    },
+    {
+      "no": "02",
+      "title": "PLC Saha Yönetimi",
+      "text": "PLC yapısı, saha akışını ve okuma tetiklemelerini anlık olarak koordine eder."
+    },
+    {
+      "no": "03",
+      "title": "Cycle Time Analizi",
+      "text": "İstasyon bazlı okuma ve süre ölçümleri üzerinden çevrim süreleri analiz edilir."
+    },
+    {
+      "no": "04",
+      "title": "Box Plot Dağılımı",
+      "text": "Süre dağılımları box plot grafikleriyle görselleştirilerek istasyon dengeleme öngörüsü sağlanır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "İzlenebilirlik ve analitik donanım altyapısı",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Yapısı",
+      "text": "Saha otomasyonunu, istasyon geçişlerini ve okuma tetiklemelerini yöneten PLC altyapısı."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Barkod Okuyucular",
+      "text": "İstasyonlarda ürün seri numaralarını yüksek hassasiyetle okuyan endüstriyel tarayıcılar."
+    },
+    {
+      "tag": "ANALİTİK",
+      "title": "Cycle Time & Box Plot",
+      "text": "Süre ölçümleri üzerinden darboğaz tespiti ve box plot grafik görselleştirmeleri."
+    },
+    {
+      "tag": "VERİ",
+      "title": "SAP Entegrasyonu",
+      "text": "Ürün ve üretime dair master verilerin SAP üzerinden çift yönlü aktarımı."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezi olarak kontrol edildiği yazılım katmanı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ile çift yönlü entegrasyon",
+  "integrationDesc": "Sistem SAP ile çift yönlü entegre çalışmaktadır. Ürün ve üretime ilişkin master veriler SAP üzerinden alınarak izlenebilirlik sistemine aktarılmakta; istasyon bazlı takip ve analiz süreçleri bu güncel veriler üzerinden yürütülmektedir.",
+  "integrationList": [
+    {
+      "bold": "SAP Master Veri Alımı",
+      "text": "Ürün reçete ve master verileri SAP üzerinden otomatik olarak çekilerek sistemle senkronize edilir."
+    },
+    {
+      "bold": "Tek Kaynaktan Veri Akışı",
+      "text": "Saha uygulaması ile kurumsal ERP arasında tutarlı ve güncel bir bilgi bağı kurulur."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Veriye dayalı verimlilik artışı",
+  "resultsGrid": [
+    {
+      "title": "Tam İzlenebilirlik",
+      "text": "Ürün seri numarası düzeyinde istasyon bazlı uçtan uca izlenebilirlik sağlandı."
+    },
+    {
+      "title": "Darboğaz Tespiti",
+      "text": "Cycle time analizleri ve box plot grafikleriyle darboğaz oluşturan noktalar net şekilde görünür hale geldi."
+    },
+    {
+      "title": "İstasyon Dengeleme",
+      "text": "Süre dağılımları üzerinden hat dengeleme çalışmalarına öngörü kazandırılarak üretim verimliliği artırıldı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

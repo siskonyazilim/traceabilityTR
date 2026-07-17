@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Logistică Farmaceutică",
+  "locationValue": "Istanbul",
+  "heroTitleLine1": "Recepție și expediere rapidă,",
+  "heroTitleLine2": "poartă de citire multi-cod pe bază de cameră.",
+  "heroSub": "În cadrul proiectului implementat la depozitul din Istanbul al BOMI Group, o companie de logistică farmaceutică lider în multe țări, a fost dezvoltat un sistem de citire multi-cod pe bază de cameră pentru a automatiza operațiunile manuale anterioare. Proiectul acoperă atât procesele de recepție (inbound), cât și cele de expediere (outbound).",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Operațiuni de mare volum în logistica farmaceutică",
+  "contextP1": "În cadrul proiectului implementat la depozitul din Istanbul al BOMI Group, o companie de logistică farmaceutică lider în multe țări, a fost dezvoltat un sistem de citire multi-cod pe bază de cameră pentru a automatiza operațiunile manuale anterioare.",
+  "contextP2": "Proiectul a urmărit maximizarea vitezei și preciziei mișcărilor de produse în depozit, acoperind atât procesele de recepție (inbound), cât și cele de expediere (outbound).",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Scanări manuale lente și riscuri de întârziere a expedierii",
+  "problemLede": "Operațiunile de recepție și expediere din depozit se desfășurau în mare parte manual; fluxurile de lucru care necesitau scanarea individuală a mii de produse duceau atât la pierderi de timp, cât și la riscul apariției erorilor. În special în faza de pregătire a expedierii, era necesară o soluție automatizată pentru a crește viteza și precizia și pentru a asigura trasabilitatea.",
+  "problemList": [
+    {
+      "bold": "Lentitate Scanare Manuală",
+      "text": "Pierdere de timp creată de scanarea individuală a mii de cutii cu scanere manuale în timpul expedierii și recepției."
+    },
+    {
+      "bold": "Risc de Expediere Greșită",
+      "text": "Risc de expediere a cutiilor greșite din cauza erorilor de introducere manuală a datelor și a nepotrivirilor de coduri de bare trecute cu vederea."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Poartă de vizualizare cu cititor multi-cod și potrivire ERP instantanee",
+  "solutionLede": "A fost dezvoltat un sistem de citire multi-cod pe bază de cameră pentru a automatiza operațiunile desfășurate anterior manual. Sistemul identifică rapid produsele atât în procesele de recepție, cât și în cele de expediere, prin citirea mai multor coduri simultan. Trasabilitatea a fost realizată în faza de pregătire a expedierii prin integrarea ERP. Fluxurile de lucru care implicau scanarea manuală a mii de produse au fost complet automatizate.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Alimentare Transportor",
+      "text": "Cutiile de produse din procesele de recepție sau expediere sunt plasate pe sistemul de transportor."
+    },
+    {
+      "no": "02",
+      "title": "Scanare Multi-Cameră",
+      "text": "Pe măsură ce produsele trec prin tunelul de viziune, camera citește mai multe coduri de bare simultan."
+    },
+    {
+      "no": "03",
+      "title": "Analiză SCADA",
+      "text": "C# SCADA procesează datele multi-cod citite și efectuează analize de precizie."
+    },
+    {
+      "no": "04",
+      "title": "Actualizare ERP",
+      "text": "Mișcările de produse verificate sunt înregistrate instantaneu în sistemul ERP intern BOMI."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Tunel de viziune și arhitectură SCADA C#",
+  "techGrid": [
+    {
+      "tag": "VIZIUNE",
+      "title": "Citire Multi-Cod Cameră",
+      "text": "Hardware de viziune care rezolvă toate codurile de bare și 2D din câmpul său vizual cu mare precizie."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Transportor și Barieră",
+      "text": "Structură de transportor automatizată care alimentează cutiile în tunel la intervale regulate."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Management PLC Câmp",
+      "text": "PLC care gestionează declanșatoarele, viteza transportorului și timpii de citire ai camerei."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "SCADA C# & Integrator",
+      "text": "SCADA care comunică cu camerele, filtrează datele multi-citire și le transmite la ERP."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea Sistemului ERP Intern BOMI",
+  "integrationDesc": "Sistemul funcționează integrat cu sistemul ERP intern al BOMI Group. Datele citite despre produse și expediere sunt partajate cu ERP pentru a asigura trasabilitatea în etapa de pregătire, procesul fiind gestionat centralizat.",
+  "integrationList": [
+    {
+      "bold": "Integrare ERP Intern",
+      "text": "Datele de citire în masă sunt transmise direct la serverele ERP ale BOMI, declanșând procesele de aprobare."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Flux logistic de mare viteză și zero erori",
+  "resultsGrid": [
+    {
+      "title": "Pregătire Rapidă Expedieri",
+      "text": "Timpii de pregătire a produselor și ambalare sunt scurtați semnificativ datorită tunelului de citire în masă."
+    },
+    {
+      "title": "Validare Fără Erori",
+      "text": "Produsele cu coduri lipsă sau incorecte care ar putea fi trecute cu vederea sunt eliminate cu o precizie de 100% înainte de expediere."
+    },
+    {
+      "title": "Flux de Depozit Trasabil",
+      "text": "Eficiența logistică este crescută prin transparentizarea proceselor de recepție și expediere la nivel central."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

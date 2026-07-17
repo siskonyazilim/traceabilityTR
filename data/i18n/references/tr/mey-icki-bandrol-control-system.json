@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Gıda",
+  "locationValue": "Türkiye",
+  "heroTitleLine1": "Yasal Uyum İçin",
+  "heroTitleLine2": "Akıllı Bandrol Güvencesi",
+  "heroSub": "Kamera tabanlı otomatik kontrol ve reject ayrımı ile bandrolü eksik kolilerin sevkiyata karışması engellenmiş, süreç güvenliği merkezi olarak güvence altına alınmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Yasal bandrol kontrolünde merkezi güvence",
+  "contextP1": "Mey Diageo'nun tüm fabrikalarında sevkiyata hazırlanan kolilerde bandrol kontrolü kamera tabanlı bir sistemle otomatikleştirilmiştir.",
+  "contextP2": "Proje, yasal olarak zorunlu olan bandrolün her kolide eksiksiz bulunduğunu güvence altına almak amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Eksik bandrollü kolilerin sevkiyata karışma riski",
+  "problemLede": "Kolilerdeki bandrolün var olup olmadığının güvenilir biçimde kontrol edilmesi ve bandrolü eksik kolilerin sevkiyata karışmaması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Manuel Kontrol Riski",
+      "text": "Bandrol kontrolünün manuel yapılması hata olasılığını artırıyordu."
+    },
+    {
+      "bold": "Yasal Uyum Zorunluluğu",
+      "text": "Eksik bandrollü bir kolinin sevk edilmesi yasal risk oluşturuyordu."
+    },
+    {
+      "bold": "Operasyonel Güvenlik İhtiyacı",
+      "text": "Bandrol kontrolünün hat boyunca güvenilir ve tutarlı şekilde otomatik yürütülmesi gerekiyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Kamera tabanlı otomatik bandrol kontrolü ve reject ayrımı",
+  "solutionLede": "İş emri izlenebilirlik sistemi üzerinden seçilerek ilgili job kameraya otomatik gönderildi; koli seri numarası okuma, bandrol var-yok kontrolü ve otomatik reject ayrımı tek akışta yönetildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "İş Emri ve Kamera Job Eşleşmesi",
+      "text": "Seçilen iş emrine göre ilgili kamera job dosyası sisteme otomatik aktarılır."
+    },
+    {
+      "no": "02",
+      "title": "Koli Seri No Okuma",
+      "text": "Hat üzerinde ilerleyen koliler sisteme geldiğinde seri numarası barkod okuyucularla okunur."
+    },
+    {
+      "no": "03",
+      "title": "Bandrol Var-Yok Kontrolü",
+      "text": "Kamera tabanlı ünite koli üzerindeki bandrolün varlığını otomatik denetler."
+    },
+    {
+      "no": "04",
+      "title": "Reject Hattına Otomatik Ayırma",
+      "text": "Bandrolü eksik koliler PLC kararıyla reject hattına yönlendirilir; yalnızca uygun koliler sevkiyata devam eder."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Barkod okuyucu, kamera kontrol ünitesi, reject mekanizması, PLC",
+  "techGrid": [
+    {
+      "tag": "TANIMLAMA",
+      "title": "Barkod Okuyucular",
+      "text": "Koli seri numaralarını okuyarak kontrol ve kayıt akışını başlatır."
+    },
+    {
+      "tag": "GÖRÜNTÜ",
+      "title": "Kamera Tabanlı Kontrol Ünitesi",
+      "text": "Bandrol varlığını otomatik denetler ve karar bilgisini sisteme iletir."
+    },
+    {
+      "tag": "AYIRMA",
+      "title": "Reject Mekanizması",
+      "text": "Eksik bandrollü kolileri otomatik ayırarak sevkiyat akışından çıkarır."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC ve OnSuite Trace",
+      "text": "Saha akışını yönetir; kontrol sonuçlarını izlenebilirlik sistemi üzerinde merkezi olarak takip eder."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ve izlenebilirlik sistemiyle merkezi süreç yönetimi",
+  "integrationDesc": "Sistem SAP ile entegre çalışır. İş emri izlenebilirlik sistemi üzerinden seçilir, ilgili kamera job otomatik gönderilir ve koli seri numarası ile bandrol kontrol sonuçları SAP ile ilişkilendirilir.",
+  "integrationList": [
+    {
+      "bold": "İş Emri Bazlı Kamera Job Yönetimi",
+      "text": "Seçilen iş emrine göre kamera kontrol parametreleri otomatik yüklenir."
+    },
+    {
+      "bold": "SAP ile Sonuç Eşleştirme",
+      "text": "Koli seri no ve bandrol kontrol sonuçları SAP tarafında merkezi olarak ilişkilendirilir ve raporlanır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Yasal uyum, sevkiyat doğruluğu ve süreç güvenliği",
+  "resultsGrid": [
+    {
+      "title": "Manuel Hata Riskinin Kaldırılması",
+      "text": "Bandrol kontrolünün kamera tabanlı otomasyonu ile manuel kontrole bağlı hata riski ortadan kaldırılmıştır."
+    },
+    {
+      "title": "Eksik Bandrollü Koli Önleme",
+      "text": "Eksik bandrollü kolilerin reject hattına ayrılmasıyla sevkiyata karışmaları engellenmiştir."
+    },
+    {
+      "title": "Merkezi ve Güvenli Akış",
+      "text": "Seri no okuma ve otomatik ayrım sayesinde sevkiyat doğruluğu ile süreç güvenliği artırılmıştır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Bandrol kontrolünüzü otomatik ve yasal uyumlu hale getirmek ister misiniz?",
+  "ctaSubtitle": "Kamera tabanlı kontrol, otomatik reject ayrımı ve SAP entegrasyonu için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

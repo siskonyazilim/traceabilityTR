@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Pharmaceutical Logistics",
+  "locationValue": "Istanbul",
+  "heroTitleLine1": "Fast inbound and outbound,",
+  "heroTitleLine2": "camera-based multi-code reader gate.",
+  "heroSub": "In the project implemented at the Istanbul warehouse of BOMI Group, a leading pharmaceutical logistics company operating in many countries, a camera-based multi-code reading system was developed to automate previously manual operations. The project covers both inbound and outbound processes.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "High-volume operations in pharmaceutical logistics",
+  "contextP1": "In the project implemented at the Istanbul warehouse of BOMI Group, a leading pharmaceutical logistics company operating in many countries, a camera-based multi-code reading system was developed to automate previously manual operations.",
+  "contextP2": "The project aimed to maximize the speed and accuracy of product movements in the warehouse, covering both inbound (mal kabul) and outbound (sevkiyat) processes.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Slow manual scans and dispatch delay risks",
+  "problemLede": "Inbound and outbound operations in the warehouse were largely carried out manually; workflows requiring thousands of products to be scanned individually led to both loss of time and risk of errors. Especially in the shipping preparation phase, an automated solution was needed to increase speed and accuracy and secure traceability.",
+  "problemList": [
+    {
+      "bold": "Manual Scan Slowness",
+      "text": "Time loss created by scanning thousands of boxes one-by-one with handheld barcode scanners during shipping and receiving."
+    },
+    {
+      "bold": "Wrong Shipping Risk",
+      "text": "Risk of wrong boxes being shipped due to manual data entry errors and overlooked barcode mismatches."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Multi-code reader vision gate and instant ERP matching",
+  "solutionLede": "A camera-based multi-code reading system was developed to automate operations previously conducted manually. The system quickly identifies products in both inbound and outbound processes by reading multiple codes at once. Traceability was achieved in the shipping preparation phase through ERP integration. Workflows involving manual scanning of thousands of products were completely automated.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Conveyor Feeding",
+      "text": "Product boxes in inbound or outbound processes are placed onto the conveyor system."
+    },
+    {
+      "no": "02",
+      "title": "Multi-Camera Scan",
+      "text": "As products pass through the vision tunnel, the camera reads multiple barcodes simultaneously."
+    },
+    {
+      "no": "03",
+      "title": "SCADA Analysis",
+      "text": "C# SCADA processes the read multi-barcode data and performs accuracy analyses."
+    },
+    {
+      "no": "04",
+      "title": "ERP Update",
+      "text": "Verified product movements are instantly recorded in BOMI's in-house ERP system."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Vision tunnel and C# SCADA architecture",
+  "techGrid": [
+    {
+      "tag": "VISION",
+      "title": "Camera-Based Multi-Reading",
+      "text": "Vision hardware resolving all barcodes and 2D codes in its field of view with high accuracy."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Conveyor and Barrier",
+      "text": "Automated conveyor structure feeding boxes into the reading tunnel at regular intervals."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Management",
+      "text": "PLC managing sensor triggers, conveyor speed, and camera reading timings."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA & Integrator",
+      "text": "SCADA communicating with cameras, filtering multi-read data, and transmitting to ERP."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "BOMI In-House ERP System Integration",
+  "integrationDesc": "The system operates integrated with BOMI Group's in-house ERP system. Read product and shipping data are shared with the ERP to ensure traceability in the shipping prep stage, and the process is managed centrally.",
+  "integrationList": [
+    {
+      "bold": "In-House ERP Integration",
+      "text": "Bulk reading data is directly transmitted to BOMI's ERP servers, triggering inbound and outbound approval processes."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "High-speed logistics flow and zero errors",
+  "resultsGrid": [
+    {
+      "title": "Fast Shipment Prep",
+      "text": "Product preparation and packaging times are significantly shortened thanks to the bulk code reading tunnel."
+    },
+    {
+      "title": "Error-Free Validation",
+      "text": "Products with missing or incorrect codes that could be overlooked are eliminated with 100% accuracy before shipping."
+    },
+    {
+      "title": "Traceable Warehouse Flow",
+      "text": "Logistics efficiency is increased by making inbound and outbound processes centrally traceable."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

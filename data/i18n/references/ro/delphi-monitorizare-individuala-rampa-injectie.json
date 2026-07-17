@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria auto",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Vizibilitate Completă pe Produs,",
+  "heroTitleLine2": "Urmărire în Timp Real pe Linia de Montaj Rail",
+  "heroSub": "La fabrica Delphi Technologies din Izmir ESBAS Free Zone, a fost asigurată trasabilitatea individuală a produselor de pe linia de montaj rail pe toate operațiile utilajelor.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Trasabilitate individuală pe linia de montaj rail",
+  "contextP1": "Fabrica Delphi Technologies din Izmir ESBAS Free Zone produce pentru industria auto. În acest proiect, produsele de pe linia de montaj rail au fost urmărite individual pe toate operațiile utilajelor.",
+  "contextP2": "Obiectivul a fost să facă vizibil în timp real statusul pe operații și să întărească urmărirea procesului și controlul calității.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Lipsă de vizibilitate în urmărirea operației și statusului",
+  "problemLede": "Era necesar ca produsele de pe linia de montaj rail să fie urmărite la nivel individual după operație și status curent.",
+  "problemList": [
+    {
+      "bold": "Necesitatea Urmăririi Individuale",
+      "text": "Produsele trebuiau identificate unic de la început și urmărite în toate operațiile."
+    },
+    {
+      "bold": "Dificultate în Urmărirea Procesului",
+      "text": "Lipsa urmăririi progresului și statusului operațional îngreuna managementul procesului."
+    },
+    {
+      "bold": "Risc de Control al Calității",
+      "text": "Lipsa de vizibilitate genera întârzieri și risc în deciziile de control al calității."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Urmărire individuală pe operații, pornind de la pre-marcarea produsului",
+  "solutionLede": "Produsele au fost marcate și identificate unic înainte de intrarea pe linia de montaj rail. Pe toate operațiile utilajelor, pentru fiecare produs au fost înregistrate operația și statusul curent.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Pre-Marcare",
+      "text": "Produsele sunt marcate înainte de intrarea pe linie și introduse în sistem cu identitate unică."
+    },
+    {
+      "no": "02",
+      "title": "Recunoaștere Operațională",
+      "text": "Cititoarele de coduri de bare recunosc produsele la fiecare stație pe baza operației."
+    },
+    {
+      "no": "03",
+      "title": "Înregistrare Status",
+      "text": "Statusul operațional și nivelul de producție al fiecărui produs sunt înregistrate în timp real."
+    },
+    {
+      "no": "04",
+      "title": "Vizibilitate și Monitorizare",
+      "text": "Statusul curent al fiecărui produs în producția de serie devine vizibil la nivel de operație."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Infrastructură de teren bazată pe coduri de bare, PLC și C# SCADA",
+  "techGrid": [
+    {
+      "tag": "CITIRE",
+      "title": "Cititoare de Coduri de Bare",
+      "text": "Recunosc produsele pe operații și declanșează fluxul de trasabilitate individuală."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură PLC",
+      "text": "Gestionează fluxul de teren, controlează tranzițiile operaționale și menține consistența procesului."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA C#",
+      "text": "Gestionează monitorizarea statusului, raportarea și schimbul de date cu Oracle."
+    },
+    {
+      "tag": "PLATFORMĂ",
+      "title": "OnSuite Trace",
+      "text": "Stratul de platformă în care trasabilitatea și managementul proceselor sunt executate centralizat."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Management centralizat al proceselor cu Oracle",
+  "integrationDesc": "Sistemul funcționează integrat cu Oracle; datele de trasabilitate și status operațional sunt partajate cu Oracle pentru monitorizare și management centralizat.",
+  "integrationList": [
+    {
+      "bold": "Integrare Oracle",
+      "text": "Datele de operație și status ale produselor sunt partajate cu Oracle pentru management centralizat."
+    },
+    {
+      "bold": "Management OnSuite Trace",
+      "text": "Urmărirea individuală și vizibilitatea procesului sunt gestionate end-to-end pe OnSuite Trace."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Trasabilitate end-to-end la nivel de produs individual",
+  "resultsGrid": [
+    {
+      "title": "Vizibilitate pe Operații",
+      "text": "Nivelul și statusul fiecărui produs au devenit vizibile la nivel de operație."
+    },
+    {
+      "title": "Urmărire și Control al Calității Simplificate",
+      "text": "Prin eliminarea lipsei de vizibilitate, urmărirea producției și controlul calității au fost simplificate."
+    },
+    {
+      "title": "Urmărire Individuală Completă",
+      "text": "Produsele au fost urmărite cu identitate unică de la intrarea pe linie, obținând trasabilitate end-to-end."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să creșteți vizibilitatea pe produs individual în linia de montaj?",
+  "ctaSubtitle": "Consolidăm trasabilitatea pe operații cu soluțiile noastre bazate pe coduri de bare, SCADA și OnSuite Trace.",
+  "ctaPrimary": "Contactați-ne"
+}

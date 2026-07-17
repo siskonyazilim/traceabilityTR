@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Tutun",
+  "locationValue": "Torbali / Izmir",
+  "heroTitleLine1": "Paletizare și etichetare automată,",
+  "heroTitleLine2": "flux securizat cu potrivire cutie-palet.",
+  "heroSub": "În cadrul proiectului implementat la fabrica de producție de țigări PMI din Torbali, Izmir, procesele de automatizare și etichetare din zona de paletizare au fost reînnoite. Infrastructura SCADA și PLC a fost actualizată pentru a securiza potrivirea cutie-palet și a automatiza gestionarea ordinelor de producție, cu integrare completă SAP WMS.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Automatizarea paletizării și expedierii în sectorul tutunului",
+  "contextP1": "În cadrul proiectului implementat la fabrica de producție de țigări PMI din Torbali, Izmir, procesele de automatizare și etichetare din zona de paletizare au fost reînnoite. Produsele fabricate sunt pregătite pe baza cutiei și paletului și direcționate pentru expediere.",
+  "contextP2": "Proiectul a fost realizat pentru a automatiza procesul de paletizare și etichetare, pentru a securiza potrivirea cutie-palet și pentru a elimina riscul de erori din gestionarea manuală a ordinelor de producție și procesele de sortare.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Riscuri de etichetare greșită și sortare manuală",
+  "problemLede": "Procesele de paletizare și etichetare trebuiau să devină mai fiabile, automate și trasabile. Era nevoie de asigurarea tipăririi corecte a etichetelor paletului, potrivirea cutiilor cu paletele corecte și eliminarea riscului de erori din gestionarea manuală a ordinelor de producție și sortare.",
+  "problemList": [
+    {
+      "bold": "Tipărire Etichetă Greșită",
+      "text": "Selectarea manuală pentru tipărirea etichetei paletului purta riscul expedierii de etichete incorecte."
+    },
+    {
+      "bold": "Potrivire Cutie-Palet Incorectă",
+      "text": "Plasarea manuală a cutiilor pe paleți ducea la riscul de potrivire incorectă și erori de expediere."
+    },
+    {
+      "bold": "Produse pe Lista Neagră",
+      "text": "Lipsa blocării automate pentru produsele nepermise să treacă crea erori operaționale."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "SCADA reînnoit, etichetare paletului și management listă neagră",
+  "solutionLede": "Sistemul SCADA din zona de paletizare a fost reînnoit și structura PLC care gestionează sistemul de paletizare a fost actualizată. Etichetele paletului au fost tipărite cu imprimante de etichete, etichetele cutiilor au fost citite pentru a realiza potrivirea cutie-palet. Procesele de pornire a ordinelor de producție au fost organizate și liniile de sortare au fost planificate automat. În plus, a fost configurată o aplicație de listă neagră pentru a bloca produsele care nu au permisiunea de a trece. Sistemul a fost configurat să lucreze integrat cu SAP WMS.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Pornire Ordin Producție",
+      "text": "Un ordin de producție este pornit din interfața SCADA; liniile de sortare sunt programate automat."
+    },
+    {
+      "no": "02",
+      "title": "Tipărire Etichetă Palet",
+      "text": "La punctul de paletizare, imprimanta de etichete tipărește automat eticheta paletului relevant."
+    },
+    {
+      "no": "03",
+      "title": "Potrivire Cutie-Palet",
+      "text": "Codurile de bare ale cutiilor sunt citite și potrivite cu paletul relevant; verificările listei negre blochează produsele neautorizate."
+    },
+    {
+      "no": "04",
+      "title": "Transfer SAP WMS",
+      "text": "Datele de potrivire și etichetare sunt transmise instantaneu sistemului SAP WMS."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "SCADA C# și infrastructură de paletizare bazată pe PLC",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA C#",
+      "text": "SCADA gestionând tipărirea etichetelor de paleți, potrivirea cutie-palet, gestionarea ordinelor și controlul listei negre."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Sistem PLC Paletizare",
+      "text": "Structura PLC care gestionează fizic fluxul de paletizare și sortare, integrată cu SCADA."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Imprimante de Etichete",
+      "text": "Imprimante termice industriale care tipăresc automat etichetele paletului."
+    },
+    {
+      "tag": "CITITOR",
+      "title": "Cititoare de Coduri de Bare",
+      "text": "Cititoare care scanează codurile de bare ale cutiilor pentru a iniția procesul de potrivire și verificare a paletului."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrarea SAP WMS",
+  "integrationDesc": "Sistemul funcționează integrat cu SAP WMS; datele de potrivire palet-cutie, ordinele de producție și sortare sunt partajate cu SAP WMS, iar procesele de paletizare și expediere sunt gestionate centralizat.",
+  "integrationList": [
+    {
+      "bold": "Integrare SAP WMS",
+      "text": "Aprobările de paletizare, datele de etichetare și înregistrările de potrivire cutie-palet sunt sincronizate bidirecțional și instantaneu cu SAP WMS."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Paletizare fără erori și pregătire automată a expedierii",
+  "resultsGrid": [
+    {
+      "title": "Potrivire Cutie-Palet Securizată",
+      "text": "Riscul de potrivire incorectă cutie-palet și expedieri eronate este eliminat cu citire și potrivire automată."
+    },
+    {
+      "title": "Control Listă Neagră",
+      "text": "Produsele care nu au permisiunea de a trece sunt detectate și blocate automat, crescând acuratețea expedierii."
+    },
+    {
+      "title": "Planificare Automată Sortare",
+      "text": "Liniile de sortare sunt programate automat fără intervenție manuală pe baza ordinului de producție."
+    }
+  ],
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}

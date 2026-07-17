@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Tutun",
+  "locationValue": "Izmir Torbali",
+  "heroTitleLine1": "Filtrul Corect,",
+  "heroTitleLine2": "Garanția Producției Corecte",
+  "heroSub": "În proiectul implementat la fabrica PMI de producție țigarete din Izmir Torbali, s-a urmărit trasabilitatea și utilizarea corectă a materialului în etapa de alimentare a mașinilor de producție cu filtrele produse în fabrica de filtre.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Potrivire sigură de la filtru la producție",
+  "contextP1": "În proiectul implementat la fabrica PMI de producție țigarete din Izmir Torbali, s-a urmărit trasabilitatea și utilizarea corectă a materialului în etapa de alimentare a mașinilor de producție cu filtrele produse în fabrica de filtre.",
+  "contextP2": "Proiectul a fost realizat pentru a asigura potrivirea filtru-ordin de lucru pe întregul flux de la fabricația filtrului până la producția de țigarete.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Risc de erori și calitate în controlul manual",
+  "problemLede": "În producția de țigarete, filtrul alimentat în mașină trebuia să fie conform ordinului de lucru și rețetei produsului (BOM). Verificarea manuală creștea riscurile de calitate.",
+  "problemList": [
+    {
+      "bold": "Conformitate SKU",
+      "text": "Controlul manual al SKU-ului corect pentru filtrul alimentat avea risc ridicat de eroare."
+    },
+    {
+      "bold": "Validare Expirare",
+      "text": "Validarea manuală a conformității datei de expirare nu era fiabilă și sustenabilă."
+    },
+    {
+      "bold": "Siguranță la Pornire",
+      "text": "Era necesară o structură sistematică ce împiedică pornirea producției înainte de confirmarea potrivirii."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Control automat al potrivirii cu RFID + SAP + PLC",
+  "solutionLede": "Filtrele au fost etichetate la ieșirea din fabrica de filtre cu data producției, data expirării, cantitate și SKU. La alimentarea mașinii de producție, datele din SAP (ordin de lucru și BOM) au fost citite și comparate automat cu codul materialului filtrului.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Etichetare Filtru",
+      "text": "Pe filtru se scriu data producției, data expirării, cantitatea și SKU-ul."
+    },
+    {
+      "no": "02",
+      "title": "Citire Ordin de Lucru",
+      "text": "La alimentarea mașinii sunt citite din SAP ordinul de lucru și datele BOM."
+    },
+    {
+      "no": "03",
+      "title": "Potrivire SKU și Expirare",
+      "text": "Datele citite RFID sunt comparate cu codul materialului din SAP și criteriile de expirare."
+    },
+    {
+      "no": "04",
+      "title": "Permisiune de Funcționare",
+      "text": "Dacă SKU și expirarea sunt conforme, PLC permite funcționarea; în caz contrar producția este blocată."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Infrastructură de validare în teren și control mașină",
+  "techGrid": [
+    {
+      "tag": "CITIRE",
+      "title": "Cititoare RFID",
+      "text": "Citesc instant datele critice de pe etichetă când filtrul este alimentat în mașină."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Structură PLC",
+      "text": "Stratul de control care gestionează automatizarea de teren și decizia de pornire a mașinii."
+    },
+    {
+      "tag": "TEREN",
+      "title": "Terminal Mobil",
+      "text": "Utilizat pentru verificări în teren și operațiuni de procesare date."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Validare SAP end-to-end a ordinului de lucru",
+  "integrationDesc": "Sistemul funcționează integrat cu SAP; ordinul de lucru, BOM-ul și codul materialului filtrului sunt preluate din SAP și corelate cu datele de etichetă, iar rezultatele de potrivire și permisiune sunt asociate în SAP.",
+  "integrationList": [
+    {
+      "bold": "Ordin de Lucru SAP și BOM",
+      "text": "Codul materialului filtrului, ordinul de lucru și BOM-ul sunt preluate din SAP și corelate automat cu citirea RFID."
+    },
+    {
+      "bold": "Control Mașină",
+      "text": "Rezultatul potrivirii este transmis către PLC, iar decizia de funcționare se aplică în timp real."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Validare automată pentru consolidarea calității",
+  "resultsGrid": [
+    {
+      "title": "Prevenirea SKU Greșit",
+      "text": "Potrivirea automată filtru-ordin de lucru a prevenit utilizarea filtrului greșit."
+    },
+    {
+      "title": "Conformitate la Expirare",
+      "text": "Filtrele neconforme din perspectiva expirării au fost blocate de sistem."
+    },
+    {
+      "title": "Control Independent de Operator",
+      "text": "Blocarea funcționării înainte de confirmare a crescut siguranța calității."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să digitalizați procesele de validare filtru și material?",
+  "ctaSubtitle": "Adaptăm soluțiile noastre de trasabilitate RFID și validare a ordinelor de lucru pentru fabrica dumneavoastră.",
+  "ctaPrimary": "Contactați-ne"
+}

@@ -1,0 +1,127 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Turnkey",
+  "tagValue": "Home Appliances",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Correct glass, correct bracket,",
+  "heroTitleLine2": "zero-defect assembly.",
+  "heroSub": "Implemented at BSH's Çerkezköy oven factory; brackets mounted on oven glass are tracked by carrier/basket ID, recording the glass-bracket-product component relationship integrated with SAP ERP.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Precision assembly control in oven production",
+  "contextP1": "In the project implemented at BSH's oven production factory in Çerkezköy, the brackets mounted on the oven glass were tracked and recorded based on the basket ID.",
+  "contextP2": "The project was carried out to ensure the traceability of the glass–bracket–product component relationship and to prevent assembly errors.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Component matching difficulties",
+  "problemLede": "There was a risk of incorrect matching of glass and bracket components during oven door assembly.",
+  "problemList": [
+    {
+      "bold": "Incorrect Matching Risk",
+      "text": "Incorrect matching of glass and bracket components in oven production and lack of verification for these matches."
+    },
+    {
+      "bold": "Manual Tracking Constraints",
+      "text": "Insufficient manual tracking of the component-product relationship, creating a traceability gap."
+    },
+    {
+      "bold": "Defective Part Detection",
+      "text": "Inability to detect and block incorrect component pairings in real time during assembly."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Bracket and Basket Traceability",
+  "solutionLede": "Brackets were tracked according to basket IDs. Baskets were scanned at the glass bonding station, verifying oven glass lot numbers against bracket lot numbers. At the assembly stage, the lot number of the relevant glass trolley was associated with the oven's unique serial number.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Basket Tracking",
+      "text": "Brackets mounted on oven glass are made traceable based on their basket IDs."
+    },
+    {
+      "no": "02",
+      "title": "Lot Verification",
+      "text": "Baskets are scanned at the glass bonding station, verifying oven glass lot numbers against bracket lot numbers."
+    },
+    {
+      "no": "03",
+      "title": "Product Association",
+      "text": "At the assembly stage, the lot number of the relevant glass trolley is associated with the oven's unique serial number."
+    },
+    {
+      "no": "04",
+      "title": "SAP Confirmation",
+      "text": "Confirmation data for compliant parts that successfully pass all matches is written back to the SAP ERP system."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Automation and control architecture",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC field automation",
+      "text": "PLC infrastructure managing workflow and field signals at the glass bonding station."
+    },
+    {
+      "tag": "INTERFACE",
+      "title": "SCADA application with C#",
+      "text": "C# application for verification, product association, and operator displays."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Industrial Barcode Readers",
+      "text": "High-precision barcode readers scanning glass and bracket lot numbers, as well as basket IDs."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "OnSuite Trace Platform",
+      "text": "Central software layer providing traceability, lot tracking, and process control."
+    },
+    {
+      "tag": "DATA",
+      "title": "SAP ERP Integration",
+      "text": "Bi-directional data integration of matching and production confirmations with the SAP system."
+    },
+    {
+      "tag": "VERIFICATION",
+      "title": "Station Control",
+      "text": "Automatic stop mechanism that halts the line via PLC in case of incorrect bracket usage."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP ERP Integration",
+  "integrationDesc": "The process monitoring and verification system runs fully integrated with BSH's SAP ERP infrastructure; production confirmations and lot-matching data are written back to SAP.",
+  "integrationList": [
+    {
+      "bold": "SAP Production Confirmation",
+      "text": "Confirmation data for compliant parts is written to the SAP ERP system in real time after verification."
+    },
+    {
+      "bold": "Lot Match Verification",
+      "text": "Glass and bracket lot numbers are validated against SAP inventory and recipe definitions before proceeding."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Zero-defect assembly and complete traceability",
+  "resultsGrid": [
+    {
+      "title": "Correct component matching",
+      "text": "The correct match of glass and bracket components during assembly is auto-verified, reducing incorrect part usage to zero."
+    },
+    {
+      "title": "Serial number level tracking",
+      "text": "Component-product relationships are recorded at the product serial number level, ensuring full backward traceability."
+    },
+    {
+      "title": "Process safety",
+      "text": "The line-stopping control on incorrect matches completely prevents non-compliant products from moving to the next station."
+    }
+  ],
+  "closerTitle": "Seamless process safety from glass to bracket, assembly to SAP.",
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Home Appliances",
+  "locationValue": "Manisa",
+  "heroTitleLine1": "Camera-based sorting,",
+  "heroTitleLine2": "zero-defect product routing.",
+  "heroSub": "In the project implemented at Whirlpool's home appliances factory in Manisa, a camera-based reader was positioned at the sorting point to ensure controlled transit of products.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Smart control at sorting points",
+  "contextP1": "In the project implemented at Whirlpool's home appliances factory in Manisa, a camera-based reader was positioned at the sorting point to ensure controlled transit of products.",
+  "contextP2": "The project was carried out in order to automatically detect and block faulty or unauthorized products.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Incorrect routing and quality risks",
+  "problemLede": "At the sorting point, products had to be recognized correctly and those that were not allowed to pass (blacklisted) had to be sorted.",
+  "problemList": [
+    {
+      "bold": "Manual Sorting Risks",
+      "text": "Human-caused errors and quality risks associated with running sorting operations manually."
+    },
+    {
+      "bold": "Lack of Blacklist Control",
+      "text": "Lack of an automatic control structure to instantly screen out faulty or unauthorized products from the line."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Camera-based reading and blacklist filter",
+  "solutionLede": "Through the camera-based reader placed at the sorting point, both the image and the serial number info of each passing product were sent to the system. The captured product image was matched with the product's serial number and recorded. If the product was blacklisted, its passage was automatically blocked. The application was made operational by integrating it into the customer's existing systems.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Camera-Based Reading",
+      "text": "Serial numbers of products passing through the sorting point are scanned via camera."
+    },
+    {
+      "no": "02",
+      "title": "Image Matching",
+      "text": "The captured product image is instantly matched with the serial number and recorded."
+    },
+    {
+      "no": "03",
+      "title": "Blacklist Query",
+      "text": "Product info is passed through the blacklist filter to check its compliance."
+    },
+    {
+      "no": "04",
+      "title": "Automatic Blocking",
+      "text": "When blacklisted products are detected, their passage is physically stopped via PLC."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Image processing and field control system",
+  "techGrid": [
+    {
+      "tag": "HARDWARE",
+      "title": "Camera-Based Reader",
+      "text": "Camera that reads serial numbers of products passing through the sorting point with high accuracy."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Flow Control",
+      "text": "PLC infrastructure managing sorting gates, sensors, and transit locks."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "OnSuite Trace Platform",
+      "text": "Central software recording image-data matches and managing blacklist decisions."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "Blacklist Verification",
+      "text": "Control logic preventing the passage of faulty products and sending stop commands to the PLC."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Customer Systems Integration",
+  "integrationDesc": "The application works integrated with the customer's existing systems; product images and control data matched with serial numbers are shared with these systems, allowing transit decisions to be managed centrally.",
+  "integrationList": [
+    {
+      "bold": "Central Management Integration",
+      "text": "Sorting decisions and product matching data are synchronized with the customer's central database."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Fully automated and controlled product flow",
+  "resultsGrid": [
+    {
+      "title": "Blacklist Blocking",
+      "text": "The advancement of unauthorized or faulty products past the sorting point is automatically and reliably prevented."
+    },
+    {
+      "title": "Image & Data Pairing",
+      "text": "Each product's image is automatically paired with its serial number, enabling retrospective visual verification."
+    },
+    {
+      "title": "Reduced Manual Workload",
+      "text": "Automating sorting controls eliminated human errors and accelerated the operation."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

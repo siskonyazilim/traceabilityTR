@@ -1,0 +1,109 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Beyaz Eşya",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Hassas montaj takibi,",
+  "heroTitleLine2": "doğru bileşen eşleşmesi ve kalite güvencesi.",
+  "heroSub": "BSH'nin Çerkezköy'deki buzdolabı üretimi yapan fabrikasında hayata geçirilen projede, ürünlere monte edilen cam raflar lot bilgisine göre takip edilmiş ve kayıt altına alınmıştır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Buzdolabı üretiminde parça takibi",
+  "contextP1": "BSH'nin Çerkezköy'deki buzdolabı üretimi yapan fabrikasında hayata geçirilen projede, ürünlere monte edilen cam raflar lot bilgisine göre takip edilmiş ve kayıt altına alınmıştır.",
+  "contextP2": "Proje, cam raf–ürün bileşen ilişkisinin izlenebilirliğini sağlamak amacıyla gerçekleştirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Yanlış bileşen eşleşme riskleri",
+  "problemLede": "Buzdolabı üretiminde cam raf bileşeninin doğru ürünle eşleşmesi ve bu eşleşmenin ürün bazında izlenebilir olması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Manuel Takip Boşlukları",
+      "text": "Bileşen-ürün ilişkisinin manuel takibinin yetersiz olması ve izlenebilirlik boşluğu riski taşıması."
+    },
+    {
+      "bold": "Hatalı Montaj Riski",
+      "text": "Üretim sırasında yanlış bileşen kullanımının ve hatalı eşleşmelerin anlık engellenememesi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Lot bazlı izleme ve SAP senkronizasyonu",
+  "solutionLede": "Ürünlere monte edilen cam raflar, lot numaralarına göre takip edildi ve kayıt altına alındı. İlgili istasyonda cam raf arabaları taranarak cam raf lot numaraları ürün seri numarasıyla ilişkilendirildi ve izlenebilirlik sistemiyle entegrasyon sağlandı. Bu yapı, bileşen–ürün eşleşmesini güvence altına alarak doğru ürünlerde doğru cam rafların kullanılmasını sağladı. Uygun parçalar için onay verileri SAP'ye geri gönderildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Araba Taraması",
+      "text": "İstyondaki cam raf arabaları taranarak lot bilgileri otomatik alınır."
+    },
+    {
+      "no": "02",
+      "title": "Seri No İlişkilendirme",
+      "text": "Taranan cam raf lot numaraları ürün seri numarasıyla otomatik eşleştirilir."
+    },
+    {
+      "no": "03",
+      "title": "SCADA Kontrolü",
+      "text": "SCADA uygulaması eşleşme doğruluğunu denetler ve hatalı parçaları engeller."
+    },
+    {
+      "no": "04",
+      "title": "SAP Onay Aktarımı",
+      "text": "Onaylanan montaj ve parça ilişkileri SAP sistemine anlık kaydedilir."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Saha entegrasyonu ve kontrol altyapısı",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Yapısı",
+      "text": "İstasyon durumlarını kontrol eden ve saha akışını yönlendiren PLC altyapısı."
+    },
+    {
+      "tag": "ARAYÜZ",
+      "title": "C# SCADA Uygulaması",
+      "text": "Eşleştirme doğrulaması, süreç izleme ve operatör ekranları için C# uygulaması."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Endüstriyel Barkod Okuyucular",
+      "text": "Cam raf lot numaralarını ve ürün seri numaralarını okuyan hassas tarayıcılar."
+    },
+    {
+      "tag": "VERİ",
+      "title": "SAP ERP Entegrasyonu",
+      "text": "Onay verilerinin ve lot eşleşmelerinin SAP sistemiyle çift yönlü paylaşımı."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "OnSuite Trace Platformu",
+      "text": "İzlenebilirlik ve süreç yönetiminin merkezi olarak kontrol edildiği yazılım katmanı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP ERP Entegrasyonu",
+  "integrationDesc": "Sistem SAP ile entegre çalışmaktadır; doğrulama sonrası uygun parçaların onay verileri SAP'ye geri gönderilmektedir. Bu yapı, saha verileri ile kurumsal sistem arasındaki bilgi bütünlüğünü güvence altına alır.",
+  "integrationList": [
+    {
+      "bold": "SAP Onay Verisi",
+      "text": "Montaj doğrulamasından geçen uygun parçalara ilişkin onay kayıtları SAP'ye anlık iletilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Gelişmiş kalite kontrolü ve izlenebilirlik",
+  "resultsGrid": [
+    {
+      "title": "Doğru Eşleşme Güvencesi",
+      "text": "Cam raf bileşeninin ürünle doğru eşleşmesi otomatik olarak doğrulanarak yanlış parça kullanımı önlenmiştir."
+    },
+    {
+      "title": "Uçtan Uca İzlenebilirlik",
+      "text": "Bileşen-ürün ilişkisi doğrudan ürün seri numarası düzeyinde kalıcı olarak kayıt altına alınmıştır."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

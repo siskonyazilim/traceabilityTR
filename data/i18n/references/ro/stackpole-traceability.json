@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria auto",
+  "locationValue": "Turcia",
+  "heroTitleLine1": "Urmărire End-to-End în Producție,",
+  "heroTitleLine2": "Asigurare pe Produs Individual pentru Stackpole",
+  "heroSub": "În proiectul implementat pentru Stackpole, trasabilitatea pe operații a fost asigurată pe întregul proces de producție, crescând vizibilitatea procesului și nivelul de asigurare a calității.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Trasabilitate centralizată pentru flux de producție fără întreruperi",
+  "contextP1": "În mediul de producție Stackpole, obiectivul a fost urmărirea individuală a produselor pe pașii de producție, păstrarea integrității secvenței operaționale și managementul centralizat al datelor de proces.",
+  "contextP2": "Proiectul a oferit vizibilitate în timp real echipelor de calitate și operațiuni prin trasabilitatea istoricului produsului de la producție până la expediere.",
+  "problemEyebrow": "Nevoie / Problemă",
+  "problemTitle": "Risc de goluri de urmărire între operații",
+  "problemLede": "Imposibilitatea urmăririi fiabile a mișcărilor produsului la nivel individual între operații crea riscuri pentru controlul procesului și validarea calității.",
+  "problemList": [
+    {
+      "bold": "Vizibilitate de Proces",
+      "text": "Lipsa vizibilității în timp real la tranzițiile operaționale îngreuna monitorizarea."
+    },
+    {
+      "bold": "Necesitate de Validare",
+      "text": "Era necesar un mecanism sistematic de validare a secvenței corecte a operațiilor."
+    },
+    {
+      "bold": "Risc de Asigurare a Calității",
+      "text": "Istoricul fragmentat îngreuna investigațiile de calitate și analiza cauzei rădăcină."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Infrastructură de trasabilitate individuală bazată pe operații",
+  "solutionLede": "Produsele au fost recunoscute pe operații în fluxul de producție și înregistrate la fiecare pas în sistem. Astfel, istoricul produsului a devenit trasabil cap-coadă, iar validarea operațională a fost consolidată.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Identificare Produs",
+      "text": "Produsele au fost incluse în fluxul de trasabilitate cu identitate unică."
+    },
+    {
+      "no": "02",
+      "title": "Citire Operațională",
+      "text": "Statusul produsului și tranzițiile operaționale au fost validate automat la fiecare stație."
+    },
+    {
+      "no": "03",
+      "title": "Înregistrare în Timp Real",
+      "text": "Datele de proces au fost colectate în timp real și stocate centralizat."
+    },
+    {
+      "no": "04",
+      "title": "Trasabilitate Retroactivă",
+      "text": "Istoricul produsului și lanțul operațional au devenit raportabile și auditabile."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipament Utilizat",
+  "techTitle": "Automatizare de teren și strat software de trasabilitate",
+  "techGrid": [
+    {
+      "tag": "CITIRE",
+      "title": "Infrastructură de Recunoaștere Cod",
+      "text": "Permite recunoașterea și validarea automată a produselor în punctele operaționale."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Control Flux pe bază PLC",
+      "text": "Gestionează tranzițiile operaționale și menține consistența proceselor din teren."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație de Trasabilitate",
+      "text": "Colectează date operaționale, păstrează istoricul produsului și oferă raportare."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Sincronizare date cu sisteme enterprise",
+  "integrationDesc": "Datele de trasabilitate au fost structurate pentru partajare enterprise, astfel încât informațiile de produs, operație și status să fie gestionate central.",
+  "integrationList": [
+    {
+      "bold": "Partajare Date Operaționale",
+      "text": "Datele de flux ale produselor sunt transferate către sistemele centrale pentru monitorizare unificată."
+    },
+    {
+      "bold": "Raportare și Analiză",
+      "text": "Datele colectate sunt pregătite pentru analize de calitate și performanță de producție."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Vizibilitate și control sporite în producția Stackpole",
+  "resultsGrid": [
+    {
+      "title": "Urmărire End-to-End",
+      "text": "Produsele au devenit trasabile pe operații pe întregul proces de producție."
+    },
+    {
+      "title": "Control de Proces Consolidat",
+      "text": "Validarea tranzițiilor operaționale a crescut nivelul de control al fluxului de producție."
+    },
+    {
+      "title": "Suport pentru Analize de Calitate",
+      "text": "Istoricul individual al produsului a accelerat investigațiile și analiza cauzei rădăcină."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să consolidați trasabilitatea pe produs individual în linia dumneavoastră?",
+  "ctaSubtitle": "Putem adapta abordarea proiectului Stackpole la fabrica dumneavoastră pentru vizibilitate operațională crescută.",
+  "ctaPrimary": "Contactați-ne"
+}

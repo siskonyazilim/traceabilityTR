@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Gıda",
+  "locationValue": "İzmir",
+  "heroTitleLine1": "Kusursuz ambalaj kontrolü,",
+  "heroTitleLine2": "kamera tabanlı otomatik denetim.",
+  "heroSub": "Gıda sektöründe faaliyet gösteren ORKİDE'nin İzmir'deki fabrikasında hayata geçirilen projede, üretilen ürünler üzerinde kamera tabanlı kalite kontrol sistemi kurulmuştur. Proje, ürünlerdeki belirli bileşenlerin (etiket, kapak vb.) eksiksiz olduğunu otomatik olarak denetlemek amacıyla gerçekleştirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Yağ dolum hatlarında paketleme güvencesi",
+  "contextP1": "Gıda sektöründe faaliyet gösteren ORKİDE'nin İzmir'deki fabrikasında hayata geçirilen projede, üretilen ürünler üzerinde kamera tabanlı kalite kontrol sistemi kurulmuştur. Proje, ürünlerdeki belirli bileşenlerin (etiket, kapak vb.) eksiksiz olduğunu otomatik olarak denetlemek amacıyla gerçekleştirilmiştir.",
+  "contextP2": "Kalite kontrol süreçlerinin otomatik ve standart hale getirilmesi, marka prestijinin korunması ve hatalı ürün çıkışının engellenmesi açısından hayati önem taşımaktadır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Eksik bileşenler ve manuel kontrol riskleri",
+  "problemLede": "Üretilen ürünlerde etiket, kapak gibi bileşenlerin eksiksiz bulunduğunun güvenilir biçimde kontrol edilmesi gerekiyordu. Bu kontrolün manuel yapılması hata riski taşıyor; eksik etiket veya kapak gibi kusurların fark edilmeden sürece devam etmesi kalite ve müşteri memnuniyeti açısından risk oluşturuyordu.",
+  "problemList": [
+    {
+      "bold": "Eksik Kapak/Etiket Kusuru",
+      "text": "Hattın hızlı akışında kapak veya etiketlerin eksik yapıştırılmasının gözden kaçma riski."
+    },
+    {
+      "bold": "Hatalı Ürün Sevkiyatı",
+      "text": "Kusurlu ambalajlı ürünlerin paketlenip müşteriye kadar ulaşması ihtimali."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Var-yok algılamalı otomatik vizyon sistemi",
+  "solutionLede": "Üretim hattına kamera sistemi kurularak ürünler üzerinde var–yok kontrolleri otomatik olarak gerçekleştirildi. Kamera, etiket ve kapak gibi bileşenlerin mevcut olup olmadığını denetleyerek eksik veya kusurlu ürünleri tespit etti. Böylece kalite kontrol süreci operatör inisiyatifinden çıkarılarak otomatik ve tutarlı hâle getirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Ürün Algılama",
+      "text": "Ürün, kalite kontrol noktasındaki kamera görüş alanına girdiğinde tetiklenir."
+    },
+    {
+      "no": "02",
+      "title": "Görüntü İşleme",
+      "text": "Kamera sistemi, ürünün görüntüsünü anlık çekerek bileşen denetimini başlatır."
+    },
+    {
+      "no": "03",
+      "title": "Var-Yok Kontrolü",
+      "text": "Yazılım, etiket ve kapağın belirlenen yerlerde mevcut olup olmadığını analiz eder."
+    },
+    {
+      "no": "04",
+      "title": "Hatalı Ürün Rejeksiyonu",
+      "text": "Eksik veya kusurlu bileşen tespit edilirse, sistem PLC üzerinden rejeksiyon aksiyonu alır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Kamera tabanlı otomatik denetim mimarisi",
+  "techGrid": [
+    {
+      "tag": "VİZYON",
+      "title": "Kamera Tabanlı Kontrol Ünitesi",
+      "text": "Kapak ve etiket varlığını yüksek hızda denetleyen endüstriyel akıllı kamera sistemi."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Saha Yapısı",
+      "text": "Görüntü analiz sonuçlarına göre rejeksiyon pistonunu ve hat akışını yöneten PLC."
+    },
+    {
+      "tag": "DONANIM",
+      "title": "Sensörler ve Tetikleme",
+      "text": "Kameranın doğru zamanlama ile görüntü almasını sağlayan endüstriyel algılayıcılar."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "Merkezi İzleme Arayüzü",
+      "text": "Kalite kontrol istatistiklerinin ve kusurlu ürün verilerinin anlık izlendiği yazılım."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Merkezi Kalite Takip Sistemleri Entegrasyonu",
+  "integrationDesc": "Sistem, müşterinin mevcut sistemleriyle entegre edilmiştir; kontrol sonuçları bu sistemlerle paylaşılarak kalite kontrol süreci merkezi olarak izlenmekte ve yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Kalite Raporlama",
+      "text": "Hatalı kapak, eksik etiket gibi kusurların türü ve sıklığı merkezi veritabanına anlık kaydedilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Kusursuz ürün çıkışı ve tutarlı denetim",
+  "resultsGrid": [
+    {
+      "title": "Sıfır Hatalı Ürün Çıkışı",
+      "text": "Etiket veya kapağı eksik olan hiçbir ürünün fabrikadan çıkışına izin verilmemektedir."
+    },
+    {
+      "title": "Standart Kalite Kontrol",
+      "text": "Kontroller insan inisiyatifinden bağımsız olarak 7/24 aynı hassasiyetle yürütülür."
+    },
+    {
+      "title": "Geri İzlenebilirlik Raporu",
+      "text": "Hatalı ürün istatistikleri sayesinde üretim makinelerindeki sapmalar erkenden tespit edilebilir."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

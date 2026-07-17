@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir ESBAS",
+  "heroTitleLine1": "Full Visibility in Prototype Flow,",
+  "heroTitleLine2": "Real-Time Operation-Level Tracking",
+  "heroSub": "At Delphi Technologies' plant in Izmir ESBAS Free Zone, traceability was provided for customer-specific prototype products throughout all machine operations.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "End-to-end traceable production on the prototype line",
+  "contextP1": "Delphi Technologies' plant in Izmir ESBAS Free Zone manufactures for the automotive supplier industry. In this project, customer-specific prototype products were made traceable across all machine operations.",
+  "contextP2": "The goal was to make prototype progress visible in real time by operation and strengthen process tracking and planning.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Lack of status visibility in prototype flow",
+  "problemLede": "It was not clearly visible at which stage and in which state customer-specific prototype products were during production.",
+  "problemList": [
+    {
+      "bold": "Progress Tracking",
+      "text": "Since prototype progress and operation status were not trackable, process follow-up became difficult."
+    },
+    {
+      "bold": "Planning Difficulty",
+      "text": "Insufficient current-state visibility created risks in planning and prioritization."
+    },
+    {
+      "bold": "Need for Unique Identity",
+      "text": "A structure was required where prototype products are uniquely identified from the beginning and tracked in all operations."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "End-to-end prototype tracking starting with marking",
+  "solutionLede": "Prototype products were marked and uniquely identified before entering the line. Across all machine operations, each prototype's operation and current status were recorded.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Pre-Marking",
+      "text": "Prototype products are marked before line entry and registered with unique identity."
+    },
+    {
+      "no": "02",
+      "title": "Operation Recognition",
+      "text": "Barcode readers automatically recognize and validate products at operation points."
+    },
+    {
+      "no": "03",
+      "title": "Status Recording",
+      "text": "Current operation and process status of each product are recorded in real time."
+    },
+    {
+      "no": "04",
+      "title": "Process Visibility",
+      "text": "Prototype production level and current status become visible at every stage."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Barcode, PLC, and C# SCADA-based field infrastructure",
+  "techGrid": [
+    {
+      "tag": "READING",
+      "title": "Barcode Readers",
+      "text": "Recognize prototype products by operation and trigger traceability flow."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Structure",
+      "text": "Manages field flow and operation transitions for real-time process control."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Manages status monitoring, reporting, and Oracle data exchange."
+    },
+    {
+      "tag": "PLATFORM",
+      "title": "OnSuite Trace",
+      "text": "Application layer where traceability and process management are centrally executed."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Central data sharing with Oracle",
+  "integrationDesc": "The system works integrated with Oracle; operation-level traceability and status data of prototype products are shared with Oracle for centralized monitoring and management.",
+  "integrationList": [
+    {
+      "bold": "Oracle Integration",
+      "text": "Operation, status, and progress data are shared with Oracle for centralized reporting and management."
+    },
+    {
+      "bold": "OnSuite Trace Management",
+      "text": "Process visibility and operation tracking are managed end-to-end on OnSuite Trace."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Visibility and planning strength in prototype production",
+  "resultsGrid": [
+    {
+      "title": "Real-Time Status Visibility",
+      "text": "The stage and status of prototype products became visible across all operations."
+    },
+    {
+      "title": "Easier Tracking and Planning",
+      "text": "Removing visibility gaps simplified follow-up and planning of prototype production."
+    },
+    {
+      "title": "Operation-Level Traceability",
+      "text": "With unique identification from the start, full operation-level traceability was achieved."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like reliable real-time tracking in your prototype production flow?",
+  "ctaSubtitle": "Achieve end-to-end visibility on your prototype line with OnSuite Trace-based traceability solutions.",
+  "ctaPrimary": "Contact Us"
+}

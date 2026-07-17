@@ -1,0 +1,111 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Tobacco",
+  "locationValue": "Izmir Torbali",
+  "heroTitleLine1": "Right Filter,",
+  "heroTitleLine2": "Reliable Production Assurance",
+  "heroSub": "In the project implemented at PMI's cigarette manufacturing plant in Izmir Torbali, traceability and correct material usage were targeted at the stage where filters produced in the filter plant are fed into cigarette production machines.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Secure matching from filter to production",
+  "contextP1": "In the project implemented at PMI's cigarette manufacturing plant in Izmir Torbali, traceability and correct material usage were targeted at the stage where filters produced in the filter plant are fed into cigarette production machines.",
+  "contextP2": "The project was carried out to secure filter-work-order matching throughout the flow from filter production to cigarette production.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Error and quality risk in manual checks",
+  "problemLede": "In cigarette production, the filter fed into the machine had to be compliant with the related work order and product recipe (BOM). Manual verification increased quality risks.",
+  "problemList": [
+    {
+      "bold": "SKU Compliance",
+      "text": "Manual checking of whether the fed filter had the correct SKU carried error risk."
+    },
+    {
+      "bold": "Expiry Validation",
+      "text": "Manual verification of filter expiry date suitability was not reliable or sustainable."
+    },
+    {
+      "bold": "Start-up Assurance",
+      "text": "A systematic structure was needed to prevent production from starting before matching was confirmed."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Automatic matching control with RFID + SAP + PLC",
+  "solutionLede": "Filters were labeled at the filter plant output with production date, expiry date, quantity, and SKU data. During feeding to the cigarette production machine, SAP work order and BOM data were read and automatically matched with filter material code.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Filter Labeling",
+      "text": "Production date, expiry date, quantity, and SKU information are written on each filter."
+    },
+    {
+      "no": "02",
+      "title": "Work Order Reading",
+      "text": "At machine feeding, SAP work order and BOM data are read."
+    },
+    {
+      "no": "03",
+      "title": "SKU and Expiry Matching",
+      "text": "RFID-read filter data is compared with SAP material code and expiry criteria."
+    },
+    {
+      "no": "04",
+      "title": "Machine Run Permission",
+      "text": "If SKU and expiry criteria are met, the PLC grants run permission; otherwise production is blocked."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Field verification and machine control infrastructure",
+  "techGrid": [
+    {
+      "tag": "READING",
+      "title": "RFID Readers",
+      "text": "Read critical tag information instantly when the filter is fed to the machine."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Structure",
+      "text": "Control layer managing field automation and machine run-permission decisions."
+    },
+    {
+      "tag": "FIELD",
+      "title": "Handheld Terminal",
+      "text": "Used for field verification and operational data handling tasks."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "End-to-end SAP work-order validation",
+  "integrationDesc": "The system works integrated with SAP; work order, BOM, and filter material code are received from SAP and matched with filter tag data, while matching and machine-permission outcomes are associated back with SAP.",
+  "integrationList": [
+    {
+      "bold": "SAP Work Order and BOM",
+      "text": "Filter material code, work order, and BOM data are retrieved from SAP and automatically matched with RFID reads."
+    },
+    {
+      "bold": "Machine Control",
+      "text": "Matching outcomes are sent to the PLC layer and run-permission decisions are applied in real time."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Automated validation that strengthens quality assurance",
+  "resultsGrid": [
+    {
+      "title": "Wrong SKU Prevention",
+      "text": "Automatic filter-work-order matching prevented incorrect filter usage."
+    },
+    {
+      "title": "Expiry Compliance",
+      "text": "Filters with unsuitable expiry status were blocked by the system."
+    },
+    {
+      "title": "Operator-Independent Control",
+      "text": "Preventing machine run before matching improved quality assurance."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to digitize filter and material validation processes?",
+  "ctaSubtitle": "Let us adapt RFID-based traceability and work-order validation solutions to your factory.",
+  "ctaPrimary": "Contact Us"
+}

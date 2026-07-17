@@ -1,0 +1,121 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Home Appliances",
+  "locationValue": "Çerkezköy",
+  "heroTitleLine1": "Full control at every station,",
+  "heroTitleLine2": "end-to-end traceability across the line.",
+  "heroSub": "In the project implemented at BSH's oven production factory in Çerkezköy, traceability was provided on the assembly lines based on product serial numbers.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Real-time monitoring of production processes",
+  "contextP1": "In the project implemented at BSH's oven production factory in Çerkezköy, traceability was provided on the assembly lines based on product serial numbers.",
+  "contextP2": "The project was carried out in order to monitor the production process at the station level and perform performance analyses.",
+  "problemEyebrow": "Needs / Problems",
+  "problemTitle": "Tracking and efficiency challenges",
+  "problemLede": "Each product needed to be tracked on a station basis on the assembly lines, and it was required to record which product passed through which stations.",
+  "problemList": [
+    {
+      "bold": "Lack of Station-Based Tracking",
+      "text": "Inability to automatically and accurately record which stations the products passed through along the line."
+    },
+    {
+      "bold": "Cycle Time Measurement Difficulties",
+      "text": "Inability to identify bottlenecks due to the lack of measurement for station and product-based cycle time data."
+    },
+    {
+      "bold": "Line Balancing Problems",
+      "text": "Line balancing work not based on real data limiting efficiency improvements."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Real-time monitoring and analytics",
+  "solutionLede": "Traceability on assembly lines was achieved by tracking the product serial number on a station basis. Cycle time analyses helped identify station and product-based bottlenecks; box plot charts visualized station-based duration distributions, providing foresight in line balancing. With SAP integration, master data was retrieved via SAP and integrated into the system.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Serial Number Reading",
+      "text": "Product serial numbers are automatically scanned at stations using barcode readers."
+    },
+    {
+      "no": "02",
+      "title": "PLC Field Management",
+      "text": "The PLC structure coordinates the field flow and reading triggers in real time."
+    },
+    {
+      "no": "03",
+      "title": "Cycle Time Analysis",
+      "text": "Cycle times are analyzed based on station readings and duration measurements."
+    },
+    {
+      "no": "04",
+      "title": "Box Plot Distribution",
+      "text": "Duration distributions are visualized using box plots, providing foresight for line balancing."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment Used",
+  "techTitle": "Traceability and analytics hardware infrastructure",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Field Structure",
+      "text": "PLC infrastructure that manages field automation, station transitions, and reading triggers."
+    },
+    {
+      "tag": "HARDWARE",
+      "title": "Barcode Readers",
+      "text": "Industrial scanners that read product serial numbers at stations with high precision."
+    },
+    {
+      "tag": "ANALYTICS",
+      "title": "Cycle Time & Box Plot",
+      "text": "Bottleneck detection and box plot graphic visualizations through duration measurements."
+    },
+    {
+      "tag": "DATA",
+      "title": "SAP Integration",
+      "text": "Bi-directional transfer of master product and production data via SAP."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "OnSuite Trace Platform",
+      "text": "Central software layer controlling traceability and process management."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Bi-directional SAP Integration",
+  "integrationDesc": "The system works bi-directionally integrated with SAP. Master product and production data is retrieved via SAP and transferred to the traceability system; station-based tracking and analysis processes are carried out using this updated data.",
+  "integrationList": [
+    {
+      "bold": "SAP Master Data Retrieval",
+      "text": "Product recipe and master data are automatically pulled via SAP and synchronized with the system."
+    },
+    {
+      "bold": "Single Source Data Flow",
+      "text": "A consistent and up-to-date link is established between the field application and corporate ERP."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Data-driven efficiency growth",
+  "resultsGrid": [
+    {
+      "title": "Full Traceability",
+      "text": "Station-based end-to-end traceability was achieved at the product serial number level."
+    },
+    {
+      "title": "Bottleneck Identification",
+      "text": "Bottlenecks became clearly visible through cycle time analyses and box plot charts."
+    },
+    {
+      "title": "Line Balancing",
+      "text": "Efficiency was improved by providing foresight into line balancing based on duration distributions."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Want to transform your production processes too?",
+  "ctaSubtitle": "Contact us to discuss how we can implement a similar solution for your business.",
+  "ctaPrimary": "Get in Touch"
+}

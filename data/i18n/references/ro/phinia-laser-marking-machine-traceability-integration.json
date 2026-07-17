@@ -1,0 +1,132 @@
+{
+  "backToProjects": "Înapoi la Proiecte de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "La cheie",
+  "tagValue": "Automotive",
+  "locationValue": "İzmir · ESBAŞ",
+  "heroTitleLine1": "Un singur număr de serie pentru fiecare piesă,",
+  "heroTitleLine2": "o singură identitate trasabilă.",
+  "heroSub": "Dezvoltat pentru fabrica Phinia din Zona Liberă İzmir ESBAŞ, echipamentul de marcare laser pe 3 axe combină marcarea și verificarea prin cameră într-un singur flux automatizat, comunicând bidirecțional cu Oracle.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Producție cu toleranță zero în zona liberă",
+  "contextP1": "Fabrica Phinia din Zona Liberă İzmir ESBAŞ produce pentru sectorul automotive. În acest tip de producție, originea fiecărei piese, linia de unde provine și controlul calității trecut trebuie să fie trasabile retrospectiv.",
+  "contextP2": "Proiectul a fost implementat pentru a marca în mod unic fiecare produs fabricat și pentru a asigura trasabilitatea end-to-end. În centrul sarcinii a fost nu doar marcarea în sine, ci și garantarea faptului că marcajul a fost citit corect.",
+  "problemEyebrow": "Nevoi / Probleme",
+  "problemTitle": "Doi pași separați, două riscuri separate",
+  "problemLede": "Când marcarea și verificarea erau efectuate ca pași deconectați și deschiși controlului manual, apăreau două tipuri de lacune.",
+  "problemList": [
+    {
+      "bold": "Cerință de marcare unică.",
+      "text": "Fiecare piesă trebuia marcată cu propriul număr de serie, iar acest număr trebuia transferat în sistemul central."
+    },
+    {
+      "bold": "Risc de cod necitibil.",
+      "text": "Când verificarea se făcea manual, ca pas separat, un cod defect sau necitibil putea trece de linie neobservat."
+    },
+    {
+      "bold": "Lacună de trasabilitate.",
+      "text": "Deconectarea dintre marcare și înregistrarea datelor însemna o verigă lipsă în interogarea retrospectivă."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Marcare și verificare, un singur flux",
+  "solutionLede": "Echipamentul dezvoltat la cheie, inclusiv designul mecanic pentru Phinia, a fost proiectat cu o capacitate de mișcare pe 3 axe pentru a funcționa flexibil. Numerele de serie sunt preluate din Oracle, marcate pe piesă și verificate cu camera în cadrul aceluiași flux.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Preluare număr de serie",
+      "text": "Numărul unic de serie ce urmează a fi imprimat este preluat din Oracle."
+    },
+    {
+      "no": "02",
+      "title": "Marcare laser",
+      "text": "Structura servo pe 3 axe poziționează piesa, iar codul este marcat cu laser."
+    },
+    {
+      "no": "03",
+      "title": "Verificare cameră",
+      "text": "Conținutul codului, gradul calitativ și poziția sunt verificate automat."
+    },
+    {
+      "no": "04",
+      "title": "Confirmare către Oracle",
+      "text": "Datele de confirmare pentru piesele conforme sunt trimise înapoi în Oracle."
+    }
+  ],
+  "oracleLoop": {
+    "serialNo": "număr de serie",
+    "confirmData": "date de confirmare",
+    "machine": "Echipament de Marcare Laser"
+  },
+  "techEyebrow": "Tehnologie / Echipamente Utilizate",
+  "techTitle": "Arhitectură de sistem la cheie",
+  "techGrid": [
+    {
+      "tag": "MARCARE",
+      "title": "Echipament de marcare laser",
+      "text": "Unitate de marcare care gravează permanent numărul unic de serie pe piesă."
+    },
+    {
+      "tag": "MIȘCARE",
+      "title": "Structură servo pe 3 axe",
+      "text": "Mișcare acționată prin servo pe axele X-Y-Z pentru poziționare flexibilă."
+    },
+    {
+      "tag": "CONTROL",
+      "title": "Automatizare de câmp cu PLC",
+      "text": "PLC care gestionează toate semnalele de câmp și fluxul de lucru în stație."
+    },
+    {
+      "tag": "INTERFAȚĂ",
+      "title": "Aplicație SCADA cu C#",
+      "text": "SCADA dezvoltat special pentru interfața operatorului și monitorizarea procesului."
+    },
+    {
+      "tag": "VERIFICARE",
+      "title": "Control pe bază de cameră",
+      "text": "Verificarea automată a conținutului codului, gradului și poziției prin procesare de imagini."
+    },
+    {
+      "tag": "DATE",
+      "title": "Integrare Oracle",
+      "text": "Schimb bidirecțional de date cu solicitarea numărului de serie și datele de confirmare."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare bidirecțională cu Oracle",
+  "integrationDesc": "Sistemul funcționează complet integrat cu Oracle: numerele de serie sunt preluate din Oracle, iar datele de confirmare ale pieselor conforme sunt trimise înapoi în Oracle după marcare și verificare.",
+  "integrationList": [
+    {
+      "bold": "Preluare Număr de Serie",
+      "text": "Numerele de serie sunt solicitate automat din sistemul Oracle ERP și transferate la echipament."
+    },
+    {
+      "bold": "Confirmare Transmisă",
+      "text": "Datele pieselor aprobate care trec cu succes de controlul camerei sunt scrise instantaneu în sistemul Oracle."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Digitalizare completă a proceselor de afaceri",
+  "resultsGrid": [
+    {
+      "title": "Acuratețe 100% a datelor",
+      "text": "Datorită verificării camerei și integrării Oracle, riscul tipăririi codurilor eronate sau al pierderii datelor a fost complet prevenit."
+    },
+    {
+      "title": "Viteză Operațională",
+      "text": "Prin combinarea etapelor de marcare și verificare cu camera pe un singur echipament, timpii de ciclu au fost optimizați."
+    },
+    {
+      "title": "Trasabilitate Completă",
+      "text": "Istoricul și rezultatele testelor de calitate pentru fiecare piesă fabricată au fost înregistrate permanent în sistemul central."
+    }
+  ],
+  "closerTitle": "Zero erori cu tehnologie laser de înaltă performanță și sisteme inteligente de camere.",
+  "relatedProjects": "Proiecte Înrudite",
+  "ctaTitle": "Doriți să vă transformați și procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta cum putem implementa o soluție similară pentru afacerea dumneavoastră.",
+  "ctaPrimary": "Contactează-ne"
+}
