@@ -62,7 +62,17 @@ export const Header = () => {
 
   const handleLocaleChange = async (nextLocaleCode) => {
     await setLocale(nextLocaleCode);
-    router.push(toLocalePath(currentPathForLocale, nextLocaleCode));
+    const alternateLink = document.querySelector(`link[rel="alternate"][hreflang="${nextLocaleCode}"]`);
+    if (alternateLink) {
+      try {
+        const url = new URL(alternateLink.href);
+        router.push(url.pathname + url.search + url.hash);
+      } catch (e) {
+        router.push(toLocalePath(currentPathForLocale, nextLocaleCode));
+      }
+    } else {
+      router.push(toLocalePath(currentPathForLocale, nextLocaleCode));
+    }
     router.refresh();
   };
 

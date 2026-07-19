@@ -18,6 +18,12 @@ export default function ReferenceProjectsSlider({
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
 
+  const resolvedBasePath = detailBasePath === '/portfolio' ? (
+    locale === 'en'
+      ? '/reference-projects'
+      : (locale === 'ro' ? '/proiecte-de-referinta' : '/portfolio')
+  ) : detailBasePath;
+
   const sliderProjects = useMemo(() => {
     return [...projects]
       .filter((project) => project.slug !== currentSlug)
@@ -131,7 +137,7 @@ export default function ReferenceProjectsSlider({
               className="h-full group"
             >
               <Link
-                href={toLocalePath(`${detailBasePath}/${getLocalizedSlug('portfolio', project.slug, locale)}`, locale)}
+                href={toLocalePath(`${resolvedBasePath}/${getLocalizedSlug('portfolio', project.slug, locale)}`, locale)}
                 className="h-full flex flex-col rounded-md border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
               >
                 <div className="relative h-44 bg-white overflow-hidden">

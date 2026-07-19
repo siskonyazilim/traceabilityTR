@@ -102,11 +102,17 @@ export async function generateMetadata({ params }) {
   const description = project.description;
 
   const alternates = {
-    canonical: `https://traceability.com.tr${toLocalePath(`/portfolio/${getLocalizedSlug('portfolio', baseSlug, locale)}`, locale)}`,
+    canonical: `https://traceability.com.tr${
+      locale === 'en'
+        ? `/en/reference-projects/${getLocalizedSlug('portfolio', baseSlug, 'en')}`
+        : (locale === 'ro'
+            ? `/ro/proiecte-de-referinta/${getLocalizedSlug('portfolio', baseSlug, 'ro')}`
+            : `/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`)
+    }`,
     languages: {
       'tr': `https://traceability.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
-      'en': `https://traceability.com.tr/en/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'en')}`,
-      'ro': `https://traceability.com.tr/ro/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'ro')}`,
+      'en': `https://traceability.com.tr/en/reference-projects/${getLocalizedSlug('portfolio', baseSlug, 'en')}`,
+      'ro': `https://traceability.com.tr/ro/proiecte-de-referinta/${getLocalizedSlug('portfolio', baseSlug, 'ro')}`,
       'x-default': `https://traceability.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
     }
   };
@@ -177,7 +183,9 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const project = localizedProjects.find((p) => p.slug === baseSlug);
   const fromPageRaw = resolvedSearchParams?.fromPage;
   const fromPage = Number.parseInt(Array.isArray(fromPageRaw) ? fromPageRaw[0] : fromPageRaw || '1', 10);
-  const listPath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
+  const listPath = locale === 'en'
+    ? '/reference-projects'
+    : (locale === 'ro' ? '/proiecte-de-referinta' : '/portfolio');
   const localizedListPath = toLocalePath(listPath, locale);
   const backHref = Number.isFinite(fromPage) && fromPage > 1
     ? `${localizedListPath}?page=${fromPage}`

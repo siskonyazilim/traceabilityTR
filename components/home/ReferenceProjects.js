@@ -11,12 +11,20 @@ import { referenceProjects } from '../../data/references';
 import { getFirstSentenceText, localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
 import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/referenceProjectOrdering';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
+import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 
 export const ReferenceProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
+  const getProjectDetailPath = (slug, targetLocale) => {
+    const localizedSlug = getLocalizedSlug('portfolio', slug, targetLocale);
+    const basePath = targetLocale === 'en'
+      ? '/reference-projects'
+      : (targetLocale === 'ro' ? '/proiecte-de-referinta' : '/portfolio');
+    return toLocalePath(`${basePath}/${localizedSlug}`, targetLocale);
+  };
   const localizedProjects = useMemo(
     () => withReferenceProjectTimeline(sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)), locale),
     [locale]
@@ -130,7 +138,7 @@ export const ReferenceProjects = () => {
                 className="h-full group"
               >
                 <Link
-                  href={toLocalePath(`/portfolio/${project.slug}`, locale)}
+                  href={getProjectDetailPath(project.slug, locale)}
                   className="h-full flex flex-col rounded-md border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
                 >
                   {/* Image with Overlay Effect */}
@@ -182,7 +190,7 @@ export const ReferenceProjects = () => {
         <div className="flex justify-center">
           <Button
             as={Link}
-            href={toLocalePath(locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta', locale)}
+            href={toLocalePath(locale === 'en' ? '/reference-projects' : (locale === 'ro' ? '/proiecte-de-referinta' : '/portfolio'), locale)}
             variant="outline"
             size="lg"
             className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"

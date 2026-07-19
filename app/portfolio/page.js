@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
-import ProjectsPageClient from './ProjectsPageClient';
-import { getRequestLocale, getRequestPathname } from '../../lib/i18n/requestLocale';
-import { toLocalePath } from '../../lib/i18n/dictionaries';
+import ProjectsPageClient from '../proiecte-de-referinta/ProjectsPageClient';
+import { getRequestLocale } from '../../lib/i18n/requestLocale';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -30,11 +29,7 @@ export async function generateMetadata() {
   }
 
   const alternates = {
-    canonical: `https://traceability.com.tr${
-      locale === 'en'
-        ? '/en/reference-projects'
-        : (locale === 'ro' ? '/ro/proiecte-de-referinta' : '/portfolio')
-    }`,
+    canonical: 'https://traceability.com.tr/portfolio',
     languages: {
       'tr': 'https://traceability.com.tr/portfolio',
       'en': 'https://traceability.com.tr/en/reference-projects',

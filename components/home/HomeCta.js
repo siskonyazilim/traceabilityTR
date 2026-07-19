@@ -4,9 +4,10 @@ import Link from 'next/link';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 export const HomeCta = () => {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
 
   return (
     <section className="py-16 md:py-28 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
@@ -39,7 +40,7 @@ export const HomeCta = () => {
             </Button>
             <Button
               as={Link}
-              href="/proiecte-de-referinta"
+              href={toLocalePath(locale === 'en' ? '/reference-projects' : (locale === 'ro' ? '/proiecte-de-referinta' : '/portfolio'), locale)}
               variant="outline"
               size="lg"
               className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"

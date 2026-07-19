@@ -11,7 +11,9 @@ import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 export const ProjectCard = ({ project, currentPage = 1 }) => {
   const { locale, t } = useLanguage();
   const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').split('→')[0].trim();
-  const detailBasePath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';
+  const detailBasePath = locale === 'en'
+    ? '/reference-projects'
+    : (locale === 'ro' ? '/proiecte-de-referinta' : '/portfolio');
 
   const slugPrefixLogoMap = {
     'delphi-': '/Logos/delphi.svg',

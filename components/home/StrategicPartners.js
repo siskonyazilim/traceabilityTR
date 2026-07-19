@@ -15,7 +15,9 @@ export const StrategicPartners = () => {
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
-  const detailBasePath = locale === 'en' ? '/solution-partners' : '/parteneri-de-solutii';
+  const detailBasePath = locale === 'en'
+    ? '/solution-partners'
+    : (locale === 'ro' ? '/parteneri-de-solutii' : '/solution-partners');
   const localizedPartners = useMemo(() => localizePartners(strategicPartners, locale), [locale]);
 
   useEffect(() => {

@@ -41,14 +41,22 @@ export async function generateMetadata({ params }) {
   const title = `${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')} | Traceability`;
   const description = partner.description;
 
-  const detailBasePath = locale === 'en' ? '/solution-partners' : '/parteneri-de-solutii';
+  const detailBasePath = locale === 'en'
+    ? '/solution-partners'
+    : (locale === 'ro' ? '/parteneri-de-solutii' : '/solution-partners');
   const alternates = {
-    canonical: `https://traceability.com.tr${toLocalePath(`${detailBasePath}/${partner.slug}`, locale)}`,
+    canonical: `https://traceability.com.tr${
+      locale === 'ro'
+        ? `/ro/parteneri-de-solutii/${partner.slug}`
+        : (locale === 'en'
+            ? `/en/solution-partners/${partner.slug}`
+            : `/solution-partners/${partner.slug}`)
+    }`,
     languages: {
-      'tr': `https://traceability.com.tr/parteneri-de-solutii/${partner.slug}`,
+      'tr': `https://traceability.com.tr/solution-partners/${partner.slug}`,
       'en': `https://traceability.com.tr/en/solution-partners/${partner.slug}`,
       'ro': `https://traceability.com.tr/ro/parteneri-de-solutii/${partner.slug}`,
-      'x-default': `https://traceability.com.tr/parteneri-de-solutii/${partner.slug}`,
+      'x-default': `https://traceability.com.tr/solution-partners/${partner.slug}`,
     }
   };
 
@@ -105,7 +113,9 @@ export default async function PartnerDetailPage({ params }) {
 
   if (!partner) notFound();
 
-  const detailBasePath = locale === 'en' ? '/solution-partners' : '/parteneri-de-solutii';
+  const detailBasePath = locale === 'en'
+    ? '/solution-partners'
+    : (locale === 'ro' ? '/parteneri-de-solutii' : '/solution-partners');
   const currentIndex = localizedPartners.findIndex((p) => p.slug === slug);
   const totalPartners = localizedPartners.length;
   const prevPartner = localizedPartners[(currentIndex - 1 + totalPartners) % totalPartners];
