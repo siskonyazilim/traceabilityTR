@@ -5,12 +5,13 @@ import { referenceProjects } from '../../../data/references';
 import { IconArrowLeft } from '../../../components/ui/Icons';
 import ProjectGallerySlider from '../../../components/ui/ProjectGallerySlider';
 import ReferenceProjectsSlider from '../../../components/sections/ReferenceProjectsSlider';
-import { cookies } from 'next/headers';
+import { getRequestLocale, getRequestPathname } from '../../../lib/i18n/requestLocale';
 import { localizeReferenceProjects } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { getReferenceNarrative } from '../../../lib/i18n/referenceNarratives';
 import { sortReferenceProjects, withReferenceProjectTimeline } from '../../../lib/referenceProjectOrdering';
 import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
+import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 import JsonLd from '../../../components/seo/JsonLd';
 import PhiniaDetailPage from '../../../components/sections/PhiniaDetailPage';
@@ -55,10 +56,18 @@ const detailsByLocale = {
 };
 /* eslint-disable react/prop-types */
 
+export async function generateStaticParams() {
+  const paths = [];
+  for (const project of referenceProjects) {
+    paths.push({ slug: getLocalizedSlug('portfolio', project.slug, 'tr') });
+    paths.push({ slug: getLocalizedSlug('portfolio', project.slug, 'en') });
+    paths.push({ slug: getLocalizedSlug('portfolio', project.slug, 'ro') });
+  }
+  return paths;
+}
+
 export async function generateMetadata({ params }) {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const isEn = locale === 'en';
   const localizedProjects = withReferenceProjectTimeline(
     sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
@@ -78,8 +87,9 @@ export async function generateMetadata({ params }) {
     'philsa-embosser-rfid': 'pmi-embosser-rfid',
   };
 
-  const slug = legacySlugMap[rawSlug] || rawSlug;
-  const project = localizedProjects.find((entry) => entry.slug === slug);
+  const mappedSlug = legacySlugMap[rawSlug] || rawSlug;
+  const baseSlug = resolveSlug('portfolio', mappedSlug);
+  const project = localizedProjects.find((entry) => entry.slug === baseSlug);
 
   if (!project) {
     return {
@@ -90,7 +100,16 @@ export async function generateMetadata({ params }) {
 
   const title = `${project.title} | ${f(locale, 'portfolioDetailPage', 'projectSuffix')} | Traceability`;
   const description = project.description;
-  const pageUrl = `https://traceability.com.tr/portfolio/${project.slug}`;
+
+  const alternates = {
+    canonical: `https://traceability.com.tr${toLocalePath(`/portfolio/${getLocalizedSlug('portfolio', baseSlug, locale)}`, locale)}`,
+    languages: {
+      'tr': `https://traceability.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
+      'en': `https://traceability.com.tr/en/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'en')}`,
+      'ro': `https://traceability.com.tr/ro/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'ro')}`,
+      'x-default': `https://traceability.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
+    }
+  };
 
   let ogLocale = 'ro_RO';
   if (locale === 'tr') {
@@ -107,14 +126,12 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: {
-      canonical: pageUrl,
-    },
+    alternates,
     openGraph: {
       title,
       description,
       type: 'article',
-      url: pageUrl,
+      url: alternates.canonical,
       locale: ogLocale,
       images: [
         {
@@ -135,9 +152,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function PortfolioDetailPage({ params, searchParams }) {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const localizedProjects = withReferenceProjectTimeline(
     sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
     locale
@@ -156,8 +171,9 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     'philsa-embosser-rfid': 'pmi-embosser-rfid',
   };
 
-  const slug = legacySlugMap[rawSlug] || rawSlug;
-  const project = localizedProjects.find((p) => p.slug === slug);
+  const mappedSlug = legacySlugMap[rawSlug] || rawSlug;
+  const baseSlug = resolveSlug('portfolio', mappedSlug);
+  const project = localizedProjects.find((p) => p.slug === baseSlug);
   const fromPageRaw = resolvedSearchParams?.fromPage;
   const fromPage = Number.parseInt(Array.isArray(fromPageRaw) ? fromPageRaw[0] : fromPageRaw || '1', 10);
   const listPath = locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta';

@@ -1,17 +1,12 @@
 import { notFound } from 'next/navigation';
-import { cookies } from 'next/headers';
 import CatalogDetailPage from '../../../../components/sections/CatalogDetailPage';
 import { products } from '../../../../data/solutions';
 import { localizeProducts } from '../../../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../../../lib/i18n/dictionaries';
+import { getRequestLocale, getRequestPathname } from '../../../../lib/i18n/requestLocale';
+import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping';
 import JsonLd from '../../../../components/seo/JsonLd';
 /* eslint-disable react/prop-types */
-
-function normalizeLocale(value) {
-  if (value === 'en') return 'en';
-  if (value === 'tr') return 'tr';
-  return 'ro';
-}
 
 function toOgLocale(locale) {
   if (locale === 'en') return 'en_US';
@@ -20,15 +15,21 @@ function toOgLocale(locale) {
 }
 
 export async function generateStaticParams() {
-  return products.map((product) => ({ slug: product.slug }));
+  const paths = [];
+  for (const product of products) {
+    paths.push({ slug: getLocalizedSlug('catalogProduct', product.slug, 'tr') });
+    paths.push({ slug: getLocalizedSlug('catalogProduct', product.slug, 'en') });
+    paths.push({ slug: getLocalizedSlug('catalogProduct', product.slug, 'ro') });
+  }
+  return paths;
 }
 
 export async function generateMetadata({ params }) {
-  const cookieStore = await cookies();
-  const locale = normalizeLocale(cookieStore.get('locale')?.value);
-  const { slug } = await params;
+  const locale = await getRequestLocale();
+  const { slug: rawSlug } = await params;
+  const baseSlug = resolveSlug('catalogProduct', rawSlug);
   const localizedProducts = localizeProducts(products, locale);
-  const item = localizedProducts.find((entry) => entry.slug === slug);
+  const item = localizedProducts.find((entry) => entry.slug === baseSlug);
 
   if (!item) {
     return {
@@ -44,17 +45,25 @@ export async function generateMetadata({ params }) {
     ogImage = item.image.startsWith('http') ? item.image : `https://traceability.com.tr${item.image}`;
   }
 
+  const alternates = {
+    canonical: `https://traceability.com.tr${toLocalePath(`/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, locale)}`, locale)}`,
+    languages: {
+      'tr': `https://traceability.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
+      'en': `https://traceability.com.tr/en/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'en')}`,
+      'ro': `https://traceability.com.tr/ro/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'ro')}`,
+      'x-default': `https://traceability.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
+    }
+  };
+
   return {
     title,
     description,
-    alternates: {
-      canonical: `https://traceability.com.tr/catalog/products/${item.slug}`,
-    },
+    alternates,
     openGraph: {
       title,
       description,
       type: 'article',
-      url: `https://traceability.com.tr/catalog/products/${item.slug}`,
+      url: alternates.canonical,
       locale: toOgLocale(locale),
       images: [
         {
@@ -75,11 +84,11 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CatalogProductDetailPage({ params }) {
-  const cookieStore = await cookies();
-  const locale = normalizeLocale(cookieStore.get('locale')?.value);
-  const { slug } = await params;
+  const locale = await getRequestLocale();
+  const { slug: rawSlug } = await params;
+  const baseSlug = resolveSlug('catalogProduct', rawSlug);
   const localizedProducts = localizeProducts(products, locale);
-  const currentIndex = localizedProducts.findIndex((entry) => entry.slug === slug);
+  const currentIndex = localizedProducts.findIndex((entry) => entry.slug === baseSlug);
   const item = currentIndex >= 0 ? localizedProducts[currentIndex] : null;
 
   if (!item) {
@@ -88,13 +97,13 @@ export default async function CatalogProductDetailPage({ params }) {
 
   const withNavigation = {
     ...item,
-    prevSlug: currentIndex > 0 ? localizedProducts[currentIndex - 1].slug : null,
-    nextSlug: currentIndex < localizedProducts.length - 1 ? localizedProducts[currentIndex + 1].slug : null,
+    prevSlug: currentIndex > 0 ? getLocalizedSlug('catalogProduct', localizedProducts[currentIndex - 1].slug, locale) : null,
+    nextSlug: currentIndex < localizedProducts.length - 1 ? getLocalizedSlug('catalogProduct', localizedProducts[currentIndex + 1].slug, locale) : null,
     prevTitle: currentIndex > 0 ? localizedProducts[currentIndex - 1].title : null,
     nextTitle: currentIndex < localizedProducts.length - 1 ? localizedProducts[currentIndex + 1].title : null,
   };
 
-  const productPath = `/catalog/products/${slug}`;
+  const productPath = `/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, locale)}`;
   const relativeHomePath = '/';
   const relativeProductsPath = '/?tab=products#traceability-solutions';
 

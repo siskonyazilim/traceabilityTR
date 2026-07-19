@@ -3,9 +3,8 @@ import 'font-awesome/css/font-awesome.min.css'
 import { Layout } from '../components/layout/Layout'
 import { LanguageProvider } from '../components/i18n/LanguageProvider'
 import BreadcrumbSchema from '../components/seo/BreadcrumbSchema'
-import { cookies } from 'next/headers'
 import { Kanit } from 'next/font/google'
-import { DEFAULT_LOCALE, isSupportedLocale } from '../lib/i18n/dictionaries'
+import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../lib/i18n/requestLocale'
 import Script from 'next/script'
 /* eslint-disable react/prop-types */
 
@@ -18,9 +17,8 @@ const kanit = Kanit({
 })
 
 export async function generateMetadata() {
-  const cookieStore = await cookies();
-  const localeCookie = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
+  const pathname = await getRequestPathname();
 
   const isEn = locale === 'en';
   const isTr = locale === 'tr';
@@ -46,6 +44,8 @@ export async function generateMetadata() {
     ogLocale = 'tr_TR';
   }
 
+  const alternates = getLanguageAlternates(pathname);
+
   return {
     title,
     description,
@@ -60,7 +60,7 @@ export async function generateMetadata() {
       title,
       description,
       type: 'website',
-      url: 'https://traceability.com.tr',
+      url: alternates.canonical,
       locale: ogLocale,
       images: [
         {
@@ -77,77 +77,33 @@ export async function generateMetadata() {
       description,
       images: ['https://traceability.com.tr/siskon-logo-header.svg'],
     },
-    alternates: {
-      canonical: 'https://traceability.com.tr',
-    },
+    alternates,
   };
 }
 
 // eslint-disable-next-line react/prop-types
 export default async function RootLayout({ children }) {
-  const cookieStore = await cookies();
-  const localeCookie = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
 
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <head>
+        <Script
+          id="gtm-head"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-547XQ7CS');`,
+          }}
+        />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <BreadcrumbSchema />
       </head>
       <body className={kanit.variable}>
-        <Script
-          id="cerezgo-script"
-          src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
-          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0szME7AHM2StfwPjoKkg0DOCFRSHeqEBQs3+SrK7/9T1h3iFvw33e+o="
-          data-id="nt"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="gtm-deferred"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: `(function(){
-  var initialized = false;
-  var idleTimer = null;
-
-  function cleanup() {
-    ['pointerdown','keydown','touchstart','scroll'].forEach(function(e){
-      window.removeEventListener(e, init, true);
-    });
-    if (idleTimer) { clearTimeout(idleTimer); idleTimer = null; }
-  }
-
-  function loadGtm() {
-    if (document.getElementById('gtm-script')) return;
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-    var s = document.createElement('script');
-    s.id = 'gtm-script';
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-547XQ7CS';
-    document.head.appendChild(s);
-    cleanup();
-  }
-
-  function init() {
-    if (initialized) return;
-    initialized = true;
-    var cerez = document.getElementById('cerezgo-script');
-    if (cerez && cerez.getAttribute('data-ready') !== '1') {
-      cerez.addEventListener('load', function(){ cerez.setAttribute('data-ready','1'); loadGtm(); }, {once:true});
-      cerez.addEventListener('error', loadGtm, {once:true});
-    } else {
-      loadGtm();
-    }
-  }
-
-  ['pointerdown','keydown','touchstart','scroll'].forEach(function(e){
-    window.addEventListener(e, init, {once:true, passive:true, capture:true});
-  });
-  idleTimer = setTimeout(init, 3500);
-})();` }}
-        />
         <noscript>
           <iframe
             title="gtm-noscript"
@@ -157,6 +113,13 @@ export default async function RootLayout({ children }) {
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        <Script
+          id="cerezgo-script"
+          src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
+          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0szME7AHM2StfwPjoKkg0DOCFRSHeqEBQs3+SrK7/9T1h3iFvw33e+o="
+          data-id="nt"
+          strategy="afterInteractive"
+        />
         <LanguageProvider initialLocale={locale}>
           <Layout>
             {children}

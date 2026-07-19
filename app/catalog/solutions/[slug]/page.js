@@ -1,17 +1,12 @@
 import { notFound } from 'next/navigation';
-import { cookies } from 'next/headers';
 import CatalogDetailPage from '../../../../components/sections/CatalogDetailPage';
 import { solutions } from '../../../../data/solutions';
 import { localizeSolutions, getFaqBundle } from '../../../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../../../lib/i18n/dictionaries';
+import { getRequestLocale, getRequestPathname } from '../../../../lib/i18n/requestLocale';
+import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping';
 import JsonLd from '../../../../components/seo/JsonLd';
 /* eslint-disable react/prop-types */
-
-function normalizeLocale(value) {
-  if (value === 'en') return 'en';
-  if (value === 'tr') return 'tr';
-  return 'ro';
-}
 
 function toOgLocale(locale) {
   if (locale === 'en') return 'en_US';
@@ -20,15 +15,21 @@ function toOgLocale(locale) {
 }
 
 export async function generateStaticParams() {
-  return solutions.map((solution) => ({ slug: solution.slug }));
+  const paths = [];
+  for (const solution of solutions) {
+    paths.push({ slug: getLocalizedSlug('catalogSolution', solution.slug, 'tr') });
+    paths.push({ slug: getLocalizedSlug('catalogSolution', solution.slug, 'en') });
+    paths.push({ slug: getLocalizedSlug('catalogSolution', solution.slug, 'ro') });
+  }
+  return paths;
 }
 
 export async function generateMetadata({ params }) {
-  const cookieStore = await cookies();
-  const locale = normalizeLocale(cookieStore.get('locale')?.value);
-  const { slug } = await params;
+  const locale = await getRequestLocale();
+  const { slug: rawSlug } = await params;
+  const baseSlug = resolveSlug('catalogSolution', rawSlug);
   const localizedSolutions = localizeSolutions(solutions, locale);
-  const item = localizedSolutions.find((entry) => entry.slug === slug);
+  const item = localizedSolutions.find((entry) => entry.slug === baseSlug);
 
   if (!item) {
     return {
@@ -44,17 +45,25 @@ export async function generateMetadata({ params }) {
     ogImage = item.image.startsWith('http') ? item.image : `https://traceability.com.tr${item.image}`;
   }
 
+  const alternates = {
+    canonical: `https://traceability.com.tr${toLocalePath(`/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, locale)}`, locale)}`,
+    languages: {
+      'tr': `https://traceability.com.tr/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'tr')}`,
+      'en': `https://traceability.com.tr/en/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'en')}`,
+      'ro': `https://traceability.com.tr/ro/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'ro')}`,
+      'x-default': `https://traceability.com.tr/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'tr')}`,
+    }
+  };
+
   return {
     title,
     description,
-    alternates: {
-      canonical: `https://traceability.com.tr/catalog/solutions/${item.slug}`,
-    },
+    alternates,
     openGraph: {
       title,
       description,
       type: 'article',
-      url: `https://traceability.com.tr/catalog/solutions/${item.slug}`,
+      url: alternates.canonical,
       locale: toOgLocale(locale),
       images: [
         {
@@ -75,11 +84,11 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CatalogSolutionDetailPage({ params }) {
-  const cookieStore = await cookies();
-  const locale = normalizeLocale(cookieStore.get('locale')?.value);
-  const { slug } = await params;
+  const locale = await getRequestLocale();
+  const { slug: rawSlug } = await params;
+  const baseSlug = resolveSlug('catalogSolution', rawSlug);
   const localizedSolutions = localizeSolutions(solutions, locale);
-  const currentIndex = localizedSolutions.findIndex((entry) => entry.slug === slug);
+  const currentIndex = localizedSolutions.findIndex((entry) => entry.slug === baseSlug);
   const item = currentIndex >= 0 ? localizedSolutions[currentIndex] : null;
 
   if (!item) {
@@ -88,13 +97,13 @@ export default async function CatalogSolutionDetailPage({ params }) {
 
   const withNavigation = {
     ...item,
-    prevSlug: currentIndex > 0 ? localizedSolutions[currentIndex - 1].slug : null,
-    nextSlug: currentIndex < localizedSolutions.length - 1 ? localizedSolutions[currentIndex + 1].slug : null,
+    prevSlug: currentIndex > 0 ? getLocalizedSlug('catalogSolution', localizedSolutions[currentIndex - 1].slug, locale) : null,
+    nextSlug: currentIndex < localizedSolutions.length - 1 ? getLocalizedSlug('catalogSolution', localizedSolutions[currentIndex + 1].slug, locale) : null,
     prevTitle: currentIndex > 0 ? localizedSolutions[currentIndex - 1].title : null,
     nextTitle: currentIndex < localizedSolutions.length - 1 ? localizedSolutions[currentIndex + 1].title : null,
   };
 
-  const solutionPath = `/catalog/solutions/${slug}`;
+  const solutionPath = `/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, locale)}`;
   const relativeHomePath = '/';
   const relativeSolutionsPath = '/?tab=solutions#traceability-solutions';
 

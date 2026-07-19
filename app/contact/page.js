@@ -1,11 +1,9 @@
-﻿import { cookies } from 'next/headers';
 import ContactPageClient from './ContactPageClient';
-import { DEFAULT_LOCALE, isSupportedLocale } from '../../lib/i18n/dictionaries';
+import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../../lib/i18n/requestLocale';
 
 export async function generateMetadata() {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
+  const pathname = await getRequestPathname();
   const isTr = locale === 'tr';
   const isEn = locale === 'en';
 
@@ -30,17 +28,17 @@ export async function generateMetadata() {
     ogLocale = 'en_US';
   }
 
+  const alternates = getLanguageAlternates(pathname);
+
   return {
     title,
     description,
-    alternates: {
-      canonical: 'https://traceability.com.tr/contact',
-    },
+    alternates,
     openGraph: {
       title,
       description,
       type: 'website',
-      url: 'https://traceability.com.tr/contact',
+      url: alternates.canonical,
       locale: ogLocale,
       images: [
         {

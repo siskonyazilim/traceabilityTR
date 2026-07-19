@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 import { getFirstSentenceText } from '../../lib/i18n/contentLocalization';
+import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 
 export const ProjectCard = ({ project, currentPage = 1 }) => {
   const { locale, t } = useLanguage();
@@ -86,7 +87,8 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   } else if (isRasterImage) {
     projectVisualClass = 'object-cover';
   }
-  const localizedPath = toLocalePath(`${detailBasePath}/${project.slug}`, locale);
+  const localizedSlug = getLocalizedSlug('portfolio', project.slug, locale);
+  const localizedPath = toLocalePath(`${detailBasePath}/${localizedSlug}`, locale);
   const detailHref = currentPage > 1
     ? {
         pathname: localizedPath,

@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Container from '../../../components/ui/Container';
@@ -6,20 +6,20 @@ import Button from '../../../components/ui/Button';
 import { blogPosts } from '../../../data/blogPosts';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
-import { cookies } from 'next/headers';
+import { getRequestLocale, getRequestPathname } from '../../../lib/i18n/requestLocale';
 import { localizeBlogPosts } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
-import { DEFAULT_LOCALE, isSupportedLocale } from '../../../lib/i18n/dictionaries';
+import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
+import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
 /* eslint-disable react/prop-types */
 
 export async function generateMetadata({ params }) {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const isEn = locale === 'en';
   const localizedPosts = localizeBlogPosts(blogPosts, locale);
-  const { slug } = await params;
-  const post = localizedPosts.find((entry) => entry.slug === slug);
+  const { slug: rawSlug } = await params;
+  const baseSlug = resolveSlug('blog', rawSlug);
+  const post = localizedPosts.find((entry) => entry.originalSlug === baseSlug);
 
   if (!post) {
     return {
@@ -30,7 +30,16 @@ export async function generateMetadata({ params }) {
 
   const title = `${post.title} | ${f(locale, 'blogDetailPage', 'blogSuffix')}`;
   const description = post.excerpt;
-  const pageUrl = `https://traceability.com.tr/blog/${post.slug}`;
+
+  const alternates = {
+    canonical: `https://traceability.com.tr${toLocalePath(`/blog/${getLocalizedSlug('blog', baseSlug, locale)}`, locale)}`,
+    languages: {
+      'tr': `https://traceability.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
+      'en': `https://traceability.com.tr/en/blog/${getLocalizedSlug('blog', baseSlug, 'en')}`,
+      'ro': `https://traceability.com.tr/ro/blog/${getLocalizedSlug('blog', baseSlug, 'ro')}`,
+      'x-default': `https://traceability.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
+    }
+  };
 
   let openGraphLocale = 'ro_RO';
   if (locale === 'tr') {
@@ -47,14 +56,12 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: {
-      canonical: pageUrl,
-    },
+    alternates,
     openGraph: {
       title,
       description,
       type: 'article',
-      url: pageUrl,
+      url: alternates.canonical,
       locale: openGraphLocale,
       images: [
         {
@@ -75,12 +82,11 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogDetailPage({ params }) {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const localizedPosts = localizeBlogPosts(blogPosts, locale);
-  const { slug } = await params;
-  const post = localizedPosts.find((p) => p.slug === slug);
+  const { slug: rawSlug } = await params;
+  const baseSlug = resolveSlug('blog', rawSlug);
+  const post = localizedPosts.find((p) => p.originalSlug === baseSlug);
 
   if (!post) notFound();
 
@@ -125,7 +131,7 @@ export default async function BlogDetailPage({ params }) {
     <div className="min-h-screen bg-white pb-16">
       <Container size="xl">
         <article className="mx-auto max-w-none py-10 md:py-14">
-          <Link href="/blog" className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-secondary-blue transition-colors hover:text-accent-blue">
+          <Link href={toLocalePath('/blog', locale)} className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-secondary-blue transition-colors hover:text-accent-blue">
             <IconArrowLeft size={16} />
             <span>{f(locale, 'blogDetailPage', 'backToBlog')}</span>
           </Link>
@@ -217,7 +223,7 @@ export default async function BlogDetailPage({ params }) {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {prevPost ? (
                 <Link
-                  href={`/blog/${prevPost.slug}`}
+                  href={toLocalePath(`/blog/${prevPost.slug}`, locale)}
                   className="group flex flex-col items-start gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
                 >
                   <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
@@ -238,7 +244,7 @@ export default async function BlogDetailPage({ params }) {
 
               {nextPost ? (
                 <Link
-                  href={`/blog/${nextPost.slug}`}
+                  href={toLocalePath(`/blog/${nextPost.slug}`, locale)}
                   className="group flex flex-col items-end gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
                 >
                   <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
@@ -269,7 +275,7 @@ export default async function BlogDetailPage({ params }) {
               </p>
               <Button
                 as={Link}
-                href="/contact"
+                href={toLocalePath('/contact', locale)}
                 variant="solid"
                 size="lg"
                 className="bg-secondary-blue font-semibold text-white hover:bg-accent-blue"

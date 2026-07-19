@@ -1,12 +1,13 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { cookies } from 'next/headers';
 import Container from '../../../components/ui/Container';
 import { IconArrowLeft, IconCheck } from '../../../components/ui/Icons';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 import { localizeSolutionDetail, getFaqBundle } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
+import { getRequestLocale, getRequestPathname } from '../../../lib/i18n/requestLocale';
+import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
 import JsonLd from '../../../components/seo/JsonLd';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
@@ -199,7 +200,7 @@ const solutions = {
     keywords: 'MES entegrasyonu, ERP entegrasyonu, API entegrasyonu, SAP entegrasyonu, sistem entegrasyonu, ara katman yazılımı',
     icon: '🔗',
     benefits: [
-      'Flux automat de date între sisteme',
+      'Flux automat de data între sisteme',
       'Eliminare reintroducere manuală',
       'Sincronizare în timp real',
       'Traceability end-to-end',
@@ -230,19 +231,22 @@ const solutions = {
 };
 
 export async function generateStaticParams() {
-  return Object.keys(solutions).map((slug) => ({
-    slug: slug,
-  }));
+  const paths = [];
+  for (const baseSlug of Object.keys(solutions)) {
+    paths.push({ slug: getLocalizedSlug('solution', baseSlug, 'tr') });
+    paths.push({ slug: getLocalizedSlug('solution', baseSlug, 'en') });
+    paths.push({ slug: getLocalizedSlug('solution', baseSlug, 'ro') });
+  }
+  return paths;
 }
 
 export async function generateMetadata({ params }) {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const isEn = locale === 'en';
-  const { slug } = await params;
-  const baseSolution = solutions[slug];
-  const solution = localizeSolutionDetail(slug, baseSolution, locale);
+  const { slug: rawSlug } = await params;
+  const baseSlug = resolveSlug('solution', rawSlug);
+  const baseSolution = solutions[baseSlug];
+  const solution = localizeSolutionDetail(baseSlug, baseSolution, locale);
 
   if (!solution) {
     return {
@@ -253,7 +257,16 @@ export async function generateMetadata({ params }) {
 
   const metaDescription = solution.metaDescription || solution.description;
   const pageTitle = `${solution.title} | Traceability`;
-  const pageUrl = `https://traceability.com.tr/solutions/${slug}`;
+
+  const alternates = {
+    canonical: `https://traceability.com.tr${toLocalePath(`/solutions/${getLocalizedSlug('solution', baseSlug, locale)}`, locale)}`,
+    languages: {
+      'tr': `https://traceability.com.tr/solutions/${getLocalizedSlug('solution', baseSlug, 'tr')}`,
+      'en': `https://traceability.com.tr/en/solutions/${getLocalizedSlug('solution', baseSlug, 'en')}`,
+      'ro': `https://traceability.com.tr/ro/solutions/${getLocalizedSlug('solution', baseSlug, 'ro')}`,
+      'x-default': `https://traceability.com.tr/solutions/${getLocalizedSlug('solution', baseSlug, 'tr')}`,
+    }
+  };
 
   let ogLocale = 'ro_RO';
   if (locale === 'tr') {
@@ -266,14 +279,12 @@ export async function generateMetadata({ params }) {
     title: pageTitle,
     description: metaDescription,
     keywords: solution.keywords,
-    alternates: {
-      canonical: pageUrl,
-    },
+    alternates,
     openGraph: {
       title: pageTitle,
       description: metaDescription,
       type: 'website',
-      url: pageUrl,
+      url: alternates.canonical,
       locale: ogLocale,
       images: [
         {
@@ -294,12 +305,11 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function SolutionDetailPage({ params }) {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
-  const { slug } = await params;
-  const baseSolution = solutions[slug];
-  const solution = localizeSolutionDetail(slug, baseSolution, locale);
+  const locale = await getRequestLocale();
+  const { slug: rawSlug } = await params;
+  const baseSlug = resolveSlug('solution', rawSlug);
+  const baseSolution = solutions[baseSlug];
+  const solution = localizeSolutionDetail(baseSlug, baseSolution, locale);
 
   if (!solution) {
     notFound();
@@ -318,7 +328,7 @@ export default async function SolutionDetailPage({ params }) {
     roi: f(locale, 'solutionDetailPage', 'roi', {}),
   };
 
-  const relativePath = `/solutions/${slug}`;
+  const relativePath = `/solutions/${getLocalizedSlug('solution', baseSlug, locale)}`;
   const relativeHomePath = '/';
   const pageUrl = `https://traceability.com.tr${toLocalePath(relativePath, locale)}`;
   const homeUrl = `https://traceability.com.tr${toLocalePath(relativeHomePath, locale)}`;
@@ -415,10 +425,10 @@ export default async function SolutionDetailPage({ params }) {
       <JsonLd data={graphSchema} />
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
         <Container size="xl">
-          <Link href="/#traceability-solutions" className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
+          <Link href={toLocalePath('/#traceability-solutions', locale)} className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-8 font-semibold">
             <IconArrowLeft /> {labels.back}
           </Link>
-
+          
           <article className="max-w-6xl mx-auto">
             {/* Hero */}
             <div className="mb-12 text-center">
@@ -485,7 +495,7 @@ export default async function SolutionDetailPage({ params }) {
                 className="text-center"
                 title={labels.ctaTitle}
                 subtitle={labels.ctaSubtitle}
-                primaryHref="/contact"
+                primaryHref={toLocalePath('/contact', locale)}
                 primaryLabel={labels.ctaPrimary}
               />
             </div>

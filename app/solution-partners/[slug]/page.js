@@ -1,20 +1,27 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
 import { strategicPartners } from '../../../data/partners';
 import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
 import PartnerStorySlider from '../../../components/ui/PartnerStorySlider';
-import { cookies } from 'next/headers';
+import { getRequestLocale, getRequestPathname } from '../../../lib/i18n/requestLocale';
 import { localizePartners } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
+export async function generateStaticParams() {
+  const paths = [];
+  for (const partner of strategicPartners) {
+    paths.push({ slug: partner.slug });
+  }
+  paths.push({ slug: 'proiectul-a-s' });
+  return paths;
+}
+
 export async function generateMetadata({ params }) {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const isEn = locale === 'en';
   const localizedPartners = localizePartners(strategicPartners, locale);
   const { slug: rawSlug } = await params;
@@ -33,7 +40,17 @@ export async function generateMetadata({ params }) {
 
   const title = `${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')} | Traceability`;
   const description = partner.description;
-  const pageUrl = `https://traceability.com.tr/solution-partners/${partner.slug}`;
+
+  const detailBasePath = locale === 'en' ? '/solution-partners' : '/parteneri-de-solutii';
+  const alternates = {
+    canonical: `https://traceability.com.tr${toLocalePath(`${detailBasePath}/${partner.slug}`, locale)}`,
+    languages: {
+      'tr': `https://traceability.com.tr/parteneri-de-solutii/${partner.slug}`,
+      'en': `https://traceability.com.tr/en/solution-partners/${partner.slug}`,
+      'ro': `https://traceability.com.tr/ro/parteneri-de-solutii/${partner.slug}`,
+      'x-default': `https://traceability.com.tr/parteneri-de-solutii/${partner.slug}`,
+    }
+  };
 
   let ogLocale = 'ro_RO';
   if (locale === 'tr') {
@@ -50,14 +67,12 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: {
-      canonical: pageUrl,
-    },
+    alternates,
     openGraph: {
       title,
       description,
       type: 'article',
-      url: pageUrl,
+      url: alternates.canonical,
       locale: ogLocale,
       images: [
         {
@@ -78,9 +93,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function PartnerDetailPage({ params }) {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const localizedPartners = localizePartners(strategicPartners, locale);
   const { slug: rawSlug } = await params;
   const legacySlugMap = {

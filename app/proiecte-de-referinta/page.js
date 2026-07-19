@@ -1,11 +1,10 @@
-﻿import { cookies } from 'next/headers';
+import { Suspense } from 'react';
 import ProjectsPageClient from './ProjectsPageClient';
-import { DEFAULT_LOCALE, isSupportedLocale } from '../../lib/i18n/dictionaries';
+import { getRequestLocale, getRequestPathname } from '../../lib/i18n/requestLocale';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 export async function generateMetadata() {
-  const cookieStore = await cookies();
-  const localeRaw = cookieStore.get('locale')?.value;
-  const locale = isSupportedLocale(localeRaw) ? localeRaw : DEFAULT_LOCALE;
+  const locale = await getRequestLocale();
   const isTr = locale === 'tr';
   const isEn = locale === 'en';
 
@@ -30,21 +29,25 @@ export async function generateMetadata() {
     ogLocale = 'en_US';
   }
 
-  const listUrl = isEn
-    ? 'https://traceability.com.tr/reference-projects'
-    : 'https://traceability.com.tr/proiecte-de-referinta';
+  const alternates = {
+    canonical: `https://traceability.com.tr${toLocalePath(locale === 'en' ? '/reference-projects' : '/proiecte-de-referinta', locale)}`,
+    languages: {
+      'tr': 'https://traceability.com.tr/proiecte-de-referinta',
+      'en': 'https://traceability.com.tr/en/reference-projects',
+      'ro': 'https://traceability.com.tr/ro/proiecte-de-referinta',
+      'x-default': 'https://traceability.com.tr/proiecte-de-referinta',
+    }
+  };
 
   return {
     title,
     description,
-    alternates: {
-      canonical: listUrl,
-    },
+    alternates,
     openGraph: {
       title,
       description,
       type: 'website',
-      url: listUrl,
+      url: alternates.canonical,
       locale: ogLocale,
       images: [
         {
@@ -65,5 +68,9 @@ export async function generateMetadata() {
 }
 
 export default function ProjectsPage() {
-  return <ProjectsPageClient />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsPageClient />
+    </Suspense>
+  );
 }

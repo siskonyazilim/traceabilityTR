@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { getFirstSentenceText } from '../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
+import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 
 export default function ReferenceProjectsSlider({
   projects = [],
@@ -130,7 +131,7 @@ export default function ReferenceProjectsSlider({
               className="h-full group"
             >
               <Link
-                href={toLocalePath(`${detailBasePath}/${project.slug}`, locale)}
+                href={toLocalePath(`${detailBasePath}/${getLocalizedSlug('portfolio', project.slug, locale)}`, locale)}
                 className="h-full flex flex-col rounded-md border-2 border-slate-200 bg-white shadow-soft hover:shadow-soft-lg hover:border-accent-blue transition-all duration-300 overflow-hidden"
               >
                 <div className="relative h-44 bg-white overflow-hidden">
