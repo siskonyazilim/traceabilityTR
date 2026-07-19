@@ -173,6 +173,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
 
   const mappedSlug = legacySlugMap[rawSlug] || rawSlug;
   const baseSlug = resolveSlug('portfolio', mappedSlug);
+  const slug = baseSlug;
   const project = localizedProjects.find((p) => p.slug === baseSlug);
   const fromPageRaw = resolvedSearchParams?.fromPage;
   const fromPage = Number.parseInt(Array.isArray(fromPageRaw) ? fromPageRaw[0] : fromPageRaw || '1', 10);
