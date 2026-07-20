@@ -89,6 +89,13 @@ export default async function RootLayout({ children }) {
     <html lang={locale} data-scroll-behavior="smooth">
       <head>
         <Script
+          id="cerezgo-script"
+          src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
+          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0szME7AHM2StfwPjoKkg0DOCFRSHeqEBQs3+SrK7/9T1h3iFvw33e+o="
+          data-id="nt"
+          strategy="beforeInteractive"
+        />
+        <Script
           id="gtm-head"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -113,13 +120,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <Script
-          id="cerezgo-script"
-          src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
-          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0szME7AHM2StfwPjoKkg0DOCFRSHeqEBQs3+SrK7/9T1h3iFvw33e+o="
-          data-id="nt"
-          strategy="afterInteractive"
-        />
         <LanguageProvider initialLocale={locale}>
           <Layout>
             {children}
