@@ -174,6 +174,11 @@ export const Footer = () => {
                   {t('footer.cookiePolicy', 'Politica de cookie-uri')}
                 </Link>
               </li>
+              <li>
+                <a href="#" className="nesil-open-modal text-gray-light hover:text-accent-blue transition-colors text-sm">
+                  ##Çerez Tercihleri
+                </a>
+              </li>
             </ul>
           </div>
 

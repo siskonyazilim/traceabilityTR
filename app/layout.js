@@ -91,9 +91,34 @@ export default async function RootLayout({ children }) {
         <Script
           id="cerezgo-script"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
-          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0szME7AHM2StfwPjoKkg0DOCFRSHeqEBQs3+SrK7/9T1h3iFvw33e+o="
+          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vpKaPbTvt61DIB1C9ICfSdnEZ9wdEs7lN5IoDFNg6gdqhFdk9hLHp4="
           data-id="nt"
           strategy="beforeInteractive"
+        />
+        <Script
+          id="cerezgo-scroll-unlock"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  function unlockScroll(){
+    var html = document.documentElement;
+    var body = document.body;
+    if (!html || !body) return;
+
+    if (html.style.overflowY === 'hidden') html.style.overflowY = 'auto';
+    if (body.style.overflowY === 'hidden') body.style.overflowY = 'auto';
+    if (body.style.overflow === 'hidden') body.style.overflow = 'auto';
+    if (!body.style.overflowX) body.style.overflowX = 'hidden';
+  }
+
+  unlockScroll();
+  window.addEventListener('load', unlockScroll, { once: true });
+
+  var observer = new MutationObserver(unlockScroll);
+  if (document.documentElement) observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
+  if (document.body) observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+})();`,
+          }}
         />
         <Script
           id="gtm-head"
@@ -110,7 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <BreadcrumbSchema />
       </head>
-      <body className={kanit.variable}>
+      <body className={kanit.variable} suppressHydrationWarning>
         <noscript>
           <iframe
             title="gtm-noscript"

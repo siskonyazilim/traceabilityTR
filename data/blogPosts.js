@@ -476,7 +476,6 @@ export const blogPosts = [
     title: 'Procedura Chestny ZNAK: Sistemul Digital de Trasabilitate al Rusiei',
     titleTr: "Chestny ZNAK Proseduru: Rusya'nin Dijital Izlenebilirlik Sistemi",
     slug: 'chestny-znak-procedure-russias-digital-traceability-system',
-    visibleLocales: ['tr'],
     category: 'Știri',
     categoryEn: 'News',
     date: '2024-12-05',
