@@ -11,9 +11,12 @@ import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 export const ProjectCard = ({ project, currentPage = 1 }) => {
   const { locale, t } = useLanguage();
   const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').split('→')[0].trim();
-  const detailBasePath = locale === 'en'
-    ? '/reference-projects'
-    : (locale === 'ro' ? '/proiecte-de-referinta' : '/portfolio');
+  let detailBasePath = '/portfolio';
+  if (locale === 'en') {
+    detailBasePath = '/reference-projects';
+  } else if (locale === 'ro') {
+    detailBasePath = '/proiecte-de-referinta';
+  }
 
   const slugPrefixLogoMap = {
     'delphi-': '/Logos/delphi.svg',
@@ -141,18 +144,19 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
             {getFirstSentenceText(project.description)}
           </p>
 
-          <div className="mt-auto flex flex-col items-center gap-3">
-            <span className="card-cta-mini">
+          <div className="mt-auto w-full flex items-end justify-between gap-3">
+            {project.referenceDateLabel && (
+              <span className="rounded-md bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap shrink-0">
+                {project.referenceDateLabel}
+              </span>
+            )}
+
+            <span className="card-cta-mini ml-auto shrink-0">
               {projectDetailsLabel}
               <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </span>
-            {project.referenceDateLabel && (
-              <span className="rounded-md bg-primary-black/75 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap">
-                {project.referenceDateLabel}
-              </span>
-            )}
           </div>
         </div>
         </Link>
