@@ -15,9 +15,10 @@ export const StrategicPartners = () => {
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
-  const detailBasePath = locale === 'en'
-    ? '/solution-partners'
-    : (locale === 'ro' ? '/parteneri-de-solutii' : '/solution-partners');
+  let detailBasePath = '/solution-partners';
+  if (locale === 'ro') {
+    detailBasePath = '/parteneri-de-solutii';
+  }
   const localizedPartners = useMemo(() => localizePartners(strategicPartners, locale), [locale]);
 
   useEffect(() => {
@@ -135,10 +136,10 @@ export const StrategicPartners = () => {
                   </div>
 
                   <div className="p-6 md:p-7 h-full flex flex-col items-center text-center">
-                    <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] flex items-center justify-center">
+                    <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] max-w-[16.5rem] mx-auto flex items-center justify-center">
                       {partner.name}
                     </h3>
-                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 max-w-none">
+                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 max-w-[18.5rem] mx-auto">
                       {getFirstSentenceText(partner.description)}
                     </p>
                     <span className="card-cta-mini mt-auto mx-auto">
