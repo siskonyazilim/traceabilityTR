@@ -1,0 +1,115 @@
+{
+  "backToProjects": "Înapoi la Proiectele de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria Alimentară",
+  "locationValue": "Niğde",
+  "heroTitleLine1": "Trasabilitate completă",
+  "heroTitleLine2": "pentru cutii și paleți.",
+  "heroSub": "Proiectul implementat în fabrica de lapte praf a companiei Abalıoğlu Yağ din Niğde oferă trasabilitate la nivel de cutie și palet și permite gestionarea tuturor mișcărilor de produse din producție până la expediere printr-o singură platformă.",
+
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Urmărirea digitală a cutiilor și paleților în producția de lapte praf",
+  "contextP1": "Abalıoğlu Yağ produce lapte praf în unitatea sa din Niğde. Proiectul a fost implementat pentru a asigura trasabilitatea la nivel de cutie și palet și pentru digitalizarea proceselor logistice.",
+  "contextP2": "Monitorizarea centralizată a proceselor de producție și expediere a îmbunătățit vizibilitatea operațională și acuratețea livrărilor.",
+
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Gestionarea fiabilă a relațiilor cutie–palet",
+  "problemLede": "Era necesară monitorizarea fiecărei cutii și a paletului pe care aceasta este plasată, de-a lungul întregului proces de producție și expediere. Procesele manuale generau lipsuri de trasabilitate și riscuri în cazul operațiunilor de recall.",
+  "problemList": [
+    {
+      "bold": "Urmărirea Cutie–Palet",
+      "text": "Operațiunile manuale creșteau riscul de erori în asocierea cutiilor cu paleții."
+    },
+    {
+      "bold": "Gestionarea Recall-ului",
+      "text": "Identificarea și verificarea rapidă a mișcărilor istorice ale produselor era dificilă."
+    }
+  ],
+
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Digitalizarea proceselor cutie–palet–expediere",
+  "solutionLede": "Soluția implementată asociază cutiile cu paleții și înregistrează toate mișcările în platforma OnSuite Trace, oferind vizibilitate completă de la producție până la expediere.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Identificarea Cutiei",
+      "text": "Informațiile cutiei generate pe linia de producție sunt înregistrate în sistem."
+    },
+    {
+      "no": "02",
+      "title": "Crearea Paletului",
+      "text": "Cutiile sunt asociate și legate de paleții corespunzători."
+    },
+    {
+      "no": "03",
+      "title": "Pregătirea Expediției",
+      "text": "Procesele de expediere sunt gestionate și urmărite la nivel de palet."
+    },
+    {
+      "no": "04",
+      "title": "Monitorizare și Raportare",
+      "text": "Toate mișcările sunt urmărite și raportate prin platforma OnSuite Trace."
+    }
+  ],
+
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "PLC, SCADA și trasabilitate bazată pe coduri de bare",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Infrastructură PLC",
+      "text": "Arhitectură industrială de automatizare care gestionează procesele de producție și expediere."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA C#",
+      "text": "Software central pentru gestionarea operațiunilor de trasabilitate a cutiilor și paleților."
+    },
+    {
+      "tag": "IDENTIFICARE",
+      "title": "Cititoare de Coduri de Bare",
+      "text": "Utilizate pentru identificarea și verificarea etichetelor cutiilor și paleților."
+    },
+    {
+      "tag": "INTEGRARE",
+      "title": "Sisteme de Codificare și Etichetare",
+      "text": "Integrate pentru codificarea automată a cutiilor și imprimarea etichetelor de palet."
+    }
+  ],
+
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare cu Netsis ERP",
+  "integrationDesc": "Datele de trasabilitate și expediere sunt sincronizate cu Netsis ERP pentru gestionarea centralizată a proceselor.",
+  "integrationList": [
+    {
+      "bold": "Netsis ERP",
+      "text": "Datele de trasabilitate și expediere sunt sincronizate cu sistemul Netsis ERP."
+    }
+  ],
+
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Trasabilitate îmbunătățită și livrări mai precise",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate End-to-End",
+      "text": "Toate mișcările produselor pot fi urmărite din producție până la expediere."
+    },
+    {
+      "title": "Management Digital al Paleților",
+      "text": "Relațiile dintre cutii și paleți sunt gestionate automat și în siguranță."
+    },
+    {
+      "title": "Siguranță pentru Recall și Livrare",
+      "text": "Procesele de recall sunt accelerate, iar erorile de expediere sunt reduse."
+    }
+  ],
+
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să vă transformați procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta implementarea unei soluții similare în compania dumneavoastră.",
+  "ctaPrimary": "Contactați-ne"
+}

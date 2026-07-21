@@ -34,10 +34,10 @@ export const BlogCard = ({
     <article className="h-full">
       <Link
         href={toLocalePath(`/blog/${post.slug}`, locale)}
-        className="group flex h-full flex-col rounded-md border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/70 shadow-soft hover:shadow-soft-lg hover:border-sky-300 transition-all overflow-hidden"
+        className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white shadow-soft shadow-soft-hover hover:border-accent-blue hover:-translate-y-1 transition-all duration-300 overflow-hidden"
       >
-        {/* Blog image */}
-        <div className="aspect-video bg-gradient-to-br from-sky-100 via-blue-100 to-cyan-100 flex items-center justify-center overflow-hidden relative">
+        {/* Blog image — full width, taller, bleeds to card edges */}
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
           {imageError ? (
             <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-blue to-accent-green">
               <div className="text-white text-lg font-semibold tracking-wide">BLOG</div>
@@ -48,40 +48,44 @@ export const BlogCard = ({
               alt={post.title}
               fill
               sizes={imageSizes}
-              className="object-cover"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
               loading={prioritizeImage ? 'eager' : 'lazy'}
               priority={prioritizeImage}
               fetchPriority={prioritizeImage ? 'high' : 'auto'}
-              quality={78}
+              quality={80}
               onError={() => setImageError(true)}
             />
           )}
+
+          {/* Subtle gradient so the badge stays legible on any image */}
+          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/40 to-transparent" />
+
+          {/* Category badge floating on the image */}
+          <span className="absolute top-3 left-3 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-accent-blue uppercase tracking-wide shadow-sm">
+            {post.category}
+          </span>
         </div>
 
-        <div className="p-6 md:p-7 flex-1 flex flex-col items-center text-center">
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="text-xs font-semibold text-secondary-blue uppercase">
-              {post.category}
-            </span>
-            <span className="text-xs text-inactive-gray">{date}</span>
-          </div>
+        {/* Content */}
+        <div className="flex flex-1 flex-col p-5 md:p-6 text-left">
+          <span className="text-xs text-gray-text mb-2">{date}</span>
 
-          <h3 className="text-xl font-bold text-slate-800 mb-3 line-clamp-2 group-hover:text-secondary-blue transition-colors min-h-[3.5rem] flex items-center justify-center">
+          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-2 line-clamp-2 group-hover:text-accent-blue transition-colors">
             {post.title}
           </h3>
 
-          <p className="card-description-copy card-description-block text-slate-600 text-sm leading-7 mb-4 max-w-[46ch]">
+          <p className="text-sm text-gray-text leading-6 mb-4 line-clamp-3">
             {getFirstSentenceText(post.excerpt)}
           </p>
 
-          <span className="card-cta-mini mt-auto mx-auto">
+          <span className="card-cta-mini mt-auto inline-flex items-center gap-1 text-accent-blue font-semibold text-sm">
             {readMoreLabel}
-            <svg className="card-cta-mini-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="card-cta-mini-icon w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </span>
         </div>
-        </Link>
+      </Link>
     </article>
   );
 };

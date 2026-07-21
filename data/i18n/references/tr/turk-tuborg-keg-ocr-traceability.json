@@ -1,0 +1,118 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Gıda",
+  "locationValue": "İzmir",
+  "heroTitleLine1": "Fıçı OCR",
+  "heroTitleLine2": "İzlenebilirliği",
+  "heroSub": "Türk Tuborg'un İzmir'deki üretim tesisinde uygulanan proje, her bir fıçının benzersiz kimliğini barkod ve OCR ile güvenilir biçimde okuyup doğru paletle eşleştirerek palet seviyesinde izlenebilirliği ve sevkiyat doğruluğunu artırmaktadır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Fıçı bazında tekil eşleştirme ve sevkiyat güvencesi",
+  "contextP1": "Türk Tuborg'un İzmir'deki fabrikası, alkollü içecek üretimi yapmaktadır.",
+  "contextP2": "Bu fabrikada hayata geçirilen projede, her biri eşsiz ID'ye sahip fıçıların okunarak paletlerle eşleştirilmesi ve palet düzeyinde izlenebilirlik sağlanmıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Okunamayan fıçı ID'leri için güvenli alternatif",
+  "problemLede": "Her fıçının eşsiz (tekil) ID'sinin güvenilir biçimde okunması ve doğru paletle eşleştirilmesi gerekiyordu. Fıçı ID'leri her zaman standart barkod/kod okumayla okunamıyor; okunamayan durumlarda sürecin durmaması ve fıçı-palet eşleşmesinin hatasız yapılabilmesi için alternatif bir okuma yöntemine ihtiyaç vardı.",
+  "problemList": [
+    {
+      "bold": "Okuma Sürekliliği",
+      "text": "Standart kod okumanın başarısız olduğu durumlarda üretimin durmaması gerekiyordu."
+    },
+    {
+      "bold": "Hatasız Eşleştirme",
+      "text": "Fıçı-palet eşleşmesinin yanlış yapılması sevkiyat doğruluğunu doğrudan etkiliyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Kod okuma + OCR ile fıçı-palet doğrulama",
+  "solutionLede": "C# tabanlı uygulamaya SAP'den iş emirleri gelmekte, operatör ilgili iş emrini seçmektedir. Kamera, seçilen iş emrine göre ilgili pozisyona hareket etmektedir. Her fıçının eşsiz ID'si önce kod okuma ile okunmaya çalışılmakta; okunamadığı durumlarda OCR (optik karakter tanıma) ile okunmaktadır. Okunan eşsiz fıçı ID'leri ilgili palet ile eşleştirilmekte ve palet etiketi basılmaktadır. Böylece fıçı-palet eşleşmesi güvence altına alınarak palet düzeyinde izlenebilirlik sağlanmaktadır.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "İş Emri Seçimi",
+      "text": "Operatör, SAP'den gelen iş emrini seçer."
+    },
+    {
+      "no": "02",
+      "title": "Kamera Konumlandırma",
+      "text": "Kamera, seçilen iş emrine göre ilgili okuma pozisyonuna hareket eder."
+    },
+    {
+      "no": "03",
+      "title": "Kod + OCR Okuma",
+      "text": "Fıçı ID önce kod okuyucuyla; başarısız olursa OCR ile okunur."
+    },
+    {
+      "no": "04",
+      "title": "Eşleştirme ve Etiket",
+      "text": "Okunan fıçı ID'leri ilgili paletle eşleştirilir ve palet etiketi basılır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "C#, kamera, OCR ve SAP entegrasyonu",
+  "techGrid": [
+    {
+      "tag": "YAZILIM",
+      "title": "C# Uygulaması",
+      "text": "SAP iş emirlerini yöneten, operatör akışını ve eşleştirme mantığını kontrol eden merkezi uygulama."
+    },
+    {
+      "tag": "GÖRÜNTÜ",
+      "title": "Kamera Sistemi",
+      "text": "İş emrine göre ilgili pozisyona hareket ederek fıçı kimliğinin okunmasını destekler."
+    },
+    {
+      "tag": "OCR",
+      "title": "Optik Karakter Tanıma",
+      "text": "Standart kod okumada başarısız olunan durumlarda fıçı ID bilgisini OCR ile okur."
+    },
+    {
+      "tag": "TANIMA",
+      "title": "Kod Okuma Altyapısı",
+      "text": "Fıçı kimliğini öncelikli olarak barkod/kod okuma yöntemiyle doğrular."
+    },
+    {
+      "tag": "ETİKETLEME",
+      "title": "Palet Etiketleme",
+      "text": "Doğrulanan eşleşme sonrasında ilgili palet etiketini otomatik oluşturur."
+    },
+    {
+      "tag": "ENTEGRASYON",
+      "title": "SAP",
+      "text": "İş emri ve sonuç verilerinin merkezi ERP sistemiyle anlık paylaşımını sağlar."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "SAP entegrasyonu",
+  "integrationDesc": "Sistem SAP ile entegre çalışmaktadır; iş emirleri SAP'den alınmakta, fıçı-palet eşleştirme ve palet etiketleme sonuçları SAP ile paylaşılarak süreç merkezi olarak yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "SAP",
+      "text": "İş emirleri SAP üzerinden gelir, eşleştirme ve etiketleme çıktıları SAP'ye geri yazılır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Daha güvenilir okuma ve hatasız palet eşleşmesi",
+  "resultsGrid": [
+    {
+      "title": "Okuma Güvenilirliği Artışı",
+      "text": "Kod okuma, gerektiğinde OCR ile desteklenerek okunamayan fıçı nedeniyle sürecin durması önlendi."
+    },
+    {
+      "title": "Hatasız Eşleştirme",
+      "text": "Eşsiz fıçı ID'leri doğru paletle eşleştirilerek yanlış ilişkilendirme riski azaltıldı."
+    },
+    {
+      "title": "Sevkiyat Doğruluğu",
+      "text": "Palet etiketi basımı ve doğrulanmış eşleşme ile palet düzeyinde sevkiyat güvence altına alındı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

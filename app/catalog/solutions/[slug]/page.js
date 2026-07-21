@@ -3,7 +3,7 @@ import CatalogDetailPage from '../../../../components/sections/CatalogDetailPage
 import { solutions } from '../../../../data/solutions';
 import { localizeSolutions, getFaqBundle } from '../../../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../../../lib/i18n/dictionaries';
-import { getRequestLocale, getRequestPathname } from '../../../../lib/i18n/requestLocale';
+import { getRequestLocale } from '../../../../lib/i18n/requestLocale';
 import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping';
 import JsonLd from '../../../../components/seo/JsonLd';
 /* eslint-disable react/prop-types */
@@ -17,9 +17,11 @@ function toOgLocale(locale) {
 export async function generateStaticParams() {
   const paths = [];
   for (const solution of solutions) {
-    paths.push({ slug: getLocalizedSlug('catalogSolution', solution.slug, 'tr') });
-    paths.push({ slug: getLocalizedSlug('catalogSolution', solution.slug, 'en') });
-    paths.push({ slug: getLocalizedSlug('catalogSolution', solution.slug, 'ro') });
+    paths.push(
+      { slug: getLocalizedSlug('catalogSolution', solution.slug, 'tr') },
+      { slug: getLocalizedSlug('catalogSolution', solution.slug, 'en') },
+      { slug: getLocalizedSlug('catalogSolution', solution.slug, 'ro') },
+    );
   }
   return paths;
 }
@@ -44,9 +46,10 @@ export async function generateMetadata({ params }) {
   if (item.image) {
     ogImage = item.image.startsWith('http') ? item.image : `https://traceability.com.tr${item.image}`;
   }
+  const localizedCatalogPath = toLocalePath(`/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, locale)}`, locale);
 
   const alternates = {
-    canonical: `https://traceability.com.tr${toLocalePath(`/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, locale)}`, locale)}`,
+    canonical: `https://traceability.com.tr${localizedCatalogPath}`,
     languages: {
       'tr': `https://traceability.com.tr/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'tr')}`,
       'en': `https://traceability.com.tr/en/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'en')}`,

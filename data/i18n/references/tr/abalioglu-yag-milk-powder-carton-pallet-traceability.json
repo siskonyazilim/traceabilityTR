@@ -1,0 +1,113 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Gıda",
+  "locationValue": "Niğde",
+  "heroTitleLine1": "Süt Tozu Koli-Palet",
+  "heroTitleLine2": "İzlenebilirliği",
+  "heroSub": "Abalıoğlu Yağ'ın Niğde'deki süt tozu üretim tesisinde devreye alınan proje, koli ve palet düzeyinde izlenebilirlik sağlayarak üretimden sevkiyata tüm ürün hareketlerinin tek platformda standart ve doğrulanabilir biçimde yönetilmesini mümkün kılmaktadır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Süt tozu üretiminde izlenebilir sevkiyat akışı",
+  "contextP1": "Abalıoğlu Yağ'ın Niğde'deki tesisinde süt tozu üretimi yapılmaktadır.",
+  "contextP2": "Proje, üretim ve sevkiyat süreçlerinde koli ve palet bazında izlenebilirlik sağlamak amacıyla hayata geçirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Koli-palet eşlemesinde manuel süreç riski",
+  "problemLede": "Hangi kolinin hangi palete girdiğinin ve bu kolilerin/paletlerin üretimden sevkiyata kadar izlenebilir olması gerekiyordu. Bu ilişkilerin manuel takibi hem izlenebilirlik boşluğu hem de hatalı sevkiyat ve geri izleme (recall) zorluğu riski taşıyordu.",
+  "problemList": [
+    {
+      "bold": "İzlenebilirlik Boşluğu",
+      "text": "Manuel koli-palet takibi, akışta kopuk veri ve düşük süreç şeffaflığına yol açıyordu."
+    },
+    {
+      "bold": "Sevkiyat Doğruluğu Riski",
+      "text": "Yanlış eşleşme ve manuel adımlar, hatalı sevkiyat ile recall zorluğunu artırıyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Koli - Palet - Sevkiyat adımlarının dijital yönetimi",
+  "solutionLede": "Koli-palet izlenebilirlik uygulaması, Abalıoğlu Yağ'ın Niğde tesisindeki üretim ve sevkiyat hatlarında hayata geçirildi. Koliler ve paletler için yapı kurularak hangi kolinin hangi palete yerleştirildiği kayıt altına alındı. Koli - Palet - Sevkiyat adımları tek bir platformda izlenebilir ve yönetilebilir hale getirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Koli Tanımlama",
+      "text": "Üretim hattında oluşturulan koli bilgileri sisteme kaydedilir."
+    },
+    {
+      "no": "02",
+      "title": "Palet Oluşturma",
+      "text": "Koliler ilgili paletlere atanarak ilişkilendirilir."
+    },
+    {
+      "no": "03",
+      "title": "Sevkiyat Hazırlığı",
+      "text": "Palet bazında sevkiyat süreçleri sistem üzerinden yönetilir."
+    },
+    {
+      "no": "04",
+      "title": "İzleme ve Raporlama",
+      "text": "Tüm hareketler OnSuite Trace üzerinden izlenir ve raporlanır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "PLC, C# SCADA ve barkod altyapısı",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha otomasyonunu ve hat akışını yöneten PLC altyapısı."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "Koli-palet süreçlerini ve sevkiyat adımlarını merkezi olarak yöneten SCADA uygulaması."
+    },
+    {
+      "tag": "TANIMA",
+      "title": "Barkod Okuyucular",
+      "text": "Koli ve palet etiketlerinin otomatik okunması ve doğrulanması için kullanılan okuma sistemi."
+    },
+    {
+      "tag": "ENTEGRASYON",
+      "title": "Kodlama ve Etiketleme Cihazları",
+      "text": "Koli kodları ve palet etiketlerinin otomatik basılması ve okunması için entegre cihaz altyapısı."
+    },
+    {
+      "tag": "PLATFORM",
+      "title": "OnSuite Trace",
+      "text": "İzlenebilirlik ve süreç yönetiminin tek platformdan yürütülmesini sağlar."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Netsis ERP entegrasyonu",
+  "integrationDesc": "Sistem, Abalıoğlu Yağ'ın mevcut Netsis ERP sistemiyle entegre çalışmaktadır; izlenebilirlik ve sevkiyat verileri Netsis ile paylaşılarak süreçler tek platform üzerinden yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Netsis ERP",
+      "text": "İzlenebilirlik ve sevkiyat verileri Netsis ERP ile paylaşılır ve süreçler tek noktadan yönetilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Daha güçlü izlenebilirlik ve sevkiyat güvencesi",
+  "resultsGrid": [
+    {
+      "title": "Uçtan Uca İzlenebilirlik",
+      "text": "Üretimden sevkiyata tüm zincir koli ve palet bazında izlenebilir hale geldi."
+    },
+    {
+      "title": "Manuel Takibin Azaltılması",
+      "text": "Koli-palet ilişkileri kayıt altına alınarak manuel takip ihtiyacı ortadan kaldırıldı."
+    },
+    {
+      "title": "Recall ve Doğruluk Artışı",
+      "text": "Geri izleme ve sevkiyat doğruluğu önemli ölçüde güçlendirildi."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

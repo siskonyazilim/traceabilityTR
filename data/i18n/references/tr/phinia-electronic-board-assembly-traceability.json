@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir",
+  "heroTitleLine1": "Elektronik Kart",
+  "heroTitleLine2": "Montaj İzlenebilirliği",
+  "heroSub": "Phinia'nın İzmir ESBAŞ tesisinde uygulanan proje, elektronik kartların montaj hattındaki operasyon adımlarını tekil olarak izleyip kalite sonuçlarıyla ilişkilendirerek süreç sonunda doğru müşteri etiketinin otomatik üretilmesini ve sevkiyat güvenilirliğinin artırılmasını sağlamaktadır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Operasyon bazlı tekil kart takibi",
+  "contextP1": "Phinia'nın İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv sektörüne yönelik üretim yapmaktadır.",
+  "contextP2": "Bu fabrikada hayata geçirilen projede, elektronik kartlar montaj hattındaki tüm operasyonlar boyunca tekil olarak izlenmiş ve süreç sonunda müşteri etiketi basılmıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Kart operasyon geçmişi ve kalite ilişkilendirme ihtiyacı",
+  "problemLede": "Elektronik kartların hangi operasyondan geçtiğinin ve her operasyondaki kalite sonucunun tekil kart bazında izlenebilmesi gerekiyordu. Üretim ilerleyişinin ve kalite durumunun izlenememesi, süreç takibi ve kalite kontrolünü zorlaştırıyor; ayrıca süreç sonunda doğru müşteri etiketinin basıldığının güvence altına alınması gerekiyordu.",
+  "problemList": [
+    {
+      "bold": "Operasyon Geçmişi Takibi",
+      "text": "Kartların istasyon bazlı ilerleyişi tekil seviyede izlenemiyordu."
+    },
+    {
+      "bold": "Kalite-Görev Eşlemesi",
+      "text": "OK-NOK kalite sonuçlarının doğru kartla ilişkilendirilmesi ve etiket doğruluğu güvence altına alınmalıydı."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Kod okuma + kamera kalite + otomatik etiketleme akışı",
+  "solutionLede": "Elektronik kartlar, montaj hattına girişten itibaren tekil olarak tanımlanarak operasyon operasyon izlendi. Her operasyonda kartın durumu kayıt altına alındı; kalite kontrol istasyonlarında kamera sistemleri aracılığıyla OK-NOK (uygun/uygun değil) sonuçları alınarak karta ilişkilendirildi. Sürecin sonunda, izlenebilirlik kayıtlarına uygun olarak müşteri etiketi basıldı. Böylece her elektronik kart, montaj başından etiketleme aşamasına kadar kesintisiz izlenebilir hale getirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Kart Tanımlama",
+      "text": "Elektronik kart üretim hattına girişte tekil olarak tanımlanır."
+    },
+    {
+      "no": "02",
+      "title": "Operasyon Takibi",
+      "text": "Kartın geçtiği her istasyon ve operasyon kayıt altına alınır."
+    },
+    {
+      "no": "03",
+      "title": "Kalite Kontrol",
+      "text": "Kamera sistemlerinden alınan OK–NOK sonuçları ilgili kartla ilişkilendirilir."
+    },
+    {
+      "no": "04",
+      "title": "Etiketleme",
+      "text": "İzlenebilirlik kayıtlarına uygun müşteri etiketi otomatik olarak oluşturulur."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "Kod okuyucular, kamera sistemleri, PLC ve C# SCADA",
+  "techGrid": [
+    {
+      "tag": "TANIMA",
+      "title": "Kod Okuyucular",
+      "text": "Kartları operasyon bazında tanımlayan barkod/kod okuma altyapısı."
+    },
+    {
+      "tag": "KALİTE",
+      "title": "Kamera Sistemleri",
+      "text": "İstasyonlarda kalite kontrol için OK-NOK sonuçlarını üreten görüntü işleme altyapısı."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha akışını ve istasyon geçişlerini yöneten kontrol sistemi."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA",
+      "text": "Operasyon takibi, kalite ilişkilendirme, müşteri etiketi basımı ve Oracle veri akışını yöneten merkezi uygulama."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Oracle entegrasyonu",
+  "integrationDesc": "Sistem Oracle ile entegre çalışmaktadır; kartların operasyon bazlı izlenebilirlik ve kalite (OK-NOK) verileri ile etiketleme sonuçları Oracle ile paylaşılarak süreç merkezi olarak izlenmekte ve yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Oracle",
+      "text": "Operasyon, kalite ve etiketleme verileri Oracle ile entegre şekilde yönetilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Kesintisiz kart izlenebilirliği ve kalite güvencesi",
+  "resultsGrid": [
+    {
+      "title": "Tekil Operasyon İzleme",
+      "text": "Her elektronik kart için montaj başından itibaren operasyon bazlı izlenebilirlik sağlandı."
+    },
+    {
+      "title": "Kalite Kontrol İzlenebilirliği",
+      "text": "Kamera sistemlerinden gelen OK-NOK sonuçları kart bazında ilişkilendirilerek kalite takibi güçlendirildi."
+    },
+    {
+      "title": "Etiket Doğruluğu",
+      "text": "Süreç sonunda doğru müşteri etiketinin basılmasıyla sevkiyat doğruluğu güvence altına alındı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

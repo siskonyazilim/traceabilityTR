@@ -1,0 +1,118 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Gıda",
+  "locationValue": "Ankara",
+  "heroTitleLine1": "Koli Palet Sevkiyat",
+  "heroTitleLine2": "İzlenebilirliği",
+  "heroSub": "Nuh'un Ankara'daki üretim tesisinde devreye alınan proje, koli ve palet bazında izlenebilirlik sağlayarak fabrika, dış depolar ve müşteriler arasındaki ürün hareketlerinin tek platformda anlık ve doğrulanabilir biçimde takip edilmesini sağlamaktadır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Üretimden sevkiyata tam zincir görünürlüğü",
+  "contextP1": "Nuh'un Ankara'nın Ankara'daki fabrikası gıda üretimi yapmaktadır.",
+  "contextP2": "Proje, fabrikadaki üretim ve sevkiyat süreçlerinde koli ve palet bazında izlenebilirlik sağlamak; ayrıca dış depolar dahil olmak üzere ürünlerin lokasyonlar arası hareketini takip etmek amacıyla hayata geçirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Koli-palet ilişkilerinde manuel takip riski",
+  "problemLede": "Hangi kolinin hangi palete girdiğinin ve bu kolilerin/paletlerin fabrika ile dış depolar ve müşteriler arasındaki hareketinin izlenebilir olması gerekiyordu. Bu ilişkilerin ve dış depo transferlerinin manuel takibi hem izlenebilirlik boşluğu hem de hatalı sevkiyat ve geri izleme (recall) zorluğu riski taşıyordu.",
+  "problemList": [
+    {
+      "bold": "İzlenebilirlik Boşluğu",
+      "text": "Koli-palet ilişkilerinin manuel takibi, zincirde veri kaybı ve görünürlük eksikliği oluşturuyordu."
+    },
+    {
+      "bold": "Sevkiyat ve Recall Riski",
+      "text": "Dış depo transferlerinde yanlış eşleşme riski, hatalı sevkiyat ve geri izleme süreçlerini zorlaştırıyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Koli - Palet - Depo - Müşteri akışının tek platformda yönetimi",
+  "solutionLede": "Koli-palet izlenebilirlik uygulaması, Nuh'un Ankara'nın Ankara fabrikasındaki üretim ve sevkiyat hatlarında hayata geçirildi. Koliler ve paletler için yapı kurularak hangi kolinin hangi palete yerleştirildiği kayıt altına alındı. Farklı konumlar arasındaki depo transferleri (dış depolar dahil) ve müşterilere yapılan transferler, el terminali uygulaması kullanılarak kaydedildi. Koli - Palet - Depo - Müşteri adımları tek bir platformda izlenebilir ve yönetilebilir hale getirildi.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Koli Tanımlama",
+      "text": "Üretim hattında oluşan koliler sistem üzerinde tekil olarak tanımlanır."
+    },
+    {
+      "no": "02",
+      "title": "Palet Eşleştirme",
+      "text": "Koliler ilgili paletlerle ilişkilendirilerek kayıt altına alınır."
+    },
+    {
+      "no": "03",
+      "title": "Transfer İşlemi",
+      "text": "Depolar ve müşteriler arasındaki ürün hareketleri el terminali ile kaydedilir."
+    },
+    {
+      "no": "04",
+      "title": "İzleme ve Raporlama",
+      "text": "Tüm hareketler OnSuite Trace üzerinden izlenir ve raporlanır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "PLC, C# SCADA, barkod ve el terminali altyapısı",
+  "techGrid": [
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Yapısı",
+      "text": "Saha otomasyonunu ve üretim-sevkiyat akışını yöneten PLC altyapısı."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "Koli-palet akışını, transferleri ve süreç verilerini merkezi olarak yöneten SCADA yazılımı."
+    },
+    {
+      "tag": "TANIMA",
+      "title": "Barkod Okuyucular",
+      "text": "Koli ve palet etiketlerini okuyarak ilişki doğrulamasını sağlayan otomatik tanıma altyapısı."
+    },
+    {
+      "tag": "MOBİL",
+      "title": "El Terminali Uygulaması",
+      "text": "Dış depo ve müşteri transferlerinin sahada anlık kaydedilmesini sağlayan mobil uygulama."
+    },
+    {
+      "tag": "ENTEGRASYON",
+      "title": "Kodlama ve Etiketleme Cihazları",
+      "text": "Koli kodları ve palet etiketlerinin süreç içinde otomatik basılması ve okunması için cihaz entegrasyonu."
+    },
+    {
+      "tag": "PLATFORM",
+      "title": "OnSuite Trace",
+      "text": "İzlenebilirlik ve süreç yönetiminin tek platformda yürütüldüğü yapı."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Netsis ERP entegrasyonu",
+  "integrationDesc": "Sistem, Nuh'un Ankara'nın mevcut Netsis ERP sistemiyle entegre çalışmaktadır; izlenebilirlik ve transfer verileri Netsis ile paylaşılarak süreçler tek platform üzerinden yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Netsis ERP",
+      "text": "İzlenebilirlik ve transfer verileri Netsis ile çift yönlü paylaşılır, süreçler merkezi yönetilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Uçtan uca izlenebilirlik ve yüksek sevkiyat doğruluğu",
+  "resultsGrid": [
+    {
+      "title": "Uçtan Uca Zincir Takibi",
+      "text": "Üretimden müşteriye kadar tüm zincir koli ve palet bazında tek platformda izlenebilir hale geldi."
+    },
+    {
+      "title": "Manuel Takibin Kaldırılması",
+      "text": "Koli-palet ilişkileri ve dış depolar dahil tüm transfer hareketleri kayıt altına alınarak manuel takip ortadan kaldırıldı."
+    },
+    {
+      "title": "Recall ve Sevkiyat Güvencesi",
+      "text": "Geri izleme süreçleri hızlandı, sevkiyat doğruluğu güçlendirildi."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

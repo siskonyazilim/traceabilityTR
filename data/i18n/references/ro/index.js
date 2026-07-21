@@ -35,8 +35,13 @@ import ref_32 from './delphi-prototype-line-traceability.json';
 import ref_33 from './delphi-technologies.json';
 import ref_34 from './delphi-monitorizare-individuala-rampa-injectie.json';
 import ref_35 from './stackpole-traceability.json';
+import ref_36 from './nuhun-ankara-carton-pallet-shipment-traceability.json';
+import ref_37 from './abalioglu-yag-milk-powder-carton-pallet-traceability.json';
+import ref_38 from './turk-tuborg-keg-ocr-traceability.json';
+import ref_39 from './phinia-datamatrix-quality-grading-station.json';
+import ref_40 from './phinia-electronic-board-assembly-traceability.json';
 
-const roDetails = {
+const trDetails = {
   'phinia-laser-marking-machine-traceability-integration': ref_0,
   'duru-bulgur-product-carton-pallet-traceability': ref_1,
   'bsh-carriers-traceability': ref_2,
@@ -73,6 +78,11 @@ const roDetails = {
   'delphi-technologies': ref_33,
   'delphi-monitorizare-individuala-rampa-injectie': ref_34,
   'stackpole-traceability': ref_35,
+  'nuhun-ankara-carton-pallet-shipment-traceability': ref_36,
+'abalioglu-yag-milk-powder-carton-pallet-traceability': ref_37,
+'turk-tuborg-keg-ocr-traceability': ref_38,
+'phinia-datamatrix-quality-grading-station': ref_39,
+'phinia-electronic-board-assembly-traceability': ref_40,
 };
 
-export default roDetails;
+export default trDetails;

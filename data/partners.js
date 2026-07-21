@@ -6,7 +6,7 @@ export const strategicPartners = [
     detailLogo: "/Logos/sick-logo.svg",
     slug: "sick",
     breadcrumbLabel: "SICK",
-    description: "Lider global în tehnologii de senzori și automatizare industrială.",
+    description: "Oferă operațiuni sigure, eficiente și trasabile în procesele de producție și logistică prin senzori industriali, sisteme de procesare a imaginilor și tehnologii de identificare automată.",
     website: "https://www.sick.com",
     storySlides: [
       {
@@ -16,7 +16,7 @@ export const strategicPartners = [
         image: "/images/partner/S%C4%B1ck/SICK-1300x867.jpg",
       },
     ],
-    fullDescription: "Inteligența senzorilor, independența, inovația și leadershipul sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre trecut și viitor. Idealul dumneavoastră își găsește locul în mijlocul zilei de ieri și de astăzi. Aceasta include putere, dorință, cerere și viziune. Aici se construiește o cultură corporativă prosperă și se preconizează un design de viitor care inspiră responsabilitate și motivație.\n\nÎn conformitate cu idealurile sale corporative, SICK își bazează operațiunile interne pe valorile de bază ale independenței, inovației și leadershipului. Acest lucru este demonstrat de angajamentul companiei de a si menține independența juridică și financiară, de a gândi și de a acționa în mod durabil și de a si asuma responsabilitatea socială adecvată. Succesul SICK se bazează pe încrederea acordată de clienții, furnizorii, angajații și publicul nostru și acest lucru ar trebui să rămână același și în viitor.",
+    fullDescription: "SICK dezvoltă și produce senzori industriali, sisteme de siguranță, produse de procesare a imaginilor și tehnologii de identificare automată utilizate în procesele de producție și logistică. Portofoliul său include senzori de distanță și poziție, scanere de siguranță, camere industriale, cititoare de coduri de bare și sisteme RFID.\n\nTehnologiile SICK sunt utilizate pentru detectarea, măsurarea, monitorizarea și identificarea automată a produselor și materialelor. Aceste soluții permit controlul calității, citirea codurilor, verificarea produselor, siguranța mașinilor și aplicații complete de trasabilitate în liniile de producție.",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const strategicPartners = [
     detailLogo: "/Logos/universal-robots-logo.svg",
     slug: "universal-robots",
     breadcrumbLabel: "UNIVERSAL ROBOTS",
-    description: "Automatizarea accesibilă, colaborarea om robot și inovarea de pionierat sunt mesajele de bază ale identității noastre.",
+    description: "Oferă soluții flexibile de automatizare prin tehnologii de roboți colaborativi, crescând productivitatea și asigurând o colaborare sigură între oameni și roboți.",
     website: "https://www.universalrobots.com",
     storySlides: [
       {
@@ -35,7 +35,7 @@ export const strategicPartners = [
         image: "/images/partner/UniversalRobots/11_2022_All4Pack%2007.jpg",
       },
     ],
-    fullDescription: "Automatizarea accesibilă, colaborarea om robot și inovarea de pionierat sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre ingeniozitatea umană și precizia robotică. Viziunea dumneavoastră operațională își găsește locul în mijlocul unei lumi în care oamenii lucrează cu roboți, nu ca roboții. Aceasta include încrederea, agilitatea, autonomizarea tehnologică și un design orientat spre viitor. Aici se construiește o cultură de colaborare înfloritoare și se preconizează un viitor al locului de muncă ce inspiră o motivație profundă și transformare industrială.\n\nÎn conformitate cu idealurile sale corporative, Universal Robots își bazează operațiunile globale pe valorile fundamentale de accesibilitate, impact durabil și un leadership care modelează piața. Acest lucru este demonstrat de angajamentul companiei de a si menține poziția de lider mondial în pionieratul coboților, de a promova un mediu orientat spre viitor în cadrul operațiunilor sale globale și de a si asuma o responsabilitate socială și etică profundă. Succesul Universal Robots se bazează pe încrederea acordată de industrii, partenerii de automatizare și forța de muncă globală  iar această încredere va continua să modeleze viitorul muncii cu o încredere absolută.",
+    fullDescription: "Universal Robots dezvoltă și produce roboți colaborativi, cunoscuți sub denumirea de coboți, care sunt proiectați să lucreze alături de operatori în mediile de producție. Brațele robotice cu diferite capacități de încărcare și raze de acțiune pot fi combinate cu diverse echipamente și soluții software pentru a se adapta unei game largi de operațiuni industriale.\n\nCoboții Universal Robots sunt utilizați în activități repetitive sau solicitante din punct de vedere ergonomic, precum alimentarea mașinilor, asamblarea, sudura, manipularea materialelor, ambalarea, paletizarea și controlul calității. Datorită flexibilității lor, aceștia pot fi reprogramați pentru diferite produse și scenarii de producție și integrați cu ușurință în mediile existente.",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ export const strategicPartners = [
     detailLogo: "/Logos/markem-imaje-logo.svg",
     slug: "markem-imaje",
     breadcrumbLabel: "Proiectul A.Ş.",
-    description: "Inteligența produselor, integritatea lanțului de aprovizionare și protecția mărcii sunt mesajele de bază ale identității noastre.",
+    description: "Sprijină identificarea corectă a produselor, verificarea acestora și gestionarea proceselor de trasabilitate prin soluții industriale de codare și marcare.",
     website: "https://www.markem-imaje.com",
     storySlides: [
       {
@@ -54,7 +54,7 @@ export const strategicPartners = [
         image: "/images/partner/MarkemImaje/implementing-gs1-digital-link-2d-codes-g2026-01702-size1200x400-50.jpg",
       },
     ],
-    fullDescription: "Inteligența produselor, integritatea lanțului de aprovizionare și protecția mărcii sunt mesajele de bază ale identității noastre. Identitatea se manifestă la intersecția dintre excelența operațională și încrederea consumatorilor. Viziunea dumneavoastră își găsește locul în mijlocul unor lanțuri de aprovizionare urmărite fără probleme și al unor linii de producție optimizate. Aceasta include eficiența, conformitatea cu reglementările, atenuarea riscurilor și conectivitatea globală. Aici se construiește o inteligență futuristă a ambalajelor și se preconizează un ecosistem interconectat care inspiră siguranță absolută și loialitate față de marcă.\n\nÎn conformitate cu idealurile sale de pionierat, Markem Imaje își bazează operațiunile industriale pe valorile fundamentale de conectare, protecție și inovare de ultimă generație. Acest lucru este demonstrat de angajamentul companiei de a debloca puterea inteligenței din cadrul fiecărui cod, de a reduce amprenta de carbon prin consumabile ecologice și de a asigura un timp de funcționare neîntrerupt pentru producătorii din întreaga lume. Succesul Markem Imaje se bazează pe încrederea acordată de partenerii globali, producătorii locali și industriile care mișcă lumea iar această moștenire va transporta mărcile în siguranță în viitor.",
+    fullDescription: "Markem-Imaje dezvoltă sisteme industriale de codare, marcare și imprimare pentru identificarea produselor și ambalajelor pe liniile de producție. Portofoliul său include imprimante inkjet, sisteme de marcare cu laser, imprimante cu transfer termic, soluții de etichetare și software pentru gestionarea proceselor de codare.\n\nAceste sisteme permit aplicarea datelor de fabricație, termenelor de valabilitate, numerelor de lot, numerelor de serie, codurilor de bare și codurilor 2D pe diverse suprafețe ale produselor și ambalajelor. Împreună cu software-ul de codare, acestea sprijină imprimarea corectă a codurilor, verificarea lor și asocierea cu datele de trasabilitate ale produselor.",
   },
   {
     id: 4,
@@ -63,14 +63,14 @@ export const strategicPartners = [
     detailLogo: "/Logos/Interroll.svg",
     slug: "interroll",
     breadcrumbLabel: "INTERROLL",
-    description: "Eficiența fluxului de materiale, conectivitatea globală și mișcarea durabilă sunt mesajele de bază ale identității noastre.",
+    description: "Optimizează deplasarea produselor în interiorul facilităților prin sisteme de logistică internă și manipulare a materialelor, oferind soluții eficiente și sustenabile pentru fluxul de materiale.",
     website: "https://www.interroll.com",
     storySlides: [
       {
         image: "/images/partner/Interroll/headquarter.png",
       },
     ],
-    fullDescription: "Eficiența fluxului de materiale, conectivitatea globală și mișcarea durabilă sunt mesajele de bază ale identității noastre. Identitatea se manifestă în nucleul intralogisticii avansate și al automatizării transparente. Obiectivele dumneavoastră operaționale își găsesc locul în mijlocul unor lanțuri de aprovizionare sincronizate cu precizie și al unei manipulări de înaltă performanță a materialelor. Aceasta include puterea, viteza, optimizarea resurselor și fiabilitatea fără compromisuri. Aici se construiește o cultură corporativă înfloritoare și se preconizează un design logistic intern pregătit pentru viitor, care inspiră mișcare continuă și productivitate.\n\nÎn conformitate cu idealurile sale corporative, Interroll își bazează operațiunile globale pe valorile fundamentale de inovare bazată pe platforme, independență strategică și leadership de clasă mondială. Acest lucru este demonstrat de angajamentul companiei de a si menține o puternică independență financiară prin integritatea pieței bursiere globale, de a gândi și acționa cu o mentalitate eco eficientă și de a si asuma o responsabilitate profundă pentru cele mai importante lanțuri de aprovizionare din lume. Succesul Interroll se bazează pe încrederea acordată de integratorii de sisteme globali, OEM și public iar această fundație puternică va continua să mențină viitorul în mișcare.",
+    fullDescription: "Interroll dezvoltă și produce role pentru transportoare, sisteme de acționare și motoare, module de transport, sisteme de sortare și soluții pentru manipularea paleților și coletelor destinate mișcării materialelor în producție, depozitare și distribuție.\n\nProdusele Interroll sunt utilizate pentru transportul, acumularea, direcționarea, sortarea și depozitarea cutiilor, paleților, pachetelor și altor materiale în interiorul facilităților. Designul lor modular permite adaptarea la o gamă largă de aplicații logistice interne, de la liniile de producție până la depozite și centre de distribuție.",
   },
   {
     id: 5,
@@ -79,10 +79,10 @@ export const strategicPartners = [
     detailLogo: "/Logos/Beckhoff_red.svg",
     slug: "beckhoff",
     breadcrumbLabel: "BECKHOFF",
-    description: "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC.",
+    description: "Permite gestionarea flexibilă și eficientă a sistemelor de mașini, robotică și producție prin tehnologii de control bazate pe PC și soluții de automatizare deschisă.",
     website: "https://www.beckhoff.com",
     storySlides: [],
-    fullDescription: "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC. Gama de produse constă în PC-uri industriale, componente I/O și Fieldbus, tehnologie de acționare și software de automatizare. Pentru toate industriile, există produse care pot fi utilizate ca și componente individuale sau pentru a crea de la zero un sistem de control complet și fără întreruperi. Filosofia Beckhoff privind \"Noua Tehnologie de Automatizare\" reprezintă soluții de control și automatizare universale și deschise, utilizate într-o varietate de aplicații la nivel mondial, variind de la mașini-unelte controlate prin CNC până la automatizarea inteligentă a clădirilor.",
+    fullDescription: "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC. Gama de produse constă în PC-uri industriale, componente I/O și Fieldbus, tehnologie de acționare și software de automatizare. Pentru toate industriile, există produse care pot fi utilizate ca și componente individuale sau pentru a crea de la zero un sistem de control complet și fără întreruperi.\n\n Filosofia Beckhoff privind \"Noua Tehnologie de Automatizare\" reprezintă soluții de control și automatizare universale și deschise, utilizate într-o varietate de aplicații la nivel mondial, variind de la mașini-unelte controlate prin CNC până la automatizarea inteligentă a clădirilor.",
   },
   {
     id: 6,
@@ -91,7 +91,7 @@ export const strategicPartners = [
     detailLogo: "/Logos/sewio-logo.svg",
     slug: "sewio",
     breadcrumbLabel: "SEWIO",
-    description: "Vizibilitatea în timp real, inteligența spațială, inovarea și transformarea digitală sunt mesajele de bază ale identității noastre.",
+    description: "Monitorizează mișcarea activelor prin tehnologii de localizare în timp real bazate pe UWB, oferind vizibilitate și eficiență operațională în procesele de logistică internă.",
     website: "https://www.sewio.net",
     storySlides: [
       {
@@ -101,6 +101,6 @@ export const strategicPartners = [
         image: "/images/partner/Sewio/Sewio-Networks3-1300x867.jpg",
       },
     ],
-    fullDescription: "Vizibilitatea în timp real, inteligența spațială, inovarea și transformarea digitală sunt mesajele de bază ale identității noastre. Identitatea se manifestă la interfața dintre spațiile fizice de producție și viitorul bazat pe date. Perfecțiunea dumneavoastră operațională își găsește locul în mijlocul siguranței fără compromisuri și al eficienței maxime. Aceasta include precizia, scalabilitatea, puterea tehnologică și o viziune orientată spre viitor. Aici se construiește o cultură industrială IoT înfloritoare și se preconizează un design al viitorului care inspiră o acuratețe absolută a urmăririi și o optimizare proactivă.\n\nÎn conformitate cu idealurile sale de pionierat, Sewio își bazează operațiunile tehnologice pe valorile fundamentale de independență arhitecturală, inovare orientată către client și leadership pe piață. Acest lucru este demonstrat de angajamentul companiei de a si menține poziția de furnizor suprem de RTLS bazat pe UWB, transformând milioane de metri pătrați în spații hiper eficiente și asumându si o responsabilitate profundă pentru siguranța industrială. Succesul Sewio se bazează pe încrederea acordată de partenerii globali, companiile din topul Fortune 500 și integratorii de sisteme din întreaga lume iar această încredere va ghida în siguranță industria în era fabricilor inteligente.",
+    fullDescription: "Sewio dezvoltă sisteme de localizare în timp real bazate pe tehnologia UWB, utilizate în producție și logistică. Soluția este compusă din etichete de urmărire, infrastructură de poziționare și software RTLS, permițând monitorizarea produselor, semifabricatelor, echipamentelor, vehiculelor și, la nevoie, a personalului în cadrul unei facilități.\n\nSistemul înregistrează nu doar poziția în timp real a activelor, ci și istoricul deplasărilor, traseele parcurse și timpul petrecut în anumite zone. Aceste date sunt utilizate pentru optimizarea fluxurilor de materiale, reducerea timpilor de căutare și a pierderilor, sprijinirea siguranței la locul de muncă și creșterea vizibilității proceselor logistice interne.",
   },
 ];

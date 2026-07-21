@@ -1,0 +1,115 @@
+{
+  "backToProjects": "Înapoi la Proiectele de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria Alimentară",
+  "locationValue": "Ankara",
+  "heroTitleLine1": "Trasabilitate completă",
+  "heroTitleLine2": "pentru cutii și paleți.",
+  "heroSub": "Proiectul implementat în fabrica Nuh'un Ankara din Ankara oferă trasabilitate la nivel de cutie și palet și permite monitorizarea tuturor mișcărilor de produse între fabrică, depozitele externe și clienți.",
+
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Flux logistic trasabil de la producție la client",
+  "contextP1": "Nuh'un Ankara operează o unitate de producție alimentară în Ankara. Proiectul a fost implementat pentru asigurarea trasabilității la nivel de cutie și palet în procesele de producție și expediere.",
+  "contextP2": "Sistemul permite înregistrarea și monitorizarea tuturor mișcărilor de produse dintre fabrică, depozite externe și clienți pe o singură platformă.",
+
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Urmărirea relațiilor cutie–palet și a transferurilor",
+  "problemLede": "Era necesară identificarea fiecărei cutii pe paletul corespunzător și urmărirea deplasărilor în întregul lanț logistic. Procesele manuale creau lipsuri de trasabilitate și dificultăți în procesele de recall.",
+  "problemList": [
+    {
+      "bold": "Lipsă de Trasabilitate",
+      "text": "Monitorizarea manuală a relațiilor dintre cutii și paleți genera riscuri privind acuratețea datelor."
+    },
+    {
+      "bold": "Vizibilitate Limitată asupra Transferurilor",
+      "text": "Transferurile către depozite externe și clienți nu puteau fi urmărite centralizat."
+    }
+  ],
+
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Digitalizarea fluxului cutie–palet–depozit–client",
+  "solutionLede": "Soluția de trasabilitate implementată pe liniile de producție și expediere înregistrează automat relațiile dintre cutii și paleți, iar transferurile sunt gestionate prin terminale mobile.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Identificarea Cutiei",
+      "text": "Fiecare cutie este identificată și înregistrată unic în sistem."
+    },
+    {
+      "no": "02",
+      "title": "Asocierea cu Paletul",
+      "text": "Cutiile sunt asociate paleților corespunzători și înregistrate."
+    },
+    {
+      "no": "03",
+      "title": "Înregistrarea Transferurilor",
+      "text": "Transferurile către depozite și clienți sunt înregistrate prin terminale mobile."
+    },
+    {
+      "no": "04",
+      "title": "Monitorizare și Raportare",
+      "text": "Toate mișcările sunt urmărite și raportate prin platforma OnSuite Trace."
+    }
+  ],
+
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "PLC, SCADA și aplicații mobile",
+  "techGrid": [
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Infrastructură PLC",
+      "text": "Sistem PLC industrial care gestionează procesele și automatizarea din teren."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA C#",
+      "text": "Platformă centrală pentru gestionarea trasabilității și expedițiilor."
+    },
+    {
+      "tag": "IDENTIFICARE",
+      "title": "Cititoare de Coduri de Bare",
+      "text": "Echipamente utilizate pentru validarea și identificarea cutiilor și paleților."
+    },
+    {
+      "tag": "MOBIL",
+      "title": "Aplicație Terminal Mobil",
+      "text": "Permite înregistrarea transferurilor direct din teren."
+    }
+  ],
+
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare cu Netsis ERP",
+  "integrationDesc": "Datele de trasabilitate și expediție sunt schimbate cu Netsis ERP pentru administrare centralizată.",
+  "integrationList": [
+    {
+      "bold": "Netsis ERP",
+      "text": "Datele de transfer și trasabilitate sunt sincronizate cu sistemul ERP Netsis."
+    }
+  ],
+
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Vizibilitate completă și trasabilitate consolidată",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate End-to-End",
+      "text": "Toate mișcările produselor sunt urmărite de la producție până la client."
+    },
+    {
+      "title": "Management Digital al Transferurilor",
+      "text": "Transferurile sunt înregistrate și gestionate centralizat."
+    },
+    {
+      "title": "Precizie Mai Mare în Livrare",
+      "text": "Procesele de recall sunt accelerate, iar acuratețea expedițiilor este îmbunătățită."
+    }
+  ],
+
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să vă transformați procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta implementarea unei soluții similare în compania dumneavoastră.",
+  "ctaPrimary": "Contactați-ne"
+}

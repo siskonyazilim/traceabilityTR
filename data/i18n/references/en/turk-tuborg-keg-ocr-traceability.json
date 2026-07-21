@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Food & Beverage",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Unique keg tracking with",
+  "heroTitleLine2": "reliable pallet matching.",
+  "heroSub": "The project implemented at Türk Tuborg's production facility in Izmir enables reliable identification of each keg through barcode and OCR technologies, ensuring accurate pallet association and pallet-level traceability.",
+
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Individual traceability for beverage kegs",
+  "contextP1": "Türk Tuborg's production facility in Izmir manufactures alcoholic beverages using reusable kegs, each with a unique identifier.",
+  "contextP2": "The project was implemented to reliably identify every keg and associate it with the correct pallet before shipment.",
+
+  "problemEyebrow": "Need / Challenge",
+  "problemTitle": "Unreadable IDs and pallet matching risks",
+  "problemLede": "Unique keg IDs could not always be captured through conventional barcode reading methods. An alternative solution was required to prevent production interruptions and ensure accurate keg-to-pallet association.",
+  "problemList": [
+    {
+      "bold": "Reading Failures",
+      "text": "Damaged or low-quality codes could not always be identified through standard barcode readers."
+    },
+    {
+      "bold": "Incorrect Associations",
+      "text": "Incorrect pallet assignments could negatively impact shipment accuracy and traceability."
+    }
+  ],
+
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "OCR-supported keg and pallet verification",
+  "solutionLede": "A C# application receives production orders from SAP and guides the operator. Each keg ID is first read using conventional code reading technology. If this fails, OCR technology is used to identify the code. Verified keg IDs are then associated with pallets and pallet labels are automatically generated.",
+
+  "steps": [
+    {
+      "no": "01",
+      "title": "Work Order Selection",
+      "text": "The operator selects the appropriate production order received from SAP."
+    },
+    {
+      "no": "02",
+      "title": "Barcode Reading",
+      "text": "The system attempts to read the unique keg identifier using conventional code reading."
+    },
+    {
+      "no": "03",
+      "title": "OCR Verification",
+      "text": "If barcode reading fails, OCR technology is used to identify the keg ID."
+    },
+    {
+      "no": "04",
+      "title": "Pallet Association",
+      "text": "Verified keg IDs are linked to pallets and pallet labels are printed automatically."
+    }
+  ],
+
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "OCR, vision technology and SAP integration",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "C# Application",
+      "text": "Central software managing work orders and pallet association processes."
+    },
+    {
+      "tag": "VISION",
+      "title": "OCR Camera System",
+      "text": "Reads keg identifiers when conventional barcode reading is unsuccessful."
+    },
+    {
+      "tag": "IDENTIFICATION",
+      "title": "Code Reading Infrastructure",
+      "text": "Automatically captures keg identifiers during production operations."
+    },
+    {
+      "tag": "LABELING",
+      "title": "Pallet Labeling System",
+      "text": "Generates pallet labels based on verified keg information."
+    }
+  ],
+
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "SAP integration",
+  "integrationDesc": "Production orders are received from SAP and palletization results are shared back with the ERP system.",
+  "integrationList": [
+    {
+      "bold": "SAP",
+      "text": "Production order management and palletization records are integrated with SAP."
+    }
+  ],
+
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Higher reading reliability and shipment accuracy",
+  "resultsGrid": [
+    {
+      "title": "OCR-Assisted Identification",
+      "text": "Production continuity is maintained by using OCR whenever barcode reading fails."
+    },
+    {
+      "title": "Unique Product Traceability",
+      "text": "Each keg is tracked individually through its unique identifier."
+    },
+    {
+      "title": "Accurate Palletization",
+      "text": "Validated keg-to-pallet associations help prevent shipping errors."
+    }
+  ],
+
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to transform your production processes?",
+  "ctaSubtitle": "Contact us to discuss how a similar solution can be implemented in your operations.",
+  "ctaPrimary": "Contact Us"
+}

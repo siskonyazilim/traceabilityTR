@@ -1,0 +1,117 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Measurable quality assurance",
+  "heroTitleLine2": "for DataMatrix codes.",
+  "heroSub": "The project implemented at Phinia's manufacturing facility in the Izmir ESBAŞ Free Zone measures and grades the print quality of DataMatrix codes according to international standards, ensuring reliable readability.",
+
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Ensuring DataMatrix code quality",
+  "contextP1": "At Phinia's automotive manufacturing plant located in the Izmir ESBAŞ Free Zone, ensuring that DataMatrix codes remain readable under all conditions was a critical requirement.",
+  "contextP2": "To achieve this, a dedicated quality control station was implemented to evaluate and grade DataMatrix code print quality according to international standards.",
+
+  "problemEyebrow": "Need / Challenge",
+  "problemTitle": "Unreadable DataMatrix codes and quality risks",
+  "problemLede": "Simply having readable DataMatrix codes was not sufficient. The codes needed to meet international quality standards and remain reliably readable throughout the product lifecycle.",
+  "problemList": [
+    {
+      "bold": "Code Readability",
+      "text": "Poor print quality could result in codes becoming unreadable for end users."
+    },
+    {
+      "bold": "Lack of Objective Quality Measurement",
+      "text": "There was no standardized system to evaluate and grade code quality."
+    }
+  ],
+
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Automated quality verification with a DM grading station",
+  "solutionLede": "The implemented DM grading station analyzes DataMatrix codes according to international grading standards, determines quality scores, and generates detailed reports. As a result, low-quality codes can be identified and eliminated before leaving production.",
+
+  "steps": [
+    {
+      "no": "01",
+      "title": "Product Positioning",
+      "text": "The product is positioned at the inspection point using a servo-controlled system."
+    },
+    {
+      "no": "02",
+      "title": "Code Inspection",
+      "text": "The DM grading camera captures and analyzes the DataMatrix code."
+    },
+    {
+      "no": "03",
+      "title": "Quality Grading",
+      "text": "The code is evaluated and graded according to international standards."
+    },
+    {
+      "no": "04",
+      "title": "Reporting",
+      "text": "Measurement results are recorded and quality reports are generated."
+    }
+  ],
+
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "DM Grading Camera, Servo System and SCADA",
+  "techGrid": [
+    {
+      "tag": "VISION",
+      "title": "DM Grading Camera",
+      "text": "Industrial camera system that evaluates DataMatrix print quality according to international grading standards."
+    },
+    {
+      "tag": "MOTION CONTROL",
+      "title": "3-Axis Servo System",
+      "text": "Precisely positions the product or camera for inspection."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Control System",
+      "text": "Manages field devices and inspection workflows."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Evaluates measurement results, generates reports, and exchanges data with Oracle."
+    }
+  ],
+
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Oracle Integration",
+  "integrationDesc": "DataMatrix quality measurement results and reports are shared with Oracle, enabling centralized quality management.",
+  "integrationList": [
+    {
+      "bold": "Oracle",
+      "text": "DM grading results and quality reports are integrated with Oracle systems."
+    }
+  ],
+
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Improved readability and quality assurance",
+  "resultsGrid": [
+    {
+      "title": "Standards-Based Quality Measurement",
+      "text": "DataMatrix codes are objectively evaluated according to international quality standards."
+    },
+    {
+      "title": "Early Defect Detection",
+      "text": "Low-quality printed codes are identified before products reach customers."
+    },
+    {
+      "title": "Quality Reporting",
+      "text": "All inspection results are recorded, creating complete quality traceability."
+    }
+  ],
+
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to transform your production processes?",
+  "ctaSubtitle": "Contact us to discuss how a similar solution can be implemented in your operations.",
+  "ctaPrimary": "Contact Us"
+}
+`

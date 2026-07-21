@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Operation-level traceability",
+  "heroTitleLine2": "for electronic boards.",
+  "heroSub": "The project implemented at Phinia's manufacturing facility in the Izmir ESBAŞ Free Zone provides individual tracking of electronic boards throughout all assembly operations, associates quality results with each unit, and automatically generates customer labels at the end of the process.",
+
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "End-to-end traceability in electronic board production",
+  "contextP1": "Electronic boards manufactured at Phinia's automotive production facility in the Izmir ESBAŞ Free Zone pass through multiple assembly and quality control operations.",
+  "contextP2": "The project was implemented to provide complete traceability of each board's production history and quality results at an individual product level.",
+
+  "problemEyebrow": "Need / Challenge",
+  "problemTitle": "Tracking operations and quality data for each board",
+  "problemLede": "It was necessary to monitor which stations each electronic board passed through and record quality results at every operation. In addition, ensuring the correct customer label was applied at the end of the process was a critical requirement.",
+  "problemList": [
+    {
+      "bold": "Limited Operational Visibility",
+      "text": "The complete operation history of each board could not be easily traced across the production line."
+    },
+    {
+      "bold": "Quality Data Association",
+      "text": "Associating OK–NOK inspection results with individual products was difficult using manual processes."
+    }
+  ],
+
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Board-level operation and quality tracking",
+  "solutionLede": "Electronic boards are individually identified and tracked from the beginning of the assembly process. Status updates from each operation and OK–NOK quality results from vision inspection stations are associated with the corresponding board. Customer labels are automatically generated at the end of production.",
+
+  "steps": [
+    {
+      "no": "01",
+      "title": "Board Identification",
+      "text": "Each electronic board receives a unique identity when entering the production line."
+    },
+    {
+      "no": "02",
+      "title": "Operation Tracking",
+      "text": "Every station and production operation is recorded throughout the process."
+    },
+    {
+      "no": "03",
+      "title": "Quality Verification",
+      "text": "OK–NOK results from camera inspection systems are linked to the relevant board."
+    },
+    {
+      "no": "04",
+      "title": "Label Generation",
+      "text": "Customer labels are automatically generated based on traceability records."
+    }
+  ],
+
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "Code readers, machine vision and SCADA infrastructure",
+  "techGrid": [
+    {
+      "tag": "IDENTIFICATION",
+      "title": "Code Readers",
+      "text": "Barcode and code reading systems used to identify boards throughout production."
+    },
+    {
+      "tag": "VISION",
+      "title": "Quality Inspection Cameras",
+      "text": "Industrial camera systems providing OK–NOK inspection results at production stations."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Infrastructure",
+      "text": "Controls production line flow and manages station-level processes."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Central software managing operational tracking, quality data, labeling, and Oracle integration."
+    }
+  ],
+
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Oracle Integration",
+  "integrationDesc": "Operation records, quality inspection results, and labeling data are shared with Oracle for centralized process management.",
+  "integrationList": [
+    {
+      "bold": "Oracle",
+      "text": "Board traceability, quality, and labeling records are integrated with Oracle systems."
+    }
+  ],
+
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Full visibility and quality assurance",
+  "resultsGrid": [
+    {
+      "title": "Individual Board Traceability",
+      "text": "Every board is fully traceable throughout the assembly process."
+    },
+    {
+      "title": "Improved Quality Monitoring",
+      "text": "OK–NOK inspection results are linked to each board, increasing quality visibility."
+    },
+    {
+      "title": "Accurate Labeling",
+      "text": "Customer labels are automatically generated based on traceability data, ensuring shipment accuracy."
+    }
+  ],
+
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to transform your production processes?",
+  "ctaSubtitle": "Contact us to discuss how a similar solution can be implemented in your operations.",
+  "ctaPrimary": "Contact Us"
+}

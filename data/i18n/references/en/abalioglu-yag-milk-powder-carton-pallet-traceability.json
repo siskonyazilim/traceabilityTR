@@ -1,0 +1,115 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Food",
+  "locationValue": "Niğde",
+  "heroTitleLine1": "Complete carton and pallet",
+  "heroTitleLine2": "traceability.",
+  "heroSub": "The project implemented at Abalıoğlu Yağ's milk powder production facility in Niğde provides carton and pallet-level traceability, enabling all product movements from production to shipment to be managed through a single platform.",
+
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Digital carton and pallet tracking in milk powder production",
+  "contextP1": "Abalıoğlu Yağ produces milk powder at its facility in Niğde. The project was implemented to establish carton and pallet-level traceability and digitalize logistics processes.",
+  "contextP2": "By centrally monitoring production and shipment operations, operational visibility has been increased and shipping accuracy has been improved.",
+
+  "problemEyebrow": "Need / Challenge",
+  "problemTitle": "Reliable management of carton–pallet relationships",
+  "problemLede": "It was necessary to monitor which cartons were loaded onto which pallets throughout production and shipping operations. Manual processes created traceability gaps and increased recall risks.",
+  "problemList": [
+    {
+      "bold": "Carton–Pallet Tracking",
+      "text": "Manual operations increased the risk of errors in carton and pallet associations."
+    },
+    {
+      "bold": "Recall Management",
+      "text": "Identifying and verifying historical product movements quickly was difficult."
+    }
+  ],
+
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Digitalization of carton–pallet–shipment processes",
+  "solutionLede": "The implemented solution associates cartons and pallets while recording all movements on the OnSuite Trace platform, ensuring complete visibility from production to shipment.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Carton Identification",
+      "text": "Carton information generated on the production line is recorded in the system."
+    },
+    {
+      "no": "02",
+      "title": "Pallet Creation",
+      "text": "Cartons are assigned and linked to the corresponding pallets."
+    },
+    {
+      "no": "03",
+      "title": "Shipment Preparation",
+      "text": "Shipment processes are managed and monitored at pallet level."
+    },
+    {
+      "no": "04",
+      "title": "Monitoring and Reporting",
+      "text": "All movements are tracked and reported through the OnSuite Trace platform."
+    }
+  ],
+
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "PLC, SCADA, and barcode-based traceability",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Infrastructure",
+      "text": "Industrial automation architecture managing production and shipment processes."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Central software managing carton and pallet traceability operations."
+    },
+    {
+      "tag": "IDENTIFICATION",
+      "title": "Barcode Readers",
+      "text": "Used to identify and verify carton and pallet labels."
+    },
+    {
+      "tag": "INTEGRATION",
+      "title": "Coding and Labeling Systems",
+      "text": "Integrated for automatic carton coding and pallet label printing."
+    }
+  ],
+
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Netsis ERP integration",
+  "integrationDesc": "Traceability and shipment information is exchanged with Netsis ERP, enabling centralized process management.",
+  "integrationList": [
+    {
+      "bold": "Netsis ERP",
+      "text": "Traceability and shipment data are synchronized with the Netsis ERP system."
+    }
+  ],
+
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Stronger traceability and shipment accuracy",
+  "resultsGrid": [
+    {
+      "title": "End-to-End Traceability",
+      "text": "All product movements are traceable from production to shipment."
+    },
+    {
+      "title": "Digital Pallet Management",
+      "text": "Carton–pallet relationships are managed automatically and reliably."
+    },
+    {
+      "title": "Recall and Shipping Assurance",
+      "text": "Recall processes are accelerated and shipping errors are minimized."
+    }
+  ],
+
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to transform your production processes?",
+  "ctaSubtitle": "Contact us to discuss how a similar solution can be implemented in your operations.",
+  "ctaPrimary": "Contact Us"
+}

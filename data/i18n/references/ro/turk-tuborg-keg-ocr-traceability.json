@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Înapoi la Proiectele de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria Alimentară și Băuturi",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Trasabilitate individuală a butoaielor",
+  "heroTitleLine2": "și asociere sigură cu paleții.",
+  "heroSub": "Proiectul implementat în fabrica Türk Tuborg din Izmir permite identificarea fiabilă a fiecărui butoi prin tehnologii de citire coduri și OCR, asigurând asocierea corectă cu paleții și trasabilitatea la nivel de palet.",
+
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Trasabilitate individuală pentru butoaiele de băuturi",
+  "contextP1": "Fabrica Türk Tuborg din Izmir produce băuturi alcoolice utilizând butoaie reutilizabile, fiecare având un identificator unic.",
+  "contextP2": "Proiectul a fost implementat pentru identificarea fiabilă a fiecărui butoi și asocierea acestuia cu paletul corespunzător înainte de livrare.",
+
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Identificatori ilizibili și risc de asociere greșită",
+  "problemLede": "Identificatorii unici ai butoaielor nu puteau fi întotdeauna citiți prin metode clasice de scanare. Era necesară o metodă alternativă pentru a evita oprirea procesului și pentru a garanta asocierea corectă cu paleții.",
+  "problemList": [
+    {
+      "bold": "Probleme de Citire",
+      "text": "Codurile deteriorate sau de slabă calitate nu puteau fi întotdeauna identificate de cititoarele standard."
+    },
+    {
+      "bold": "Asocieri Incorecte",
+      "text": "Asocierea greșită a butoaielor cu paleții putea afecta acuratețea livrărilor și trasabilitatea."
+    }
+  ],
+
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Verificare butoi–palet asistată de OCR",
+  "solutionLede": "O aplicație C# primește comenzile de producție din SAP și ghidează operatorul. Fiecare ID de butoi este citit mai întâi prin metode clasice. Dacă citirea eșuează, sistemul OCR identifică automat codul. Identificatorii validați sunt apoi asociați cu paleții, iar etichetele sunt generate automat.",
+
+  "steps": [
+    {
+      "no": "01",
+      "title": "Selectarea Comenzii",
+      "text": "Operatorul selectează comanda de producție primită din SAP."
+    },
+    {
+      "no": "02",
+      "title": "Citirea Codului",
+      "text": "Sistemul încearcă să citească identificatorul unic al butoiului."
+    },
+    {
+      "no": "03",
+      "title": "Verificare OCR",
+      "text": "Dacă citirea standard eșuează, OCR identifică automat caracterele."
+    },
+    {
+      "no": "04",
+      "title": "Asociere cu Paletul",
+      "text": "Identificatorii validați sunt asociați paleților, iar etichetele sunt tipărite."
+    }
+  ],
+
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "OCR, sisteme de viziune și integrare SAP",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație C#",
+      "text": "Software central pentru gestionarea comenzilor și a procesului de asociere."
+    },
+    {
+      "tag": "VIZIUNE",
+      "title": "Sistem OCR cu Cameră",
+      "text": "Identifică automat codurile atunci când citirea standard nu reușește."
+    },
+    {
+      "tag": "IDENTIFICARE",
+      "title": "Infrastructură de Citire Coduri",
+      "text": "Capturează automat identificatorii butoaielor în timpul procesului."
+    },
+    {
+      "tag": "ETICHETARE",
+      "title": "Sistem de Etichetare Paleți",
+      "text": "Generează etichete pe baza informațiilor validate."
+    }
+  ],
+
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare SAP",
+  "integrationDesc": "Comenzile de producție sunt preluate din SAP, iar rezultatele procesului sunt returnate către sistemul ERP.",
+  "integrationList": [
+    {
+      "bold": "SAP",
+      "text": "Managementul comenzilor și datele de paletizare sunt integrate cu SAP."
+    }
+  ],
+
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Fiabilitate mai mare și livrări corecte",
+  "resultsGrid": [
+    {
+      "title": "Identificare Asistată de OCR",
+      "text": "Continuitatea procesului este asigurată chiar și atunci când citirea codurilor eșuează."
+    },
+    {
+      "title": "Trasabilitate Individuală",
+      "text": "Fiecare butoi este urmărit prin identificatorul său unic."
+    },
+    {
+      "title": "Paletizare Corectă",
+      "text": "Asocierile validate între butoaie și paleți reduc riscul de erori la livrare."
+    }
+  ],
+
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să vă transformați procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta implementarea unei soluții similare în compania dumneavoastră.",
+  "ctaPrimary": "Contactați-ne"
+}

@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Înapoi la Proiectele de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Asigurarea măsurabilă a calității",
+  "heroTitleLine2": "pentru codurile DataMatrix.",
+  "heroSub": "Proiectul implementat în fabrica Phinia din Zona Liberă ESBAŞ Izmir măsoară și clasifică calitatea imprimării codurilor DataMatrix conform standardelor internaționale, garantând lizibilitatea acestora.",
+
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Asigurarea calității codurilor DataMatrix",
+  "contextP1": "În fabrica producătoare de componente auto Phinia din Zona Liberă ESBAŞ Izmir, era esențial ca toate codurile DataMatrix să poată fi citite în mod fiabil de către utilizatorii finali.",
+  "contextP2": "Pentru acest scop a fost implementată o stație specializată de control al calității care verifică și clasifică codurile conform standardelor internaționale.",
+
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Coduri DataMatrix ilizibile și riscuri de calitate",
+  "problemLede": "Nu era suficient ca un cod DataMatrix să fie doar lizibil. Acesta trebuia să respecte standarde internaționale de calitate și să poată fi citit în mod fiabil pe tot parcursul ciclului său de viață.",
+  "problemList": [
+    {
+      "bold": "Lizibilitatea Codurilor",
+      "text": "Calitatea redusă a imprimării putea duce la coduri imposibil de citit de către clientul final."
+    },
+    {
+      "bold": "Lipsa unei Evaluări Obiective",
+      "text": "Nu exista un sistem standardizat pentru măsurarea și clasificarea calității codurilor."
+    }
+  ],
+
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Verificare automată a calității prin stație DM Grading",
+  "solutionLede": "Stația DM Grading analizează codurile DataMatrix conform standardelor internaționale, determină gradul de calitate și generează rapoarte detaliate. Astfel, codurile cu calitate redusă sunt identificate înainte de a părăsi procesul de producție.",
+
+  "steps": [
+    {
+      "no": "01",
+      "title": "Poziționarea Produsului",
+      "text": "Produsul este poziționat în punctul de măsurare cu ajutorul unui sistem servo."
+    },
+    {
+      "no": "02",
+      "title": "Inspectarea Codului",
+      "text": "Camera DM Grading capturează și analizează codul DataMatrix."
+    },
+    {
+      "no": "03",
+      "title": "Clasificarea Calității",
+      "text": "Codul este evaluat conform standardelor internaționale de clasificare."
+    },
+    {
+      "no": "04",
+      "title": "Raportare",
+      "text": "Rezultatele măsurătorilor sunt înregistrate și transformate în rapoarte de calitate."
+    }
+  ],
+
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "Cameră DM Grading, Sistem Servo și SCADA",
+  "techGrid": [
+    {
+      "tag": "VIZIUNE",
+      "title": "Cameră DM Grading",
+      "text": "Sistem industrial de inspectare care măsoară calitatea codurilor DataMatrix conform standardelor internaționale."
+    },
+    {
+      "tag": "CONTROL MIȘCARE",
+      "title": "Sistem Servo pe 3 Axe",
+      "text": "Poziționează cu precizie produsul sau camera pentru măsurare."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Sistem PLC",
+      "text": "Controlează echipamentele din teren și fluxul procesului de inspecție."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA în C#",
+      "text": "Evaluează rezultatele măsurătorilor, generează rapoarte și comunică cu Oracle."
+    }
+  ],
+
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare Oracle",
+  "integrationDesc": "Rezultatele măsurării și rapoartele de calitate sunt transferate către Oracle pentru gestionare centralizată.",
+  "integrationList": [
+    {
+      "bold": "Oracle",
+      "text": "Rezultatele DM Grading și rapoartele de calitate sunt integrate cu sistemele Oracle."
+    }
+  ],
+
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Lizibilitate mai bună și control al calității",
+  "resultsGrid": [
+    {
+      "title": "Măsurare Conform Standardelor",
+      "text": "Codurile DataMatrix sunt evaluate obiectiv conform standardelor internaționale."
+    },
+    {
+      "title": "Detectarea Timpurie a Defectelor",
+      "text": "Codurile cu imprimare slabă sunt identificate înainte de a ajunge la client."
+    },
+    {
+      "title": "Raportare a Calității",
+      "text": "Toate rezultatele sunt înregistrate, asigurând trasabilitate completă pentru procesele de calitate."
+    }
+  ],
+
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să vă transformați procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta implementarea unei soluții similare în compania dumneavoastră.",
+  "ctaPrimary": "Contactați-ne"
+}

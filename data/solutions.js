@@ -6,7 +6,7 @@ export const solutions = [
     titleTr: "Tek Ürün Takibi",
     icon: "qr-code",
     image: "/images/Solutii/Tekil_Ürün_İzleme_Siskon.jpg",
-    disableBullets: true,
+    disableBullets: false,
     disableNavigation: false,
     showChip: false,
     alignHeroCenter: true,

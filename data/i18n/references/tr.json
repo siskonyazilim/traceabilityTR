@@ -180,5 +180,34 @@
   "orkide-quality-control-application": [
     "Türkiye'nin önde gelen sıvı yağ üreticilerinden Orkide ile iş birliği yaparak kutu içeriği eksikliklerini takip etmeye yönelik bir proje hayata geçirdik.",
     "Üretim hattında kutu izlenebilirliği sağlanarak sistem, kutular içindeki eksik ürün miktarlarını otomatik kontrol etmektedir. Ayrıca seçili ürünlerde sap varlığı/yokluğu kontrolleri uygulanarak hatalı ürünler tespit edilmektedir."
-  ]
+  ],
+  "nuhun-ankara-carton-pallet-shipment-traceability": [
+  "Ankara merkezli gıda üreticisi Nuh'un Ankara için koli, palet ve sevkiyat izlenebilirliğini sağlayan entegre bir çözüm geliştirdik.",
+  "Proje kapsamında hangi kolinin hangi palete yerleştirildiği kayıt altına alınarak üretimden müşteriye kadar tüm hareketler dijital olarak takip edildi. Dış depolar arasındaki transferler ve müşteri sevkiyatları el terminali uygulaması üzerinden izlenebilir hale getirildi.",
+  "Netsis ERP entegrasyonu sayesinde koli, palet, depo ve müşteri ilişkileri tek platformda yönetildi. Böylece uçtan uca izlenebilirlik sağlanırken sevkiyat doğruluğu artırıldı ve geri izleme süreçleri güçlendirildi."
+],
+
+"abalioglu-yag-milk-powder-carton-pallet-traceability": [
+  "Abalıoğlu Yağ'ın Niğde tesisinde süt tozu üretim süreçleri için koli ve palet bazlı izlenebilirlik çözümü hayata geçirildi.",
+  "Sistem kapsamında hangi kolinin hangi palete yerleştirildiği kayıt altına alınarak koli, palet ve sevkiyat adımları tek platform üzerinden takip edildi. Otomatik etiketleme ve barkod okuma altyapısı ile süreç dijitalleştirildi.",
+  "Netsis ERP entegrasyonu sayesinde üretim ve sevkiyat verileri senkronize edildi. Böylece manuel takip ortadan kaldırılarak sevkiyat doğruluğu ve geri izlenebilirlik önemli ölçüde geliştirildi."
+],
+
+"turk-tuborg-keg-ocr-traceability": [
+  "Türk Tuborg'un İzmir fabrikasında, fıçıların tekil kimlikleri üzerinden palet bazlı izlenebilirlik sağlayan OCR destekli takip sistemi geliştirildi.",
+  "SAP'den alınan iş emirleri doğrultusunda çalışan sistemde, fıçı üzerindeki benzersiz kimlikler önce barkod okuma ile, gerektiğinde OCR teknolojisi kullanılarak okunmaktadır. Okunan fıçı kimlikleri ilgili paletlerle eşleştirilerek otomatik palet etiketleme gerçekleştirilmektedir.",
+  "Bu yapı sayesinde fıçı–palet eşleşmeleri güvence altına alınmış, okuma güvenilirliği artırılmış ve palet seviyesinde sevkiyat doğruluğu ile tam izlenebilirlik sağlanmıştır."
+],
+
+"phinia-datamatrix-quality-grading-station": [
+  "Phinia'nın İzmir tesisinde, ürünler üzerindeki Datamatrix kodlarının baskı kalitesini uluslararası standartlara göre ölçen bir kalite derecelendirme sistemi devreye alındı.",
+  "DM grade kamerası, 3 eksenli servo sistemi ve PLC kontrollü ölçüm altyapısı kullanılarak her Datamatrix kodunun kalite derecesi otomatik olarak ölçülmekte ve raporlanmaktadır.",
+  "Bu sayede okunabilirlik problemi oluşturabilecek düşük kaliteli kodlar üretim aşamasında tespit edilerek önlenmiş, kod kalitesi objektif ve sürdürülebilir şekilde doğrulanmıştır."
+],
+
+"phinia-electronic-board-assembly-traceability": [
+  "Phinia'nın elektronik kart montaj hattında, tüm operasyonları tekil ürün bazında takip eden kapsamlı bir izlenebilirlik sistemi hayata geçirildi.",
+  "Elektronik kartlar hat girişinden itibaren kod okuyucular ve kalite kontrol kameraları aracılığıyla izlenmekte, her istasyondaki OK–NOK sonuçları kart geçmişiyle ilişkilendirilmektedir. Süreç sonunda müşteri etiketleri otomatik olarak oluşturulmaktadır.",
+  "Oracle entegrasyonu sayesinde operasyon ve kalite verileri merkezi olarak yönetilmiş, uygun olmayan ürünlerin ilerlemesi engellenmiş ve müşteri etiketleme doğruluğu güvence altına alınmıştır."
+]
 }

@@ -72,7 +72,7 @@ export const PerformanceMetrics = () => {
     { end: 500, label: labels[0], suffix: '+' },
     { end: 40, label: labels[1], suffix: '+' },
     { end: 4, label: labels[2], suffix: '' },
-    { end: 80, label: labels[3], suffix: '+' },
+    { end: 90, label: labels[3], suffix: '+' },
   ];
 
   const handleScroll = () => {

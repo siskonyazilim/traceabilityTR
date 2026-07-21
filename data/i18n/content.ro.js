@@ -77,20 +77,101 @@ export const contentRo = {
     {
       title: 'POKA YOKE',
       description:
-        'Trasabilitatea este soluția permanentă la erorile umane, ale mașinilor sau legate de proiectare care apar în timpul producției cu metode simple și ieftine.',
+        'Soluțiile Poka-Yoke previn sau detectează instantaneu erorile cauzate de oameni, mașini și procese în activitățile de producție și asamblare, utilizând tehnologii inteligente de control și verificare.',
     },
     {
       title: 'RFID și coduri de bare',
       description:
-        'Tehnologia RFID și a codurilor de bare este utilizată în multe aplicații care necesită identificare automată și trasabilitate în automatizarea proceselor și a fabricilor.',
+        'Tehnologiile RFID și codurile de bare permit identificarea automată a produselor și materialelor, urmărirea acestora pe întregul parcurs al procesului și înregistrarea fiabilă a datelor.',
     },
     {
       title: 'Procesare de imagini',
       description:
-        'Detectarea defectelor în produsele fabricate cu sisteme de control vizual oferă superioritate față de oameni.',
+        'Sistemele de inspecție bazate pe procesarea imaginilor detectează automat defectele de producție cu viteză și consecvență ridicate, consolidând procesele de control al calității.',
     },
   ],
   performanceMetrics: {
     labels: ['Clienți mulțumiți', 'Țări', 'Proiecte globale', 'Colegi'],
+  },
+  solutions: {
+    1: {
+      title: "Urmărirea unui singur produs",
+      description: "Urmărirea produselor individuale asigură faptul că fiecare produs are un număr de serie unic în producție folosind coduri de bare, QR, Data Matrix sau RFID.",
+      detail: "Urmărirea produselor individuale asigură faptul că fiecare produs are un număr de serie unic în producție folosind coduri de bare, QR, Data Matrix sau RFID. Întregul ciclu de viață al produsului, de la recepția materiei prime la producție, asamblare, controlul calității, ambalare și expediere este stocat digital.\n\nDatele de pe utilaje, parametrii procesului, înregistrările operatorilor, componentele utilizate și rezultatele controlului de calitate sunt legate de istoricul digital al produsului. Structura integrată cu ERP, MES, PLC, SCADA, camere și marcatoare asigură trasabilitate end-to-end, genealogie și analiză rapidă a cauzelor fundamentale.",
+      detailBulletsHeading: "Avantaje:",
+      detailBullets: [
+        "Fiecare produs este identificat în mod unic cu un număr de serie și o infrastructură de codare, prevenind confuzia produselor.",
+        "Codurile eronate sau ilizibile pe linia de producție sunt detectate automat prin validarea camerei și a scanerului de coduri.",
+        "Potrivirea datelor despre produse, componente și procese oferă o trasabilitate completă înainte și înapoi.",
+        "Accesul rapid la cauzele defectelor este obținut prin menținerea înregistrărilor de calitate, rebuturi și remanieri.",
+        "Reducerea introducerii manuale a datelor și protejarea integrității prin conectorii ERP și MES."
+      ]
+    },
+    2: {
+      title: "Urmărirea lotului/partidei",
+      description: "Lotul și urmărirea partidei permit monitorizarea grupurilor de produse fabricate în aceleași condiții de materie primă, rețetă sau proces sub un număr comun de lot sau șarjă.",
+      detail: "Lotul și urmărirea partidei permit monitorizarea grupurilor de produse fabricate în aceleași condiții de materie primă, rețetă sau proces sub un număr comun de lot sau șarjă. Toate mișcările de la acceptarea materiilor prime la producție, control, ambalare, depozitare și expediere sunt stocate.\n\nLoturile de materii prime, informațiile despre rețetă, parametrii de producție, rezultatele de laborator și rapoartele de expediere sunt legate de partidul respectiv. În acest fel, în caz de probleme de calitate sau recall de produse, doar loturile afectate pot fi identificate rapid.",
+      detailBulletsHeading: "Avantaje:",
+      detailBullets: [
+        "Lotul de materie primă este mapat cu șarja fabricată de produs, facilitând identificarea materialului consumat.",
+        "Datele despre rețetă și șarjă sunt înregistrate, validând conformitatea procesului și standardele de producție.",
+        "Urmărirea datelor de expirare și a termenului de valabilitate se efectuează pentru reducerea pierderilor.",
+        "Procesele de carantină, blocare și aprobare a calității sunt digitalizate, evitând expedierea neconformă.",
+        "Recallul de produse este accelerat semnificativ prin trasabilitatea de tip forward și backward."
+      ]
+    },
+    3: {
+      title: "Pick to Light",
+      description: "Pick to Light este un sistem digital de asistență pentru operator, conceput să ghideze operatorii prin indicatori luminoși la materialele corecte în timpul asamblării, kitting-ului sau pregătirii comenzilor.",
+      detail: "Pick to Light este un sistem digital de asistență pentru operator, conceput să ghideze operatorii prin indicatori luminoși la materialele corecte în timpul asamblării, kitting-ului sau pregătirii comenzilor. Sistemul determină automat piesa corectă și secvența operațională pe baza comenzii de producție sau a rețetei.\n\nAceastă soluție, integrată cu scanere, RFID, senzori, camere, dispozitive de strângere, PLC și HMI, creează o infrastructură poka-yoke ce previne asamblarea incompletă sau utilizarea pieselor incorecte.",
+      detailBulletsHeading: "Avantaje:",
+      detailBullets: [
+        "Ghidajul luminos de pe raft ghidează operatorul spre piesa corectă, scăzând erorile de selecție.",
+        "Se previne utilizarea componentelor greșite prin intermediul confirmărilor automate cu cod de bare sau RFID.",
+        "Succesiunea operațiunilor este gestionată digital, prevenind etapele de asamblare omise.",
+        "Timpii de proces și ciclurile de execuție sunt înregistrați pentru analize de performanță și blocaje.",
+        "Generarea unui flux de lucru dinamic în funcție de modelul produsului prin intermediul integrării ERP și MES."
+      ]
+    },
+    4: {
+      title: "RTLS – Sisteme de localizare în timp real",
+      description: "RTLS reprezintă sisteme de localizare a pozițiilor în timp real pentru produse, paleți, cutii, stivuitoare sau alte active în unitatea industrială.",
+      detail: "RTLS reprezintă sisteme de localizare a pozițiilor în timp real pentru produse, paleți, cutii, stivuitoare sau alte active în unitatea industrială. Tehnologiile bazate pe frecvențe radio (RF) sunt de obicei componentele cheie. În funcție de nevoi, metodele optice sau acustice precum infraroșu sau ultrasunete pot fi suplimentate. Poziția curentă și istoricul activelor sunt monitorizate digital.\n\nVizualizarea și optimizarea proceselor de logistică internă sunt posibile prin analizarea rutelor, a timpilor de așteptare, a mișcărilor și a intrărilor/ieșirilor din zone speciale. Datele din locație pot alimenta automatizarea decizională din ERP, MES și WMS.",
+      detailBulletsHeading: "Avantaje:",
+      detailBullets: [
+        "Timpii consumați pentru căutarea materialelor și a echipamentelor sunt eliminați prin tracking live.",
+        "Intrările și ieșirile din zone specifice sunt controlate, detectând mișcările neautorizate.",
+        "Analiza rutelor și a timpului de menținere evidențiază blocajele din logistica internă.",
+        "Creșterea eficienței utilizării prin analiza mișcărilor stivuitoarelor și cărucioarelor.",
+        "Lansarea unor fluxuri automate de lucru bazate pe poziție via integrările MES și WMS."
+      ]
+    },
+    5: {
+      title: "Sisteme de gestionare a depozitelor (WMS)",
+      description: "Sistemele WMS gestionează digital toate activitățile de depozitare, de la recepția materiilor prime la livrarea finală, pentru produse finite, semifabricate și alte consumabile.",
+      detail: "Sistemele WMS gestionează digital toate activitățile de depozitare, de la recepția materiilor prime la livrarea finală, pentru produse finite, semifabricate și alte consumabile. Toate fluctuațiile de stoc sunt înregistrate prin coduri de bare, QR, Data Matrix, RFID și terminale mobile.\n\nSistemul unifică controlul locației, urmărirea loturilor, scanarea seriei, controlul calității, pregătirea comenzilor și verificarea expedierilor. Integrarea cu ERP și MES garantează acuratețea stocurilor globale.",
+      detailBulletsHeading: "Avantaje:",
+      detailBullets: [
+        "Recepția este validată prin coduri sau RFID, prevenind cantitățile și intrările greșite.",
+        "Depozitarea pe rafturi este vizualizată în timp real, optimizând utilizarea spațiului în depozit.",
+        "Reducerea pierderilor de stoc și a expirării produselor.",
+        "Urmărirea la nivel de lot, serie și dată de expirare asigură o trasabilitate completă a depozitului.",
+        "Verificarea livrărilor elimină produsele greșite, coletele lipsă sau erorile de expediere.",
+        "Corelarea automată a datelor de inventar, comenzi și livrare prin intermediul interfeței ERP."
+      ]
+    },
+    6: {
+      title: "Integrare software și sisteme",
+      description: "Serviciile de integrare oferă transferul de date necesar între aplicații și structuri independente pentru o comunicare și o cooperare armonioasă.",
+      detail: "Serviciile de integrare oferă transferul de date necesar între aplicații și structuri independente pentru o comunicare și o cooperare armonioasă. Coeziunea proceselor din sisteme incompatibile reduce activitățile manuale, accelerează generarea de rapoarte și facilitează analizele predictive.\n\nSiskon configurează conexiunile dintre software-ul existent și logica afacerilor dvs. asigurând un flux fiabil. Gestionăm toate fazele, de la analiză și proiectare la dezvoltare .Net, testare și punere în funcțiune pe scară largă pentru durabilitate.",
+      detailBulletsHeading: "Avantaje:",
+      detailBullets: [
+        "Datele sunt propagate automat între sistemele curente, limitând munca repetitivă de tastare.",
+        "Proiectarea unei structuri adaptate logicii interne; operarea este sigură și sincronizată.",
+        "Fuzionarea detaliilor din diverse surse sporește agilitatea decizională și raportarea analitică.",
+        "Management complet al fazelor (analiză, design, implementare), pentru soluții durabile de lungă durată.",
+        "Sunt consolidate sistemele de tip MRP, ERP, CRM, monitorizare energie, mentenanță și calibrare, plus managementul calității."
+      ]
+    }
   },
 };

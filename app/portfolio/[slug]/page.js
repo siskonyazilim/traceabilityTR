@@ -49,6 +49,9 @@ import trDetails from '../../../data/i18n/references/tr/index.js';
 import enDetails from '../../../data/i18n/references/en/index.js';
 import roDetails from '../../../data/i18n/references/ro/index.js';
 
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+
 const detailsByLocale = {
   tr: trDetails.default || trDetails,
   en: enDetails.default || enDetails,
@@ -367,6 +370,30 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
           backHref={backHref}
           localizedProjects={localizedProjects}
           dict={projectDetails}
+        />
+      </>
+    );
+  }
+
+  if (
+    slug === 'nuhun-ankara-carton-pallet-shipment-traceability'
+    || slug === 'abalioglu-yag-milk-powder-carton-pallet-traceability'
+    || slug === 'turk-tuborg-keg-ocr-traceability'
+    || slug === 'phinia-datamatrix-quality-grading-station'
+    || slug === 'phinia-electronic-board-assembly-traceability'
+  ) {
+    return (
+      <>
+        <JsonLd data={graphSchema} />
+        <PmiBarcodeGateDetailPage
+          locale={locale}
+          backHref={backHref}
+          localizedProjects={localizedProjects}
+          dict={projectDetails}
+          fixedYear={project.referenceDateLabel || project.referenceDate || '2023'}
+          currentSlug={slug}
+          logoSrc={project.logo}
+          logoAlt={`${project.title} Logo`}
         />
       </>
     );

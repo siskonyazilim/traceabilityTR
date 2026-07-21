@@ -1,0 +1,116 @@
+{
+  "backToProjects": "Înapoi la Proiectele de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Trasabilitate la nivel de operațiune",
+  "heroTitleLine2": "pentru plăcile electronice.",
+  "heroSub": "Proiectul implementat în fabrica Phinia din Zona Liberă ESBAŞ Izmir asigură urmărirea individuală a plăcilor electronice pe parcursul tuturor operațiunilor de asamblare, asocierea rezultatelor de calitate și generarea automată a etichetelor pentru client.",
+
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Trasabilitate completă în producția de plăci electronice",
+  "contextP1": "Plăcile electronice produse în fabrica auto Phinia din Zona Liberă ESBAŞ Izmir trec prin multiple operațiuni de asamblare și control al calității.",
+  "contextP2": "Proiectul a fost implementat pentru a asigura trasabilitatea completă a istoricului de producție și a rezultatelor de calitate pentru fiecare placă electronică.",
+
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Monitorizarea operațiunilor și a rezultatelor de calitate",
+  "problemLede": "Era necesară monitorizarea stațiilor prin care trece fiecare placă electronică și înregistrarea rezultatelor de calitate pentru fiecare operațiune. De asemenea, eticheta corectă pentru client trebuia garantată la finalul procesului.",
+  "problemList": [
+    {
+      "bold": "Vizibilitate Operațională Limitată",
+      "text": "Istoricul complet al operațiunilor pentru fiecare placă nu putea fi urmărit cu ușurință."
+    },
+    {
+      "bold": "Asocierea Datelor de Calitate",
+      "text": "Corelarea rezultatelor OK–NOK cu produsele individuale era dificilă prin procese manuale."
+    }
+  ],
+
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Sistem de urmărire a operațiunilor și calității la nivel de placă",
+  "solutionLede": "Fiecare placă electronică este identificată și urmărită individual de la începutul procesului de asamblare. Rezultatele OK–NOK provenite de la sistemele de inspecție vizuală sunt asociate cu produsul, iar etichetele clientului sunt generate automat la finalul procesului.",
+
+  "steps": [
+    {
+      "no": "01",
+      "title": "Identificarea Plăcii",
+      "text": "Fiecare placă electronică primește o identitate unică la intrarea pe linia de producție."
+    },
+    {
+      "no": "02",
+      "title": "Urmărirea Operațiunilor",
+      "text": "Fiecare stație și operațiune de producție este înregistrată pe parcursul procesului."
+    },
+    {
+      "no": "03",
+      "title": "Verificarea Calității",
+      "text": "Rezultatele OK–NOK provenite de la camerele de inspecție sunt asociate cu placa respectivă."
+    },
+    {
+      "no": "04",
+      "title": "Generarea Etichetei",
+      "text": "Etichetele clientului sunt generate automat pe baza înregistrărilor de trasabilitate."
+    }
+  ],
+
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "Cititoare de coduri, viziune artificială și infrastructură SCADA",
+  "techGrid": [
+    {
+      "tag": "IDENTIFICARE",
+      "title": "Cititoare de Coduri",
+      "text": "Sisteme de citire a codurilor și codurilor de bare utilizate pentru identificarea plăcilor electronice."
+    },
+    {
+      "tag": "VIZIUNE",
+      "title": "Camere de Control al Calității",
+      "text": "Camere industriale care furnizează rezultate de inspecție OK–NOK."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Infrastructură PLC",
+      "text": "Controlează fluxul de producție și procesele dintre stații."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA în C#",
+      "text": "Gestionează trasabilitatea operațiunilor, rezultatele de calitate, etichetarea și integrarea Oracle."
+    }
+  ],
+
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Integrare Oracle",
+  "integrationDesc": "Datele privind operațiunile, rezultatele de calitate și etichetarea sunt transferate către Oracle pentru administrare centralizată.",
+  "integrationList": [
+    {
+      "bold": "Oracle",
+      "text": "Datele de trasabilitate, calitate și etichetare sunt integrate cu sistemele Oracle."
+    }
+  ],
+
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Vizibilitate completă și asigurarea calității",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate Individuală",
+      "text": "Fiecare placă electronică este urmărită pe întreg parcursul procesului de asamblare."
+    },
+    {
+      "title": "Monitorizare Îmbunătățită a Calității",
+      "text": "Rezultatele OK–NOK sunt asociate cu fiecare produs, oferind vizibilitate completă asupra calității."
+    },
+    {
+      "title": "Etichetare Corectă",
+      "text": "Etichetele clientului sunt generate automat pe baza datelor de trasabilitate, asigurând corectitudinea livrărilor."
+    }
+  ],
+
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să vă transformați procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta implementarea unei soluții similare în compania dumneavoastră.",
+  "ctaPrimary": "Contactați-ne"
+}

@@ -1,0 +1,115 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Food",
+  "locationValue": "Ankara",
+  "heroTitleLine1": "End-to-end visibility",
+  "heroTitleLine2": "for cartons and pallets.",
+  "heroSub": "The project implemented at Nuh'un Ankara's production facility in Ankara provides carton and pallet-level traceability while enabling the monitoring of all product movements between the factory, external warehouses, and customers.",
+
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Traceable logistics from production to customer",
+  "contextP1": "Nuh'un Ankara operates a food manufacturing facility in Ankara. The project was launched to establish carton and pallet-level traceability throughout production and shipping operations.",
+  "contextP2": "The system enables the recording and monitoring of all product movements between the factory, external warehouses, and customers from a single platform.",
+
+  "problemEyebrow": "Need / Challenge",
+  "problemTitle": "Tracking carton–pallet relationships and transfers",
+  "problemLede": "It was necessary to identify which cartons were loaded onto which pallets and track their movements throughout the supply chain. Manual tracking created traceability gaps and increased recall and shipment risks.",
+  "problemList": [
+    {
+      "bold": "Traceability Gaps",
+      "text": "Manual tracking of carton and pallet relationships created risks in data accuracy and product visibility."
+    },
+    {
+      "bold": "Warehouse Transfer Visibility",
+      "text": "Lack of centralized monitoring for external warehouse and customer transfers reduced operational visibility."
+    }
+  ],
+
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Digitalized carton–pallet–warehouse–customer tracking",
+  "solutionLede": "A traceability solution was implemented on the production and shipping lines. Cartons and pallets are automatically associated, while warehouse and customer transfers are recorded through handheld terminals.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Carton Identification",
+      "text": "Cartons are uniquely identified and registered in the system."
+    },
+    {
+      "no": "02",
+      "title": "Pallet Association",
+      "text": "Cartons are assigned to the corresponding pallets and recorded."
+    },
+    {
+      "no": "03",
+      "title": "Transfer Registration",
+      "text": "Warehouse and customer transfers are recorded using handheld devices."
+    },
+    {
+      "no": "04",
+      "title": "Monitoring and Reporting",
+      "text": "All movements are tracked and reported through the OnSuite Trace platform."
+    }
+  ],
+
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "PLC automation, SCADA, and mobile applications",
+  "techGrid": [
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC Infrastructure",
+      "text": "Industrial PLC architecture managing field automation and process control."
+    },
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Central software platform managing traceability and shipment operations."
+    },
+    {
+      "tag": "IDENTIFICATION",
+      "title": "Barcode Readers",
+      "text": "Devices used to identify and verify carton and pallet information."
+    },
+    {
+      "tag": "MOBILE",
+      "title": "Handheld Terminal Application",
+      "text": "Mobile solution for registering warehouse and customer transfers in the field."
+    }
+  ],
+
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Netsis ERP integration",
+  "integrationDesc": "Traceability and shipment data are exchanged with Netsis ERP, enabling centralized process management.",
+  "integrationList": [
+    {
+      "bold": "Netsis ERP",
+      "text": "Transfer and traceability data are synchronized with the company's Netsis ERP environment."
+    }
+  ],
+
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Complete visibility and stronger recall management",
+  "resultsGrid": [
+    {
+      "title": "End-to-End Traceability",
+      "text": "All product movements from production to customer are fully traceable."
+    },
+    {
+      "title": "Digital Transfer Management",
+      "text": "Warehouse and customer transfers are centrally recorded and managed."
+    },
+    {
+      "title": "Improved Shipment Accuracy",
+      "text": "Recall processes are accelerated and shipment reliability is strengthened."
+    }
+  ],
+
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to transform your production processes?",
+  "ctaSubtitle": "Contact us to discuss how a similar solution can be implemented in your operations.",
+  "ctaPrimary": "Contact Us"
+}

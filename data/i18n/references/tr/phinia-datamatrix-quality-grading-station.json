@@ -1,0 +1,108 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir",
+  "heroTitleLine1": "DataMatrix Kalite",
+  "heroTitleLine2": "Ölçüm Tezgahı",
+  "heroSub": "Phinia'nın İzmir ESBAŞ tesisinde hayata geçirilen proje, Datamatrix kod baskı kalitesini uluslararası kriterlere göre otomatik ölçüp derecelendirerek okunabilirlik risklerinin üretim aşamasında erken tespit edilmesini sağlamaktadır.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "DM kod kalitesinin standart bazlı doğrulanması",
+  "contextP1": "Phinia'nın İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv sektörüne yönelik üretim yapmaktadır.",
+  "contextP2": "Bu fabrikada hayata geçirilen projede, ürünler üzerindeki Datamatrix (DM) kodlarının baskı kalitesini ölçen bir DM grading (kalite derecelendirme) tezgahı kurulmuştur.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Son kullanıcıda okunamayan DM kod riski",
+  "problemLede": "Fabrikadan çıkan ürünler üzerindeki DM kodları, son kullanıcı tarafında okunamadı ve bu durum bir problem oluşturdu. Kodların yalnızca var/okunuyor olması yeterli değildi; baskı kalitesinin uluslararası standartlara uygun ve her koşulda güvenilir biçimde okunabilir olması gerekiyordu. Bu nedenle DM kodlarının baskı kalitesinin ölçülüp derecelendirileceği ve raporlanacağı bir kontrol yapısına ihtiyaç doğdu.",
+  "problemList": [
+    {
+      "bold": "Okunabilirlik Riski",
+      "text": "Düşük kalite kodlar son kullanıcı tarafında okunamama problemi oluşturuyordu."
+    },
+    {
+      "bold": "Objektif Kalite İhtiyacı",
+      "text": "Kod kalitesinin uluslararası standarda göre ölçülmesi ve raporlanması gerekiyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "DM grading ile otomatik kalite derecelendirme",
+  "solutionLede": "DM grading tezgahı ile ürün üzerindeki Datamatrix kodların baskı kalitesi, uluslararası standartlara göre grade (kalite derecesi) ölçümüne tabi tutuldu. DM grade kamerası ile yapılan ölçüm sonucunda kodun kalite derecesi belirlenmekte ve raporlanmaktadır. Böylece düşük kaliteli, son kullanıcıda okunamayabilecek kodlar üretim aşamasında tespit edilerek kaynağında önlenmektedir.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Ürün Konumlandırma",
+      "text": "Ürün, servo kontrollü sistem tarafından ölçüm pozisyonuna getirilir."
+    },
+    {
+      "no": "02",
+      "title": "Kod Görüntüleme",
+      "text": "DM grade kamerası Datamatrix kodunu görüntüler ve analiz eder."
+    },
+    {
+      "no": "03",
+      "title": "Kalite Derecelendirme",
+      "text": "Kod kalitesi uluslararası standartlara göre grade ölçümüne tabi tutulur."
+    },
+    {
+      "no": "04",
+      "title": "Raporlama",
+      "text": "Ölçüm sonuçları kayıt altına alınır ve kalite raporu oluşturulur."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "DM Grade kamera, 3 eksenli servo, PLC ve C# SCADA",
+  "techGrid": [
+    {
+      "tag": "GÖRÜNTÜ",
+      "title": "DM Grade Kamera",
+      "text": "Datamatrix baskı kalitesini uluslararası standartlara göre ölçer ve derecelendirir."
+    },
+    {
+      "tag": "HAREKET",
+      "title": "3 Eksenli Servo Sistem",
+      "text": "Ürün veya kamerayı ölçüm için ideal pozisyona hassas şekilde getirir."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Altyapısı",
+      "text": "Saha akışını ve ölçüm döngüsünü kontrol eder."
+    },
+    {
+      "tag": "YAZILIM",
+      "title": "C# SCADA Uygulaması",
+      "text": "Ölçüm sonuçlarını değerlendirir, raporlar ve Oracle entegrasyonunu yönetir."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "Oracle entegrasyonu",
+  "integrationDesc": "Sistem Oracle ile entegre çalışmaktadır; DM grade ölçüm sonuçları ve kalite raporları Oracle ile paylaşılarak süreç merkezi olarak izlenmekte ve yönetilmektedir.",
+  "integrationList": [
+    {
+      "bold": "Oracle",
+      "text": "DM grade sonuçları ve kalite raporları Oracle ile entegre şekilde yönetilir."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Okunabilirlik ve kalite güvencesinin güçlendirilmesi",
+  "resultsGrid": [
+    {
+      "title": "Erken Tespit",
+      "text": "Düşük kaliteli kodlar üretim aşamasında tespit edilerek sahaya çıkmadan engellendi."
+    },
+    {
+      "title": "Objektif Ölçüm",
+      "text": "DM kod kalitesi uluslararası standartlara göre sayısal ve karşılaştırılabilir şekilde ölçüldü."
+    },
+    {
+      "title": "Raporlanabilir Kalite",
+      "text": "Grade ölçüm raporlarıyla kalite performansı merkezi olarak izlenebilir hale geldi."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}
