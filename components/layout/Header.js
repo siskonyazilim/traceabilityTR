@@ -67,7 +67,8 @@ export const Header = () => {
       try {
         const url = new URL(alternateLink.href);
         router.push(url.pathname + url.search + url.hash);
-      } catch (e) {
+      } catch (error) {
+        console.warn('Could not parse alternate URL, falling back to simple local path:', error);
         router.push(toLocalePath(currentPathForLocale, nextLocaleCode));
       }
     } else {

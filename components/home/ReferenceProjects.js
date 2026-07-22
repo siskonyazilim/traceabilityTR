@@ -110,7 +110,7 @@ export const ReferenceProjects = () => {
 
         <div className="relative mb-10">
           {/* Enhanced Navigation Buttons */}
-          <div className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-20 hidden md:block">
+          <div className="absolute -left-6 top-1/2 -translate-y-1/2 z-20 hidden md:block">
             <button
               onClick={handlePrev}
               className="h-12 w-12 rounded-md bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
@@ -120,7 +120,7 @@ export const ReferenceProjects = () => {
             </button>
           </div>
 
-          <div className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-20 hidden md:block">
+          <div className="absolute -right-6 top-1/2 -translate-y-1/2 z-20 hidden md:block">
             <button
               onClick={handleNext}
               className="h-12 w-12 rounded-md bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
@@ -183,6 +183,23 @@ export const ReferenceProjects = () => {
                 </Link>
               </article>
             ))}
+          </div>
+
+          <div className="mt-5 flex md:hidden items-center justify-center gap-3">
+            <button
+              onClick={handlePrev}
+              className="h-11 w-11 rounded-md bg-gradient-to-br from-white to-slate-50 border border-slate-200 text-primary-black transition-all duration-300 flex items-center justify-center shadow-soft"
+              aria-label={t('sections.referenceProjectsPrev', 'Önceki proje')}
+            >
+              <IconChevronLeft size={20} />
+            </button>
+            <button
+              onClick={handleNext}
+              className="h-11 w-11 rounded-md bg-gradient-to-br from-white to-slate-50 border border-slate-200 text-primary-black transition-all duration-300 flex items-center justify-center shadow-soft"
+              aria-label={t('sections.referenceProjectsNext', 'Sonraki proje')}
+            >
+              <IconChevronRight size={20} />
+            </button>
           </div>
         </div>
 

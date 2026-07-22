@@ -139,7 +139,7 @@ export const StrategicPartners = () => {
                     <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] max-w-[16.5rem] mx-auto flex items-center justify-center">
                       {partner.name}
                     </h3>
-                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 max-w-[18.5rem] mx-auto">
+                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 max-w-[18.5rem] mx-auto min-h-[5.25rem] line-clamp-3">
                       {getFirstSentenceText(partner.description)}
                     </p>
                     <span className="card-cta-mini mt-auto mx-auto">
@@ -152,6 +152,23 @@ export const StrategicPartners = () => {
                 </article>
               </Link>
             ))}
+          </div>
+
+          <div className="mt-5 mb-2 flex md:hidden items-center justify-center gap-3">
+            <button
+              onClick={handlePrev}
+              aria-label={t('sections.partnerPrev', 'Önceki partner')}
+              className="h-11 w-11 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black transition-colors flex items-center justify-center"
+            >
+              <IconChevronLeft size={20} />
+            </button>
+            <button
+              onClick={handleNext}
+              aria-label={t('sections.partnerNext', 'Sonraki partner')}
+              className="h-11 w-11 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black transition-colors flex items-center justify-center"
+            >
+              <IconChevronRight size={20} />
+            </button>
           </div>
         </div>
       </Container>

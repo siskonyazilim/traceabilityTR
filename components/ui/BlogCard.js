@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
-import { getFirstSentenceText } from '../../lib/i18n/contentLocalization';
 
 export const BlogCard = ({
   post,
@@ -28,7 +27,7 @@ export const BlogCard = ({
     day: 'numeric',
     timeZone: 'UTC',
   });
-  const readMoreLabel = t('cards.readMore', 'Citește mai mult →').split('→')[0].trim();
+  const readMoreLabel = t('cards.readMore', 'Devamını oku →').split('→')[0].trim();
 
   return (
     <article className="h-full">
@@ -70,12 +69,12 @@ export const BlogCard = ({
         <div className="flex flex-1 flex-col p-5 md:p-6 text-left">
           <span className="text-xs text-gray-text mb-2">{date}</span>
 
-          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-2 line-clamp-2 group-hover:text-accent-blue transition-colors">
+          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-2 line-clamp-2 min-h-[3.5rem] group-hover:text-accent-blue transition-colors">
             {post.title}
           </h3>
 
-          <p className="text-sm text-gray-text leading-6 mb-4 line-clamp-3">
-            {getFirstSentenceText(post.excerpt)}
+          <p className="text-sm text-gray-text leading-6 mb-4 line-clamp-3 min-h-[4.5rem]">
+            {post.excerpt}
           </p>
 
           <span className="card-cta-mini mt-auto inline-flex items-center gap-1 text-accent-blue font-semibold text-sm">

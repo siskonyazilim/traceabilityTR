@@ -100,23 +100,49 @@ export default async function RootLayout({ children }) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(){
+  function forceScrollable(el){
+    if (!el) return;
+
+    el.style.setProperty('overflow-y', 'auto', 'important');
+    el.style.setProperty('overflow', 'auto', 'important');
+    el.style.setProperty('height', 'auto', 'important');
+    el.style.setProperty('max-height', 'none', 'important');
+    el.style.setProperty('position', 'static', 'important');
+    el.style.setProperty('touch-action', 'auto', 'important');
+  }
+
   function unlockScroll(){
     var html = document.documentElement;
     var body = document.body;
     if (!html || !body) return;
 
-    if (html.style.overflowY === 'hidden') html.style.overflowY = 'auto';
-    if (body.style.overflowY === 'hidden') body.style.overflowY = 'auto';
-    if (body.style.overflow === 'hidden') body.style.overflow = 'auto';
-    if (!body.style.overflowX) body.style.overflowX = 'hidden';
+    forceScrollable(html);
+    forceScrollable(body);
+
+    // Keep horizontal overflow hidden while restoring vertical scroll.
+    body.style.setProperty('overflow-x', 'hidden', 'important');
   }
 
   unlockScroll();
   window.addEventListener('load', unlockScroll, { once: true });
+  window.addEventListener('pageshow', unlockScroll);
+  window.addEventListener('focus', unlockScroll);
+  window.addEventListener('touchstart', unlockScroll, { passive: true });
+  window.addEventListener('wheel', unlockScroll, { passive: true });
+
+  // Some consent SDKs re-lock scroll shortly after interaction.
+  var retries = 0;
+  var intervalId = window.setInterval(function(){
+    unlockScroll();
+    retries += 1;
+    if (retries > 18) {
+      window.clearInterval(intervalId);
+    }
+  }, 800);
 
   var observer = new MutationObserver(unlockScroll);
-  if (document.documentElement) observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
-  if (document.body) observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+  if (document.documentElement) observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style', 'class'] });
+  if (document.body) observer.observe(document.body, { attributes: true, attributeFilter: ['style', 'class'] });
 })();`,
           }}
         />

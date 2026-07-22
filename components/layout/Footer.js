@@ -175,9 +175,12 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="nesil-open-modal text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  ##Çerez Tercihleri
-                </a>
+                <button
+                  type="button"
+                  className="nesil-open-modal text-gray-light hover:text-accent-blue transition-colors text-sm text-left bg-transparent border-0 p-0 cursor-pointer"
+                >
+                  {t('footer.cookiePreferences', 'Preferințe cookie-uri')}
+                </button>
               </li>
             </ul>
           </div>

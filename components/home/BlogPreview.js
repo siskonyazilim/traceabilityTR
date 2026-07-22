@@ -96,8 +96,8 @@ export const BlogPreview = () => {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title={t('sections.blogPreviewTitle', 'Din Blog')}
-          subtitle={t('sections.blogPreviewSubtitle', 'Accesați blogul nostru și obțineți cele mai recente actualizări din industrie și tendințele viitoare.')}
+          title={t('sections.blogPreviewTitle', 'Blogdan Son Haberler')}
+          subtitle={t('sections.blogPreviewSubtitle', 'Endüstri ve teknoloji gündeminden en güncel içerikleri keşfedin.')}
         />
 
         <div className="relative mb-8">
@@ -128,6 +128,23 @@ export const BlogPreview = () => {
               </div>
             ))}
           </div>
+
+          <div className="mt-5 flex md:hidden items-center justify-center gap-3">
+            <button
+              onClick={handlePrev}
+              aria-label={t('sections.blogPrev', 'Önceki yazı')}
+              className="h-11 w-11 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black transition-colors flex items-center justify-center"
+            >
+              <IconChevronLeft size={20} />
+            </button>
+            <button
+              onClick={handleNext}
+              aria-label={t('sections.blogNext', 'Sonraki yazı')}
+              className="h-11 w-11 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black transition-colors flex items-center justify-center"
+            >
+              <IconChevronRight size={20} />
+            </button>
+          </div>
         </div>
 
         <div className="px-2 sm:px-4 py-2 text-center">
@@ -138,7 +155,7 @@ export const BlogPreview = () => {
             size="lg"
             className="border-2 border-primary-black text-primary-black bg-transparent hover:bg-primary-black hover:text-white"
           >
-            {t('sections.blogPreviewCta', 'MERGI LA BLOG')}
+            {t('sections.blogPreviewCta', 'BLOGA GIT')}
           </Button>
         </div>
       </Container>
