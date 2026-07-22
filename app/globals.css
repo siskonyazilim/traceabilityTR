@@ -244,12 +244,12 @@ section {
 }
 
 .card-description-block {
-  min-height: 6.75rem;
+  min-height: 2.9rem;
 }
 
 @media (min-width: 768px) {
   .card-description-block {
-    min-height: 7.5rem;
+    min-height: 3.15rem;
   }
 }
 

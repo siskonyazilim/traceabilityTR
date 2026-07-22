@@ -73,7 +73,7 @@ export const BlogCard = ({
             {post.title}
           </h3>
 
-          <p className="text-sm text-gray-text leading-6 mb-4 line-clamp-3 min-h-[4.5rem]">
+          <p className="text-sm text-gray-text leading-6 mb-4 min-h-[4.5rem]">
             {post.excerpt}
           </p>
 

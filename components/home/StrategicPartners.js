@@ -139,7 +139,7 @@ export const StrategicPartners = () => {
                     <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] max-w-[16.5rem] mx-auto flex items-center justify-center">
                       {partner.name}
                     </h3>
-                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 max-w-[18.5rem] mx-auto min-h-[5.25rem] line-clamp-3">
+                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 max-w-[18.5rem] mx-auto min-h-[5.25rem]">
                       {getFirstSentenceText(partner.description)}
                     </p>
                     <span className="card-cta-mini mt-auto mx-auto">

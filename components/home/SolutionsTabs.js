@@ -132,7 +132,7 @@ export const SolutionsTabs = () => {
                   <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.5rem] flex items-center">
                     {solution.title}
                   </h3>
-                  <p className="card-description-copy card-description-block text-gray-text text-sm leading-7 flex-1 max-w-[42ch] line-clamp-3">
+                  <p className="card-description-copy card-description-block text-gray-text text-sm leading-7 flex-1 max-w-[42ch]">
                     {getCardPreviewText(solution)}
                   </p>
                   <span className="card-cta-mini mt-4">
@@ -176,7 +176,7 @@ export const SolutionsTabs = () => {
                     <h3 className="text-lg font-bold text-primary-black mb-2 group-hover:text-accent-blue transition-colors min-h-[3rem] flex items-center justify-center">
                       {product.title}
                     </h3>
-                    <p className="card-description-copy card-description-block text-gray-text text-sm leading-7 max-w-[42ch] mx-auto flex-1 line-clamp-3">
+                    <p className="card-description-copy card-description-block text-gray-text text-sm leading-7 max-w-[42ch] mx-auto flex-1">
                       {getCardPreviewText(product)}
                     </p>
                     <span className="card-cta-mini mt-4 mx-auto">
