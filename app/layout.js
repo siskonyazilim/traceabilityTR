@@ -100,23 +100,38 @@ export default async function RootLayout({ children }) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(){
+  function isLocked(el){
+    if (!el || !window.getComputedStyle) return false;
+    var styles = window.getComputedStyle(el);
+    var oy = styles.overflowY;
+    var ov = styles.overflow;
+    return oy === 'hidden' || oy === 'clip' || ov === 'hidden' || ov === 'clip';
+  }
+
   function unlockScroll(){
     var html = document.documentElement;
     var body = document.body;
     if (!html || !body) return;
 
-    if (html.style.overflowY === 'hidden') html.style.overflowY = 'auto';
-    if (body.style.overflowY === 'hidden') body.style.overflowY = 'auto';
-    if (body.style.overflow === 'hidden') body.style.overflow = 'auto';
+    if (isLocked(html)) {
+      html.style.overflowY = 'auto';
+    }
+
+    if (isLocked(body)) {
+      body.style.overflowY = 'auto';
+      body.style.overflow = 'auto';
+    }
+
     if (!body.style.overflowX) body.style.overflowX = 'hidden';
   }
 
   unlockScroll();
   window.addEventListener('load', unlockScroll, { once: true });
+  window.addEventListener('pageshow', unlockScroll);
 
   var observer = new MutationObserver(unlockScroll);
-  if (document.documentElement) observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
-  if (document.body) observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+  if (document.documentElement) observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style', 'class'] });
+  if (document.body) observer.observe(document.body, { attributes: true, attributeFilter: ['style', 'class'] });
 })();`,
           }}
         />
