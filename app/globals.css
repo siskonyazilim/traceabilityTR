@@ -332,8 +332,8 @@ section {
 
 .blog-rich {
   color: #111827;
-  font-size: 1.08rem;
-  line-height: 1.9;
+  font-size: 17px;
+  line-height: 1.75;
 }
 
 .blog-rich p {
@@ -345,24 +345,39 @@ section {
 }
 
 .blog-rich h2 {
-  margin-top: 2.2rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
   color: #020617;
-  font-size: clamp(1.45rem, 1.3rem + 0.5vw, 1.85rem);
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1.3;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
   text-align: left;
 }
 
 .blog-rich h3 {
-  margin-top: 1.6rem;
+  margin-top: 2rem;
   margin-bottom: 0.7rem;
   color: #0f172a;
-  font-size: clamp(1.2rem, 1.1rem + 0.25vw, 1.4rem);
-  font-weight: 700;
+  font-size: clamp(15px, 1.2vw, 18px);
+  font-weight: 500;
   line-height: 1.35;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .blog-rich {
+    font-size: 16px;
+    line-height: 1.72;
+  }
+
+  .blog-rich h2 {
+    font-size: 18px;
+  }
+
+  .blog-rich h3 {
+    font-size: 15px;
+  }
 }
 
 .blog-rich ul,

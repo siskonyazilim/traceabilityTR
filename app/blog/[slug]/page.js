@@ -6,12 +6,39 @@ import Button from '../../../components/ui/Button';
 import { blogPosts } from '../../../data/blogPosts';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
-import { getRequestLocale, getRequestPathname } from '../../../lib/i18n/requestLocale';
+import { getRequestLocale } from '../../../lib/i18n/requestLocale';
 import { localizeBlogPosts } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
-import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
+import { toLocalePath } from '../../../lib/i18n/dictionaries';
 /* eslint-disable react/prop-types */
+
+const stripHtml = (html) => String(html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+const getReadingMinutes = (html) => {
+  const words = stripHtml(html).split(' ').filter(Boolean).length;
+  const minutes = Math.max(1, Math.ceil(words / 220));
+  return minutes;
+};
+
+const normalizeBlogContent = (html) => {
+  if (typeof html !== 'string') return '';
+
+  const withoutInlineImages = html
+    .replace(/<p[^>]*>\s*<img[^>]*>\s*<\/p>/gi, '')
+    .replace(/<img[^>]*>/gi, '');
+
+  return withoutInlineImages.replace(
+    /<p[^>]*>\s*<strong>([^<]{2,140})<\/strong>\s*:?\s*([^<]*)<\/p>/gi,
+    (_, headingRaw, trailingRaw) => {
+      const headingText = String(headingRaw || '').replace(/:\s*$/, '').trim();
+      const trailingText = String(trailingRaw || '').trim();
+      const h3 = `<h3>${headingText}</h3>`;
+      if (!trailingText) return h3;
+      return `${h3}<p>${trailingText}</p>`;
+    }
+  );
+};
 
 export async function generateMetadata({ params }) {
   const locale = await getRequestLocale();
@@ -30,9 +57,11 @@ export async function generateMetadata({ params }) {
 
   const title = `${post.title} | ${f(locale, 'blogDetailPage', 'blogSuffix')}`;
   const description = post.excerpt;
+  const localizedBlogSlug = getLocalizedSlug('blog', baseSlug, locale);
+  const canonicalPath = toLocalePath(`/blog/${localizedBlogSlug}`, locale);
 
   const alternates = {
-    canonical: `https://traceability.com.tr${toLocalePath(`/blog/${getLocalizedSlug('blog', baseSlug, locale)}`, locale)}`,
+    canonical: `https://traceability.com.tr${canonicalPath}`,
     languages: {
       'tr': `https://traceability.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
       'en': `https://traceability.com.tr/en/blog/${getLocalizedSlug('blog', baseSlug, 'en')}`,
@@ -118,7 +147,11 @@ export default async function BlogDetailPage({ params }) {
     day: 'numeric',
   });
 
-  const safeContent = sanitizeRichText(post.content);
+  const contentWithRealHeadings = normalizeBlogContent(post.content);
+  const safeContent = sanitizeRichText(contentWithRealHeadings);
+  const readingMinutes = getReadingMinutes(safeContent);
+  const coverImage = post.coverImage || post.image || '';
+  const hasCoverImage = Boolean(coverImage);
 
   let onsuiteUrl = 'https://onsuite.com.tr/ro/modules/trace';
   if (locale === 'tr') {
@@ -131,20 +164,29 @@ export default async function BlogDetailPage({ params }) {
     <div className="min-h-screen bg-white pb-16">
       <Container size="xl">
         <article className="mx-auto max-w-none py-10 md:py-14">
-          <Link href={toLocalePath('/blog', locale)} className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-secondary-blue transition-colors hover:text-accent-blue">
-            <IconArrowLeft size={16} />
-            <span>{f(locale, 'blogDetailPage', 'backToBlog')}</span>
-          </Link>
+          <div className="mx-auto w-full max-w-none">
+            <Link href={toLocalePath('/blog', locale)} className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-secondary-blue transition-colors hover:text-accent-blue">
+              <IconArrowLeft size={16} />
+              <span>{f(locale, 'blogDetailPage', 'backToBlog')}</span>
+            </Link>
+          </div>
 
           <header className="mb-8 border-b border-slate-200 pb-6">
+            <div className="mx-auto w-full max-w-none">
             <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
               <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
               <span className="text-gray-text">{date}</span>
+              <span className="text-gray-text">•</span>
+              <span className="text-gray-text">
+                {locale === 'tr' && `${readingMinutes} dk okuma`}
+                {locale === 'en' && `${readingMinutes} min read`}
+                {locale === 'ro' && `${readingMinutes} min citire`}
+              </span>
             </div>
 
-            <h1 className="text-3xl font-bold leading-tight text-slate-900 md:text-5xl">{post.title}</h1>
+            <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-slate-900">{post.title}</h1>
             <div className="mt-4 flex items-center gap-3">
-              <p className="text-sm font-semibold text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
+              <p className="text-sm font-medium text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
               <Image
                 src="/siskon-logo-header.svg"
                 alt="Siskon"
@@ -152,39 +194,58 @@ export default async function BlogDetailPage({ params }) {
                 height={28}
               />
             </div>
+            </div>
           </header>
 
-          <figure className="relative mb-8 aspect-video w-full overflow-hidden rounded-md md:float-right md:mb-6 md:ml-8 md:w-[46%] lg:w-[42%] xl:w-[40%]">
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 46vw, 40vw"
-              className="object-cover"
-              quality={95}
-              priority
-            />
+          <figure className="relative mb-10 mx-auto w-full max-w-none h-[340px] md:h-[560px] overflow-hidden rounded-xl bg-slate-100">
+            {hasCoverImage ? (
+              <Image
+                src={coverImage}
+                alt={post.title}
+                fill
+                sizes="100vw"
+                className="object-cover"
+                quality={92}
+                priority
+                fetchPriority="high"
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center bg-slate-100 text-slate-500">
+                <div className="flex items-center gap-2 text-sm font-medium">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="1.7" />
+                    <circle cx="9" cy="10" r="1.8" strokeWidth="1.7" />
+                    <path d="M21 16l-5-5-7 7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span>
+                    {locale === 'tr' && 'Kapak görseli bulunmuyor'}
+                    {locale === 'en' && 'Cover image unavailable'}
+                    {locale === 'ro' && 'Imagine coperta indisponibila'}
+                  </span>
+                </div>
+              </div>
+            )}
           </figure>
 
           <div
             dangerouslySetInnerHTML={{ __html: safeContent }}
-            className="blog-rich text-gray-text"
+            className="blog-rich mx-auto max-w-none px-4 md:px-5 lg:px-0 text-gray-text"
           />
 
           {/* OnSuite Trace Redirection CTA */}
-          <div className="mt-12 rounded-md bg-gradient-to-br from-primary-black to-dark-bg p-8 text-white shadow-xl md:p-10 border border-slate-blue/10 relative overflow-hidden">
+          <div className="mx-auto mt-12 w-full max-w-none rounded-xl bg-gradient-to-br from-primary-black to-dark-bg p-6 md:p-6 text-white shadow-xl border border-slate-blue/10 relative overflow-hidden">
             {/* Ambient decorative background patterns */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,181,247,0.15),transparent_48%)] pointer-events-none" />
             <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-accent-blue/10 rounded-md blur-3xl pointer-events-none" />
             
-            <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="relative z-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="space-y-3 max-w-3xl">
                 <div className="inline-flex items-center gap-2">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-accent-blue px-2.5 py-1 bg-accent-blue/10 rounded-md border border-accent-blue/20">
                     OnSuite Trace
                   </span>
                 </div>
-                <h2 className="text-xl md:text-2xl font-extrabold tracking-tight">
+                <h2 className="text-[20px] font-medium tracking-tight">
                   {locale === 'tr' && 'Uçtan Uca İzlenebilirlik Çözümümüzle Tanışın'}
                   {locale === 'en' && 'Meet Our End-to-End Traceability Solution'}
                   {locale === 'ro' && 'Descoperiți Soluția Noastră de Trasabilitate End-to-End'}
@@ -203,12 +264,12 @@ export default async function BlogDetailPage({ params }) {
                   rel="noopener noreferrer"
                   variant="solid"
                   size="lg"
-                  className="bg-secondary-blue text-white hover:bg-accent-blue font-semibold text-sm rounded-md inline-flex items-center gap-2 whitespace-nowrap min-w-max shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="bg-secondary-blue text-white hover:bg-accent-blue font-medium text-sm rounded-md inline-flex items-center gap-2 whitespace-nowrap shadow-md hover:shadow-lg transition-all duration-300 w-full min-h-[44px] md:w-auto"
                 >
                   <span>
-                    {locale === 'tr' && "OnSuite Trace'i Keşfedin"}
-                    {locale === 'en' && 'Explore OnSuite Trace'}
-                    {locale === 'ro' && 'Explorează OnSuite Trace'}
+                    {locale === 'tr' && 'OnSuite Tracei kesfet'}
+                    {locale === 'en' && 'Discover OnSuite Trace'}
+                    {locale === 'ro' && 'Descopera OnSuite Trace'}
                   </span>
                   <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -219,53 +280,53 @@ export default async function BlogDetailPage({ params }) {
           </div>
 
           {/* Navigation Section */}
-          <section className="clear-both mt-16 border-t border-slate-200 pt-10">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <section className="mx-auto mt-16 w-full max-w-none border-t border-slate-200 pt-10">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
               {prevPost ? (
                 <Link
-                  href={toLocalePath(`/blog/${prevPost.slug}`, locale)}
-                  className="group flex flex-col items-start gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-left"
+                  href={toLocalePath(`/blog/${getLocalizedSlug('blog', prevPost.originalSlug || prevPost.slug, locale)}`, locale)}
+                  className="group flex items-center gap-3 rounded-xl border-[0.5px] border-slate-300 p-3 bg-white hover:border-accent-blue/40 transition-all duration-300 text-left"
                 >
-                  <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
-                    <IconArrowLeft size={16} />
-                    <span>
-                      {locale === 'tr' && 'Önceki Makale'}
+                  <div className="min-w-0">
+                    <span className="mb-1 flex items-center gap-1 text-[12px] font-medium text-gray-text group-hover:text-accent-blue transition-colors">
+                      <IconArrowLeft size={14} />
+                      {locale === 'tr' && 'Önceki Haber'}
                       {locale === 'en' && 'Previous Article'}
                       {locale === 'ro' && 'Articol anterior'}
                     </span>
-                  </span>
-                  <span className="text-base font-bold text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
-                    {prevPost.title}
-                  </span>
+                    <span className="block text-[14px] font-medium text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
+                      {prevPost.title}
+                    </span>
+                  </div>
                 </Link>
               ) : (
-                <div className="hidden sm:block" />
+                <div className="hidden md:block" />
               )}
 
               {nextPost ? (
                 <Link
-                  href={toLocalePath(`/blog/${nextPost.slug}`, locale)}
-                  className="group flex flex-col items-end gap-2 rounded-md border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50/50 shadow-soft hover:shadow-soft-lg hover:border-accent-blue/40 transition-all duration-300 text-right sm:col-start-2"
+                  href={toLocalePath(`/blog/${getLocalizedSlug('blog', nextPost.originalSlug || nextPost.slug, locale)}`, locale)}
+                  className="group flex items-center gap-3 rounded-xl border-[0.5px] border-slate-300 p-3 bg-white hover:border-accent-blue/40 transition-all duration-300 text-left md:col-start-2"
                 >
-                  <span className="flex items-center gap-1 text-xs font-semibold text-gray-text group-hover:text-accent-blue transition-colors">
-                    <span>
-                      {locale === 'tr' && 'Sonraki Makale'}
+                  <div className="min-w-0">
+                    <span className="mb-1 flex items-center gap-1 text-[12px] font-medium text-gray-text group-hover:text-accent-blue transition-colors">
+                      {locale === 'tr' && 'Sonraki Haber'}
                       {locale === 'en' && 'Next Article'}
                       {locale === 'ro' && 'Articol următor'}
+                      <IconArrowRight size={14} />
                     </span>
-                    <IconArrowRight size={16} />
-                  </span>
-                  <span className="text-base font-bold text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
-                    {nextPost.title}
-                  </span>
+                    <span className="block text-[14px] font-medium text-primary-black group-hover:text-secondary-blue transition-colors line-clamp-2">
+                      {nextPost.title}
+                    </span>
+                  </div>
                 </Link>
               ) : (
-                <div className="hidden sm:block" />
+                <div className="hidden md:block" />
               )}
             </div>
           </section>
 
-          <section className="clear-both mt-16 border-t border-slate-200 pt-10">
+          <section className="clear-both mx-auto mt-16 w-full max-w-none border-t border-slate-200 pt-10">
             <div className="mx-auto max-w-3xl text-center">
               <h3 className="mx-auto mb-4 max-w-2xl text-2xl font-semibold leading-tight text-primary-black md:text-3xl">
                 {f(locale, 'blogDetailPage', 'ctaTitle')}
