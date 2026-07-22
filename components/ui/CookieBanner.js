@@ -44,6 +44,7 @@ export default function CookieBanner() {
   };
 
   const declineCookies = () => {
+    localStorage.setItem(CONSENT_KEY, 'rejected');
     setIsVisible(false);
   };
 
@@ -56,7 +57,7 @@ export default function CookieBanner() {
               <button
                 onClick={declineCookies}
                 className="text-gray-400 hover:text-gray-600 transition-colors p-1.5 hover:bg-gray-100 rounded-md"
-                aria-label={t('cookie.close', 'Close')}
+                aria-label={t('cookie.close', 'Kapat')}
               >
                 <IconX size={18} />
               </button>
@@ -64,7 +65,7 @@ export default function CookieBanner() {
 
             <div className="px-4 pb-4">
               <p className="text-gray-700 text-xs sm:text-sm leading-6 mb-4">
-                {t('cookie.message', 'Folosim cookie-uri pentru a îmbunătăți experiența ta pe OnSuite. Prin utilizarea site-ului, ești de acord cu politica noastră de cookie-uri.')}
+                {t('cookie.message', 'Sitemizde deneyiminizi iyilestirmek icin cerezler kullanilir. Kabul edebilir veya reddedebilirsiniz.')}
               </p>
 
               <div className="grid grid-cols-2 gap-2">
@@ -72,20 +73,20 @@ export default function CookieBanner() {
                   onClick={acceptCookies}
                   className="bg-secondary-blue hover:bg-accent-blue text-white font-semibold py-3 px-3 rounded-md transition-all duration-300 text-sm"
                 >
-                  {t('cookie.accept', 'Acceptă')}
+                  {t('cookie.accept', 'Kabul et')}
                 </button>
                 <button
                   onClick={declineCookies}
                   className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-3 rounded-md transition-all duration-300 text-sm"
                 >
-                  {t('cookie.decline', 'Respinge')}
+                  {t('cookie.decline', 'Reddet')}
                 </button>
               </div>
               <button
                   onClick={() => globalThis.open(cookiePolicyUrl, '_blank')}
                   className="mt-3 w-full bg-transparent hover:bg-slate-50 text-accent-blue font-semibold py-2.5 px-3 rounded-md transition-colors duration-300 border border-accent-blue/35 text-sm"
                 >
-                  {t('cookie.learnMore', 'Learn more')}
+                  {t('cookie.learnMore', 'Detaylari gor')}
                 </button>
             </div>
           </div>

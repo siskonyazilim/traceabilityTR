@@ -100,38 +100,77 @@ export default async function RootLayout({ children }) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(){
-  function isLocked(el){
-    if (!el || !window.getComputedStyle) return false;
-    var styles = window.getComputedStyle(el);
-    var oy = styles.overflowY;
-    var ov = styles.overflow;
-    return oy === 'hidden' || oy === 'clip' || ov === 'hidden' || ov === 'clip';
-  }
-
   function unlockScroll(){
     var html = document.documentElement;
     var body = document.body;
     if (!html || !body) return;
 
-    if (isLocked(html)) {
-      html.style.overflowY = 'auto';
-    }
-
-    if (isLocked(body)) {
-      body.style.overflowY = 'auto';
-      body.style.overflow = 'auto';
-    }
-
+    if (html.style.overflowY === 'hidden') html.style.overflowY = 'auto';
+    if (body.style.overflowY === 'hidden') body.style.overflowY = 'auto';
+    if (body.style.overflow === 'hidden') body.style.overflow = 'auto';
     if (!body.style.overflowX) body.style.overflowX = 'hidden';
   }
 
   unlockScroll();
   window.addEventListener('load', unlockScroll, { once: true });
-  window.addEventListener('pageshow', unlockScroll);
 
   var observer = new MutationObserver(unlockScroll);
-  if (document.documentElement) observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style', 'class'] });
-  if (document.body) observer.observe(document.body, { attributes: true, attributeFilter: ['style', 'class'] });
+  if (document.documentElement) observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
+  if (document.body) observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+})();`,
+          }}
+        />
+        <Script
+          id="cerezgo-hide-mobile-fab"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  function isMobile(){
+    return window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+  }
+
+  function looksLikeFloatingCircle(el){
+    if (!el || el.nodeType !== 1) return false;
+
+    var cs = window.getComputedStyle(el);
+    if (cs.position !== 'fixed') return false;
+    if (cs.display === 'none' || cs.visibility === 'hidden' || Number(cs.opacity) === 0) return false;
+
+    var rect = el.getBoundingClientRect();
+    if (!rect || rect.width <= 0 || rect.height <= 0) return false;
+
+    var isSmall = rect.width <= 88 && rect.height <= 88;
+    if (!isSmall) return false;
+
+    var radius = parseFloat(cs.borderTopLeftRadius || '0');
+    var isCircleLike = cs.borderRadius.indexOf('%') >= 0 || radius >= 18;
+    if (!isCircleLike) return false;
+
+    var nearBottom = (window.innerHeight - rect.bottom) <= 120;
+    var nearLeft = rect.left <= 120;
+    var nearRight = (window.innerWidth - rect.right) <= 120;
+
+    return nearBottom && (nearLeft || nearRight);
+  }
+
+  function hideFab(){
+    if (!isMobile()) return;
+
+    var nodes = document.querySelectorAll('iframe, div, button, a');
+    for (var i = 0; i < nodes.length; i += 1) {
+      var node = nodes[i];
+      if (looksLikeFloatingCircle(node)) {
+        node.style.setProperty('display', 'none', 'important');
+      }
+    }
+  }
+
+  hideFab();
+  window.addEventListener('load', hideFab, { once: true });
+  window.addEventListener('resize', hideFab);
+
+  var observer = new MutationObserver(hideFab);
+  observer.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
 })();`,
           }}
         />
