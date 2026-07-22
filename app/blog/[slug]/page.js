@@ -13,14 +13,6 @@ import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
 import { toLocalePath } from '../../../lib/i18n/dictionaries';
 /* eslint-disable react/prop-types */
 
-const stripHtml = (html) => String(html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-
-const getReadingMinutes = (html) => {
-  const words = stripHtml(html).split(' ').filter(Boolean).length;
-  const minutes = Math.max(1, Math.ceil(words / 220));
-  return minutes;
-};
-
 const normalizeBlogContent = (html) => {
   if (typeof html !== 'string') return '';
 
@@ -149,7 +141,6 @@ export default async function BlogDetailPage({ params }) {
 
   const contentWithRealHeadings = normalizeBlogContent(post.content);
   const safeContent = sanitizeRichText(contentWithRealHeadings);
-  const readingMinutes = getReadingMinutes(safeContent);
   const coverImage = post.coverImage || post.image || '';
   const hasCoverImage = Boolean(coverImage);
 
@@ -176,12 +167,6 @@ export default async function BlogDetailPage({ params }) {
             <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
               <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
               <span className="text-gray-text">{date}</span>
-              <span className="text-gray-text">•</span>
-              <span className="text-gray-text">
-                {locale === 'tr' && `${readingMinutes} dk okuma`}
-                {locale === 'en' && `${readingMinutes} min read`}
-                {locale === 'ro' && `${readingMinutes} min citire`}
-              </span>
             </div>
 
             <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-slate-900">{post.title}</h1>
