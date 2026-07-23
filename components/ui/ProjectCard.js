@@ -8,7 +8,7 @@ import { toLocalePath } from '../../lib/i18n/dictionaries';
 import { getFirstSentenceText } from '../../lib/i18n/contentLocalization';
 import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 
-export const ProjectCard = ({ project, currentPage = 1 }) => {
+export const ProjectCard = ({ project, currentPage = 1, currentSectorSlug = '' }) => {
   const { locale, t } = useLanguage();
   const projectDetailsLabel = t('cards.projectDetails', 'Detalii proiect →').split('→')[0].trim();
   let detailBasePath = '/portfolio';
@@ -94,10 +94,13 @@ export const ProjectCard = ({ project, currentPage = 1 }) => {
   }
   const localizedSlug = getLocalizedSlug('portfolio', project.slug, locale);
   const localizedPath = toLocalePath(`${detailBasePath}/${localizedSlug}`, locale);
-  const detailHref = currentPage > 1
+  const detailHref = (currentPage > 1 || currentSectorSlug)
     ? {
         pathname: localizedPath,
-        query: { fromPage: String(currentPage) },
+        query: {
+          ...(currentPage > 1 ? { fromPage: String(currentPage) } : {}),
+          ...(currentSectorSlug ? { fromSector: currentSectorSlug } : {}),
+        },
       }
     : localizedPath;
 

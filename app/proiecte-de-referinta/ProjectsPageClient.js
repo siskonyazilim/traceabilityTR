@@ -1,7 +1,23 @@
 ﻿'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+
+// Locale-independent slugs for sector filter — survives language switches
+const SECTOR_SLUG_MAP = {
+  // TR
+  'Lojistik': 'logistics', 'Otomotiv': 'automotive', 'Beyaz Eşya': 'home-appliances',
+  'Gıda & İçecek': 'food-beverage', 'Tütün': 'tobacco',
+  // EN
+  'Logistics': 'logistics', 'Automotive': 'automotive', 'Home Appliances': 'home-appliances',
+  'Food & Beverage': 'food-beverage', 'Tobacco': 'tobacco',
+  // RO
+  'Logistică': 'logistics', 'Industria auto': 'automotive', 'Electrocasnice': 'home-appliances',
+  'Alimente & Băuturi': 'food-beverage', 'Tutun': 'tobacco',
+};
+
+// Canonical order matches Turkish alphabetical: Beyaz Eşya, Gıda & İçecek, Lojistik, Otomotiv, Tütün
+const CANONICAL_SECTOR_ORDER = ['home-appliances', 'food-beverage', 'logistics', 'automotive', 'tobacco'];
 import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import SectionHeader from '../../components/ui/SectionHeader';
@@ -14,7 +30,6 @@ import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/r
 
 export default function ProjectsPageClient() {
   const { locale, t } = useLanguage();
-  const [selectedSector, setSelectedSector] = useState('');
 
   const localizedProjects = useMemo(() => {
     const projects = withReferenceProjectTimeline(
@@ -34,8 +49,29 @@ export default function ProjectsPageClient() {
       const s = (p.sector || '').trim();
       if (s) seen.add(s);
     }
-    return [...seen].sort((a, b) => a.localeCompare(b, locale));
+    return [...seen].sort((a, b) => {
+      const aIdx = CANONICAL_SECTOR_ORDER.indexOf(SECTOR_SLUG_MAP[a] || '');
+      const bIdx = CANONICAL_SECTOR_ORDER.indexOf(SECTOR_SLUG_MAP[b] || '');
+      const aPos = aIdx === -1 ? 999 : aIdx;
+      const bPos = bIdx === -1 ? 999 : bIdx;
+      return aPos !== bPos ? aPos - bPos : a.localeCompare(b, locale);
+    });
   }, [localizedProjects, locale]);
+
+  const pageSize = 9;
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParamsString = searchParams.toString();
+
+  // Sector filter — stored as a locale-independent slug in ?sector=... query param
+  const sectorSlug = searchParams.get('sector') || '';
+  const selectedSector = useMemo(
+    () => sectorSlug
+      ? (sectors.find((s) => SECTOR_SLUG_MAP[s] === sectorSlug) || '')
+      : '',
+    [sectorSlug, sectors]
+  );
 
   const filteredProjects = useMemo(
     () => selectedSector
@@ -43,12 +79,6 @@ export default function ProjectsPageClient() {
       : localizedProjects,
     [localizedProjects, selectedSector]
   );
-
-  const pageSize = 9;
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParamsString = searchParams.toString();
 
   const pageFromQuery = Number.parseInt(searchParams.get('page') || '1', 10);
   const normalizedPageFromQuery = Number.isFinite(pageFromQuery) && pageFromQuery > 0 ? pageFromQuery : 1;
@@ -72,9 +102,17 @@ export default function ProjectsPageClient() {
     }
   };
 
-  const handleSectorChange = (value) => {
-    setSelectedSector(value);
-    updatePage(1);
+  const handleSectorChange = (sectorName) => {
+    const params = new URLSearchParams(searchParamsString);
+    if (!sectorName) {
+      params.delete('sector');
+    } else {
+      const slug = SECTOR_SLUG_MAP[sectorName] || sectorName.toLowerCase().replace(/\s+/g, '-');
+      params.set('sector', slug);
+    }
+    params.delete('page'); // reset to page 1
+    const nextQuery = params.toString();
+    router.replace(nextQuery ? `${pathname}?${nextQuery}` : pathname, { scroll: false });
   };
 
   const currentProjects = useMemo(() => {
@@ -133,7 +171,7 @@ export default function ProjectsPageClient() {
         {currentProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7">
             {currentProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} currentPage={currentPage} />
+              <ProjectCard key={project.id} project={project} currentPage={currentPage} currentSectorSlug={sectorSlug} />
             ))}
           </div>
         ) : (

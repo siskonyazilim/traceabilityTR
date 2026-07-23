@@ -62,19 +62,20 @@ export const Header = () => {
 
   const handleLocaleChange = async (nextLocaleCode) => {
     await setLocale(nextLocaleCode);
+    // Preserve current query params (e.g. ?page=2) when switching locale
+    const currentSearch = typeof window !== 'undefined' ? window.location.search : '';
     const alternateLink = document.querySelector(`link[rel="alternate"][hreflang="${nextLocaleCode}"]`);
     if (alternateLink) {
       try {
         const url = new URL(alternateLink.href);
-        router.push(url.pathname + url.search + url.hash);
+        router.push(url.pathname + currentSearch + url.hash);
       } catch (error) {
         console.warn('Could not parse alternate URL, falling back to simple local path:', error);
-        router.push(toLocalePath(currentPathForLocale, nextLocaleCode));
+        router.push(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch);
       }
     } else {
-      router.push(toLocalePath(currentPathForLocale, nextLocaleCode));
+      router.push(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch);
     }
-    router.refresh();
   };
 
   useEffect(() => {

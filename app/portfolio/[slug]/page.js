@@ -186,13 +186,17 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const project = localizedProjects.find((p) => p.slug === baseSlug);
   const fromPageRaw = resolvedSearchParams?.fromPage;
   const fromPage = Number.parseInt(Array.isArray(fromPageRaw) ? fromPageRaw[0] : fromPageRaw || '1', 10);
+  const fromSectorRaw = resolvedSearchParams?.fromSector;
+  const fromSector = Array.isArray(fromSectorRaw) ? fromSectorRaw[0] : (fromSectorRaw || '');
   const listPath = locale === 'en'
     ? '/reference-projects'
     : (locale === 'ro' ? '/proiecte-de-referinta' : '/portfolio');
   const localizedListPath = toLocalePath(listPath, locale);
-  const backHref = Number.isFinite(fromPage) && fromPage > 1
-    ? `${localizedListPath}?page=${fromPage}`
-    : localizedListPath;
+  const backParams = new URLSearchParams();
+  if (Number.isFinite(fromPage) && fromPage > 1) backParams.set('page', String(fromPage));
+  if (fromSector) backParams.set('sector', fromSector);
+  const backQuery = backParams.toString();
+  const backHref = backQuery ? `${localizedListPath}?${backQuery}` : localizedListPath;
 
   if (!project) notFound();
 
