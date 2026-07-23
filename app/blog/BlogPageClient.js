@@ -43,7 +43,7 @@ export default function BlogPageClient() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pb-16">
       <div className="pt-24 md:pt-28">
 
-      <Container size="xl">
+      <Container size="xl" className="max-w-[1450px]">
         <SectionHeader
           title={t('blogPage.heroTitle', 'Noutăți, ghiduri și tendințe în trasabilitate')}
           subtitle={t('blogPage.heroSubtitle', 'Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.')}
@@ -57,7 +57,7 @@ export default function BlogPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 px-2 sm:px-4 mb-12"
               >
                 {paginatedPosts.map((post, index) => (
                   <motion.div

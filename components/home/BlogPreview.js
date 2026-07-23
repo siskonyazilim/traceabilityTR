@@ -94,7 +94,7 @@ export const BlogPreview = () => {
       <div className="absolute top-10 left-10 w-72 h-72 bg-accent-blue/5 rounded-md blur-3xl"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-secondary-blue/5 rounded-md blur-3xl"></div>
 
-      <Container size="xl" className="relative z-10">
+      <Container size="xl" className="relative z-10 max-w-[1450px]">
         <SectionHeader
           title={t('sections.blogPreviewTitle', 'Blogdan Son Haberler')}
           subtitle={t('sections.blogPreviewSubtitle', 'Endüstri ve teknoloji gündeminden en güncel içerikleri keşfedin.')}
@@ -121,7 +121,7 @@ export const BlogPreview = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 px-2 sm:px-4">
             {visiblePosts.map((post) => (
               <div key={`${post.id}-${currentIndex}`} className="h-full">
                 <BlogCard post={post} />

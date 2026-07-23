@@ -60,16 +60,16 @@ export const BlogCard = ({
           <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/40 to-transparent" />
 
           {/* Category badge floating on the image */}
-          <span className="absolute top-3 left-3 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-accent-blue uppercase tracking-wide shadow-sm">
+          <span className="absolute top-4 left-5 rounded-full bg-white/95 backdrop-blur-sm px-4 py-1.5 text-xs font-semibold text-accent-blue uppercase tracking-wide shadow-sm">
             {post.category}
           </span>
         </div>
 
         {/* Content */}
-        <div className="flex flex-1 flex-col p-5 md:p-6 text-left">
+        <div className="flex flex-1 flex-col px-6 md:px-8 py-6 md:py-7 text-left">
           <span className="text-xs text-gray-text mb-2">{date}</span>
 
-          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-2 line-clamp-2 min-h-[3.5rem] group-hover:text-accent-blue transition-colors">
+          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-2 line-clamp-3 min-h-[4.5rem] group-hover:text-accent-blue transition-colors">
             {post.title}
           </h3>
 

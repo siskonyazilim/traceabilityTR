@@ -314,7 +314,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2021-10-04',
     author: 'Admin',
-    image: '/images/blog/what_is_traceability-1288x724-1-uai-516x344.webp',
+    image: '/images/blog/siskon_izlenebilirlik_nedir.jpg',
     excerpt: 'Odata cu cresterea cerintelor de calitate, sistemele de trasabilitate reduc erorile, optimizeaza costurile si sustin imbunatatirea continua.',
     content: `
       <p>Odata cu avansul tehnologiei, regulile jocului in sectorul manufacturier se schimba. Fie ca vorbim despre companii mari sau IMM-uri, multe organizatii din aceeasi industrie folosesc astazi tehnologii similare de productie. Asadar, ce diferentiaza cu adevarat companiile intr-un mediu atat de competitiv? Raspunsul este elementul care schimba jocul.</p>
