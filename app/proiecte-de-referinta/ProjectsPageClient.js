@@ -101,25 +101,33 @@ export default function ProjectsPageClient() {
           </p>
         </div>
 
-        {/* ── Filter dropdown left ── */}
-        <div className="mb-8">
-          <div className="relative inline-block">
-            <select
-              value={selectedSector}
-              onChange={(e) => handleSectorChange(e.target.value)}
-              className="appearance-none pl-4 pr-10 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-primary-black font-medium shadow-sm cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-blue/30 focus:border-accent-blue transition-colors min-w-[200px]"
+        {/* ── Filter pill buttons ── */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <button
+            type="button"
+            onClick={() => handleSectorChange('')}
+            className={`px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-150 ${
+              selectedSector === ''
+                ? 'bg-secondary-blue text-white border-secondary-blue shadow-sm'
+                : 'bg-white text-slate-blue border-gray-light hover:border-secondary-blue hover:text-secondary-blue'
+            }`}
+          >
+            {allLabel}
+          </button>
+          {sectors.map((s) => (
+            <button
+              key={s}
+              type="button"
+              onClick={() => handleSectorChange(s)}
+              className={`px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-150 ${
+                selectedSector === s
+                  ? 'bg-secondary-blue text-white border-secondary-blue shadow-sm'
+                  : 'bg-white text-slate-blue border-gray-light hover:border-secondary-blue hover:text-secondary-blue'
+              }`}
             >
-              <option value="">{allLabel}</option>
-              {sectors.map((s) => (
-                <option key={s} value={s}>{s}</option>
-              ))}
-            </select>
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </div>
+              {s}
+            </button>
+          ))}
         </div>
 
         {currentProjects.length > 0 ? (
