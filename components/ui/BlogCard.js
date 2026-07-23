@@ -66,18 +66,18 @@ export const BlogCard = ({
         </div>
 
         {/* Content */}
-        <div className="flex flex-1 flex-col px-6 md:px-8 py-6 md:py-7 text-left">
+        <div className="flex flex-1 flex-col px-6 md:px-8 py-6 md:py-7 text-center">
           <span className="text-xs text-gray-text mb-2">{date}</span>
 
           <h3 className="text-lg md:text-xl font-bold text-primary-black mb-2 line-clamp-3 min-h-[4.5rem] group-hover:text-accent-blue transition-colors">
             {post.title}
           </h3>
 
-          <p className="text-sm text-gray-text leading-6 mb-4 min-h-[4.5rem]">
+          <p className="text-sm text-gray-text leading-6 mb-4 min-h-[4.5rem] text-justify px-7">
             {post.excerpt}
           </p>
 
-          <span className="card-cta-mini mt-auto inline-flex items-center gap-1 text-accent-blue font-semibold text-sm">
+          <span className="card-cta-mini mt-auto mx-auto inline-flex items-center gap-1 text-accent-blue font-semibold text-sm">
             {readMoreLabel}
             <svg className="card-cta-mini-icon w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
