@@ -118,7 +118,7 @@ export const StrategicPartners = () => {
                   className="h-full rounded-md bg-gradient-to-b from-white to-slate-50/70 border border-slate-200 shadow-soft shadow-soft-hover hover:border-accent-blue transition-all duration-300 overflow-hidden group"
                 >
                   {/* Logo */}
-                  <div className="h-40 flex items-center justify-center p-6 bg-white relative overflow-hidden">
+                  <div className="h-44 flex items-center justify-center p-6 bg-white relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10 w-full h-full flex items-center justify-center">
                       <img
@@ -136,10 +136,10 @@ export const StrategicPartners = () => {
                   </div>
 
                   <div className="p-6 md:p-7 h-full flex flex-col items-center text-center">
-                    <h3 className="text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem] max-w-[16.5rem] mx-auto flex items-center justify-center">
+                    <h3 className="text-xl font-bold text-primary-black mb-3 h-[4.75rem] line-clamp-3 overflow-hidden flex items-center justify-center text-center group-hover:text-accent-blue transition-colors max-w-[16.5rem] mx-auto">
                       {partner.name}
                     </h3>
-                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-7 max-w-[18.5rem] mx-auto min-h-[5.25rem]">
+                    <p className="card-description-copy card-description-block text-sm text-gray-text leading-6 mb-4 h-[4.5rem] line-clamp-3 overflow-hidden text-justify [text-justify:inter-word] px-3">
                       {getFirstSentenceText(partner.description)}
                     </p>
                     <span className="card-cta-mini mt-auto mx-auto">

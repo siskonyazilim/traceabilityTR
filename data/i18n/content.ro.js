@@ -91,7 +91,7 @@ export const contentRo = {
     },
   ],
   performanceMetrics: {
-    labels: ['Clienți mulțumiți', 'Țări', 'Proiecte globale', 'Colegi'],
+    labels: ['Clienți mulțumiți', 'Țări', 'Fabrici', 'Colegi'],
   },
   solutions: {
     1: {

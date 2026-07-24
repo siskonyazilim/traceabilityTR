@@ -35,8 +35,8 @@ export const BlogCard = ({
         href={toLocalePath(`/blog/${post.slug}`, locale)}
         className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white shadow-soft shadow-soft-hover hover:border-accent-blue hover:-translate-y-1 transition-all duration-300 overflow-hidden"
       >
-        {/* Blog image — full width, taller, bleeds to card edges */}
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+        {/* Blog image — fixed height 176px */}
+        <div className="relative h-44 w-full overflow-hidden bg-slate-100">
           {imageError ? (
             <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-blue to-accent-green">
               <div className="text-white text-lg font-semibold tracking-wide">BLOG</div>
@@ -69,11 +69,11 @@ export const BlogCard = ({
         <div className="flex flex-1 flex-col px-6 md:px-8 py-6 md:py-7 text-center">
           <span className="text-xs text-gray-text mb-2">{date}</span>
 
-          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-2 line-clamp-3 min-h-[4.5rem] group-hover:text-accent-blue transition-colors">
+          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-2 h-[4.75rem] line-clamp-3 overflow-hidden flex items-center justify-center text-center group-hover:text-accent-blue transition-colors">
             {post.title}
           </h3>
 
-          <p className="text-sm text-gray-text leading-6 mb-4 min-h-[4.5rem] text-justify px-7">
+          <p className="text-sm text-gray-text leading-6 mb-4 h-[4.5rem] line-clamp-3 overflow-hidden text-justify [text-justify:inter-word] px-3">
             {post.excerpt}
           </p>
 

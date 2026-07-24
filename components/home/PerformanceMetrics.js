@@ -64,14 +64,14 @@ export const PerformanceMetrics = () => {
   const labels = getPerformanceMetricLabels([
     'Clienți mulțumiți',
     'Țări',
-    'Proiecte globale',
+    'Fabrici',
     'Colegi',
   ], locale);
 
   const metrics = [
     { end: 500, label: labels[0], suffix: '+' },
     { end: 40, label: labels[1], suffix: '+' },
-    { end: 4, label: labels[2], suffix: '' },
+    { end: 60, label: labels[2], suffix: '+' },
     { end: 90, label: labels[3], suffix: '+' },
   ];
 

@@ -139,11 +139,11 @@ export const ProjectCard = ({ project, currentPage = 1, currentSectorSlug = '' }
             </span>
           </div>
 
-          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-3 group-hover:text-accent-blue transition-colors min-h-[3.2rem]">
+          <h3 className="text-lg md:text-xl font-bold text-primary-black mb-3 h-[4.75rem] line-clamp-3 overflow-hidden flex items-center justify-center text-center group-hover:text-accent-blue transition-colors">
             {project.title}
           </h3>
 
-          <p className="card-description-copy card-description-block text-gray-text text-sm md:text-base leading-relaxed mb-5 flex-1 max-w-none mx-auto">
+          <p className="card-description-copy card-description-block text-gray-text text-sm leading-6 mb-4 h-[4.5rem] line-clamp-3 overflow-hidden text-justify [text-justify:inter-word] px-3">
             {getFirstSentenceText(project.description)}
           </p>
 
