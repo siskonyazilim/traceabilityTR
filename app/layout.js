@@ -88,167 +88,112 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <head>
-        {/* ── CerezGo ────────────────────────────────────────────────────────────
-            beforeInteractive → SSR sırasında <head>'e <script src="..."> olarak
-            basılır. GTM afterInteractive ile geldiğinden CerezGo DOM'da her
-            zaman GTM'den ÖNCE görünür → CerezGoValidationError olmaz.
-            CerezGo zaten kendi başlatılışında gtag consent defaults'ı set eder;
-            ayrı bir inline script'e gerek yok.
-            Blocking overlay: afterInteractive cerezgo-scroll-unlock ile
-            Shadow DOM ::backdrop fix çözüyor.
+        {/* ── Cerezgo + GTM — ertelenmiş yükleme ────────────────────────────────
+            NEDEN: Cerezgo'nun overlay'i sayfa yüklenir yüklenmez (beforeInteractive/
+            afterInteractive) DOM'a binerse, kullanıcı henüz hiçbir şeyle etkileşime
+            geçmeden tıklama/scroll kilidi devreye giriyor. Bunu "bypass" script'leriyle
+            zorla açmak yerine, Cerezgo'yu kullanıcının ilk gerçek etkileşimine
+            (scroll / tıklama / dokunma / tuş) veya en geç 3.5 saniyelik idle süresine
+            kadar ERTELİYORUZ. Böylece kullanıcı sayfayla zaten etkileşime geçmiş
+            oluyor ve overlay ortaya çıktığında scroll/tıklama native olarak çalışıyor.
+            Cerezgo yüklenip hazır olduktan SONRA GTM enjekte ediliyor — bu da
+            "CerezGoValidationError: script GTM'den önce olmalı" hatasını organik
+            biçimde çözüyor; ayrı bir sıralama hilesi gerekmiyor.
+            Not: Herhangi bir overlay/pointer-events/overflow zorla ezme (bypass)
+            script'i YOK. Cerezgo'nun rıza mantığına dokunulmuyor.
         ─────────────────────────────────────────────────────────────────────── */}
         <Script
-          id="cerezgo-script"
-          src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
-          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM="
-          data-id="nt"
-          strategy="beforeInteractive"
-        />
-
-        {/* 2) GTM — Cerezgo'dan SONRA, aynı strateji (afterInteractive).
-               Önceki haliyle "lazyOnload" kullanılıyordu; bu, Cerezgo'nun
-               GTM script tag'ini DOM'da ararken bulamamasına ve konsol
-               hatasına yol açmış olabilir. Strateji artık eşitlendi. */}
-        <Script
-          id="gtm-head"
+          id="analytics-bootstrap"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-547XQ7CS');`,
-          }}
-        />
+            __html: `(() => {
+  const host = window.location?.hostname || '';
+  const isLocalHost = host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local');
+  if (isLocalHost) return;
 
-        {/* Not: "cerezgo-scroll-unlock" (overlay bypass) script'i kaldırıldı.
-               O script, kullanıcı onay vermeden Cerezgo'nun tıklama kilidini
-               zorla devre dışı bırakıyordu; bu da rızasız veri işlemeye
-               kapı açarak KVKK/GDPR uyumluluğunu bozuyordu. Script sırası
-               düzeldiği için banner artık normal şekilde kapanmalı; bypass'a
-               ihtiyaç kalmamalı. */}
+  let initialized = false;
+  let idleTimer = null;
 
-        {/* ── CerezGo Bypass – Shadow DOM ::backdrop fix ─────────────────────────
-            ROOT CAUSE: CerezGo bir Web Component (<cerezgo-app>) + Shadow DOM
-            kullanıyor. Shadow DOM içindeki <dialog popover="manual"> browser'ın
-            "top layer"ında açılıyor ve ::backdrop pseudo-element'i tüm sayfayı
-            kaplayarak pointer event'leri yutuyor. Normal CSS selectorları
-            Shadow DOM'a giremez; JS ile shadow root'a style inject etmek gerekiyor.
-            Ayrıca CerezGo body'ye inline overflow:hidden koyuyor — mobil scroll'u
-            öldürüyor, onu da setInterval ile sıfırlıyoruz.
-        ─────────────────────────────────────────────────────────────────────── */}
-        <Script
-          id="cerezgo-scroll-unlock"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(){
-  var TICK = 0, MAX = 1500, pid;
-
-  /* 1 — Shadow DOM'a ::backdrop fix inject et */
-  function fix_backdrop() {
-    var app = document.querySelector('cerezgo-app');
-    if (!app || !app.shadowRoot) return false;
-    if (app.shadowRoot.getElementById('cgbdfix')) return true;
-    var s = document.createElement('style');
-    s.id = 'cgbdfix';
-    s.textContent =
-      '::backdrop{pointer-events:none!important;background:transparent!important}' +
-      'dialog::backdrop{pointer-events:none!important;background:transparent!important}';
-    app.shadowRoot.appendChild(s);
-    return true;
-  }
-
-  /* 2 — Body/html kilitleri: koşulsuz sıfırla (mobil scroll için kritik) */
-  function fix_body() {
-    var H = document.documentElement, B = document.body;
-    if (!H || !B) return;
-    var els = [H, B];
-    for (var i = 0; i < els.length; i++) {
-      els[i].style.setProperty('overflow',            'auto', 'important');
-      els[i].style.setProperty('overflow-y',          'auto', 'important');
-      els[i].style.setProperty('pointer-events',      'auto', 'important');
-      els[i].style.setProperty('touch-action',        'auto', 'important');
-      els[i].style.setProperty('overscroll-behavior', 'auto', 'important');
+  const cleanup = () => {
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach((eventName) => {
+      window.removeEventListener(eventName, initOnUserInteraction, true);
+    });
+    if (idleTimer) {
+      clearTimeout(idleTimer);
+      idleTimer = null;
     }
-    if (B.style.position === 'fixed' || B.style.position === 'sticky') {
-      B.style.setProperty('position', 'relative', 'important');
+  };
+
+  const loadGtm = () => {
+    if (document.getElementById('gtm-script')) return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+    const firstScript = document.getElementsByTagName('script')[0];
+    const gtmScript = document.createElement('script');
+    gtmScript.id = 'gtm-script';
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-547XQ7CS';
+
+    if (firstScript && firstScript.parentNode) {
+      firstScript.parentNode.insertBefore(gtmScript, firstScript);
+    } else {
+      (document.head || document.documentElement).appendChild(gtmScript);
     }
-  }
 
-  function run() {
-    fix_body();
-    fix_backdrop();
-    TICK++;
-    if (TICK >= MAX) clearInterval(pid);
-  }
+    cleanup();
+  };
 
-  run();
-  pid = setInterval(run, 200);
-  window.addEventListener('load', run);
-  document.addEventListener('touchstart', run, { passive: true, once: true });
-  window.addEventListener('resize', fix_body);
-})();`,
-          }}
-        />
-
-        <Script
-          id="cerezgo-hide-mobile-fab"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(){
-  function isMobile(){
-    return window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
-  }
-
-  function looksLikeFloatingCircle(el){
-    if (!el || el.nodeType !== 1) return false;
-
-    var cs = window.getComputedStyle(el);
-    if (cs.position !== 'fixed') return false;
-    if (cs.display === 'none' || cs.visibility === 'hidden' || Number(cs.opacity) === 0) return false;
-
-    var rect = el.getBoundingClientRect();
-    if (!rect || rect.width <= 0 || rect.height <= 0) return false;
-
-    var isSmall = rect.width <= 88 && rect.height <= 88;
-    if (!isSmall) return false;
-
-    var radius = parseFloat(cs.borderTopLeftRadius || '0');
-    var isCircleLike = cs.borderRadius.indexOf('%') >= 0 || radius >= 18;
-    if (!isCircleLike) return false;
-
-    var nearBottom = (window.innerHeight - rect.bottom) <= 120;
-    var nearLeft = rect.left <= 120;
-    var nearRight = (window.innerWidth - rect.right) <= 120;
-
-    return nearBottom && (nearLeft || nearRight);
-  }
-
-  function hideFab(){
-    if (!isMobile()) return;
-
-    var nodes = document.querySelectorAll('iframe, div, button, a');
-    for (var i = 0; i < nodes.length; i += 1) {
-      var node = nodes[i];
-      if (looksLikeFloatingCircle(node)) {
-        node.style.setProperty('display', 'none', 'important');
+  const ensureCerezGoThenLoadGtm = () => {
+    const existingCerez = document.getElementById('cerezgo-script');
+    if (existingCerez) {
+      if (existingCerez.getAttribute('data-ready') === '1') {
+        loadGtm();
+      } else {
+        existingCerez.addEventListener('load', loadGtm, { once: true });
+        existingCerez.addEventListener('error', loadGtm, { once: true });
       }
+      return;
     }
-  }
 
-  hideFab();
-  window.addEventListener('load', hideFab, { once: true });
-  window.addEventListener('resize', hideFab);
+    const cerez = document.createElement('script');
+    cerez.id = 'cerezgo-script';
+    cerez.async = true;
+    cerez.defer = true;
+    cerez.src = 'https://cdn.cerezgo.com/file/cerezgo-v3.min.js';
+    cerez.setAttribute('data-key', 'tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM=');
+    cerez.setAttribute('data-id', 'nt');
+    cerez.addEventListener('load', () => {
+      cerez.setAttribute('data-ready', '1');
+      loadGtm();
+    }, { once: true });
+    cerez.addEventListener('error', loadGtm, { once: true });
+    (document.head || document.documentElement).appendChild(cerez);
+  };
 
-  var observer = new MutationObserver(hideFab);
-  observer.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+  const initDeferredAnalytics = () => {
+    if (initialized) return;
+    initialized = true;
+    ensureCerezGoThenLoadGtm();
+  };
+
+  const initOnUserInteraction = () => {
+    initDeferredAnalytics();
+  };
+
+  ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach((eventName) => {
+    window.addEventListener(eventName, initOnUserInteraction, { once: true, passive: true, capture: true });
+  });
+
+  idleTimer = window.setTimeout(initDeferredAnalytics, 3500);
 })();`,
           }}
         />
 
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <BreadcrumbSchema /> 
+        <BreadcrumbSchema />
       </head>
       <body className={kanit.variable} suppressHydrationWarning>
         <noscript>
