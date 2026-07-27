@@ -91,6 +91,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barkod-gecisi</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barcode-transition</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://izlenebilirlik.com.tr/catalog/products/a-plus-plus-plus-track-and-trace</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -249,6 +261,12 @@
   <url>
     <loc>https://izlenebilirlik.com.tr/en/blog/what-are-traceability-data-definition-of-traceability</loc>
     <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/en/blog/gs1-sunrise-2027-2d-barcode-transition</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1033,6 +1051,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://izlenebilirlik.com.tr/ro/blog/gs1-sunrise-2027-2d-barcode-transition</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://izlenebilirlik.com.tr/ro/catalog/products/a-plus-plus-plus-track-and-trace</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -1617,6 +1641,12 @@
   <url>
     <loc>https://izlenebilirlik.com.tr/tr/blog/what-are-traceability-data-definition-of-traceability</loc>
     <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/tr/blog/gs1-sunrise-2027-2d-barkod-gecisi</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

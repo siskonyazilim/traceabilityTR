@@ -185,20 +185,21 @@ export default async function BlogDetailPage({ params }) {
             </div>
           </header>
 
-          <figure className="relative mb-10 mx-auto w-full max-w-none h-[340px] md:h-[560px] overflow-hidden rounded-xl bg-slate-100">
+          <figure className="mb-10 mx-auto w-full max-w-none overflow-hidden rounded-xl bg-slate-100">
             {hasCoverImage ? (
               <Image
                 src={coverImage}
                 alt={post.title}
-                fill
+                width={0}
+                height={0}
                 sizes="100vw"
-                className="object-cover"
+                className="w-full h-auto"
                 quality={92}
                 priority
                 fetchPriority="high"
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center bg-slate-100 text-slate-500">
+              <div className="flex h-[340px] md:h-[480px] items-center justify-center bg-slate-100 text-slate-500">
                 <div className="flex items-center gap-2 text-sm font-medium">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                     <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="1.7" />
