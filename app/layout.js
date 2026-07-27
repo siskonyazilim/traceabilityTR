@@ -128,6 +128,67 @@ export default async function RootLayout({ children }) {
   let idleTimer = null;
   const startedAt = performance.now();
 
+  /* ── Cerezgo ::backdrop dar kapsamlı düzeltme ──────────────────────────
+     NEDEN: Cerezgo banner'ı native <dialog>.showModal() ile açıyor. Tarayıcı
+     bu durumda otomatik bir ::backdrop pseudo-element ekliyor ve bu katman
+     TÜM viewport'u kaplayıp altındaki her şeyin tıklamasını yutuyor —
+     banner görsel olarak küçük bir kutu olsa bile.
+     BU FIX SADECE: (a) ::backdrop'u tıklanamaz + şeffaf yapar, (b) body'nin
+     dialog açılırken kilitlenen scroll'unu geri açar.
+     BU FIX ASLA: banner'ı gizlemez, butonlarını etkilemez, rıza/consent
+     mantığına dokunmaz, GTM/Cerezgo entegrasyonunu bypass etmez. Kullanıcı
+     hâlâ "Kabul Et/Reddet" seçmeden banner kapanmaz; sadece o sırada
+     arka plandaki sayfayla da normal etkileşime girebilir. */
+  let backdropFixAttempts = 0;
+  const MAX_BACKDROP_ATTEMPTS = 50; // 50 x 100ms = 5sn üst sınır
+
+  function injectBackdropStyle(shadowRoot) {
+    if (shadowRoot.getElementById('cg-backdrop-fix')) return true;
+    const style = document.createElement('style');
+    style.id = 'cg-backdrop-fix';
+    style.textContent =
+      '::backdrop{pointer-events:none!important;background:transparent!important}' +
+      'dialog::backdrop{pointer-events:none!important;background:transparent!important}';
+    shadowRoot.appendChild(style);
+    log('✅ Shadow DOM ::backdrop fix enjekte edildi.');
+    return true;
+  }
+
+  function unlockBodyScroll() {
+    const b = document.body;
+    if (b && b.style.overflow === 'hidden') {
+      b.style.setProperty('overflow', 'auto', 'important');
+      log('body overflow:hidden tespit edildi, auto\\'ya çevrildi.');
+    }
+  }
+
+  function fixCerezgoBackdrop() {
+    const tryFix = () => {
+      const app = document.querySelector('cerezgo-app');
+      const ok = app && app.shadowRoot && injectBackdropStyle(app.shadowRoot);
+      unlockBodyScroll();
+      backdropFixAttempts++;
+      if (ok) {
+        log(\`Backdrop fix \${backdropFixAttempts}. denemede uygulandı.\`);
+        // Dialog kapanıp yeniden açılsa da body overflow tekrar hidden
+        // olabileceğinden, kısa süreliğine body'yi izlemeye devam ediyoruz.
+        let watchTicks = 0;
+        const watcher = setInterval(() => {
+          unlockBodyScroll();
+          watchTicks++;
+          if (watchTicks > 150) clearInterval(watcher); // ~30sn sonra durur
+        }, 200);
+        return;
+      }
+      if (backdropFixAttempts < MAX_BACKDROP_ATTEMPTS) {
+        setTimeout(tryFix, 100);
+      } else {
+        logWarn('cerezgo-app / shadowRoot bulunamadı, backdrop fix uygulanamadı.');
+      }
+    };
+    tryFix();
+  }
+
   const cleanup = () => {
     ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach((eventName) => {
       window.removeEventListener(eventName, initOnUserInteraction, true);
@@ -195,6 +256,7 @@ export default async function RootLayout({ children }) {
       log(\`✅ Cerezgo script yüklendi (\${elapsed}ms). GTM sırada.\`);
       cerez.setAttribute('data-ready', '1');
       loadGtm();
+      fixCerezgoBackdrop();
     }, { once: true });
     cerez.addEventListener('error', () => {
       logError('❌ Cerezgo script yüklenemedi. GTM yine de yüklenecek.');
