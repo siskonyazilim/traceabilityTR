@@ -88,6 +88,30 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <head>
+        {/* ── Google Consent Mode v2 varsayılan değerleri ──────────────────────────
+            GTM'den ÖNCE çalışmalı. CerezGo bu değerleri kullanıcı tercihi
+            yaptıktan sonra günceller. beforeInteractive → <head>'e inline basılır.
+        ─────────────────────────────────────────────────────────────────────── */}
+        <Script
+          id="consent-defaults"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage':    'denied',
+  'ad_storage':           'denied',
+  'ad_user_data':         'denied',
+  'ad_personalization':   'denied',
+  'functionality_storage':'denied',
+  'personalization_storage':'denied',
+  'security_storage':     'granted',
+  'wait_for_update':       2000
+});
+gtag('set', 'ads_data_redaction', true);
+gtag('set', 'url_passthrough', false);`,
+          }}
+        />
         <Script
           id="cerezgo-script"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
