@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 /* ─── CerezGo & Cookie Overlay Non-Blocking Rules ───────────────────────────
-   Ensures that cookie consent popups and CerezGo backdrops/overlays NEVER block
-   user clicks, navigation, or scrolling on desktop or mobile viewports.
+   CSS'in yapabileceği maksimum şeyi yapıyoruz.
+   Inline !important olan JS stilleri CSS'i yenebilir – asıl iş JS'te yapılıyor.
+   Bu kurallar JS çalışmadan önce ya da js'in aralarındaki boşluklar için güvencedir.
    ─────────────────────────────────────────────────────────────────────────── */
 
 html,
@@ -20,54 +21,34 @@ body {
   position: relative !important;
 }
 
-/* ── CerezGo backdrop/overlay: pass-through, never block clicks or scroll ── */
+/* ── Tüm CerezGo / consent / KVKK elementleri: varsayılan olarak pas-geç ── */
+/* Kural: spesifik olmayan her şey pointer-events:none → banner/widget geri açıyor */
 
-/* Target every possible CerezGo overlay/backdrop variant */
-[id*="cg-"][id*="overlay"],
-[id*="cg-"][id*="backdrop"],
-[id*="cg-"][id*="mask"],
-[id*="cg-"][id*="screen"],
-[id*="cg-"][id*="bg"],
-[class*="cg-"][class*="overlay"],
-[class*="cg-"][class*="backdrop"],
-[class*="cg-"][class*="mask"],
-[class*="cg-"][class*="screen"],
-[class*="cg-"][class*="bg"],
-[id*="cerezgo"][id*="overlay"],
-[id*="cerezgo"][id*="backdrop"],
-[id*="cerezgo"][id*="mask"],
-[class*="cerezgo"][class*="overlay"],
-[class*="cerezgo"][class*="backdrop"],
-[class*="cerezgo"][class*="mask"],
-/* Generic: any CerezGo element that fills the whole viewport */
-[id^="cg-"]:not([id*="banner"]):not([id*="widget"]):not([id*="modal-content"]),
-[class^="cg-"]:not([class*="banner"]):not([class*="widget"]):not([class*="modal-content"]) {
+[id^="cg"],   [class^="cg"],
+[id^="nt-"],  [class^="nt-"],
+[id*="cerezgo"],  [class*="cerezgo"],
+[id*="cookie"],   [class*="cookie"],
+[id*="consent"],  [class*="consent"],
+[id*="gdpr"],     [class*="gdpr"],
+[id*="kvkk"],     [class*="kvkk"] {
   pointer-events: none !important;
-  touch-action: none !important; /* let touches pass through */
+  touch-action: auto !important;
   background-color: transparent !important;
-  /* Do NOT hide — just make non-interactive so the banner still appears */
 }
 
-/* CerezGo banner / modal content: must stay fully interactive */
-[id*="cg-banner"],
-[id*="cg-banner"] *,
-[id*="cg-modal"],
-[id*="cg-modal"] *,
-[id*="cg-widget"],
-[id*="cg-widget"] *,
-[class*="cg-banner"],
-[class*="cg-banner"] *,
-[class*="cg-modal"],
-[class*="cg-modal"] *,
-[class*="cg-widget"],
-[class*="cg-widget"] *,
-[id*="cerezgo-banner"],
-[id*="cerezgo-banner"] *,
-[id*="cerezgo-modal"],
-[id*="cerezgo-modal"] * {
+/* ── Banner / Modal / Widget: tamamen etkileşimli ── */
+[id*="banner"],  [id*="banner"] *,
+[id*="modal"],   [id*="modal"] *,
+[id*="widget"],  [id*="widget"] *,
+[id*="panel"],   [id*="panel"] *,
+[class*="banner"],  [class*="banner"] *,
+[class*="modal"],   [class*="modal"] *,
+[class*="widget"],  [class*="widget"] *,
+[class*="panel"],   [class*="panel"] * {
   pointer-events: auto !important;
   touch-action: auto !important;
 }
+
 
 :root {
   --surface-0: #ffffff;

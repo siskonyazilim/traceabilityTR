@@ -12,7 +12,7 @@ export const blogPosts = [
     date: '2026-07-25',
     author: 'Admin',
     readTime: 5,
-    image: '/images/blog/gs1-sunrise-2027-2d-barkod-gecisi.png',
+    image: '/images/blog/Datamatrix.jpg',
     excerpt: 'GS1 Sunrise 2027 ile perakende satış noktaları 2027 sonuna kadar 2D barkod okuyacak. Çift işaretleme, GS1 Digital Link ve üretim hattı hazırlık adımları.',
     excerptEn: 'With GS1 Sunrise 2027, retail point-of-sale systems will read 2D barcodes by end of 2027. Dual-marking, GS1 Digital Link and production line readiness steps.',
     tags: ['GS1', '2D barkod', 'GTIN', 'Dijital Ürün Pasaportu', 'izlenebilirlik'],
@@ -20,10 +20,7 @@ export const blogPosts = [
     content: `
       <p>Perakende sektöründe elli yılı aşkın süredir kullanılan doğrusal barkod, ürün tanımlamayı otomatikleştirmiş ancak tek bir veriyi taşımakla sınırlı kalmıştır. GS1 Sunrise 2027, bu yapının yerini daha fazla veri taşıyabilen iki boyutlu (2D) barkodların almasını hedefleyen küresel bir sektör girişimidir. <strong>Ambition 2027</strong> olarak da adlandırılan hedefe göre, 2027 yılının sonuna kadar tüm perakende satış noktası sistemlerinin doğrusal barkodların yanı sıra GS1 standartlarına uygun 2D barkodları da okuyup işleyebilmesi beklenmektedir.</p>
 
-      <figure style="margin: 2rem 0; text-align: center;">
-        <img src="/images/blog/gs1-sunrise-2027-2d-barkod-gecisi.png" alt="Doğrusal barkoddan 2D barkoda geçiş şeması: ambalaj üzerinde EAN-13 ile GS1 DataMatrix ve QR kodun birlikte kullanıldığı çift işaretleme dönemi" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.12);" />
-        <figcaption style="font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem;">Doğrusal barkoddan 2D barkoda geçiş şeması. Kaynak: GS1, 2D Barcodes at Retail Point-of-Sale Implementation Guideline</figcaption>
-      </figure>
+     
 
       <h2>GS1 Sunrise 2027 Girişiminin Kapsamı</h2>
 

@@ -100,91 +100,143 @@ export default async function RootLayout({ children }) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(){
-  var BANNER_WORDS = ['banner','widget','modal-content','preference','settings'];
-  var BLOCK_WORDS  = ['backdrop','overlay','mask','screen','-bg-','-bg"'];
+  /* ─────────────────────────────────────────────────────────────────────
+     CerezGo Overlay Bypass  –  v4
+     Strateji:
+       1. body/html kilitlerini her 200 ms'de KOŞULSUZ sıfırla
+       2. Bilinen CerezGo selectorleri + herhangi inline-fixed büyük overlay'i
+          pointer-events:none yap (banner/widget hariç)
+       3. Banner gizlendikten sonra (onay verildi) tüm kalan overlay'leri temizle
+       4. MutationObserver KULLANMA – CerezGo ile sonsuz döngüye giriyor
+     ───────────────────────────────────────────────────────────────────── */
+  var TICK = 0, MAX = 1500, pid, consent_done = false;
 
-  function isBannerEl(id, cls) {
-    for (var w = 0; w < BANNER_WORDS.length; w++) {
-      if (id.indexOf(BANNER_WORDS[w]) >= 0 || cls.indexOf(BANNER_WORDS[w]) >= 0) return true;
+  /* 1 ─ Body kilitleri: koşulsuz sıfırla */
+  function body_unlock() {
+    var H = document.documentElement, B = document.body;
+    if (!H || !B) return;
+    var targets = [H, B];
+    for (var i = 0; i < targets.length; i++) {
+      var t = targets[i];
+      t.style.setProperty('overflow',            'auto', 'important');
+      t.style.setProperty('overflow-y',          'auto', 'important');
+      t.style.setProperty('pointer-events',      'auto', 'important');
+      t.style.setProperty('touch-action',        'auto', 'important');
+      t.style.setProperty('overscroll-behavior', 'auto', 'important');
     }
-    return false;
+    if (B.style.position === 'fixed' || B.style.position === 'sticky') {
+      B.style.setProperty('position', 'relative', 'important');
+    }
   }
 
-  function isBlockEl(id, cls, rect) {
-    for (var w = 0; w < BLOCK_WORDS.length; w++) {
-      if (id.indexOf(BLOCK_WORDS[w]) >= 0 || cls.indexOf(BLOCK_WORDS[w]) >= 0) return true;
-    }
-    // Full-viewport cover check
-    if (rect && rect.width >= window.innerWidth * 0.75 && rect.height >= window.innerHeight * 0.75) return true;
-    return false;
-  }
+  /* 2 ─ Overlay tespiti: banner/widget = dokunulabilir, geri kalan = pas-geç */
+  var IS_INTERACTIVE = /banner|modal|widget|preference|setting|btn|button|accept|reject|close|fab|icon|logo/;
 
-  function unlockBody() {
-    var html = document.documentElement;
-    var body = document.body;
-    if (!html || !body) return;
-
-    // Scroll kilitleri
-    ['overflow','overflowY'].forEach(function(p) {
-      if (html.style[p] === 'hidden') html.style.setProperty(p === 'overflowY' ? 'overflow-y' : 'overflow', 'auto', 'important');
-      if (body.style[p] === 'hidden') body.style.setProperty(p === 'overflowY' ? 'overflow-y' : 'overflow', 'auto', 'important');
-    });
-    // position: fixed body → mobilde sayfayı kilitler
-    if (body.style.position === 'fixed' || body.style.position === 'sticky') {
-      body.style.setProperty('position', 'relative', 'important');
-    }
-    // pointer-events kilitleri
-    if (html.style.pointerEvents === 'none') html.style.setProperty('pointer-events', 'auto', 'important');
-    if (body.style.pointerEvents === 'none') body.style.setProperty('pointer-events', 'auto', 'important');
-    // MOBİL: touch-action kilidi (iOS/Android scroll için kritik)
-    html.style.setProperty('touch-action', 'auto', 'important');
-    body.style.setProperty('touch-action', 'auto', 'important');
-    // overscroll-behavior kilidi
-    if (body.style.overscrollBehavior === 'none') body.style.setProperty('overscroll-behavior', 'auto', 'important');
-    if (html.style.overscrollBehavior === 'none') html.style.setProperty('overscroll-behavior', 'auto', 'important');
-  }
-
-  function unlockCerezGo() {
-    try {
-      var all = document.querySelectorAll('[id*="cg-"],[class*="cg-"],[id*="cerezgo"],[class*="cerezgo"]');
-      for (var i = 0; i < all.length; i++) {
-        var el = all[i];
-        var id  = (el.id || '').toLowerCase();
-        var cls = (typeof el.className === 'string' ? el.className : '').toLowerCase();
-        var rect = el.getBoundingClientRect();
-
-        if (isBannerEl(id, cls)) {
-          // Banner/widget: tıklanabilir kalmalı
-          el.style.setProperty('pointer-events', 'auto', 'important');
-          el.style.setProperty('touch-action', 'auto', 'important');
-        } else if (isBlockEl(id, cls, rect)) {
-          // Backdrop/overlay: tıklamaları geçir
-          el.style.setProperty('pointer-events', 'none', 'important');
-          el.style.setProperty('background-color', 'transparent', 'important');
-        }
+  function overlay_disable() {
+    /* 2a – CerezGo / consent adlı elementler */
+    var cg = document.querySelectorAll(
+      '[id^="cg"],[class^="cg"],[id*="cerezgo"],[class*="cerezgo"],' +
+      '[id^="nt-"],[class^="nt-"],[id*="cookie"],[class*="cookie"],' +
+      '[id*="consent"],[class*="consent"],[id*="gdpr"],[class*="gdpr"],' +
+      '[id*="kvkk"],[class*="kvkk"]'
+    );
+    for (var i = 0; i < cg.length; i++) {
+      var el = cg[i];
+      var key = ((el.id || '') + ' ' + (typeof el.className === 'string' ? el.className : '')).toLowerCase();
+      if (IS_INTERACTIVE.test(key)) {
+        el.style.setProperty('pointer-events', 'auto', 'important');
+        el.style.setProperty('touch-action',   'auto', 'important');
+      } else {
+        el.style.setProperty('pointer-events', 'none',        'important');
+        el.style.setProperty('background',     'transparent', 'important');
       }
-    } catch(e) {}
+    }
+    /* 2b – Vendor-agnostik: inline-fixed + büyük alan kaplayan her eleman */
+    var fixed = document.querySelectorAll('[style*="fixed"]');
+    var W = window.innerWidth, Hh = window.innerHeight;
+    for (var j = 0; j < fixed.length; j++) {
+      var fel = fixed[j];
+      var r   = fel.getBoundingClientRect();
+      if (r.width < W * 0.75 || r.height < Hh * 0.75) continue;
+      var fkey = ((fel.id || '') + ' ' + (typeof fel.className === 'string' ? fel.className : '')).toLowerCase();
+      if (!IS_INTERACTIVE.test(fkey)) {
+        fel.style.setProperty('pointer-events', 'none',        'important');
+        fel.style.setProperty('background',     'transparent', 'important');
+      }
+    }
   }
 
-  function unlock() { unlockBody(); unlockCerezGo(); }
-
-  // Hemen çalıştır
-  unlock();
-  // Sayfa yüklendikten sonra
-  window.addEventListener('load', unlock);
-  // Mobil: ilk dokunuşta (CerezGo henüz yüklenmediyse)
-  document.addEventListener('touchstart', unlock, { passive: true, once: true });
-  // Pencere boyutu değişince
-  window.addEventListener('resize', unlockBody);
-
-  // CerezGo DOM'a element eklediğinde / style değiştirdiğinde anında yakala
-  var obs = new MutationObserver(unlock);
-  if (document.documentElement) {
-    obs.observe(document.documentElement, {
-      attributes: true, childList: true, subtree: true,
-      attributeFilter: ['style', 'class']
-    });
+  /* 3 ─ Onay sonrası: kalan tüm overlay'leri gizle */
+  function after_consent() {
+    /* 3a – Büyük fixed overlay'leri display:none yap */
+    var fixed2 = document.querySelectorAll('[style*="fixed"]');
+    var W2 = window.innerWidth, H2 = window.innerHeight;
+    for (var i = 0; i < fixed2.length; i++) {
+      var el = fixed2[i];
+      var r  = el.getBoundingClientRect();
+      if (r.width < W2 * 0.5 || r.height < H2 * 0.5) continue;
+      var key = ((el.id || '') + ' ' + (typeof el.className === 'string' ? el.className : '')).toLowerCase();
+      if (!IS_INTERACTIVE.test(key)) {
+        el.style.setProperty('pointer-events', 'none',  'important');
+        el.style.setProperty('display',        'none',  'important');
+      }
+    }
+    /* 3b – CerezGo elementleri: widget hariç hepsini kapat */
+    var cg2 = document.querySelectorAll('[id^="cg"],[class^="cg"],[id*="cerezgo"],[class*="cerezgo"],[id^="nt-"],[class^="nt-"]');
+    for (var j = 0; j < cg2.length; j++) {
+      var cgEl = cg2[j];
+      var cgKey = ((cgEl.id || '') + ' ' + (typeof cgEl.className === 'string' ? cgEl.className : '')).toLowerCase();
+      if (/widget|fab|float/.test(cgKey)) {
+        cgEl.style.setProperty('pointer-events', 'auto', 'important'); /* widget tıklanabilir */
+      } else if (!/banner|modal/.test(cgKey)) {
+        cgEl.style.setProperty('pointer-events', 'none', 'important');
+        cgEl.style.setProperty('display',        'none', 'important');
+      }
+    }
+    body_unlock();
+    clearInterval(pid);
+    setInterval(body_unlock, 5000); /* Sadece body'yi koru, daha seyrek */
   }
+
+  /* 4 ─ Banner hâlâ görünür mü? */
+  function banner_visible() {
+    var sel = '[id*="banner"],[class*="banner"],[id*="modal-content"],[class*="modal-content"]';
+    var els = document.querySelectorAll(sel);
+    for (var k = 0; k < els.length; k++) {
+      var el  = els[k];
+      var id  = (el.id  || '').toLowerCase();
+      var cls = (typeof el.className === 'string' ? el.className : '').toLowerCase();
+      if (id.indexOf('cg') < 0 && cls.indexOf('cg') < 0 &&
+          id.indexOf('cerezgo') < 0 && cls.indexOf('cerezgo') < 0 &&
+          id.indexOf('nt-') < 0) continue;
+      var cs = window.getComputedStyle(el);
+      if (cs.display !== 'none' && cs.visibility !== 'hidden' && parseFloat(cs.opacity || '1') > 0) return true;
+    }
+    return false;
+  }
+
+  /* 5 ─ Ana poll döngüsü */
+  function run() {
+    body_unlock();
+    if (!consent_done) {
+      overlay_disable();
+      /* Banner 4 saniye sonra hâlâ görünür değilse → onay verildi */
+      if (TICK > 20 && !banner_visible()) {
+        consent_done = true;
+        after_consent();
+        return;
+      }
+    }
+    TICK++;
+    if (TICK >= MAX) clearInterval(pid);
+  }
+
+  /* Başlat */
+  run();
+  pid = setInterval(run, 200);
+  window.addEventListener('load', run);
+  document.addEventListener('touchstart', function(){ body_unlock(); overlay_disable(); }, { passive: true, once: true });
+  window.addEventListener('resize', body_unlock);
 })();`,
           }}
         />
