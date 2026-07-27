@@ -48,7 +48,7 @@ export default function Industries() {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title={t('sections.industriesTitle', 'Urmăriți cu înțelepciune, bazat pe analize strategice și riguroase')}
+          title={t('sections.industriesTitle', 'Stratejik analizle akıllıca izleyin')}
           subtitle={t('sections.industriesSubtitle', '')}
         />
 

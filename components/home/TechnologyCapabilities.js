@@ -38,8 +38,8 @@ export default function TechnologyCapabilities() {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title={t('sections.technologyTitle', 'Capabilități și Competențe Tehnologice')}
-          subtitle={t('sections.technologySubtitle', 'Soluții avansate de trasabilitate pentru producția modernă')}
+          title={t('sections.technologyTitle', 'Teknoloji Yetkinlikleri ve Uzmanlıkları')}
+          subtitle={t('sections.technologySubtitle', 'Modern üretim için gelişmiş izlenebilirlik çözümleri')}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">

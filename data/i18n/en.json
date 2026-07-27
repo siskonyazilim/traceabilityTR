@@ -52,10 +52,12 @@
     "goToSlide": "Go to slide {{index}}"
   },
   "notFound": {
+    "codeLabel": "Error",
     "title": "Page not found",
     "description": "The content for this address is currently unavailable.",
     "home": "Back to Home",
-    "contact": "Contact"
+    "contact": "Contact",
+    "quickLinks": "You can also try these pages:"
   },
   "contactPage": {
     "eyebrow": "Contact",

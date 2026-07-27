@@ -114,7 +114,7 @@ export const BlogPreview = () => {
           <div className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10">
             <button
               onClick={handleNext}
-              aria-label={t('sections.blogNext', 'Articol următor')}
+              aria-label={t('sections.blogNext', 'Sonraki makale')}
               className="h-12 w-12 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <IconChevronRight size={20} />

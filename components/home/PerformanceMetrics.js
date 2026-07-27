@@ -92,7 +92,7 @@ export const PerformanceMetrics = () => {
       <Container size="xl" className="relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-4">
-            {t('sections.performanceTitle', 'Performanță și indicatori cuprinzători')}
+            {t('sections.performanceTitle', 'Performans ve temel metrikler')}
           </h2>
           <p className="text-base sm:text-xl text-gray-light max-w-2xl mx-auto">
             {t('sections.performanceSubtitle', 'Rezultatele noastre vorbesc de la sine')}
@@ -118,7 +118,7 @@ export const PerformanceMetrics = () => {
             onClick={handleScroll}
             className="bg-secondary-blue hover:bg-accent-blue text-white"
           >
-            {t('sections.performanceCta', 'Proiectele noastre de referință')}
+            {t('sections.performanceCta', 'Referans projelerimiz')}
           </Button>
         </div>
       </Container>

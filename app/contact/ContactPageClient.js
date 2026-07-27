@@ -145,12 +145,12 @@ export default function ContactPageClient() {
         setTimeout(() => setSubmitted(false), 3000);
       } else {
         setErrorMessage(
-          result.message || t('contactPage.errors.submitFailed', 'A apărut o eroare. Vă rugăm să încercați din nou.')
+          result.message || t('contactPage.errors.submitFailed', 'Bir hata oluştu. Lütfen tekrar deneyin.')
         );
       }
     } catch {
       setErrorMessage(
-        t('contactPage.errors.networkError', 'Eroare de rețea. Verificați conexiunea.')
+        t('contactPage.errors.networkError', 'Ağ hatası. Bağlantınızı kontrol edin.')
       );
     } finally {
       setSubmitting(false);
@@ -171,7 +171,7 @@ export default function ContactPageClient() {
         >
           <div className="mb-10 md:mb-12 rounded-md border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
             <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">{t('contactPage.eyebrow', 'Contact')}</p>
-            <h1 className="text-2xl md:text-4xl font-semibold tracking-tight leading-[1.08]">{t('contactPage.heroTitle', 'Să discutăm despre procesul tău de trasabilitate')}</h1>
+            <h1 className="text-2xl md:text-4xl font-semibold tracking-tight leading-[1.08]">{t('contactPage.heroTitle', 'İzlenebilirlik sürecinizi birlikte konuşalm')}</h1>
           </div>
         </motion.div>
       </Container>
@@ -349,7 +349,7 @@ export default function ContactPageClient() {
                 aria-invalid={errors.message ? 'true' : 'false'}
                 aria-describedby={errors.message ? 'message-error' : undefined}
                 className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white resize-none"
-                placeholder={t('contactPage.placeholders.message', 'Scrie-ți mesajul aici...')}
+                placeholder={t('contactPage.placeholders.message', 'Mesajınızı buraya yazın...')}
               />
               {errors.message && (
                 <span id="message-error" role="alert" className="text-accent-red text-sm">{errors.message.message}</span>
@@ -360,7 +360,7 @@ export default function ContactPageClient() {
               <input
                 id="privacy"
                 {...register('privacy', {
-                  required: t('contactPage.errors.privacyRequired', 'Trebuie să accepti politica de confidențialitate'),
+                  required: t('contactPage.errors.privacyRequired', 'Gizlilik politikasını kabul etmelisiniz'),
                 })}
                 type="checkbox"
                 aria-invalid={errors.privacy ? 'true' : 'false'}
@@ -370,7 +370,7 @@ export default function ContactPageClient() {
               <label htmlFor="privacy" className="text-sm text-gray-text">
                 {t('contactPage.privacyText', 'Sunt de acord cu')} {' '}
                 <Link href="/privacy-policy" className="text-accent-blue font-semibold hover:underline">
-                  {t('contactPage.privacyPolicy', 'politica de confidențialitate')}
+                  {t('contactPage.privacyPolicy', 'gizlilik politikasını')}
                 </Link>
                 {' '}*
               </label>
@@ -453,7 +453,7 @@ export default function ContactPageClient() {
                     <div className="flex gap-3">
                       <img
                         src="/icon/icon-map-pin.svg"
-                        alt={t('contactPage.locationAlt', 'Locație')}
+                        alt={t('contactPage.locationAlt', 'Konum')}
                         className="w-5 h-5 flex-shrink-0 mt-1"
                       />
                       <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
@@ -487,7 +487,7 @@ export default function ContactPageClient() {
 
                 <div className="h-[320px] lg:h-[380px] bg-gray-light">
                   <iframe
-                    title={`${office.name} ${t('contactPage.mapTitleSuffix', 'hartă')}`}
+                    title={`${office.name} ${t('contactPage.mapTitleSuffix', 'harita')}`}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

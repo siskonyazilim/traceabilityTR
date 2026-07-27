@@ -141,11 +141,11 @@ export const Header = () => {
   };
 
   const navItems = [
-    { label: t('header.solutions', 'Soluțiile Noastre'), href: '#solutions-tab' },
-    { label: t('header.industries', 'Industrii'), href: '#products-tab' },
-    { label: t('header.projects', 'Proiecte de Referință'), href: '#reference-projects' },
-    { label: t('header.partners', 'Parteneri de Soluții'), href: '#our-strategic-solution-partners' },
-    { label: t('header.contact', 'Contact'), href: toLocalePath('/contact') },
+    { label: t('header.solutions', 'Çözümlerimiz'), href: '#solutions-tab' },
+    { label: t('header.industries', 'Ürünlerimiz'), href: '#products-tab' },
+    { label: t('header.projects', 'Referans Projeler'), href: '#reference-projects' },
+    { label: t('header.partners', 'Çözüm Ortakları'), href: '#our-strategic-solution-partners' },
+    { label: t('header.contact', 'İletişim'), href: toLocalePath('/contact') },
     { label: t('header.news', 'Blog'), href: toLocalePath('/blog') },
   ];
 
@@ -209,7 +209,7 @@ export const Header = () => {
                   event.stopPropagation();
                   setIsLangOpen((prev) => !prev);
                 }}
-                aria-label={t('language.switchAria', 'Schimbă limba')}
+                aria-label={t('language.switchAria', 'Dil değiştir')}
                 className={`w-full h-10 flex items-center justify-between rounded-md px-3 text-xs font-bold transition-all duration-300 ${
                   useTransparentHeader
                     ? 'text-white bg-white/5 ring-1 ring-white/20 hover:bg-white/15 hover:ring-white/35'
@@ -249,7 +249,7 @@ export const Header = () => {
 
             <div className="lg:hidden relative w-[80px] sm:w-[92px]">
               <label htmlFor="mobile-language-select" className="sr-only">
-                {t('language.switchAria', 'Schimbă limba')}
+                {t('language.switchAria', 'Dil değiştir')}
               </label>
               <select
                 id="mobile-language-select"
@@ -260,7 +260,7 @@ export const Header = () => {
                     ? 'text-white bg-white/5 ring-1 ring-white/25 hover:bg-white/15 hover:ring-white/40'
                     : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
                 }`}
-                aria-label={t('language.switchAria', 'Schimbă limba')}
+                aria-label={t('language.switchAria', 'Dil değiştir')}
               >
                 {languageOptions.map((option) => (
                   <option key={option.code} value={option.code} className="text-primary-black bg-white">
@@ -280,7 +280,7 @@ export const Header = () => {
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label={isOpen ? t('header.closeMenu', 'Închide meniul') : t('header.openMenu', 'Deschide meniul')}
+              aria-label={isOpen ? t('header.closeMenu', 'Menüyü kapat') : t('header.openMenu', 'Menüyü aç')}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
               className={`lg:hidden p-3 rounded-md transition-colors ${

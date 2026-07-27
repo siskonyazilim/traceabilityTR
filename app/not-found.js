@@ -26,16 +26,16 @@ export default function NotFound() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-black mb-4 leading-tight">
-              {t('notFound.title', 'Pagina nu a fost găsită')}
+              {t('notFound.title', 'Sayfa bulunamadı')}
             </h1>
 
             <p className="text-base sm:text-lg text-gray-text max-w-2xl mx-auto mb-8 leading-relaxed">
-              {t('notFound.description', 'Conținutul pentru această adresă nu este disponibil momentan.')}
+              {t('notFound.description', 'Bu adrese ait içerik şu anda mevcut değil.')}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8">
               <Button as={Link} href="/" variant="solid" size="lg" className="w-full sm:w-auto">
-                {t('notFound.home', 'Înapoi la Acasă')}
+                {t('notFound.home', 'Ana Sayfaya Dön')}
               </Button>
               <Button as={Link} href="/contact" variant="outline" size="lg" className="w-full sm:w-auto">
                 {t('notFound.contact', 'Contact')}
@@ -43,16 +43,16 @@ export default function NotFound() {
             </div>
 
             <div className="pt-6 border-t border-slate-200">
-              <p className="text-sm text-slate-700 mb-3">{t('notFound.quickLinks', 'Poți încerca și aceste pagini:')}</p>
+              <p className="text-sm text-slate-700 mb-3">{t('notFound.quickLinks', 'Şu sayfaları da deneyebilirsiniz:')}</p>
               <div className="flex flex-wrap items-center justify-center gap-2.5">
                 <Link href="/blog" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
-                  {t('header.news', 'Știri')}
+                  {t('header.news', 'Blog')}
                 </Link>
                 <Link href="/proiecte-de-referinta" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
-                  {t('sections.referenceProjectsTitle', 'Proiecte de referință')}
+                  {t('sections.referenceProjectsTitle', 'Referans Projeler')}
                 </Link>
                 <Link href="/#traceability-solutions" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
-                  {t('sections.solutionsTab', 'Soluții')}
+                  {t('sections.solutionsTab', 'Çözümler')}
                 </Link>
               </div>
             </div>

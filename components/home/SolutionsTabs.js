@@ -69,12 +69,12 @@ export const SolutionsTabs = () => {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title={t('sections.solutionsProductsTitle', 'Soluții și Produse')}
-          subtitle={t('sections.solutionsProductsSubtitle', 'Gama completă de servicii și produse pentru trasabilitate')}
+          title={t('sections.solutionsProductsTitle', 'Çözümler ve Ürünler')}
+          subtitle={t('sections.solutionsProductsSubtitle', 'İzlenebilirlik için eksiksiz hizmet ve ürün yelpazemiz')}
         />
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12" role="tablist" aria-label={t('sections.solutionsProductsTitle', 'Soluții și Produse')}>
+        <div className="flex flex-wrap justify-center gap-4 mb-12" role="tablist" aria-label={t('sections.solutionsProductsTitle', 'Çözümler ve Ürünler')}>
           <button
             type="button"
             onClick={() => setActiveTab('solutions')}
@@ -88,7 +88,7 @@ export const SolutionsTabs = () => {
                 : 'bg-white border border-gray-light text-inactive-gray hover:text-secondary-blue hover:border-secondary-blue shadow-soft'
             }`}
           >
-            {t('sections.solutionsTab', 'Soluții')}
+            {t('sections.solutionsTab', 'Çözümler')}
           </button>
           <button
             type="button"

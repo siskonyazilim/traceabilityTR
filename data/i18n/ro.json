@@ -52,10 +52,12 @@
     "goToSlide": "Mergi la slide-ul {{index}}"
   },
   "notFound": {
+    "codeLabel": "Eroare",
     "title": "Pagina nu a fost găsită",
     "description": "Conținutul pentru această adresă nu este disponibil momentan.",
     "home": "Înapoi la Acasă",
-    "contact": "Contact"
+    "contact": "Contact",
+    "quickLinks": "Poți încerca și aceste pagini:"
   },
   "contactPage": {
     "eyebrow": "Contact",

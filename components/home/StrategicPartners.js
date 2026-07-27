@@ -86,8 +86,8 @@ export const StrategicPartners = () => {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title={t('sections.strategicPartnersTitle', 'Partenerii noștri strategici de soluții')}
-          subtitle={t('sections.strategicPartnersSubtitle', 'Partenerii noștri valoroși de soluții, care sunt lideri în domeniile lor și și-au dovedit succesul la nivel global.')}
+          title={t('sections.strategicPartnersTitle', 'Stratejik Çözüm Ortaklarımız')}
+          subtitle={t('sections.strategicPartnersSubtitle', 'Çözüm ortaklarımız, alanlarında lider konumda olup küresel başarılarını kanıtlamış kuruluşlardır.')}
         />
 
         <div className="relative">
@@ -104,7 +104,7 @@ export const StrategicPartners = () => {
           <div className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10">
             <button
               onClick={handleNext}
-              aria-label={t('sections.partnerNext', 'Partener următor')}
+              aria-label={t('sections.partnerNext', 'Sonraki ortak')}
               className="h-12 w-12 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
             >
               <IconChevronRight size={20} />

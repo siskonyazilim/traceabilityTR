@@ -19,12 +19,12 @@ export const HomeCta = () => {
         <div className="text-center max-w-5xl mx-auto">
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary-black mb-6 md:mb-8 leading-tight">
-            {t('homeCta.title', 'Vrei să transformi procesele tale de producție?')}
+            {t('homeCta.title', 'Üretim süreçlerinizi dönüştürmeye hazır mısınız?')}
           </h2>
 
           {/* Subtitle */}
           <p className="text-gray-text text-lg md:text-2xl mb-10 md:mb-12 leading-relaxed">
-            {t('homeCta.subtitle', 'Planificăm împreună o soluție de trasabilitate adaptată fluxurilor tale operaționale.')}
+            {t('homeCta.subtitle', 'Operasyonel akışlarınıza uygun bir izlenebilirlik çözümü birlikte planlayalım.')}
           </p>
 
           {/* CTA Buttons - Standardized */}
@@ -36,7 +36,7 @@ export const HomeCta = () => {
               size="lg"
               className="bg-secondary-blue hover:bg-accent-blue text-white"
             >
-              {t('homeCta.primary', 'Cere Ofertă')}
+              {t('homeCta.primary', 'İletişime Geç')}
             </Button>
             <Button
               as={Link}
@@ -45,7 +45,7 @@ export const HomeCta = () => {
               size="lg"
               className="border-2 border-primary-black text-primary-black hover:bg-primary-black hover:text-white"
             >
-              {t('homeCta.secondary', 'Vezi Referințele')}
+              {t('homeCta.secondary', 'Referanslara Bak')}
             </Button>
           </div>
         </div>

@@ -104,8 +104,8 @@ export const ReferenceProjects = () => {
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title={t('sections.referenceProjectsTitle', 'Proiecte de referință')}
-          subtitle={t('sections.referenceProjectsSubtitle', 'Exemple reale de implementare pentru industrii diferite')}
+          title={t('sections.referenceProjectsTitle', 'Referans Projeler')}
+          subtitle={t('sections.referenceProjectsSubtitle', 'Sektörler genelinde gerçek uygulama örnekleri')}
         />
 
         <div className="relative mb-10">
@@ -114,7 +114,7 @@ export const ReferenceProjects = () => {
             <button
               onClick={handlePrev}
               className="h-12 w-12 rounded-md bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
-              aria-label={t('sections.referenceProjectsPrev', 'Proiect anterior')}
+              aria-label={t('sections.referenceProjectsPrev', 'Önceki proje')}
             >
               <IconChevronLeft size={24} className="group-hover:text-accent-blue transition-colors" />
             </button>
@@ -124,7 +124,7 @@ export const ReferenceProjects = () => {
             <button
               onClick={handleNext}
               className="h-12 w-12 rounded-md bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200 text-primary-black hover:border-accent-blue hover:bg-white transition-all duration-300 flex items-center justify-center shadow-soft hover:shadow-soft-lg group"
-              aria-label={t('sections.referenceProjectsNext', 'Proiect următor')}
+              aria-label={t('sections.referenceProjectsNext', 'Sonraki proje')}
             >
               <IconChevronRight size={24} className="group-hover:text-accent-blue transition-colors" />
             </button>

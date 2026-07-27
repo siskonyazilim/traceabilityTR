@@ -91,7 +91,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-light text-sm mb-5 leading-relaxed max-w-sm">
-              {t('footer.brandDescription', 'Soluții inovative de trasabilitate pentru fabrici inteligente și producție sustenabilă.')}
+              {t('footer.brandDescription', 'Akıllı fabrikalar ve sürdürülebilir üretim için yenilikçi izlenebilirlik çözümleri.')}
             </p>
             <div className="flex items-center gap-3">
               <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
@@ -111,11 +111,11 @@ export const Footer = () => {
 
           {/* Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.navigation', 'Navigare')}</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.navigation', 'Navigasyon')}</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6">
               <li>
                 <Link href={toLocalePath('/')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  {t('footer.home', 'Pagina Principală')}
+                  {t('footer.home', 'Ana Sayfa')}
                 </Link>
               </li>
               <li>
@@ -124,7 +124,7 @@ export const Footer = () => {
                   onClick={(e) => handleSectionClick(e, '/#traceability-solutions')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
-                  {t('footer.solutions', 'Soluțiile Noastre')}
+                  {t('footer.solutions', 'Çözümlerimiz')}
                 </Link>
               </li>
               <li>
@@ -142,7 +142,7 @@ export const Footer = () => {
                   onClick={(e) => handleSectionClick(e, '/#our-strategic-solution-partners')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
-                  {t('footer.partners', 'Parteneri de Soluții')}
+                  {t('footer.partners', 'Çözüm Ortakları')}
                 </Link>
               </li>
               <li>
@@ -151,7 +151,7 @@ export const Footer = () => {
                   onClick={(e) => handleSectionClick(e, '/#faq')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
-                  {t('footer.faq', 'Întrebări Frecvente')}
+                  {t('footer.faq', 'Sık Sorulan Sorular')}
                 </Link>
               </li>
               <li>
@@ -161,12 +161,12 @@ export const Footer = () => {
               </li>
               <li>
                 <Link href={toLocalePath('/blog')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  {t('footer.news', 'Știri')}
+                  {t('footer.news', 'Haberler')}
                 </Link>
               </li>
               <li>
                 <Link href={toLocalePath('/privacy-policy')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  {t('footer.gdprPolicy', 'Politica GDPR (Confidențialitate)')}
+                  {t('footer.gdprPolicy', 'KVKK Gizlilik Politikası')}
                 </Link>
               </li>
               <li>
@@ -180,7 +180,7 @@ export const Footer = () => {
                   className="nesil-open-modal text-gray-light hover:text-accent-blue transition-colors text-sm text-left bg-transparent border-0 p-0 cursor-pointer inline-block"
                   onClick={(e) => e.preventDefault()}
                 >
-                  {t('footer.cookiePreferences', 'Preferințe cookie-uri')}
+                  {t('footer.cookiePreferences', 'Çerez Tercihleri')}
                 </a>
               </li>
             </ul>
@@ -215,7 +215,7 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-light">
           <div>
-            <p>{t('footer.copyright', '© 2026 Traceability. Toate drepturile rezervate.')}</p>
+            <p>{t('footer.copyright', '© 2026 Traceability. Tüm hakları saklıdır.')}</p>
           </div>
         </div>
       </div>

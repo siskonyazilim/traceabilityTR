@@ -57,7 +57,8 @@
     "title": "Sayfa bulunamadı",
     "description": "Bu adrese ait içerik şu anda mevcut değil.",
     "home": "Ana Sayfaya Dön",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "quickLinks": "Şu sayfaları da deneyebilirsiniz:"
   },
   "contactPage": {
     "eyebrow": "İletişim",

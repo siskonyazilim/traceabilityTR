@@ -45,8 +45,8 @@ export default function BlogPageClient() {
 
       <Container size="xl" className="max-w-[1450px]">
         <SectionHeader
-          title={t('blogPage.heroTitle', 'Noutăți, ghiduri și tendințe în trasabilitate')}
-          subtitle={t('blogPage.heroSubtitle', 'Conținut orientat pe decizii: implementare, optimizare operațională și bune practici pentru producția modernă.')}
+          title={t('blogPage.heroTitle', 'İzlenebilirlikte haberler, rehberler ve trendler')}
+          subtitle={t('blogPage.heroSubtitle', 'Karara odaklı içerikler: modern üretim için uygulama, operasyonel optimizasyon ve en iyi uygulamalar.')}
           titleTag="h1"
         />
         <div className="py-2 md:py-4">
@@ -98,16 +98,16 @@ export default function BlogPageClient() {
           ) : (
             <div className="text-center py-16">
               <p className="text-gray-text text-lg">
-                {t('blogPage.empty', 'Nu au fost găsite articole.')}
+                {t('blogPage.empty', 'Makale bulunamadı.')}
               </p>
             </div>
           )}
 
           <PagePrimaryCta
-            title={t('blogPage.ctaTitle', 'Vrei să discutăm despre trasabilitate?')}
-            subtitle={t('blogPage.ctaSubtitle', 'Echipa noastră te poate ajuta să transformi informația din articole în pași clari pentru fabrica ta.')}
+            title={t('blogPage.ctaTitle', 'Görüşmek ister misiniz?')}
+            subtitle={t('blogPage.ctaSubtitle', 'Ekibimiz, makalelerdeki bilgileri fabrikanız için net adımlara dönüştürmenize yardımcı olabilir.')}
             primaryHref="/contact"
-            primaryLabel={t('blogPage.ctaPrimary', 'Cere Ofertă')}
+            primaryLabel={t('blogPage.ctaPrimary', 'İletişime Geç')}
           />
 
         </div>

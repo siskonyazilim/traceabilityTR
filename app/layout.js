@@ -93,60 +93,98 @@ export default async function RootLayout({ children }) {
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
           data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM="
           data-id="nt"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <Script
           id="cerezgo-scroll-unlock"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(){
-  function unlockPage(){
+  var BANNER_WORDS = ['banner','widget','modal-content','preference','settings'];
+  var BLOCK_WORDS  = ['backdrop','overlay','mask','screen','-bg-','-bg"'];
+
+  function isBannerEl(id, cls) {
+    for (var w = 0; w < BANNER_WORDS.length; w++) {
+      if (id.indexOf(BANNER_WORDS[w]) >= 0 || cls.indexOf(BANNER_WORDS[w]) >= 0) return true;
+    }
+    return false;
+  }
+
+  function isBlockEl(id, cls, rect) {
+    for (var w = 0; w < BLOCK_WORDS.length; w++) {
+      if (id.indexOf(BLOCK_WORDS[w]) >= 0 || cls.indexOf(BLOCK_WORDS[w]) >= 0) return true;
+    }
+    // Full-viewport cover check
+    if (rect && rect.width >= window.innerWidth * 0.75 && rect.height >= window.innerHeight * 0.75) return true;
+    return false;
+  }
+
+  function unlockBody() {
     var html = document.documentElement;
     var body = document.body;
     if (!html || !body) return;
 
-    // Scroll ve pointer-events kilitlerini kaldır
-    if (html.style.overflowY === 'hidden' || html.style.overflow === 'hidden') html.style.setProperty('overflow-y', 'auto', 'important');
-    if (body.style.overflowY === 'hidden' || body.style.overflow === 'hidden') body.style.setProperty('overflow-y', 'auto', 'important');
-    if (body.style.position === 'fixed') body.style.setProperty('position', 'static', 'important');
-
+    // Scroll kilitleri
+    ['overflow','overflowY'].forEach(function(p) {
+      if (html.style[p] === 'hidden') html.style.setProperty(p === 'overflowY' ? 'overflow-y' : 'overflow', 'auto', 'important');
+      if (body.style[p] === 'hidden') body.style.setProperty(p === 'overflowY' ? 'overflow-y' : 'overflow', 'auto', 'important');
+    });
+    // position: fixed body → mobilde sayfayı kilitler
+    if (body.style.position === 'fixed' || body.style.position === 'sticky') {
+      body.style.setProperty('position', 'relative', 'important');
+    }
+    // pointer-events kilitleri
     if (html.style.pointerEvents === 'none') html.style.setProperty('pointer-events', 'auto', 'important');
     if (body.style.pointerEvents === 'none') body.style.setProperty('pointer-events', 'auto', 'important');
-
-    // CerezGo ve cookie tam ekran backdrop/overlay → tıklanamaz yap
-    try {
-      var selectors = '[id*="cg-"],[class*="cg-"],[id*="cerezgo"],[class*="cerezgo"]';
-      var all = document.querySelectorAll(selectors);
-      for (var i = 0; i < all.length; i++) {
-        var el = all[i];
-        var id = (el.id || '').toLowerCase();
-        var cls = (typeof el.className === 'string' ? el.className : '').toLowerCase();
-
-        // Banner, modal kartı veya widget kutusunun kendisi tıklanabilir kalmalı
-        var isCard = id.indexOf('banner') >= 0 || id.indexOf('widget') >= 0 || cls.indexOf('banner') >= 0 || cls.indexOf('widget') >= 0 || id.indexOf('modal-content') >= 0;
-        if (isCard) {
-          el.style.setProperty('pointer-events', 'auto', 'important');
-          continue;
-        }
-
-        var rect = el.getBoundingClientRect();
-        var isCover = rect.width >= (window.innerWidth * 0.75) && rect.height >= (window.innerHeight * 0.75);
-        var isBackdrop = id.indexOf('backdrop') >= 0 || id.indexOf('overlay') >= 0 || cls.indexOf('backdrop') >= 0 || cls.indexOf('overlay') >= 0 || isCover;
-
-        if (isBackdrop && !isCard) {
-          el.style.setProperty('pointer-events', 'none', 'important');
-          el.style.setProperty('background', 'transparent', 'important');
-        }
-      }
-    } catch(e){}
+    // MOBİL: touch-action kilidi (iOS/Android scroll için kritik)
+    html.style.setProperty('touch-action', 'auto', 'important');
+    body.style.setProperty('touch-action', 'auto', 'important');
+    // overscroll-behavior kilidi
+    if (body.style.overscrollBehavior === 'none') body.style.setProperty('overscroll-behavior', 'auto', 'important');
+    if (html.style.overscrollBehavior === 'none') html.style.setProperty('overscroll-behavior', 'auto', 'important');
   }
 
-  unlockPage();
-  window.addEventListener('load', unlockPage);
-  window.addEventListener('resize', unlockPage);
+  function unlockCerezGo() {
+    try {
+      var all = document.querySelectorAll('[id*="cg-"],[class*="cg-"],[id*="cerezgo"],[class*="cerezgo"]');
+      for (var i = 0; i < all.length; i++) {
+        var el = all[i];
+        var id  = (el.id || '').toLowerCase();
+        var cls = (typeof el.className === 'string' ? el.className : '').toLowerCase();
+        var rect = el.getBoundingClientRect();
 
-  var obs = new MutationObserver(unlockPage);
-  if (document.documentElement) obs.observe(document.documentElement, { attributes: true, childList: true, subtree: true, attributeFilter: ['style','class'] });
+        if (isBannerEl(id, cls)) {
+          // Banner/widget: tıklanabilir kalmalı
+          el.style.setProperty('pointer-events', 'auto', 'important');
+          el.style.setProperty('touch-action', 'auto', 'important');
+        } else if (isBlockEl(id, cls, rect)) {
+          // Backdrop/overlay: tıklamaları geçir
+          el.style.setProperty('pointer-events', 'none', 'important');
+          el.style.setProperty('background-color', 'transparent', 'important');
+        }
+      }
+    } catch(e) {}
+  }
+
+  function unlock() { unlockBody(); unlockCerezGo(); }
+
+  // Hemen çalıştır
+  unlock();
+  // Sayfa yüklendikten sonra
+  window.addEventListener('load', unlock);
+  // Mobil: ilk dokunuşta (CerezGo henüz yüklenmediyse)
+  document.addEventListener('touchstart', unlock, { passive: true, once: true });
+  // Pencere boyutu değişince
+  window.addEventListener('resize', unlockBody);
+
+  // CerezGo DOM'a element eklediğinde / style değiştirdiğinde anında yakala
+  var obs = new MutationObserver(unlock);
+  if (document.documentElement) {
+    obs.observe(document.documentElement, {
+      attributes: true, childList: true, subtree: true,
+      attributeFilter: ['style', 'class']
+    });
+  }
 })();`,
           }}
         />

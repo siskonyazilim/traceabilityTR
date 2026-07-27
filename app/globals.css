@@ -12,34 +12,61 @@ body {
   overflow-y: auto !important;
   pointer-events: auto !important;
   touch-action: auto !important;
+  overscroll-behavior: auto !important;
 }
 
-/* Full-viewport backdrop layers injected by CerezGo or cookie scripts */
+/* Prevent CerezGo from locking scroll via position:fixed on body */
+body {
+  position: relative !important;
+}
+
+/* ── CerezGo backdrop/overlay: pass-through, never block clicks or scroll ── */
+
+/* Target every possible CerezGo overlay/backdrop variant */
 [id*="cg-"][id*="overlay"],
 [id*="cg-"][id*="backdrop"],
 [id*="cg-"][id*="mask"],
+[id*="cg-"][id*="screen"],
+[id*="cg-"][id*="bg"],
 [class*="cg-"][class*="overlay"],
 [class*="cg-"][class*="backdrop"],
 [class*="cg-"][class*="mask"],
+[class*="cg-"][class*="screen"],
+[class*="cg-"][class*="bg"],
 [id*="cerezgo"][id*="overlay"],
 [id*="cerezgo"][id*="backdrop"],
+[id*="cerezgo"][id*="mask"],
 [class*="cerezgo"][class*="overlay"],
-[class*="cerezgo"][class*="backdrop"] {
+[class*="cerezgo"][class*="backdrop"],
+[class*="cerezgo"][class*="mask"],
+/* Generic: any CerezGo element that fills the whole viewport */
+[id^="cg-"]:not([id*="banner"]):not([id*="widget"]):not([id*="modal-content"]),
+[class^="cg-"]:not([class*="banner"]):not([class*="widget"]):not([class*="modal-content"]) {
   pointer-events: none !important;
-  background: transparent !important;
+  touch-action: none !important; /* let touches pass through */
+  background-color: transparent !important;
+  /* Do NOT hide — just make non-interactive so the banner still appears */
 }
 
-/* CerezGo & native banner inner contents remain interactive */
+/* CerezGo banner / modal content: must stay fully interactive */
 [id*="cg-banner"],
 [id*="cg-banner"] *,
+[id*="cg-modal"],
 [id*="cg-modal"] *,
+[id*="cg-widget"],
 [id*="cg-widget"] *,
+[class*="cg-banner"],
 [class*="cg-banner"] *,
+[class*="cg-modal"],
 [class*="cg-modal"] *,
+[class*="cg-widget"],
 [class*="cg-widget"] *,
+[id*="cerezgo-banner"],
 [id*="cerezgo-banner"] *,
+[id*="cerezgo-modal"],
 [id*="cerezgo-modal"] * {
   pointer-events: auto !important;
+  touch-action: auto !important;
 }
 
 :root {
