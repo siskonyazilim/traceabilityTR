@@ -139,9 +139,6 @@ export default async function RootLayout({ children }) {
      mantığına dokunmaz, GTM/Cerezgo entegrasyonunu bypass etmez. Kullanıcı
      hâlâ "Kabul Et/Reddet" seçmeden banner kapanmaz; sadece o sırada
      arka plandaki sayfayla da normal etkileşime girebilir. */
-  let backdropFixAttempts = 0;
-  const MAX_BACKDROP_ATTEMPTS = 50; // 50 x 100ms = 5sn üst sınır
-
   function injectBackdropStyle(shadowRoot) {
     if (shadowRoot.getElementById('cg-backdrop-fix')) return true;
     const style = document.createElement('style');
@@ -156,37 +153,78 @@ export default async function RootLayout({ children }) {
 
   function unlockBodyScroll() {
     const b = document.body;
-    if (b && b.style.overflow === 'hidden') {
-      b.style.setProperty('overflow', 'auto', 'important');
-      log('body overflow:hidden tespit edildi, auto\\'ya çevrildi.');
+    const h = document.documentElement;
+    if (b) {
+      b.style.setProperty('overflow',            'auto', 'important');
+      b.style.setProperty('overflow-y',          'auto', 'important');
+      b.style.setProperty('touch-action',        'auto', 'important');
+      b.style.setProperty('overscroll-behavior', 'auto', 'important');
+      if (b.style.position === 'fixed' || b.style.position === 'sticky') {
+        b.style.setProperty('position', 'relative', 'important');
+      }
+    }
+    if (h) {
+      h.style.setProperty('overflow',   'auto', 'important');
+      h.style.setProperty('overflow-y', 'auto', 'important');
     }
   }
 
-  function fixCerezgoBackdrop() {
-    const tryFix = () => {
-      const app = document.querySelector('cerezgo-app');
-      const ok = app && app.shadowRoot && injectBackdropStyle(app.shadowRoot);
+  /* Body style watcher: CerezGo her dialog açışında overflow:hidden set ediyor */
+  let _bodyWatcher = null;
+  function startBodyWatcher() {
+    if (_bodyWatcher || !document.body) return;
+    _bodyWatcher = new MutationObserver(() => {
+      if (
+        document.body.style.overflow  === 'hidden' ||
+        document.body.style.overflowY === 'hidden'
+      ) {
+        unlockBodyScroll();
+      }
+    });
+    _bodyWatcher.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+    log('Body overflow watcher başlatıldı.');
+  }
+
+  /* shadowRoot hazır olduğunda anında fix uygula */
+  function tryApplyShadowFix(app) {
+    if (!app) return false;
+    if (app.shadowRoot) {
+      injectBackdropStyle(app.shadowRoot);
       unlockBodyScroll();
-      backdropFixAttempts++;
-      if (ok) {
-        log(\`Backdrop fix \${backdropFixAttempts}. denemede uygulandı.\`);
-        // Dialog kapanıp yeniden açılsa da body overflow tekrar hidden
-        // olabileceğinden, kısa süreliğine body'yi izlemeye devam ediyoruz.
-        let watchTicks = 0;
-        const watcher = setInterval(() => {
-          unlockBodyScroll();
-          watchTicks++;
-          if (watchTicks > 150) clearInterval(watcher); // ~30sn sonra durur
-        }, 200);
-        return;
+      startBodyWatcher();
+      return true;
+    }
+    /* shadowRoot henüz oluşmadıysa MutationObserver ile bekle */
+    const sw = new MutationObserver(() => {
+      if (app.shadowRoot) {
+        sw.disconnect();
+        injectBackdropStyle(app.shadowRoot);
+        unlockBodyScroll();
+        startBodyWatcher();
+        log('shadowRoot oluştu, backdrop fix anında uygulandı.');
       }
-      if (backdropFixAttempts < MAX_BACKDROP_ATTEMPTS) {
-        setTimeout(tryFix, 100);
-      } else {
-        logWarn('cerezgo-app / shadowRoot bulunamadı, backdrop fix uygulanamadı.');
+    });
+    sw.observe(app, { childList: true, subtree: true, attributes: true });
+    setTimeout(() => sw.disconnect(), 5000); // güvenlik sınırı
+    return false;
+  }
+
+  function fixCerezgoBackdrop() {
+    /* Önce anlık kontrol */
+    const appEl = document.querySelector('cerezgo-app');
+    if (tryApplyShadowFix(appEl)) return;
+
+    /* cerezgo-app DOM'da yoksa eklenmesini MutationObserver ile bekle */
+    log("cerezgo-app DOM'da yok, MutationObserver ile bekleniyor...");
+    const dw = new MutationObserver((_m, obs) => {
+      const found = document.querySelector('cerezgo-app');
+      if (found) {
+        obs.disconnect();
+        tryApplyShadowFix(found);
       }
-    };
-    tryFix();
+    });
+    dw.observe(document.body || document.documentElement, { childList: true, subtree: true });
+    setTimeout(() => dw.disconnect(), 10000); // 10sn güvenlik sınırı
   }
 
   const cleanup = () => {
@@ -233,6 +271,7 @@ export default async function RootLayout({ children }) {
     const existingCerez = document.getElementById('cerezgo-script');
     if (existingCerez) {
       log('Cerezgo script DOM\\'da zaten mevcut. data-ready =', existingCerez.getAttribute('data-ready'));
+      fixCerezgoBackdrop(); // backdrop fix hemen başlat
       if (existingCerez.getAttribute('data-ready') === '1') {
         loadGtm();
       } else {
