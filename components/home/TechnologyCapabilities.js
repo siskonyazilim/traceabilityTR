@@ -42,14 +42,18 @@ export default function TechnologyCapabilities() {
           subtitle={t('sections.technologySubtitle', 'Soluții avansate de trasabilitate pentru producția modernă')}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {localizedCapabilities.map((capability, index) => (
             (() => {
               const CapabilityIcon = capability.icon || IconTarget;
               return (
             <div
               key={capability.title}
-              className={`px-6 md:px-10 text-center ${index < localizedCapabilities.length - 1 ? 'md:border-r md:border-slate-300' : ''}`}
+              className={`px-6 md:px-10 py-8 md:py-0 text-center ${
+                index < localizedCapabilities.length - 1
+                  ? 'border-b border-slate-200 md:border-b-0 md:border-r md:border-slate-300'
+                  : ''
+              }`}
             >
               <div className="mb-6 text-slate-blue leading-none flex justify-center">
                 <CapabilityIcon size={56} className="text-slate-blue" />

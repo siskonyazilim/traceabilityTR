@@ -45,7 +45,7 @@ export async function generateMetadata({ params }) {
     ? '/solution-partners'
     : (locale === 'ro' ? '/parteneri-de-solutii' : '/solution-partners');
   const alternates = {
-    canonical: `https://traceability.com.tr${
+    canonical: `https://izlenebilirlik.com.tr${
       locale === 'ro'
         ? `/ro/parteneri-de-solutii/${partner.slug}`
         : (locale === 'en'
@@ -53,10 +53,10 @@ export async function generateMetadata({ params }) {
             : `/solution-partners/${partner.slug}`)
     }`,
     languages: {
-      'tr': `https://traceability.com.tr/solution-partners/${partner.slug}`,
-      'en': `https://traceability.com.tr/en/solution-partners/${partner.slug}`,
-      'ro': `https://traceability.com.tr/ro/parteneri-de-solutii/${partner.slug}`,
-      'x-default': `https://traceability.com.tr/solution-partners/${partner.slug}`,
+      'tr': `https://izlenebilirlik.com.tr/solution-partners/${partner.slug}`,
+      'en': `https://izlenebilirlik.com.tr/en/solution-partners/${partner.slug}`,
+      'ro': `https://izlenebilirlik.com.tr/ro/parteneri-de-solutii/${partner.slug}`,
+      'x-default': `https://izlenebilirlik.com.tr/solution-partners/${partner.slug}`,
     }
   };
 
@@ -67,9 +67,9 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
-  let ogImage = 'https://traceability.com.tr/siskon-logo-header.svg';
+  let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
   if (partner.logo) {
-    ogImage = partner.logo.startsWith('http') ? partner.logo : `https://traceability.com.tr${partner.logo}`;
+    ogImage = partner.logo.startsWith('http') ? partner.logo : `https://izlenebilirlik.com.tr${partner.logo}`;
   }
 
   return {

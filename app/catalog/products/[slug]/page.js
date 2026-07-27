@@ -40,18 +40,18 @@ export async function generateMetadata({ params }) {
 
   const title = `${item.title} | Traceability`;
   const description = item.summary || item.description;
-  let ogImage = 'https://traceability.com.tr/siskon-logo-header.svg';
+  let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
   if (item.image) {
-    ogImage = item.image.startsWith('http') ? item.image : `https://traceability.com.tr${item.image}`;
+    ogImage = item.image.startsWith('http') ? item.image : `https://izlenebilirlik.com.tr${item.image}`;
   }
 
   const alternates = {
-    canonical: `https://traceability.com.tr${toLocalePath(`/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, locale)}`, locale)}`,
+    canonical: `https://izlenebilirlik.com.tr${toLocalePath(`/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, locale)}`, locale)}`,
     languages: {
-      'tr': `https://traceability.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
-      'en': `https://traceability.com.tr/en/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'en')}`,
-      'ro': `https://traceability.com.tr/ro/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'ro')}`,
-      'x-default': `https://traceability.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
+      'tr': `https://izlenebilirlik.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
+      'en': `https://izlenebilirlik.com.tr/en/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'en')}`,
+      'ro': `https://izlenebilirlik.com.tr/ro/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'ro')}`,
+      'x-default': `https://izlenebilirlik.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
     }
   };
 
@@ -107,9 +107,9 @@ export default async function CatalogProductDetailPage({ params }) {
   const relativeHomePath = '/';
   const relativeProductsPath = '/?tab=products#traceability-solutions';
 
-  const pageUrl = `https://traceability.com.tr${toLocalePath(productPath, locale)}`;
-  const homeUrl = `https://traceability.com.tr${toLocalePath(relativeHomePath, locale)}`;
-  const productsUrl = `https://traceability.com.tr${toLocalePath(relativeProductsPath, locale)}`;
+  const pageUrl = `https://izlenebilirlik.com.tr${toLocalePath(productPath, locale)}`;
+  const homeUrl = `https://izlenebilirlik.com.tr${toLocalePath(relativeHomePath, locale)}`;
+  const productsUrl = `https://izlenebilirlik.com.tr${toLocalePath(relativeProductsPath, locale)}`;
 
   const offerDescriptionByLocale = {
     tr: "Proje bazlı kurumsal fiyatlandırma için lütfen bizimle iletişime geçin.",
@@ -138,12 +138,12 @@ export default async function CatalogProductDetailPage({ params }) {
     ? features.slice(0, 5).join(', ') 
     : (withNavigation.summary || withNavigation.description);
 
-  let absoluteImage = 'https://traceability.com.tr/siskon-logo-header.svg';
+  let absoluteImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
   if (withNavigation.image) {
     if (withNavigation.image.startsWith('http')) {
       absoluteImage = withNavigation.image;
     } else {
-      absoluteImage = `https://traceability.com.tr${withNavigation.image}`;
+      absoluteImage = `https://izlenebilirlik.com.tr${withNavigation.image}`;
     }
   }
 

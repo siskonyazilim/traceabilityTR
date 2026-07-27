@@ -161,8 +161,8 @@ export const Header = () => {
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${headerBackgroundClass}`}
     >
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand text */}
           <Link
             href={toLocalePath('/')}
@@ -247,7 +247,7 @@ export const Header = () => {
               )}
             </div>
 
-            <div className="lg:hidden relative w-[92px]">
+            <div className="lg:hidden relative w-[80px] sm:w-[92px]">
               <label htmlFor="mobile-language-select" className="sr-only">
                 {t('language.switchAria', 'Schimbă limba')}
               </label>
@@ -255,7 +255,7 @@ export const Header = () => {
                 id="mobile-language-select"
                 value={locale}
                 onChange={(event) => handleLocaleChange(event.target.value)}
-                className={`h-12 w-full rounded-md pl-3 pr-8 text-xs font-bold appearance-none transition-all duration-300 cursor-pointer ${
+                className={`h-10 sm:h-12 w-full rounded-md pl-3 pr-8 text-xs font-bold appearance-none transition-all duration-300 cursor-pointer ${
                   useTransparentHeader
                     ? 'text-white bg-white/5 ring-1 ring-white/25 hover:bg-white/15 hover:ring-white/40'
                     : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'
@@ -294,7 +294,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div id="mobile-navigation" className="lg:hidden bg-white/95 backdrop-blur-md rounded-md shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up">
+          <div id="mobile-navigation" className="lg:hidden bg-white/98 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up max-h-[calc(100vh-5rem)] overflow-y-auto">
             {navItems.map((item) => (
               <div key={item.label} className="mb-3">
                 {item.href.startsWith('#') ? (

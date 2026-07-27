@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── CerezGo & Cookie Overlay Non-Blocking Rules ───────────────────────────
+   Ensures that cookie consent popups and CerezGo backdrops/overlays NEVER block
+   user clicks, navigation, or scrolling on desktop or mobile viewports.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+html,
+body {
+  overflow-y: auto !important;
+  pointer-events: auto !important;
+  touch-action: auto !important;
+}
+
+/* Full-viewport backdrop layers injected by CerezGo or cookie scripts */
+[id*="cg-"][id*="overlay"],
+[id*="cg-"][id*="backdrop"],
+[id*="cg-"][id*="mask"],
+[class*="cg-"][class*="overlay"],
+[class*="cg-"][class*="backdrop"],
+[class*="cg-"][class*="mask"],
+[id*="cerezgo"][id*="overlay"],
+[id*="cerezgo"][id*="backdrop"],
+[class*="cerezgo"][class*="overlay"],
+[class*="cerezgo"][class*="backdrop"] {
+  pointer-events: none !important;
+  background: transparent !important;
+}
+
+/* CerezGo & native banner inner contents remain interactive */
+[id*="cg-banner"],
+[id*="cg-banner"] *,
+[id*="cg-modal"] *,
+[id*="cg-widget"] *,
+[class*="cg-banner"] *,
+[class*="cg-modal"] *,
+[class*="cg-widget"] *,
+[id*="cerezgo-banner"] *,
+[id*="cerezgo-modal"] * {
+  pointer-events: auto !important;
+}
+
 :root {
   --surface-0: #ffffff;
   --surface-1: #f7fbff;
@@ -27,6 +67,9 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* iOS momentum scrolling */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Global keyboard focus visibility for interactive controls */
@@ -65,12 +108,17 @@ body {
     linear-gradient(180deg, var(--surface-1) 0%, var(--surface-0) 22%, var(--surface-0) 100%);
   color: #5b616b;
   min-height: 100vh;
+  /* Use dvh (dynamic viewport height) on supported browsers to handle mobile browser chrome */
+  min-height: 100dvh;
   font-size: clamp(1rem, 0.98rem + 0.1vw, 1.0625rem);
   line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   position: relative;
   overflow-x: hidden;
+  /* iOS safe area insets */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 h1,
@@ -103,6 +151,9 @@ h3 {
 p {
   max-width: 72ch;
   line-height: 1.68;
+  /* Prevent text overflow on small screens */
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 main {
@@ -110,7 +161,14 @@ main {
 }
 
 section {
-  scroll-margin-top: 100px;
+  /* 64px mobile header / 80px desktop header */
+  scroll-margin-top: 64px;
+}
+
+@media (min-width: 640px) {
+  section {
+    scroll-margin-top: 80px;
+  }
 }
 
 .section-block {
@@ -157,7 +215,8 @@ section {
 
 /* Utility Classes */
 .container {
-  @apply max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12;
+  @apply max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12;
+  width: 100%;
 }
 
 .prose {
@@ -662,15 +721,27 @@ textarea:focus-visible {
   }
 
   h1 {
-    font-size: 1.875rem;
+    font-size: clamp(1.4rem, 5vw, 1.875rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Prevent horizontal scroll from fixed elements */
+  .section-divider,
+  .section-divider-top {
+    display: none;
   }
 }
 

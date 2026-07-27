@@ -29,12 +29,12 @@ export async function generateMetadata() {
   }
 
   const alternates = {
-    canonical: 'https://traceability.com.tr/portfolio',
+    canonical: 'https://izlenebilirlik.com.tr/portfolio',
     languages: {
-      'tr': 'https://traceability.com.tr/portfolio',
-      'en': 'https://traceability.com.tr/en/reference-projects',
-      'ro': 'https://traceability.com.tr/ro/proiecte-de-referinta',
-      'x-default': 'https://traceability.com.tr/portfolio',
+      'tr': 'https://izlenebilirlik.com.tr/portfolio',
+      'en': 'https://izlenebilirlik.com.tr/en/reference-projects',
+      'ro': 'https://izlenebilirlik.com.tr/ro/proiecte-de-referinta',
+      'x-default': 'https://izlenebilirlik.com.tr/portfolio',
     }
   };
 
@@ -50,7 +50,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://traceability.com.tr/siskon-logo-header.svg',
+          url: 'https://izlenebilirlik.com.tr/siskon-logo-header.svg',
           width: 800,
           height: 600,
           alt: title,
@@ -61,7 +61,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://traceability.com.tr/siskon-logo-header.svg'],
+      images: ['https://izlenebilirlik.com.tr/siskon-logo-header.svg'],
     },
   };
 }

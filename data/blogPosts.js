@@ -1,5 +1,86 @@
 export const blogPosts = [
   {
+    id: 1,
+    title: 'GS1 Sunrise 2027: Perakendede 2D Barkoda Geçiş Süreci',
+    titleTr: 'GS1 Sunrise 2027: Perakendede 2D Barkoda Geçiş Süreci',
+    titleEn: 'GS1 Sunrise 2027: Transition to 2D Barcodes in Retail',
+    slug: 'gs1-sunrise-2027-2d-barcode-transition',
+    slugTr: 'gs1-sunrise-2027-2d-barkod-gecisi',
+    slugEn: 'gs1-sunrise-2027-2d-barcode-transition',
+    category: 'Standartlar ve Mevzuat',
+    categoryEn: 'Standards & Regulations',
+    date: '2026-07-25',
+    author: 'Admin',
+    readTime: 5,
+    image: '/images/blog/gs1-sunrise-2027-2d-barkod-gecisi.png',
+    excerpt: 'GS1 Sunrise 2027 ile perakende satış noktaları 2027 sonuna kadar 2D barkod okuyacak. Çift işaretleme, GS1 Digital Link ve üretim hattı hazırlık adımları.',
+    excerptEn: 'With GS1 Sunrise 2027, retail point-of-sale systems will read 2D barcodes by end of 2027. Dual-marking, GS1 Digital Link and production line readiness steps.',
+    tags: ['GS1', '2D barkod', 'GTIN', 'Dijital Ürün Pasaportu', 'izlenebilirlik'],
+    metaKeywords: 'GS1 Sunrise 2027, 2D barkod geçişi, GS1 Digital Link, GS1 DataMatrix, Ambition 2027, çift işaretleme, QR kod izlenebilirlik',
+    content: `
+      <p>Perakende sektöründe elli yılı aşkın süredir kullanılan doğrusal barkod, ürün tanımlamayı otomatikleştirmiş ancak tek bir veriyi taşımakla sınırlı kalmıştır. GS1 Sunrise 2027, bu yapının yerini daha fazla veri taşıyabilen iki boyutlu (2D) barkodların almasını hedefleyen küresel bir sektör girişimidir. <strong>Ambition 2027</strong> olarak da adlandırılan hedefe göre, 2027 yılının sonuna kadar tüm perakende satış noktası sistemlerinin doğrusal barkodların yanı sıra GS1 standartlarına uygun 2D barkodları da okuyup işleyebilmesi beklenmektedir.</p>
+
+      <figure style="margin: 2rem 0; text-align: center;">
+        <img src="/images/blog/gs1-sunrise-2027-2d-barkod-gecisi.png" alt="Doğrusal barkoddan 2D barkoda geçiş şeması: ambalaj üzerinde EAN-13 ile GS1 DataMatrix ve QR kodun birlikte kullanıldığı çift işaretleme dönemi" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.12);" />
+        <figcaption style="font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem;">Doğrusal barkoddan 2D barkoda geçiş şeması. Kaynak: GS1, 2D Barcodes at Retail Point-of-Sale Implementation Guideline</figcaption>
+      </figure>
+
+      <h2>GS1 Sunrise 2027 Girişiminin Kapsamı</h2>
+
+      <h3>GS1 Sunrise 2027 Nedir?</h3>
+      <p>GS1 Sunrise 2027, doğrusal barkodların geçersiz olacağı bir son tarih değil, perakende altyapısının 2D barkodlara hazır hale gelmesi için belirlenmiş ortak bir kilometre taşıdır. Asgari hedef, kasadaki okuyucunun hem EAN-13 hem de GS1 uyumlu bir 2D barkoddan ürün numarasını (GTIN) alıp POS yazılımına eksiksiz biçimde iletebilmesidir. Örneğin bir marketin okuyucusu QR kodu fiziksel olarak görüntüleyebiliyor olsa da içindeki GS1 verisini yorumlayamıyorsa hedef karşılanmamış sayılır.</p>
+
+      <h3>Doğrusal Barkodun Veri Sınırı</h3>
+      <p>EAN-13 ve UPC-A ailesi barkodlar yalnızca GTIN taşır; parti numarası, son kullanma tarihi ve seri numarasına yer yoktur. Bu boşluğu kısmen kapatan GS1 DataBar Expanded ailesinin kapasitesi ise sınırlıdır ve simge, küçük ambalajlara sığmayacak kadar büyüyebilmektedir. Örneğin taze et ürünlerinde ağırlık, parti ve tarih bilgisinin aynı doğrusal simgede taşınması etiket alanının önemli bölümünü tüketir.</p>
+
+      <h3>Kabul Edilen 2D Barkodlar ve Veri Sözdizimi</h3>
+      <p>Satış noktasında kullanılabilecek 2D barkodlar üç seçenekle sınırlıdır:</p>
+      <ul>
+        <li><strong>GS1 DataMatrix</strong> — GS1 element string sözdizimi ile kodlanan</li>
+        <li><strong>QR Kod</strong> — GS1 Digital Link URI sözdizimi ile kodlanan</li>
+        <li><strong>Data Matrix</strong> — GS1 Digital Link URI sözdizimi ile kodlanan</li>
+      </ul>
+      <p>Element string, veriyi GS1 Uygulama Tanımlayıcıları (AI) ile ifade eder; parti numarası (10), son kullanma tarihi (17) ve seri numarası (21) bu yapıyla kodlanır. Digital Link ise aynı verileri web adresi biçiminde taşıyıp barkodu dijital içeriğe bağlar. Örneğin bir konserve etiketindeki QR kod, hem kasada GTIN'i iletir hem de tüketiciyi o partiye özel sayfaya yönlendirir.</p>
+
+      <h2>Geçiş Döneminde Ambalaj ve Üretim Hattı</h2>
+
+      <h3>Çift İşaretleme Dönemi ve Yerleşim Kuralı</h3>
+      <p>Geçiş süresince ürünler hem doğrusal hem 2D barkod taşır; buna <strong>çift işaretleme (dual-marking)</strong> denmektedir. GS1'in yaklaşımına göre, satış noktası okuyucularının yüzde doksanı GS1 uyumlu 2D barkodlardan en azından GTIN'i alabilir hale gelene kadar bu birlikte kullanım gereklidir.</p>
+      <p>Yerleşim de serbest değildir: kapsamlı testler, kasada hedeflenen dakikada 40-70 ürün hızının korunabilmesi için <strong>2D barkodun doğrusal barkodun merkezine en fazla 50 mm mesafede</strong> bulunması gerektiğini göstermiştir. Örneğin uzağa yerleştirilen bir QR kod, kasiyerin ürünü iki kez çevirmesine yol açar.</p>
+
+      <h3>Dinamik Veri Basımı ve Baskı Kalitesi</h3>
+      <p>GTIN sabit olduğu için doğrusal barkod genellikle ambalaj tedarikçisinde önceden basılır. 2D barkod ise her partide değişen verileri taşıdığında hat üzerinde anlık basılmak zorundadır; bu da sürekli mürekkep püskürtmeli (CIJ), termal transfer veya lazer ekipmanının doğru veriyi üretim yönetim sisteminden almasını gerektirir.</p>
+      <p>Okunabilirlik ise kontrasta ve modül boyutuna bağlıdır: 2D barkodların X boyutu, aynı uygulamadaki doğrusal barkodun 1,5 katıdır ve kırmızı ışıkla çalışan okuyucular nedeniyle kırmızı, turuncu, sarı tonlar risklidir. Örneğin logo yerleştirilmiş bir QR kod, hata düzeltme alanını tükettiği için kasada okunamayabilir; bu nedenle ISO/IEC 15415'e göre doğrulama hat koşullarında tekrarlanmalıdır.</p>
+
+      <h2>İzlenebilirlik, Uyum ve Hazırlık</h2>
+
+      <h3>İzlenebilirlik ve Hedefli Geri Çağırma</h3>
+      <p>2D barkodun asıl operasyonel getirisi, ürün kimliğinin parti veya seri düzeyine inmesidir. GTIN ile birlikte parti numarası ve son kullanma tarihi okunabildiğinde, geri çağırma kararı tüm ürün grubu yerine yalnızca ilgili partiyle sınırlandırılabilir. Aynı veri, süresi geçmiş ürünün kasada satışının otomatik olarak engellenmesini de mümkün kılar. Örneğin bir gıda üreticisi, şikâyet konusu ürünün seri numarasından hangi vardiyada ve hangi hammadde partisiyle üretildiğini belirleyebilir.</p>
+
+      <h3>Mevzuat Uyumu ve Dijital Ürün Pasaportu</h3>
+      <p>2D barkoda geçiş, Avrupa Birliği'nin ürün verisine yönelik düzenlemeleriyle aynı yöne bakmaktadır. Sürdürülebilir Ürünler için Ekotasarım Tüzüğü 18 Temmuz 2024'te yürürlüğe girmiş ve <strong>Dijital Ürün Pasaportu</strong>'nu bu çerçevenin merkezine yerleştirmiştir; ürün gruplarına özgü yükümlülükler ikincil düzenlemelerle kademeli olarak belirlenmektedir. Pasaporta erişimin bir veri taşıyıcısı üzerinden sağlanacak olması, ambalajdaki 2D barkodu uyum aracına dönüştürmektedir. Örneğin ilaç sektöründe GS1 DataMatrix, yıllardır seri numarası taşıyıcısı olarak kullanılmakta ve modelin sahada işlediğini göstermektedir.</p>
+
+      <h2>Hazırlık Adımları ve Geleceğe Bakış</h2>
+      <p>Etkili bir geçiş ürün verisinin envanterinden başlar: satılan her ürünün geçerli bir GTIN'e sahip olduğu doğrulanmalı, ardından barkoda girecek veriler seçilmeli ve ERP ile MES tarafında bu alanların işlenebildiği test edilmelidir. Türkiye'de firma öneki ve GTIN tahsisi <strong>GS1 Türkiye</strong> üzerinden yürütülmektedir.</p>
+      <p>Örneğin sınırlı sayıda ürün kodu ile yürütülen bir pilot, hat hızındaki baskı kalitesi sorunlarını tüm portföye yayılmadan önce ortaya çıkarır. Yaygın kullanım sağlandıktan sonra tartışma barkoddan, çözümleyici servisleri ve görünürlük verisi gibi arkadaki veri katmanına kayacaktır.</p>
+
+      <h2>Sonuç</h2>
+      <p>GS1 Sunrise 2027, doğrusal barkodun elli yıllık hâkimiyetini sona erdiren bir kesme tarihi değil, perakende altyapısının daha fazla veri taşıyan barkodlara hazırlanması için belirlenmiş ortak bir hedeftir. Geçiş döneminde ürünler her iki barkodu birlikte taşıyacak; yerleşim ve baskı kalitesi kurallarına uyum kasadaki işlem hızını koruyacaktır.</p>
+      <p>Üreticiler açısından işin ağırlığı ambalaj tasarımında değil, GTIN doğruluğu ile hat üzerinde dinamik veri basımı ve bu verinin doğru işlenmesi başlıklarında toplanmaktadır. Parti ve seri numarasını üretim anında güvenilir biçimde üretebilen bir tesis için 2D barkoda geçiş, mevcut verinin ambalaja taşınmasından ibarettir. Bu nedenle hazırlığa barkod seçiminden değil, üretim verisinin toplandığı noktadan başlamak daha isabetli bir stratejidir.</p>
+
+      <h2>Sıkça Sorulan Sorular</h2>
+
+      <h3>GS1 Sunrise 2027 üreticiler için zorunlu mu?</h3>
+      <p>Girişim, marka sahipleri açısından gönüllü bir geçiş olarak tanımlanmaktadır; zorunluluk satış noktası tarafındaki hazırlık hedefinden ve ürün grubuna özgü mevzuattan doğar. Uygulamada takvimi belirleyecek asıl etken, perakende zincirlerinin tedarikçilerinden 2D barkod talep etmeye başlamasıdır.</p>
+
+      <h3>Mevcut EAN-13 barkodlarımız 2027'de geçersiz mi olacak?</h3>
+      <p>Hayır. Doğrusal barkodlar, ihtiyaç duyulduğu sürece 2D barkodlarla birlikte kullanılmaya devam edecektir. Geçiş döneminde 2D barkod taşıyan ürünlerin doğrusal barkodu da bulunmalıdır. Yaygın kullanım sağlandıktan sonra ambalajda yalnızca 2D barkod bırakmak marka sahibinin tercihine kalmaktadır.</p>
+
+      <h3>GS1 DataMatrix ile QR Kod arasında nasıl seçim yapılmalı?</h3>
+      <p>Seçim kullanım senaryosuna bağlıdır. GS1 DataMatrix daha küçük alan kaplar ve sağlık ürünlerinde kabul görmüş taşıyıcıdır. GS1 Digital Link sözdizimi ile kodlanan QR Kod ise telefonun standart kamera uygulamasıyla okunabildiği için tüketici etkileşimi gerektiren ürünlerde avantaj sağlar.</p>
+    `,
+  },
+  {
     id: 2,
     title: 'Importanța Trasabilității Alimentare pentru Consumatorii Finali',
     titleTr: 'Gıda İzlenebilirliğinin Son Tüketiciler İçin Önemi',

@@ -31,7 +31,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://traceability.com.tr/siskon-logo-header.svg',
+          url: 'https://izlenebilirlik.com.tr/siskon-logo-header.svg',
           width: 800,
           height: 600,
           alt: title,
@@ -42,7 +42,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://traceability.com.tr/siskon-logo-header.svg'],
+      images: ['https://izlenebilirlik.com.tr/siskon-logo-header.svg'],
     },
   };
 }

@@ -50,7 +50,7 @@ export async function generateMetadata() {
     title,
     description,
     keywords: 'endüstriyel izlenebilirlik, MES, endüstri 4.0, RFID, RTLS, WMS, POKA YOKE, akıllı fabrikalar, otomotiv, gıda, ilaç, kalite kontrol, depo yönetimi',
-    metadataBase: new URL('https://traceability.com.tr'),
+    metadataBase: new URL('https://izlenebilirlik.com.tr'),
     icons: {
       icon: '/favicon.svg',
       shortcut: '/favicon.svg',
@@ -64,7 +64,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://traceability.com.tr/siskon-logo-header.svg',
+          url: 'https://izlenebilirlik.com.tr/siskon-logo-header.svg',
           width: 800,
           height: 600,
           alt: 'Traceability Logo',
@@ -75,7 +75,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://traceability.com.tr/siskon-logo-header.svg'],
+      images: ['https://izlenebilirlik.com.tr/siskon-logo-header.svg'],
     },
     alternates,
   };
@@ -100,23 +100,53 @@ export default async function RootLayout({ children }) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(){
-  function unlockScroll(){
+  function unlockPage(){
     var html = document.documentElement;
     var body = document.body;
     if (!html || !body) return;
 
-    if (html.style.overflowY === 'hidden') html.style.overflowY = 'auto';
-    if (body.style.overflowY === 'hidden') body.style.overflowY = 'auto';
-    if (body.style.overflow === 'hidden') body.style.overflow = 'auto';
-    if (!body.style.overflowX) body.style.overflowX = 'hidden';
+    // Scroll ve pointer-events kilitlerini kaldır
+    if (html.style.overflowY === 'hidden' || html.style.overflow === 'hidden') html.style.setProperty('overflow-y', 'auto', 'important');
+    if (body.style.overflowY === 'hidden' || body.style.overflow === 'hidden') body.style.setProperty('overflow-y', 'auto', 'important');
+    if (body.style.position === 'fixed') body.style.setProperty('position', 'static', 'important');
+
+    if (html.style.pointerEvents === 'none') html.style.setProperty('pointer-events', 'auto', 'important');
+    if (body.style.pointerEvents === 'none') body.style.setProperty('pointer-events', 'auto', 'important');
+
+    // CerezGo ve cookie tam ekran backdrop/overlay → tıklanamaz yap
+    try {
+      var selectors = '[id*="cg-"],[class*="cg-"],[id*="cerezgo"],[class*="cerezgo"]';
+      var all = document.querySelectorAll(selectors);
+      for (var i = 0; i < all.length; i++) {
+        var el = all[i];
+        var id = (el.id || '').toLowerCase();
+        var cls = (typeof el.className === 'string' ? el.className : '').toLowerCase();
+
+        // Banner, modal kartı veya widget kutusunun kendisi tıklanabilir kalmalı
+        var isCard = id.indexOf('banner') >= 0 || id.indexOf('widget') >= 0 || cls.indexOf('banner') >= 0 || cls.indexOf('widget') >= 0 || id.indexOf('modal-content') >= 0;
+        if (isCard) {
+          el.style.setProperty('pointer-events', 'auto', 'important');
+          continue;
+        }
+
+        var rect = el.getBoundingClientRect();
+        var isCover = rect.width >= (window.innerWidth * 0.75) && rect.height >= (window.innerHeight * 0.75);
+        var isBackdrop = id.indexOf('backdrop') >= 0 || id.indexOf('overlay') >= 0 || cls.indexOf('backdrop') >= 0 || cls.indexOf('overlay') >= 0 || isCover;
+
+        if (isBackdrop && !isCard) {
+          el.style.setProperty('pointer-events', 'none', 'important');
+          el.style.setProperty('background', 'transparent', 'important');
+        }
+      }
+    } catch(e){}
   }
 
-  unlockScroll();
-  window.addEventListener('load', unlockScroll, { once: true });
+  unlockPage();
+  window.addEventListener('load', unlockPage);
+  window.addEventListener('resize', unlockPage);
 
-  var observer = new MutationObserver(unlockScroll);
-  if (document.documentElement) observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
-  if (document.body) observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+  var obs = new MutationObserver(unlockPage);
+  if (document.documentElement) obs.observe(document.documentElement, { attributes: true, childList: true, subtree: true, attributeFilter: ['style','class'] });
 })();`,
           }}
         />
@@ -176,7 +206,7 @@ export default async function RootLayout({ children }) {
         />
         <Script
           id="gtm-head"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -186,7 +216,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <BreadcrumbSchema />
       </head>
       <body className={kanit.variable} suppressHydrationWarning>

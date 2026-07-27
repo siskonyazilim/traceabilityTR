@@ -105,7 +105,7 @@ export async function generateMetadata({ params }) {
   const description = project.description;
 
   const alternates = {
-    canonical: `https://traceability.com.tr${
+    canonical: `https://izlenebilirlik.com.tr${
       locale === 'en'
         ? `/en/reference-projects/${getLocalizedSlug('portfolio', baseSlug, 'en')}`
         : (locale === 'ro'
@@ -113,10 +113,10 @@ export async function generateMetadata({ params }) {
             : `/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`)
     }`,
     languages: {
-      'tr': `https://traceability.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
-      'en': `https://traceability.com.tr/en/reference-projects/${getLocalizedSlug('portfolio', baseSlug, 'en')}`,
-      'ro': `https://traceability.com.tr/ro/proiecte-de-referinta/${getLocalizedSlug('portfolio', baseSlug, 'ro')}`,
-      'x-default': `https://traceability.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
+      'tr': `https://izlenebilirlik.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
+      'en': `https://izlenebilirlik.com.tr/en/reference-projects/${getLocalizedSlug('portfolio', baseSlug, 'en')}`,
+      'ro': `https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/${getLocalizedSlug('portfolio', baseSlug, 'ro')}`,
+      'x-default': `https://izlenebilirlik.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
     }
   };
 
@@ -127,9 +127,9 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
-  let ogImage = 'https://traceability.com.tr/siskon-logo-header.svg';
+  let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
   if (project.image) {
-    ogImage = project.image.startsWith('http') ? project.image : `https://traceability.com.tr${project.image}`;
+    ogImage = project.image.startsWith('http') ? project.image : `https://izlenebilirlik.com.tr${project.image}`;
   }
 
   return {
@@ -213,9 +213,9 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     || (project.image?.includes('/Logos/') ? '/resmi/Factory.jpg' : project.image);
   const sliderImages = [featuredImage, ...(Array.isArray(project.gallery) ? project.gallery : [])];
 
-  const pageUrl = `https://traceability.com.tr${toLocalePath(`/portfolio/${project.slug}`, locale)}`;
-  const homeUrl = `https://traceability.com.tr${toLocalePath('/', locale)}`;
-  const projectsUrl = `https://traceability.com.tr${localizedListPath}`;
+  const pageUrl = `https://izlenebilirlik.com.tr${toLocalePath(`/portfolio/${project.slug}`, locale)}`;
+  const homeUrl = `https://izlenebilirlik.com.tr${toLocalePath('/', locale)}`;
+  const projectsUrl = `https://izlenebilirlik.com.tr${localizedListPath}`;
 
   const homeLabelByLocale = {
     tr: "Anasayfa",
@@ -229,11 +229,11 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     ro: "Proiecte de Referință",
   };
 
-  const absoluteMainImage = featuredImage.startsWith('http') ? featuredImage : `https://traceability.com.tr${featuredImage}`;
+  const absoluteMainImage = featuredImage.startsWith('http') ? featuredImage : `https://izlenebilirlik.com.tr${featuredImage}`;
   const absoluteGalleryImages = [
     absoluteMainImage,
     ...(Array.isArray(project.gallery) ? project.gallery : []).map(img => 
-      img.startsWith('http') ? img : `https://traceability.com.tr${img}`
+      img.startsWith('http') ? img : `https://izlenebilirlik.com.tr${img}`
     )
   ];
 
@@ -258,7 +258,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
           "name": "Siskon Otomasyon ve Yazılım A.Ş.",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://traceability.com.tr/siskon-logo-header.svg"
+            "url": "https://izlenebilirlik.com.tr/siskon-logo-header.svg"
           }
         },
         "description": project.description,

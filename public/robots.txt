@@ -17,5 +17,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://traceability.com.tr/sitemap.xml
-Host: https://traceability.com.tr
+Sitemap: https://izlenebilirlik.com.tr/sitemap.xml
+Host: https://izlenebilirlik.com.tr

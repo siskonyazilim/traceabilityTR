@@ -82,7 +82,7 @@ export const Footer = () => {
     <footer className="bg-[radial-gradient(circle_at_top_right,_rgba(0,181,247,0.14)_0%,_rgba(10,10,43,0)_30%),linear-gradient(180deg,_#0a0a2b_0%,_#070720_100%)] text-white pt-14 pb-8 border-t border-slate-blue/30">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10">
           {/* Brand */}
           <div>
             <div className="mb-4">

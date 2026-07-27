@@ -149,7 +149,7 @@ export const HeroSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full overflow-hidden bg-black" style={{ height: '100svh', minHeight: '500px' }}>
       {/* Active slide only for reduced network and CPU */}
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
         <video
@@ -175,22 +175,22 @@ export const HeroSlider = () => {
         <div className="absolute inset-0 bg-primary-black/35"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
 
-        <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-14 sm:pt-16">
           <div className="w-full max-w-5xl mx-auto text-center">
             <h1
               suppressHydrationWarning
-              className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-[1.06] sm:leading-[1.02] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]"
-              style={{ fontFamily: 'var(--font-kanit)' }}
+              className="text-white text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-[1.1] sm:leading-[1.02] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)] overflow-wrap-anywhere break-words px-2"
+              style={{ fontFamily: 'var(--font-kanit)', overflowWrap: 'break-word', wordBreak: 'break-word' }}
             >
               {activeSlide.title}
             </h1>
 
-            <div className="text-white mt-6 sm:mt-7">
-              <p suppressHydrationWarning className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl lg:max-w-5xl mx-auto">
+            <div className="text-white mt-4 sm:mt-6 sm:mt-7">
+              <p suppressHydrationWarning className="text-sm sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl lg:max-w-5xl mx-auto px-2">
                 {activeSlide.id === 1 ? (
                   <>
-                    <span className="block lg:whitespace-nowrap">{firstSlideSubtitleLines[0]}</span>
-                    {firstSlideSubtitleLines[1] ? <span className="block lg:whitespace-nowrap">{firstSlideSubtitleLines[1]}</span> : null}
+                    <span className="block">{firstSlideSubtitleLines[0]}</span>
+                    {firstSlideSubtitleLines[1] ? <span className="block">{firstSlideSubtitleLines[1]}</span> : null}
                   </>
                 ) : (
                   activeSlide.subtitle

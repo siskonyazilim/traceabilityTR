@@ -42,7 +42,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://traceability.com.tr/siskon-logo-header.svg',
+          url: 'https://izlenebilirlik.com.tr/siskon-logo-header.svg',
           width: 800,
           height: 600,
           alt: title,
@@ -53,7 +53,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://traceability.com.tr/siskon-logo-header.svg'],
+      images: ['https://izlenebilirlik.com.tr/siskon-logo-header.svg'],
     },
   };
 }
@@ -64,44 +64,44 @@ export default function HomePage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://traceability.com.tr/#website",
-        "url": "https://traceability.com.tr/",
+        "@id": "https://izlenebilirlik.com.tr/#website",
+        "url": "https://izlenebilirlik.com.tr/",
         "name": "Traceability",
         "description": "Industrial Traceability & MES Solutions",
         "publisher": {
-          "@id": "https://traceability.com.tr/#organization"
+          "@id": "https://izlenebilirlik.com.tr/#organization"
         },
         "inLanguage": ["tr", "en", "ro"]
       },
       {
         "@type": "WebPage",
-        "@id": "https://traceability.com.tr/#webpage",
-        "url": "https://traceability.com.tr/",
+        "@id": "https://izlenebilirlik.com.tr/#webpage",
+        "url": "https://izlenebilirlik.com.tr/",
         "name": "Traceability | End-to-End Industrial Traceability and MES",
         "isPartOf": {
-          "@id": "https://traceability.com.tr/#website"
+          "@id": "https://izlenebilirlik.com.tr/#website"
         },
         "about": {
-          "@id": "https://traceability.com.tr/#softwareapplication"
+          "@id": "https://izlenebilirlik.com.tr/#softwareapplication"
         },
         "breadcrumb": {
-          "@id": "https://traceability.com.tr/#breadcrumb"
+          "@id": "https://izlenebilirlik.com.tr/#breadcrumb"
         },
         "inLanguage": ["tr", "en", "ro"]
       },
       {
         "@type": "SoftwareApplication",
-        "@id": "https://traceability.com.tr/#softwareapplication",
+        "@id": "https://izlenebilirlik.com.tr/#softwareapplication",
         "name": "Traceability Industrial Traceability Platform",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "url": "https://traceability.com.tr/",
+        "url": "https://izlenebilirlik.com.tr/",
         "description": "End-to-end industrial traceability and MES software applications for smart factories including RFID, RTLS, WMS, Poka Yoke and ERP/MES integrations.",
         "creator": {
-          "@id": "https://traceability.com.tr/#organization"
+          "@id": "https://izlenebilirlik.com.tr/#organization"
         },
         "publisher": {
-          "@id": "https://traceability.com.tr/#organization"
+          "@id": "https://izlenebilirlik.com.tr/#organization"
         },
         "featureList": [
           "End-to-end production traceability",
@@ -116,24 +116,24 @@ export default function HomePage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://traceability.com.tr/#breadcrumb",
+        "@id": "https://izlenebilirlik.com.tr/#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Traceability",
-            "item": "https://traceability.com.tr/"
+            "item": "https://izlenebilirlik.com.tr/"
           }
         ]
       },
       {
         "@type": "Organization",
-        "@id": "https://traceability.com.tr/#organization",
+        "@id": "https://izlenebilirlik.com.tr/#organization",
         "name": "Traceability",
-        "url": "https://traceability.com.tr",
+        "url": "https://izlenebilirlik.com.tr",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://traceability.com.tr/siskon-logo-header.svg"
+          "url": "https://izlenebilirlik.com.tr/siskon-logo-header.svg"
         },
         "contactPoint": [
           {

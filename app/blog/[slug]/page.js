@@ -18,7 +18,10 @@ const normalizeBlogContent = (html) => {
 
   const withoutInlineImages = html
     .replace(/<p[^>]*>\s*<img[^>]*>\s*<\/p>/gi, '')
-    .replace(/<img[^>]*>/gi, '');
+    .replace(/(<figure[^>]*>[\s\S]*?<\/figure>)|(<img[^>]*>)/gi, (match, figureBlock) => {
+      // Preserve <figure> blocks (intentional images), remove standalone <img>
+      return figureBlock ? figureBlock : '';
+    });
 
   return withoutInlineImages.replace(
     /<p[^>]*>\s*<strong>([^<]{2,140})<\/strong>\s*:?\s*([^<]*)<\/p>/gi,
@@ -53,12 +56,12 @@ export async function generateMetadata({ params }) {
   const canonicalPath = toLocalePath(`/blog/${localizedBlogSlug}`, locale);
 
   const alternates = {
-    canonical: `https://traceability.com.tr${canonicalPath}`,
+    canonical: `https://izlenebilirlik.com.tr${canonicalPath}`,
     languages: {
-      'tr': `https://traceability.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
-      'en': `https://traceability.com.tr/en/blog/${getLocalizedSlug('blog', baseSlug, 'en')}`,
-      'ro': `https://traceability.com.tr/ro/blog/${getLocalizedSlug('blog', baseSlug, 'ro')}`,
-      'x-default': `https://traceability.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
+      'tr': `https://izlenebilirlik.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
+      'en': `https://izlenebilirlik.com.tr/en/blog/${getLocalizedSlug('blog', baseSlug, 'en')}`,
+      'ro': `https://izlenebilirlik.com.tr/ro/blog/${getLocalizedSlug('blog', baseSlug, 'ro')}`,
+      'x-default': `https://izlenebilirlik.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
     }
   };
 
@@ -69,9 +72,9 @@ export async function generateMetadata({ params }) {
     openGraphLocale = 'en_US';
   }
 
-  let ogImage = 'https://traceability.com.tr/siskon-logo-header.svg';
+  let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
   if (post.image) {
-    ogImage = post.image.startsWith('http') ? post.image : `https://traceability.com.tr${post.image}`;
+    ogImage = post.image.startsWith('http') ? post.image : `https://izlenebilirlik.com.tr${post.image}`;
   }
 
   return {
