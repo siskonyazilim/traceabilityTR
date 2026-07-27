@@ -91,7 +91,7 @@ export default async function RootLayout({ children }) {
         <Script
           id="cerezgo-script"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
-          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vpKaPbTvt61DIB1C9ICfSdnEZ9wdEs7lN5IoDFNg6gdqhFdk9hLHp4="
+          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM="
           data-id="nt"
           strategy="beforeInteractive"
         />
