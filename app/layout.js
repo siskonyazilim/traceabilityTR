@@ -144,45 +144,50 @@ export default async function RootLayout({ children }) {
     const style = document.createElement('style');
     style.id = 'cg-backdrop-fix';
     style.textContent =
+      /* backdrop'u tıklanamaz + şeffaf yap */
       '::backdrop{pointer-events:none!important;background:transparent!important}' +
-      'dialog::backdrop{pointer-events:none!important;background:transparent!important}';
+      'dialog::backdrop{pointer-events:none!important;background:transparent!important}' +
+      /* host öğesini pointer-events:none yap — tam ekran overlay geçirgen olsun */
+      ':host{pointer-events:none!important}' +
+      /* ama dialog ve içeriği tıklanabilir kalsın */
+      '.cerezgo-consent-dialog,.cerezgo-dialog{pointer-events:auto!important}' +
+      '.cerezgo-consent-dialog *,.cerezgo-dialog *{pointer-events:auto!important}';
     shadowRoot.appendChild(style);
-    log('✅ Shadow DOM ::backdrop fix enjekte edildi.');
+    log('✅ Shadow DOM ::backdrop + :host fix enjekte edildi.');
     return true;
   }
 
   function unlockBodyScroll() {
-    const b = document.body;
-    const h = document.documentElement;
-    if (b) {
-      b.style.setProperty('overflow',            'auto', 'important');
-      b.style.setProperty('overflow-y',          'auto', 'important');
-      b.style.setProperty('touch-action',        'auto', 'important');
-      b.style.setProperty('overscroll-behavior', 'auto', 'important');
-      if (b.style.position === 'fixed' || b.style.position === 'sticky') {
-        b.style.setProperty('position', 'relative', 'important');
+    [document.body, document.documentElement].forEach(function(el) {
+      if (!el) return;
+      /* Önce inline override'ı kaldır, sonra !important ile yeniden yaz */
+      ['overflow', 'overflow-y', 'touch-action', 'overscroll-behavior'].forEach(function(prop) {
+        el.style.removeProperty(prop);
+        el.style.setProperty(prop, 'auto', 'important');
+      });
+      if (el === document.body &&
+          (el.style.position === 'fixed' || el.style.position === 'sticky')) {
+        el.style.removeProperty('position');
+        el.style.setProperty('position', 'relative', 'important');
       }
-    }
-    if (h) {
-      h.style.setProperty('overflow',   'auto', 'important');
-      h.style.setProperty('overflow-y', 'auto', 'important');
-    }
+    });
   }
 
-  /* Body style watcher: CerezGo her dialog açışında overflow:hidden set ediyor */
+  /* Body + html style watcher: CerezGo her dialog açışında overflow:hidden set ediyor */
   let _bodyWatcher = null;
   function startBodyWatcher() {
-    if (_bodyWatcher || !document.body) return;
+    if (_bodyWatcher) return;
+    const needsUnlock = (el) =>
+      el && (el.style.overflow === 'hidden' || el.style.overflowY === 'hidden');
     _bodyWatcher = new MutationObserver(() => {
-      if (
-        document.body.style.overflow  === 'hidden' ||
-        document.body.style.overflowY === 'hidden'
-      ) {
+      if (needsUnlock(document.body) || needsUnlock(document.documentElement)) {
         unlockBodyScroll();
       }
     });
-    _bodyWatcher.observe(document.body, { attributes: true, attributeFilter: ['style'] });
-    log('Body overflow watcher başlatıldı.');
+    [document.body, document.documentElement].forEach(function(el) {
+      if (el) _bodyWatcher.observe(el, { attributes: true, attributeFilter: ['style'] });
+    });
+    log('Body + html overflow watcher başlatıldı.');
   }
 
   /* shadowRoot hazır olduğunda anında fix uygula */
