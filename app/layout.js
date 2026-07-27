@@ -88,16 +88,21 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <head>
-        {/* 1) CEREZGO — Consent Mode varsayılanlarını (denied) ayarlaması için
-               GTM'den ÖNCE ve aynı yükleme stratejisiyle (afterInteractive)
-               tanımlanmalı. JSX sırası + aynı strateji, DOM'a ekleniş sırasını
-               garanti eder. */}
+        {/* ── CerezGo ────────────────────────────────────────────────────────────
+            beforeInteractive → SSR sırasında <head>'e <script src="..."> olarak
+            basılır. GTM afterInteractive ile geldiğinden CerezGo DOM'da her
+            zaman GTM'den ÖNCE görünür → CerezGoValidationError olmaz.
+            CerezGo zaten kendi başlatılışında gtag consent defaults'ı set eder;
+            ayrı bir inline script'e gerek yok.
+            Blocking overlay: afterInteractive cerezgo-scroll-unlock ile
+            Shadow DOM ::backdrop fix çözüyor.
+        ─────────────────────────────────────────────────────────────────────── */}
         <Script
           id="cerezgo-script"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
           data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM="
           data-id="nt"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
 
         {/* 2) GTM — Cerezgo'dan SONRA, aynı strateji (afterInteractive).
@@ -122,6 +127,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                kapı açarak KVKK/GDPR uyumluluğunu bozuyordu. Script sırası
                düzeldiği için banner artık normal şekilde kapanmalı; bypass'a
                ihtiyaç kalmamalı. */}
+
+        {/* ── CerezGo Bypass – Shadow DOM ::backdrop fix ─────────────────────────
+            ROOT CAUSE: CerezGo bir Web Component (<cerezgo-app>) + Shadow DOM
+            kullanıyor. Shadow DOM içindeki <dialog popover="manual"> browser'ın
+            "top layer"ında açılıyor ve ::backdrop pseudo-element'i tüm sayfayı
+            kaplayarak pointer event'leri yutuyor. Normal CSS selectorları
+            Shadow DOM'a giremez; JS ile shadow root'a style inject etmek gerekiyor.
+            Ayrıca CerezGo body'ye inline overflow:hidden koyuyor — mobil scroll'u
+            öldürüyor, onu da setInterval ile sıfırlıyoruz.
+        ─────────────────────────────────────────────────────────────────────── */}
+        <Script
+          id="cerezgo-scroll-unlock"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  var TICK = 0, MAX = 1500, pid;
+
+  /* 1 — Shadow DOM'a ::backdrop fix inject et */
+  function fix_backdrop() {
+    var app = document.querySelector('cerezgo-app');
+    if (!app || !app.shadowRoot) return false;
+    if (app.shadowRoot.getElementById('cgbdfix')) return true;
+    var s = document.createElement('style');
+    s.id = 'cgbdfix';
+    s.textContent =
+      '::backdrop{pointer-events:none!important;background:transparent!important}' +
+      'dialog::backdrop{pointer-events:none!important;background:transparent!important}';
+    app.shadowRoot.appendChild(s);
+    return true;
+  }
+
+  /* 2 — Body/html kilitleri: koşulsuz sıfırla (mobil scroll için kritik) */
+  function fix_body() {
+    var H = document.documentElement, B = document.body;
+    if (!H || !B) return;
+    var els = [H, B];
+    for (var i = 0; i < els.length; i++) {
+      els[i].style.setProperty('overflow',            'auto', 'important');
+      els[i].style.setProperty('overflow-y',          'auto', 'important');
+      els[i].style.setProperty('pointer-events',      'auto', 'important');
+      els[i].style.setProperty('touch-action',        'auto', 'important');
+      els[i].style.setProperty('overscroll-behavior', 'auto', 'important');
+    }
+    if (B.style.position === 'fixed' || B.style.position === 'sticky') {
+      B.style.setProperty('position', 'relative', 'important');
+    }
+  }
+
+  function run() {
+    fix_body();
+    fix_backdrop();
+    TICK++;
+    if (TICK >= MAX) clearInterval(pid);
+  }
+
+  run();
+  pid = setInterval(run, 200);
+  window.addEventListener('load', run);
+  document.addEventListener('touchstart', run, { passive: true, once: true });
+  window.addEventListener('resize', fix_body);
+})();`,
+          }}
+        />
 
         <Script
           id="cerezgo-hide-mobile-fab"
@@ -180,7 +248,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <BreadcrumbSchema />
+        <BreadcrumbSchema /> 
       </head>
       <body className={kanit.variable} suppressHydrationWarning>
         <noscript>
