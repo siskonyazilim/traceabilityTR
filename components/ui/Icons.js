@@ -105,13 +105,7 @@ export function IconPhone({ size = 20, className = '' }) {
   );
 }
 
-export function IconTwitter({ size = 20, className = '' }) {
-  return (
-    <svg {...baseProps(size, className)}>
-      <path d="M23 3C22.04 3.68 21 4.2 19.9 4.54C19.3 3.86 18.5 3.4 17.62 3.24C16.74 3.08 15.84 3.23 15.06 3.67C14.27 4.11 13.64 4.81 13.25 5.66C12.86 6.5 12.74 7.44 12.9 8.35V9.35C11.3 9.39 9.72 9.03 8.31 8.29C6.9 7.55 5.71 6.45 4.86 5.1C4.86 5.1 1 13.1 9 17.1C7.17 18.34 4.99 19 2.75 19C2.16 19 1.58 18.97 1 18.9C3.26 20.36 5.88 21.13 8.55 21.1C16.9 21.1 21.46 14.13 21.46 8.1C21.46 7.9 21.46 7.71 21.45 7.51C22.5 6.77 23.4 5.84 24.1 4.77L23 3Z" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
+
 
 export function IconLinkedIn({ size = 20, className = '' }) {
   return (

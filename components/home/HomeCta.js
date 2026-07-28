@@ -18,12 +18,12 @@ export const HomeCta = () => {
       <Container size="xl" className="relative z-10">
         <div className="text-center max-w-5xl mx-auto">
           {/* Title */}
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary-black mb-6 md:mb-8 leading-tight">
+          <h2 className="text-2xl md:text-3xl font-semibold text-primary-black mb-6 leading-tight">
             {t('homeCta.title', 'Üretim süreçlerinizi dönüştürmeye hazır mısınız?')}
           </h2>
 
           {/* Subtitle */}
-          <p className="text-gray-text text-lg md:text-2xl mb-10 md:mb-12 leading-relaxed">
+          <p className="text-gray-text text-xl mb-10 max-w-3xl mx-auto leading-relaxed">
             {t('homeCta.subtitle', 'Operasyonel akışlarınıza uygun bir izlenebilirlik çözümü birlikte planlayalım.')}
           </p>
 
