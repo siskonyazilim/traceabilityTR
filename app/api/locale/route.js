@@ -10,7 +10,7 @@ export async function POST(request) {
     const response = NextResponse.json({ ok: true, locale: nextLocale });
     response.cookies.set('locale', nextLocale, {
       path: '/',
-      maxAge: 60 * 60 * 24 * 365,
+      //maxAge: 60 * 60 * 24 * 365,
       sameSite: 'lax',
     });
 

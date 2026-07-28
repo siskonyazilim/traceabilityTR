@@ -1,0 +1,117 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Coating Line",
+  "heroTitleLine2": "Traceability",
+  "heroSub": "At Phinia's facility in the Izmir ESBAS Free Zone, loading and coating operations were made fully traceable on a bar/rack and batch basis.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "Bar/rack and batch visibility in coating operations",
+  "contextP1": "Phinia's manufacturing facility in the Izmir ESBAS Free Zone serves the automotive industry.",
+  "contextP2": "Within this project at the coating plant, loading and coating operations were digitized and managed through bar/rack and batch relationships.",
+  "problemEyebrow": "Need / Challenge",
+  "problemTitle": "Reliable control of loading rules and recipe compliance",
+  "problemLede": "The plant needed a reliable way to manage which product was loaded onto which bar/rack, which bar/rack belonged to which batch, and applicable loading constraints. Manual handling introduced risks of incorrect loading, recipe mismatch, and traceability gaps.",
+  "problemList": [
+    {
+      "bold": "Complex Mapping",
+      "text": "Manual tracking of bar/rack-product-batch relationships was error-prone."
+    },
+    {
+      "bold": "Constraint Enforcement",
+      "text": "Product group, min/max loading limits, and recipe conditions had to be enforced consistently in operations."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "PLC-integrated bar/rack and batch traceability over OPC-UA",
+  "solutionLede": "Direct communication with the PLC was established via OPC-UA. Bar/rack data captured at the loading station was matched with real-time batch data, bar/rack IDs were retained on batch records, and authorized loading conditions were managed through a central panel.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Bar/Rack and Batch Matching",
+      "text": "Bar/rack data read at loading is matched with live batch information in the predefined format."
+    },
+    {
+      "no": "02",
+      "title": "Rules and Recipe Setup",
+      "text": "Bar/rack-product mappings, product groups, min/max limits, and PLC recipe relations are configured in the panel."
+    },
+    {
+      "no": "03",
+      "title": "Conditional Loading",
+      "text": "Loading at coating entry is validated against approved rules and product quantity is sent to PLC for surface-area calculations."
+    },
+    {
+      "no": "04",
+      "title": "Exit Result Tracking",
+      "text": "At coating exit, bar/rack and batch records are linked with result data and stored."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "C# SCADA, OPC-UA, barcode scanners, and PLC infrastructure",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Manages bar/rack-batch matching, rule validation, data flow, and traceability records."
+    },
+    {
+      "tag": "COMMUNICATION",
+      "title": "OPC-UA Protocol",
+      "text": "Provides reliable real-time data exchange between SCADA and PLC."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC and Recipe Control",
+      "text": "Controls shop-floor workflows, recipe mapping, and loading validation."
+    },
+    {
+      "tag": "DATA CAPTURE",
+      "title": "Barcode Scanners",
+      "text": "Read bar/rack and product identifiers to initiate validated operations."
+    },
+    {
+      "tag": "MANAGEMENT",
+      "title": "Administration Panel",
+      "text": "Centralizes bar/rack-product mapping, product groups, loading limits, and recipe definitions."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "End-to-end data flow with OPC-UA and Oracle",
+  "integrationDesc": "The system integrates with the shop-floor PLC over OPC-UA and with Oracle on the enterprise side. Bar/rack, batch, recipe, and loading data are acquired through OPC-UA, while traceability and result data are shared centrally in Oracle.",
+  "integrationList": [
+    {
+      "bold": "PLC (OPC-UA)",
+      "text": "Bar/rack, batch, recipe, and loading data are collected from the line in real time."
+    },
+    {
+      "bold": "Oracle",
+      "text": "Traceability and process result data are shared and reported in the enterprise layer."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Reliable process governance and full traceability",
+  "resultsGrid": [
+    {
+      "title": "Bar/Rack and Batch Traceability",
+      "text": "Loading and coating processes became fully traceable at bar/rack and batch level."
+    },
+    {
+      "title": "Rule-Based Loading",
+      "text": "Only approved loading operations were allowed using product group checks and min/max limits."
+    },
+    {
+      "title": "Higher Process Reliability",
+      "text": "PLC recipe mapping and direct OPC-UA communication reduced operational mismatch risks."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to transform your production processes?",
+  "ctaSubtitle": "Contact us to discuss how a similar solution can be implemented in your operations.",
+  "ctaPrimary": "Contact Us"
+}

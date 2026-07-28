@@ -20,7 +20,6 @@ const SECTOR_SLUG_MAP = {
 const CANONICAL_SECTOR_ORDER = ['home-appliances', 'food-beverage', 'logistics', 'automotive', 'tobacco'];
 import Link from 'next/link';
 import Container from '../../components/ui/Container';
-import SectionHeader from '../../components/ui/SectionHeader';
 import ProjectCard from '../../components/ui/ProjectCard';
 import Button from '../../components/ui/Button';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
@@ -32,15 +31,10 @@ export default function ProjectsPageClient() {
   const { locale, t } = useLanguage();
 
   const localizedProjects = useMemo(() => {
-    const projects = withReferenceProjectTimeline(
+    return withReferenceProjectTimeline(
       sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
       locale
     );
-    return [...projects].sort((a, b) => {
-      const aCode = a.referenceDate || '';
-      const bCode = b.referenceDate || '';
-      return bCode.localeCompare(aCode);
-    });
   }, [locale]);
 
   const sectors = useMemo(() => {
@@ -171,7 +165,7 @@ export default function ProjectsPageClient() {
         {currentProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7">
             {currentProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} currentPage={currentPage} currentSectorSlug={sectorSlug} />
+              <ProjectCard key={project.slug || project.id} project={project} currentPage={currentPage} currentSectorSlug={sectorSlug} />
             ))}
           </div>
         ) : (

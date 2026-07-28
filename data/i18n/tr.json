@@ -7,8 +7,8 @@
     "switchAria": "Dil değiştir"
   },
   "header": {
-    "solutions": "Çözümlerimiz",
-    "industries": "Ürünlerimiz",
+    "solutions": "Çözümler",
+    "industries": "Sektörler",
     "projects": "Referans Projeler",
     "partners": "Çözüm Ortakları",
     "contact": "İletişim",
@@ -152,10 +152,10 @@
     "productivity": "Üretkenlik"
   },
   "sections": {
-    "solutionsProductsTitle": "Çözümler ve Ürünler",
-    "solutionsProductsSubtitle": "İzlenebilirlik için eksiksiz hizmet ve ürün yelpazemiz",
+    "solutionsProductsTitle": "Çözümler ve Sektörler",
+    "solutionsProductsSubtitle": "İzlenebilirlik için eksiksiz hizmet ve sektör yelpazemiz",
     "solutionsTab": "Çözümler",
-    "productsTab": "Ürünler",
+    "productsTab": "Sektörler",
     "details": "Detaylar",
     "detailChip": "Çözüm detayı",
     "detailChipProducts": "Ürün detayı",

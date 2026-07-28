@@ -1,0 +1,117 @@
+{
+  "backToProjects": "Înapoi la Proiectele de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria auto",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Trasabilitatea Liniei",
+  "heroTitleLine2": "de Acoperire",
+  "heroSub": "În fabrica Phinia din Zona Liberă ESBAȘ Izmir, procesele de încărcare și acoperire au fost făcute complet trasabile la nivel de bară și batch.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Vizibilitate pe bară și batch în operațiile de acoperire",
+  "contextP1": "Fabrica Phinia din Zona Liberă ESBAȘ Izmir produce pentru industria auto.",
+  "contextP2": "În acest proiect implementat în instalația de acoperire, operațiile de încărcare și acoperire au fost digitalizate și gestionate prin relația bară-batch.",
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Control fiabil al regulilor de încărcare și al conformității rețetelor",
+  "problemLede": "Era necesară gestionarea fiabilă a relației dintre produs, bară și batch, precum și a condițiilor de încărcare. Administrarea manuală genera riscuri de încărcare incorectă, neconcordanțe de rețetă și goluri de trasabilitate.",
+  "problemList": [
+    {
+      "bold": "Mapare Complexă",
+      "text": "Urmărirea manuală a relațiilor bară-produs-batch era predispusă la erori."
+    },
+    {
+      "bold": "Respectarea Constrângerilor",
+      "text": "Condițiile privind grupa de produse, limitele min/max și rețetele trebuiau aplicate consistent în operații."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Trasabilitate bară și batch integrată cu PLC prin OPC-UA",
+  "solutionLede": "Comunicarea directă cu PLC-ul a fost realizată prin OPC-UA. Informația barei citite la stația de încărcare a fost asociată cu datele batch în timp real, iar condițiile autorizate de încărcare au fost administrate centralizat prin panoul de management.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Asociere Bară și Batch",
+      "text": "Datele barei citite la încărcare sunt corelate cu informația batch în formatul definit."
+    },
+    {
+      "no": "02",
+      "title": "Definire Reguli și Rețete",
+      "text": "Asocierile bară-produs, grupele de produse, limitele min/max și relațiile de rețetă PLC sunt configurate în panou."
+    },
+    {
+      "no": "03",
+      "title": "Încărcare Condiționată",
+      "text": "La intrarea în instalația de acoperire, încărcarea este validată conform regulilor, iar cantitatea este transmisă către PLC pentru calculul suprafeței."
+    },
+    {
+      "no": "04",
+      "title": "Urmărirea Rezultatelor la Ieșire",
+      "text": "La ieșire, datele de bară și batch sunt legate de rezultatele procesului și înregistrate."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "SCADA în C#, OPC-UA, cititoare coduri de bare și infrastructură PLC",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA în C#",
+      "text": "Gestionează asocierea bară-batch, validarea regulilor, fluxul de date și înregistrările de trasabilitate."
+    },
+    {
+      "tag": "COMUNICAȚIE",
+      "title": "Protocol OPC-UA",
+      "text": "Asigură schimb de date fiabil și în timp real între SCADA și PLC."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "PLC și Controlul Rețetelor",
+      "text": "Coordonează fluxul din teren, maparea rețetelor și validarea încărcării."
+    },
+    {
+      "tag": "COLECTARE DATE",
+      "title": "Cititoare Coduri de Bare",
+      "text": "Citesc identificatorii de bară și produs pentru pornirea operațiilor validate."
+    },
+    {
+      "tag": "MANAGEMENT",
+      "title": "Panou de Administrare",
+      "text": "Centralizează asocierile bară-produs, grupele de produse, limitele de încărcare și definițiile de rețetă."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Flux de date end-to-end cu OPC-UA și Oracle",
+  "integrationDesc": "Sistemul se integrează cu PLC-ul de pe linie prin OPC-UA și cu Oracle la nivel corporate. Datele de bară, batch, rețetă și încărcare sunt preluate prin OPC-UA, iar datele de trasabilitate și rezultate sunt gestionate central în Oracle.",
+  "integrationList": [
+    {
+      "bold": "PLC (OPC-UA)",
+      "text": "Datele de bară, batch, rețetă și încărcare sunt colectate în timp real din producție."
+    },
+    {
+      "bold": "Oracle",
+      "text": "Datele de trasabilitate și rezultatele procesului sunt partajate și raportate la nivel enterprise."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Guvernanță fiabilă a procesului și trasabilitate completă",
+  "resultsGrid": [
+    {
+      "title": "Trasabilitate pe Bară și Batch",
+      "text": "Procesele de încărcare și acoperire au devenit complet trasabile la nivel de bară și batch."
+    },
+    {
+      "title": "Încărcare Bazată pe Reguli",
+      "text": "Au fost permise doar operațiile aprobate, pe baza grupelor de produse și limitelor min/max."
+    },
+    {
+      "title": "Fiabilitate Crescută",
+      "text": "Maparea rețetelor PLC și comunicarea directă OPC-UA au redus riscurile operaționale."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să vă transformați procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta implementarea unei soluții similare în compania dumneavoastră.",
+  "ctaPrimary": "Contactați-ne"
+}

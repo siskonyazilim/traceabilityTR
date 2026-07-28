@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Înapoi la Proiectele de Referință",
+  "sector": "Sector",
+  "location": "Locație",
+  "year": "An",
+  "scope": "Domeniu",
+  "scopeVal": "Software și Integrare",
+  "tagValue": "Industria auto",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Trasabilitatea Procesului",
+  "heroTitleLine2": "de Cuptor",
+  "heroSub": "În fabrica Phinia din Zona Liberă ESBAȘ Izmir, procesul de cuptor după acoperire a fost făcut complet trasabil prin urmărire pe bază de coș și batch.",
+  "contextEyebrow": "Client și Context",
+  "contextTitle": "Control end-to-end al procesului de cuptor după acoperire",
+  "contextP1": "Fabrica Phinia din Zona Liberă ESBAȘ Izmir produce pentru industria auto.",
+  "contextP2": "În acest proiect, produsele au fost urmărite la nivel de coș și batch pentru a asigura trasabilitatea și controlul parametrilor critici ai procesului de cuptor.",
+  "problemEyebrow": "Necesitate / Problemă",
+  "problemTitle": "Riscuri de calitate la intrarea în cuptor și în controlul parametrilor",
+  "problemLede": "După acoperire, produsele trebuiau să intre în cuptor doar în condiții conforme, iar parametrii critici ai procesului trebuiau monitorizați continuu. Lipsa controlului asupra condițiilor de intrare și a parametrilor de proces genera riscuri de calitate.",
+  "problemList": [
+    {
+      "bold": "Validarea Intrării",
+      "text": "Înainte de intrarea în cuptor, produsele trebuiau validate după timpul scurs și statusul acoperirii OK/NOK."
+    },
+    {
+      "bold": "Nivel de Trasabilitate",
+      "text": "Era necesară trasabilitatea completă la nivel de produs individual, bară-coș și batch."
+    }
+  ],
+  "solutionEyebrow": "Soluție",
+  "solutionTitle": "Asociere coș-batch și monitorizare în timp real a parametrilor de cuptor",
+  "solutionLede": "La intrarea în cuptor, pregătirea încărcării în coșuri a realizat asocierea cu un nou batch. Condițiile de intrare au fost validate, iar parametrii critici precum deschiderea ușii, durata de deschidere, timpul de curare și atingerea temperaturii de curare au fost monitorizați și controlați.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Pregătire Coș și Batch",
+      "text": "Produsele sunt pregătite în coșuri și asociate cu un batch nou la intrarea în cuptor."
+    },
+    {
+      "no": "02",
+      "title": "Validarea Condițiilor de Intrare",
+      "text": "Se verifică timpul scurs și statusul acoperirii OK/NOK înainte de intrarea în proces."
+    },
+    {
+      "no": "03",
+      "title": "Monitorizarea Parametrilor",
+      "text": "Sunt monitorizate evenimentele ușii, durata de deschidere, timpul de curare și creșterea spre temperatura de curare."
+    },
+    {
+      "no": "04",
+      "title": "Raportare pe Unitate",
+      "text": "Înregistrările de trasabilitate și rapoartele sunt generate la nivel de produs individual, bară-coș și batch."
+    }
+  ],
+  "techEyebrow": "Tehnologie / Echipamente",
+  "techTitle": "SCADA în C#, OPC-UA, cititoare coduri de bare și monitorizare PLC",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "Aplicație SCADA în C#",
+      "text": "Gestionează asocierea coș-batch, validarea condițiilor de proces și raportarea."
+    },
+    {
+      "tag": "COMUNICAȚIE",
+      "title": "Protocol OPC-UA",
+      "text": "Asigură comunicare fiabilă în timp real între SCADA și PLC."
+    },
+    {
+      "tag": "COLECTARE DATE",
+      "title": "Cititoare Coduri de Bare",
+      "text": "Colectează datele de identificare pentru coșuri și produse."
+    },
+    {
+      "tag": "AUTOMATIZARE",
+      "title": "Monitorizare Proces prin PLC",
+      "text": "Monitorizează condițiile de intrare și parametrii critici ai cuptorului, inclusiv timp și temperatură."
+    }
+  ],
+  "integrationEyebrow": "Integrări",
+  "integrationTitle": "Management centralizat cu OPC-UA și Oracle",
+  "integrationDesc": "Sistemul este integrat direct cu PLC-ul din producție prin OPC-UA și cu Oracle la nivel corporate. Datele despre coș-batch, condițiile de intrare și parametrii de proces sunt colectate din linie, iar datele de trasabilitate și rapoartele sunt partajate centralizat în Oracle.",
+  "integrationList": [
+    {
+      "bold": "PLC (OPC-UA)",
+      "text": "Datele de coș, batch, condiții de intrare și parametri de cuptor sunt monitorizate în timp real."
+    },
+    {
+      "bold": "Oracle",
+      "text": "Înregistrările de trasabilitate și rapoartele pe unitate sunt partajate la nivel enterprise."
+    }
+  ],
+  "resultsEyebrow": "Beneficii / Rezultate",
+  "resultsTitle": "Asigurarea calității și proces de cuptor auditabil",
+  "resultsGrid": [
+    {
+      "title": "Control de Intrare pe Condiții",
+      "text": "Doar produsele conforme intră în proces prin validarea timpului și a statusului acoperirii OK/NOK."
+    },
+    {
+      "title": "Vizibilitate pe Parametri Critici",
+      "text": "Monitorizarea continuă a ușii, duratei de curare și temperaturii a consolidat asigurarea calității."
+    },
+    {
+      "title": "Trasabilitate Completă",
+      "text": "Urmărirea la nivel individual, bară-coș și batch, cu rapoarte pe unitate, a oferit auditabilitate completă."
+    }
+  ],
+  "relatedProjects": "Proiecte Similare",
+  "ctaTitle": "Doriți să vă transformați procesele de producție?",
+  "ctaSubtitle": "Contactați-ne pentru a discuta implementarea unei soluții similare în compania dumneavoastră.",
+  "ctaPrimary": "Contactați-ne"
+}

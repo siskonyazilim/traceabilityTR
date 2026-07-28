@@ -385,6 +385,8 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     || slug === 'turk-tuborg-keg-ocr-traceability'
     || slug === 'phinia-datamatrix-quality-grading-station'
     || slug === 'phinia-electronic-board-assembly-traceability'
+    || slug === 'phinia-coating-line-traceability'
+    || slug === 'phinia-oven-process-traceability'
   ) {
     return (
       <>

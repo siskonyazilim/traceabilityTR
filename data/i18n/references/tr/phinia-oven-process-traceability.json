@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir",
+  "heroTitleLine1": "Fırın Prosesi",
+  "heroTitleLine2": "İzlenebilirliği",
+  "heroSub": "Phinia'nın İzmir ESBAŞ Serbest Bölge'deki tesisinde kaplama sonrası fırın prosesi, ürünlerin sepet ve batch bazında takip edilmesiyle tam izlenebilir hale getirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Kaplama sonrası fırın prosesinde uçtan uca kontrol",
+  "contextP1": "Phinia'nın İzmir ESBAŞ Serbest Bölge'deki fabrikası otomotiv sektörüne üretim yapmaktadır.",
+  "contextP2": "Bu projede kaplama sonrası fırın sürecinin izlenebilirliği için ürünler sepet ve batch bazında takip edilerek kritik proses parametreleri kontrol altına alınmıştır.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Fırın giriş koşulları ve proses parametrelerinde kalite riski",
+  "problemLede": "Kaplama sonrası ürünlerin fırına yalnızca uygun koşullarda girmesi ve kritik proses parametrelerinin izlenmesi gerekiyordu. Giriş koşullarının ve proses değişkenlerinin kontrolsüz kalması kalite riski oluşturuyordu.",
+  "problemList": [
+    {
+      "bold": "Giriş Doğrulama İhtiyacı",
+      "text": "Süre ve kaplama OK/NOK koşullarına göre uygun olmayan ürünlerin fırına girişi engellenmeliydi."
+    },
+    {
+      "bold": "İzlenebilirlik Derinliği",
+      "text": "Ürünlerin tekil, bara-sepet ve batch düzeyinde izlenebilirliği ve raporlanabilirliği gerekliydi."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "Sepet-batch ilişkilendirmesi ve gerçek zamanlı fırın parametre takibi",
+  "solutionLede": "Fırın girişinde sepetleme hazırlığıyla yeni batch ilişkilendirmesi kuruldu. Kaplama sonrası giriş koşulları doğrulandı; fırın süresince kapak açılma, açık kalma süresi, kürlenme süresi ve kürlenme sıcaklığına çıkış gibi kritik parametreler izlenerek süreç güvence altına alındı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Sepet ve Batch Hazırlığı",
+      "text": "Fırın girişinde ürünler sepetlenir ve yeni batch ilişkisi oluşturulur."
+    },
+    {
+      "no": "02",
+      "title": "Giriş Koşulu Kontrolü",
+      "text": "Fırına giriş öncesi süre ve kaplama OK/NOK koşulları doğrulanır."
+    },
+    {
+      "no": "03",
+      "title": "Proses Parametre İzleme",
+      "text": "Kapak açılma olayları, kapak açık kalma süresi, kürlenme süresi ve sıcaklık parametreleri izlenir."
+    },
+    {
+      "no": "04",
+      "title": "Birim Bazlı Raporlama",
+      "text": "Tekil ürün, bara-sepet ve batch düzeyinde izlenebilirlik kayıtları oluşturulur ve raporlanır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "C# SCADA, OPC-UA, barkod okuyucular ve PLC izleme altyapısı",
+  "techGrid": [
+    {
+      "tag": "YAZILIM",
+      "title": "C# Tabanlı SCADA",
+      "text": "Sepet-batch ilişkilendirmesi, koşul doğrulaması ve raporlama süreçlerini yönetir."
+    },
+    {
+      "tag": "HABERLEŞME",
+      "title": "OPC-UA Protokolü",
+      "text": "SCADA ile PLC arasında gerçek zamanlı ve güvenilir veri iletişimi sağlar."
+    },
+    {
+      "tag": "VERI TOPLAMA",
+      "title": "Barkod Okuyucular",
+      "text": "Sepet ve ürün kimlik bilgilerini okuyarak fırın sürecini başlatır."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC Tabanlı Proses İzleme",
+      "text": "Fırın giriş koşulları ile kritik parametreleri (kapak, süre, sıcaklık) izler ve denetler."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "OPC-UA ve Oracle ile merkezi proses yönetimi",
+  "integrationDesc": "Sistem saha PLC'si ile OPC-UA üzerinden doğrudan, kurumsal tarafta Oracle ile entegre çalışmaktadır. Sepet-batch, fırın giriş koşulları ve proses verileri sahadan alınır; izlenebilirlik ve rapor verileri Oracle ile merkezi yönetilir.",
+  "integrationList": [
+    {
+      "bold": "PLC (OPC-UA)",
+      "text": "Sepet, batch, giriş koşulları ve fırın parametreleri gerçek zamanlı izlenir."
+    },
+    {
+      "bold": "Oracle",
+      "text": "İzlenebilirlik kayıtları ve birim bazlı raporlar kurumsal katmanda paylaşılır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Kalite güvencesi ve denetlenebilir fırın süreci",
+  "resultsGrid": [
+    {
+      "title": "Koşullu Giriş Kontrolü",
+      "text": "Süre ve kaplama OK/NOK doğrulamasıyla yalnızca uygun ürünlerin prosese girişi sağlandı."
+    },
+    {
+      "title": "Kritik Parametre Takibi",
+      "text": "Fırın prosesindeki kapak, kürlenme süresi ve sıcaklık parametreleri sürekli izlenerek kalite güvence altına alındı."
+    },
+    {
+      "title": "Tam İzlenebilirlik",
+      "text": "Ürünler tekil, bara-sepet ve batch bazında takip edilip birim bazlı raporlarla süreç denetlenebilir hale geldi."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

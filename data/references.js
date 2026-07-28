@@ -17,7 +17,8 @@ export const referenceProjects = [
       efficiency: "50%",
       defects: "80%",
       productivity: "55%",
-    },
+    },
+
   },
 
 {
@@ -38,7 +39,8 @@ export const referenceProjects = [
       efficiency: "44%",
       defects: "68%",
       productivity: "41%",
-    },
+    },
+
   },
 
 {
@@ -59,7 +61,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -80,7 +83,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -101,7 +105,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -122,7 +127,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -143,7 +149,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -164,7 +171,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -185,7 +193,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -207,7 +216,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -224,7 +234,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -247,7 +258,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -268,7 +280,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -290,7 +303,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -310,7 +324,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -332,7 +347,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -349,7 +365,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -369,7 +386,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -386,7 +404,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -406,7 +425,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -427,7 +447,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -444,7 +465,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -465,7 +487,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -487,7 +510,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -508,7 +532,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -528,7 +553,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -550,7 +576,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -571,7 +598,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -588,7 +616,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -608,7 +637,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -629,7 +659,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -649,7 +680,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -669,7 +701,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -691,7 +724,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -711,7 +745,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
 
 {
@@ -733,7 +768,8 @@ export const referenceProjects = [
       efficiency: "35%",
       defects: "60%",
       productivity: "40%",
-    },
+    },
+
   },
   {
   id: 47,
@@ -749,7 +785,8 @@ export const referenceProjects = [
     efficiency: "35%",
     defects: "60%",
     productivity: "40%",
-  },
+  },
+
 },
 
 {
@@ -766,7 +803,8 @@ export const referenceProjects = [
     efficiency: "35%",
     defects: "60%",
     productivity: "40%",
-  },
+  },
+
 },
 
 {
@@ -783,7 +821,8 @@ export const referenceProjects = [
     efficiency: "35%",
     defects: "60%",
     productivity: "40%",
-  },
+  },
+
 },
 
 {
@@ -800,7 +839,8 @@ export const referenceProjects = [
     efficiency: "35%",
     defects: "60%",
     productivity: "40%",
-  },
+  },
+
 },
 
 {
@@ -817,6 +857,51 @@ export const referenceProjects = [
     efficiency: "35%",
     defects: "60%",
     productivity: "40%",
-  },
+  },
+
 },
+
+{
+  id: 52,
+    title: "Phinia - Coating Line Traceability",
+    slug: "phinia-coating-line-traceability",
+    logo: "/Logos/phinia.svg",
+    sector: "Automotive",
+    image: "/images/companies/Delphi/Delphi-Fabrika.jpg",
+    heroImage: "/images/companies/Delphi/Delphi-Fabrika.jpg",
+    gallery: [
+      "/images/companies/Delphi/Delphi-Fabrika.jpg",
+      "/images/companies/Delphi/delphi_dizel.jpg"
+    ],
+    description: "Traceability project implemented for Phinia's coating facility, providing reliable bar/rack and batch based loading and coating process control with OPC-UA and Oracle integrations.",
+    technologies: ["OPC-UA", "C# SCADA", "Barcode", "PLC", "Oracle Integration"],
+    results: {
+      efficiency: "100%",
+      defects: "Risk Reduction",
+      productivity: "Process Reliability"
+    }
+
+  },
+
+{
+  id: 53,
+    title: "Phinia - Oven Process Traceability",
+    slug: "phinia-oven-process-traceability",
+    logo: "/Logos/phinia.svg",
+    sector: "Automotive",
+    image: "/images/companies/Phinia/Phinia.jpg",
+    heroImage: "/images/companies/Phinia/Phinia.jpg",
+    gallery: [
+      "/images/companies/Phinia/Phinia.jpg",
+      "/images/companies/Delphi/Delphi-Fabrika.jpg"
+    ],
+    description: "Post-coating oven process traceability project for Phinia with basket and batch based tracking, oven condition validation, and process parameter monitoring.",
+    technologies: ["OPC-UA", "C# SCADA", "Barcode", "PLC", "Oracle Integration"],
+    results: {
+      efficiency: "100%",
+      defects: "Risk Reduction",
+      productivity: "Process Reliability"
+    }
+
+  },
 ];

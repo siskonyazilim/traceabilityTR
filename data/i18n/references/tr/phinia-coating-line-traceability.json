@@ -1,0 +1,117 @@
+{
+  "backToProjects": "Referans Projelere Dön",
+  "sector": "Sektör",
+  "location": "Konum",
+  "year": "Yıl",
+  "scope": "Kapsam",
+  "scopeVal": "Yazılım ve Entegrasyon",
+  "tagValue": "Otomotiv",
+  "locationValue": "İzmir",
+  "heroTitleLine1": "Kaplama Hattı",
+  "heroTitleLine2": "İzlenebilirliği",
+  "heroSub": "Phinia'nın İzmir ESBAŞ Serbest Bölge'deki fabrikasında hayata geçirilen bu projede yükleme ve kaplama süreçleri bara ve batch bazında izlenebilir hale getirilmiştir.",
+  "contextEyebrow": "Müşteri ve Bağlam",
+  "contextTitle": "Kaplama tesisinde bara/batch temelli süreç görünürlüğü",
+  "contextP1": "Phinia'nın İzmir ESBAŞ Serbest Bölge'deki fabrikası, otomotiv sektörüne yönelik üretim yapmaktadır.",
+  "contextP2": "Kaplama tesisinde uygulanan proje ile yükleme ve kaplama operasyonları bara ve batch ilişkisi üzerinden dijital olarak yönetilir hale getirilmiştir.",
+  "problemEyebrow": "İhtiyaç / Problem",
+  "problemTitle": "Yükleme kuralları ve reçete uyumunun güvenilir yönetimi",
+  "problemLede": "Kaplama tesisinde hangi ürünün hangi baraya, hangi baranın hangi batch'e ait olduğu ve yükleme koşullarının güvenilir biçimde yönetilmesi gerekiyordu. Manuel yürütülen süreçler yanlış yükleme, reçete uyumsuzluğu ve izlenebilirlik boşluğu riski doğuruyordu.",
+  "problemList": [
+    {
+      "bold": "Eşleştirme Karmaşıklığı",
+      "text": "Bara, ürün ve batch ilişkilerinin manuel takip edilmesi hataya açıktı."
+    },
+    {
+      "bold": "Kural Uyum Riski",
+      "text": "Ürün grubu, min/max limit ve reçete koşullarının operasyon sırasında tutarlı uygulanması gerekiyordu."
+    }
+  ],
+  "solutionEyebrow": "Çözüm",
+  "solutionTitle": "OPC-UA ile PLC entegre bara ve batch izlenebilirliği",
+  "solutionLede": "PLC ile OPC-UA üzerinden doğrudan iletişim kuruldu. Yükleme noktasında alınan bara bilgisi anlık batch verisiyle eşleştirildi, bara numarası batch kaydında korundu ve yükleme koşulları yönetim panelinden tanımlanarak yalnızca izin verilen şartlarda yükleme sağlandı.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Bara ve Batch Eşleştirme",
+      "text": "Yükleme noktasında okunan bara bilgisi, tanımlı formatta gelen anlık batch bilgisiyle eşleştirilir."
+    },
+    {
+      "no": "02",
+      "title": "Kural ve Reçete Tanımı",
+      "text": "Bara-ürün eşleştirmesi, ürün grubu, min/max limitler ve PLC reçete ilişkileri panel üzerinden yönetilir."
+    },
+    {
+      "no": "03",
+      "title": "Koşullu Yükleme",
+      "text": "Kaplama tesisi girişinde yükleme operasyonu kurallara göre doğrulanır ve ürün miktarı yüzey alanı hesabı için PLC'ye aktarılır."
+    },
+    {
+      "no": "04",
+      "title": "Çıkış Sonuç Takibi",
+      "text": "Kaplama çıkışında bara ve batch ile sonuç bilgisi eşleştirilerek kayıt altına alınır."
+    }
+  ],
+  "techEyebrow": "Kullanılan Teknoloji / Ekipman",
+  "techTitle": "C# SCADA, OPC-UA, barkod okuyucular ve PLC altyapısı",
+  "techGrid": [
+    {
+      "tag": "YAZILIM",
+      "title": "C# Tabanlı SCADA",
+      "text": "Bara-batch eşleştirmesi, kural kontrolü, veri yönetimi ve izlenebilirlik kayıtlarını yönetir."
+    },
+    {
+      "tag": "HABERLEŞME",
+      "title": "OPC-UA Protokolü",
+      "text": "SCADA ile PLC arasında gerçek zamanlı ve güvenilir veri alışverişi sağlar."
+    },
+    {
+      "tag": "OTOMASYON",
+      "title": "PLC ve Reçete Yönetimi",
+      "text": "Saha akışını, reçete eşleştirmesini ve yükleme doğrulamasını kontrol eder."
+    },
+    {
+      "tag": "VERI TOPLAMA",
+      "title": "Barkod Okuyucular",
+      "text": "Bara ve ürün bilgilerini okuyarak operasyonu doğru verilerle başlatır."
+    },
+    {
+      "tag": "YONETIM",
+      "title": "Yonetim Paneli",
+      "text": "Bara-ürün, ürün grubu, min/max yükleme limitleri ve reçete tanımlarını merkezi olarak yönetir."
+    }
+  ],
+  "integrationEyebrow": "Entegrasyonlar",
+  "integrationTitle": "OPC-UA ve Oracle ile uçtan uca veri akışı",
+  "integrationDesc": "Sistem saha PLC'si ile OPC-UA üzerinden, kurumsal tarafta ise Oracle ile entegre çalışır. Bara, batch, reçete ve yükleme verileri OPC-UA ile alınırken; izlenebilirlik ve sonuç verileri Oracle tarafında merkezi olarak yönetilir.",
+  "integrationList": [
+    {
+      "bold": "PLC (OPC-UA)",
+      "text": "Bara, batch, reçete ve yükleme bilgileri sahadan gerçek zamanlı alınır."
+    },
+    {
+      "bold": "Oracle",
+      "text": "İzlenebilirlik ve sonuç verileri kurumsal katmanda paylaşılır ve raporlanır."
+    }
+  ],
+  "resultsEyebrow": "Kazanımlar / Sonuçlar",
+  "resultsTitle": "Güvenilir süreç yönetimi ve tam izlenebilirlik",
+  "resultsGrid": [
+    {
+      "title": "Bara/Batch Bazlı Takip",
+      "text": "Yükleme ve kaplama süreçleri baştan sona bara ve batch seviyesinde izlenebilir hale geldi."
+    },
+    {
+      "title": "Koşul Bazlı Doğrulama",
+      "text": "Bara-ürün eşleştirmesi, ürün grubu ve min/max limitlerle yalnızca onaylı koşullarda yükleme sağlandı."
+    },
+    {
+      "title": "Süreç Güvenilirliği",
+      "text": "PLC reçete eşleştirmesi ve OPC-UA iletişimi sayesinde hatalı operasyon riski azaltıldı."
+    }
+  ],
+  "relatedProjects": "Benzer Projeler",
+  "ctaTitle": "Üretim süreçlerinizi de dönüştürmek ister misiniz?",
+  "ctaSubtitle": "Benzer bir çözümü işletmenize nasıl uygulayabileceğimizi konuşmak için bizimle iletişime geçin.",
+  "ctaPrimary": "İletişime Geç"
+}

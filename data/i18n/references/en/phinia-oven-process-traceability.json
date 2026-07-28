@@ -1,0 +1,112 @@
+{
+  "backToProjects": "Back to Reference Projects",
+  "sector": "Sector",
+  "location": "Location",
+  "year": "Year",
+  "scope": "Scope",
+  "scopeVal": "Software and Integration",
+  "tagValue": "Automotive",
+  "locationValue": "Izmir",
+  "heroTitleLine1": "Oven Process",
+  "heroTitleLine2": "Traceability",
+  "heroSub": "At Phinia's Izmir ESBAS facility, the post-coating oven process was made fully traceable through basket and batch based tracking.",
+  "contextEyebrow": "Customer and Context",
+  "contextTitle": "End-to-end control for post-coating oven operations",
+  "contextP1": "Phinia's manufacturing facility in the Izmir ESBAS Free Zone serves the automotive industry.",
+  "contextP2": "In this project, products were tracked at basket and batch level to ensure traceability and control of critical oven process parameters after coating.",
+  "problemEyebrow": "Need / Challenge",
+  "problemTitle": "Quality risks in oven entry and process parameter control",
+  "problemLede": "After coating, products had to enter the oven only under approved conditions while critical process parameters were continuously monitored. Uncontrolled entry conditions and process variables created quality risk.",
+  "problemList": [
+    {
+      "bold": "Entry Validation",
+      "text": "Products had to be validated by elapsed time and coating OK/NOK status before oven entry."
+    },
+    {
+      "bold": "Traceability Depth",
+      "text": "Full traceability was required at individual product, bar-basket, and batch levels."
+    }
+  ],
+  "solutionEyebrow": "Solution",
+  "solutionTitle": "Basket-batch association with real-time oven parameter monitoring",
+  "solutionLede": "At oven entry, basket loading preparation established new batch association. Entry conditions were validated, and critical parameters such as door opening, door-open duration, curing time, and ramp-up to curing temperature were monitored and controlled.",
+  "steps": [
+    {
+      "no": "01",
+      "title": "Basket and Batch Preparation",
+      "text": "Products are prepared in baskets and associated with a new batch at oven entry."
+    },
+    {
+      "no": "02",
+      "title": "Entry Condition Validation",
+      "text": "Elapsed time and coating OK/NOK conditions are checked before products enter the oven."
+    },
+    {
+      "no": "03",
+      "title": "Process Parameter Monitoring",
+      "text": "Door events, door-open duration, curing time, and curing temperature ramp-up are monitored."
+    },
+    {
+      "no": "04",
+      "title": "Unit-Level Reporting",
+      "text": "Traceability records and reports are generated for individual product, bar-basket, and batch units."
+    }
+  ],
+  "techEyebrow": "Technology / Equipment",
+  "techTitle": "C# SCADA, OPC-UA, barcode scanners, and PLC monitoring",
+  "techGrid": [
+    {
+      "tag": "SOFTWARE",
+      "title": "C# SCADA Application",
+      "text": "Manages basket-batch association, process condition validation, and reporting."
+    },
+    {
+      "tag": "COMMUNICATION",
+      "title": "OPC-UA Protocol",
+      "text": "Provides reliable real-time communication between SCADA and PLC."
+    },
+    {
+      "tag": "DATA CAPTURE",
+      "title": "Barcode Scanners",
+      "text": "Capture basket and product identity data for process initiation and tracking."
+    },
+    {
+      "tag": "AUTOMATION",
+      "title": "PLC-Based Process Monitoring",
+      "text": "Monitors oven entry conditions and critical parameters including door, time, and temperature values."
+    }
+  ],
+  "integrationEyebrow": "Integrations",
+  "integrationTitle": "Central process management with OPC-UA and Oracle",
+  "integrationDesc": "The system integrates directly with shop-floor PLC via OPC-UA and with enterprise systems via Oracle. Basket-batch, oven entry conditions, and process parameter data are collected from the line, while traceability and reporting data are shared centrally in Oracle.",
+  "integrationList": [
+    {
+      "bold": "PLC (OPC-UA)",
+      "text": "Basket, batch, entry conditions, and oven parameters are monitored in real time."
+    },
+    {
+      "bold": "Oracle",
+      "text": "Traceability records and unit-level reports are shared at enterprise level."
+    }
+  ],
+  "resultsEyebrow": "Benefits / Results",
+  "resultsTitle": "Quality assurance and auditable oven process",
+  "resultsGrid": [
+    {
+      "title": "Condition-Based Entry Control",
+      "text": "Only compliant products enter the process through elapsed-time and coating OK/NOK validation."
+    },
+    {
+      "title": "Critical Parameter Visibility",
+      "text": "Continuous monitoring of door, curing duration, and temperature strengthened quality assurance."
+    },
+    {
+      "title": "Complete Traceability",
+      "text": "Individual product, bar-basket, and batch tracking with unit-level reporting enabled full auditability."
+    }
+  ],
+  "relatedProjects": "Related Projects",
+  "ctaTitle": "Would you like to transform your production processes?",
+  "ctaSubtitle": "Contact us to discuss how a similar solution can be implemented in your operations.",
+  "ctaPrimary": "Contact Us"
+}

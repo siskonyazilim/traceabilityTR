@@ -40,6 +40,8 @@ import ref_37 from './abalioglu-yag-milk-powder-carton-pallet-traceability.json'
 import ref_38 from './turk-tuborg-keg-ocr-traceability.json';
 import ref_39 from './phinia-datamatrix-quality-grading-station.json';
 import ref_40 from './phinia-electronic-board-assembly-traceability.json';
+import ref_41 from './phinia-coating-line-traceability.json';
+import ref_42 from './phinia-oven-process-traceability.json';
 
 const trDetails = {
   'phinia-laser-marking-machine-traceability-integration': ref_0,
@@ -83,6 +85,8 @@ const trDetails = {
 'turk-tuborg-keg-ocr-traceability': ref_38,
 'phinia-datamatrix-quality-grading-station': ref_39,
 'phinia-electronic-board-assembly-traceability': ref_40,
+'phinia-coating-line-traceability': ref_41,
+'phinia-oven-process-traceability': ref_42,
 };
 
 export default trDetails;
