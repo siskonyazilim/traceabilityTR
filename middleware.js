@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { isSupportedLocale, SUPPORTED_LOCALES } from './lib/i18n/dictionaries';
+import { SUPPORTED_LOCALES } from './lib/i18n/dictionaries';
 
 // Bu proje izlenebilirlik.com.tr için — varsayılan (prefixsiz) dil 'tr'
 const DEFAULT_LOCALE = 'tr';
@@ -28,7 +28,6 @@ export function middleware(request) {
   }
 
   const matchedLocale = SUPPORTED_LOCALES.find((loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`));
-  const localeCookie = request.cookies.get('locale')?.value;
 
   if (matchedLocale) {
     const rewrittenPath = pathname.replace(new RegExp(String.raw`^\/${matchedLocale}(?=\/|$)`), '') || '/';
@@ -57,29 +56,22 @@ export function middleware(request) {
     return response;
   }
 
-  const preferredLocale = isSupportedLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+  // Prefixless path: always default to DEFAULT_LOCALE
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-locale', DEFAULT_LOCALE);
 
-  if (preferredLocale === DEFAULT_LOCALE) {
-    const requestHeaders = new Headers(request.headers);
-    requestHeaders.set('x-locale', DEFAULT_LOCALE);
+  const response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 
-    const response = NextResponse.next({
-      request: {
-        headers: requestHeaders,
-      },
-    });
+  response.cookies.set('locale', DEFAULT_LOCALE, {
+    path: '/',
+    sameSite: 'lax',
+  });
 
-    response.cookies.set('locale', DEFAULT_LOCALE, {
-      path: '/',
-      sameSite: 'lax',
-    });
-
-    return response;
-  }
-
-  const targetPath = pathname === '/' ? `/${preferredLocale}` : `/${preferredLocale}${pathname}`;
-  const redirectUrl = new URL(`${targetPath}${search}`, request.url);
-  return NextResponse.redirect(redirectUrl);
+  return response;
 }
 
 export const config = {
