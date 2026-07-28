@@ -707,7 +707,7 @@ export const referenceProjects = [
 
 {
     id: 44,
-    title: "PMI - Filter Tracking RFID Project",
+    title: "PMI - Proiect RFID de urmarire a filtrelor",
     slug: "philsa-filter-tracking",
     logo: "/Logos/philip-morris-international-pmi-seeklogo.png",
     sector: "Tutun",
@@ -863,44 +863,44 @@ export const referenceProjects = [
 
 {
   id: 52,
-    title: "Phinia - Coating Line Traceability",
+    title: "Phinia - Trasabilitatea liniei de acoperire",
     slug: "phinia-coating-line-traceability",
     logo: "/Logos/phinia.svg",
-    sector: "Automotive",
+    sector: "Industria auto",
     image: "/images/companies/Delphi/Delphi-Fabrika.jpg",
     heroImage: "/images/companies/Delphi/Delphi-Fabrika.jpg",
     gallery: [
       "/images/companies/Delphi/Delphi-Fabrika.jpg",
       "/images/companies/Delphi/delphi_dizel.jpg"
     ],
-    description: "Traceability project implemented for Phinia's coating facility, providing reliable bar/rack and batch based loading and coating process control with OPC-UA and Oracle integrations.",
+    description: "Proiect de trasabilitate implementat pentru instalatia de acoperire Phinia, care asigura control fiabil al incarcarii si procesului de acoperire la nivel de bara si batch, cu integrari OPC-UA si Oracle.",
     technologies: ["OPC-UA", "C# SCADA", "Barcode", "PLC", "Oracle Integration"],
     results: {
-      efficiency: "100%",
-      defects: "Risk Reduction",
-      productivity: "Process Reliability"
+      efficiency: "35%",
+      defects: "60%",
+      productivity: "40%"
     }
 
   },
 
 {
   id: 53,
-    title: "Phinia - Oven Process Traceability",
+    title: "Phinia - Trasabilitatea procesului de cuptor",
     slug: "phinia-oven-process-traceability",
     logo: "/Logos/phinia.svg",
-    sector: "Automotive",
+    sector: "Industria auto",
     image: "/images/companies/Phinia/Phinia.jpg",
     heroImage: "/images/companies/Phinia/Phinia.jpg",
     gallery: [
       "/images/companies/Phinia/Phinia.jpg",
       "/images/companies/Delphi/Delphi-Fabrika.jpg"
     ],
-    description: "Post-coating oven process traceability project for Phinia with basket and batch based tracking, oven condition validation, and process parameter monitoring.",
+    description: "Proiect de trasabilitate pentru procesul de cuptor dupa acoperire in fabrica Phinia, cu urmarire la nivel de cos si batch, validarea conditiilor de intrare si monitorizarea parametrilor de proces.",
     technologies: ["OPC-UA", "C# SCADA", "Barcode", "PLC", "Oracle Integration"],
     results: {
-      efficiency: "100%",
-      defects: "Risk Reduction",
-      productivity: "Process Reliability"
+      efficiency: "35%",
+      defects: "60%",
+      productivity: "40%"
     }
 
   },

@@ -77,7 +77,7 @@ export const contentTr = {
     },
   ],
   performanceMetrics: {
-    labels: ['Memnun müşteri', 'Ülke', 'Fabrika', 'Ekip üyesi'],
+    labels: ['Proje', 'Ülke', 'Fabrika', 'Ekip üyesi'],
   },
   solutions: {
     1: {

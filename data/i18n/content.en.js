@@ -77,7 +77,7 @@ export const contentEn = {
     },
   ],
   performanceMetrics: {
-    labels: ['Satisfied clients', 'Countries', 'Factories', 'Team members'],
+    labels: ['Projects', 'Countries', 'Factories', 'Team members'],
   },
   solutions: {
     1: {
