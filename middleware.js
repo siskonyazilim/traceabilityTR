@@ -1,128 +1,87 @@
 import { NextResponse } from 'next/server';
-import { DEFAULT_LOCALE } from './lib/i18n/dictionaries';
+import { isSupportedLocale, SUPPORTED_LOCALES } from './lib/i18n/dictionaries';
 
-const LOCALE_PREFIXES = new Set(['tr', 'en', 'ro']);
+// Bu proje izlenebilirlik.com.tr için — varsayılan (prefixsiz) dil 'tr'
+const DEFAULT_LOCALE = 'tr';
 
-// Domain -> varsayılan dil eşlemesi
-function getDomainDefaultLocale(host) {
-	if (host.includes('traceability.ro')) return 'ro';
-	if (host.includes('.com.tr') || host.includes('onsuite.com.tr')) return 'tr';
-	// Diğer/bilinmeyen domain'ler için genel varsayılan
-	return DEFAULT_LOCALE;
-}
-
-function hasPublicFile(pathname) {
-	const lastSegment = pathname.split('/').pop();
-	return lastSegment?.includes('.') ?? false;
-}
-
-function getLocaleFromPath(pathname) {
-	const segment = pathname.split('/')[1];
-	if (LOCALE_PREFIXES.has(segment)) {
-		return segment;
-	}
-	return null;
-}
-
-function stripLocalePrefix(pathname, locale) {
-	const stripped = pathname.slice(locale.length + 1);
-	return stripped || '/';
+function isBypassedPath(pathname) {
+  return (
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/favicon') ||
+    pathname.startsWith('/icon') ||
+    pathname.startsWith('/images') ||
+    pathname.startsWith('/resmi') ||
+    pathname.startsWith('/Logos') ||
+    pathname.startsWith('/MobileVideos') ||
+    pathname.startsWith('/social') ||
+    pathname.startsWith('/video') ||
+    pathname.includes('.')
+  );
 }
 
 export function middleware(request) {
-	const { nextUrl, cookies, headers } = request;
-	const { pathname } = nextUrl;
-	const host = headers.get('host') || '';
-	const domainDefaultLocale = getDomainDefaultLocale(host);
+  const { pathname, search } = request.nextUrl;
 
-	if (
-		pathname.startsWith('/_next')
-		|| pathname.startsWith('/api')
-		|| pathname.startsWith('/images')
-		|| pathname.startsWith('/Logos')
-		|| pathname.startsWith('/logos')
-		|| pathname.startsWith('/icon')
-		|| pathname.startsWith('/social')
-		|| pathname.startsWith('/video')
-		|| pathname.startsWith('/resmi')
-		|| hasPublicFile(pathname)
-	) {
-		return NextResponse.next();
-	}
+  if (isBypassedPath(pathname)) {
+    return NextResponse.next();
+  }
 
-	const localeFromPath = getLocaleFromPath(pathname);
+  const matchedLocale = SUPPORTED_LOCALES.find((loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`));
+  const localeCookie = request.cookies.get('locale')?.value;
 
-	// 1. Eğer domain'in kendi varsayılan diliyle aynı prefix açıkça istenmişse,
-	//    prefixsiz kanonik hale yönlendir (örn: traceability.ro/ro/x -> traceability.ro/x)
-	if (localeFromPath === domainDefaultLocale) {
-		const cleanPath = stripLocalePrefix(pathname, domainDefaultLocale);
-		const redirectUrl = new URL(cleanPath, request.url);
-		redirectUrl.search = nextUrl.search;
-		const response = NextResponse.redirect(redirectUrl, 301);
-		response.cookies.set('locale', domainDefaultLocale, {
-			path: '/',
-			sameSite: 'lax',
-		});
-		return response;
-	}
+  if (matchedLocale) {
+    const rewrittenPath = pathname.replace(new RegExp(String.raw`^\/${matchedLocale}(?=\/|$)`), '') || '/';
+    let response;
 
-	// 2. Diğer locale prefix'leri (domain'in varsayılanı olmayan diller)
-	if (localeFromPath) {
-		const rewriteUrl = nextUrl.clone();
-		rewriteUrl.pathname = stripLocalePrefix(pathname, localeFromPath);
+    if (matchedLocale === DEFAULT_LOCALE) {
+      const redirectUrl = new URL(`${rewrittenPath}${search}`, request.url);
+      response = NextResponse.redirect(redirectUrl);
+    } else {
+      const rewriteUrl = new URL(`${rewrittenPath}${search}`, request.url);
+      const requestHeaders = new Headers(request.headers);
+      requestHeaders.set('x-locale', matchedLocale);
 
-		const requestHeaders = new Headers(request.headers);
-		requestHeaders.set('x-locale', localeFromPath);
-		requestHeaders.set('x-pathname', pathname);
+      response = NextResponse.rewrite(rewriteUrl, {
+        request: {
+          headers: requestHeaders,
+        },
+      });
+    }
 
-		const response = NextResponse.rewrite(rewriteUrl, {
-			request: {
-				headers: requestHeaders,
-			}
-		});
+    response.cookies.set('locale', matchedLocale, {
+      path: '/',
+      sameSite: 'lax',
+    });
 
-		response.cookies.set('locale', localeFromPath, {
-			path: '/',
-			sameSite: 'lax',
-		});
-		return response;
-	}
+    return response;
+  }
 
-	// 3. Prefixsiz path'ler (domain'e göre varsayılan dil)
-	const localeCookie = cookies.get('locale')?.value;
+  const preferredLocale = isSupportedLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
 
-	// Root path'te, cookie farklı bir dil belirtiyorsa o dile yönlendir
-	if (pathname === '/') {
-		if (
-			localeCookie
-			&& localeCookie !== domainDefaultLocale
-			&& LOCALE_PREFIXES.has(localeCookie)
-		) {
-			const redirectUrl = new URL(`/${localeCookie}`, request.url);
-			return NextResponse.redirect(redirectUrl);
-		}
-	}
+  if (preferredLocale === DEFAULT_LOCALE) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set('x-locale', DEFAULT_LOCALE);
 
-	const requestHeaders = new Headers(request.headers);
-	requestHeaders.set('x-locale', domainDefaultLocale);
-	requestHeaders.set('x-pathname', pathname);
+    const response = NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
 
-	const response = NextResponse.next({
-		request: {
-			headers: requestHeaders,
-		}
-	});
+    response.cookies.set('locale', DEFAULT_LOCALE, {
+      path: '/',
+      sameSite: 'lax',
+    });
 
-	if (!localeCookie) {
-		response.cookies.set('locale', domainDefaultLocale, {
-			path: '/',
-			sameSite: 'lax',
-		});
-	}
+    return response;
+  }
 
-	return response;
+  const targetPath = pathname === '/' ? `/${preferredLocale}` : `/${preferredLocale}${pathname}`;
+  const redirectUrl = new URL(`${targetPath}${search}`, request.url);
+  return NextResponse.redirect(redirectUrl);
 }
 
 export const config = {
-	matcher: ['/((?!_next|favicon.ico|robots.txt|sitemap.xml).*)'],
+  matcher: ['/((?!_next|api|.*\\..*).*)'],
 };
