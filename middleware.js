@@ -3,6 +3,14 @@ import { DEFAULT_LOCALE } from './lib/i18n/dictionaries';
 
 const LOCALE_PREFIXES = new Set(['tr', 'en', 'ro']);
 
+// Domain -> varsayılan dil eşlemesi
+function getDomainDefaultLocale(host) {
+	if (host.includes('traceability.ro')) return 'ro';
+	if (host.includes('.com.tr') || host.includes('onsuite.com.tr')) return 'tr';
+	// Diğer/bilinmeyen domain'ler için genel varsayılan
+	return DEFAULT_LOCALE;
+}
+
 function hasPublicFile(pathname) {
 	const lastSegment = pathname.split('/').pop();
 	return lastSegment?.includes('.') ?? false;
@@ -22,8 +30,10 @@ function stripLocalePrefix(pathname, locale) {
 }
 
 export function middleware(request) {
-	const { nextUrl, cookies } = request;
+	const { nextUrl, cookies, headers } = request;
 	const { pathname } = nextUrl;
+	const host = headers.get('host') || '';
+	const domainDefaultLocale = getDomainDefaultLocale(host);
 
 	if (
 		pathname.startsWith('/_next')
@@ -42,21 +52,21 @@ export function middleware(request) {
 
 	const localeFromPath = getLocaleFromPath(pathname);
 
-	// 1. If requesting Turkish prefix explicitly, redirect to prefixless
-	if (localeFromPath === 'tr') {
-		const cleanPath = stripLocalePrefix(pathname, 'tr');
+	// 1. Eğer domain'in kendi varsayılan diliyle aynı prefix açıkça istenmişse,
+	//    prefixsiz kanonik hale yönlendir (örn: traceability.ro/ro/x -> traceability.ro/x)
+	if (localeFromPath === domainDefaultLocale) {
+		const cleanPath = stripLocalePrefix(pathname, domainDefaultLocale);
 		const redirectUrl = new URL(cleanPath, request.url);
 		redirectUrl.search = nextUrl.search;
 		const response = NextResponse.redirect(redirectUrl, 301);
-		response.cookies.set('locale', 'tr', {
+		response.cookies.set('locale', domainDefaultLocale, {
 			path: '/',
-			maxAge: 60 * 60 * 24 * 365,
 			sameSite: 'lax',
 		});
 		return response;
 	}
 
-	// 2. If requesting other locale prefixes (en, ro)
+	// 2. Diğer locale prefix'leri (domain'in varsayılanı olmayan diller)
 	if (localeFromPath) {
 		const rewriteUrl = nextUrl.clone();
 		rewriteUrl.pathname = stripLocalePrefix(pathname, localeFromPath);
@@ -73,25 +83,28 @@ export function middleware(request) {
 
 		response.cookies.set('locale', localeFromPath, {
 			path: '/',
-			maxAge: 60 * 60 * 24 * 365,
 			sameSite: 'lax',
 		});
 		return response;
 	}
 
-	// 3. Prefixless paths (default Turkish)
+	// 3. Prefixsiz path'ler (domain'e göre varsayılan dil)
 	const localeCookie = cookies.get('locale')?.value;
 
-	// Only redirect from root / to preferred language if cookie exists
+	// Root path'te, cookie farklı bir dil belirtiyorsa o dile yönlendir
 	if (pathname === '/') {
-		if (localeCookie && localeCookie !== 'tr' && (localeCookie === 'en' || localeCookie === 'ro')) {
+		if (
+			localeCookie
+			&& localeCookie !== domainDefaultLocale
+			&& LOCALE_PREFIXES.has(localeCookie)
+		) {
 			const redirectUrl = new URL(`/${localeCookie}`, request.url);
 			return NextResponse.redirect(redirectUrl);
 		}
 	}
 
 	const requestHeaders = new Headers(request.headers);
-	requestHeaders.set('x-locale', 'tr');
+	requestHeaders.set('x-locale', domainDefaultLocale);
 	requestHeaders.set('x-pathname', pathname);
 
 	const response = NextResponse.next({
@@ -101,9 +114,8 @@ export function middleware(request) {
 	});
 
 	if (!localeCookie) {
-		response.cookies.set('locale', 'tr', {
+		response.cookies.set('locale', domainDefaultLocale, {
 			path: '/',
-			maxAge: 60 * 60 * 24 * 365,
 			sameSite: 'lax',
 		});
 	}
