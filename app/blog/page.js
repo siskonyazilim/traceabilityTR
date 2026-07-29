@@ -28,7 +28,7 @@ export async function generateMetadata() {
     ogLocale = 'en_US';
   }
 
-  const alternates = getLanguageAlternates(pathname, locale);
+  const alternates = getLanguageAlternates(pathname);
 
   return {
     title,
