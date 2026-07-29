@@ -44,7 +44,7 @@ export async function generateMetadata() {
     ogLocale = 'tr_TR';
   }
 
-  const alternates = getLanguageAlternates(pathname);
+  const alternates = getLanguageAlternates(pathname, locale);
 
   return {
     title,
