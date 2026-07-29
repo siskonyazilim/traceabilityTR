@@ -40,6 +40,7 @@ export function middleware(request) {
       const rewriteUrl = new URL(`${rewrittenPath}${search}`, request.url);
       const requestHeaders = new Headers(request.headers);
       requestHeaders.set('x-locale', matchedLocale);
+      requestHeaders.set('x-pathname', rewrittenPath);
 
       response = NextResponse.rewrite(rewriteUrl, {
         request: {
@@ -59,6 +60,7 @@ export function middleware(request) {
   // Prefixless path: always default to DEFAULT_LOCALE
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set('x-locale', DEFAULT_LOCALE);
+  requestHeaders.set('x-pathname', pathname);
 
   const response = NextResponse.next({
     request: {
