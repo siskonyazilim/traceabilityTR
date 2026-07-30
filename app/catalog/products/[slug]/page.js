@@ -6,6 +6,7 @@ import { toLocalePath } from '../../../../lib/i18n/dictionaries';
 import { getRequestLocale, getRequestPathname } from '../../../../lib/i18n/requestLocale';
 import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping';
 import JsonLd from '../../../../components/seo/JsonLd';
+import { getFaqPageSchema, SITE_URL } from '../../../../components/seo/OrganizationSchema';
 /* eslint-disable react/prop-types */
 
 function toOgLocale(locale) {
@@ -200,10 +201,14 @@ export default async function CatalogProductDetailPage({ params }) {
     ]
   };
 
+  // ── FAQPage (product sayfaları için lokale göre dinamik FAQ) ───────────
+  const faqPageSchema = getFaqPageSchema(locale, pageUrl);
+
   return (
     <>
       <JsonLd data={softwareSchema} />
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqPageSchema} />
       <CatalogDetailPage item={withNavigation} type="product" locale={locale} />
     </>
   );

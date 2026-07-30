@@ -1,5 +1,6 @@
 import HomePageClient from './HomePageClient';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../lib/i18n/requestLocale';
+import { getOrganizationSchema, getFaqPageSchema, SITE_URL, LOGO_URL } from '../components/seo/OrganizationSchema';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -58,110 +59,93 @@ export async function generateMetadata() {
   };
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const locale = await getRequestLocale();
+
+  const org = getOrganizationSchema();
+  const faqPage = getFaqPageSchema(locale, `${SITE_URL}/`);
+
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
+    '@context': 'https://schema.org',
+    '@graph': [
       {
-        "@type": "WebSite",
-        "@id": "https://izlenebilirlik.com.tr/#website",
-        "url": "https://izlenebilirlik.com.tr/",
-        "name": "Traceability",
-        "description": "Industrial Traceability & MES Solutions",
-        "publisher": {
-          "@id": "https://izlenebilirlik.com.tr/#organization"
-        },
-        "inLanguage": ["tr", "en", "ro"]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://izlenebilirlik.com.tr/#webpage",
-        "url": "https://izlenebilirlik.com.tr/",
-        "name": "Traceability | End-to-End Industrial Traceability and MES",
-        "isPartOf": {
-          "@id": "https://izlenebilirlik.com.tr/#website"
-        },
-        "about": {
-          "@id": "https://izlenebilirlik.com.tr/#softwareapplication"
-        },
-        "breadcrumb": {
-          "@id": "https://izlenebilirlik.com.tr/#breadcrumb"
-        },
-        "inLanguage": ["tr", "en", "ro"]
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://izlenebilirlik.com.tr/#softwareapplication",
-        "name": "Traceability Industrial Traceability Platform",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "url": "https://izlenebilirlik.com.tr/",
-        "description": "End-to-end industrial traceability and MES software applications for smart factories including RFID, RTLS, WMS, Poka Yoke and ERP/MES integrations.",
-        "creator": {
-          "@id": "https://izlenebilirlik.com.tr/#organization"
-        },
-        "publisher": {
-          "@id": "https://izlenebilirlik.com.tr/#organization"
-        },
-        "featureList": [
-          "End-to-end production traceability",
-          "MES integration",
-          "ERP integration",
-          "RFID-based tracking",
-          "RTLS location tracking",
-          "WMS integration",
-          "Poka Yoke quality control"
-        ],
-        "availableLanguage": ["tr", "en", "ro"]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://izlenebilirlik.com.tr/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Traceability",
-            "item": "https://izlenebilirlik.com.tr/"
-          }
-        ]
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://izlenebilirlik.com.tr/#organization",
-        "name": "Traceability",
-        "url": "https://izlenebilirlik.com.tr",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://izlenebilirlik.com.tr/siskon-logo-header.svg"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+90 232 245 00 76",
-            "contactType": "customer service",
-            "areaServed": "TR",
-            "availableLanguage": ["Turkish", "Romanian", "English"]
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        'url': `${SITE_URL}/`,
+        'name': 'Traceability',
+        'description': 'Industrial Traceability & MES Solutions',
+        'publisher': { '@id': org['@id'] },
+        'inLanguage': ['tr', 'en', 'ro'],
+        'potentialAction': {
+          '@type': 'SearchAction',
+          'target': {
+            '@type': 'EntryPoint',
+            'urlTemplate': `${SITE_URL}/blog?q={search_term_string}`,
           },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+40 368 402 002",
-            "contactType": "customer service",
-            "areaServed": "RO",
-            "availableLanguage": ["Romanian", "Turkish", "English"]
-          }
+          'query-input': 'required name=search_term_string',
+        },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${SITE_URL}/#webpage`,
+        'url': `${SITE_URL}/`,
+        'name': 'Traceability | End-to-End Industrial Traceability and MES',
+        'isPartOf': { '@id': `${SITE_URL}/#website` },
+        'about': { '@id': `${SITE_URL}/#softwareapplication` },
+        'breadcrumb': { '@id': `${SITE_URL}/#breadcrumb` },
+        'inLanguage': ['tr', 'en', 'ro'],
+        'datePublished': '2024-01-01T00:00:00+03:00',
+        'dateModified': new Date().toISOString(),
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': `${SITE_URL}/#softwareapplication`,
+        'name': 'Traceability Industrial Traceability Platform',
+        'applicationCategory': 'BusinessApplication',
+        'applicationSubCategory': 'Manufacturing Execution System',
+        'operatingSystem': 'Web, Windows Server, Linux',
+        'url': `${SITE_URL}/`,
+        'description':
+          'End-to-end industrial traceability and MES software platform for smart factories — RFID, RTLS, WMS, Poka Yoke, ERP/MES integration.',
+        'creator': { '@id': org['@id'] },
+        'publisher': { '@id': org['@id'] },
+        'featureList': [
+          'End-to-end production traceability',
+          'MES integration',
+          'ERP integration',
+          'RFID-based tracking',
+          'RTLS real-time location tracking',
+          'WMS warehouse management',
+          'Poka Yoke quality control',
+          'Industry 4.0 dashboards',
         ],
-        "sameAs": [
-          "https://www.linkedin.com/company/siskonyazilimveotomasyon",
-          "https://www.linkedin.com/company/siskonromania/",
-          "https://x.com/siskonyazilim",
-          "https://x.com/siskonromania",
-          "https://www.instagram.com/siskonyazilimveotomasyon/",
-          "https://www.instagram.com/siskon_romania",
-          "https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg"
-        ]
-      }
-    ]
+        'availableLanguage': ['tr', 'en', 'ro'],
+        'image': LOGO_URL,
+        'offers': {
+          '@type': 'Offer',
+          'priceCurrency': 'EUR',
+          'price': '0',
+          'availability': 'https://schema.org/InStock',
+          'description': 'Contact us for project-based enterprise pricing.',
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${SITE_URL}/#breadcrumb`,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Traceability',
+            'item': `${SITE_URL}/`,
+          },
+        ],
+      },
+      // ── Organization (tam profil, merkezi kaynaktan) ──────────────────────
+      org,
+      // ── FAQPage (lokale göre dinamik) ─────────────────────────────────────
+      faqPage,
+    ],
   };
 
   return (
@@ -174,3 +158,4 @@ export default function HomePage() {
     </>
   );
 }
+

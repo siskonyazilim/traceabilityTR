@@ -1,5 +1,6 @@
 import ContactPageClient from './ContactPageClient';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../../lib/i18n/requestLocale';
+import { getOrganizationSchema, SITE_URL } from '../../components/seo/OrganizationSchema';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -58,53 +59,57 @@ export async function generateMetadata() {
   };
 }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const locale = await getRequestLocale();
+  const org = getOrganizationSchema();
+
+  const pageUrl = `${SITE_URL}/contact`;
+
+  const homeLabelByLocale = { tr: 'Anasayfa', en: 'Home', ro: 'Acasă' };
+  const contactLabelByLocale = { tr: 'İletişim', en: 'Contact', ro: 'Contact' };
+
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Traceability",
-    "url": "https://izlenebilirlik.com.tr",
-    "logo": "https://izlenebilirlik.com.tr/siskon-logo-header.svg",
-    "contactPoint": [
+    '@context': 'https://schema.org',
+    '@graph': [
+      // ── Organization (tam profil) ───────────────────────────────────────
+      org,
+      // ── ContactPage ────────────────────────────────────────────────────
       {
-        "@type": "ContactPoint",
-        "telephone": "+90 232 245 00 76",
-        "contactType": "customer service",
-        "areaServed": "TR",
-        "availableLanguage": ["Turkish", "Romanian", "English"]
+        '@type': 'ContactPage',
+        '@id': `${pageUrl}#contactpage`,
+        'url': pageUrl,
+        'name': {
+          tr: 'Traceability | İletişim — Endüstriyel İzlenebilirlik Danışmanlığı',
+          en: 'Traceability | Contact — Industrial Traceability Consulting',
+          ro: 'Traceability | Contact — Consultanță Trasabilitate Industrială',
+        }[locale] || 'Traceability | Contact',
+        'description': {
+          tr: 'Endüstriyel izlenebilirlik, MES/ERP entegrasyonu, RFID ve WMS uygulamaları için Siskon ile iletişime geçin.',
+          en: 'Contact Siskon for industrial traceability, MES/ERP integration, RFID and WMS implementations.',
+          ro: 'Contactați Siskon pentru trasabilitate industrială, integrare MES/ERP, RFID și implementări WMS.',
+        }[locale] || '',
+        'publisher': { '@id': org['@id'] },
       },
+      // ── BreadcrumbList ─────────────────────────────────────────────────
       {
-        "@type": "ContactPoint",
-        "telephone": "+40 368 402 002",
-        "contactType": "customer service",
-        "areaServed": "RO",
-        "availableLanguage": ["Romanian", "Turkish", "English"]
-      }
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': homeLabelByLocale[locale] || homeLabelByLocale.tr,
+            'item': `${SITE_URL}/`,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': contactLabelByLocale[locale] || contactLabelByLocale.tr,
+            'item': pageUrl,
+          },
+        ],
+      },
     ],
-    "location": [
-      {
-        "@type": "Place",
-        "name": "România - Brașov Office",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Strada Turnului Nr. 25, Corp M.U.M., Scara 3, Birou 5, Etaj 2",
-          "addressLocality": "Brașov",
-          "postalCode": "500152",
-          "addressCountry": "RO"
-        }
-      },
-      {
-        "@type": "Place",
-        "name": "Turcia - İzmir Office",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Dokuz Eylül Üniversitesi Merkez Kampüsü DEPARK Beta Binası, Adatepe Mahallesi Doğuş Caddesi No:207/AG, Kat: 2 No:202",
-          "addressLocality": "Buca/İzmir",
-          "postalCode": "35390",
-          "addressCountry": "TR"
-        }
-      }
-    ]
   };
 
   return (
@@ -117,3 +122,4 @@ export default function ContactPage() {
     </>
   );
 }
+

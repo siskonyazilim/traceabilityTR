@@ -11,6 +11,8 @@ import { localizeBlogPosts } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
 import { toLocalePath } from '../../../lib/i18n/dictionaries';
+import JsonLd from '../../../components/seo/JsonLd';
+import { getOrganizationSchema, SITE_URL, LOGO_URL } from '../../../components/seo/OrganizationSchema';
 /* eslint-disable react/prop-types */
 
 const normalizeBlogContent = (html) => {
@@ -154,8 +156,80 @@ export default async function BlogDetailPage({ params }) {
     onsuiteUrl = 'https://onsuite.com.tr/en/modules/trace';
   }
 
+  const localizedBlogSlug = getLocalizedSlug('blog', baseSlug, locale);
+  const canonicalPath = toLocalePath(`/blog/${localizedBlogSlug}`, locale);
+  const pageUrl = `${SITE_URL}${canonicalPath}`;
+  const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
+  const blogListUrl = `${SITE_URL}${toLocalePath('/blog', locale)}`;
+
+  let ogImage = LOGO_URL;
+  if (post.image) {
+    ogImage = post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}`;
+  }
+
+  const org = getOrganizationSchema();
+
+  const blogPostSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        '@id': `${pageUrl}#blogposting`,
+        'headline': post.title,
+        'description': post.excerpt,
+        'image': ogImage,
+        'url': pageUrl,
+        'datePublished': post.date ? new Date(post.date).toISOString() : undefined,
+        'dateModified': post.date ? new Date(post.date).toISOString() : undefined,
+        'inLanguage': locale,
+        'author': {
+          '@id': org['@id'],
+        },
+        'publisher': {
+          '@id': org['@id'],
+        },
+        'isPartOf': {
+          '@type': 'Blog',
+          '@id': `${SITE_URL}/blog#blog`,
+          'name': 'Traceability Blog',
+          'url': `${SITE_URL}/blog`,
+          'publisher': { '@id': org['@id'] },
+        },
+        ...(post.category ? { 'articleSection': post.category } : {}),
+      },
+      // ── Organization ────────────────────────────────────────────────────
+      org,
+      // ── BreadcrumbList ──────────────────────────────────────────────────
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': { tr: 'Anasayfa', en: 'Home', ro: 'Acasă' }[locale] || 'Home',
+            'item': homeUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Blog',
+            'item': blogListUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': post.title,
+            'item': pageUrl,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white pb-16">
+      <JsonLd data={blogPostSchema} />
       <Container size="xl">
         <article className="mx-auto max-w-none py-10 md:py-14">
           <div className="mx-auto w-full max-w-none">
