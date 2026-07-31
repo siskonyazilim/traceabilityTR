@@ -109,9 +109,9 @@ export const blogPosts = [
   },
   {
     id: 3,
-    title: 'Trasabilitatea Produselor: De ce este esentiala pentru Calitate, Incredere si Durabilitate?',
-    titleTr: 'Ürün İzlenebilirliği: Kalite, Güven ve Sürdürülebilirlik İçin Neden Zorunludur?',
-    slug: 'product-traceability-why-is-it-essential-for-quality-trust-and-sustainability',
+    title: 'Rolul Trasabilității în Calitate și Durabilitate',
+    titleTr: 'Ürün İzlenebilirliği: Kalite ve Sürdürülebilirlik',
+    slug: 'product-traceability-importance',
     category: 'Știri',
     categoryEn: 'News',
     date: '2024-10-08',
@@ -136,9 +136,9 @@ export const blogPosts = [
   },
   {
     id: 4,
-    title: 'Trasabilitatea Alimentară și Standarde: Importanța Trasabilității Produselor, Cutiilor și Paleților',
-    titleTr: 'Gıda İzlenebilirliği ve Standartlar: Ürün, Koli ve Palet İzlenebilirliğinin Önemi',
-    slug: 'food-traceability-and-standards-the-importance-of-product-carton-and-pallet-traceability',
+    title: 'Trasabilitatea Alimentară: Produs, Cutie și Palet',
+    titleTr: 'Gıda İzlenebilirliği: Ürün, Koli ve Palet',
+    slug: 'food-traceability-and-standards',
     category: 'Știri',
     categoryEn: 'News',
     date: '2024-07-30',
@@ -501,7 +501,7 @@ export const blogPosts = [
         <li>Tofas cu B2Metrik Yazilim ve Bilisim</li>
         <li>Umur Basim Sanayi cu Obase Bilgisayar ve Danismanlik</li>
       </ul>
-      <p><strong>Sursă</strong>: <a href="https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html">https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html</a></p>
+      <p><strong>Sursă</strong>: Ada Gazetesi (adagazetesi.com.tr)</p>
       <p><strong>Cuvinte cheie</strong>: Industrie 4.0, Transformare Industrială, Siskon, TUSIAD SD2</p>
     `,
   },
@@ -539,8 +539,8 @@ export const blogPosts = [
   },
   {
     id: 13,
-    title: 'Tablou de bord IoT si Solutii de Trasabilitate la Seminarul de Logistica',
-    titleTr: 'Lojistik Seminerinde IoT Panosu ve İzlenebilirlik Çözümleri',
+    title: 'Soluții de Trasabilitate la Seminarul de Logistică',
+    titleTr: 'Lojistik Seminerinde IoT ve İzlenebilirlik Çözümleri',
     slug: 'iot-dashboard-and-traceability-solutions-at-logistics-seminar',
     category: 'Știri',
     categoryEn: 'News',
@@ -554,8 +554,8 @@ export const blogPosts = [
   },
   {
     id: 14,
-    title: 'Procedura Chestny ZNAK: Sistemul Digital de Trasabilitate al Rusiei',
-    titleTr: "Chestny ZNAK Proseduru: Rusya'nin Dijital Izlenebilirlik Sistemi",
+    title: 'Procedura Chestny ZNAK: Trasabilitatea în Rusia',
+    titleTr: 'Chestny ZNAK Prosedürü: Rusya İzlenebilirlik Sistemi',
     slug: 'chestny-znak-procedure-russias-digital-traceability-system',
     category: 'Știri',
     categoryEn: 'News',

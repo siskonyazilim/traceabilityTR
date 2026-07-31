@@ -430,7 +430,7 @@ export const contentEn = {
   },
 partners: {
     sick: {
-      description: 'Provides safe, efficient, and traceable operations in manufacturing and logistics processes through industrial sensors, machine vision, and automatic identification technologies.',
+      description: 'Provides safe, efficient, and traceable operations in manufacturing and logistics using industrial sensors, vision, and auto-ID technologies.',
       fullDescription: 'SICK develops and manufactures industrial sensors, safety systems, machine vision products, and automatic identification technologies used in manufacturing and logistics processes. Its portfolio includes distance and position sensors, safety scanners, industrial cameras, barcode readers, and RFID systems.\n\nSICK technologies are used for detecting, measuring, monitoring, and automatically identifying products and materials. These solutions enable quality inspection, code reading, product verification, machine safety, and end-to-end traceability applications across production lines.',
     },
     'universal-robots': {
@@ -929,7 +929,7 @@ partners: {
           <li>Umur Basim Sanayi with Obase Bilgisayar ve Danismanlik</li>
         </ul>
 
-        <p><strong>Source</strong>: <a href="https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html">https://www.adagazetesi.com.tr/teknoloji-kullanicisi-sirketlerle-teknoloji-tedarikcileri-guclerini-birlestirdi.html</a></p>
+        <p><strong>Source</strong>: Ada Gazetesi (adagazetesi.com.tr)</p>
         <p><strong>Keywords</strong>: Endüstri 4.0, Endüstriyel Dönüşüm, SISKON, TUSIAD SD2</p>
       `,
       category: 'News',

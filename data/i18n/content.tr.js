@@ -437,7 +437,7 @@ export const contentTr = {
   },
 partners: {
     'sick': {
-      description: 'Endüstriyel sensörler, görüntü işleme ve otomatik tanımlama teknolojileriyle üretim ve lojistik süreçlerinde güvenli, verimli ve izlenebilir operasyonlar sağlar.',
+      description: 'Endüstriyel sensörler, görüntü işleme ve otomatik tanımlama sistemleriyle üretim ve lojistikte güvenli, verimli ve izlenebilir operasyonlar sağlar.',
       fullDescription: 'SICK, üretim ve lojistik süreçlerinde kullanılan endüstriyel sensörler, güvenlik sistemleri, görüntü işleme ürünleri ve otomatik tanımlama teknolojileri geliştirir ve üretir. Ürün portföyünde mesafe ve konum sensörleri, güvenlik tarayıcıları, endüstriyel kameralar, barkod okuyucular ve RFID sistemleri yer alır.\n\nSICK teknolojileri, ürün ve malzemelerin algılanması, ölçülmesi, kontrol edilmesi ve otomatik olarak tanımlanması için kullanılır. Bu ürünler sayesinde üretim hatlarında kalite kontrol, kod okuma, ürün doğrulama, makine güvenliği ve uçtan uca izlenebilirlik uygulamaları gerçekleştirilebilir.',
     },
     'universal-robots': {
@@ -449,7 +449,7 @@ partners: {
       fullDescription: 'Markem-Imaje, ürünlerin ve ambalajların üretim hattı üzerinde tanımlanmasına yönelik endüstriyel kodlama, markalama ve baskı sistemleri geliştirir. Ürün portföyünde inkjet yazıcılar, lazer markalama sistemleri, termal transfer yazıcılar, etiketleme çözümleri ve kodlama süreçlerini yöneten yazılımlar bulunur.\n\nBu sistemler; üretim tarihi, son kullanma tarihi, lot numarası, seri numarası, barkod ve 2D kodların farklı ürün ve ambalaj yüzeylerine uygulanmasını sağlar. Kodlama yazılımlarıyla birlikte üretim hatlarında doğru kodun basılması, doğrulanması ve ürün izlenebilirliği verileriyle ilişkilendirilmesi desteklenir. ',
     },
     'interroll': {
-      description: 'Endüstriyel kodlama ve markalama çözümleriyle ürünlerin doğru şekilde tanımlanmasını, doğrulanmasını ve izlenebilirlik süreçlerinin yönetilmesini destekler.',
+      description: 'İç lojistik ve malzeme taşıma sistemleriyle tesis içi ürün hareketlerini optimize eder, malzeme akışı için verimli ve sürdürülebilir çözümler sunar.',
       fullDescription: 'Interroll, üretim, depo ve dağıtım alanlarındaki malzeme hareketleri için konveyör ruloları, motor ve sürücü sistemleri, konveyör modülleri, ayrıştırma sistemleri ile palet ve koli taşıma çözümleri geliştirir ve üretir.\n\nInterroll ürünleri; koli, palet, paket ve diğer malzemelerin tesis içerisinde taşınması, biriktirilmesi, yönlendirilmesi, ayrıştırılması ve depolanması amacıyla kullanılır. Modüler ürün yapısı, üretim hatlarından depolara ve dağıtım merkezlerine kadar farklı iç lojistik uygulamalarına uyarlanabilir.',
     },
     'beckhoff': {

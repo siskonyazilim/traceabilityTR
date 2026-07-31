@@ -9,7 +9,7 @@ export async function generateMetadata() {
 
   let title = 'Blog: Noutăți, Ghiduri și Tendințe în Trasabilitate | Traceability';
   if (isTr) {
-    title = 'Blog: Sektör Güncellemeleri, Rehberler ve İzlenebilirlik Trendleri | Traceability';
+    title = 'Blog: İzlenebilirlik Trendleri ve Rehberler | Traceability';
   } else if (isEn) {
     title = 'Blog: Industry Updates, Guides and Traceability Trends | Traceability';
   }

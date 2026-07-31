@@ -8,11 +8,11 @@ export async function generateMetadata() {
   const isTr = locale === 'tr';
   const isEn = locale === 'en';
 
-  let title = 'Contact Traceability | Consultanță și Implementare Trasabilitate Industrială';
+  let title = 'Contact Traceability | Consultanță Trasabilitate';
   if (isTr) {
     title = 'İletişim | Endüstriyel İzlenebilirlik Danışmanlığı | Traceability';
   } else if (isEn) {
-    title = 'Contact Traceability | Industrial Traceability Consulting and Implementation';
+    title = 'Contact Traceability | Industrial Traceability Consulting';
   }
 
   let description = 'Contactează Traceability pentru consultanță în trasabilitate industrială, integrare MES/ERP, implementare RFID și WMS adaptate proceselor tale de producție.';
