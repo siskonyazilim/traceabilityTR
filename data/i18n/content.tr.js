@@ -168,7 +168,7 @@ export const contentTr = {
     1: {
       title: 'Hybrid Track and Trace',
       description: 'Otomotiv standartlarına ilişkin gelişmiş gereksinimler dahil, dahili sistemler ve tedarik zinciri ortakları genelinde uçtan uca izlenebilirlik sunar.',
-      detail: 'Hybrid Track & Trace Otomotiv Üreticileri - Global işlemlerde tutarlı kalite sağlayın, uygunluğunuzu sürdürün ve çevikliğinizi geliştirin. Siskon\'un, Otomotiv Ana ve Yan Sanayi için geliştirdiği Hybrid Track and Trace, hem iç sistemlerden hem de tedarik zinciri ortaklarından gelen verileri, ürünün geçtiği tüm süreçleri ve süreç verilerini kayıt altına alarak uçtan uca izlenebilirliği sağlar. ISO/TS 16949 standartları için gerekli olan mevzuattaki güncel değişikliklere uygun gelişmiş ürün izlenebilirlik gerekliliklerini sağlar.',
+      detail: 'Siskon\'un, Otomotiv Ana ve Yan Sanayi için geliştirdiği Hybrid Track and Trace, hem iç sistemlerden hem de tedarik zinciri ortaklarından gelen verileri, ürünün geçtiği tüm süreçleri ve süreç verilerini kayıt altına alarak uçtan uca izlenebilirliği sağlar. ISO/TS 16949 standartları için gerekli olan mevzuattaki güncel değişikliklere uygun gelişmiş ürün izlenebilirlik gerekliliklerini sağlar.',
       detailPreBulletsHeading: 'Hybrid T&T, otomotiv endüstrisinin en dikkat çekici iki konusunu doğrudan etkilemektedir:',
       detailPreBullets: [
         'Hatalı ürün sayısını azaltarak global ölçekte sürdürülebilir kalite elde edilmesi.',
@@ -435,7 +435,7 @@ export const contentTr = {
       technologies: ['REST API\'ları', 'MQTT', 'OPC UA', 'SAP konektörleri', 'Veritabanı senkronizasyonu', 'Mesaj kuyrukları'],
     },
   },
-partners: {
+  partners: {
     'sick': {
       description: 'Endüstriyel sensörler, görüntü işleme ve otomatik tanımlama sistemleriyle üretim ve lojistikte güvenli, verimli ve izlenebilir operasyonlar sağlar.',
       fullDescription: 'SICK, üretim ve lojistik süreçlerinde kullanılan endüstriyel sensörler, güvenlik sistemleri, görüntü işleme ürünleri ve otomatik tanımlama teknolojileri geliştirir ve üretir. Ürün portföyünde mesafe ve konum sensörleri, güvenlik tarayıcıları, endüstriyel kameralar, barkod okuyucular ve RFID sistemleri yer alır.\n\nSICK teknolojileri, ürün ve malzemelerin algılanması, ölçülmesi, kontrol edilmesi ve otomatik olarak tanımlanması için kullanılır. Bu ürünler sayesinde üretim hatlarında kalite kontrol, kod okuma, ürün doğrulama, makine güvenliği ve uçtan uca izlenebilirlik uygulamaları gerçekleştirilebilir.',

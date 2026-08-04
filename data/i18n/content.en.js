@@ -17,7 +17,7 @@ export const contentEn = {
     },
   ],
   faq: {
-    
+
     title: 'Our Perspective on Traceability',
     items: [
       {
@@ -164,7 +164,7 @@ export const contentEn = {
     1: {
       title: 'Hybrid Track and Trace',
       description: 'Delivers end-to-end traceability across internal systems and supply-chain partners, including advanced requirements for automotive standards.',
-      detail: 'Hybrid Track & Trace Automotive Manufacturers - Ensure consistent quality in global operations, maintain your compliance, and improve your agility. Developed by Siskon for the Automotive Main and Component Industry, Hybrid Track & Trace provides end-to-end traceability by recording data coming from both internal systems and supply chain partners, all processes the product goes through, and process data. It provides advanced product traceability requirements in accordance with current regulatory changes required for ISO/TS 16949 standards.',
+      detail: 'Developed by Siskon for the Automotive Main and Component Industry, Hybrid Track & Trace provides end-to-end traceability by recording data coming from both internal systems and supply chain partners, all processes the product goes through, and process data. It provides advanced product traceability requirements in accordance with current regulatory changes required for ISO/TS 16949 standards.',
       detailPreBulletsHeading: 'Hybrid T&T directly affects the two most striking issues of the automotive industry:',
       detailPreBullets: [
         'Achieving global sustainable quality by reducing the number of defective products.',
@@ -428,7 +428,7 @@ export const contentEn = {
       technologies: ['REST APIs', 'MQTT', 'OPC UA', 'SAP connectors', 'Database synchronization', 'Message queues'],
     },
   },
-partners: {
+  partners: {
     sick: {
       description: 'Provides safe, efficient, and traceable operations in manufacturing and logistics using industrial sensors, vision, and auto-ID technologies.',
       fullDescription: 'SICK develops and manufactures industrial sensors, safety systems, machine vision products, and automatic identification technologies used in manufacturing and logistics processes. Its portfolio includes distance and position sensors, safety scanners, industrial cameras, barcode readers, and RFID systems.\n\nSICK technologies are used for detecting, measuring, monitoring, and automatically identifying products and materials. These solutions enable quality inspection, code reading, product verification, machine safety, and end-to-end traceability applications across production lines.',

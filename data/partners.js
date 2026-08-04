@@ -1,5 +1,17 @@
 export const strategicPartners = [
   {
+    id: 5,
+    name: "Beckhoff",
+    logo: "/Logos/Beckhoff_red.svg",
+    detailLogo: "/Logos/Beckhoff_red.svg",
+    slug: "beckhoff",
+    breadcrumbLabel: "BECKHOFF",
+    description: "Permite gestionarea flexibilă și eficientă a sistemelor de mașini, robotică și producție prin tehnologii de control bazate pe PC și soluții de automatizare deschisă.",
+    website: "https://www.beckhoff.com",
+    storySlides: [],
+    fullDescription: "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC. Gama de produse constă în PC-uri industriale, componente I/O și Fieldbus, tehnologie de acționare și software de automatizare. Pentru toate industriile, există produse care pot fi utilizate ca și componente individuale sau pentru a crea de la zero un sistem de control complet și fără întreruperi.\n\n Filosofia Beckhoff privind \"Noua Tehnologie de Automatizare\" reprezintă soluții de control și automatizare universale și deschise, utilizate într-o varietate de aplicații la nivel mondial, variind de la mașini-unelte controlate prin CNC până la automatizarea inteligentă a clădirilor.",
+  },
+  {
     id: 1,
     name: "SICK",
     logo: "/Logos/sick-logo.svg",
@@ -71,18 +83,6 @@ export const strategicPartners = [
       },
     ],
     fullDescription: "Interroll dezvoltă și produce role pentru transportoare, sisteme de acționare și motoare, module de transport, sisteme de sortare și soluții pentru manipularea paleților și coletelor destinate mișcării materialelor în producție, depozitare și distribuție.\n\nProdusele Interroll sunt utilizate pentru transportul, acumularea, direcționarea, sortarea și depozitarea cutiilor, paleților, pachetelor și altor materiale în interiorul facilităților. Designul lor modular permite adaptarea la o gamă largă de aplicații logistice interne, de la liniile de producție până la depozite și centre de distribuție.",
-  },
-  {
-    id: 5,
-    name: "Beckhoff",
-    logo: "/Logos/Beckhoff_red.svg",
-    detailLogo: "/Logos/Beckhoff_red.svg",
-    slug: "beckhoff",
-    breadcrumbLabel: "BECKHOFF",
-    description: "Permite gestionarea flexibilă și eficientă a sistemelor de mașini, robotică și producție prin tehnologii de control bazate pe PC și soluții de automatizare deschisă.",
-    website: "https://www.beckhoff.com",
-    storySlides: [],
-    fullDescription: "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC. Gama de produse constă în PC-uri industriale, componente I/O și Fieldbus, tehnologie de acționare și software de automatizare. Pentru toate industriile, există produse care pot fi utilizate ca și componente individuale sau pentru a crea de la zero un sistem de control complet și fără întreruperi.\n\n Filosofia Beckhoff privind \"Noua Tehnologie de Automatizare\" reprezintă soluții de control și automatizare universale și deschise, utilizate într-o varietate de aplicații la nivel mondial, variind de la mașini-unelte controlate prin CNC până la automatizarea inteligentă a clădirilor.",
   },
   {
     id: 6,

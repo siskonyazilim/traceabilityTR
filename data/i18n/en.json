@@ -97,7 +97,7 @@
       "emailRequired": "Email is required",
       "emailInvalid": "Invalid email",
       "urlInvalid": "Invalid URL",
-      "phoneRequired": "Phone number is required",      
+      "phoneRequired": "Phone number is required",
       "companyRequired": "Company name is required",
       "companyMin": "Minimum 2 characters",
       "messageRequired": "Message is required",
@@ -151,10 +151,10 @@
     "productivity": "Productivity"
   },
   "sections": {
-    "solutionsProductsTitle": "Solutions and Products",
-    "solutionsProductsSubtitle": "Our complete range of services and products for traceability",
+    "solutionsProductsTitle": "Solutions and Industries",
+    "solutionsProductsSubtitle": "Our complete range of services and Industries for traceability",
     "solutionsTab": "Solutions",
-    "productsTab": "Products",
+    "productsTab": "Industries",
     "details": "Details",
     "detailChip": "Solution detail",
     "detailChipProducts": "Product detail",
@@ -180,7 +180,6 @@
     "blogPrev": "Previous article",
     "blogNext": "Next article",
     "performanceTitle": "Performance and key metrics",
-    "performanceSubtitle": "Our results speak for themselves",
     "performanceCta": "Our reference projects"
   },
   "email": {

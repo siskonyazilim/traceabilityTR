@@ -1,5 +1,5 @@
 export const referenceProjects = [
-{
+  {
     id: 4,
     title: "Delphi Technologies - Managementul Depozitelor",
     slug: "delphi-technologies",
@@ -21,7 +21,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 6,
     title: "Delphi Technologies - Monitorizarea individuală a produselor pe linia de asamblare a rampelor de injecție",
     slug: "delphi-monitorizare-individuala-rampa-injectie",
@@ -43,7 +43,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 9,
     title: "Delphi Technologies - Trasabilitatea liniei de prototipuri",
     slug: "delphi-prototype-line-traceability",
@@ -65,7 +65,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 11,
     title: "Delphi Technologies - Integrare in Cloud a Datelor de Trasabilitate",
     slug: "delphi-cloud-traceability-data-integration",
@@ -87,7 +87,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 12,
     title: "Candy Hoover - Colectarea datelor de testare si urmarirea eficientei productiei",
     slug: "candy-hoover-test-data-production-efficiency-tracking",
@@ -109,7 +109,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 13,
     title: "Turk Tuborg - Etichetare si trasabilitate automata a paletilor",
     slug: "turk-tuborg-automatic-pallet-labeling-traceability",
@@ -131,7 +131,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 14,
     title: "Delphi Technologies - Integrarea RFID-Datamatrix a Ansamblului de Sina",
     slug: "delphi-rfid-datamatrix-rail-assembly-integration",
@@ -153,7 +153,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 15,
     title: "Candy Hoover - Colectarea datelor de testare si trasabilitatea pentru liniile de aragazuri",
     slug: "candy-hoover-test-data-cooker-lines-traceability",
@@ -175,7 +175,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 16,
     title: "Delphi Technologies - Trasabilitatea varfului de unealta",
     slug: "delphi-tool-tip-traceability",
@@ -197,7 +197,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 17,
     title: "PMI - Automatizare paletizare si etichetare automata",
     slug: "pmi-palletizing-automation-automatic-labeling",
@@ -220,7 +220,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 18,
     title: "Stackpole - Trasabilitate",
     slug: "stackpole-traceability",
@@ -238,7 +238,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 19,
     title: "Haier Europe - Instalarea liniei de asamblare si trasabilitate",
     slug: "haier-europe-assembly-line-installation-traceability",
@@ -262,7 +262,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 20,
     title: "NEMAK - Trasabilitatea pieselor",
     slug: "nemak-parts-traceability",
@@ -284,7 +284,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 21,
     title: "Haier Europe - Instalarea liniei de sortare si trasabilitate",
     slug: "haier-europe-sorting-line-installation-traceability",
@@ -307,7 +307,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 22,
     title: "ORKIDE - Aplicatie de Control al Calitatii",
     slug: "orkide-quality-control-application",
@@ -328,7 +328,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 23,
     title: "Bomi Group - Sistem de citire multi-cod bazat pe camera",
     slug: "bomi-group-camera-based-multi-code-reading-system-tr",
@@ -351,7 +351,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 26,
     title: "BorgWarner - Marcare cu laser",
     slug: "borgwarner-laser-marking",
@@ -369,7 +369,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 27,
     title: "Maxion Inci Celik - Urmarire matrite RFID",
     slug: "maxion-inci-celik-rfid-mold-tracking",
@@ -390,7 +390,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 28,
     title: "Bosch - Urmarirea carucioarelor cu poarta RFID",
     slug: "bosch-trolley-tracking-rfid-gate",
@@ -408,7 +408,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 29,
     title: "Mey Diageo - Proiect de urmarire si localizare",
     slug: "mey-diageo-tracking-and-localization-project",
@@ -429,7 +429,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 30,
     title: "BSH - Urmarirea rafturilor din sticla",
     slug: "bsh-glass-shelf-tracking",
@@ -451,7 +451,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 31,
     title: "Ajinomoto (Kemal Kukrer) - Trasabilitatea produselor integrata cu Blockchain",
     slug: "ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability",
@@ -469,7 +469,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 32,
     title: "BSH - Trasabilitatea usilor de cuptor",
     slug: "bsh-oven-door-traceability",
@@ -491,7 +491,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 33,
     title: "Haier Europe - Trasabilitatea unui singur produs pe linia de asamblare a cuptoarelor",
     slug: "haier-europe-single-product-traceability-oven-assembly-line",
@@ -514,7 +514,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 34,
     title: "BSH - Trasabilitatea liniei de asamblare",
     slug: "bsh-assembly-line-traceability",
@@ -536,7 +536,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 35,
     title: "Turk Demir Dokum - Poarta RFID cu Kanban Digital",
     slug: "turk-demir-dokum-rfid-gate-with-digital-kanban",
@@ -557,7 +557,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 36,
     title: "PMI - Sistem automat de verificare a codurilor de bare pentru expediere",
     slug: "pmi-barcode-gate",
@@ -580,7 +580,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 37,
     title: "BSH - Trasabilitatea suporturilor",
     slug: "bsh-carriers-traceability",
@@ -602,7 +602,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 38,
     title: "Phinia - Masina de marcare cu laser si integrare pentru trasabilitate",
     slug: "phinia-laser-marking-machine-traceability-integration",
@@ -620,7 +620,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 39,
     title: "Duru Bulgur - Produs - Carton - Trasabilitatea paletilor",
     slug: "duru-bulgur-product-carton-pallet-traceability",
@@ -641,7 +641,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 40,
     title: "Vestel - Etichetare automata si verificare",
     slug: "vestel-automatic-labeling-verification",
@@ -663,7 +663,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 41,
     title: "Groupe Atlantic - Trasabilitatea barelor",
     slug: "groupe-atlantic-busbar-traceability",
@@ -684,7 +684,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 42,
     title: "Whirlpool - Control coduri de bare pe linia de sortare",
     slug: "whirlpool-sorting-barcode-control",
@@ -705,7 +705,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 44,
     title: "PMI - Proiect RFID de urmarire a filtrelor",
     slug: "philsa-filter-tracking",
@@ -728,7 +728,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 45,
     title: "Mey Icki - Sistem de control al banderolei",
     slug: "mey-icki-bandrol-control-system",
@@ -749,7 +749,7 @@ export const referenceProjects = [
 
   },
 
-{
+  {
     id: 46,
     title: "PMI - Embosser RFID",
     slug: "pmi-embosser-rfid",
@@ -772,97 +772,97 @@ export const referenceProjects = [
 
   },
   {
-  id: 47,
-  title: "Nuh'un Ankara - Trasabilitate Cutie Palet Expediere",
-  slug: "nuhun-ankara-carton-pallet-shipment-traceability",
-  logo: "/Logos/nuhun_ankara.svg",
-  sector: "Alimente",
-  image: "/images/companies/NuhunAnkara/factory.jpg",
-  heroImage: "/images/companies/NuhunAnkara/factory.jpg",
-  description: "Am implementat o soluție integrată de trasabilitate pentru cutii, paleți și expediții, oferind urmărire completă de la producție până la client.",
-  technologies: ["Barcode", "Hand Terminal", "Netsis ERP"],
-  results: {
-    efficiency: "35%",
-    defects: "60%",
-    productivity: "40%",
+    id: 47,
+    title: "Nuh'un Ankara - Trasabilitate Cutie Palet Expediere",
+    slug: "nuhun-ankara-carton-pallet-shipment-traceability",
+    logo: "/Logos/nuhun_ankara.svg",
+    sector: "Alimente",
+    image: "/images/companies/NuhunAnkara/factory.jpg",
+    heroImage: "/images/companies/NuhunAnkara/factory.jpg",
+    description: "Am implementat o soluție integrată de trasabilitate pentru cutii, paleți și expediții, oferind urmărire completă de la producție până la client.",
+    technologies: ["Barcode", "Hand Terminal", "Netsis ERP"],
+    results: {
+      efficiency: "35%",
+      defects: "60%",
+      productivity: "40%",
+    },
+
   },
 
-},
+  {
+    id: 48,
+    title: "Abalıoğlu Yağ - Trasabilitate Cutie Palet Lapte Praf",
+    slug: "abalioglu-yag-milk-powder-carton-pallet-traceability",
+    logo: "/Logos/abalioglu.svg",
+    sector: "Alimente",
+    image: "/images/companies/Abalioglu/factory.jpg",
+    heroImage: "/images/companies/Abalioglu/factory.jpg",
+    description: "Soluție de trasabilitate pentru cutii și paleți implementată în procesele de producție și expediție ale fabricii de lapte praf.",
+    technologies: ["Barcode", "SCADA", "Netsis ERP"],
+    results: {
+      efficiency: "35%",
+      defects: "60%",
+      productivity: "40%",
+    },
 
-{
-  id: 48,
-  title: "Abalıoğlu Yağ - Trasabilitate Cutie Palet Lapte Praf",
-  slug: "abalioglu-yag-milk-powder-carton-pallet-traceability",
-  logo: "/Logos/abalioglu.svg",
-  sector: "Alimente",
-  image: "/images/companies/Abalioglu/factory.jpg",
-  heroImage: "/images/companies/Abalioglu/factory.jpg",
-  description: "Soluție de trasabilitate pentru cutii și paleți implementată în procesele de producție și expediție ale fabricii de lapte praf.",
-  technologies: ["Barcode", "SCADA", "Netsis ERP"],
-  results: {
-    efficiency: "35%",
-    defects: "60%",
-    productivity: "40%",
   },
 
-},
+  {
+    id: 49,
+    title: "Türk Tuborg - Trasabilitate Butoaie cu OCR",
+    slug: "turk-tuborg-keg-ocr-traceability",
+    logo: "/Logos/turk-tuborg_logo-black.svg",
+    sector: "Alimente",
+    image: "/images/companies/Tuborg/c13974-tuborg.jpg",
+    heroImage: "/images/companies/Tuborg/c13974-tuborg.jpg",
+    description: "Sistem OCR și identificare automată pentru asocierea butoaielor cu paleții și asigurarea trasabilității complete.",
+    technologies: ["OCR", "Barcode", "SAP Integration"],
+    results: {
+      efficiency: "35%",
+      defects: "60%",
+      productivity: "40%",
+    },
 
-{
-  id: 49,
-  title: "Türk Tuborg - Trasabilitate Butoaie cu OCR",
-  slug: "turk-tuborg-keg-ocr-traceability",
-  logo: "/Logos/turk_tuborg.png",
-  sector: "Alimente",
-  image: "/images/companies/Tuborg/c13974-tuborg.jpg",
-  heroImage: "/images/companies/Tuborg/c13974-tuborg.jpg",
-  description: "Sistem OCR și identificare automată pentru asocierea butoaielor cu paleții și asigurarea trasabilității complete.",
-  technologies: ["OCR", "Barcode", "SAP Integration"],
-  results: {
-    efficiency: "35%",
-    defects: "60%",
-    productivity: "40%",
   },
 
-},
+  {
+    id: 50,
+    title: "Phinia - Stație de Evaluare Datamatrix",
+    slug: "phinia-datamatrix-quality-grading-station",
+    logo: "/Logos/phinia.svg",
+    sector: "Industria auto",
+    image: "/images/companies/Phinia/Phinia.jpg",
+    heroImage: "/images/companies/Phinia/Phinia.jpg",
+    description: "Stație automată pentru măsurarea și clasificarea calității codurilor Datamatrix conform standardelor internaționale.",
+    technologies: ["Datamatrix Grading", "Vision Systems", "Oracle Integration"],
+    results: {
+      efficiency: "35%",
+      defects: "60%",
+      productivity: "40%",
+    },
 
-{
-  id: 50,
-  title: "Phinia - Stație de Evaluare Datamatrix",
-  slug: "phinia-datamatrix-quality-grading-station",
-  logo: "/Logos/phinia.svg",
-  sector: "Industria auto",
-  image: "/images/companies/Phinia/Phinia.jpg",
-  heroImage: "/images/companies/Phinia/Phinia.jpg",
-  description: "Stație automată pentru măsurarea și clasificarea calității codurilor Datamatrix conform standardelor internaționale.",
-  technologies: ["Datamatrix Grading", "Vision Systems", "Oracle Integration"],
-  results: {
-    efficiency: "35%",
-    defects: "60%",
-    productivity: "40%",
   },
 
-},
+  {
+    id: 51,
+    title: "Phinia - Trasabilitate Linia de Asamblare PCB",
+    slug: "phinia-electronic-board-assembly-traceability",
+    logo: "/Logos/phinia.svg",
+    sector: "Industria auto",
+    image: "/images/companies/Phinia/Phinia.jpg",
+    heroImage: "/images/companies/Phinia/Phinia.jpg",
+    description: "Sistem de trasabilitate pentru plăci electronice, cu monitorizarea tuturor operațiilor și asocierea rezultatelor de calitate.",
+    technologies: ["Barcode", "Vision Systems", "Oracle Integration"],
+    results: {
+      efficiency: "35%",
+      defects: "60%",
+      productivity: "40%",
+    },
 
-{
-  id: 51,
-  title: "Phinia - Trasabilitate Linia de Asamblare PCB",
-  slug: "phinia-electronic-board-assembly-traceability",
-  logo: "/Logos/phinia.svg",
-  sector: "Industria auto",
-  image: "/images/companies/Phinia/Phinia.jpg",
-  heroImage: "/images/companies/Phinia/Phinia.jpg",
-  description: "Sistem de trasabilitate pentru plăci electronice, cu monitorizarea tuturor operațiilor și asocierea rezultatelor de calitate.",
-  technologies: ["Barcode", "Vision Systems", "Oracle Integration"],
-  results: {
-    efficiency: "35%",
-    defects: "60%",
-    productivity: "40%",
   },
 
-},
-
-{
-  id: 52,
+  {
+    id: 52,
     title: "Phinia - Trasabilitatea liniei de acoperire",
     slug: "phinia-coating-line-traceability",
     logo: "/Logos/phinia.svg",
@@ -883,8 +883,8 @@ export const referenceProjects = [
 
   },
 
-{
-  id: 53,
+  {
+    id: 53,
     title: "Phinia - Trasabilitatea procesului de cuptor",
     slug: "phinia-oven-process-traceability",
     logo: "/Logos/phinia.svg",

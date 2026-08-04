@@ -68,7 +68,7 @@
     "firstName": "Prenume",
     "lastName": "Nume",
     "email": "Email",
-    "phone": "Telefon",    
+    "phone": "Telefon",
     "company": "Nume Companie",
     "website": "Website (opțional)",
     "message": "Mesaj",
@@ -151,13 +151,13 @@
     "productivity": "Productivitate"
   },
   "sections": {
-    "solutionsProductsTitle": "Soluții și Produse",
-    "solutionsProductsSubtitle": "Gama completă de servicii și produse pentru trasabilitate",
+    "solutionsProductsTitle": "Soluții și Industrii",
+    "solutionsProductsSubtitle": "Gama completă de servicii și Industrii pentru trasabilitate",
     "solutionsTab": "Soluții",
-    "productsTab": "Produse",
+    "productsTab": "Industrii",
     "details": "Detalii",
     "detailChip": "Detalii soluție",
-    "detailChipProducts": "Detalii produs",
+    "detailChipProducts": "Detalii industrie",
     "referenceProjectsTitle": "Proiecte de referință",
     "referenceProjectsSubtitle": "Exemple reale de implementare pentru industrii diferite",
     "allProjects": "TOATE PROIECTELE NOASTRE",
@@ -180,7 +180,6 @@
     "blogPrev": "Articol anterior",
     "blogNext": "Articol următor",
     "performanceTitle": "Performanță și indicatori cuprinzători",
-    "performanceSubtitle": "Rezultatele noastre vorbesc de la sine",
     "performanceCta": "Proiectele noastre de referință"
   },
   "email": {

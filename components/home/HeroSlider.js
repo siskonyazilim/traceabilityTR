@@ -54,7 +54,7 @@ function splitIntoTwoBalancedLines(text) {
 
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
-  const [isAutoPlay, setIsAutoPlay] = useState(false);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [forceDesktopVideo, setForceDesktopVideo] = useState(false);
   const videoRef = useRef(null);
   const { locale, t } = useLanguage();
@@ -62,6 +62,10 @@ export const HeroSlider = () => {
   const activeSlide = localizedSlides[current];
   const useMobileSource = Boolean(activeSlide?.mobileVideo) && !forceDesktopVideo && activeSlide?.id !== 1;
   const firstSlideSubtitleLines = useMemo(() => splitIntoTwoBalancedLines(localizedSlides[0]?.subtitle), [localizedSlides]);
+
+  const handleNextSlide = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % localizedSlides.length);
+  }, [localizedSlides.length]);
 
   const ensureVideoPlayback = useCallback(() => {
     const videoEl = videoRef.current;
@@ -82,19 +86,14 @@ export const HeroSlider = () => {
   }, []);
 
   useEffect(() => {
-    // Mobile payload is lower by default because autoplay stays disabled.
-    setIsAutoPlay(false);
-  }, []);
-
-  useEffect(() => {
     if (!isAutoPlay) return;
 
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % localizedSlides.length);
-    }, 8000); // Increased from 5000ms to 8000ms for better readability
+      handleNextSlide();
+    }, 10000);
 
     return () => clearInterval(timer);
-  }, [isAutoPlay, localizedSlides.length]);
+  }, [isAutoPlay, handleNextSlide, current]);
 
   useEffect(() => {
     setForceDesktopVideo(false);
@@ -145,7 +144,7 @@ export const HeroSlider = () => {
 
   const goToSlide = (index) => {
     setCurrent(index);
-    setIsAutoPlay(false);
+    setIsAutoPlay(true);
   };
 
   return (
@@ -156,11 +155,11 @@ export const HeroSlider = () => {
           ref={videoRef}
           autoPlay
           muted
-          loop
           playsInline
           preload="auto"
           onLoadedData={ensureVideoPlayback}
           onCanPlay={ensureVideoPlayback}
+          onEnded={handleNextSlide}
           onStalled={recoverFromMobileStall}
           onWaiting={recoverFromMobileStall}
           onError={recoverFromMobileStall}
