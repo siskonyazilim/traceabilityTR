@@ -415,7 +415,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2021-10-02',
     author: 'Admin',
-    image: '/images/blog/what_is_traceability-1288x724-1-uai-516x344.webp',
+    image: '/images/blog/what_is_traceability.jpg',
     excerpt: 'Datele de trasabilitate includ evenimente de producție, logistică și calitate care fac fiecare parcurs al produsului auditabil și măsurabil.',
     content: `
       <p>Datele de trasabilitate sunt, în esența lor, destul de simple. Trasabilitatea implică înregistrarea tuturor evenimentelor care afectează un produs. Aceste date sunt colectate pe parcursul întregului proces de producție, inclusiv materiale adăugate (BOM și componente critice), unelte utilizate, etapele procesului efectuate și rezultatele testelor, toate înregistrate pe bază de numere de serie.</p>
@@ -436,7 +436,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2020-06-08',
     author: 'Admin',
-    image: '/images/blog/BOMI_Siskon-1288x724-1-uai-516x344.webp',
+    image: '/images/blog/bomi.jpg',
     excerpt: 'O implementare de citire multi-cod bazată pe camere de către BOMI Group pentru a îmbunătăți viteza și fiabilitatea în fluxurile de identificare industrială.',
     content: `
       <p>Cu acest obiectiv în minte, am proiectat un nou produs pentru vizualizare în sectorul logistic și de depozitare.</p>
@@ -459,7 +459,7 @@ export const blogPosts = [
     categoryEn: 'News',
     date: '2019-09-12',
     author: 'Admin',
-    image: '/images/blog/TUSIADSD-2019-1288x724-1-uai-516x344.webp',
+    image: '/images/blog/TUSIADSD-2019.jpg',
     excerpt: 'Aspecte importante din TUSIAD SD2 și rolul platformelor de date bazate pe trasabilitate în accelerarea transformării digitale industriale.',
     content: `
       <p>Ca prim program cuprinzător axat pe transformarea digitală în industrie, <strong>TUSIAD SD2</strong> a reunit 18 companii lider utilizatoare de tehnologie cu furnizori de tehnologie la scară IMM.</p>
