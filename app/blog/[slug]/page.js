@@ -239,56 +239,60 @@ export default async function BlogDetailPage({ params }) {
             </Link>
           </div>
 
-          <header className="mb-8 border-b border-slate-200 pb-6">
+          <header className="mb-10 border-b border-slate-200 pb-8">
             <div className="mx-auto w-full max-w-none">
-            <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
-              <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
-              <span className="text-gray-text">{date}</span>
-            </div>
+              <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:items-center lg:gap-10">
+                <div>
+                  <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+                    <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
+                    <span className="text-gray-text">{date}</span>
+                  </div>
 
-            <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-slate-900">{post.title}</h1>
-            <div className="mt-4 flex items-center gap-3">
-              <p className="text-sm font-medium text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
-              <Image
-                src="/siskon-logo-header.svg"
-                alt="Siskon"
-                width={96}
-                height={28}
-              />
-            </div>
+                  <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-slate-900">{post.title}</h1>
+                  <div className="mt-4 flex items-center gap-3">
+                    <p className="text-sm font-medium text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
+                    <Image
+                      src="/siskon-logo-header.svg"
+                      alt="Siskon"
+                      width={96}
+                      height={28}
+                    />
+                  </div>
+                </div>
+
+                <figure className="w-full overflow-hidden rounded-xl bg-slate-100">
+                  {hasCoverImage ? (
+                    <Image
+                      src={coverImage}
+                      alt={post.title}
+                      width={0}
+                      height={0}
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="h-auto w-full"
+                      quality={92}
+                      priority
+                      fetchPriority="high"
+                    />
+                  ) : (
+                    <div className="flex h-[340px] md:h-[480px] items-center justify-center bg-slate-100 text-slate-500">
+                      <div className="flex items-center gap-2 text-sm font-medium">
+                        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                          <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="1.7" />
+                          <circle cx="9" cy="10" r="1.8" strokeWidth="1.7" />
+                          <path d="M21 16l-5-5-7 7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span>
+                          {locale === 'tr' && 'Kapak görseli bulunmuyor'}
+                          {locale === 'en' && 'Cover image unavailable'}
+                          {locale === 'ro' && 'Imagine coperta indisponibila'}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </figure>
+              </div>
             </div>
           </header>
-
-          <figure className="mb-10 mx-auto w-full max-w-none overflow-hidden rounded-xl bg-slate-100">
-            {hasCoverImage ? (
-              <Image
-                src={coverImage}
-                alt={post.title}
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto"
-                quality={92}
-                priority
-                fetchPriority="high"
-              />
-            ) : (
-              <div className="flex h-[340px] md:h-[480px] items-center justify-center bg-slate-100 text-slate-500">
-                <div className="flex items-center gap-2 text-sm font-medium">
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                    <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="1.7" />
-                    <circle cx="9" cy="10" r="1.8" strokeWidth="1.7" />
-                    <path d="M21 16l-5-5-7 7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>
-                    {locale === 'tr' && 'Kapak görseli bulunmuyor'}
-                    {locale === 'en' && 'Cover image unavailable'}
-                    {locale === 'ro' && 'Imagine coperta indisponibila'}
-                  </span>
-                </div>
-              </div>
-            )}
-          </figure>
 
           <div
             dangerouslySetInnerHTML={{ __html: safeContent }}
