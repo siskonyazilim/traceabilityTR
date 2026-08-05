@@ -1,6 +1,7 @@
 import HomePageClient from './HomePageClient';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../lib/i18n/requestLocale';
 import { getOrganizationSchema, getFaqPageSchema, SITE_URL, LOGO_URL } from '../components/seo/OrganizationSchema';
+import { getPartnersByLocale } from '../lib/strapi/partners';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -61,6 +62,7 @@ export async function generateMetadata() {
 
 export default async function HomePage() {
   const locale = await getRequestLocale();
+  const strategicPartners = await getPartnersByLocale(locale);
 
   const org = getOrganizationSchema();
   const faqPage = getFaqPageSchema(locale, `${SITE_URL}/`);
@@ -154,7 +156,7 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HomePageClient />
+      <HomePageClient initialPartners={strategicPartners} initialPartnersLocale={locale} />
     </>
   );
 }

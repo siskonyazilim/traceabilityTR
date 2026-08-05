@@ -61,20 +61,67 @@ export const Header = () => {
   }, []);
 
   const handleLocaleChange = async (nextLocaleCode) => {
-    await setLocale(nextLocaleCode);
-    // Preserve current query params (e.g. ?page=2) when switching locale
+    // Preserve current query/hash params when switching locale
     const currentSearch = typeof window !== 'undefined' ? window.location.search : '';
+    const currentHash = typeof window !== 'undefined' ? window.location.hash : '';
+
+    const resolveBlogDetailPath = async () => {
+      const match = currentPathForLocale.match(/^\/blog\/([^/?#]+)/);
+      if (!match) {
+        return null;
+      }
+
+      const slug = decodeURIComponent(match[1] || '').trim();
+      if (!slug) {
+        return null;
+      }
+
+      try {
+        const response = await fetch(
+          `/api/blog/slug-alternate?slug=${encodeURIComponent(slug)}&targetLocale=${encodeURIComponent(nextLocaleCode)}`,
+          { method: 'GET', cache: 'no-store' }
+        );
+
+        if (!response.ok) {
+          return null;
+        }
+
+        const json = await response.json();
+        const resolvedSlug = (json?.slug || '').trim();
+        if (!resolvedSlug) {
+          return null;
+        }
+
+        return `/blog/${resolvedSlug}`;
+      } catch {
+        return null;
+      }
+    };
+
+    const resolvedBlogPath = await resolveBlogDetailPath();
+    await setLocale(nextLocaleCode);
+
+    const navigateTo = (href) => {
+      router.push(href);
+      router.refresh();
+    };
+
+    if (resolvedBlogPath) {
+      navigateTo(toLocalePath(resolvedBlogPath, nextLocaleCode) + currentSearch + currentHash);
+      return;
+    }
+
     const alternateLink = document.querySelector(`link[rel="alternate"][hreflang="${nextLocaleCode}"]`);
     if (alternateLink) {
       try {
         const url = new URL(alternateLink.href);
-        router.push(url.pathname + currentSearch + url.hash);
+        navigateTo(url.pathname + currentSearch + currentHash);
       } catch (error) {
         console.warn('Could not parse alternate URL, falling back to simple local path:', error);
-        router.push(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch);
+        navigateTo(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch + currentHash);
       }
     } else {
-      router.push(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch);
+      navigateTo(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch + currentHash);
     }
   };
 

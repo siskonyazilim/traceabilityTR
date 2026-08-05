@@ -1,11 +1,9 @@
 import BlogPageClient from './BlogPageClient';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../../lib/i18n/requestLocale';
-import { blogPosts } from '../../data/blogPosts';
-import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
-import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 import JsonLd from '../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL } from '../../components/seo/OrganizationSchema';
+import { getArticlesByLocale } from '../../lib/strapi/articles';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -34,7 +32,7 @@ export async function generateMetadata() {
     ogLocale = 'en_US';
   }
 
-  const alternates = getLanguageAlternates(pathname);
+  const alternates = getLanguageAlternates(pathname, locale);
 
   return {
     title,
@@ -70,17 +68,29 @@ export default async function BlogPage() {
   const pageUrl = `${SITE_URL}${toLocalePath('/blog', locale)}`;
   const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
 
-  const localizedPosts = localizeBlogPosts(blogPosts, locale)
+  let localizedPosts = [];
+  try {
+    localizedPosts = await getArticlesByLocale(locale, { limit: 18 });
+  } catch (error) {
+    console.error('Failed to fetch blog listing from Strapi', error);
+  }
+
+  localizedPosts = localizedPosts
     .sort((a, b) => {
+      const yearA = Number.isNaN(new Date(a.date).getTime()) ? 0 : new Date(a.date).getUTCFullYear();
+      const yearB = Number.isNaN(new Date(b.date).getTime()) ? 0 : new Date(b.date).getUTCFullYear();
+      const yearDiff = yearB - yearA;
+      if (yearDiff !== 0) return yearDiff;
+
       const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
       if (dateDiff !== 0) return dateDiff;
+
       return (b.id ?? 0) - (a.id ?? 0);
     })
-    .slice(0, 12);
+    .slice(0, 18);
 
   const getPostUrl = (post) => {
-    const localizedSlug = getLocalizedSlug('blog', post.originalSlug || post.slug, locale);
-    const postPath = `/blog/${localizedSlug}`;
+    const postPath = `/blog/${post.slug}`;
     return `${SITE_URL}${toLocalePath(postPath, locale)}`;
   };
 
@@ -156,7 +166,7 @@ export default async function BlogPage() {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <BlogPageClient />
+      <BlogPageClient posts={localizedPosts} />
     </>
   );
 }

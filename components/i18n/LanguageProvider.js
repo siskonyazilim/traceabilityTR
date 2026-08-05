@@ -1,13 +1,29 @@
 'use client';
 
-import { createContext, useContext, useMemo, useState } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { DEFAULT_LOCALE, getDictionary, formatTranslation, isSupportedLocale, resolveTranslation } from '../../lib/i18n/dictionaries';
 
 const LanguageContext = createContext(null);
 
 export function LanguageProvider({ initialLocale, children }) {
   const normalizedInitial = isSupportedLocale(initialLocale) ? initialLocale : DEFAULT_LOCALE;
-  const [locale, setLocaleState] = useState(normalizedInitial);
+  const [locale, setLocale] = useState(normalizedInitial);
+
+  useEffect(() => {
+    if (!isSupportedLocale(normalizedInitial) || normalizedInitial === locale) {
+      return;
+    }
+
+    setLocale(normalizedInitial);
+  }, [normalizedInitial, locale]);
+
+  useEffect(() => {
+    if (typeof globalThis === 'undefined') {
+      return;
+    }
+
+    globalThis.document.documentElement.lang = locale;
+  }, [locale]);
 
   const dictionary = useMemo(() => getDictionary(locale), [locale]);
 
@@ -26,12 +42,12 @@ export function LanguageProvider({ initialLocale, children }) {
     };
   }, [dictionary]);
 
-  const setLocale = async (nextLocale) => {
+  const changeLocale = async (nextLocale) => {
     if (!isSupportedLocale(nextLocale) || nextLocale === locale) {
       return;
     }
 
-    setLocaleState(nextLocale);
+    setLocale(nextLocale);
 
     if (typeof globalThis !== 'undefined') {
       globalThis.document.documentElement.lang = nextLocale;
@@ -52,7 +68,7 @@ export function LanguageProvider({ initialLocale, children }) {
     }
   };
 
-  const value = useMemo(() => ({ locale, setLocale, t }), [locale, t]);
+  const value = useMemo(() => ({ locale, setLocale: changeLocale, t }), [locale, t]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }

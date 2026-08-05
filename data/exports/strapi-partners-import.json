@@ -1,0 +1,593 @@
+{
+  "generatedAt": "2026-08-05T10:43:37.124Z",
+  "source": "data/partners.js + data/i18n/content.{tr,en}.js",
+  "componentUids": {
+    "richText": "shared.partner-rich-text"
+  },
+  "stats": {
+    "partnerGroups": 6,
+    "localeCoverage": {
+      "tr": 6,
+      "en": 6,
+      "ro": 6
+    }
+  },
+  "partners": [
+    {
+      "sourceId": 5,
+      "sourceBaseSlug": "beckhoff",
+      "locales": [
+        {
+          "locale": "tr",
+          "data": {
+            "name": "Beckhoff",
+            "slug": "beckhoff",
+            "breadcrumbLabel": "BECKHOFF",
+            "description": "PC tabanlı kontrol teknolojileri ve açık otomasyon çözümleriyle makine, robotik ve üretim sistemlerinin esnek ve verimli şekilde yönetilmesini sağlar.",
+            "summary": "PC tabanlı kontrol teknolojileri ve açık otomasyon çözümleriyle makine, robotik ve üretim sistemlerinin esnek ve verimli şekilde yönetilmesini sağlar.",
+            "fullDescription": "Beckhoff, PC tabanlı kontrol teknolojisine dayanan endüstriyel otomasyon ürünleri geliştirir ve üretir. Ürün portföyünde endüstriyel bilgisayarlar ve kontrol panelleri, I/O ve haberleşme bileşenleri, sürücü-motor sistemleri ile TwinCAT otomasyon yazılımı bulunur.\n\nBu ürünler, tek başına bir otomasyon bileşeni olarak kullanılabildiği gibi makine ve üretim hatlarının kontrol edildiği bütünleşik sistemler içerisinde de çalışabilir. Beckhoff teknolojileri; makine kontrolü, hareket kontrolü, robotik uygulamalar ve üretim otomasyonu gibi farklı alanlarda kullanılmaktadır.",
+            "website": "https://www.beckhoff.com",
+            "logoPath": "/Logos/Beckhoff_red.svg",
+            "detailLogoPath": "/Logos/Beckhoff_red.svg",
+            "sortOrder": 5,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Beckhoff",
+                "content": "Beckhoff, PC tabanlı kontrol teknolojisine dayanan endüstriyel otomasyon ürünleri geliştirir ve üretir. Ürün portföyünde endüstriyel bilgisayarlar ve kontrol panelleri, I/O ve haberleşme bileşenleri, sürücü-motor sistemleri ile TwinCAT otomasyon yazılımı bulunur.\n\nBu ürünler, tek başına bir otomasyon bileşeni olarak kullanılabildiği gibi makine ve üretim hatlarının kontrol edildiği bütünleşik sistemler içerisinde de çalışabilir. Beckhoff teknolojileri; makine kontrolü, hareket kontrolü, robotik uygulamalar ve üretim otomasyonu gibi farklı alanlarda kullanılmaktadır."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Beckhoff/beckhoff.webp"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "en",
+          "data": {
+            "name": "Beckhoff",
+            "slug": "beckhoff",
+            "breadcrumbLabel": "BECKHOFF",
+            "description": "Enables flexible and efficient management of machine, robotics, and production systems through PC-based control technologies and open automation solutions.",
+            "summary": "Enables flexible and efficient management of machine, robotics, and production systems through PC-based control technologies and open automation solutions.",
+            "fullDescription": "Beckhoff develops open automation systems based on PC Control technology. The product range consists of Industrial PCs, I/O and Fieldbus Components, Drive Technology, and automation software. For all industries, there are products that can be used as individual components or to build a complete and seamless control system from scratch.\n\n Beckhoff's \"New Automation Technology\" philosophy stands for universal, open control and automation solutions used in a wide variety of applications worldwide, ranging from CNC-controlled machine tools to smart building automation.",
+            "website": "https://www.beckhoff.com",
+            "logoPath": "/Logos/Beckhoff_red.svg",
+            "detailLogoPath": "/Logos/Beckhoff_red.svg",
+            "sortOrder": 5,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Beckhoff",
+                "content": "Beckhoff develops open automation systems based on PC Control technology. The product range consists of Industrial PCs, I/O and Fieldbus Components, Drive Technology, and automation software. For all industries, there are products that can be used as individual components or to build a complete and seamless control system from scratch.\n\n Beckhoff's \"New Automation Technology\" philosophy stands for universal, open control and automation solutions used in a wide variety of applications worldwide, ranging from CNC-controlled machine tools to smart building automation."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Beckhoff/beckhoff.webp"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "ro",
+          "data": {
+            "name": "Beckhoff",
+            "slug": "beckhoff",
+            "breadcrumbLabel": "BECKHOFF",
+            "description": "Permite gestionarea flexibilă și eficientă a sistemelor de mașini, robotică și producție prin tehnologii de control bazate pe PC și soluții de automatizare deschisă.",
+            "summary": "Permite gestionarea flexibilă și eficientă a sistemelor de mașini, robotică și producție prin tehnologii de control bazate pe PC și soluții de automatizare deschisă.",
+            "fullDescription": "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC. Gama de produse constă în PC-uri industriale, componente I/O și Fieldbus, tehnologie de acționare și software de automatizare. Pentru toate industriile, există produse care pot fi utilizate ca și componente individuale sau pentru a crea de la zero un sistem de control complet și fără întreruperi.\n\n Filosofia Beckhoff privind \"Noua Tehnologie de Automatizare\" reprezintă soluții de control și automatizare universale și deschise, utilizate într-o varietate de aplicații la nivel mondial, variind de la mașini-unelte controlate prin CNC până la automatizarea inteligentă a clădirilor.",
+            "website": "https://www.beckhoff.com",
+            "logoPath": "/Logos/Beckhoff_red.svg",
+            "detailLogoPath": "/Logos/Beckhoff_red.svg",
+            "sortOrder": 5,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Beckhoff",
+                "content": "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC. Gama de produse constă în PC-uri industriale, componente I/O și Fieldbus, tehnologie de acționare și software de automatizare. Pentru toate industriile, există produse care pot fi utilizate ca și componente individuale sau pentru a crea de la zero un sistem de control complet și fără întreruperi.\n\n Filosofia Beckhoff privind \"Noua Tehnologie de Automatizare\" reprezintă soluții de control și automatizare universale și deschise, utilizate într-o varietate de aplicații la nivel mondial, variind de la mașini-unelte controlate prin CNC până la automatizarea inteligentă a clădirilor."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Beckhoff/beckhoff.webp"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": 1,
+      "sourceBaseSlug": "sick",
+      "locales": [
+        {
+          "locale": "tr",
+          "data": {
+            "name": "SICK",
+            "slug": "sick",
+            "breadcrumbLabel": "SICK",
+            "description": "Endüstriyel sensörler, görüntü işleme ve otomatik tanımlama sistemleriyle üretim ve lojistikte güvenli, verimli ve izlenebilir operasyonlar sağlar.",
+            "summary": "Endüstriyel sensörler, görüntü işleme ve otomatik tanımlama sistemleriyle üretim ve lojistikte güvenli, verimli ve izlenebilir operasyonlar sağlar.",
+            "fullDescription": "SICK, üretim ve lojistik süreçlerinde kullanılan endüstriyel sensörler, güvenlik sistemleri, görüntü işleme ürünleri ve otomatik tanımlama teknolojileri geliştirir ve üretir. Ürün portföyünde mesafe ve konum sensörleri, güvenlik tarayıcıları, endüstriyel kameralar, barkod okuyucular ve RFID sistemleri yer alır.\n\nSICK teknolojileri, ürün ve malzemelerin algılanması, ölçülmesi, kontrol edilmesi ve otomatik olarak tanımlanması için kullanılır. Bu ürünler sayesinde üretim hatlarında kalite kontrol, kod okuma, ürün doğrulama, makine güvenliği ve uçtan uca izlenebilirlik uygulamaları gerçekleştirilebilir.",
+            "website": "https://www.sick.com",
+            "logoPath": "/Logos/sick-logo.svg",
+            "detailLogoPath": "/Logos/sick-logo.svg",
+            "sortOrder": 1,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "SICK",
+                "content": "SICK, üretim ve lojistik süreçlerinde kullanılan endüstriyel sensörler, güvenlik sistemleri, görüntü işleme ürünleri ve otomatik tanımlama teknolojileri geliştirir ve üretir. Ürün portföyünde mesafe ve konum sensörleri, güvenlik tarayıcıları, endüstriyel kameralar, barkod okuyucular ve RFID sistemleri yer alır.\n\nSICK teknolojileri, ürün ve malzemelerin algılanması, ölçülmesi, kontrol edilmesi ve otomatik olarak tanımlanması için kullanılır. Bu ürünler sayesinde üretim hatlarında kalite kontrol, kod okuma, ürün doğrulama, makine güvenliği ve uçtan uca izlenebilirlik uygulamaları gerçekleştirilebilir."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/S%C4%B1ck/clv-800x867-1300x867.jpg"
+              },
+              {
+                "imagePath": "/images/partner/S%C4%B1ck/SICK-1300x867.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "en",
+          "data": {
+            "name": "SICK",
+            "slug": "sick",
+            "breadcrumbLabel": "SICK",
+            "description": "Provides safe, efficient, and traceable operations in manufacturing and logistics using industrial sensors, vision, and auto-ID technologies.",
+            "summary": "Provides safe, efficient, and traceable operations in manufacturing and logistics using industrial sensors, vision, and auto-ID technologies.",
+            "fullDescription": "SICK develops and manufactures industrial sensors, safety systems, machine vision products, and automatic identification technologies used in manufacturing and logistics processes. Its portfolio includes distance and position sensors, safety scanners, industrial cameras, barcode readers, and RFID systems.\n\nSICK technologies are used for detecting, measuring, monitoring, and automatically identifying products and materials. These solutions enable quality inspection, code reading, product verification, machine safety, and end-to-end traceability applications across production lines.",
+            "website": "https://www.sick.com",
+            "logoPath": "/Logos/sick-logo.svg",
+            "detailLogoPath": "/Logos/sick-logo.svg",
+            "sortOrder": 1,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "SICK",
+                "content": "SICK develops and manufactures industrial sensors, safety systems, machine vision products, and automatic identification technologies used in manufacturing and logistics processes. Its portfolio includes distance and position sensors, safety scanners, industrial cameras, barcode readers, and RFID systems.\n\nSICK technologies are used for detecting, measuring, monitoring, and automatically identifying products and materials. These solutions enable quality inspection, code reading, product verification, machine safety, and end-to-end traceability applications across production lines."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/S%C4%B1ck/clv-800x867-1300x867.jpg"
+              },
+              {
+                "imagePath": "/images/partner/S%C4%B1ck/SICK-1300x867.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "ro",
+          "data": {
+            "name": "SICK",
+            "slug": "sick",
+            "breadcrumbLabel": "SICK",
+            "description": "Oferă operațiuni sigure, eficiente și trasabile în procesele de producție și logistică prin senzori industriali, sisteme de procesare a imaginilor și tehnologii de identificare automată.",
+            "summary": "Oferă operațiuni sigure, eficiente și trasabile în procesele de producție și logistică prin senzori industriali, sisteme de procesare a imaginilor și tehnologii de identificare automată.",
+            "fullDescription": "SICK dezvoltă și produce senzori industriali, sisteme de siguranță, produse de procesare a imaginilor și tehnologii de identificare automată utilizate în procesele de producție și logistică. Portofoliul său include senzori de distanță și poziție, scanere de siguranță, camere industriale, cititoare de coduri de bare și sisteme RFID.\n\nTehnologiile SICK sunt utilizate pentru detectarea, măsurarea, monitorizarea și identificarea automată a produselor și materialelor. Aceste soluții permit controlul calității, citirea codurilor, verificarea produselor, siguranța mașinilor și aplicații complete de trasabilitate în liniile de producție.",
+            "website": "https://www.sick.com",
+            "logoPath": "/Logos/sick-logo.svg",
+            "detailLogoPath": "/Logos/sick-logo.svg",
+            "sortOrder": 1,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "SICK",
+                "content": "SICK dezvoltă și produce senzori industriali, sisteme de siguranță, produse de procesare a imaginilor și tehnologii de identificare automată utilizate în procesele de producție și logistică. Portofoliul său include senzori de distanță și poziție, scanere de siguranță, camere industriale, cititoare de coduri de bare și sisteme RFID.\n\nTehnologiile SICK sunt utilizate pentru detectarea, măsurarea, monitorizarea și identificarea automată a produselor și materialelor. Aceste soluții permit controlul calității, citirea codurilor, verificarea produselor, siguranța mașinilor și aplicații complete de trasabilitate în liniile de producție."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/S%C4%B1ck/clv-800x867-1300x867.jpg"
+              },
+              {
+                "imagePath": "/images/partner/S%C4%B1ck/SICK-1300x867.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": 2,
+      "sourceBaseSlug": "universal-robots",
+      "locales": [
+        {
+          "locale": "tr",
+          "data": {
+            "name": "Universal Robots",
+            "slug": "universal-robots",
+            "breadcrumbLabel": "UNIVERSAL ROBOTS",
+            "description": "Kolaboratif robot teknolojileriyle üretim süreçlerinde esnek otomasyon çözümleri sunar; verimliliği artırırken çalışanlarla güvenli iş birliği imkânı sağlar.",
+            "summary": "Kolaboratif robot teknolojileriyle üretim süreçlerinde esnek otomasyon çözümleri sunar; verimliliği artırırken çalışanlarla güvenli iş birliği imkânı sağlar.",
+            "fullDescription": "Universal Robots, üretim ortamlarında çalışanlarla birlikte görev yapabilen kolaboratif robotlar, yani cobotlar geliştirir ve üretir. Farklı taşıma kapasitelerine ve erişim mesafelerine sahip robot kolları, çeşitli ekipman ve yazılımlarla birleştirilerek farklı üretim operasyonlarına uyarlanabilir.\n\nUniversal Robots cobotları; makine besleme, montaj, kaynak, malzeme taşıma, paketleme, paletleme ve kalite kontrol gibi tekrarlayan veya ergonomik açıdan zorlayıcı işlemlerde kullanılır. Esnek yapıları sayesinde farklı ürünlere ve üretim senaryolarına göre yeniden programlanabilir ve mevcut üretim alanlarına entegre edilebilir.",
+            "website": "https://www.universalrobots.com",
+            "logoPath": "/Logos/universal_robots.svg",
+            "detailLogoPath": "/Logos/universal-robots-logo.svg",
+            "sortOrder": 2,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Universal Robots",
+                "content": "Universal Robots, üretim ortamlarında çalışanlarla birlikte görev yapabilen kolaboratif robotlar, yani cobotlar geliştirir ve üretir. Farklı taşıma kapasitelerine ve erişim mesafelerine sahip robot kolları, çeşitli ekipman ve yazılımlarla birleştirilerek farklı üretim operasyonlarına uyarlanabilir.\n\nUniversal Robots cobotları; makine besleme, montaj, kaynak, malzeme taşıma, paketleme, paletleme ve kalite kontrol gibi tekrarlayan veya ergonomik açıdan zorlayıcı işlemlerde kullanılır. Esnek yapıları sayesinde farklı ürünlere ve üretim senaryolarına göre yeniden programlanabilir ve mevcut üretim alanlarına entegre edilebilir."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/UniversalRobots/07_22_Case_Story_Seng%20Heng%20Engineering_Singapore_EN%2013.jpg"
+              },
+              {
+                "imagePath": "/images/partner/UniversalRobots/11_2022_All4Pack%2007.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "en",
+          "data": {
+            "name": "Universal Robots",
+            "slug": "universal-robots",
+            "breadcrumbLabel": "UNIVERSAL ROBOTS",
+            "description": "Delivers flexible automation solutions through collaborative robot technologies, increasing productivity while enabling safe human-robot collaboration.",
+            "summary": "Delivers flexible automation solutions through collaborative robot technologies, increasing productivity while enabling safe human-robot collaboration.",
+            "fullDescription": "Universal Robots develops and manufactures collaborative robots, known as cobots, that are designed to work alongside employees in production environments. Robotic arms with different payload capacities and reach ranges can be combined with various tools and software solutions to adapt to a wide range of manufacturing operations.\n\nUniversal Robots cobots are used in repetitive or ergonomically demanding tasks such as machine tending, assembly, welding, material handling, packaging, palletizing, and quality inspection. Thanks to their flexible design, they can be reprogrammed for different products and production scenarios and easily integrated into existing production environments.",
+            "website": "https://www.universalrobots.com",
+            "logoPath": "/Logos/universal_robots.svg",
+            "detailLogoPath": "/Logos/universal-robots-logo.svg",
+            "sortOrder": 2,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Universal Robots",
+                "content": "Universal Robots develops and manufactures collaborative robots, known as cobots, that are designed to work alongside employees in production environments. Robotic arms with different payload capacities and reach ranges can be combined with various tools and software solutions to adapt to a wide range of manufacturing operations.\n\nUniversal Robots cobots are used in repetitive or ergonomically demanding tasks such as machine tending, assembly, welding, material handling, packaging, palletizing, and quality inspection. Thanks to their flexible design, they can be reprogrammed for different products and production scenarios and easily integrated into existing production environments."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/UniversalRobots/07_22_Case_Story_Seng%20Heng%20Engineering_Singapore_EN%2013.jpg"
+              },
+              {
+                "imagePath": "/images/partner/UniversalRobots/11_2022_All4Pack%2007.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "ro",
+          "data": {
+            "name": "Universal Robots",
+            "slug": "universal-robots",
+            "breadcrumbLabel": "UNIVERSAL ROBOTS",
+            "description": "Oferă soluții flexibile de automatizare prin tehnologii de roboți colaborativi, crescând productivitatea și asigurând o colaborare sigură între oameni și roboți.",
+            "summary": "Oferă soluții flexibile de automatizare prin tehnologii de roboți colaborativi, crescând productivitatea și asigurând o colaborare sigură între oameni și roboți.",
+            "fullDescription": "Universal Robots dezvoltă și produce roboți colaborativi, cunoscuți sub denumirea de coboți, care sunt proiectați să lucreze alături de operatori în mediile de producție. Brațele robotice cu diferite capacități de încărcare și raze de acțiune pot fi combinate cu diverse echipamente și soluții software pentru a se adapta unei game largi de operațiuni industriale.\n\nCoboții Universal Robots sunt utilizați în activități repetitive sau solicitante din punct de vedere ergonomic, precum alimentarea mașinilor, asamblarea, sudura, manipularea materialelor, ambalarea, paletizarea și controlul calității. Datorită flexibilității lor, aceștia pot fi reprogramați pentru diferite produse și scenarii de producție și integrați cu ușurință în mediile existente.",
+            "website": "https://www.universalrobots.com",
+            "logoPath": "/Logos/universal_robots.svg",
+            "detailLogoPath": "/Logos/universal-robots-logo.svg",
+            "sortOrder": 2,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Universal Robots",
+                "content": "Universal Robots dezvoltă și produce roboți colaborativi, cunoscuți sub denumirea de coboți, care sunt proiectați să lucreze alături de operatori în mediile de producție. Brațele robotice cu diferite capacități de încărcare și raze de acțiune pot fi combinate cu diverse echipamente și soluții software pentru a se adapta unei game largi de operațiuni industriale.\n\nCoboții Universal Robots sunt utilizați în activități repetitive sau solicitante din punct de vedere ergonomic, precum alimentarea mașinilor, asamblarea, sudura, manipularea materialelor, ambalarea, paletizarea și controlul calității. Datorită flexibilității lor, aceștia pot fi reprogramați pentru diferite produse și scenarii de producție și integrați cu ușurință în mediile existente."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/UniversalRobots/07_22_Case_Story_Seng%20Heng%20Engineering_Singapore_EN%2013.jpg"
+              },
+              {
+                "imagePath": "/images/partner/UniversalRobots/11_2022_All4Pack%2007.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": 3,
+      "sourceBaseSlug": "markem-imaje",
+      "locales": [
+        {
+          "locale": "tr",
+          "data": {
+            "name": "Markem-Imaje",
+            "slug": "markem-imaje",
+            "breadcrumbLabel": "Proiectul A.Ş.",
+            "description": "Endüstriyel kodlama ve markalama çözümleriyle ürünlerin doğru şekilde tanımlanmasını, doğrulanmasını ve izlenebilirlik süreçlerinin yönetilmesini destekler.",
+            "summary": "Endüstriyel kodlama ve markalama çözümleriyle ürünlerin doğru şekilde tanımlanmasını, doğrulanmasını ve izlenebilirlik süreçlerinin yönetilmesini destekler.",
+            "fullDescription": "Markem-Imaje, ürünlerin ve ambalajların üretim hattı üzerinde tanımlanmasına yönelik endüstriyel kodlama, markalama ve baskı sistemleri geliştirir. Ürün portföyünde inkjet yazıcılar, lazer markalama sistemleri, termal transfer yazıcılar, etiketleme çözümleri ve kodlama süreçlerini yöneten yazılımlar bulunur.\n\nBu sistemler; üretim tarihi, son kullanma tarihi, lot numarası, seri numarası, barkod ve 2D kodların farklı ürün ve ambalaj yüzeylerine uygulanmasını sağlar. Kodlama yazılımlarıyla birlikte üretim hatlarında doğru kodun basılması, doğrulanması ve ürün izlenebilirliği verileriyle ilişkilendirilmesi desteklenir.",
+            "website": "https://www.markem-imaje.com",
+            "logoPath": "/Logos/markem-imaje-logo.svg",
+            "detailLogoPath": "/Logos/markem-imaje-logo.svg",
+            "sortOrder": 3,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Markem-Imaje",
+                "content": "Markem-Imaje, ürünlerin ve ambalajların üretim hattı üzerinde tanımlanmasına yönelik endüstriyel kodlama, markalama ve baskı sistemleri geliştirir. Ürün portföyünde inkjet yazıcılar, lazer markalama sistemleri, termal transfer yazıcılar, etiketleme çözümleri ve kodlama süreçlerini yöneten yazılımlar bulunur.\n\nBu sistemler; üretim tarihi, son kullanma tarihi, lot numarası, seri numarası, barkod ve 2D kodların farklı ürün ve ambalaj yüzeylerine uygulanmasını sağlar. Kodlama yazılımlarıyla birlikte üretim hatlarında doğru kodun basılması, doğrulanması ve ürün izlenebilirliği verileriyle ilişkilendirilmesi desteklenir."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/MarkemImaje/electric-vs-pneumatic-applicators-a-short-guide-g2019-0120-800x400-50.jpg"
+              },
+              {
+                "imagePath": "/images/partner/MarkemImaje/implementing-gs1-digital-link-2d-codes-g2026-01702-size1200x400-50.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "en",
+          "data": {
+            "name": "Markem-Imaje",
+            "slug": "markem-imaje",
+            "breadcrumbLabel": "Proiectul A.Ş.",
+            "description": "Supports accurate product identification, verification, and traceability management through industrial coding and marking solutions.",
+            "summary": "Supports accurate product identification, verification, and traceability management through industrial coding and marking solutions.",
+            "fullDescription": "Markem-Imaje develops industrial coding, marking, and printing systems for product and packaging identification on production lines. Its product portfolio includes inkjet printers, laser marking systems, thermal transfer printers, labeling solutions, and software for managing coding processes.\n\nThese systems enable the application of production dates, expiration dates, batch numbers, serial numbers, barcodes, and 2D codes on various product and packaging surfaces. Combined with coding software, they support accurate code printing, verification, and integration with product traceability data.",
+            "website": "https://www.markem-imaje.com",
+            "logoPath": "/Logos/markem-imaje-logo.svg",
+            "detailLogoPath": "/Logos/markem-imaje-logo.svg",
+            "sortOrder": 3,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Markem-Imaje",
+                "content": "Markem-Imaje develops industrial coding, marking, and printing systems for product and packaging identification on production lines. Its product portfolio includes inkjet printers, laser marking systems, thermal transfer printers, labeling solutions, and software for managing coding processes.\n\nThese systems enable the application of production dates, expiration dates, batch numbers, serial numbers, barcodes, and 2D codes on various product and packaging surfaces. Combined with coding software, they support accurate code printing, verification, and integration with product traceability data."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/MarkemImaje/electric-vs-pneumatic-applicators-a-short-guide-g2019-0120-800x400-50.jpg"
+              },
+              {
+                "imagePath": "/images/partner/MarkemImaje/implementing-gs1-digital-link-2d-codes-g2026-01702-size1200x400-50.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "ro",
+          "data": {
+            "name": "Markem-Imaje",
+            "slug": "markem-imaje",
+            "breadcrumbLabel": "Proiectul A.Ş.",
+            "description": "Sprijină identificarea corectă a produselor, verificarea acestora și gestionarea proceselor de trasabilitate prin soluții industriale de codare și marcare.",
+            "summary": "Sprijină identificarea corectă a produselor, verificarea acestora și gestionarea proceselor de trasabilitate prin soluții industriale de codare și marcare.",
+            "fullDescription": "",
+            "website": "https://www.markem-imaje.com",
+            "logoPath": "/Logos/markem-imaje-logo.svg",
+            "detailLogoPath": "/Logos/markem-imaje-logo.svg",
+            "sortOrder": 3,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Markem-Imaje",
+                "content": "Markem-Imaje dezvoltă sisteme industriale de codare, marcare și imprimare pentru identificarea produselor și ambalajelor pe liniile de producție. Portofoliul său include imprimante inkjet, sisteme de marcare cu laser, imprimante cu transfer termic, soluții de etichetare și software pentru gestionarea proceselor de codare.\n\nAceste sisteme permit aplicarea datelor de fabricație, termenelor de valabilitate, numerelor de lot, numerelor de serie, codurilor de bare și codurilor 2D pe diverse suprafețe ale produselor și ambalajelor. Împreună cu software-ul de codare, acestea sprijină imprimarea corectă a codurilor, verificarea lor și asocierea cu datele de trasabilitate ale produselor."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/MarkemImaje/electric-vs-pneumatic-applicators-a-short-guide-g2019-0120-800x400-50.jpg"
+              },
+              {
+                "imagePath": "/images/partner/MarkemImaje/implementing-gs1-digital-link-2d-codes-g2026-01702-size1200x400-50.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": 4,
+      "sourceBaseSlug": "interroll",
+      "locales": [
+        {
+          "locale": "tr",
+          "data": {
+            "name": "Interroll",
+            "slug": "interroll",
+            "breadcrumbLabel": "INTERROLL",
+            "description": "İç lojistik ve malzeme taşıma sistemleriyle tesis içi ürün hareketlerini optimize eder, malzeme akışı için verimli ve sürdürülebilir çözümler sunar.",
+            "summary": "İç lojistik ve malzeme taşıma sistemleriyle tesis içi ürün hareketlerini optimize eder, malzeme akışı için verimli ve sürdürülebilir çözümler sunar.",
+            "fullDescription": "Interroll, üretim, depo ve dağıtım alanlarındaki malzeme hareketleri için konveyör ruloları, motor ve sürücü sistemleri, konveyör modülleri, ayrıştırma sistemleri ile palet ve koli taşıma çözümleri geliştirir ve üretir.\n\nInterroll ürünleri; koli, palet, paket ve diğer malzemelerin tesis içerisinde taşınması, biriktirilmesi, yönlendirilmesi, ayrıştırılması ve depolanması amacıyla kullanılır. Modüler ürün yapısı, üretim hatlarından depolara ve dağıtım merkezlerine kadar farklı iç lojistik uygulamalarına uyarlanabilir.",
+            "website": "https://www.interroll.com",
+            "logoPath": "/Logos/interroll-logo.svg",
+            "detailLogoPath": "/Logos/Interroll.svg",
+            "sortOrder": 4,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Interroll",
+                "content": "Interroll, üretim, depo ve dağıtım alanlarındaki malzeme hareketleri için konveyör ruloları, motor ve sürücü sistemleri, konveyör modülleri, ayrıştırma sistemleri ile palet ve koli taşıma çözümleri geliştirir ve üretir.\n\nInterroll ürünleri; koli, palet, paket ve diğer malzemelerin tesis içerisinde taşınması, biriktirilmesi, yönlendirilmesi, ayrıştırılması ve depolanması amacıyla kullanılır. Modüler ürün yapısı, üretim hatlarından depolara ve dağıtım merkezlerine kadar farklı iç lojistik uygulamalarına uyarlanabilir."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Interroll/headquarter.png"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "en",
+          "data": {
+            "name": "Interroll",
+            "slug": "interroll",
+            "breadcrumbLabel": "INTERROLL",
+            "description": "Optimizes the movement of products within facilities through intralogistics and material handling systems, providing efficient and sustainable flow solutions.",
+            "summary": "Optimizes the movement of products within facilities through intralogistics and material handling systems, providing efficient and sustainable flow solutions.",
+            "fullDescription": "Interroll develops and manufactures conveyor rollers, motor and drive systems, conveyor modules, sorting systems, and pallet and package handling solutions for material movement in manufacturing, warehousing, and distribution environments.\n\nInterroll products are used for transporting, accumulating, routing, sorting, and storing boxes, pallets, packages, and other materials within facilities. Their modular design allows them to be adapted to a wide range of intralogistics applications, from production lines to warehouses and distribution centers.",
+            "website": "https://www.interroll.com",
+            "logoPath": "/Logos/interroll-logo.svg",
+            "detailLogoPath": "/Logos/Interroll.svg",
+            "sortOrder": 4,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Interroll",
+                "content": "Interroll develops and manufactures conveyor rollers, motor and drive systems, conveyor modules, sorting systems, and pallet and package handling solutions for material movement in manufacturing, warehousing, and distribution environments.\n\nInterroll products are used for transporting, accumulating, routing, sorting, and storing boxes, pallets, packages, and other materials within facilities. Their modular design allows them to be adapted to a wide range of intralogistics applications, from production lines to warehouses and distribution centers."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Interroll/headquarter.png"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "ro",
+          "data": {
+            "name": "Interroll",
+            "slug": "interroll",
+            "breadcrumbLabel": "INTERROLL",
+            "description": "Optimizează deplasarea produselor în interiorul facilităților prin sisteme de logistică internă și manipulare a materialelor, oferind soluții eficiente și sustenabile pentru fluxul de materiale.",
+            "summary": "Optimizează deplasarea produselor în interiorul facilităților prin sisteme de logistică internă și manipulare a materialelor, oferind soluții eficiente și sustenabile pentru fluxul de materiale.",
+            "fullDescription": "Interroll dezvoltă și produce role pentru transportoare, sisteme de acționare și motoare, module de transport, sisteme de sortare și soluții pentru manipularea paleților și coletelor destinate mișcării materialelor în producție, depozitare și distribuție.\n\nProdusele Interroll sunt utilizate pentru transportul, acumularea, direcționarea, sortarea și depozitarea cutiilor, paleților, pachetelor și altor materiale în interiorul facilităților. Designul lor modular permite adaptarea la o gamă largă de aplicații logistice interne, de la liniile de producție până la depozite și centre de distribuție.",
+            "website": "https://www.interroll.com",
+            "logoPath": "/Logos/interroll-logo.svg",
+            "detailLogoPath": "/Logos/Interroll.svg",
+            "sortOrder": 4,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Interroll",
+                "content": "Interroll dezvoltă și produce role pentru transportoare, sisteme de acționare și motoare, module de transport, sisteme de sortare și soluții pentru manipularea paleților și coletelor destinate mișcării materialelor în producție, depozitare și distribuție.\n\nProdusele Interroll sunt utilizate pentru transportul, acumularea, direcționarea, sortarea și depozitarea cutiilor, paleților, pachetelor și altor materiale în interiorul facilităților. Designul lor modular permite adaptarea la o gamă largă de aplicații logistice interne, de la liniile de producție până la depozite și centre de distribuție."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Interroll/headquarter.png"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": 6,
+      "sourceBaseSlug": "sewio",
+      "locales": [
+        {
+          "locale": "tr",
+          "data": {
+            "name": "Sewio",
+            "slug": "sewio",
+            "breadcrumbLabel": "SEWIO",
+            "description": "UWB tabanlı gerçek zamanlı konum takip teknolojileriyle varlıkların hareketlerini izler, iç lojistik süreçlerinde görünürlük ve operasyonel verimlilik sunar.",
+            "summary": "UWB tabanlı gerçek zamanlı konum takip teknolojileriyle varlıkların hareketlerini izler, iç lojistik süreçlerinde görünürlük ve operasyonel verimlilik sunar.",
+            "fullDescription": "Sewio, üretim ve lojistik alanlarında kullanılan UWB tabanlı gerçek zamanlı konum takip sistemleri geliştirir. Çözüm; takip etiketleri, konum belirleme altyapısı ve RTLS yazılımından oluşarak ürünlerin, yarı mamullerin, ekipmanların, araçların ve ihtiyaç halinde personelin tesis içindeki konumunu izler.\n\nSistem, varlıkların yalnızca anlık konumunu değil, geçmiş hareketlerini, izledikleri rotaları ve belirli alanlardaki bekleme sürelerini de kayıt altına alır. Bu veriler; malzeme akışlarının iyileştirilmesi, kayıp ve arama sürelerinin azaltılması, iş güvenliğinin desteklenmesi ve iç lojistik süreçlerinin görünür hale getirilmesi amacıyla kullanılır.",
+            "website": "https://www.sewio.net",
+            "logoPath": "/Logos/sewio-logo.svg",
+            "detailLogoPath": "/Logos/sewio-logo.svg",
+            "sortOrder": 6,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Sewio",
+                "content": "Sewio, üretim ve lojistik alanlarında kullanılan UWB tabanlı gerçek zamanlı konum takip sistemleri geliştirir. Çözüm; takip etiketleri, konum belirleme altyapısı ve RTLS yazılımından oluşarak ürünlerin, yarı mamullerin, ekipmanların, araçların ve ihtiyaç halinde personelin tesis içindeki konumunu izler.\n\nSistem, varlıkların yalnızca anlık konumunu değil, geçmiş hareketlerini, izledikleri rotaları ve belirli alanlardaki bekleme sürelerini de kayıt altına alır. Bu veriler; malzeme akışlarının iyileştirilmesi, kayıp ve arama sürelerinin azaltılması, iş güvenliğinin desteklenmesi ve iç lojistik süreçlerinin görünür hale getirilmesi amacıyla kullanılır."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Sewio/Sewio-Networks1-1300x867.jpg"
+              },
+              {
+                "imagePath": "/images/partner/Sewio/Sewio-Networks3-1300x867.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "en",
+          "data": {
+            "name": "Sewio",
+            "slug": "sewio",
+            "breadcrumbLabel": "SEWIO",
+            "description": "Tracks asset movements through UWB-based real-time location technologies, providing visibility and operational efficiency in intralogistics processes.",
+            "summary": "Tracks asset movements through UWB-based real-time location technologies, providing visibility and operational efficiency in intralogistics processes.",
+            "fullDescription": "Sewio develops UWB-based real-time location tracking systems used in manufacturing and logistics environments. The solution consists of tracking tags, positioning infrastructure, and RTLS software, enabling the tracking of products, semi-finished goods, equipment, vehicles, and, when required, personnel within a facility.\n\nThe system records not only the real-time location of assets but also their movement history, traveled routes, and dwell times in specific areas. This data is used to optimize material flows, reduce search and loss-related delays, support workplace safety, and increase visibility into internal logistics processes.",
+            "website": "https://www.sewio.net",
+            "logoPath": "/Logos/sewio-logo.svg",
+            "detailLogoPath": "/Logos/sewio-logo.svg",
+            "sortOrder": 6,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Sewio",
+                "content": "Sewio develops UWB-based real-time location tracking systems used in manufacturing and logistics environments. The solution consists of tracking tags, positioning infrastructure, and RTLS software, enabling the tracking of products, semi-finished goods, equipment, vehicles, and, when required, personnel within a facility.\n\nThe system records not only the real-time location of assets but also their movement history, traveled routes, and dwell times in specific areas. This data is used to optimize material flows, reduce search and loss-related delays, support workplace safety, and increase visibility into internal logistics processes."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Sewio/Sewio-Networks1-1300x867.jpg"
+              },
+              {
+                "imagePath": "/images/partner/Sewio/Sewio-Networks3-1300x867.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "locale": "ro",
+          "data": {
+            "name": "Sewio",
+            "slug": "sewio",
+            "breadcrumbLabel": "SEWIO",
+            "description": "Monitorizează mișcarea activelor prin tehnologii de localizare în timp real bazate pe UWB, oferind vizibilitate și eficiență operațională în procesele de logistică internă.",
+            "summary": "Monitorizează mișcarea activelor prin tehnologii de localizare în timp real bazate pe UWB, oferind vizibilitate și eficiență operațională în procesele de logistică internă.",
+            "fullDescription": "Sewio dezvoltă sisteme de localizare în timp real bazate pe tehnologia UWB, utilizate în producție și logistică. Soluția este compusă din etichete de urmărire, infrastructură de poziționare și software RTLS, permițând monitorizarea produselor, semifabricatelor, echipamentelor, vehiculelor și, la nevoie, a personalului în cadrul unei facilități.\n\nSistemul înregistrează nu doar poziția în timp real a activelor, ci și istoricul deplasărilor, traseele parcurse și timpul petrecut în anumite zone. Aceste date sunt utilizate pentru optimizarea fluxurilor de materiale, reducerea timpilor de căutare și a pierderilor, sprijinirea siguranței la locul de muncă și creșterea vizibilității proceselor logistice interne.",
+            "website": "https://www.sewio.net",
+            "logoPath": "/Logos/sewio-logo.svg",
+            "detailLogoPath": "/Logos/sewio-logo.svg",
+            "sortOrder": 6,
+            "isFeatured": false,
+            "contentBlocks": [
+              {
+                "__component": "shared.partner-rich-text",
+                "title": "Sewio",
+                "content": "Sewio dezvoltă sisteme de localizare în timp real bazate pe tehnologia UWB, utilizate în producție și logistică. Soluția este compusă din etichete de urmărire, infrastructură de poziționare și software RTLS, permițând monitorizarea produselor, semifabricatelor, echipamentelor, vehiculelor și, la nevoie, a personalului în cadrul unei facilități.\n\nSistemul înregistrează nu doar poziția în timp real a activelor, ci și istoricul deplasărilor, traseele parcurse și timpul petrecut în anumite zone. Aceste date sunt utilizate pentru optimizarea fluxurilor de materiale, reducerea timpilor de căutare și a pierderilor, sprijinirea siguranței la locul de muncă și creșterea vizibilității proceselor logistice interne."
+              }
+            ],
+            "legacyStorySlides": [
+              {
+                "imagePath": "/images/partner/Sewio/Sewio-Networks1-1300x867.jpg"
+              },
+              {
+                "imagePath": "/images/partner/Sewio/Sewio-Networks3-1300x867.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
