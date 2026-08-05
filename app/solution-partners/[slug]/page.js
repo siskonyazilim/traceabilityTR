@@ -112,20 +112,44 @@ function splitParagraphs(value) {
 }
 
 async function getLocalizedPartnersWithFallback(locale) {
-  return getPartnersByLocale(locale);
+  try {
+    return await getPartnersByLocale(locale);
+  } catch (error) {
+    console.warn('Failed to load localized partners list. Falling back to empty list.', error);
+    return [];
+  }
 }
 
 async function resolvePartnerWithFallback(locale, slug) {
   const normalizedSlug = normalizeSlug(slug);
 
-  const byLocale = await getPartnerBySlug(locale, normalizedSlug);
+  let byLocale = null;
+  try {
+    byLocale = await getPartnerBySlug(locale, normalizedSlug);
+  } catch (error) {
+    console.warn('Failed to resolve partner by locale. Trying fallback lookups.', error);
+  }
+
   if (byLocale) {
     return byLocale;
   }
 
-  const fromAnyLocale = await getPartnerBySlugAnyLocale(normalizedSlug);
+  let fromAnyLocale = null;
+  try {
+    fromAnyLocale = await getPartnerBySlugAnyLocale(normalizedSlug);
+  } catch (error) {
+    console.warn('Failed to resolve partner by any locale.', error);
+    return null;
+  }
+
   if (fromAnyLocale?.documentId) {
-    const localized = await getPartnerByDocumentIdAndLocale(fromAnyLocale.documentId, locale);
+    let localized = null;
+    try {
+      localized = await getPartnerByDocumentIdAndLocale(fromAnyLocale.documentId, locale);
+    } catch (error) {
+      console.warn('Failed to resolve partner localization by documentId.', error);
+    }
+
     if (localized) {
       return localized;
     }
@@ -161,8 +185,6 @@ export async function generateStaticParams() {
   } catch (error) {
     console.error('Failed to generate static params for partners from Strapi', error);
   }
-
-  slugSet.add('proiectul-a-s');
 
   return Array.from(slugSet).map((slug) => ({ slug }));
 }
@@ -257,12 +279,13 @@ export default async function PartnerDetailPage({ params }) {
 
   if (!partner) notFound();
 
+  const partnersForNavigation = localizedPartners.length > 0 ? localizedPartners : [partner];
   const detailBasePath = getDetailBasePath(locale);
-  const currentIndex = localizedPartners.findIndex((p) => p.slug === partner.slug);
-  const totalPartners = localizedPartners.length;
+  const currentIndex = partnersForNavigation.findIndex((p) => p.slug === partner.slug);
+  const totalPartners = partnersForNavigation.length;
   const safeIndex = Math.max(currentIndex, 0);
-  const prevPartner = localizedPartners[(safeIndex - 1 + totalPartners) % totalPartners];
-  const nextPartner = localizedPartners[(safeIndex + 1) % totalPartners];
+  const prevPartner = partnersForNavigation[(safeIndex - 1 + totalPartners) % totalPartners];
+  const nextPartner = partnersForNavigation[(safeIndex + 1) % totalPartners];
   const showStorySlider = Array.isArray(partner.storySlides) && partner.storySlides.length > 0;
   const paragraphSource = htmlToParagraphText(partner.fullDescription || partner.description || partner.summary);
   const descriptionParagraphs = splitParagraphs(paragraphSource);
