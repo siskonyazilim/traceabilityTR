@@ -62,7 +62,13 @@ export async function generateMetadata() {
 
 export default async function HomePage() {
   const locale = await getRequestLocale();
-  const strategicPartners = await getPartnersByLocale(locale);
+  let strategicPartners = [];
+
+  try {
+    strategicPartners = await getPartnersByLocale(locale);
+  } catch (error) {
+    console.warn('Homepage partners could not be loaded during render. Falling back to empty list.', error);
+  }
 
   const org = getOrganizationSchema();
   const faqPage = getFaqPageSchema(locale, `${SITE_URL}/`);
