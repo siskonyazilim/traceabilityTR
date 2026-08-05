@@ -16,12 +16,10 @@ export async function GET(request) {
 
     return NextResponse.json({ data, locale });
   } catch (error) {
-    return NextResponse.json(
-      {
-        data: [],
-        error: error instanceof Error ? error.message : 'Unknown error',
-      },
-      { status: 500 }
-    );
+    console.error('Partners API failed. Returning degraded empty response.', error);
+    return NextResponse.json({
+      data: [],
+      degraded: true,
+    });
   }
 }
