@@ -163,14 +163,16 @@ export const Header = () => {
     >
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Brand text */}
+          {/* Brand logo */}
           <Link
             href={toLocalePath('/')}
-            className={`font-poppins text-2xl font-extrabold tracking-tight transition-all duration-300 hover:tracking-normal ${
-              useTransparentHeader ? 'text-white' : 'text-primary-black'
-            }`}
+            className="inline-flex h-full items-center"
           >
-            Traceability
+            <img
+              src={useTransparentHeader ? '/TraceabilityWhite.svg' : '/Traceability.svg'}
+              alt="Traceability"
+              className="block h-9 sm:h-11 lg:h-12 w-auto transition-all duration-300 drop-shadow-[0_4px_14px_rgba(0,0,0,0.22)]"
+            />
           </Link>
 
           {/* Desktop Menu */}
