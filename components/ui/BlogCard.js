@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
+import { getStrapiMediaUrl } from '../../lib/strapi/media';
 
 export const BlogCard = ({
   post,
@@ -28,6 +29,43 @@ export const BlogCard = ({
     timeZone: 'UTC',
   });
   const readMoreLabel = t('cards.readMore', 'Devamını oku →').split('→')[0].trim();
+  const imageSrc = getStrapiMediaUrl(String(post.image || '').trim());
+  const hasImageSrc = imageSrc.length > 0;
+  const isExternalImage = imageSrc.startsWith('http://') || imageSrc.startsWith('https://');
+  let mediaNode = null;
+
+  if (imageError || !hasImageSrc) {
+    mediaNode = (
+      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-blue to-accent-green">
+        <div className="text-white text-lg font-semibold tracking-wide">BLOG</div>
+      </div>
+    );
+  } else if (isExternalImage) {
+    mediaNode = (
+      <img
+        src={imageSrc}
+        alt={post.title}
+        className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        loading={prioritizeImage ? 'eager' : 'lazy'}
+        onError={() => setImageError(true)}
+      />
+    );
+  } else {
+    mediaNode = (
+      <Image
+        src={imageSrc}
+        alt={post.title}
+        fill
+        sizes={imageSizes}
+        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        loading={prioritizeImage ? 'eager' : 'lazy'}
+        priority={prioritizeImage}
+        fetchPriority={prioritizeImage ? 'high' : 'auto'}
+        quality={80}
+        onError={() => setImageError(true)}
+      />
+    );
+  }
 
   return (
     <article className="h-full">
@@ -37,24 +75,7 @@ export const BlogCard = ({
       >
         {/* Blog image — fixed height 176px */}
         <div className="relative h-44 w-full overflow-hidden bg-slate-100">
-          {imageError ? (
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-blue to-accent-green">
-              <div className="text-white text-lg font-semibold tracking-wide">BLOG</div>
-            </div>
-          ) : (
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              sizes={imageSizes}
-              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-              loading={prioritizeImage ? 'eager' : 'lazy'}
-              priority={prioritizeImage}
-              fetchPriority={prioritizeImage ? 'high' : 'auto'}
-              quality={80}
-              onError={() => setImageError(true)}
-            />
-          )}
+          {mediaNode}
 
           {/* Subtle gradient so the badge stays legible on any image */}
           <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/40 to-transparent" />

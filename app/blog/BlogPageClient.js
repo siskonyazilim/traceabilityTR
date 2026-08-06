@@ -5,20 +5,25 @@ import Container from '../../components/ui/Container';
 import BlogCard from '../../components/ui/BlogCard';
 import PagePrimaryCta from '../../components/ui/PagePrimaryCta';
 import SectionHeader from '../../components/ui/SectionHeader';
-import { blogPosts } from '../../data/blogPosts';
-import { motion } from 'framer-motion';
+import { motion } from   'framer-motion';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
-import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
 
 const ITEMS_PER_PAGE = 6;
 
-export default function BlogPageClient() {
+export default function BlogPageClient({ posts = [] }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const { locale, t } = useLanguage();
-  const localizedPosts = localizeBlogPosts(blogPosts, locale);
+  const { t } = useLanguage(); 
   const sortedPosts = useMemo(
     () =>
-      [...localizedPosts].sort((a, b) => {
+      [...posts].sort((a, b) => {
+        const yearA = Number.isNaN(new Date(a.date).getTime()) ? 0 : new Date(a.date).getUTCFullYear();
+        const yearB = Number.isNaN(new Date(b.date).getTime()) ? 0 : new Date(b.date).getUTCFullYear();
+        const yearDiff = yearB - yearA;
+
+        if (yearDiff !== 0) {
+          return yearDiff;
+        }
+
         const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
 
         if (dateDiff !== 0) {
@@ -27,7 +32,7 @@ export default function BlogPageClient() {
 
         return (b.id ?? 0) - (a.id ?? 0);
       }),
-    [localizedPosts]
+    [posts]
   );
 
   const totalPages = Math.ceil(sortedPosts.length / ITEMS_PER_PAGE);
@@ -61,7 +66,7 @@ export default function BlogPageClient() {
               >
                 {paginatedPosts.map((post, index) => (
                   <motion.div
-                    key={post.id}
+                    key={post.id || post.slug}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.3 }}
@@ -81,6 +86,7 @@ export default function BlogPageClient() {
                 <div className="flex justify-center gap-2 mb-8">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                     <button
+                      type="button"
                       key={page}
                       onClick={() => handlePageChange(page)}
                       className={`min-w-12 min-h-[48px] px-4 py-3 rounded-md font-semibold transition-all duration-200 ${

@@ -51,17 +51,10 @@ export async function generateMetadata() {
     description,
     keywords: 'endüstriyel izlenebilirlik, MES, endüstri 4.0, RFID, RTLS, WMS, POKA YOKE, akıllı fabrikalar, otomotiv, gıda, ilaç, kalite kontrol, depo yönetimi',
     metadataBase: new URL('https://izlenebilirlik.com.tr'),
-    manifest: '/site.webmanifest',
     icons: {
-      icon: [
-        { url: '/favicon.ico' },
-        { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-        { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
-      ],
-      shortcut: '/favicon.ico',
-      apple: [
-        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-      ],
+      icon: '/favicon.svg',
+      shortcut: '/favicon.svg',
+      apple: '/favicon.svg',
     },
     openGraph: {
       title,

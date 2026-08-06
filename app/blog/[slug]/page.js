@@ -1,49 +1,319 @@
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import Image from 'next/image';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
-import { blogPosts } from '../../../data/blogPosts';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
 import { getRequestLocale } from '../../../lib/i18n/requestLocale';
-import { localizeBlogPosts } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
-import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
 import { toLocalePath } from '../../../lib/i18n/dictionaries';
 import JsonLd from '../../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL, LOGO_URL } from '../../../components/seo/OrganizationSchema';
+import {
+  getArticleBySlug,
+  getArticleBySlugAnyLocale,
+  getArticleByDocumentIdAndLocale,
+  getArticlesByLocale,
+} from '../../../lib/strapi/articles';
+import { getStrapiMediaUrl } from '../../../lib/strapi/media';
 /* eslint-disable react/prop-types */
 
-const normalizeBlogContent = (html) => {
-  if (typeof html !== 'string') return '';
+function getLocaleBlogSlug(post, locale) {
+  if (!post) {
+    return '';
+  }
 
-  const withoutInlineImages = html
-    .replace(/<p[^>]*>\s*<img[^>]*>\s*<\/p>/gi, '')
-    .replace(/(<figure[^>]*>[\s\S]*?<\/figure>)|(<img[^>]*>)/gi, (match, figureBlock) => {
-      // Preserve <figure> blocks (intentional images), remove standalone <img>
-      return figureBlock ? figureBlock : '';
-    });
+  return post.slugByLocale?.[locale] || post.slug || '';
+}
 
-  return withoutInlineImages.replace(
-    /<p[^>]*>\s*<strong>([^<]{2,140})<\/strong>\s*:?\s*([^<]*)<\/p>/gi,
-    (_, headingRaw, trailingRaw) => {
-      const headingText = String(headingRaw || '').replace(/:\s*$/, '').trim();
-      const trailingText = String(trailingRaw || '').trim();
-      const h3 = `<h3>${headingText}</h3>`;
-      if (!trailingText) return h3;
-      return `${h3}<p>${trailingText}</p>`;
-    }
+function getArticleAlternateMap(post) {
+  return {
+    tr: getLocaleBlogSlug(post, 'tr') || getLocaleBlogSlug(post, post.locale),
+    en: getLocaleBlogSlug(post, 'en') || getLocaleBlogSlug(post, post.locale),
+    ro: getLocaleBlogSlug(post, 'ro') || getLocaleBlogSlug(post, post.locale),
+  };
+}
+
+function resolveBlockComponentName(block) {
+  if (!block || typeof block !== 'object') {
+    return '';
+  }
+
+  return block.__component || block.component || block.type || '';
+}
+
+function resolveMediaSourceUrl(source) {
+  if (!source) {
+    return '';
+  }
+
+  if (typeof source === 'string') {
+    return getStrapiMediaUrl(source);
+  }
+
+  const nestedUrl =
+    source.url
+    || source.media?.url
+    || source.data?.attributes?.url
+    || source.media?.data?.attributes?.url
+    || source.attributes?.url
+    || '';
+
+  return nestedUrl ? getStrapiMediaUrl(nestedUrl) : '';
+}
+
+function resolveMediaAltText(source) {
+  return (
+    source?.alt
+    || source?.alternativeText
+    || source?.media?.alternativeText
+    || source?.data?.attributes?.alternativeText
+    || source?.media?.data?.attributes?.alternativeText
+    || ''
   );
-};
+}
+
+function resolveMediaCaption(source) {
+  return (
+    source?.caption
+    || source?.media?.caption
+    || source?.data?.attributes?.caption
+    || source?.media?.data?.attributes?.caption
+    || ''
+  );
+}
+
+function renderRichTextBlock(block, key) {
+  const html = sanitizeRichText(block.html || block.content || '');
+  if (!html) return null;
+
+  return (
+    <div
+      key={key}
+      dangerouslySetInnerHTML={{ __html: html }}
+      className="blog-rich-block"
+    />
+  );
+}
+
+function renderMediaBlock(block, key) {
+  const src = resolveMediaSourceUrl(block);
+  if (!src) return null;
+
+  const altText = resolveMediaAltText(block) || resolveMediaCaption(block);
+  const captionText = resolveMediaCaption(block);
+
+  return (
+    <figure key={key} className="my-8 overflow-hidden rounded-xl bg-slate-100">
+      <img
+        src={src}
+        alt={altText}
+        className="h-auto w-full"
+        loading="lazy"
+      />
+      {captionText ? (
+        <figcaption className="px-4 py-3 text-sm text-gray-text">{captionText}</figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
+function renderQuoteBlock(block, key) {
+  const quoteText = block.text || block.quote || '';
+  if (!quoteText) return null;
+
+  return (
+    <blockquote key={key} className="my-8 rounded-xl border-l-4 border-accent-blue bg-slate-50 px-6 py-5 text-lg italic text-slate-700">
+      <p>{quoteText}</p>
+      {block.author ? <cite className="mt-3 block text-sm not-italic text-gray-text">{block.author}</cite> : null}
+    </blockquote>
+  );
+}
+
+function renderGalleryBlock(block, key) {
+  let images = [];
+  if (Array.isArray(block.images)) {
+    images = block.images;
+  } else if (Array.isArray(block.images?.data)) {
+    images = block.images.data;
+  }
+
+  if (images.length === 0) return null;
+
+  return (
+    <div key={key} className="my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+      {images.map((image, imageIndex) => {
+        const src = resolveMediaSourceUrl(image);
+        if (!src) return null;
+
+        const altText = resolveMediaAltText(image) || resolveMediaCaption(image);
+        const captionText = resolveMediaCaption(image);
+
+        return (
+          <figure key={`${key}-${imageIndex}`} className="overflow-hidden rounded-xl bg-slate-100">
+            <img
+              src={src}
+              alt={altText}
+              className="h-auto w-full"
+              loading="lazy"
+            />
+            {captionText ? (
+              <figcaption className="px-4 py-3 text-sm text-gray-text">{captionText}</figcaption>
+            ) : null}
+          </figure>
+        );
+      })}
+    </div>
+  );
+}
+
+function renderSingleArticleBlock(block, index) {
+  const component = resolveBlockComponentName(block);
+  const key = `${component}-${index}`;
+
+  switch (component) {
+    case 'blocks.rich-text':
+    case 'shared.blocks-rich-text':
+      return renderRichTextBlock(block, key);
+    case 'blocks.media':
+    case 'shared.blocks-media':
+      return renderMediaBlock(block, key);
+    case 'blocks.quote':
+    case 'shared.blocks-quote':
+      return renderQuoteBlock(block, key);
+    case 'blocks.gallery':
+    case 'shared.blocks-gallery':
+      return renderGalleryBlock(block, key);
+    default:
+      return null;
+  }
+}
+
+function renderArticleBlocks(blocks, fallbackHtml) {
+  if (Array.isArray(blocks) && blocks.length > 0) {
+    return blocks.map((block, index) => renderSingleArticleBlock(block, index));
+  }
+
+  const safeHtml = sanitizeRichText(fallbackHtml || '');
+  if (!safeHtml) {
+    return null;
+  }
+
+  return <div dangerouslySetInnerHTML={{ __html: safeHtml }} className="blog-rich-block" />;
+}
+
+function getDateLocale(locale) {
+  if (locale === 'en') return 'en-US';
+  if (locale === 'tr') return 'tr-TR';
+  return 'ro-RO';
+}
+
+function getOnsuiteUrl(locale) {
+  if (locale === 'tr') return 'https://onsuite.com.tr/tr/moduller/trace';
+  if (locale === 'en') return 'https://onsuite.com.tr/en/modules/trace';
+  return 'https://onsuite.com.tr/ro/modules/trace';
+}
+
+function sortPostsByDate(posts) {
+  return [...posts].sort((a, b) => {
+    const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+
+    if (dateDiff !== 0) {
+      return dateDiff;
+    }
+
+    return (b.id ?? 0) - (a.id ?? 0);
+  });
+}
+
+function getCoverImageFromBlocks(blocks) {
+  if (!Array.isArray(blocks)) {
+    return '';
+  }
+
+  const mediaBlock = blocks.find((block) => {
+    const component = resolveBlockComponentName(block);
+    return component === 'blocks.media' || component === 'shared.blocks-media';
+  });
+
+  if (!mediaBlock) {
+    return '';
+  }
+
+  return resolveMediaSourceUrl(mediaBlock);
+}
+
+function resolveHeroCoverImage(post) {
+  const directCover = String(post.coverImage || post.image || '').trim();
+  if (directCover) {
+    return getStrapiMediaUrl(directCover);
+  }
+
+  return getCoverImageFromBlocks(post.blocks);
+}
+
+function renderCoverMedia(post, coverImage, isExternalCoverImage) {
+  if (!coverImage) {
+    return null;
+  }
+
+  if (isExternalCoverImage) {
+    return (
+      <img
+        src={coverImage}
+        alt={post.title}
+        className="h-auto w-full"
+        loading="eager"
+      />
+    );
+  }
+
+  return (
+    <Image
+      src={coverImage}
+      alt={post.title}
+      width={0}
+      height={0}
+      sizes="(min-width: 1024px) 50vw, 100vw"
+      className="h-auto w-full"
+      quality={92}
+      priority
+      fetchPriority="high"
+    />
+  );
+}
+
+async function resolvePostForLocale(locale, slug) {
+  const directPost = await getArticleBySlug(locale, slug);
+  if (directPost) {
+    return directPost;
+  }
+
+  const anyLocalePost = await getArticleBySlugAnyLocale(slug);
+  if (!anyLocalePost) {
+    return null;
+  }
+
+  const localizedByDocument = await getArticleByDocumentIdAndLocale(anyLocalePost.documentId, locale);
+  if (localizedByDocument) {
+    return localizedByDocument;
+  }
+
+  return anyLocalePost;
+}
 
 export async function generateMetadata({ params }) {
   const locale = await getRequestLocale();
   const isEn = locale === 'en';
-  const localizedPosts = localizeBlogPosts(blogPosts, locale);
-  const { slug: rawSlug } = await params;
-  const baseSlug = resolveSlug('blog', rawSlug);
-  const post = localizedPosts.find((entry) => entry.originalSlug === baseSlug);
+  const { slug } = await params;
+
+  let post = null;
+  try {
+    post = await resolvePostForLocale(locale, slug);
+  } catch (error) {
+    console.error('Failed to fetch blog metadata from Strapi', error);
+  }
 
   if (!post) {
     return {
@@ -54,16 +324,16 @@ export async function generateMetadata({ params }) {
 
   const title = `${post.title} | ${f(locale, 'blogDetailPage', 'blogSuffix')}`;
   const description = post.excerpt;
-  const localizedBlogSlug = getLocalizedSlug('blog', baseSlug, locale);
-  const canonicalPath = toLocalePath(`/blog/${localizedBlogSlug}`, locale);
+  const canonicalPath = toLocalePath(`/blog/${post.slug}`, locale);
+  const alternateMap = getArticleAlternateMap(post);
 
   const alternates = {
     canonical: `https://izlenebilirlik.com.tr${canonicalPath}`,
     languages: {
-      'tr': `https://izlenebilirlik.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
-      'en': `https://izlenebilirlik.com.tr/en/blog/${getLocalizedSlug('blog', baseSlug, 'en')}`,
-      'ro': `https://izlenebilirlik.com.tr/ro/blog/${getLocalizedSlug('blog', baseSlug, 'ro')}`,
-      'x-default': `https://izlenebilirlik.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
+      tr: `https://izlenebilirlik.com.tr/blog/${alternateMap.tr}`,
+      en: `https://izlenebilirlik.com.tr/en/blog/${alternateMap.en}`,
+      ro: `https://izlenebilirlik.com.tr/ro/blog/${alternateMap.ro}`,
+      'x-default': `https://izlenebilirlik.com.tr/blog/${alternateMap.tr}`,
     }
   };
 
@@ -75,8 +345,11 @@ export async function generateMetadata({ params }) {
   }
 
   let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
-  if (post.image) {
-    ogImage = post.image.startsWith('http') ? post.image : `https://izlenebilirlik.com.tr${post.image}`;
+  const normalizedPostImage = getStrapiMediaUrl(post.image);
+  if (normalizedPostImage) {
+    ogImage = normalizedPostImage.startsWith('http')
+      ? normalizedPostImage
+      : `https://izlenebilirlik.com.tr${normalizedPostImage}`;
   }
 
   return {
@@ -109,62 +382,54 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogDetailPage({ params }) {
   const locale = await getRequestLocale();
-  const localizedPosts = localizeBlogPosts(blogPosts, locale);
-  const { slug: rawSlug } = await params;
-  const baseSlug = resolveSlug('blog', rawSlug);
-  const post = localizedPosts.find((p) => p.originalSlug === baseSlug);
+  const { slug } = await params;
+
+  let post = null;
+  let localizedPosts = [];
+  try {
+    [post, localizedPosts] = await Promise.all([
+      resolvePostForLocale(locale, slug),
+      getArticlesByLocale(locale),
+    ]);
+  } catch (error) {
+    console.error('Failed to fetch blog detail from Strapi', error);
+  }
 
   if (!post) notFound();
 
-  const sortedAllPosts = [...localizedPosts]
-    .sort((a, b) => {
-      const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+  if (post.slug && post.slug !== slug) {
+    redirect(toLocalePath(`/blog/${post.slug}`, locale));
+  }
 
-      if (dateDiff !== 0) {
-        return dateDiff;
-      }
-
-      return (b.id ?? 0) - (a.id ?? 0);
-    });
+  const sortedAllPosts = sortPostsByDate(localizedPosts);
 
   const currentAllIndex = sortedAllPosts.findIndex((p) => p.id === post.id);
   const prevPost = currentAllIndex > 0 ? sortedAllPosts[currentAllIndex - 1] : null;
   const nextPost = currentAllIndex < sortedAllPosts.length - 1 ? sortedAllPosts[currentAllIndex + 1] : null;
 
-  let dateLocale = 'ro-RO';
-  if (locale === 'en') {
-    dateLocale = 'en-US';
-  } else if (locale === 'tr') {
-    dateLocale = 'tr-TR';
-  }
-
-  const date = new Date(post.date).toLocaleDateString(dateLocale, {
+  const date = new Date(post.date).toLocaleDateString(getDateLocale(locale), {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   });
 
-  const contentWithRealHeadings = normalizeBlogContent(post.content);
-  const safeContent = sanitizeRichText(contentWithRealHeadings);
-  const coverImage = post.coverImage || post.image || '';
+  const coverImage = resolveHeroCoverImage(post);
   const hasCoverImage = Boolean(coverImage);
+  const isExternalCoverImage = coverImage.startsWith('http://') || coverImage.startsWith('https://');
+  const onsuiteUrl = getOnsuiteUrl(locale);
+  const coverMediaNode = renderCoverMedia(post, coverImage, isExternalCoverImage);
 
-  let onsuiteUrl = 'https://onsuite.com.tr/ro/modules/trace';
-  if (locale === 'tr') {
-    onsuiteUrl = 'https://onsuite.com.tr/tr/moduller/trace';
-  } else if (locale === 'en') {
-    onsuiteUrl = 'https://onsuite.com.tr/en/modules/trace';
-  }
-
-  const localizedBlogSlug = getLocalizedSlug('blog', baseSlug, locale);
-  const canonicalPath = toLocalePath(`/blog/${localizedBlogSlug}`, locale);
+  const canonicalPath = toLocalePath(`/blog/${post.slug}`, locale);
   const pageUrl = `${SITE_URL}${canonicalPath}`;
   const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
   const blogListUrl = `${SITE_URL}${toLocalePath('/blog', locale)}`;
 
   let ogImage = LOGO_URL;
-  if (post.image) {
-    ogImage = post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}`;
+  const normalizedPageImage = getStrapiMediaUrl(post.image);
+  if (normalizedPageImage) {
+    ogImage = normalizedPageImage.startsWith('http')
+      ? normalizedPageImage
+      : `${SITE_URL}${normalizedPageImage}`;
   }
 
   const org = getOrganizationSchema();
@@ -239,61 +504,54 @@ export default async function BlogDetailPage({ params }) {
             </Link>
           </div>
 
-          <header className="mb-8 border-b border-slate-200 pb-6">
+          <header className="mb-10 border-b border-slate-200 pb-8">
             <div className="mx-auto w-full max-w-none">
-            <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
-              <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
-              <span className="text-gray-text">{date}</span>
-            </div>
+              <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:items-center lg:gap-10">
+                <div>
+                  <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+                    <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
+                    <span className="text-gray-text">{date}</span>
+                  </div>
 
-            <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-slate-900">{post.title}</h1>
-            <div className="mt-4 flex items-center gap-3">
-              <p className="text-sm font-medium text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
-              <Image
-                src="/siskon-logo-header.svg"
-                alt="Siskon"
-                width={96}
-                height={28}
-              />
-            </div>
+                  <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-slate-900">{post.title}</h1>
+                  <div className="mt-4 flex items-center gap-3">
+                    <p className="text-sm font-medium text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
+                    <Image
+                      src="/siskon-logo-header.svg"
+                      alt="Siskon"
+                      width={96}
+                      height={28}
+                    />
+                  </div>
+                </div>
+
+                <figure className="w-full overflow-hidden rounded-xl bg-slate-100">
+                  {hasCoverImage ? (
+                    coverMediaNode
+                  ) : (
+                    <div className="flex h-[340px] md:h-[480px] items-center justify-center bg-slate-100 text-slate-500">
+                      <div className="flex items-center gap-2 text-sm font-medium">
+                        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                          <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="1.7" />
+                          <circle cx="9" cy="10" r="1.8" strokeWidth="1.7" />
+                          <path d="M21 16l-5-5-7 7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span>
+                          {locale === 'tr' && 'Kapak görseli bulunmuyor'}
+                          {locale === 'en' && 'Cover image unavailable'}
+                          {locale === 'ro' && 'Imagine coperta indisponibila'}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </figure>
+              </div>
             </div>
           </header>
 
-          <figure className="mb-10 mx-auto w-full max-w-none overflow-hidden rounded-xl bg-slate-100">
-            {hasCoverImage ? (
-              <Image
-                src={coverImage}
-                alt={post.title}
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto"
-                quality={92}
-                priority
-                fetchPriority="high"
-              />
-            ) : (
-              <div className="flex h-[340px] md:h-[480px] items-center justify-center bg-slate-100 text-slate-500">
-                <div className="flex items-center gap-2 text-sm font-medium">
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                    <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="1.7" />
-                    <circle cx="9" cy="10" r="1.8" strokeWidth="1.7" />
-                    <path d="M21 16l-5-5-7 7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>
-                    {locale === 'tr' && 'Kapak görseli bulunmuyor'}
-                    {locale === 'en' && 'Cover image unavailable'}
-                    {locale === 'ro' && 'Imagine coperta indisponibila'}
-                  </span>
-                </div>
-              </div>
-            )}
-          </figure>
-
-          <div
-            dangerouslySetInnerHTML={{ __html: safeContent }}
-            className="blog-rich mx-auto max-w-none px-4 md:px-5 lg:px-0 text-gray-text"
-          />
+          <div className="blog-rich mx-auto max-w-none px-4 md:px-5 lg:px-0 text-gray-text">
+            {renderArticleBlocks(post.blocks, post.content)}
+          </div>
 
           {/* OnSuite Trace Redirection CTA */}
           <div className="mx-auto mt-12 w-full max-w-none rounded-xl bg-gradient-to-br from-primary-black to-dark-bg p-6 md:p-6 text-white shadow-xl border border-slate-blue/10 relative overflow-hidden">
@@ -347,7 +605,7 @@ export default async function BlogDetailPage({ params }) {
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
               {prevPost ? (
                 <Link
-                  href={toLocalePath(`/blog/${getLocalizedSlug('blog', prevPost.originalSlug || prevPost.slug, locale)}`, locale)}
+                  href={toLocalePath(`/blog/${prevPost.slug}`, locale)}
                   className="group flex items-center gap-3 rounded-xl border-[0.5px] border-slate-300 p-3 bg-white hover:border-accent-blue/40 transition-all duration-300 text-left"
                 >
                   <div className="min-w-0">
@@ -368,7 +626,7 @@ export default async function BlogDetailPage({ params }) {
 
               {nextPost ? (
                 <Link
-                  href={toLocalePath(`/blog/${getLocalizedSlug('blog', nextPost.originalSlug || nextPost.slug, locale)}`, locale)}
+                  href={toLocalePath(`/blog/${nextPost.slug}`, locale)}
                   className="group flex items-center gap-3 rounded-xl border-[0.5px] border-slate-300 p-3 bg-white hover:border-accent-blue/40 transition-all duration-300 text-left md:col-start-2"
                 >
                   <div className="min-w-0">

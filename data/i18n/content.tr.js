@@ -168,7 +168,7 @@ export const contentTr = {
     1: {
       title: 'Hybrid Track and Trace',
       description: 'Otomotiv standartlarına ilişkin gelişmiş gereksinimler dahil, dahili sistemler ve tedarik zinciri ortakları genelinde uçtan uca izlenebilirlik sunar.',
-      detail: 'Hybrid Track and Trace, otomotiv ana ve yan sanayi için ürünün geçtiği tüm süreçleri ve süreç verilerini kayıt altına alarak uçtan uca izlenebilirliği sağlar. ISO/TS 16949 standartları için gerekli olan mevzuattaki güncel değişikliklere uygun gelişmiş ürün izlenebilirlik gerekliliklerini sağlar.',
+      detail: 'Siskon\'un, Otomotiv Ana ve Yan Sanayi için geliştirdiği Hybrid Track and Trace, hem iç sistemlerden hem de tedarik zinciri ortaklarından gelen verileri, ürünün geçtiği tüm süreçleri ve süreç verilerini kayıt altına alarak uçtan uca izlenebilirliği sağlar. ISO/TS 16949 standartları için gerekli olan mevzuattaki güncel değişikliklere uygun gelişmiş ürün izlenebilirlik gerekliliklerini sağlar.',
       detailPreBulletsHeading: 'Hybrid T&T, otomotiv endüstrisinin en dikkat çekici iki konusunu doğrudan etkilemektedir:',
       detailPreBullets: [
         'Hatalı ürün sayısını azaltarak global ölçekte sürdürülebilir kalite elde edilmesi.',

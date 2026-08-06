@@ -38,7 +38,12 @@ const BlogPreview = dynamic(() => import('../components/home/BlogPreview'), {
   loading: () => <DeferredSection />,
 });
 
-export default function HomePageClient() {
+export default function HomePageClient({
+  initialPartners = [],
+  initialPartnersLocale = 'tr',
+  initialBlogPosts = [],
+  initialBlogPostsLocale = 'tr',
+}) {
   return (
     <>
       <HeroSlider />
@@ -46,9 +51,9 @@ export default function HomePageClient() {
       <SolutionsTabs />
       <TechnologyCapabilities />
       <ReferenceProjects />
-      <StrategicPartners />
+      <StrategicPartners initialPartners={initialPartners} initialPartnersLocale={initialPartnersLocale} />
       <PerformanceMetrics />
-      <BlogPreview />
+      <BlogPreview initialPosts={initialBlogPosts} initialPostsLocale={initialBlogPostsLocale} />
       <HomeCta />
     </>
   );
