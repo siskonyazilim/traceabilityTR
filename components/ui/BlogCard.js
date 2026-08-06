@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
+import { getStrapiMediaUrl } from '../../lib/strapi/media';
 
 export const BlogCard = ({
   post,
@@ -28,7 +29,7 @@ export const BlogCard = ({
     timeZone: 'UTC',
   });
   const readMoreLabel = t('cards.readMore', 'Devamını oku →').split('→')[0].trim();
-  const imageSrc = String(post.image || '').trim();
+  const imageSrc = getStrapiMediaUrl(String(post.image || '').trim());
   const hasImageSrc = imageSrc.length > 0;
   const isExternalImage = imageSrc.startsWith('http://') || imageSrc.startsWith('https://');
   let mediaNode = null;

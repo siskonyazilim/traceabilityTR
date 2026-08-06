@@ -16,7 +16,7 @@ import {
   getArticleByDocumentIdAndLocale,
   getArticlesByLocale,
 } from '../../../lib/strapi/articles';
-import { resolveStrapiMediaUrl } from '../../../lib/strapi/client';
+import { getStrapiMediaUrl } from '../../../lib/strapi/media';
 /* eslint-disable react/prop-types */
 
 function getLocaleBlogSlug(post, locale) {
@@ -49,7 +49,7 @@ function resolveMediaSourceUrl(source) {
   }
 
   if (typeof source === 'string') {
-    return resolveStrapiMediaUrl(source);
+    return getStrapiMediaUrl(source);
   }
 
   const nestedUrl =
@@ -60,7 +60,7 @@ function resolveMediaSourceUrl(source) {
     || source.attributes?.url
     || '';
 
-  return nestedUrl ? resolveStrapiMediaUrl(nestedUrl) : '';
+  return nestedUrl ? getStrapiMediaUrl(nestedUrl) : '';
 }
 
 function resolveMediaAltText(source) {
@@ -247,7 +247,7 @@ function getCoverImageFromBlocks(blocks) {
 function resolveHeroCoverImage(post) {
   const directCover = String(post.coverImage || post.image || '').trim();
   if (directCover) {
-    return directCover;
+    return getStrapiMediaUrl(directCover);
   }
 
   return getCoverImageFromBlocks(post.blocks);
@@ -345,8 +345,11 @@ export async function generateMetadata({ params }) {
   }
 
   let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
-  if (post.image) {
-    ogImage = post.image.startsWith('http') ? post.image : `https://izlenebilirlik.com.tr${post.image}`;
+  const normalizedPostImage = getStrapiMediaUrl(post.image);
+  if (normalizedPostImage) {
+    ogImage = normalizedPostImage.startsWith('http')
+      ? normalizedPostImage
+      : `https://izlenebilirlik.com.tr${normalizedPostImage}`;
   }
 
   return {
@@ -422,8 +425,11 @@ export default async function BlogDetailPage({ params }) {
   const blogListUrl = `${SITE_URL}${toLocalePath('/blog', locale)}`;
 
   let ogImage = LOGO_URL;
-  if (post.image) {
-    ogImage = post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}`;
+  const normalizedPageImage = getStrapiMediaUrl(post.image);
+  if (normalizedPageImage) {
+    ogImage = normalizedPageImage.startsWith('http')
+      ? normalizedPageImage
+      : `${SITE_URL}${normalizedPageImage}`;
   }
 
   const org = getOrganizationSchema();

@@ -8,6 +8,7 @@ import { getRequestLocale } from '../../../lib/i18n/requestLocale';
 import { f } from '../../../lib/i18n/sectionTranslations';
 import { toLocalePath } from '../../../lib/i18n/dictionaries';
 import sanitizeRichText from '../../../lib/sanitizeRichText';
+import { getStrapiMediaUrl } from '../../../lib/strapi/media';
 import {
   getPartnerByDocumentIdAndLocale,
   getPartnerBySlug,
@@ -234,7 +235,7 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
-  const ogImageSource = partner.seo?.image || partner.detailLogo || partner.logo;
+  const ogImageSource = getStrapiMediaUrl(partner.seo?.image || partner.detailLogo || partner.logo);
   let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
   if (ogImageSource) {
     ogImage = ogImageSource.startsWith('http')
@@ -335,7 +336,7 @@ export default async function PartnerDetailPage({ params }) {
             <div className="lg:self-stretch flex items-center justify-center">
               <div className="w-full h-full min-h-72 md:min-h-80 xl:min-h-96 flex items-center justify-center overflow-hidden relative px-4 md:px-6 rounded-md border border-slate-200 bg-white">
                 <img
-                  src={partner.detailLogo || partner.logo}
+                  src={getStrapiMediaUrl(partner.detailLogo || partner.logo)}
                   alt={partner.name}
                   className="max-h-56 md:max-h-64 xl:max-h-72 w-full object-contain"
                 />
@@ -373,7 +374,7 @@ export default async function PartnerDetailPage({ params }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {block.imageUrls.map((imageUrl, imageIndex) => (
                   <div key={`${imageUrl}-${imageIndex}`} className="overflow-hidden rounded-md border border-slate-200 bg-slate-50">
-                    <img src={imageUrl} alt={`${partner.name} gallery ${imageIndex + 1}`} className="h-56 w-full object-cover" />
+                    <img src={getStrapiMediaUrl(imageUrl)} alt={`${partner.name} gallery ${imageIndex + 1}`} className="h-56 w-full object-cover" />
                   </div>
                 ))}
               </div>
