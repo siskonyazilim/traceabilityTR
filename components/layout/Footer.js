@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { IconTwitter } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer = () => {
@@ -92,14 +93,6 @@ export const Footer = () => {
             <p className="text-gray-light text-sm mb-5 leading-relaxed max-w-sm">
               {t('footer.brandDescription', 'Akıllı fabrikalar ve sürdürülebilir üretim için yenilikçi izlenebilirlik çözümleri.')}
             </p>
-            <div className="mb-5">
-              <img
-                src="/images/partner/Beckhoff/beckhoff.webp"
-                alt="Beckhoff"
-                className="h-10 w-auto object-contain"
-                loading="lazy"
-              />
-            </div>
             <div className="flex items-center gap-3">
               <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <img src="/social/linkedin.svg" alt="LinkedIn" className="h-[18px] w-[18px]" />
@@ -197,14 +190,14 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">{t('footer.contactTitle', 'Contact')}</h3>
             <ul className="space-y-3 text-sm">
-                          <li>
-                <a href="tel:+902322450076" className="text-gray-light hover:text-accent-blue transition-colors">
-                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (TR):</span> +90 232 245 00 76
-                </a>
-              </li>
               <li>
                 <a href="tel:+40368402002" className="text-gray-light hover:text-accent-blue transition-colors">
                   <span className="font-semibold">{t('footer.phone', 'Telefon')} (RO):</span> +40 368 402 002
+                </a>
+              </li>
+              <li>
+                <a href="tel:+902322450076" className="text-gray-light hover:text-accent-blue transition-colors">
+                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (TR):</span> +90 232 245 00 76
                 </a>
               </li>
               <li>
