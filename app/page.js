@@ -2,6 +2,7 @@ import HomePageClient from './HomePageClient';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../lib/i18n/requestLocale';
 import { getOrganizationSchema, getFaqPageSchema, SITE_URL, LOGO_URL } from '../components/seo/OrganizationSchema';
 import { getPartnersByLocale } from '../lib/strapi/partners';
+import { getArticlesByLocale } from '../lib/strapi/articles';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -63,11 +64,18 @@ export async function generateMetadata() {
 export default async function HomePage() {
   const locale = await getRequestLocale();
   let strategicPartners = [];
+  let homepageBlogPosts = [];
 
   try {
     strategicPartners = await getPartnersByLocale(locale);
   } catch (error) {
     console.warn('Homepage partners could not be loaded during render. Falling back to empty list.', error);
+  }
+
+  try {
+    homepageBlogPosts = await getArticlesByLocale(locale, { limit: 9 });
+  } catch (error) {
+    console.warn('Homepage blog posts could not be loaded during render. Falling back to empty list.', error);
   }
 
   const org = getOrganizationSchema();
@@ -162,7 +170,12 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HomePageClient initialPartners={strategicPartners} initialPartnersLocale={locale} />
+      <HomePageClient
+        initialPartners={strategicPartners}
+        initialPartnersLocale={locale}
+        initialBlogPosts={homepageBlogPosts}
+        initialBlogPostsLocale={locale}
+      />
     </>
   );
 }
