@@ -5,6 +5,8 @@ import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 import JsonLd from '../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL } from '../../components/seo/OrganizationSchema';
+import AeoFaqSection from '../../components/seo/AeoFaqSection';
+import { getAeoFaqBundle, getAeoFaqSchema } from '../../lib/seo/aeoFaqs';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -54,9 +56,11 @@ export default async function CookiePolicyPage() {
   const locale = await getRequestLocale();
   const policyHtml = await loadPolicyHtml('cookie', locale);
   const org = getOrganizationSchema();
+  const faqBundle = getAeoFaqBundle('policy', locale);
 
   const pageUrl = `${SITE_URL}${toLocalePath('/cookie', locale)}`;
   const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
+  const faqSchema = getAeoFaqSchema('policy', locale, pageUrl);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -89,6 +93,7 @@ export default async function CookiePolicyPage() {
           },
         ],
       },
+      faqSchema,
       org,
     ],
   };
@@ -106,6 +111,8 @@ export default async function CookiePolicyPage() {
           </h1>
 
           <div className="legal-doc" dangerouslySetInnerHTML={{ __html: policyHtml }} />
+
+          <AeoFaqSection bundle={faqBundle} />
         </article>
       </Container>
     </div>

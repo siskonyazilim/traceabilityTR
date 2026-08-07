@@ -1,7 +1,11 @@
 import { Suspense } from 'react';
 import ProjectsPageClient from './ProjectsPageClient';
-import { getRequestLocale, getRequestPathname } from '../../lib/i18n/requestLocale';
+import { getRequestLocale } from '../../lib/i18n/requestLocale';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
+import JsonLd from '../../components/seo/JsonLd';
+import { getOrganizationSchema, SITE_URL } from '../../components/seo/OrganizationSchema';
+import AeoFaqSection from '../../components/seo/AeoFaqSection';
+import { getAeoFaqBundle, getAeoFaqSchema } from '../../lib/seo/aeoFaqs';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -29,12 +33,15 @@ export async function generateMetadata() {
     ogLocale = 'en_US';
   }
 
+  let canonicalLocalePath = '/portfolio';
+  if (locale === 'en') {
+    canonicalLocalePath = '/en/reference-projects';
+  } else if (locale === 'ro') {
+    canonicalLocalePath = '/ro/proiecte-de-referinta';
+  }
+
   const alternates = {
-    canonical: `https://izlenebilirlik.com.tr${
-      locale === 'en'
-        ? '/en/reference-projects'
-        : (locale === 'ro' ? '/ro/proiecte-de-referinta' : '/portfolio')
-    }`,
+    canonical: `https://izlenebilirlik.com.tr${canonicalLocalePath}`,
     languages: {
       'tr': 'https://izlenebilirlik.com.tr/portfolio',
       'en': 'https://izlenebilirlik.com.tr/en/reference-projects',
@@ -72,9 +79,68 @@ export async function generateMetadata() {
 }
 
 export default function ProjectsPage() {
+  return <ProjectsPageWithSchema />;
+}
+
+async function ProjectsPageWithSchema() {
+  const locale = await getRequestLocale();
+  let pagePath = '/portfolio';
+  if (locale === 'en') {
+    pagePath = '/reference-projects';
+  } else if (locale === 'ro') {
+    pagePath = '/proiecte-de-referinta';
+  }
+  const pageUrl = `${SITE_URL}${toLocalePath(pagePath, locale)}`;
+  const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
+  const org = getOrganizationSchema();
+  const faqBundle = getAeoFaqBundle('referenceProjects', locale);
+  const faqSchema = getAeoFaqSchema('referenceProjects', locale, pageUrl);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `${pageUrl}#webpage`,
+        'url': pageUrl,
+        'name': { tr: 'Referans Projeler', en: 'Reference Projects', ro: 'Proiecte de Referinta' }[locale] || 'Reference Projects',
+        'description': {
+          tr: 'Farklı sektörlerde uygulanmış gerçek izlenebilirlik projeleri ve ölçülebilir çıktıları.',
+          en: 'Real-world traceability projects across industries with measurable implementation outcomes.',
+          ro: 'Proiecte reale de trasabilitate implementate in industrii diferite, cu rezultate masurabile.',
+        }[locale],
+        'inLanguage': locale,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': { tr: 'Anasayfa', en: 'Home', ro: 'Acasă' }[locale] || 'Home',
+            'item': homeUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': { tr: 'Referans Projeler', en: 'Reference Projects', ro: 'Proiecte de Referinta' }[locale] || 'Reference Projects',
+            'item': pageUrl,
+          },
+        ],
+      },
+      faqSchema,
+      org,
+    ],
+  };
+
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProjectsPageClient />
-    </Suspense>
+    <>
+      <JsonLd data={jsonLd} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProjectsPageClient />
+      </Suspense>
+      <AeoFaqSection bundle={faqBundle} />
+    </>
   );
 }

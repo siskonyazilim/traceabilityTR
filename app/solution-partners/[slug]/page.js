@@ -5,10 +5,14 @@ import Button from '../../../components/ui/Button';
 import { strategicPartners } from '../../../data/partners';
 import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
 import PartnerStorySlider from '../../../components/ui/PartnerStorySlider';
-import { getRequestLocale, getRequestPathname } from '../../../lib/i18n/requestLocale';
+import { getRequestLocale } from '../../../lib/i18n/requestLocale';
 import { localizePartners } from '../../../lib/i18n/contentLocalization';
 import { f } from '../../../lib/i18n/sectionTranslations';
-import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i18n/dictionaries';
+import { toLocalePath } from '../../../lib/i18n/dictionaries';
+import JsonLd from '../../../components/seo/JsonLd';
+import { getOrganizationSchema, SITE_URL } from '../../../components/seo/OrganizationSchema';
+import AeoFaqSection from '../../../components/seo/AeoFaqSection';
+import { getAeoFaqBundle, getAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
 export async function generateStaticParams() {
@@ -41,17 +45,15 @@ export async function generateMetadata({ params }) {
   const title = `${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')} | Traceability`;
   const description = partner.description;
 
-  const detailBasePath = locale === 'en'
-    ? '/solution-partners'
-    : (locale === 'ro' ? '/parteneri-de-solutii' : '/solution-partners');
+  let canonicalPath = `/solution-partners/${partner.slug}`;
+  if (locale === 'en') {
+    canonicalPath = `/en/solution-partners/${partner.slug}`;
+  } else if (locale === 'ro') {
+    canonicalPath = `/ro/parteneri-de-solutii/${partner.slug}`;
+  }
+
   const alternates = {
-    canonical: `https://izlenebilirlik.com.tr${
-      locale === 'ro'
-        ? `/ro/parteneri-de-solutii/${partner.slug}`
-        : (locale === 'en'
-            ? `/en/solution-partners/${partner.slug}`
-            : `/solution-partners/${partner.slug}`)
-    }`,
+    canonical: `https://izlenebilirlik.com.tr${canonicalPath}`,
     languages: {
       'tr': `https://izlenebilirlik.com.tr/solution-partners/${partner.slug}`,
       'en': `https://izlenebilirlik.com.tr/en/solution-partners/${partner.slug}`,
@@ -113,17 +115,74 @@ export default async function PartnerDetailPage({ params }) {
 
   if (!partner) notFound();
 
-  const detailBasePath = locale === 'en'
-    ? '/solution-partners'
-    : (locale === 'ro' ? '/parteneri-de-solutii' : '/solution-partners');
+  let detailBasePath = '/solution-partners';
+  if (locale === 'ro') {
+    detailBasePath = '/parteneri-de-solutii';
+  }
   const currentIndex = localizedPartners.findIndex((p) => p.slug === slug);
   const totalPartners = localizedPartners.length;
   const prevPartner = localizedPartners[(currentIndex - 1 + totalPartners) % totalPartners];
   const nextPartner = localizedPartners[(currentIndex + 1) % totalPartners];
   const showStorySlider = Array.isArray(partner.storySlides) && partner.storySlides.length > 0;
+  const detailPath = `${detailBasePath}/${slug}`;
+  const pageUrl = `${SITE_URL}${toLocalePath(detailPath, locale)}`;
+  const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
+  const partnerListUrl = `${SITE_URL}${toLocalePath(detailBasePath, locale)}`;
+  const org = getOrganizationSchema();
+  const faqBundle = getAeoFaqBundle('partnerDetail', locale);
+  const faqSchema = getAeoFaqSchema('partnerDetail', locale, pageUrl);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ProfilePage',
+        '@id': `${pageUrl}#webpage`,
+        'url': pageUrl,
+        'name': partner.name,
+        'description': partner.description,
+        'inLanguage': locale,
+        'mainEntity': {
+          '@type': 'Organization',
+          '@id': `${pageUrl}#partner`,
+          'name': partner.name,
+          'url': partner.website,
+          'logo': partner.detailLogo || partner.logo,
+          'description': partner.description,
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': { tr: 'Anasayfa', en: 'Home', ro: 'Acasă' }[locale] || 'Home',
+            'item': homeUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': { tr: 'Çözüm Ortakları', en: 'Solution Partners', ro: 'Parteneri de Solutii' }[locale] || 'Solution Partners',
+            'item': partnerListUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': partner.name,
+            'item': pageUrl,
+          },
+        ],
+      },
+      faqSchema,
+      org,
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
+      <JsonLd data={jsonLd} />
       <Container size="xl">
         <Link href={toLocalePath('/', locale)} className="inline-flex items-center gap-2 text-secondary-blue hover:text-accent-blue transition-colors mb-6 font-semibold">
           <IconArrowLeft /> {f(locale, 'partnerDetailPage', 'backHome')}
@@ -170,6 +229,8 @@ export default async function PartnerDetailPage({ params }) {
               locale={locale}
             />
           ) : null}
+
+          <AeoFaqSection bundle={faqBundle} />
 
           {/* Previous / Next Navigation */}
           <nav className="clear-both mt-16 border-t border-slate-200 pt-10">

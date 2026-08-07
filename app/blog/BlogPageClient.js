@@ -9,10 +9,11 @@ import { blogPosts } from '../../data/blogPosts';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
 import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
+import AeoFaqSection from '../../components/seo/AeoFaqSection';
 
 const ITEMS_PER_PAGE = 6;
 
-export default function BlogPageClient() {
+export default function BlogPageClient({ faqBundle }) {
   const [currentPage, setCurrentPage] = useState(1);
   const { locale, t } = useLanguage();
   const localizedPosts = localizeBlogPosts(blogPosts, locale);
@@ -82,6 +83,7 @@ export default function BlogPageClient() {
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                     <button
                       key={page}
+                      type="button"
                       onClick={() => handlePageChange(page)}
                       className={`min-w-12 min-h-[48px] px-4 py-3 rounded-md font-semibold transition-all duration-200 ${
                         currentPage === page
@@ -109,6 +111,8 @@ export default function BlogPageClient() {
             primaryHref="/contact"
             primaryLabel={t('blogPage.ctaPrimary', 'İletişime Geç')}
           />
+
+          <AeoFaqSection bundle={faqBundle} />
 
         </div>
       </Container>

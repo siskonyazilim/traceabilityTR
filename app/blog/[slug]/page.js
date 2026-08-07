@@ -13,6 +13,8 @@ import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
 import { toLocalePath } from '../../../lib/i18n/dictionaries';
 import JsonLd from '../../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL, LOGO_URL } from '../../../components/seo/OrganizationSchema';
+import AeoFaqSection from '../../../components/seo/AeoFaqSection';
+import { getAeoFaqBundle, getAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
 /* eslint-disable react/prop-types */
 
 const normalizeBlogContent = (html) => {
@@ -161,6 +163,8 @@ export default async function BlogDetailPage({ params }) {
   const pageUrl = `${SITE_URL}${canonicalPath}`;
   const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
   const blogListUrl = `${SITE_URL}${toLocalePath('/blog', locale)}`;
+  const faqBundle = getAeoFaqBundle('blogList', locale);
+  const faqSchema = getAeoFaqSchema('blogList', locale, pageUrl);
 
   let ogImage = LOGO_URL;
   if (post.image) {
@@ -224,6 +228,7 @@ export default async function BlogDetailPage({ params }) {
           },
         ],
       },
+      faqSchema,
     ],
   };
 
@@ -243,12 +248,12 @@ export default async function BlogDetailPage({ params }) {
             <div className="mx-auto w-full max-w-none">
             <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
               <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
-              <span className="text-gray-text">{date}</span>
+              <time className="text-gray-text" dateTime={post.date ? new Date(post.date).toISOString() : undefined}>{date}</time>
             </div>
 
             <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-slate-900">{post.title}</h1>
             <div className="mt-4 flex items-center gap-3">
-              <p className="text-sm font-medium text-gray-text">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
+              <p className="text-sm font-medium text-gray-text" rel="author">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
               <Image
                 src="/siskon-logo-header.svg"
                 alt="Siskon"
@@ -408,6 +413,8 @@ export default async function BlogDetailPage({ params }) {
               </Button>
             </div>
           </section>
+
+          <AeoFaqSection bundle={faqBundle} />
         </article>
       </Container>
     </div>

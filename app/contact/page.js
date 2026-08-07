@@ -1,6 +1,10 @@
 import ContactPageClient from './ContactPageClient';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../../lib/i18n/requestLocale';
 import { getOrganizationSchema, SITE_URL } from '../../components/seo/OrganizationSchema';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
+import AeoFaqSection from '../../components/seo/AeoFaqSection';
+import JsonLd from '../../components/seo/JsonLd';
+import { getAeoFaqBundle, getAeoFaqSchema } from '../../lib/seo/aeoFaqs';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -62,8 +66,10 @@ export async function generateMetadata() {
 export default async function ContactPage() {
   const locale = await getRequestLocale();
   const org = getOrganizationSchema();
+  const faqBundle = getAeoFaqBundle('contact', locale);
 
-  const pageUrl = `${SITE_URL}/contact`;
+  const pageUrl = `${SITE_URL}${toLocalePath('/contact', locale)}`;
+  const faqSchema = getAeoFaqSchema('contact', locale, pageUrl);
 
   const homeLabelByLocale = { tr: 'Anasayfa', en: 'Home', ro: 'Acasă' };
   const contactLabelByLocale = { tr: 'İletişim', en: 'Contact', ro: 'Contact' };
@@ -109,16 +115,15 @@ export default async function ContactPage() {
           },
         ],
       },
+      faqSchema,
     ],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
       <ContactPageClient />
+      <AeoFaqSection bundle={faqBundle} />
     </>
   );
 }

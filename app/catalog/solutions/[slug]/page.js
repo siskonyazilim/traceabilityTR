@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation';
 import CatalogDetailPage from '../../../../components/sections/CatalogDetailPage';
 import { solutions } from '../../../../data/solutions';
-import { localizeSolutions, getFaqBundle } from '../../../../lib/i18n/contentLocalization';
+import { localizeSolutions } from '../../../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../../../lib/i18n/dictionaries';
 import { getRequestLocale } from '../../../../lib/i18n/requestLocale';
 import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping';
 import JsonLd from '../../../../components/seo/JsonLd';
+import { getAeoFaqBundle, getAeoFaqSchema } from '../../../../lib/seo/aeoFaqs';
+import AeoFaqSection from '../../../../components/seo/AeoFaqSection';
 /* eslint-disable react/prop-types */
 
 function toOgLocale(locale) {
@@ -135,8 +137,8 @@ export default async function CatalogSolutionDetailPage({ params }) {
     ro: "România",
   };
 
-  const faqBundle = getFaqBundle([], locale);
-  const faqItems = (faqBundle?.items || []).slice(0, 3);
+  const faqBundle = getAeoFaqBundle('catalogSolutions', locale);
+  const faqPageSchema = getAeoFaqSchema('catalogSolutions', locale, pageUrl);
 
   const graphSchema = {
     '@context': 'https://schema.org',
@@ -184,25 +186,13 @@ export default async function CatalogSolutionDetailPage({ params }) {
     ],
   };
 
-  if (faqItems.length > 0) {
-    graphSchema['@graph'].push({
-      '@type': 'FAQPage',
-      '@id': `${pageUrl}#faq`,
-      mainEntity: faqItems.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
-      })),
-    });
-  }
+  graphSchema['@graph'].push(faqPageSchema);
 
   return (
     <>
       <JsonLd data={graphSchema} />
       <CatalogDetailPage item={withNavigation} type="solution" locale={locale} />
+      <AeoFaqSection bundle={faqBundle} />
     </>
   );
 }

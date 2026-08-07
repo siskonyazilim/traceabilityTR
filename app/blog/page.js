@@ -6,6 +6,7 @@ import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 import JsonLd from '../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL } from '../../components/seo/OrganizationSchema';
+import { getAeoFaqBundle, getAeoFaqSchema } from '../../lib/seo/aeoFaqs';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -69,6 +70,8 @@ export default async function BlogPage() {
   const org = getOrganizationSchema();
   const pageUrl = `${SITE_URL}${toLocalePath('/blog', locale)}`;
   const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
+  const faqBundle = getAeoFaqBundle('blogList', locale);
+  const faqSchema = getAeoFaqSchema('blogList', locale, pageUrl);
 
   const localizedPosts = localizeBlogPosts(blogPosts, locale)
     .sort((a, b) => {
@@ -149,6 +152,7 @@ export default async function BlogPage() {
         ],
       },
       itemListSchema,
+      faqSchema,
       org,
     ],
   };
@@ -156,7 +160,7 @@ export default async function BlogPage() {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <BlogPageClient />
+      <BlogPageClient faqBundle={faqBundle} />
     </>
   );
 }

@@ -3,10 +3,11 @@ import CatalogDetailPage from '../../../../components/sections/CatalogDetailPage
 import { products } from '../../../../data/solutions';
 import { localizeProducts } from '../../../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../../../lib/i18n/dictionaries';
-import { getRequestLocale, getRequestPathname } from '../../../../lib/i18n/requestLocale';
+import { getRequestLocale } from '../../../../lib/i18n/requestLocale';
 import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping';
 import JsonLd from '../../../../components/seo/JsonLd';
-import { getFaqPageSchema, SITE_URL } from '../../../../components/seo/OrganizationSchema';
+import { getAeoFaqBundle, getAeoFaqSchema } from '../../../../lib/seo/aeoFaqs';
+import AeoFaqSection from '../../../../components/seo/AeoFaqSection';
 /* eslint-disable react/prop-types */
 
 function toOgLocale(locale) {
@@ -201,8 +202,8 @@ export default async function CatalogProductDetailPage({ params }) {
     ]
   };
 
-  // ── FAQPage (product sayfaları için lokale göre dinamik FAQ) ───────────
-  const faqPageSchema = getFaqPageSchema(locale, pageUrl);
+  const faqBundle = getAeoFaqBundle('catalogProducts', locale);
+  const faqPageSchema = getAeoFaqSchema('catalogProducts', locale, pageUrl);
 
   return (
     <>
@@ -210,6 +211,7 @@ export default async function CatalogProductDetailPage({ params }) {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqPageSchema} />
       <CatalogDetailPage item={withNavigation} type="product" locale={locale} />
+      <AeoFaqSection bundle={faqBundle} />
     </>
   );
 }
