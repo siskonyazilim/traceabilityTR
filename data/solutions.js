@@ -141,7 +141,7 @@ export const products = [
     color: "accent-blue",
     image: "/resmi/hybrid-02.png",
     description: "Asigurați o calitate constantă, mențineți relevanța și îmbunătățiți-vă agilitatea în operațiunile globale. Urmărirea și trasabilitatea hibridă oferă trasabilitate end-to-end atât din sistemele interne, cât și de la partenerii din lanțul de aprovizionare pentru industria principală și secundară a automobilelor. Oferă cerințe avansate de trasabilitate a produselor pentru standardele ISO/TS 16949.",
-    detail: "Dezvoltat de Siskon pentru industria auto principală și de componente, Hybrid Track & Trace înregistrează datele end-to-end atât din sistemele interne, cât și de la partenerii din lanțul de aprovizionare, inclusiv procesele prin care trece produsul și datele de proces. Oferă cerințe avansate de trasabilitate a produselor, în conformitate cu actualizările de reglementare necesare pentru standardele ISO/TS 16949.",
+    detail: "Hybrid Track and Trace asigură trasabilitate completă în industria auto prin înregistrarea tuturor datelor de proces pe parcursul producției. Oferă cerințe avansate de trasabilitate a produselor, în conformitate cu actualizările de reglementare necesare pentru standardele ISO/TS 16949.",
     detailPreBulletsHeading: "Hybrid T&T influențează direct două dintre cele mai importante aspecte ale industriei auto:",
     detailPreBullets: [
       "Reducerea costurilor prin diminuarea produselor defecte și menținerea unei calități consecvente.",

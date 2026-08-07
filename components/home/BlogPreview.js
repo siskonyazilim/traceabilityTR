@@ -8,20 +8,15 @@ import BlogCard from '../ui/BlogCard';
 import Button from '../ui/Button';
 import { IconChevronLeft, IconChevronRight } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { blogPosts } from '../../data/blogPosts';
+import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
 
-export const BlogPreview = ({ initialPosts = [], initialPostsLocale = 'tr' }) => {
+export const BlogPreview = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
-  const localizedPosts = useMemo(() => {
-    if (locale === initialPostsLocale) {
-      return Array.isArray(initialPosts) ? initialPosts : [];
-    }
-
-    // Locale route switch should refresh this component with matching props.
-    return Array.isArray(initialPosts) ? initialPosts : [];
-  }, [initialPosts, initialPostsLocale, locale]);
+  const localizedPosts = useMemo(() => localizeBlogPosts(blogPosts, locale), [locale]);
   const sortedPosts = useMemo(
     () =>
       [...localizedPosts].sort((a, b) => {
@@ -108,7 +103,6 @@ export const BlogPreview = ({ initialPosts = [], initialPostsLocale = 'tr' }) =>
         <div className="relative mb-8">
           <div className="hidden md:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10">
             <button
-              type="button"
               onClick={handlePrev}
               aria-label={t('sections.blogPrev', 'Articol anterior')}
               className="h-12 w-12 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
@@ -119,7 +113,6 @@ export const BlogPreview = ({ initialPosts = [], initialPostsLocale = 'tr' }) =>
 
           <div className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10">
             <button
-              type="button"
               onClick={handleNext}
               aria-label={t('sections.blogNext', 'Sonraki makale')}
               className="h-12 w-12 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black hover:bg-secondary-blue hover:text-white transition-colors flex items-center justify-center"
@@ -138,7 +131,6 @@ export const BlogPreview = ({ initialPosts = [], initialPostsLocale = 'tr' }) =>
 
           <div className="mt-5 flex md:hidden items-center justify-center gap-3">
             <button
-              type="button"
               onClick={handlePrev}
               aria-label={t('sections.blogPrev', 'Önceki yazı')}
               className="h-11 w-11 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black transition-colors flex items-center justify-center"
@@ -146,7 +138,6 @@ export const BlogPreview = ({ initialPosts = [], initialPostsLocale = 'tr' }) =>
               <IconChevronLeft size={20} />
             </button>
             <button
-              type="button"
               onClick={handleNext}
               aria-label={t('sections.blogNext', 'Sonraki yazı')}
               className="h-11 w-11 rounded-md bg-white/95 backdrop-blur-sm border border-slate-200 shadow-soft text-primary-black transition-colors flex items-center justify-center"

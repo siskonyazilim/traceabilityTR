@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 
 import { useMemo, useState } from 'react';
-import { getStrapiMediaUrl } from '../../lib/strapi/media';
 
 function resolveLocalizedValue(slide, locale, baseKey) {
   if (!slide || typeof slide !== 'object') {
@@ -24,7 +23,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
     return slides
       .filter((slide) => slide && typeof slide === 'object' && slide.image)
       .map((slide) => ({
-        image: getStrapiMediaUrl(slide.image),
+        image: slide.image,
         title: resolveLocalizedValue(slide, locale, 'title'),
         description: resolveLocalizedValue(slide, locale, 'description'),
       }));

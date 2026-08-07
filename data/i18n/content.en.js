@@ -164,7 +164,7 @@ export const contentEn = {
     1: {
       title: 'Hybrid Track and Trace',
       description: 'Delivers end-to-end traceability across internal systems and supply-chain partners, including advanced requirements for automotive standards.',
-      detail: 'Developed by Siskon for the Automotive Main and Component Industry, Hybrid Track & Trace provides end-to-end traceability by recording data coming from both internal systems and supply chain partners, all processes the product goes through, and process data. It provides advanced product traceability requirements in accordance with current regulatory changes required for ISO/TS 16949 standards.',
+      detail: 'Hybrid Track and Trace provides end-to-end traceability for the automotive industry by recording all process data throughout production. It provides advanced product traceability requirements in accordance with current regulatory changes required for ISO/TS 16949 standards.',
       detailPreBulletsHeading: 'Hybrid T&T directly affects the two most striking issues of the automotive industry:',
       detailPreBullets: [
         'Achieving global sustainable quality by reducing the number of defective products.',

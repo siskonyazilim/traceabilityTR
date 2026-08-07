@@ -61,67 +61,20 @@ export const Header = () => {
   }, []);
 
   const handleLocaleChange = async (nextLocaleCode) => {
-    // Preserve current query/hash params when switching locale
-    const currentSearch = typeof window !== 'undefined' ? window.location.search : '';
-    const currentHash = typeof window !== 'undefined' ? window.location.hash : '';
-
-    const resolveBlogDetailPath = async () => {
-      const match = currentPathForLocale.match(/^\/blog\/([^/?#]+)/);
-      if (!match) {
-        return null;
-      }
-
-      const slug = decodeURIComponent(match[1] || '').trim();
-      if (!slug) {
-        return null;
-      }
-
-      try {
-        const response = await fetch(
-          `/api/blog/slug-alternate?slug=${encodeURIComponent(slug)}&targetLocale=${encodeURIComponent(nextLocaleCode)}`,
-          { method: 'GET', cache: 'no-store' }
-        );
-
-        if (!response.ok) {
-          return null;
-        }
-
-        const json = await response.json();
-        const resolvedSlug = (json?.slug || '').trim();
-        if (!resolvedSlug) {
-          return null;
-        }
-
-        return `/blog/${resolvedSlug}`;
-      } catch {
-        return null;
-      }
-    };
-
-    const resolvedBlogPath = await resolveBlogDetailPath();
     await setLocale(nextLocaleCode);
-
-    const navigateTo = (href) => {
-      router.push(href);
-      router.refresh();
-    };
-
-    if (resolvedBlogPath) {
-      navigateTo(toLocalePath(resolvedBlogPath, nextLocaleCode) + currentSearch + currentHash);
-      return;
-    }
-
+    // Preserve current query params (e.g. ?page=2) when switching locale
+    const currentSearch = typeof window !== 'undefined' ? window.location.search : '';
     const alternateLink = document.querySelector(`link[rel="alternate"][hreflang="${nextLocaleCode}"]`);
     if (alternateLink) {
       try {
         const url = new URL(alternateLink.href);
-        navigateTo(url.pathname + currentSearch + currentHash);
+        router.push(url.pathname + currentSearch + url.hash);
       } catch (error) {
         console.warn('Could not parse alternate URL, falling back to simple local path:', error);
-        navigateTo(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch + currentHash);
+        router.push(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch);
       }
     } else {
-      navigateTo(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch + currentHash);
+      router.push(toLocalePath(currentPathForLocale, nextLocaleCode) + currentSearch);
     }
   };
 
@@ -210,14 +163,16 @@ export const Header = () => {
     >
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Brand text */}
+          {/* Brand logo */}
           <Link
             href={toLocalePath('/')}
-            className={`font-poppins text-2xl font-extrabold tracking-tight transition-all duration-300 hover:tracking-normal ${
-              useTransparentHeader ? 'text-white' : 'text-primary-black'
-            }`}
+            className="inline-flex h-full items-center"
           >
-            Traceability
+            <img
+              src={useTransparentHeader ? '/TraceabilityWhite.svg' : '/Traceability.svg'}
+              alt="Traceability"
+              className="block h-9 sm:h-11 lg:h-12 w-auto transition-all duration-300 drop-shadow-[0_4px_14px_rgba(0,0,0,0.22)]"
+            />
           </Link>
 
           {/* Desktop Menu */}

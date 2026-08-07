@@ -7,11 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:i18n": "node scripts/i18n-lint.mjs",
-    "export:strapi:blog": "node scripts/export-blogposts-to-strapi-json.mjs",
-    "import:strapi:blog": "node scripts/import-strapi-articles.mjs",
-    "export:strapi:partners": "node scripts/export-partners-to-strapi-json.mjs",
-    "import:strapi:partners": "node scripts/import-strapi-partners.mjs"
+    "lint:i18n": "node scripts/i18n-lint.mjs"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
