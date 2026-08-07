@@ -191,13 +191,13 @@ export const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-white">{t('footer.contactTitle', 'Contact')}</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="tel:+40368402002" className="text-gray-light hover:text-accent-blue transition-colors">
-                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (RO):</span> +40 368 402 002
+                <a href="tel:+902322450076" className="text-gray-light hover:text-accent-blue transition-colors">
+                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (TR):</span> +90 232 245 00 76
                 </a>
               </li>
               <li>
-                <a href="tel:+902322450076" className="text-gray-light hover:text-accent-blue transition-colors">
-                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (TR):</span> +90 232 245 00 76
+                <a href="tel:+40368402002" className="text-gray-light hover:text-accent-blue transition-colors">
+                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (RO):</span> +40 368 402 002
                 </a>
               </li>
               <li>

@@ -11,12 +11,17 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const hasStartedRef = useRef(false);
 
   useEffect(() => {
+    if (hasStartedRef.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
+        if (entry.isIntersecting) {
+          hasStartedRef.current = true;
           setIsVisible(true);
+          observer.disconnect();
         }
       },
       { threshold: 0.1 }
@@ -27,7 +32,7 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
     }
 
     return () => observer.disconnect();
-  }, [isVisible]);
+  }, []);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -37,10 +42,11 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
     const timer = setInterval(() => {
       current += increment;
       if (current >= end) {
-        setCount(end);
+        setCount((prev) => (prev === end ? prev : end));
         clearInterval(timer);
       } else {
-        setCount(Math.floor(current));
+        const next = Math.floor(current);
+        setCount((prev) => (prev === next ? prev : next));
       }
     }, 1000 / 60);
 

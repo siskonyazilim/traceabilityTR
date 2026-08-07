@@ -8,7 +8,11 @@ export const strategicPartners = [
     breadcrumbLabel: "BECKHOFF",
     description: "Permite gestionarea flexibilă și eficientă a sistemelor de mașini, robotică și producție prin tehnologii de control bazate pe PC și soluții de automatizare deschisă.",
     website: "https://www.beckhoff.com",
-    storySlides: [],
+    storySlides: [
+      {
+        image: "/images/partner/Beckhoff/beckhoff.webp",
+      }
+    ],
     fullDescription: "Beckhoff dezvoltă sisteme de automatizare deschise bazate pe tehnologia de control pe bază de PC. Gama de produse constă în PC-uri industriale, componente I/O și Fieldbus, tehnologie de acționare și software de automatizare. Pentru toate industriile, există produse care pot fi utilizate ca și componente individuale sau pentru a crea de la zero un sistem de control complet și fără întreruperi.\n\n Filosofia Beckhoff privind \"Noua Tehnologie de Automatizare\" reprezintă soluții de control și automatizare universale și deschise, utilizate într-o varietate de aplicații la nivel mondial, variind de la mașini-unelte controlate prin CNC până la automatizarea inteligentă a clădirilor.",
   },
   {

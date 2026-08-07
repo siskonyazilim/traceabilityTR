@@ -53,10 +53,12 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(globalThis.scrollY > 20);
+      const nextScrolled = globalThis.scrollY > 20;
+      setScrolled((prev) => (prev === nextScrolled ? prev : nextScrolled));
     };
 
-    globalThis.addEventListener('scroll', handleScroll);
+    handleScroll();
+    globalThis.addEventListener('scroll', handleScroll, { passive: true });
     return () => globalThis.removeEventListener('scroll', handleScroll);
   }, []);
 
