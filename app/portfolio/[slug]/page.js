@@ -14,6 +14,7 @@ import { DEFAULT_LOCALE, isSupportedLocale, toLocalePath } from '../../../lib/i1
 import { resolveSlug, getLocalizedSlug } from '../../../lib/i18n/slugMapping';
 import PagePrimaryCta from '../../../components/ui/PagePrimaryCta';
 import JsonLd from '../../../components/seo/JsonLd';
+import { getReferenceDetailAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
 import PhiniaDetailPage from '../../../components/sections/PhiniaDetailPage';
 import DuruDetailPage from '../../../components/sections/DuruDetailPage';
 import BshCarriersDetailPage from '../../../components/sections/BshCarriersDetailPage';
@@ -216,6 +217,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const pageUrl = `https://izlenebilirlik.com.tr${toLocalePath(`/portfolio/${project.slug}`, locale)}`;
   const homeUrl = `https://izlenebilirlik.com.tr${toLocalePath('/', locale)}`;
   const projectsUrl = `https://izlenebilirlik.com.tr${localizedListPath}`;
+  const faqSchema = getReferenceDetailAeoFaqSchema(locale, pageUrl, project);
 
   const homeLabelByLocale = {
     tr: "Anasayfa",
@@ -290,7 +292,8 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
             "item": pageUrl
           }
         ]
-      }
+      },
+      ...(faqSchema ? [faqSchema] : [])
     ]
   };
 

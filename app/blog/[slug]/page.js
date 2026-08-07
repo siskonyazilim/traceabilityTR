@@ -14,7 +14,7 @@ import { toLocalePath } from '../../../lib/i18n/dictionaries';
 import JsonLd from '../../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL, LOGO_URL } from '../../../components/seo/OrganizationSchema';
 import AeoFaqSection from '../../../components/seo/AeoFaqSection';
-import { getAeoFaqBundle, getAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
+import { getBlogDetailAeoFaqBundle, getBlogDetailAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
 /* eslint-disable react/prop-types */
 
 const normalizeBlogContent = (html) => {
@@ -163,8 +163,8 @@ export default async function BlogDetailPage({ params }) {
   const pageUrl = `${SITE_URL}${canonicalPath}`;
   const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
   const blogListUrl = `${SITE_URL}${toLocalePath('/blog', locale)}`;
-  const faqBundle = getAeoFaqBundle('blogList', locale);
-  const faqSchema = getAeoFaqSchema('blogList', locale, pageUrl);
+  const faqBundle = getBlogDetailAeoFaqBundle(locale, post);
+  const faqSchema = getBlogDetailAeoFaqSchema(locale, pageUrl, post);
 
   let ogImage = LOGO_URL;
   if (post.image) {
