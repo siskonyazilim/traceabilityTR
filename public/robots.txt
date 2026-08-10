@@ -1,19 +1,17 @@
 User-agent: *
 Allow: /
 
-# Optional explicit allows for AI crawlers
+# OpenAI / ChatGPT Botları
 User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: OAI-SearchBot
 Allow: /
 
+# Anthropic / Claude Botları
 User-agent: ClaudeBot
 Allow: /
 
@@ -23,10 +21,30 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# Google AI Botları
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googleother
+Allow: /
+
+# Diğer Önemli AI Crawler'ları
 User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: https://izlenebilirlik.com.tr/sitemap.xml
