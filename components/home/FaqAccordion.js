@@ -45,24 +45,45 @@ export const FaqAccordion = () => {
     const SCROLL_TOP_OFFSET = 96;
     const SCROLL_BOTTOM_PADDING = 24;
 
-    requestAnimationFrame(() => {
+    const keepExpandedItemVisible = () => {
       const triggerRect = trigger.getBoundingClientRect();
       const panelRect = panel.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
+      const currentY = window.scrollY;
 
-      const titleHiddenTop = triggerRect.top < SCROLL_TOP_OFFSET;
-      const contentHiddenBottom = panelRect.bottom > viewportHeight - SCROLL_BOTTOM_PADDING;
+      const triggerTopAbs = currentY + triggerRect.top;
+      const panelBottomAbs = currentY + panelRect.bottom;
 
-      if (!titleHiddenTop && !contentHiddenBottom) {
-        return;
+      const minYForBottomVisibility = panelBottomAbs - (viewportHeight - SCROLL_BOTTOM_PADDING);
+      const maxYForTopVisibility = triggerTopAbs - SCROLL_TOP_OFFSET;
+
+      const canFitFully = minYForBottomVisibility <= maxYForTopVisibility;
+
+      let targetY = currentY;
+      if (canFitFully) {
+        if (currentY < minYForBottomVisibility) {
+          targetY = minYForBottomVisibility;
+        } else if (currentY > maxYForTopVisibility) {
+          targetY = maxYForTopVisibility;
+        }
+      } else {
+        // If content is taller than viewport, keep question title anchored at the top offset.
+        targetY = maxYForTopVisibility;
       }
 
-      const targetTop = Math.max(0, window.scrollY + triggerRect.top - SCROLL_TOP_OFFSET);
+      const safeTargetY = Math.max(0, Math.round(targetY));
+      if (safeTargetY !== Math.round(currentY)) {
+        window.scrollTo({
+          top: safeTargetY,
+          behavior: 'smooth',
+        });
+      }
+    };
 
-      window.scrollTo({
-        top: targetTop,
-        behavior: 'smooth',
-      });
+    requestAnimationFrame(() => {
+      keepExpandedItemVisible();
+      // Re-check after expand animation so long answers are fully visible.
+      setTimeout(keepExpandedItemVisible, 550);
     });
   }, [openId]);
 

@@ -146,15 +146,6 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  href={toLocalePath('/#faq')}
-                  onClick={(e) => handleSectionClick(e, '/#faq')}
-                  className="text-gray-light hover:text-accent-blue transition-colors text-sm"
-                >
-                  {t('footer.faq', 'Sık Sorulan Sorular')}
-                </Link>
-              </li>
-              <li>
                 <Link href={toLocalePath('/contact')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.contact', 'Contact')}
                 </Link>
