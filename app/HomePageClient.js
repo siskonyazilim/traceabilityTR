@@ -8,10 +8,6 @@ const DeferredSection = () => (
   <section className="py-12" aria-hidden="true" />
 );
 
-const FaqAccordion = dynamic(() => import('../components/home/FaqAccordion'), {
-  loading: () => <DeferredSection />,
-});
-
 const SolutionsTabs = dynamic(() => import('../components/home/SolutionsTabs'), {
   loading: () => <DeferredSection />,
 });
@@ -42,7 +38,6 @@ export default function HomePageClient() {
   return (
     <>
       <HeroSlider />
-      <FaqAccordion />
       <SolutionsTabs />
       <TechnologyCapabilities />
       <ReferenceProjects />

@@ -6,7 +6,7 @@ import { toLocalePath } from '../../../../lib/i18n/dictionaries';
 import { getRequestLocale } from '../../../../lib/i18n/requestLocale';
 import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping';
 import JsonLd from '../../../../components/seo/JsonLd';
-import { getAeoFaqBundle, getAeoFaqSchema } from '../../../../lib/seo/aeoFaqs';
+import { getCatalogSolutionDetailAeoFaqBundle, getCatalogSolutionDetailAeoFaqSchema } from '../../../../lib/seo/aeoFaqs';
 import AeoFaqSection from '../../../../components/seo/AeoFaqSection';
 /* eslint-disable react/prop-types */
 
@@ -137,8 +137,8 @@ export default async function CatalogSolutionDetailPage({ params }) {
     ro: "România",
   };
 
-  const faqBundle = getAeoFaqBundle('catalogSolutions', locale);
-  const faqPageSchema = getAeoFaqSchema('catalogSolutions', locale, pageUrl);
+  const faqBundle = getCatalogSolutionDetailAeoFaqBundle(locale, withNavigation);
+  const faqPageSchema = getCatalogSolutionDetailAeoFaqSchema(locale, pageUrl, withNavigation);
 
   const graphSchema = {
     '@context': 'https://schema.org',

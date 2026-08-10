@@ -11,7 +11,7 @@ import { f } from '../../../lib/i18n/sectionTranslations';
 import { toLocalePath } from '../../../lib/i18n/dictionaries';
 import JsonLd from '../../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL } from '../../../components/seo/OrganizationSchema';
-import { getAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
+import { getPartnerDetailAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
 export async function generateStaticParams() {
@@ -128,7 +128,7 @@ export default async function PartnerDetailPage({ params }) {
   const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
   const partnerListUrl = `${SITE_URL}${toLocalePath(detailBasePath, locale)}`;
   const org = getOrganizationSchema();
-  const faqSchema = getAeoFaqSchema('partnerDetail', locale, pageUrl);
+  const faqSchema = getPartnerDetailAeoFaqSchema(locale, pageUrl, partner);
 
   const jsonLd = {
     '@context': 'https://schema.org',

@@ -6,7 +6,7 @@ import { toLocalePath } from '../../../../lib/i18n/dictionaries';
 import { getRequestLocale } from '../../../../lib/i18n/requestLocale';
 import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping';
 import JsonLd from '../../../../components/seo/JsonLd';
-import { getAeoFaqBundle, getAeoFaqSchema } from '../../../../lib/seo/aeoFaqs';
+import { getCatalogProductDetailAeoFaqBundle, getCatalogProductDetailAeoFaqSchema } from '../../../../lib/seo/aeoFaqs';
 import AeoFaqSection from '../../../../components/seo/AeoFaqSection';
 /* eslint-disable react/prop-types */
 
@@ -17,13 +17,11 @@ function toOgLocale(locale) {
 }
 
 export async function generateStaticParams() {
-  const paths = [];
-  for (const product of products) {
-    paths.push({ slug: getLocalizedSlug('catalogProduct', product.slug, 'tr') });
-    paths.push({ slug: getLocalizedSlug('catalogProduct', product.slug, 'en') });
-    paths.push({ slug: getLocalizedSlug('catalogProduct', product.slug, 'ro') });
-  }
-  return paths;
+  return products.flatMap((product) => [
+    { slug: getLocalizedSlug('catalogProduct', product.slug, 'tr') },
+    { slug: getLocalizedSlug('catalogProduct', product.slug, 'en') },
+    { slug: getLocalizedSlug('catalogProduct', product.slug, 'ro') },
+  ]);
 }
 
 export async function generateMetadata({ params }) {
@@ -47,8 +45,11 @@ export async function generateMetadata({ params }) {
     ogImage = item.image.startsWith('http') ? item.image : `https://izlenebilirlik.com.tr${item.image}`;
   }
 
+  const localizedProductPath = '/catalog/products/' + getLocalizedSlug('catalogProduct', baseSlug, locale);
+  const canonicalPath = toLocalePath(localizedProductPath, locale);
+
   const alternates = {
-    canonical: `https://izlenebilirlik.com.tr${toLocalePath(`/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, locale)}`, locale)}`,
+    canonical: 'https://izlenebilirlik.com.tr' + canonicalPath,
     languages: {
       'tr': `https://izlenebilirlik.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
       'en': `https://izlenebilirlik.com.tr/en/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'en')}`,
@@ -202,8 +203,8 @@ export default async function CatalogProductDetailPage({ params }) {
     ]
   };
 
-  const faqBundle = getAeoFaqBundle('catalogProducts', locale);
-  const faqPageSchema = getAeoFaqSchema('catalogProducts', locale, pageUrl);
+  const faqBundle = getCatalogProductDetailAeoFaqBundle(locale, withNavigation);
+  const faqPageSchema = getCatalogProductDetailAeoFaqSchema(locale, pageUrl, withNavigation);
 
   return (
     <>
