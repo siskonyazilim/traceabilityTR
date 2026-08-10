@@ -68,7 +68,6 @@ export const HeroSlider = () => {
   const resolvedDesktopVideo = videoFallbackSrc || activeSlide?.video;
   const useMobileSource = Boolean(activeSlide?.mobileVideo) && !forceDesktopVideo && !videoFallbackSrc && activeSlide?.id !== 1;
   const firstSlideSubtitleLines = useMemo(() => splitIntoTwoBalancedLines(localizedSlides[0]?.subtitle), [localizedSlides]);
-  const fallbackVideoForBrokenSource = heroVideoAssets[2]?.video || heroVideoAssets[0]?.video || '';
   const fallbackImageBySlideId = {
     1: '/images/Industries/Organic_Trace_and_Track.webp',
     2: '/images/Industries/otomotiv.webp',
@@ -158,13 +157,8 @@ export const HeroSlider = () => {
     const isMobileViewport = globalThis.innerWidth <= 1023;
 
     if (videoEl?.networkState === HTMLMediaElement.NETWORK_NO_SOURCE || videoEl?.error) {
-      if (activeSlide?.id === 2 && fallbackVideoForBrokenSource && !videoFallbackSrc) {
-        setVideoFallbackSrc(fallbackVideoForBrokenSource);
-        setForceDesktopVideo(true);
-      } else {
-        // Last-resort visual fallback so hero never appears blank.
-        setShowImageFallback(true);
-      }
+      // Last-resort visual fallback so hero never appears blank.
+      setShowImageFallback(true);
       return;
     }
 
@@ -176,7 +170,7 @@ export const HeroSlider = () => {
 
     // If mobile rendition stalls, fall back to desktop source.
     setForceDesktopVideo(true);
-  }, [activeSlide?.id, activeSlide?.video, ensureVideoPlayback, fallbackVideoForBrokenSource, forceDesktopVideo, videoFallbackSrc]);
+  }, [activeSlide?.video, ensureVideoPlayback, forceDesktopVideo]);
 
   useEffect(() => {
     // Some browsers report decode failure only after initial source selection.
@@ -190,17 +184,12 @@ export const HeroSlider = () => {
       const noSource = videoEl.networkState === HTMLMediaElement.NETWORK_NO_SOURCE;
       const notReady = videoEl.readyState === HTMLMediaElement.HAVE_NOTHING;
       if ((noSource || videoEl.error) && notReady) {
-        if (fallbackVideoForBrokenSource && !videoFallbackSrc) {
-          setVideoFallbackSrc(fallbackVideoForBrokenSource);
-          setForceDesktopVideo(true);
-        } else {
-          setShowImageFallback(true);
-        }
+        setShowImageFallback(true);
       }
     }, 1100);
 
     return () => globalThis.clearTimeout(timer);
-  }, [activeSlide?.id, fallbackVideoForBrokenSource, videoFallbackSrc]);
+  }, [activeSlide?.id, videoFallbackSrc]);
 
   const goToSlide = (index) => {
     setCurrent(index);
