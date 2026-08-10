@@ -85,7 +85,7 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <Link href="/" className="font-poppins text-2xl font-extrabold tracking-tight text-white transition-all duration-300 hover:text-accent-blue">
+              <Link href="/" className="inline-flex min-h-[44px] items-center font-poppins text-2xl font-extrabold tracking-tight text-white transition-all duration-300 hover:text-accent-blue">
                 Traceability
               </Link>
             </div>
@@ -113,7 +113,7 @@ export const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-white">{t('footer.navigation', 'Navigasyon')}</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6">
               <li>
-                <Link href={toLocalePath('/')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/')} className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.home', 'Ana Sayfa')}
                 </Link>
               </li>
@@ -121,7 +121,7 @@ export const Footer = () => {
                 <Link
                   href={toLocalePath('/#traceability-solutions')}
                   onClick={(e) => handleSectionClick(e, '/#traceability-solutions')}
-                  className="text-gray-light hover:text-accent-blue transition-colors text-sm"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
                   {t('footer.solutions', 'Çözümlerimiz')}
                 </Link>
@@ -130,7 +130,7 @@ export const Footer = () => {
                 <Link
                   href={toLocalePath('/#products-tab')}
                   onClick={(e) => handleSectionClick(e, '/#products-tab')}
-                  className="text-gray-light hover:text-accent-blue transition-colors text-sm"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
                   {t('footer.industries', 'Sektörler')}
                 </Link>
@@ -139,35 +139,35 @@ export const Footer = () => {
                 <Link
                   href={toLocalePath('/#our-strategic-solution-partners')}
                   onClick={(e) => handleSectionClick(e, '/#our-strategic-solution-partners')}
-                  className="text-gray-light hover:text-accent-blue transition-colors text-sm"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
                   {t('footer.partners', 'Çözüm Ortakları')}
                 </Link>
               </li>
               <li>
-                <Link href={toLocalePath('/contact')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/contact')} className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.contact', 'İletişim')}
                 </Link>
               </li>
               <li>
-                <Link href={toLocalePath('/blog')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/blog')} className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.news', 'Haberler')}
                 </Link>
               </li>
               <li>
-                <Link href={toLocalePath('/privacy-policy')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/privacy-policy')} className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.gdprPolicy', 'KVKK Gizlilik Politikası')}
                 </Link>
               </li>
               <li>
-                <Link href={toLocalePath('/cookie')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
+                <Link href={toLocalePath('/cookie')} className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm">
                   {t('footer.cookiePolicy', 'Çerez Politikası')}
                 </Link>
               </li>
               <li>
                 <button
                   type="button"
-                  className="nesil-open-modal text-gray-light hover:text-accent-blue transition-colors text-sm text-left bg-transparent border-0 p-0 cursor-pointer inline-block"
+                  className="nesil-open-modal inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm text-left bg-transparent border-0 p-0 cursor-pointer"
                 >
                   {t('footer.cookiePreferences', 'Çerez Tercihleri')}
                 </button>
@@ -180,17 +180,17 @@ export const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-white">{t('footer.contactTitle', 'İletişim')}</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="tel:+902322450076" className="text-gray-light hover:text-accent-blue transition-colors">
+                <a href="tel:+902322450076" className="inline-flex min-h-[44px] min-w-[44px] items-center text-gray-light hover:text-accent-blue transition-colors">
                   <span className="font-semibold">{t('footer.phone', 'Telefon')} (TR):</span> +90 232 245 00 76
                 </a>
               </li>
               <li>
-                <a href="tel:+40368402002" className="text-gray-light hover:text-accent-blue transition-colors">
+                <a href="tel:+40368402002" className="inline-flex min-h-[44px] min-w-[44px] items-center text-gray-light hover:text-accent-blue transition-colors">
                   <span className="font-semibold">{t('footer.phone', 'Telefon')} (RO):</span> +40 368 402 002
                 </a>
               </li>
               <li>
-                <a href={`mailto:${contactEmail}`} className="text-gray-light hover:text-accent-blue transition-colors">
+                <a href={`mailto:${contactEmail}`} className="inline-flex min-h-[44px] min-w-[44px] items-center text-gray-light hover:text-accent-blue transition-colors">
                   <span className="font-semibold">{t('footer.email', 'Email')}:</span> {contactEmail}
                 </a>
               </li>

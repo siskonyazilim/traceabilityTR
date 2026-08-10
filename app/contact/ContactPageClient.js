@@ -356,7 +356,7 @@ export default function ContactPageClient() {
               )}
             </div>
 
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 min-h-[44px]">
               <input
                 id="privacy"
                 {...register('privacy', {
@@ -365,14 +365,21 @@ export default function ContactPageClient() {
                 type="checkbox"
                 aria-invalid={errors.privacy ? 'true' : 'false'}
                 aria-describedby={errors.privacy ? 'privacy-error' : undefined}
-                className="mt-1"
+                className="peer sr-only"
               />
-              <label htmlFor="privacy" className="text-sm text-gray-text">
-                {t('contactPage.privacyText', 'Sunt de acord cu')} {' '}
-                <Link href="/privacy-policy" className="text-accent-blue font-semibold hover:underline">
-                  {t('contactPage.privacyPolicy', 'gizlilik politikasını')}
-                </Link>
-                {' '}*
+              <label htmlFor="privacy" className="flex min-h-[44px] items-start gap-3 text-sm text-gray-text leading-6 cursor-pointer">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-gray-text border-opacity-40 bg-white peer-checked:border-accent-blue peer-checked:bg-accent-blue peer-focus-visible:ring-2 peer-focus-visible:ring-accent-blue peer-focus-visible:ring-offset-1">
+                  <svg className="h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span>
+                  {t('contactPage.privacyText', 'Sunt de acord cu')} {' '}
+                  <Link href="/privacy-policy" className="text-accent-blue font-semibold hover:underline" onClick={(event) => event.stopPropagation()}>
+                    {t('contactPage.privacyPolicy', 'gizlilik politikasını')}
+                  </Link>
+                  {' '}*
+                </span>
               </label>
             </div>
             {errors.privacy && (

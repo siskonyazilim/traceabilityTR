@@ -251,7 +251,7 @@ export const Header = () => {
               )}
             </div>
 
-            <div className="lg:hidden relative w-[80px] sm:w-[92px]">
+            <div className="lg:hidden relative w-[88px] sm:w-[96px]">
               <label htmlFor="mobile-language-select" className="sr-only">
                 {t('language.switchAria', 'Dil değiştir')}
               </label>
@@ -259,7 +259,7 @@ export const Header = () => {
                 id="mobile-language-select"
                 value={locale}
                 onChange={(event) => handleLocaleChange(event.target.value)}
-                className={`h-10 sm:h-12 w-full rounded-md pl-3 pr-8 text-xs font-bold appearance-none transition-all duration-300 cursor-pointer ${
+                className={`h-11 sm:h-12 w-full rounded-md pl-3 pr-8 text-xs font-bold appearance-none transition-all duration-300 cursor-pointer ${
                   useTransparentHeader
                     ? 'text-white bg-white/5 ring-1 ring-white/25 hover:bg-white/15 hover:ring-white/40'
                     : 'text-primary-black bg-white shadow-sm ring-1 ring-slate-200/80 hover:bg-slate-50 hover:ring-slate-300'

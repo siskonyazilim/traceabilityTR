@@ -93,7 +93,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
           aria-label={locale === 'en' ? 'Previous slide' : 'Slide anterior'}
           onClick={goPrev}
           disabled={normalizedSlides.length < 2}
-          className={`absolute left-3 top-1/2 -translate-y-1/2 rounded-md bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
+          className={`absolute left-3 top-1/2 -translate-y-1/2 h-11 w-11 rounded-md bg-white/90 text-lg font-semibold text-slate-800 shadow transition flex items-center justify-center ${
             normalizedSlides.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
           }`}
         >
@@ -104,7 +104,7 @@ export default function PartnerStorySlider({ slides = [], partnerName, locale = 
           aria-label={locale === 'en' ? 'Next slide' : 'Slide urmator'}
           onClick={goNext}
           disabled={normalizedSlides.length < 2}
-          className={`absolute right-3 top-1/2 -translate-y-1/2 rounded-md bg-white/90 px-3 py-2 text-sm font-semibold text-slate-800 shadow transition ${
+          className={`absolute right-3 top-1/2 -translate-y-1/2 h-11 w-11 rounded-md bg-white/90 text-lg font-semibold text-slate-800 shadow transition flex items-center justify-center ${
             normalizedSlides.length < 2 ? 'cursor-not-allowed opacity-50' : 'hover:bg-white'
           }`}
         >
