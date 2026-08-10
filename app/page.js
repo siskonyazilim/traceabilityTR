@@ -1,6 +1,13 @@
 import HomePageClient from './HomePageClient';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../lib/i18n/requestLocale';
 import { getOrganizationSchema, getFaqPageSchema, SITE_URL, LOGO_URL } from '../components/seo/OrganizationSchema';
+import { getHeroVideoAssets } from '../lib/seo/videoCatalog';
+import { toAbsoluteSiteUrl } from '../lib/seo/videoUrl';
+
+const heroVideoAssets = getHeroVideoAssets();
+const heroVideoAbsoluteUrls = heroVideoAssets
+  .map((asset) => toAbsoluteSiteUrl(asset.video, SITE_URL))
+  .filter(Boolean);
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -41,6 +48,7 @@ export async function generateMetadata() {
       type: 'website',
       url: alternates.canonical,
       locale: ogLocale,
+      videos: heroVideoAbsoluteUrls,
       images: [
         {
           url: 'https://izlenebilirlik.com.tr/siskon-logo-header.svg',
@@ -64,6 +72,17 @@ export default async function HomePage() {
 
   const org = getOrganizationSchema();
   const faqPage = getFaqPageSchema(locale, `${SITE_URL}/`);
+  const homepageVideoObjects = heroVideoAssets.map((asset) => ({
+    '@type': 'VideoObject',
+    '@id': `${toAbsoluteSiteUrl(asset.video, SITE_URL)}#video`,
+    'name': `Traceability Homepage Hero Video ${asset.id}`,
+    'description': 'Traceability homepage hero section background video.',
+    'contentUrl': toAbsoluteSiteUrl(asset.video, SITE_URL),
+    'thumbnailUrl': toAbsoluteSiteUrl(asset.thumbnailPath, SITE_URL),
+    'uploadDate': asset.uploadDate,
+    'inLanguage': ['tr', 'en', 'ro'],
+    'publisher': { '@id': org['@id'] },
+  }));
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -96,6 +115,7 @@ export default async function HomePage() {
         'inLanguage': ['tr', 'en', 'ro'],
         'datePublished': '2024-01-01T00:00:00+03:00',
         'dateModified': new Date().toISOString(),
+        'hasPart': homepageVideoObjects.map((videoObject) => ({ '@id': videoObject['@id'] })),
       },
       {
         '@type': 'SoftwareApplication',
@@ -145,6 +165,7 @@ export default async function HomePage() {
       org,
       // ── FAQPage (lokale göre dinamik) ─────────────────────────────────────
       faqPage,
+      ...homepageVideoObjects,
     ],
   };
 

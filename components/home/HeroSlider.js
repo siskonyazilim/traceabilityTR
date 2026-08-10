@@ -5,6 +5,9 @@ import Link from 'next/link';
 import Button from '../ui/Button';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { getHeroSlides } from '../../lib/i18n/contentLocalization';
+import { getHeroVideoAssets } from '../../lib/seo/videoCatalog';
+
+const heroVideoAssets = getHeroVideoAssets();
 
 const slides = [
   {
@@ -12,24 +15,24 @@ const slides = [
     title: 'Soluții de Trasabilitate End-to-End pentru Fabrici Inteligente',
     subtitle: 'Procesul metodic de investiții echilibrează gestionarea riscurilor cu identificarea oportunităților, creând portofolii rezistente, concepute pentru a performa în ciclurile pieței.',
     color: 'from-accent-blue',
-    video: '/video/5389356%20Coll%20Wavebreak%20Warehouse%201920X1080.webm',
-    mobileVideo: '/video/Mobile/5389356%20Coll%20Wavebreak%20Warehouse%201920X1080Mobile.webm',
+    video: heroVideoAssets[0].video,
+    mobileVideo: heroVideoAssets[0].mobileVideo,
   },
   {
     id: 2,
     title: 'Control în Timp Real, Zero Defecțiuni',
     subtitle: 'Abordarea noastră adaptivă transformă provocările în oportunități, oferind valoare durabilă și rezultate excepționale pentru clienții noștri în diverse condiții economice.',
     color: 'from-accent-green',
-    video: '/video/Dislidonus.webm',
-    mobileVideo: '/video/Mobile/DislidonusMobil.webm',
+    video: heroVideoAssets[1].video,
+    mobileVideo: heroVideoAssets[1].mobileVideo,
   },
   {
     id: 3,
     title: 'POKA YOKE',
     subtitle: 'Lucrăm îndeaproape cu investitorii pentru a înțelege obiectivele acestora, creând soluții personalizate care abordează nevoile specifice, menținând în același timp angajamentul nostru față de excelență.',
     color: 'from-accent-yellow',
-    video: '/video/5356320%20Coll%20Wavebreak%20Indoors%201920X1080.webm',
-    mobileVideo: '/video/Mobile/5356320%20Coll%20Wavebreak%20Indoors%201920X1080Mobil.webm',
+    video: heroVideoAssets[2].video,
+    mobileVideo: heroVideoAssets[2].mobileVideo,
   },
 ];
 

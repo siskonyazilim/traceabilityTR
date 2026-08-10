@@ -11,8 +11,7 @@ import { f } from '../../../lib/i18n/sectionTranslations';
 import { toLocalePath } from '../../../lib/i18n/dictionaries';
 import JsonLd from '../../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL } from '../../../components/seo/OrganizationSchema';
-import AeoFaqSection from '../../../components/seo/AeoFaqSection';
-import { getAeoFaqBundle, getAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
+import { getAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
 export async function generateStaticParams() {
@@ -129,7 +128,6 @@ export default async function PartnerDetailPage({ params }) {
   const homeUrl = `${SITE_URL}${toLocalePath('/', locale)}`;
   const partnerListUrl = `${SITE_URL}${toLocalePath(detailBasePath, locale)}`;
   const org = getOrganizationSchema();
-  const faqBundle = getAeoFaqBundle('partnerDetail', locale);
   const faqSchema = getAeoFaqSchema('partnerDetail', locale, pageUrl);
 
   const jsonLd = {
@@ -229,8 +227,6 @@ export default async function PartnerDetailPage({ params }) {
               locale={locale}
             />
           ) : null}
-
-          <AeoFaqSection bundle={faqBundle} />
 
           {/* Previous / Next Navigation */}
           <nav className="clear-both mt-16 border-t border-slate-200 pt-10">

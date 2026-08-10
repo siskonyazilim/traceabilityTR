@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:i18n": "node scripts/i18n-lint.mjs"
+    "lint:i18n": "node scripts/i18n-lint.mjs",
+    "test:video-urls": "node scripts/test-video-url-sanitize.mjs"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
