@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { IconTwitter } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer = () => {
@@ -133,7 +132,7 @@ export const Footer = () => {
                   onClick={(e) => handleSectionClick(e, '/#products-tab')}
                   className="text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
-                  {t('footer.industries', 'Industrii')}
+                  {t('footer.industries', 'Sektörler')}
                 </Link>
               </li>
               <li>
@@ -147,7 +146,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link href={toLocalePath('/contact')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  {t('footer.contact', 'Contact')}
+                  {t('footer.contact', 'İletişim')}
                 </Link>
               </li>
               <li>
@@ -162,24 +161,23 @@ export const Footer = () => {
               </li>
               <li>
                 <Link href={toLocalePath('/cookie')} className="text-gray-light hover:text-accent-blue transition-colors text-sm">
-                  {t('footer.cookiePolicy', 'Politica de cookie-uri')}
+                  {t('footer.cookiePolicy', 'Çerez Politikası')}
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
+                  type="button"
                   className="nesil-open-modal text-gray-light hover:text-accent-blue transition-colors text-sm text-left bg-transparent border-0 p-0 cursor-pointer inline-block"
-                  onClick={(e) => e.preventDefault()}
                 >
                   {t('footer.cookiePreferences', 'Çerez Tercihleri')}
-                </a>
+                </button>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.contactTitle', 'Contact')}</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.contactTitle', 'İletişim')}</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="tel:+902322450076" className="text-gray-light hover:text-accent-blue transition-colors">

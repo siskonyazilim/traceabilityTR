@@ -276,13 +276,13 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
           {
             "@type": "ListItem",
             "position": 1,
-            "name": homeLabelByLocale[locale] || homeLabelByLocale.ro,
+            "name": homeLabelByLocale[locale] || homeLabelByLocale.tr,
             "item": homeUrl
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": projectsLabelByLocale[locale] || projectsLabelByLocale.ro,
+            "name": projectsLabelByLocale[locale] || projectsLabelByLocale.tr,
             "item": projectsUrl
           },
           {

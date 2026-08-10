@@ -172,7 +172,7 @@ export default async function CatalogProductDetailPage({ params }) {
       "price": "0",
       "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
-      "description": offerDescriptionByLocale[locale] || offerDescriptionByLocale.ro
+      "description": offerDescriptionByLocale[locale] || offerDescriptionByLocale.tr
     },
     "featureList": featureListStr
   };
@@ -185,13 +185,13 @@ export default async function CatalogProductDetailPage({ params }) {
       {
         "@type": "ListItem",
         "position": 1,
-        "name": homeLabelByLocale[locale] || homeLabelByLocale.ro,
+        "name": homeLabelByLocale[locale] || homeLabelByLocale.tr,
         "item": homeUrl
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": productsLabelByLocale[locale] || productsLabelByLocale.ro,
+        "name": productsLabelByLocale[locale] || productsLabelByLocale.tr,
         "item": productsUrl
       },
       {

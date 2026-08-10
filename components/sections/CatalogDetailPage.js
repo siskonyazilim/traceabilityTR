@@ -6,9 +6,6 @@ import { toLocalePath } from '../../lib/i18n/dictionaries';
 /* eslint-disable react/prop-types */
 
 function getLocalizedLabels(locale, type) {
-  const isEn = locale === 'en';
-  const isTr = locale === 'tr';
-
   const labelsByLocale = {
     en: {
       backToHome: 'Back to Solutions and Products',
@@ -48,13 +45,7 @@ function getLocalizedLabels(locale, type) {
     },
   };
 
-  let fallbackLocale = 'ro';
-  if (isEn) {
-    fallbackLocale = 'en';
-  } else if (isTr) {
-    fallbackLocale = 'tr';
-  }
-  const labels = labelsByLocale[fallbackLocale];
+  const labels = labelsByLocale[locale] || labelsByLocale.tr;
 
   return {
     ...labels,

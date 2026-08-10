@@ -147,7 +147,7 @@ export default async function CatalogSolutionDetailPage({ params }) {
         '@type': 'Service',
         '@id': `${pageUrl}#service`,
         name: item.title,
-        serviceType: serviceTypeByLocale[locale] || serviceTypeByLocale.ro,
+        serviceType: serviceTypeByLocale[locale] || serviceTypeByLocale.tr,
         description: item.description || item.summary,
         provider: {
           '@type': 'Organization',
@@ -156,7 +156,7 @@ export default async function CatalogSolutionDetailPage({ params }) {
         },
         areaServed: {
           '@type': 'Country',
-          name: areaServedByLocale[locale] || areaServedByLocale.ro,
+          name: areaServedByLocale[locale] || areaServedByLocale.tr,
         },
       },
       {
@@ -166,13 +166,13 @@ export default async function CatalogSolutionDetailPage({ params }) {
           {
             '@type': 'ListItem',
             'position': 1,
-            'name': homeLabelByLocale[locale] || homeLabelByLocale.ro,
+            'name': homeLabelByLocale[locale] || homeLabelByLocale.tr,
             'item': homeUrl,
           },
           {
             '@type': 'ListItem',
             'position': 2,
-            'name': solutionsLabelByLocale[locale] || solutionsLabelByLocale.ro,
+            'name': solutionsLabelByLocale[locale] || solutionsLabelByLocale.tr,
             'item': solutionsUrl,
           },
           {
