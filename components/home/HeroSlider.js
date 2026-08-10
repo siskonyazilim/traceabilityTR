@@ -59,12 +59,22 @@ export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [forceDesktopVideo, setForceDesktopVideo] = useState(false);
+  const [videoFallbackSrc, setVideoFallbackSrc] = useState('');
+  const [showImageFallback, setShowImageFallback] = useState(false);
   const videoRef = useRef(null);
   const { locale, t } = useLanguage();
   const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
   const activeSlide = localizedSlides[current];
-  const useMobileSource = Boolean(activeSlide?.mobileVideo) && !forceDesktopVideo && activeSlide?.id !== 1;
+  const resolvedDesktopVideo = videoFallbackSrc || activeSlide?.video;
+  const useMobileSource = Boolean(activeSlide?.mobileVideo) && !forceDesktopVideo && !videoFallbackSrc && activeSlide?.id !== 1;
   const firstSlideSubtitleLines = useMemo(() => splitIntoTwoBalancedLines(localizedSlides[0]?.subtitle), [localizedSlides]);
+  const fallbackVideoForBrokenSource = heroVideoAssets[2]?.video || heroVideoAssets[0]?.video || '';
+  const fallbackImageBySlideId = {
+    1: '/images/Industries/Organic_Trace_and_Track.webp',
+    2: '/images/Industries/otomotiv.webp',
+    3: '/images/Industries/enerji-kimya.webp',
+  };
+  const activeFallbackImage = fallbackImageBySlideId[activeSlide?.id] || fallbackImageBySlideId[1];
 
   const handleNextSlide = useCallback(() => {
     setCurrent((prev) => (prev + 1) % localizedSlides.length);
@@ -100,7 +110,16 @@ export const HeroSlider = () => {
 
   useEffect(() => {
     setForceDesktopVideo(false);
+    setVideoFallbackSrc('');
+    setShowImageFallback(false);
   }, [current]);
+
+  useEffect(() => {
+    // Ensure browser reloads source list whenever slide source changes.
+    const videoEl = videoRef.current;
+    if (!videoEl) return;
+    videoEl.load();
+  }, [current, forceDesktopVideo, videoFallbackSrc]);
 
   useEffect(() => {
     ensureVideoPlayback();
@@ -135,7 +154,21 @@ export const HeroSlider = () => {
   }, [current, ensureVideoPlayback, forceDesktopVideo]);
 
   const recoverFromMobileStall = useCallback(() => {
+    const videoEl = videoRef.current;
     const isMobileViewport = globalThis.innerWidth <= 1023;
+
+    if (videoEl?.networkState === HTMLMediaElement.NETWORK_NO_SOURCE || videoEl?.error) {
+      if (activeSlide?.id === 2 && fallbackVideoForBrokenSource && !videoFallbackSrc) {
+        setVideoFallbackSrc(fallbackVideoForBrokenSource);
+        setForceDesktopVideo(true);
+      } else {
+        // Last-resort visual fallback so hero never appears blank.
+        setShowImageFallback(true);
+      }
+      return;
+    }
+
+    // If source is not playable, switch to known-good fallback for the 2nd hero slide.
     if (!isMobileViewport || forceDesktopVideo || !activeSlide?.video) {
       ensureVideoPlayback();
       return;
@@ -143,7 +176,31 @@ export const HeroSlider = () => {
 
     // If mobile rendition stalls, fall back to desktop source.
     setForceDesktopVideo(true);
-  }, [activeSlide?.video, ensureVideoPlayback, forceDesktopVideo]);
+  }, [activeSlide?.id, activeSlide?.video, ensureVideoPlayback, fallbackVideoForBrokenSource, forceDesktopVideo, videoFallbackSrc]);
+
+  useEffect(() => {
+    // Some browsers report decode failure only after initial source selection.
+    // Watch briefly and fallback if slide 2 still has no decodable source.
+    const timer = globalThis.setTimeout(() => {
+      const videoEl = videoRef.current;
+      if (!videoEl || activeSlide?.id !== 2 || videoFallbackSrc) {
+        return;
+      }
+
+      const noSource = videoEl.networkState === HTMLMediaElement.NETWORK_NO_SOURCE;
+      const notReady = videoEl.readyState === HTMLMediaElement.HAVE_NOTHING;
+      if ((noSource || videoEl.error) && notReady) {
+        if (fallbackVideoForBrokenSource && !videoFallbackSrc) {
+          setVideoFallbackSrc(fallbackVideoForBrokenSource);
+          setForceDesktopVideo(true);
+        } else {
+          setShowImageFallback(true);
+        }
+      }
+    }, 1100);
+
+    return () => globalThis.clearTimeout(timer);
+  }, [activeSlide?.id, fallbackVideoForBrokenSource, videoFallbackSrc]);
 
   const goToSlide = (index) => {
     setCurrent(index);
@@ -154,6 +211,13 @@ export const HeroSlider = () => {
     <div className="relative w-full overflow-hidden bg-black" style={{ height: '100svh', minHeight: '500px' }}>
       {/* Active slide only for reduced network and CPU */}
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
+        {showImageFallback ? (
+          <div
+            className="absolute inset-0 w-full h-full bg-center bg-cover"
+            style={{ backgroundImage: `url('${activeFallbackImage}')` }}
+            aria-hidden="true"
+          />
+        ) : null}
         <video
           ref={videoRef}
           autoPlay
@@ -166,12 +230,12 @@ export const HeroSlider = () => {
           onStalled={recoverFromMobileStall}
           onWaiting={recoverFromMobileStall}
           onError={recoverFromMobileStall}
-          className="absolute inset-0 w-full h-full object-cover"
+          className={`absolute inset-0 w-full h-full object-cover ${showImageFallback ? 'opacity-0' : 'opacity-100'}`}
         >
           {useMobileSource ? (
             <source src={activeSlide.mobileVideo} media="(max-width: 1023px)" type="video/webm" />
           ) : null}
-          <source src={activeSlide.video} type="video/webm" />
+          <source src={resolvedDesktopVideo} type="video/webm" />
         </video>
 
         <div className="absolute inset-0 bg-primary-black/35"></div>
