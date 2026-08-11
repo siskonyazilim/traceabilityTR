@@ -44,7 +44,7 @@ export async function generateMetadata() {
     ogLocale = 'tr_TR';
   }
 
-  const alternates = getLanguageAlternates(pathname);
+  const alternates = getLanguageAlternates(pathname, locale);
 
   return {
     title,
@@ -55,11 +55,10 @@ export async function generateMetadata() {
     icons: {
       icon: [
         { url: '/favicon.svg', type: 'image/svg+xml' },
-        { url: '/favicon.ico', type: 'image/x-icon' },
         { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
         { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
       ],
-      shortcut: '/favicon.ico',
+      shortcut: '/favicon.svg',
       apple: [
         { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
       ],
