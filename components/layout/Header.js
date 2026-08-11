@@ -168,17 +168,17 @@ export const Header = () => {
           {/* Brand logo */}
           <Link
             href={toLocalePath('/')}
-            className="inline-flex h-full items-center"
+            onClick={() => setIsOpen(false)}
+            className={`font-poppins text-2xl sm:text-3xl font-extrabold tracking-tight leading-none transition-all duration-300 hover:tracking-normal self-center ${
+              useTransparentHeader ? 'text-white' : 'text-primary-black'
+            }`}
+            aria-label="Traceability"
           >
-            <img
-              src={useTransparentHeader ? '/TraceabilityWhite.svg' : '/Traceability.svg'}
-              alt="Traceability"
-              className="block h-9 sm:h-11 lg:h-12 w-auto transition-all duration-300 drop-shadow-[0_4px_14px_rgba(0,0,0,0.22)]"
-            />
+            Traceability
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8 self-center">
             {navItems.map((item) => (
               <div key={item.label}>
                 {item.href.startsWith('#') ? (
@@ -206,7 +206,7 @@ export const Header = () => {
           </nav>
 
           <div className="flex items-center gap-3">
-            <div ref={langMenuRef} className="relative hidden lg:block w-[116px]">
+            <div ref={langMenuRef} className="relative hidden lg:block w-[116px] self-center">
               <button
                 type="button"
                 onClick={(event) => {
