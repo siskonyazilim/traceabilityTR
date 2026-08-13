@@ -34,7 +34,7 @@ export async function generateMetadata() {
   if (isEn) {
     description = 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.';
   } else if (isTr) {
-    description = 'Traceability; RFID, RTLS, WMS, Poka Yoke ve uçtan uca MES/ERP entegrasyonu ile akıllı fabrikalar için endüstriyel izlenebilirlik, MES ve üretim otomasyon çözümleri sunar.';
+    description = 'Akıllı fabrikalar için uçtan uca izlenebilirlik çözümleri.';
   }
 
   let ogLocale = 'ro_RO';
@@ -54,11 +54,12 @@ export async function generateMetadata() {
     manifest: '/site.webmanifest',
     icons: {
       icon: [
+        { url: '/favicon.ico', type: 'image/x-icon' },
         { url: '/favicon.svg', type: 'image/svg+xml' },
         { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
         { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
       ],
-      shortcut: '/favicon.svg',
+      shortcut: '/favicon.ico',
       apple: [
         { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
       ],
