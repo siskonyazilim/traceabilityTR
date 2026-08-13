@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://izlenebilirlik.com.tr/</loc>
@@ -720,7 +720,141 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Blog: RO -->
-  <!-- Katalog ÃœrÃ¼nleri: RO -->
-  <!-- Katalog Ã‡Ã¶zÃ¼mleri: RO -->
+
+  <!-- Çözümler: TR (listing + detail) -->
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solutions</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/image-processing-quality-control"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/procesare-imagini-control-calitate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/mes-erp-system-integration"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/integrare-sisteme-mes-erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/poka-yoke-error-proofing"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/poka-yoke"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/rfid-traceability"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/rfid-trasabilitate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/rtls-real-time-location"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/rtls-localizare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/wms-warehouse-management"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/wms-depozit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi"/>
+  </url>
+
+  <!-- Çözüm Ortakları: TR (listing + detail) -->
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solution-partners</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solution-partners/beckhoff</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/beckhoff"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/beckhoff"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/beckhoff"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/beckhoff"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solution-partners/interroll</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/interroll"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/interroll"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/interroll"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/interroll"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solution-partners/markem-imaje</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/markem-imaje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/markem-imaje"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/markem-imaje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/markem-imaje"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solution-partners/sewio</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/sewio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/sewio"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/sewio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/sewio"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solution-partners/sick</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/sick"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/sick"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/sick"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/sick"/>
+  </url>
+  <url>
+    <loc>https://izlenebilirlik.com.tr/solution-partners/universal-robots</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/universal-robots"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/universal-robots"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/universal-robots"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/universal-robots"/>
+  </url>
+
 </urlset>
