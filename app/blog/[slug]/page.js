@@ -151,7 +151,7 @@ export default async function BlogDetailPage({ params }) {
   const coverImage = post.coverImage || post.image || '';
   const hasCoverImage = Boolean(coverImage);
 
-  let onsuiteUrl = 'https://onsuite.com.tr/ro/modules/trace';
+  let onsuiteUrl = 'https://onsuite.ro/modules/trace';
   if (locale === 'tr') {
     onsuiteUrl = 'https://onsuite.com.tr/tr/moduller/trace';
   } else if (locale === 'en') {

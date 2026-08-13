@@ -13,7 +13,7 @@ import { toLocalePath } from '../../lib/i18n/dictionaries';
 export default function BorgwarnerLaserDetailPage({ locale = 'tr', backHref, localizedProjects, dict }) {
   const currentDict = dict || {};
 
-  let onsuiteUrl = 'https://onsuite.com.tr/ro/modules/trace';
+  let onsuiteUrl = 'https://onsuite.ro/modules/trace';
   if (locale === 'tr') {
     onsuiteUrl = 'https://onsuite.com.tr/tr/moduller/trace';
   } else if (locale === 'en') {
