@@ -82,11 +82,11 @@
     "offices": {
       "brasov": {
         "name": "România - Brașov",
-        "address": "Punct de lucru: Str. Turnului Nr.5,\nClădirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România"
+        "address": "Str. Turnului Nr.5,\nClădirea M.U.M. Scara 3, Etajul 2, Biroul 5, 500152\nBrașov, România"
       },
       "izmir": {
         "name": "Turcia - İzmir",
-        "address": "Campusul Tınaztepe, Universitatea Dokuz Eylül\nClădirea Depark Beta, Cartierul Adatepe\nStrada Doğuş Nr. 207/AG, Etaj 2, Nr. 202\n35390 Buca/İzmir, Turcia"
+        "address": "Campusul Central, Universitatea Dokuz Eylül\nClădirea DEPARK Beta, Cartierul Adatepe\nStrada Doğuş Nr. 207/AG, Etaj: 2 Nr. 202\n35390 Buca/İzmir, Turcia"
       }
     },
     "errors": {

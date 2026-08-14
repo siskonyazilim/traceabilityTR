@@ -83,11 +83,11 @@
     "offices": {
       "brasov": {
         "name": "Romanya - Brașov",
-        "address": "Çalışma noktası: Str. Turnului No.5,\nM.U.M. Binası, Giriş 3, Kat 2, Ofis 5, 500152\nBrașov, Romanya"
+        "address": "Str. Turnului No.5,\nM.U.M. Binası, Giriş 3, Kat 2, Ofis 5, 500152\nBrașov, Romanya"
       },
       "izmir": {
         "name": "Türkiye - İzmir",
-        "address": "Dokuz Eylül Üniversitesi Merkez Kampüsü\nDEPARK Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat 2, No:202\n35390 Buca/İzmir, Türkiye"
+        "address": "Dokuz Eylül Üniversitesi Merkez Kampüsü\nDEPARK Beta Binası, Adatepe Mahallesi\nDoğuş Caddesi No:207/AG, Kat: 2 No:202\n35390 Buca/İzmir, Türkiye"
       }
     },
     "errors": {
