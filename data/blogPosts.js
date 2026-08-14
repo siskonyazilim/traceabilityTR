@@ -1,5 +1,88 @@
 export const blogPosts = [
   {
+    id: 15,
+    title: 'RFID ve Barkod Karşılaştırması: Doğru Teknolojiyi Seçmek',
+    titleTr: 'RFID ve Barkod Karşılaştırması: Doğru Teknolojiyi Seçmek',
+    titleEn: 'RFID and Barcode Comparison: Choosing the Right Technology',
+    titleRo: 'Comparație între RFID și Codul de Bare: Alegerea Tehnologiei Potrivite',
+    slug: 'rfid-and-barcode-comparison',
+    slugTr: 'rfid-ve-barkod-karsilastirmasi',
+    slugEn: 'rfid-and-barcode-comparison',
+    slugRo: 'comparatie-intre-rfid-si-codul-de-bare',
+    category: 'Teknoloji',
+    categoryEn: 'Technology',
+    categoryRo: 'Tehnologie',
+    date: '2026-08-14',
+    author: 'Admin',
+    readTime: 5,
+    image: '/images/blog/RFIDvsBarkod.png',
+    imageTr: '/images/blog/RFIDvsBarkod.png',
+    imageEn: '/images/blog/RFIDvsBarkodEn.png',
+    imageRo: '/images/blog/RFIDvsBarkodRo.png',
+    excerpt: 'RFID ve barkod karşılaştırması: görüş hattı, okuma hızı, maliyet ve standartlar açısından hangi izlenebilirlik görevine hangi teknoloji uygun, inceliyoruz.',
+    excerptEn: 'RFID and barcode comparison: we examine which technology fits which traceability task in terms of line of sight, reading speed, cost, and standards.',
+    excerptRo: 'Comparație între RFID și codul de bare: analizăm ce tehnologie este potrivită pentru fiecare sarcină de trasabilitate în funcție de vizibilitate, viteză de citire, costuri și standarde.',
+    tags: ['RFID', 'barkod', 'EPC Gen2', 'envanter', 'izlenebilirlik'],
+    metaKeywords: 'RFID ve barkod karşılaştırması, RFID izlenebilirlik, EPC Gen2, SGTIN, envanter sayımı, barkod okuyucu',
+    content: `
+      <p>İzlenebilirlik yatırımlarında sık sorulan sorulardan biri, ürün kimliğinin barkodla mı yoksa RFID etiketiyle mi taşınacağıdır. Soru genellikle bir üstünlük karşılaştırması olarak kurulur; oysa iki teknoloji aynı ürün kimliğini farklı okuma koşullarında taşımak üzere geliştirilmiştir ve çoğu tesiste birbirinin yerine değil, farklı görevlerde birlikte kullanılır.</p>
+
+      <p>Doğru kurulan soru, hangisinin üstün olduğu değil hangi okuma koşulunun hangi taşıyıcıyı gerektirdiğidir. <a href="/blog/urun-izlenebilirliginin-onemi">Üretimde izlenebilirliğin önemi</a> arttıkça doğru teknoloji seçimi yatırım getirisini doğrudan belirler. Bu makalede iki yöntemi görüş hattı, okuma kapasitesi, maliyet yapısı, ortam koşulları ve standartlar açısından karşılaştıracak; ardından hangi izlenebilirlik görevinin hangi teknolojiye daha uygun olduğunu inceleyeceğiz.</p>
+
+      <h2>RFID ve Barkod Karşılaştırması: Teknik Farklar</h2>
+
+      <h3>Ortak Nokta: Taşınan Ürün Kimliği</h3>
+      <p>İki teknolojinin de taşıdığı şey aynıdır: ürünü tekil olarak tanımlayan numara. Barkodda bu numara GTIN olarak kodlanır; RFID tarafında ise GTIN ile seri numarasının birleşiminden oluşan ve seri numarası barkod veri yapısındaki karşılığıyla aynı anlama gelen bir kimlik kullanılır. Bu nedenle iki taşıyıcı arasında geçiş bir veri dönüşümü değil, aynı kimliğin farklı ortamda ifadesidir. Örneğin RFID etiketi taşıyan bir ürünün kasada okunan barkodu da aynı ürün numarasına işaret eder.</p>
+
+      <h3>Görüş Hattı ve Okuma Biçimi</h3>
+      <p>Barkod optik bir taşıyıcıdır; okuyucunun kodu görmesi gerekir. RFID ise radyo frekansıyla çalıştığı için etiketin görünmesi gerekmez, ambalajın veya kolinin içinden okunabilir. Bu fark operasyonda en çok kolileme ve depo süreçlerinde hissedilir. Örneğin kapalı bir kolinin içindeki ürünlerin sayımı barkodla ancak koli açılarak yapılabilirken, RFID ile koli hiç açılmadan tamamlanabilir. Buna karşılık görünürlük şart olmadığı için hangi etiketin okunduğunu operatörün doğrulaması da güçleşir.</p>
+
+      <h3>Aynı Anda Okunan Birim Sayısı</h3>
+      <p>Barkod okuyucu tek seferde tek kod okur; süreç ürün başına bir işlem gerektirir. RFID okuyucu ise okuma alanındaki çok sayıda etiketi kısa sürede sırayla sorgular. Bu, sayım süresini büyük ölçüde kısaltır ancak yeni bir risk getirir: istenmeyen etiketlerin de okunması. Örneğin sevkiyat kapısındaki bir okuyucu, yanlış konumlandırıldığında komşu rampadaki paleti de listeye ekleyebilir. Bu nedenle RFID kurulumlarında okuma alanının fiziksel olarak sınırlandırılması, okuyucu seçiminden daha belirleyicidir.</p>
+
+      <h3>Maliyet Yapısındaki Fark</h3>
+      <p>Barkodun birim maliyeti pratikte baskı maliyetidir; ambalaja basıldığında ek bir donanım gerektirmez. RFID etiketinde ise her birim için bir yonga ve anten maliyeti oluşur; buna okuyucu, anten yerleşimi ve devreye alma çalışması eklenir. Bu yüzden karar genellikle ürünün birim değerine bağlıdır. Örneğin yüksek adetli ve düşük birim fiyatlı bir gıda ürününde etiket maliyeti anlamsızlaşırken, tekstil ürününde envanter doğruluğu kazancı bu maliyeti karşılayabilir.</p>
+
+      <h3>Veriyi Sonradan Güncelleme</h3>
+      <p>Basılmış bir barkodun içeriği değiştirilemez; veri güncellenmek istendiğinde yeni kod basılır. RFID etiketinin belleğine ise süreç içinde yazma yapılabilir. Bu özellik, ürünün durumunu taşıyıcının kendisinde tutması gereken uygulamalarda avantaj sağlar. Örneğin bir taşıma kabının hangi işlemden geçtiği etiket belleğine yazılarak sistem bağlantısı olmayan bir istasyonda da okunabilir hale gelir. Bu esneklik, verinin tek doğru kaynağının hangisi olduğu belirlenmediğinde kolayca çelişkiye dönüşür.</p>
+
+      <h3>Metal, Sıvı ve Ortam Etkileri</h3>
+      <p>Barkod, üzerine basıldığı yüzey okunabilir kaldığı sürece malzemeden etkilenmez. RFID performansı ise metal ve sıvı yakınında düşer; bu ortamlar için özel etiket tasarımı ve anten konumlandırması gerekir. Kirlenme ve aşınma ise tersine, optik taşıyıcıyı daha çok etkiler. Örneğin yağlı bir üretim ortamında barkod okunamaz hale gelirken, aynı ortamda metal parçaya uygulanan standart bir RFID etiketi de beklenen mesafeden okunmayabilir.</p>
+
+      <h2>Karar ve Uygulama</h2>
+
+      <h3>Standartlar: EPC Gen2 ve GS1 Barkodları</h3>
+      <p>Her iki tarafta da açık standartlar vardır ve bu standartlar birlikte çalışabilirliği sağlar. RFID tarafında pasif UHF etiketlerin okuyucuyla haberleşmesini tanımlayan <a href="https://www.gs1.org/standards/rfid/uhf-air-interface-protocol" target="_blank" rel="noopener noreferrer">EPC Gen2 hava arayüzü protokolü ilk kez 2004 yılında yayımlanmış</a> ve ISO/IEC 18000-63 ile uyumlu hale getirilmiştir. Barkod tarafında ise EAN-13, GS1 DataMatrix ve QR Kod gibi <a href="/blog/izlenebilirlikte-kullanilan-barkod-sistemleri">izlenebilirlikte kullanılan barkod sistemleri</a> aynı kimlik yapısını kullanır. Örneğin standartlara uygun bir etiket, farklı üreticinin okuyucusuyla ek yapılandırma gerektirmeden okunur.</p>
+
+      <h3>Hangi Görev Hangi Teknolojiye Uygun</h3>
+      <p>Satış noktası ve kasa işlemleri barkodun alanıdır; <a href="https://ref.gs1.org/guidelines/2d-in-retail/" target="_blank" rel="noopener noreferrer">GS1'in 2D geçiş kılavuzu</a> RFID'yi satış noktası kapsamı dışında tutmakta, buna karşılık özellikle hazır giyim sektöründe envanter yönetiminde kullanımının arttığını belirtmektedir. Perakendedeki dönüşüm süreci için <a href="/blog/gs1-sunrise-2027-2d-barkod-gecisi">GS1 Sunrise 2027 2D barkod geçişi</a> standartları şekillendirmektedir. Depo sayımı, stok doğruluğu ve kayıp önleme gibi çok birimli süreçlerde RFID belirgin biçimde hızlıdır. Parti ve seri düzeyi izlenebilirlik ise her iki taşıyıcıyla da kurulabilir. Örneğin aynı üründe kasada barkod, depoda RFID okunarak tek bir kimlik iki farklı süreçte kullanılabilir.</p>
+
+      <h3>Birlikte Kullanım ve Sistem Kurulumu</h3>
+      <p>Uygulamada yaygın çözüm, aynı ürün üzerinde iki taşıyıcının birlikte bulunmasıdır; örneğin bir askı etiketi hem basılı barkod hem RFID yonga taşıyabilir. Bu durumda kritik konu taşıyıcı seçimi değil, iki okuma kanalının aynı ürün kimliğine yazması ve olay kayıtlarının tek bir yapıda toplanmasıdır. Aksi halde tesiste iki ayrı ve zamanla çelişen envanter oluşur. Örneğin RFID sayımının depo sistemine, barkod okumasının üretim sistemine yazıldığı bir kurulumda hangi verinin doğru olduğu tartışma konusu haline gelir.</p>
+
+      <h2>Sonuç</h2>
+      <p>RFID ve barkod karşılaştırması, bir teknolojinin diğerini geçersiz kıldığı bir yarış değildir. Barkod düşük birim maliyetiyle ve satış noktasındaki yaygınlığıyla ürün kimliğinin temel taşıyıcısı olmayı sürdürmekte; RFID ise görüş hattı gerektirmemesi ve aynı anda çok sayıda birimi okuyabilmesiyle envanter ve sayım süreçlerinde belirgin kazanç sağlamaktadır. Maliyet yapısı, ortam koşulları ve verinin sonradan güncellenip güncellenmeyeceği kararı yönlendiren üç temel ölçüttür.</p>
+
+      <p>Bu nedenle doğru soru hangi teknolojinin daha iyi olduğu değil, hangi izlenebilirlik görevinin hangi okuma koşulunda gerçekleştiğidir. İki taşıyıcının aynı ürün kimliğini paylaştığı ve olay kayıtlarının tek yapıda toplandığı bir kurulumda seçim bir ödünleşme olmaktan çıkar; teknoloji tercihi süreç tasarımının sonucu haline gelir.</p>
+
+      <h2>Sıkça Sorulan Sorular</h2>
+
+      <h3>RFID barkodun yerini alacak mı?</h3>
+      <p>Yakın vadede beklenen bir durum değildir. Satış noktasında ve düşük birim değerli ürünlerde barkodun maliyet avantajı sürmektedir. RFID ise envanter doğruluğu ve hızlı sayım gerektiren süreçlerde yaygınlaşmaktadır; iki taşıyıcı çoğu tesiste farklı görevlerde birlikte kullanılmaktadır.</p>
+
+      <h3>Aynı ürüne hem barkod hem RFID uygulanabilir mi?</h3>
+      <p>Uygulanabilir ve yaygın bir yaklaşımdır; askı etiketleri buna örnektir. Kritik koşul, iki taşıyıcının aynı ürün kimliğini ifade etmesi ve okuma kayıtlarının tek bir sistemde toplanmasıdır. Aksi halde birbiriyle çelişen iki envanter kaydı oluşur.</p>
+
+      <h3>RFID hangi durumlarda beklenen sonucu vermez?</h3>
+      <p>Metal ve sıvı yakınında okuma performansı düşer; bu ortamlar özel etiket tasarımı ve anten yerleşimi gerektirir. Ayrıca okuma alanının sınırlanmadığı kurulumlarda istenmeyen etiketler de okunabilir, bu da sayım sonucunu hatalı gösterir.</p>
+
+      <h2>Siskon İzlenebilirlik Çözümleri</h2>
+      <p><strong>Siskon İzlenebilirlik Çözümleri</strong> ile tüm üretim süreçlerinizi tek bir platformdan yönetebilirsiniz.</p>
+      <p>Siskon İzlenebilirlik Çözümleri üretime ait test sonuçları ve ölçümleri, kullanılan malzemeleri, set edilen ve gerçekleşen proses verileri, görsel kontrol, tamir, numune ölçüm istasyonlarından toplanan verileri, gerçek zamanlı olarak üretim süreçlerinizi izlemenizi, geçmişe dönük raporlamanızı ve analitik ölçümler yapmanızı sağlar. Malzeme akışı, iş emirleri, takım yönetimi, enerji kullanımı gibi üretimin operasyonel süreçlerini destekler ve böylece otomatikleştirilmiş süreçlerin dışındaki kritik bilgilerin de dijital olarak toplanmasına yardımcı olur. Yatay ve dikey entegrasyonlar sayesinde tüm üretim süreçlerinizi dijital olarak görüntülemenizi ve yönetmenizi sağlar.</p>
+      <p><em>“Sürekli Kontrol Sıfır Hata”</em> mottosuyla, işletmenizin uçtan uca dijital izlenebilirliğini gerçekleştirin.</p>
+    `,
+  },
+  {
     id: 1,
     title: 'GS1 Sunrise 2027: Perakendede 2D Barkoda Geçiş Süreci',
     titleTr: 'GS1 Sunrise 2027: Perakendede 2D Barkoda Geçiş Süreci',

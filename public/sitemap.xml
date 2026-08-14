@@ -153,7 +153,17 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/gs1-sunrise-2027-tranzitia-la-coduri-de-bare-2d" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barkod-gecisi" />
   </url>
-  <!-- Katalog ÃœrÃ¼nleri: TR -->
+  <url>
+    <loc>https://izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/rfid-and-barcode-comparison" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/comparatie-intre-rfid-si-codul-de-bare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi" />
+  </url>
+  <!-- Katalog Ürünleri: TR -->
   <url>
     <loc>https://izlenebilirlik.com.tr/catalog/products/a-plus-plus-plus-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
