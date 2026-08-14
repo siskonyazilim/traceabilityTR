@@ -244,56 +244,65 @@ export default async function BlogDetailPage({ params }) {
             </Link>
           </div>
 
-          <header className="mb-8 border-b border-slate-200 pb-6">
-            <div className="mx-auto w-full max-w-none">
-            <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
-              <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
-              <time className="text-gray-text" dateTime={post.date ? new Date(post.date).toISOString() : undefined}>{date}</time>
-            </div>
+          <header className="mb-10 border-b border-slate-200 pb-10">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center lg:gap-12">
+              {/* Sol Taraf: Başlık ve Meta Bilgileri (Dikeyde Ortalanmış) */}
+              <div className="flex flex-col justify-center md:col-span-7 lg:col-span-7">
+                <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+                  <span className="font-semibold uppercase tracking-wide text-secondary-blue">{post.category}</span>
+                  <span className="text-slate-300">•</span>
+                  <time className="text-gray-text" dateTime={post.date ? new Date(post.date).toISOString() : undefined}>{date}</time>
+                </div>
 
-            <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-slate-900">{post.title}</h1>
-            <div className="mt-4 flex items-center gap-3">
-              <p className="text-sm font-medium text-gray-text" rel="author">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
-              <Image
-                src="/siskon-logo-header.svg"
-                alt="Siskon"
-                width={96}
-                height={28}
-              />
-            </div>
-            </div>
-          </header>
+                <h1 className="text-2xl font-bold leading-snug text-slate-900 sm:text-3xl lg:text-[34px] lg:leading-tight">
+                  {post.title}
+                </h1>
 
-          <figure className="mb-10 mx-auto w-full max-w-none overflow-hidden rounded-xl bg-slate-100">
-            {hasCoverImage ? (
-              <Image
-                src={coverImage}
-                alt={post.title}
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto"
-                quality={92}
-                priority
-                fetchPriority="high"
-              />
-            ) : (
-              <div className="flex h-[340px] md:h-[480px] items-center justify-center bg-slate-100 text-slate-500">
-                <div className="flex items-center gap-2 text-sm font-medium">
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                    <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="1.7" />
-                    <circle cx="9" cy="10" r="1.8" strokeWidth="1.7" />
-                    <path d="M21 16l-5-5-7 7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>
-                    {locale === 'tr' && 'Kapak görseli bulunmuyor'}
-                    {locale === 'en' && 'Cover image unavailable'}
-                    {locale === 'ro' && 'Imagine coperta indisponibila'}
-                  </span>
+                <div className="mt-5 flex items-center gap-3">
+                  <p className="text-sm font-medium text-gray-text" rel="author">{f(locale, 'blogDetailPage', 'writtenBy')}</p>
+                  <Image
+                    src="/siskon-logo-header.svg"
+                    alt="Siskon"
+                    width={96}
+                    height={28}
+                  />
                 </div>
               </div>
-            )}
-          </figure>
+
+              {/* Sağ Taraf: Küçültülmüş Kapak Görseli */}
+              <div className="md:col-span-5 lg:col-span-5">
+                <figure className="relative aspect-[16/10] sm:aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50/90 shadow-sm border border-slate-200/80 p-2 sm:p-3 flex items-center justify-center">
+                  {hasCoverImage ? (
+                    <Image
+                      src={coverImage}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 520px"
+                      className="object-contain transition-transform duration-300 hover:scale-[1.02]"
+                      quality={95}
+                      priority
+                      fetchPriority="high"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-slate-100 text-slate-500">
+                      <div className="flex items-center gap-2 text-sm font-medium">
+                        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                          <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="1.7" />
+                          <circle cx="9" cy="10" r="1.8" strokeWidth="1.7" />
+                          <path d="M21 16l-5-5-7 7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span>
+                          {locale === 'tr' && 'Kapak görseli bulunmuyor'}
+                          {locale === 'en' && 'Cover image unavailable'}
+                          {locale === 'ro' && 'Imagine coperta indisponibila'}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </figure>
+              </div>
+            </div>
+          </header>
 
           <div
             dangerouslySetInnerHTML={{ __html: safeContent }}
