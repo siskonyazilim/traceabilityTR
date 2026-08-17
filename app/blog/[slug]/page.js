@@ -76,7 +76,7 @@ export async function generateMetadata({ params }) {
     openGraphLocale = 'en_US';
   }
 
-  let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
+  let ogImage = 'https://izlenebilirlik.com.tr/og-image.png';
   if (post.image) {
     ogImage = post.image.startsWith('http') ? post.image : `https://izlenebilirlik.com.tr${post.image}`;
   }

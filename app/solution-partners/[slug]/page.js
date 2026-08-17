@@ -68,7 +68,7 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
-  let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
+  let ogImage = 'https://izlenebilirlik.com.tr/og-image.png';
   if (partner.logo) {
     ogImage = partner.logo.startsWith('http') ? partner.logo : `https://izlenebilirlik.com.tr${partner.logo}`;
   }
@@ -86,8 +86,8 @@ export async function generateMetadata({ params }) {
       images: [
         {
           url: ogImage,
-          width: 800,
-          height: 600,
+          width: 1200,
+          height: 630,
           alt: title,
         },
       ],

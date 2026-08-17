@@ -2,7 +2,6 @@ import './globals.css'
 import 'font-awesome/css/font-awesome.min.css'
 import { Layout } from '../components/layout/Layout'
 import { LanguageProvider } from '../components/i18n/LanguageProvider'
-import BreadcrumbSchema from '../components/seo/BreadcrumbSchema'
 import { Kanit } from 'next/font/google'
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../lib/i18n/requestLocale'
 import Script from 'next/script'
@@ -72,10 +71,10 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://izlenebilirlik.com.tr/siskon-logo-header.svg',
-          width: 800,
-          height: 600,
-          alt: 'Traceability Logo',
+          url: 'https://izlenebilirlik.com.tr/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Traceability | Industrial Traceability & MES Solutions',
         },
       ],
     },
@@ -83,7 +82,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://izlenebilirlik.com.tr/siskon-logo-header.svg'],
+      images: ['https://izlenebilirlik.com.tr/og-image.png'],
     },
     alternates,
   };
@@ -203,7 +202,6 @@ export default async function RootLayout({ children }) {
 
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <BreadcrumbSchema />
       </head>
       <body className={kanit.variable} suppressHydrationWarning>
         <noscript>

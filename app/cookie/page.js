@@ -36,9 +36,9 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://izlenebilirlik.com.tr/siskon-logo-header.svg',
-          width: 800,
-          height: 600,
+          url: 'https://izlenebilirlik.com.tr/og-image.png',
+          width: 1200,
+          height: 630,
           alt: title,
         },
       ],
@@ -47,7 +47,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://izlenebilirlik.com.tr/siskon-logo-header.svg'],
+      images: ['https://izlenebilirlik.com.tr/og-image.png'],
     },
   };
 }

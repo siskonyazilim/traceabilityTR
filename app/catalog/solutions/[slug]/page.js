@@ -44,7 +44,7 @@ export async function generateMetadata({ params }) {
 
   const title = `${item.title} | Traceability`;
   const description = item.summary || item.description;
-  let ogImage = 'https://izlenebilirlik.com.tr/siskon-logo-header.svg';
+  let ogImage = 'https://izlenebilirlik.com.tr/og-image.png';
   if (item.image) {
     ogImage = item.image.startsWith('http') ? item.image : `https://izlenebilirlik.com.tr${item.image}`;
   }
