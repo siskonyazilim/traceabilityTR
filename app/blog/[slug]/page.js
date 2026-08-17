@@ -48,8 +48,12 @@ export async function generateMetadata({ params }) {
   const allPosts = await getBlogPostsFromCMS();
   const localizedPosts = localizeBlogPosts(allPosts, locale);
   const { slug: rawSlug } = await params;
+  // CMS postlarında rawSlug bir locale slug'ı olabilir (slugEn/slugRo).
+  // Hem originalSlug (TR base) hem de post.slug (localized) üzerinden bak.
   const baseSlug = resolveSlug('blog', rawSlug);
-  const post = localizedPosts.find((entry) => entry.originalSlug === baseSlug);
+  const post = localizedPosts.find(
+    (entry) => entry.originalSlug === baseSlug || entry.slug === rawSlug
+  );
 
   if (!post) {
     return {
@@ -60,16 +64,26 @@ export async function generateMetadata({ params }) {
 
   const title = `${post.title} | ${f(locale, 'blogDetailPage', 'blogSuffix')}`;
   const description = post.excerpt;
-  const localizedBlogSlug = getLocalizedSlug('blog', baseSlug, locale);
-  const canonicalPath = toLocalePath(`/blog/${localizedBlogSlug}`, locale);
+
+  // Alternate slug’lar: CMS post ise Strapi’nin locale slug alanlarını kullan
+  const getSlugForLocale = (loc) => {
+    if (post._fromCMS) {
+      return loc === 'tr' ? (post.slugTr || post.originalSlug)
+        : loc === 'en' ? (post.slugEn || post.originalSlug)
+        : (post.slugRo || post.originalSlug);
+    }
+    return getLocalizedSlug('blog', baseSlug, loc);
+  };
+
+  const canonicalPath = toLocalePath(`/blog/${getSlugForLocale(locale)}`, locale);
 
   const alternates = {
     canonical: `https://izlenebilirlik.com.tr${canonicalPath}`,
     languages: {
-      'tr': `https://izlenebilirlik.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
-      'en': `https://izlenebilirlik.com.tr/en/blog/${getLocalizedSlug('blog', baseSlug, 'en')}`,
-      'ro': `https://izlenebilirlik.com.tr/ro/blog/${getLocalizedSlug('blog', baseSlug, 'ro')}`,
-      'x-default': `https://izlenebilirlik.com.tr/blog/${getLocalizedSlug('blog', baseSlug, 'tr')}`,
+      'tr': `https://izlenebilirlik.com.tr/blog/${getSlugForLocale('tr')}`,
+      'en': `https://izlenebilirlik.com.tr/en/blog/${getSlugForLocale('en')}`,
+      'ro': `https://izlenebilirlik.com.tr/ro/blog/${getSlugForLocale('ro')}`,
+      'x-default': `https://izlenebilirlik.com.tr/blog/${getSlugForLocale('tr')}`,
     }
   };
 
@@ -118,8 +132,12 @@ export default async function BlogDetailPage({ params }) {
   const allPosts = await getBlogPostsFromCMS();
   const localizedPosts = localizeBlogPosts(allPosts, locale);
   const { slug: rawSlug } = await params;
+  // CMS postlarında rawSlug bir locale slug'ı olabilir (slugEn/slugRo).
+  // Hem originalSlug (TR base) hem de post.slug (localized) üzerinden bak.
   const baseSlug = resolveSlug('blog', rawSlug);
-  const post = localizedPosts.find((p) => p.originalSlug === baseSlug);
+  const post = localizedPosts.find(
+    (p) => p.originalSlug === baseSlug || p.slug === rawSlug
+  );
 
   if (!post) notFound();
 

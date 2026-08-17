@@ -13,7 +13,8 @@ import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/r
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 
-export const ReferenceProjects = () => {
+/* eslint-disable react/prop-types */
+export const ReferenceProjects = ({ cmsProjects = null }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
@@ -26,8 +27,13 @@ export const ReferenceProjects = () => {
     return toLocalePath(`${basePath}/${localizedSlug}`, targetLocale);
   };
   const localizedProjects = useMemo(
-    () => withReferenceProjectTimeline(sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)), locale),
-    [locale]
+    () => {
+      if (cmsProjects && cmsProjects.length > 0) {
+        return withReferenceProjectTimeline(cmsProjects, locale);
+      }
+      return withReferenceProjectTimeline(sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)), locale);
+    },
+    [locale, cmsProjects]
   );
   const featuredProjects = useMemo(() => {
     return [...localizedProjects]

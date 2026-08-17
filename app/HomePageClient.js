@@ -35,7 +35,7 @@ const BlogPreview = dynamic(() => import('../components/home/BlogPreview'), {
 });
 
 /* eslint-disable react/prop-types */
-export default function HomePageClient({ cmsData, cmsSolutions, cmsSectors, cmsCapabilities }) {
+export default function HomePageClient({ cmsData, cmsSolutions, cmsSectors, cmsCapabilities, cmsReferenceProjects }) {
   return (
     <>
       {/* cmsData?.heroSlides varsa CMS'den, yoksa component kendi statik verisini kullanır */}
@@ -43,7 +43,7 @@ export default function HomePageClient({ cmsData, cmsSolutions, cmsSectors, cmsC
       <FaqAccordion cmsFaqs={cmsData?.faqItems} />
       <SolutionsTabs cmsSolutions={cmsSolutions} cmsSectors={cmsSectors} />
       <TechnologyCapabilities cmsCapabilities={cmsCapabilities} />
-      <ReferenceProjects />
+      <ReferenceProjects cmsProjects={cmsReferenceProjects} />
       <StrategicPartners />
       <PerformanceMetrics cmsMetrics={cmsData?.performanceSection} />
       <BlogPreview />

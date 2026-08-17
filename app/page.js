@@ -7,6 +7,7 @@ import { getHomePageFromCMS } from '../lib/cms/homeService';
 import { getSolutionsFromCMS } from '../lib/cms/solutionsService';
 import { getSectorsFromCMS } from '../lib/cms/sectorsService';
 import { getTechnologyCapabilitiesFromCMS } from '../lib/cms/technologiesService';
+import { getReferenceProjectsFromCMS } from '../lib/cms/referenceService';
 
 const heroVideoAssets = getHeroVideoAssets();
 const heroVideoAbsoluteUrls = heroVideoAssets
@@ -79,11 +80,12 @@ export default async function HomePage() {
   const locale = await getRequestLocale();
 
   // CMS'den tüm verileri paralel çek; hata durumunda null → statik fallback
-  const [cmsData, cmsSolutions, cmsSectors, cmsCapabilities] = await Promise.all([
+  const [cmsData, cmsSolutions, cmsSectors, cmsCapabilities, cmsReferenceProjects] = await Promise.all([
     getHomePageFromCMS(locale),
     getSolutionsFromCMS(locale),
     getSectorsFromCMS(locale),
     getTechnologyCapabilitiesFromCMS(locale),
+    getReferenceProjectsFromCMS(locale),
   ]);
 
   const org = getOrganizationSchema();
@@ -196,6 +198,7 @@ export default async function HomePage() {
         cmsSolutions={cmsSolutions}
         cmsSectors={cmsSectors}
         cmsCapabilities={cmsCapabilities}
+        cmsReferenceProjects={cmsReferenceProjects}
       />
     </>
   );

@@ -24,27 +24,42 @@ body {
 /* ── Tüm CerezGo / consent / KVKK elementleri: varsayılan olarak pas-geç ── */
 /* Kural: spesifik olmayan her şey pointer-events:none → banner/widget geri açıyor */
 
-[id^="cg"],   [class^="cg"],
-[id^="nt-"],  [class^="nt-"],
-[id*="cerezgo"],  [class*="cerezgo"],
-[id*="cookie"],   [class*="cookie"],
-[id*="consent"],  [class*="consent"],
-[id*="gdpr"],     [class*="gdpr"],
-[id*="kvkk"],     [class*="kvkk"] {
+[id^="cg"],
+[class^="cg"],
+[id^="nt-"],
+[class^="nt-"],
+[id*="cerezgo"],
+[class*="cerezgo"],
+[id*="cookie"],
+[class*="cookie"],
+[id*="consent"],
+[class*="consent"],
+[id*="gdpr"],
+[class*="gdpr"],
+[id*="kvkk"],
+[class*="kvkk"] {
   pointer-events: none !important;
   touch-action: auto !important;
   background-color: transparent !important;
 }
 
 /* ── Banner / Modal / Widget: tamamen etkileşimli ── */
-[id*="banner"],  [id*="banner"] *,
-[id*="modal"],   [id*="modal"] *,
-[id*="widget"],  [id*="widget"] *,
-[id*="panel"],   [id*="panel"] *,
-[class*="banner"],  [class*="banner"] *,
-[class*="modal"],   [class*="modal"] *,
-[class*="widget"],  [class*="widget"] *,
-[class*="panel"],   [class*="panel"] * {
+[id*="banner"],
+[id*="banner"] *,
+[id*="modal"],
+[id*="modal"] *,
+[id*="widget"],
+[id*="widget"] *,
+[id*="panel"],
+[id*="panel"] *,
+[class*="banner"],
+[class*="banner"] *,
+[class*="modal"],
+[class*="modal"] *,
+[class*="widget"],
+[class*="widget"] *,
+[class*="panel"],
+[class*="panel"] * {
   pointer-events: auto !important;
   touch-action: auto !important;
 }
@@ -327,7 +342,7 @@ section {
   max-width: none;
 }
 
-.legal-doc > *:first-child {
+.legal-doc>*:first-child {
   margin-top: 0;
 }
 
@@ -492,13 +507,11 @@ section {
 }
 
 .pattern-diagonal {
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 20px,
-    rgba(0, 181, 247, 0.03) 20px,
-    rgba(0, 181, 247, 0.03) 40px
-  );
+  background-image: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 20px,
+      rgba(0, 181, 247, 0.03) 20px,
+      rgba(0, 181, 247, 0.03) 40px);
 }
 
 /* Section Dividers */
@@ -557,6 +570,7 @@ section {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -567,6 +581,7 @@ section {
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -578,6 +593,7 @@ section {
     opacity: 0;
     transform: translateY(18px) scale(0.99);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -588,33 +604,43 @@ section {
   0% {
     background-position: -1000px 0;
   }
+
   100% {
     background-position: 1000px 0;
   }
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes pulse-slow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.6;
   }
 }
 
 @keyframes gradient-shift {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -634,12 +660,10 @@ section {
 
 .animate-shimmer {
   animation: shimmer 2s infinite;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%);
   background-size: 1000px 100%;
 }
 
@@ -648,26 +672,26 @@ section {
   animation: gradient-shift 8s ease infinite;
 }
 
-.site-main > * {
+.site-main>* {
   animation: gentleFloatIn 0.36s ease-out both;
 }
 
-.site-main > *:nth-child(2) {
+.site-main>*:nth-child(2) {
   animation-delay: 0.03s;
 }
 
-.site-main > *:nth-child(3) {
+.site-main>*:nth-child(3) {
   animation-delay: 0.06s;
 }
 
-.site-main > *:nth-child(4) {
+.site-main>*:nth-child(4) {
   animation-delay: 0.09s;
 }
 
-.site-main > *:nth-child(5),
-.site-main > *:nth-child(6),
-.site-main > *:nth-child(7),
-.site-main > *:nth-child(8) {
+.site-main>*:nth-child(5),
+.site-main>*:nth-child(6),
+.site-main>*:nth-child(7),
+.site-main>*:nth-child(8) {
   animation-delay: 0.12s;
 }
 
@@ -754,6 +778,7 @@ textarea:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

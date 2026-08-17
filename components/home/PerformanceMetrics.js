@@ -131,7 +131,7 @@ export const PerformanceMetrics = ({ cmsMetrics }) => {
             onClick={handleScroll}
             className="bg-secondary-blue hover:bg-accent-blue text-white"
           >
-            {t('sections.performanceCta', 'Referans projelerimiz')}
+            {cmsMetrics?.ctaLabel || t('sections.performanceCta', 'Referans projelerimiz')}
           </Button>
         </div>
       </Container>

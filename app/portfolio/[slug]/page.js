@@ -49,6 +49,7 @@ import PmiEmbosserDetailPage from '../../../components/sections/PmiEmbosserDetai
 import trDetails from '../../../data/i18n/references/tr/index.js';
 import enDetails from '../../../data/i18n/references/en/index.js';
 import roDetails from '../../../data/i18n/references/ro/index.js';
+import { getReferenceProjects, getReferenceProjectBySlugFromCMS } from '../../../lib/cms/referenceService';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
@@ -73,10 +74,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const locale = await getRequestLocale();
   const isEn = locale === 'en';
-  const localizedProjects = withReferenceProjectTimeline(
-    sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
-    locale
-  );
+  const localizedProjects = await getReferenceProjects(locale);
   const { slug: rawSlug } = await params;
 
   const legacySlugMap = {
@@ -163,10 +161,7 @@ export async function generateMetadata({ params }) {
 
 export default async function PortfolioDetailPage({ params, searchParams }) {
   const locale = await getRequestLocale();
-  const localizedProjects = withReferenceProjectTimeline(
-    sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
-    locale
-  );
+  const localizedProjects = await getReferenceProjects(locale);
   const { slug: rawSlug } = await params;
   const resolvedSearchParams = await searchParams;
   const legacySlugMap = {
@@ -184,7 +179,8 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
   const mappedSlug = legacySlugMap[rawSlug] || rawSlug;
   const baseSlug = resolveSlug('portfolio', mappedSlug);
   const slug = baseSlug;
-  const project = localizedProjects.find((p) => p.slug === baseSlug);
+  const cmsProject = await getReferenceProjectBySlugFromCMS(baseSlug, locale);
+  const project = cmsProject || localizedProjects.find((p) => p.slug === baseSlug);
   const fromPageRaw = resolvedSearchParams?.fromPage;
   const fromPage = Number.parseInt(Array.isArray(fromPageRaw) ? fromPageRaw[0] : fromPageRaw || '1', 10);
   const fromSectorRaw = resolvedSearchParams?.fromSector;
@@ -297,7 +293,8 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     ]
   };
 
-  const projectDetails = detailsByLocale[locale]?.[slug] || detailsByLocale.tr[slug] || {};
+  const staticDetails = detailsByLocale[locale]?.[slug] || detailsByLocale.tr[slug] || {};
+  const projectDetails = cmsProject ? { ...staticDetails, ...cmsProject } : staticDetails;
   if (slug === 'phinia-laser-marking-machine-traceability-integration') {
     return (
       <>
