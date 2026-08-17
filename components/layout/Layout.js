@@ -4,14 +4,14 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { MainContent } from './MainContent';
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, cmsGlobal }) => {
   return (
     <>
-      <Header />
+      <Header cmsGlobal={cmsGlobal} />
       <MainContent>
         {children}
       </MainContent>
-      <Footer />
+      <Footer cmsGlobal={cmsGlobal} />
     </>
   );
 };

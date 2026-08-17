@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import HeroSlider from '../components/home/HeroSlider';
 import HomeCta from '../components/home/HomeCta';
+import FaqAccordion from '../components/home/FaqAccordion';
 
 const DeferredSection = () => (
   <section className="py-12" aria-hidden="true" />
@@ -16,7 +17,6 @@ const TechnologyCapabilities = dynamic(() => import('../components/home/Technolo
   ssr: false,
   loading: () => <DeferredSection />,
 });
-
 
 const ReferenceProjects = dynamic(() => import('../components/home/ReferenceProjects'), {
   loading: () => <DeferredSection />,
@@ -34,17 +34,20 @@ const BlogPreview = dynamic(() => import('../components/home/BlogPreview'), {
   loading: () => <DeferredSection />,
 });
 
-export default function HomePageClient() {
+/* eslint-disable react/prop-types */
+export default function HomePageClient({ cmsData, cmsSolutions, cmsSectors, cmsCapabilities }) {
   return (
     <>
-      <HeroSlider />
-      <SolutionsTabs />
-      <TechnologyCapabilities />
+      {/* cmsData?.heroSlides varsa CMS'den, yoksa component kendi statik verisini kullanır */}
+      <HeroSlider cmsSlides={cmsData?.heroSlides} />
+      <FaqAccordion cmsFaqs={cmsData?.faqItems} />
+      <SolutionsTabs cmsSolutions={cmsSolutions} cmsSectors={cmsSectors} />
+      <TechnologyCapabilities cmsCapabilities={cmsCapabilities} />
       <ReferenceProjects />
       <StrategicPartners />
-      <PerformanceMetrics />
+      <PerformanceMetrics cmsMetrics={cmsData?.performanceSection} />
       <BlogPreview />
-      <HomeCta />
+      <HomeCta cmsCta={cmsData?.homeCta} />
     </>
   );
 }

@@ -3,11 +3,19 @@ import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../
 import { getOrganizationSchema, getFaqPageSchema, SITE_URL, LOGO_URL } from '../components/seo/OrganizationSchema';
 import { getHeroVideoAssets } from '../lib/seo/videoCatalog';
 import { toAbsoluteSiteUrl } from '../lib/seo/videoUrl';
+import { getHomePageFromCMS } from '../lib/cms/homeService';
+import { getSolutionsFromCMS } from '../lib/cms/solutionsService';
+import { getSectorsFromCMS } from '../lib/cms/sectorsService';
+import { getTechnologyCapabilitiesFromCMS } from '../lib/cms/technologiesService';
 
 const heroVideoAssets = getHeroVideoAssets();
 const heroVideoAbsoluteUrls = heroVideoAssets
   .map((asset) => toAbsoluteSiteUrl(asset.video, SITE_URL))
   .filter(Boolean);
+
+// Anlık CMS verisi için dinamik route
+export const dynamic = 'force-dynamic';
+
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -69,6 +77,14 @@ export async function generateMetadata() {
 
 export default async function HomePage() {
   const locale = await getRequestLocale();
+
+  // CMS'den tüm verileri paralel çek; hata durumunda null → statik fallback
+  const [cmsData, cmsSolutions, cmsSectors, cmsCapabilities] = await Promise.all([
+    getHomePageFromCMS(locale),
+    getSolutionsFromCMS(locale),
+    getSectorsFromCMS(locale),
+    getTechnologyCapabilitiesFromCMS(locale),
+  ]);
 
   const org = getOrganizationSchema();
   const faqPage = getFaqPageSchema(locale, `${SITE_URL}/`);
@@ -175,7 +191,12 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HomePageClient />
+      <HomePageClient
+        cmsData={cmsData}
+        cmsSolutions={cmsSolutions}
+        cmsSectors={cmsSectors}
+        cmsCapabilities={cmsCapabilities}
+      />
     </>
   );
 }

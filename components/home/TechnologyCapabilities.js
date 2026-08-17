@@ -28,9 +28,22 @@ const capabilities = [
   },
 ];
 
-export default function TechnologyCapabilities() {
+/* eslint-disable react/prop-types */
+export default function TechnologyCapabilities({ cmsCapabilities }) {
   const { locale, t } = useLanguage();
-  const localizedCapabilities = useMemo(() => getTechnologyCapabilities(capabilities, locale), [locale]);
+
+  // CMS'den capability gelirse kullan (title/description mevcut olmalı)
+  // Yoksa statik getTechnologyCapabilities() devreye girer
+  const localizedCapabilities = useMemo(() => {
+    if (cmsCapabilities && cmsCapabilities.length > 0) {
+      return cmsCapabilities.map((cap, i) => ({
+        ...capabilities[i], // icon bilgisini statik listeden al (CMS'de SVG component yok)
+        title: cap.name || cap.title || capabilities[i]?.title || '',
+        description: cap.description || capabilities[i]?.description || '',
+      }));
+    }
+    return getTechnologyCapabilities(capabilities, locale);
+  }, [cmsCapabilities, locale]);
 
   return (
     <section className="section-block bg-gradient-to-br from-white via-[#f9fbfd] to-white relative overflow-hidden">

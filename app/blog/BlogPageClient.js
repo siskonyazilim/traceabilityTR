@@ -5,7 +5,6 @@ import Container from '../../components/ui/Container';
 import BlogCard from '../../components/ui/BlogCard';
 import PagePrimaryCta from '../../components/ui/PagePrimaryCta';
 import SectionHeader from '../../components/ui/SectionHeader';
-import { blogPosts } from '../../data/blogPosts';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
 import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
@@ -13,10 +12,10 @@ import AeoFaqSection from '../../components/seo/AeoFaqSection';
 
 const ITEMS_PER_PAGE = 6;
 
-export default function BlogPageClient({ faqBundle }) {
+export default function BlogPageClient({ posts = [], faqBundle }) {
   const [currentPage, setCurrentPage] = useState(1);
   const { locale, t } = useLanguage();
-  const localizedPosts = localizeBlogPosts(blogPosts, locale);
+  const localizedPosts = localizeBlogPosts(posts, locale);
   const sortedPosts = useMemo(
     () =>
       [...localizedPosts].sort((a, b) => {

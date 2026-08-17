@@ -55,7 +55,8 @@ function splitIntoTwoBalancedLines(text) {
   return [lineOne, lineTwo];
 }
 
-export const HeroSlider = () => {
+/* eslint-disable react/prop-types */
+export const HeroSlider = ({ cmsSlides }) => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [forceDesktopVideo, setForceDesktopVideo] = useState(false);
@@ -63,7 +64,9 @@ export const HeroSlider = () => {
   const [showImageFallback, setShowImageFallback] = useState(false);
   const videoRef = useRef(null);
   const { locale, t } = useLanguage();
-  const localizedSlides = useMemo(() => getHeroSlides(slides, locale), [locale]);
+  // CMS'den slayt gelirse kullan, yoksa statik slides array
+  const baseSlides = (cmsSlides && cmsSlides.length > 0) ? cmsSlides : slides;
+  const localizedSlides = useMemo(() => getHeroSlides(baseSlides, locale), [locale, baseSlides]);
   const activeSlide = localizedSlides[current];
   const resolvedDesktopVideo = videoFallbackSrc || activeSlide?.video;
   const useMobileSource = Boolean(activeSlide?.mobileVideo) && !forceDesktopVideo && !videoFallbackSrc && activeSlide?.id !== 1;

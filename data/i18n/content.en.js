@@ -18,7 +18,7 @@ export const contentEn = {
   ],
   faq: {
 
-    title: 'Our Perspective on Traceability',
+    title: 'Frequently Asked Questions About Traceability Systems',
     items: [
       {
         id: 1,

@@ -33,12 +33,17 @@ function getCardPreviewText(item) {
   return getFirstSentenceText(source);
 }
 
-export const SolutionsTabs = () => {
+/* eslint-disable react/prop-types */
+export const SolutionsTabs = ({ cmsSolutions, cmsSectors }) => {
   const [activeTab, setActiveTab] = useState('solutions');
   const searchParams = useSearchParams();
   const { locale, t } = useLanguage();
-  const localizedSolutions = useMemo(() => localizeSolutions(solutions, locale), [locale]);
-  const localizedProducts = useMemo(() => localizeProducts(products, locale), [locale]);
+  // CMS'den çözüm gelirse kullan, yoksa statik data/solutions.js
+  const baseSolutions = (cmsSolutions && cmsSolutions.length > 0) ? cmsSolutions : solutions;
+  const localizedSolutions = useMemo(() => localizeSolutions(baseSolutions, locale), [baseSolutions, locale]);
+  // CMS'den sektör gelirse kullan, yoksa statik products array
+  const baseSectors = (cmsSectors && cmsSectors.length > 0) ? cmsSectors : products;
+  const localizedProducts = useMemo(() => localizeProducts(baseSectors, locale), [baseSectors, locale]);
   const catalogBasePath = '/catalog';
   const detailChipLabel = t('sections.detailChip', 'Detalii').split('→')[0].trim();
   const detailChipProductsLabel = t('sections.detailChipProducts', detailChipLabel).split('→')[0].trim();

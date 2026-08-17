@@ -21,7 +21,7 @@ export const contentRo = {
   ],
   faq: {
     eyebrow: '',
-    title: 'Perspectivele noastre asupra trasabilitatii',
+    title: 'Întrebări Frecvente despre Sistemele de Trasabilitate',
     items: [
       {
         id: 1,

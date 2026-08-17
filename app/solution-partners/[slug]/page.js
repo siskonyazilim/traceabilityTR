@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
-import { strategicPartners } from '../../../data/partners';
+import { getPartnersFromCMS } from '../../../lib/cms/partnerService';
 import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
 import PartnerStorySlider from '../../../components/ui/PartnerStorySlider';
 import { getRequestLocale } from '../../../lib/i18n/requestLocale';
@@ -14,19 +14,14 @@ import { getOrganizationSchema, SITE_URL } from '../../../components/seo/Organiz
 import { getPartnerDetailAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
 /* eslint-disable react/prop-types, react/no-array-index-key */
 
-export async function generateStaticParams() {
-  const paths = [];
-  for (const partner of strategicPartners) {
-    paths.push({ slug: partner.slug });
-  }
-  paths.push({ slug: 'proiectul-a-s' });
-  return paths;
-}
+// Her istekte Strapi'den anlık veri çekilmesi için dinamik route
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
   const locale = await getRequestLocale();
   const isEn = locale === 'en';
-  const localizedPartners = localizePartners(strategicPartners, locale);
+  const allPartners = await getPartnersFromCMS();
+  const localizedPartners = localizePartners(allPartners, locale);
   const { slug: rawSlug } = await params;
   const legacySlugMap = {
     'proiectul-a-s': 'markem-imaje',
@@ -103,7 +98,8 @@ export async function generateMetadata({ params }) {
 
 export default async function PartnerDetailPage({ params }) {
   const locale = await getRequestLocale();
-  const localizedPartners = localizePartners(strategicPartners, locale);
+  const allPartners = await getPartnersFromCMS();
+  const localizedPartners = localizePartners(allPartners, locale);
   const { slug: rawSlug } = await params;
   const legacySlugMap = {
     'proiectul-a-s': 'markem-imaje',

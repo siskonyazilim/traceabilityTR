@@ -4,25 +4,40 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '../i18n/LanguageProvider';
 
-export const Footer = () => {
+/* eslint-disable react/prop-types */
+export const Footer = ({ cmsGlobal }) => {
   const pathname = usePathname();
   const normalizedPathname = (pathname || '/').replace(/^\/(tr|en|ro)(?=\/|$)/, '') || '/';
   const isHomePage = normalizedPathname === '/';
   const { t, locale } = useLanguage();
-  const contactEmail = locale === 'tr' ? 'info@izlenebilirlik.com.tr' : 'info@traceability.com.tr';
 
+  // CMS'den sosyal medya URL'leri gelirse kullan
+  const sl = cmsGlobal?.socialLinks || {};
   const socialLinks = {
     linkedin: locale === 'ro'
-      ? 'https://www.linkedin.com/company/siskonromania/'
-      : 'https://www.linkedin.com/company/siskonyazilimveotomasyon',
+      ? (sl.linkedin?.urlRo || 'https://www.linkedin.com/company/siskonromania/')
+      : (sl.linkedin?.url || 'https://www.linkedin.com/company/siskonyazilimveotomasyon'),
     twitter: locale === 'ro'
-      ? 'https://x.com/siskonromania'
-      : 'https://x.com/siskonyazilim',
+      ? (sl.twitter?.urlRo || 'https://x.com/siskonromania')
+      : (sl.twitter?.url || 'https://x.com/siskonyazilim'),
     instagram: locale === 'ro'
-      ? 'https://www.instagram.com/siskon_romania'
-      : 'https://www.instagram.com/siskonyazilimveotomasyon/',
-    youtube: 'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg'
+      ? (sl.instagram?.urlRo || 'https://www.instagram.com/siskon_romania')
+      : (sl.instagram?.url || 'https://www.instagram.com/siskonyazilimveotomasyon/'),
+    youtube: sl.youtube?.url || 'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg',
   };
+
+  // CMS'den iletişim bilgileri
+  const contactEmail = locale === 'tr'
+    ? (cmsGlobal?.emailTR || 'info@izlenebilirlik.com.tr')
+    : (cmsGlobal?.emailRO || 'info@traceability.com.tr');
+  const phoneTR = cmsGlobal?.phoneNumberTR || '+90 232 245 00 76';
+  const phoneRO = cmsGlobal?.phoneNumberRO || '+40 368 402 002';
+
+  // CMS'den footer açıklaması
+  const footerDescription = cmsGlobal?.footerDescription
+    || t('footer.brandDescription', 'Akıllı fabrikalar ve sürdürülebilir üretim için yenilikçi izlenebilirlik çözümleri.');
+  const copyrightText = cmsGlobal?.copyrightText
+    || t('footer.copyright', '© 2026 Traceability. Tüm hakları saklıdır.');
 
   const toLocalePath = (targetPath) => {
     if (!targetPath) {
@@ -90,7 +105,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-light text-sm mb-5 leading-relaxed max-w-sm">
-              {t('footer.brandDescription', 'Akıllı fabrikalar ve sürdürülebilir üretim için yenilikçi izlenebilirlik çözümleri.')}
+              {footerDescription}
             </p>
             <div className="flex items-center gap-3">
               <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
@@ -181,12 +196,12 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="tel:+902322450076" className="inline-flex min-h-[44px] min-w-[44px] items-center text-gray-light hover:text-accent-blue transition-colors">
-                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (TR):</span> +90 232 245 00 76
+                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (TR):</span> {phoneTR}
                 </a>
               </li>
               <li>
                 <a href="tel:+40368402002" className="inline-flex min-h-[44px] min-w-[44px] items-center text-gray-light hover:text-accent-blue transition-colors">
-                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (RO):</span> +40 368 402 002
+                  <span className="font-semibold">{t('footer.phone', 'Telefon')} (RO):</span> {phoneRO}
                 </a>
               </li>
               <li>
@@ -204,7 +219,7 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-light">
           <div>
-            <p>{t('footer.copyright', '© 2026 Traceability. Tüm hakları saklıdır.')}</p>
+            <p>{copyrightText}</p>
           </div>
         </div>
       </div>

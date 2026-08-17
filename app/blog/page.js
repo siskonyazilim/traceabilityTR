@@ -1,12 +1,15 @@
 import BlogPageClient from './BlogPageClient';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../../lib/i18n/requestLocale';
-import { blogPosts } from '../../data/blogPosts';
+import { getBlogPostsFromCMS } from '../../lib/cms/blogService';
 import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
 import { getLocalizedSlug } from '../../lib/i18n/slugMapping';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 import JsonLd from '../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL } from '../../components/seo/OrganizationSchema';
 import { getAeoFaqBundle, getAeoFaqSchema } from '../../lib/seo/aeoFaqs';
+
+// Her istekte Strapi'den anlık veri çekilmesi için dinamik route
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -73,7 +76,9 @@ export default async function BlogPage() {
   const faqBundle = getAeoFaqBundle('blogList', locale);
   const faqSchema = getAeoFaqSchema('blogList', locale, pageUrl);
 
-  const localizedPosts = localizeBlogPosts(blogPosts, locale)
+  // CMS'den veri çek; Strapi erişilemezse statik veriler otomatik kullanılır
+  const allPosts = await getBlogPostsFromCMS();
+  const localizedPosts = localizeBlogPosts(allPosts, locale)
     .sort((a, b) => {
       const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
       if (dateDiff !== 0) return dateDiff;
@@ -160,7 +165,7 @@ export default async function BlogPage() {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <BlogPageClient faqBundle={faqBundle} />
+      <BlogPageClient posts={allPosts} faqBundle={faqBundle} />
     </>
   );
 }

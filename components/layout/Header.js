@@ -6,7 +6,8 @@ import { usePathname, useRouter } from 'next/navigation';
 import { IconChevronDown, IconMenu, IconX } from '../ui/Icons';
 import { useLanguage } from '../i18n/LanguageProvider';
 
-export const Header = () => {
+/* eslint-disable react/prop-types */
+export const Header = ({ cmsGlobal }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -142,14 +143,20 @@ export const Header = () => {
     setIsOpen(false);
   };
 
-  const navItems = [
-    { label: t('header.solutions', 'Çözümlerimiz'), href: '#solutions-tab' },
-    { label: t('header.industries', 'Ürünlerimiz'), href: '#products-tab' },
-    { label: t('header.projects', 'Referans Projeler'), href: '#reference-projects' },
-    { label: t('header.partners', 'Çözüm Ortakları'), href: '#our-strategic-solution-partners' },
-    { label: t('header.contact', 'İletişim'), href: toLocalePath('/contact') },
-    { label: t('header.news', 'Blog'), href: toLocalePath('/blog') },
-  ];
+  // CMS'den nav gelirse kullan, yoksa statik t() veriler
+  const navItems = (cmsGlobal?.headerNav && cmsGlobal.headerNav.length > 0)
+    ? cmsGlobal.headerNav.map((item) => ({
+        label: item.label,
+        href: item.href.startsWith('/') ? toLocalePath(item.href) : item.href,
+      }))
+    : [
+        { label: t('header.solutions', 'Çözümlerimiz'), href: '#solutions-tab' },
+        { label: t('header.industries', 'Ürünlerimiz'), href: '#products-tab' },
+        { label: t('header.projects', 'Referans Projeler'), href: '#reference-projects' },
+        { label: t('header.partners', 'Çözüm Ortakları'), href: '#our-strategic-solution-partners' },
+        { label: t('header.contact', 'İletişim'), href: toLocalePath('/contact') },
+        { label: t('header.news', 'Blog'), href: toLocalePath('/blog') },
+      ];
 
   const currentLangIndex = languageOptions.findIndex((option) => option.code === locale);
   const currentLanguage = languageOptions[currentLangIndex] || languageOptions[0];

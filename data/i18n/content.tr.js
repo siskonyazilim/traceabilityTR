@@ -18,7 +18,7 @@ export const contentTr = {
   ],
   faq: {
     eyebrow: '',
-    title: 'İzlenebilirlik Hakkındaki Görüşlerimiz',
+    title: 'İzlenebilirlik Sistemleri Hakkında Sıkça Sorulan Sorular',
     items: [
       {
         id: 1,

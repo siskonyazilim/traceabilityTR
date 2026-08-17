@@ -5,6 +5,7 @@ import { toLocalePath } from '../../lib/i18n/dictionaries';
 import AeoFaqSection from '../../components/seo/AeoFaqSection';
 import JsonLd from '../../components/seo/JsonLd';
 import { getAeoFaqBundle, getAeoFaqSchema } from '../../lib/seo/aeoFaqs';
+import { getContactPageFromCMS } from '../../lib/cms/contactService';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -68,6 +69,9 @@ export default async function ContactPage() {
   const org = getOrganizationSchema();
   const faqBundle = getAeoFaqBundle('contact', locale);
 
+  // CMS'den iletişim sayfası verisi — ofis bilgileri
+  const cmsContact = await getContactPageFromCMS(locale);
+
   const pageUrl = `${SITE_URL}${toLocalePath('/contact', locale)}`;
   const faqSchema = getAeoFaqSchema('contact', locale, pageUrl);
 
@@ -122,7 +126,7 @@ export default async function ContactPage() {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <ContactPageClient />
+      <ContactPageClient cmsContact={cmsContact} />
       <AeoFaqSection bundle={faqBundle} />
     </>
   );

@@ -64,17 +64,24 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
   );
 };
 
-export const PerformanceMetrics = () => {
+/* eslint-disable react/prop-types */
+export const PerformanceMetrics = ({ cmsMetrics }) => {
   const { locale, t } = useLanguage();
 
-  const labels = getPerformanceMetricLabels([
-    'Clienți mulțumiți',
-    'Țări',
-    'Fabrici',
-    'Colegi',
-  ], locale);
+  // CMS'den metrik gelirse kullan, yoksa statik veriler
+  const cmsMetricList = cmsMetrics?.metrics;
+  const labels = (cmsMetricList && cmsMetricList.length > 0)
+    ? cmsMetricList.map((m) => m.label)
+    : getPerformanceMetricLabels([
+      'Clienți mulțumiți',
+      'Țări',
+      'Fabrici',
+      'Colegi',
+    ], locale);
 
-  const metrics = [
+  const metrics = (cmsMetricList && cmsMetricList.length > 0)
+    ? cmsMetricList.map((m) => ({ end: m.value, label: m.label, suffix: m.suffix || '+' }))
+    : [
     { end: 500, label: labels[0], suffix: '+' },
     { end: 40, label: labels[1], suffix: '+' },
     { end: 60, label: labels[2], suffix: '+' },

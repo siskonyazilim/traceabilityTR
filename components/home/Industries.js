@@ -30,16 +30,28 @@ const industries = [
   },
 ];
 
-export default function Industries() {
+/* eslint-disable react/prop-types */
+export default function Industries({ cmsCapabilities }) {
   const { locale, t } = useLanguage();
   const localizedIndustries = useMemo(() => {
+    // CMS'den capability gelirse kullan
+    if (cmsCapabilities && cmsCapabilities.length > 0) {
+      return cmsCapabilities.map((cap) => ({
+        id: cap.id,
+        name: cap.name || cap.title || '',
+        icon: cap.icon || industries[0]?.icon || '',
+        description: cap.description || '',
+        color: cap.color || 'from-blue-500 to-blue-600',
+      }));
+    }
+    // Statik fallback
     const localized = getTechnologyCapabilities(industries.map(i => ({ title: i.name, description: i.description })), locale);
     return industries.map((industry, index) => ({
       ...industry,
       name: localized[index]?.title || industry.name,
       description: localized[index]?.description || industry.description,
     }));
-  }, [locale]);
+  }, [cmsCapabilities, locale]);
 
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden">

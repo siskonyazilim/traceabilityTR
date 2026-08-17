@@ -6,12 +6,26 @@ import Container from '../ui/Container';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { getFaqBundle } from '../../lib/i18n/contentLocalization';
 
-const faqs = [];
+const staticFaqs = [];
 
-export const FaqAccordion = () => {
+/* eslint-disable react/prop-types */
+export const FaqAccordion = ({ cmsFaqs }) => {
   const [openId, setOpenId] = useState(null);
   const { locale } = useLanguage();
-  const faqBundle = useMemo(() => getFaqBundle(faqs, locale), [locale]);
+
+  // CMS'den FAQ gelirse kullan, yoksa getFaqBundle statik sistemi (content.tr/en/ro.js)
+  const faqBundle = useMemo(() => {
+    const bundle = getFaqBundle(staticFaqs, locale);
+    if (cmsFaqs && cmsFaqs.length > 0) {
+      return {
+        eyebrow: bundle.eyebrow,
+        title: bundle.title, // content.tr/en/ro.js'den gelen başlık
+        items: cmsFaqs,
+      };
+    }
+    return bundle;
+  }, [cmsFaqs, locale]);
+
   const triggerRefs = useRef(new Map());
   const panelRefs = useRef(new Map());
 
@@ -90,6 +104,9 @@ export const FaqAccordion = () => {
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);
   };
+
+  // FAQ sorusu yoksa bölümü render etme
+  if (!faqBundle.items || faqBundle.items.length === 0) return null;
 
   return (
     <>

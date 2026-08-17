@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer';
 import { cookies } from 'next/headers';
 import { buildContactEmail } from '../../../lib/email-template';
+import { strapiMutation } from '../../../lib/cms/strapi';
 
 export const runtime = 'nodejs';
 
@@ -263,6 +264,24 @@ export async function POST(request) {
       subject,
       text,
       html,
+    });
+
+    const fullName = `${payload.firstName} ${payload.lastName}`.trim();
+
+    // E-posta gönderimi başarılı — Strapi'ye de kayıt at (non-blocking)
+    strapiMutation('/api/contact-submissions', {
+      data: {
+        fullName,
+        email: payload.email,
+        phone: payload.phone || '',
+        company: payload.company || '',
+        message: payload.message,
+        locale: payload.locale || 'tr',
+        submissionStatus: 'pending',
+      },
+    }).catch((err) => {
+      // Strapi kayıt hatası e-postayı etkilemez — sadece logla
+      console.warn('[contact-api] Strapi kayıt hatası (e-posta gitti):', err?.message);
     });
 
     const response = Response.json({ ok: true, requestId });

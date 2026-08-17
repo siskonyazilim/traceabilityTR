@@ -5,6 +5,7 @@ import { LanguageProvider } from '../components/i18n/LanguageProvider'
 import { Kanit } from 'next/font/google'
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../lib/i18n/requestLocale'
 import Script from 'next/script'
+import { getGlobalSettingsFromCMS } from '../lib/cms/globalService'
 /* eslint-disable react/prop-types */
 
 const kanit = Kanit({
@@ -91,6 +92,9 @@ export async function generateMetadata() {
 // eslint-disable-next-line react/prop-types
 export default async function RootLayout({ children }) {
   const locale = await getRequestLocale();
+
+  // CMS'den global ayarlar — Header menü ve Footer içeriği
+  const cmsGlobal = await getGlobalSettingsFromCMS(locale);
 
   return (
     <html lang={locale} data-scroll-behavior="smooth">
@@ -214,7 +218,7 @@ export default async function RootLayout({ children }) {
           />
         </noscript>
         <LanguageProvider initialLocale={locale}>
-          <Layout>
+          <Layout cmsGlobal={cmsGlobal}>
             {children}
           </Layout>
         </LanguageProvider>

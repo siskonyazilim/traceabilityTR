@@ -11,7 +11,8 @@ import { useLanguage } from '../../components/i18n/LanguageProvider';
 
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
-export default function ContactPageClient() {
+/* eslint-disable react/prop-types */
+export default function ContactPageClient({ cmsContact }) {
   const { t, locale } = useLanguage();
 
   const officeList = [
@@ -43,7 +44,10 @@ export default function ContactPageClient() {
     },
   ];
 
-  const offices = locale === 'tr' ? [officeList[1], officeList[0]] : officeList;
+  // CMS'den ofis verisi gelirse kullan, yoksa statik officeList
+  const offices = (cmsContact?.offices && cmsContact.offices.length > 0)
+    ? cmsContact.offices
+    : (locale === 'tr' ? [officeList[1], officeList[0]] : officeList);
 
   const {
     register,

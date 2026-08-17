@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
-import { blogPosts } from '../../../data/blogPosts';
+import { getBlogPostsFromCMS } from '../../../lib/cms/blogService';
 import { sanitizeRichText } from '../../../lib/sanitizeRichText';
 import { IconArrowLeft, IconArrowRight } from '../../../components/ui/Icons';
 import { getRequestLocale } from '../../../lib/i18n/requestLocale';
@@ -16,6 +16,9 @@ import { getOrganizationSchema, SITE_URL, LOGO_URL } from '../../../components/s
 import AeoFaqSection from '../../../components/seo/AeoFaqSection';
 import { getBlogDetailAeoFaqBundle, getBlogDetailAeoFaqSchema } from '../../../lib/seo/aeoFaqs';
 /* eslint-disable react/prop-types */
+
+// Her istekte Strapi'den anlık veri çekilmesi için dinamik route
+export const dynamic = 'force-dynamic';
 
 const normalizeBlogContent = (html) => {
   if (typeof html !== 'string') return '';
@@ -42,7 +45,8 @@ const normalizeBlogContent = (html) => {
 export async function generateMetadata({ params }) {
   const locale = await getRequestLocale();
   const isEn = locale === 'en';
-  const localizedPosts = localizeBlogPosts(blogPosts, locale);
+  const allPosts = await getBlogPostsFromCMS();
+  const localizedPosts = localizeBlogPosts(allPosts, locale);
   const { slug: rawSlug } = await params;
   const baseSlug = resolveSlug('blog', rawSlug);
   const post = localizedPosts.find((entry) => entry.originalSlug === baseSlug);
@@ -111,7 +115,8 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogDetailPage({ params }) {
   const locale = await getRequestLocale();
-  const localizedPosts = localizeBlogPosts(blogPosts, locale);
+  const allPosts = await getBlogPostsFromCMS();
+  const localizedPosts = localizeBlogPosts(allPosts, locale);
   const { slug: rawSlug } = await params;
   const baseSlug = resolveSlug('blog', rawSlug);
   const post = localizedPosts.find((p) => p.originalSlug === baseSlug);
