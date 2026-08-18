@@ -98,6 +98,24 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <head>
+        {/* ── Google Consent Mode v2 (KVKK & GDPR Uyumluluğu) ── */}
+        <script
+          id="google-consent-mode"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'functionality_storage': 'granted',
+  'security_storage': 'granted',
+  'wait_for_update': 500
+});`,
+          }}
+        />
+
         {/* ── ÇerezGo Script (GTM'den önce yer almalıdır) ── */}
         <script
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
