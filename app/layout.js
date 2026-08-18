@@ -163,7 +163,7 @@ export default async function RootLayout({ children }) {
     const gtmScript = document.createElement('script');
     gtmScript.id = 'gtm-script';
     gtmScript.async = true;
-    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-547XQ7CS';
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WTGXXCML';
 
     if (firstScript && firstScript.parentNode) {
       firstScript.parentNode.insertBefore(gtmScript, firstScript);
@@ -210,7 +210,7 @@ export default async function RootLayout({ children }) {
         <noscript>
           <iframe
             title="gtm-noscript"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-547XQ7CS"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WTGXXCML"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
