@@ -19,7 +19,7 @@ export const Footer = ({ cmsGlobal }) => {
       : (sl.linkedin?.url || 'https://www.linkedin.com/company/siskonyazilimveotomasyon'),
     twitter: locale === 'ro'
       ? (sl.twitter?.urlRo || 'https://x.com/siskonromania')
-      : (sl.twitter?.url || 'https://x.com/siskonyazilim'),
+      : (sl.twitter?.url || 'https://x.com/siskonsoftware'),
     instagram: locale === 'ro'
       ? (sl.instagram?.urlRo || 'https://www.instagram.com/siskon_romania')
       : (sl.instagram?.url || 'https://www.instagram.com/siskonyazilimveotomasyon/'),
