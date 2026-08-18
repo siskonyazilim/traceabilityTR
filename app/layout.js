@@ -98,108 +98,22 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <head>
-        {/* ── Cerezgo + GTM — ertelenmiş yükleme ────────────────────────────────
-            Cerezgo, kullanıcının ilk gerçek etkileşimine (scroll / tıklama /
-            dokunma / tuş) veya en geç 3.5 saniyelik idle süresine kadar
-            erteleniyor. Cerezgo yüklenip hazır olduktan SONRA GTM enjekte
-            ediliyor — bu, "script GTM'den önce olmalı" hatasını organik
-            biçimde çözüyor, ayrı bir sıralama hilesi gerekmiyor.
-
-            NOT: Banner'ın sayfayı kilitleyip kilitlemediği (modal / non-modal
-            görünüm) tamamen Cerezgo panelindeki site ayarına bağlı — kod
-            tarafında bununla ilgili herhangi bir bypass/zorlama YOK.
-            Panelde "Banner Tasarımı / Görünüm Tipi" non-modal seçiliyse
-            (onsuite.com.tr'de olduğu gibi) sayfa banner açıkken de normal
-            kullanılabilir kalır; modal seçiliyse tarayıcının native
-            <dialog>.showModal() davranışı gereği sayfa banner kapanana kadar
-            kilitli kalır. Bu davranış CSS/JS ile değiştirilemez, sadece
-            Cerezgo panelinden ayarlanabilir. */}
+        {/* ── ÇerezGo Script (GTM'den önce yer almalıdır) ── */}
         <script
-          id="analytics-bootstrap"
+          src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
+          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM="
+          data-id="nt"
+        />
+
+        {/* ── Google Tag Manager ── */}
+        <script
+          id="google-tag-manager"
           dangerouslySetInnerHTML={{
-            __html: `(() => {
-  const host = window.location?.hostname || '';
-  const isLocalHost = host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local');
-
-  // Google Consent Mode v2: Varsayılan olarak tüm izleme istekleri reddedildi (denied)
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
-  window.gtag = gtag;
-
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied',
-    'functionality_storage': 'granted',
-    'security_storage': 'granted'
-  });
-
-  if (isLocalHost) return;
-
-  const hasConsent = () => {
-    try {
-      if (document.cookie.includes('cerezgo_consent=accepted') || document.cookie.includes('cerezgo_analytic=true') || document.cookie.includes('cookieConsent=accepted')) return true;
-      const c = localStorage.getItem('cerezgo_consent') || localStorage.getItem('cookieConsent') || localStorage.getItem('onsuiteConsent');
-      if (c === 'accepted' || c === 'true') return true;
-    } catch (e) {}
-    return false;
-  };
-
-  const loadGtm = () => {
-    if (document.getElementById('gtm-script')) return;
-
-    // Rıza verildi: Consent Mode granted yap
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-
-    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-
-    const firstScript = document.getElementsByTagName('script')[0];
-    const gtmScript = document.createElement('script');
-    gtmScript.id = 'gtm-script';
-    gtmScript.async = true;
-    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WTGXXCML';
-
-    if (firstScript && firstScript.parentNode) {
-      firstScript.parentNode.insertBefore(gtmScript, firstScript);
-    } else {
-      (document.head || document.documentElement).appendChild(gtmScript);
-    }
-  };
-
-  // Kullanıcı daha önce onay verdiyse GTM'i yükle
-  if (hasConsent()) {
-    loadGtm();
-  }
-
-  // CerezGo rıza / onay olaylarını dinle
-  window.addEventListener('cerezgo-consent-accepted', loadGtm);
-  window.addEventListener('cerezgo:consent', loadGtm);
-  window.addEventListener('cerezgo:accept', loadGtm);
-  window.addEventListener('cerezgo_accepted', loadGtm);
-  window.addEventListener('cerezgo_consent_change', loadGtm);
-  window.addEventListener('cookie-consent-granted', loadGtm);
-  window.addEventListener('message', (event) => {
-    if (event?.data?.type === 'cerezgo_consent' && (event?.data?.action === 'accept' || event?.data?.action === 'save')) {
-      loadGtm();
-    }
-  });
-
-  // CerezGo CDN betiğini temiz oturumda gecikmesiz yükle
-  const cerez = document.createElement('script');
-  cerez.id = 'cerezgo-script';
-  cerez.async = true;
-  cerez.defer = true;
-  cerez.src = 'https://cdn.cerezgo.com/file/cerezgo-v3.min.js';
-  cerez.setAttribute('data-key', 'tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM=');
-  cerez.setAttribute('data-id', 'nt');
-  (document.head || document.documentElement).appendChild(cerez);
-})();`,
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WTGXXCML');`,
           }}
         />
 
