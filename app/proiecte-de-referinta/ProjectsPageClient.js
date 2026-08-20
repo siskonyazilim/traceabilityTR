@@ -27,15 +27,19 @@ import { referenceProjects } from '../../data/references';
 import { localizeReferenceProjects } from '../../lib/i18n/contentLocalization';
 import { sortReferenceProjects, withReferenceProjectTimeline } from '../../lib/referenceProjectOrdering';
 
-export default function ProjectsPageClient() {
+/* eslint-disable react/prop-types */
+export default function ProjectsPageClient({ initialProjects }) {
   const { locale, t } = useLanguage();
 
   const localizedProjects = useMemo(() => {
+    const sourceProjects = Array.isArray(initialProjects) && initialProjects.length > 0
+      ? initialProjects
+      : referenceProjects;
     return withReferenceProjectTimeline(
-      sortReferenceProjects(localizeReferenceProjects(referenceProjects, locale)),
+      sortReferenceProjects(localizeReferenceProjects(sourceProjects, locale)),
       locale
     );
-  }, [locale]);
+  }, [initialProjects, locale]);
 
   const sectors = useMemo(() => {
     const seen = new Set();

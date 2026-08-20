@@ -64,8 +64,19 @@ export const HeroSlider = ({ cmsSlides }) => {
   const [showImageFallback, setShowImageFallback] = useState(false);
   const videoRef = useRef(null);
   const { locale, t } = useLanguage();
-  // CMS'den slayt gelirse kullan, yoksa statik slides array
-  const baseSlides = (cmsSlides && cmsSlides.length > 0) ? cmsSlides : slides;
+  // CMS'den slayt gelirse kullan (video ve mobileVideo eksikse varsayılan video varlıklarıyla birleştir)
+  const baseSlides = useMemo(() => {
+    if (Array.isArray(cmsSlides) && cmsSlides.length > 0) {
+      return cmsSlides.map((slide, index) => ({
+        ...slides[index],
+        ...slide,
+        id: index + 1,
+        video: slide.video || slides[index]?.video || heroVideoAssets[index]?.video,
+        mobileVideo: slide.mobileVideo || slides[index]?.mobileVideo || heroVideoAssets[index]?.mobileVideo,
+      }));
+    }
+    return slides;
+  }, [cmsSlides]);
   const localizedSlides = useMemo(() => getHeroSlides(baseSlides, locale), [locale, baseSlides]);
   const activeSlide = localizedSlides[current];
   const resolvedDesktopVideo = videoFallbackSrc || activeSlide?.video;

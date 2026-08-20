@@ -8,7 +8,11 @@ import { resolveSlug, getLocalizedSlug } from '../../../../lib/i18n/slugMapping'
 import JsonLd from '../../../../components/seo/JsonLd';
 import { getCatalogProductDetailAeoFaqBundle, getCatalogProductDetailAeoFaqSchema } from '../../../../lib/seo/aeoFaqs';
 import AeoFaqSection from '../../../../components/seo/AeoFaqSection';
+import { getSectorsFromCMS } from '../../../../lib/cms/sectorsService';
 /* eslint-disable react/prop-types */
+
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 function toOgLocale(locale) {
   if (locale === 'en') return 'en_US';
@@ -28,7 +32,8 @@ export async function generateMetadata({ params }) {
   const locale = await getRequestLocale();
   const { slug: rawSlug } = await params;
   const baseSlug = resolveSlug('catalogProduct', rawSlug);
-  const localizedProducts = localizeProducts(products, locale);
+  const cmsSectors = await getSectorsFromCMS(locale);
+  const localizedProducts = cmsSectors || localizeProducts(products, locale);
   const item = localizedProducts.find((entry) => entry.slug === baseSlug);
 
   if (!item) {
@@ -90,7 +95,8 @@ export default async function CatalogProductDetailPage({ params }) {
   const locale = await getRequestLocale();
   const { slug: rawSlug } = await params;
   const baseSlug = resolveSlug('catalogProduct', rawSlug);
-  const localizedProducts = localizeProducts(products, locale);
+  const cmsSectors = await getSectorsFromCMS(locale);
+  const localizedProducts = cmsSectors || localizeProducts(products, locale);
   const currentIndex = localizedProducts.findIndex((entry) => entry.slug === baseSlug);
   const item = currentIndex >= 0 ? localizedProducts[currentIndex] : null;
 

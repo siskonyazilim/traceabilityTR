@@ -6,6 +6,9 @@ import JsonLd from '../../components/seo/JsonLd';
 import { getOrganizationSchema, SITE_URL } from '../../components/seo/OrganizationSchema';
 import AeoFaqSection from '../../components/seo/AeoFaqSection';
 import { getAeoFaqBundle, getAeoFaqSchema } from '../../lib/seo/aeoFaqs';
+import { getReferenceProjects } from '../../lib/cms/referenceService';
+
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
   const locale = await getRequestLocale();
@@ -84,6 +87,7 @@ export default function ProjectsPage() {
 
 async function ProjectsPageWithSchema() {
   const locale = await getRequestLocale();
+  const initialProjects = await getReferenceProjects(locale);
   let pagePath = '/portfolio';
   if (locale === 'en') {
     pagePath = '/reference-projects';
@@ -138,7 +142,7 @@ async function ProjectsPageWithSchema() {
     <>
       <JsonLd data={jsonLd} />
       <Suspense fallback={<div>Loading...</div>}>
-        <ProjectsPageClient />
+        <ProjectsPageClient initialProjects={initialProjects} />
       </Suspense>
       <AeoFaqSection bundle={faqBundle} />
     </>

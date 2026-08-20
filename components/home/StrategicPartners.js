@@ -10,7 +10,8 @@ import { strategicPartners } from '../../data/partners';
 import { getFirstSentenceText, localizePartners } from '../../lib/i18n/contentLocalization';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
 
-export const StrategicPartners = () => {
+/* eslint-disable react/prop-types */
+export const StrategicPartners = ({ cmsPartners }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
@@ -19,7 +20,8 @@ export const StrategicPartners = () => {
   if (locale === 'ro') {
     detailBasePath = '/parteneri-de-solutii';
   }
-  const localizedPartners = useMemo(() => localizePartners(strategicPartners, locale), [locale]);
+  const sourcePartners = Array.isArray(cmsPartners) && cmsPartners.length > 0 ? cmsPartners : strategicPartners;
+  const localizedPartners = useMemo(() => localizePartners(sourcePartners, locale), [sourcePartners, locale]);
 
   useEffect(() => {
     const updateItemsPerView = () => {

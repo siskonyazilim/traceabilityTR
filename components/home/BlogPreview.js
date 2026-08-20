@@ -11,12 +11,14 @@ import { useLanguage } from '../i18n/LanguageProvider';
 import { blogPosts } from '../../data/blogPosts';
 import { localizeBlogPosts } from '../../lib/i18n/contentLocalization';
 
-export const BlogPreview = () => {
+/* eslint-disable react/prop-types */
+export const BlogPreview = ({ cmsPosts }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [pauseUntil, setPauseUntil] = useState(0);
   const { locale, t } = useLanguage();
-  const localizedPosts = useMemo(() => localizeBlogPosts(blogPosts, locale), [locale]);
+  const sourcePosts = Array.isArray(cmsPosts) && cmsPosts.length > 0 ? cmsPosts : blogPosts;
+  const localizedPosts = useMemo(() => localizeBlogPosts(sourcePosts, locale), [sourcePosts, locale]);
   const sortedPosts = useMemo(
     () =>
       [...localizedPosts].sort((a, b) => {
