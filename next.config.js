@@ -27,16 +27,9 @@ const nextConfig = {
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.izlenebilirlik.com.tr' }],
-        destination: 'https://izlenebilirlik.com.tr/:path*',
-        permanent: true,
-      },
-    ]
-  },
+  // www → non-www yönlendirmesi Cloudflare tarafında yapılıyor.
+  // Burada tekrar tanımlamak çift redirect zincirine yol açar ve
+  // Google Search Console'da "Yönlendirmeli sayfa" hatasını tetikler.
 }
 
 module.exports = nextConfig
