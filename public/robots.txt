@@ -49,4 +49,3 @@ Allow: /
 
 Sitemap: https://izlenebilirlik.com.tr/sitemap.xml
 Sitemap: https://izlenebilirlik.com.tr/video-sitemap.xml
-Host: https://izlenebilirlik.com.tr
