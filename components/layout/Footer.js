@@ -124,10 +124,10 @@ export const Footer = ({ cmsGlobal }) => {
             </p>
             <div className="flex items-center gap-3">
               <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <img src="/social/linkedin-icon-2.svg" alt="LinkedIn" className="h-4 w-4" />
+                <img src="/social/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
               </a>
               <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <img src="/social/x-logo-twitter-new-brand-graphic-symbol-2023-png.webp" alt="X" className="h-4 w-4" />
+                <img src="/social/twitter.svg" alt="X" className="h-4 w-4" />
               </a>
               <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <img src="/social/instagram-2016-5.svg" alt="Instagram" className="h-[18px] w-[18px]" />
