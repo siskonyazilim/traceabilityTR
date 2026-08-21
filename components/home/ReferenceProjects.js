@@ -104,6 +104,13 @@ export const ReferenceProjects = ({ cmsProjects = null }) => {
 
   return (
     <section id="reference-projects" className="section-block bg-white relative overflow-hidden">
+      {/* Anchor Aliases */}
+      <span id="referans-projeler" className="absolute -top-24 pointer-events-none" />
+      <span id="proiecte-de-referinta" className="absolute -top-24 pointer-events-none" />
+      <span id="portfolio" className="absolute -top-24 pointer-events-none" />
+      <span id="projeler" className="absolute -top-24 pointer-events-none" />
+      <span id="projects" className="absolute -top-24 pointer-events-none" />
+
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/30 to-transparent"></div>
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent-green/5 rounded-md blur-3xl"></div>

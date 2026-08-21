@@ -65,15 +65,8 @@ export async function generateMetadata({ params }) {
   const title = `${post.title} | ${f(locale, 'blogDetailPage', 'blogSuffix')}`;
   const description = post.excerpt;
 
-  // Alternate slug’lar: CMS post ise Strapi’nin locale slug alanlarını kullan
-  const getSlugForLocale = (loc) => {
-    if (post._fromCMS) {
-      return loc === 'tr' ? (post.slugTr || post.originalSlug)
-        : loc === 'en' ? (post.slugEn || post.originalSlug)
-        : (post.slugRo || post.originalSlug);
-    }
-    return getLocalizedSlug('blog', baseSlug, loc);
-  };
+  // Alternate slug’lar: Her zaman slugMapping.js kod tanımlarını kullan
+  const getSlugForLocale = (loc) => getLocalizedSlug('blog', baseSlug, loc);
 
   const canonicalPath = toLocalePath(`/blog/${getSlugForLocale(locale)}`, locale);
 

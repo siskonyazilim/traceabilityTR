@@ -57,36 +57,47 @@ function translatePathToTr(pathname) {
     const trSlug = toTrSlug('blog', segments[1]);
     return `/blog/${trSlug}`;
   }
-  // /solutions/[slug]
-  if (segments[0] === 'solutions' && segments[1]) {
+  // /solutions/[slug] veya /cozumler/[slug]
+  if ((segments[0] === 'solutions' || segments[0] === 'cozumler') && segments[1]) {
     const trSlug = toTrSlug('solution', segments[1]);
     return `/solutions/${trSlug}`;
   }
-  // /catalog/products/[slug]
-  if (segments[0] === 'catalog' && segments[1] === 'products' && segments[2]) {
+  // /catalog/products/[slug] veya /katalog/urunler/[slug]
+  if (
+    (segments[0] === 'catalog' || segments[0] === 'katalog') &&
+    (segments[1] === 'products' || segments[1] === 'urunler') &&
+    segments[2]
+  ) {
     const trSlug = toTrSlug('catalogProduct', segments[2]);
     return `/catalog/products/${trSlug}`;
   }
-  // /catalog/solutions/[slug]
-  if (segments[0] === 'catalog' && segments[1] === 'solutions' && segments[2]) {
+  // /catalog/solutions/[slug] veya /katalog/cozumler/[slug]
+  if (
+    (segments[0] === 'catalog' || segments[0] === 'katalog') &&
+    (segments[1] === 'solutions' || segments[1] === 'cozumler') &&
+    segments[2]
+  ) {
     const trSlug = toTrSlug('catalogSolution', segments[2]);
     return `/catalog/solutions/${trSlug}`;
   }
-  // /portfolio/[slug] veya /reference-projects/[slug]
-  if ((segments[0] === 'portfolio' || segments[0] === 'reference-projects') && segments[1]) {
+  // /portfolio/[slug] veya /reference-projects/[slug] veya /referans-projeler/[slug]
+  if (
+    (segments[0] === 'portfolio' || segments[0] === 'reference-projects' || segments[0] === 'referans-projeler') &&
+    segments[1]
+  ) {
     const trSlug = toTrSlug('portfolio', segments[1]);
     return `/portfolio/${trSlug}`;
   }
-  // /solution-partners/[slug] — slug aynı kalır
-  if (segments[0] === 'solution-partners') {
-    return withoutPrefix;
+  // /solution-partners/[slug] veya /cozum-ortaklari/[slug] — slug aynı kalır
+  if (segments[0] === 'solution-partners' || segments[0] === 'cozum-ortaklari') {
+    return `/solution-partners/${segments[1] || ''}`.replace(/\/$/, '');
   }
 
   // Diğer sayfalar: prefix'i çıkar, slug'ı çevirme
   return withoutPrefix;
 }
 
-export function middleware(request) {
+export function proxy(request) {
   const { pathname, search } = request.nextUrl;
 
   if (isBypassedPath(pathname)) {

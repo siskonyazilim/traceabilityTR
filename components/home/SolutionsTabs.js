@@ -50,36 +50,57 @@ export const SolutionsTabs = ({ cmsSolutions, cmsSectors }) => {
 
   useEffect(() => {
     const tabFromQuery = searchParams.get('tab');
-    if (tabFromQuery === 'solutions' || tabFromQuery === 'products') {
-      setActiveTab(tabFromQuery);
+    if (tabFromQuery === 'solutions' || tabFromQuery === 'products' || tabFromQuery === 'sektorler') {
+      setActiveTab(tabFromQuery === 'sektorler' ? 'products' : tabFromQuery);
     }
   }, [searchParams]);
 
   useEffect(() => {
     const handleOpenSolutionsTab = (event) => {
       const tab = event?.detail?.tab;
-      if (tab === 'solutions' || tab === 'products') {
-        setActiveTab(tab);
+      if (tab === 'solutions' || tab === 'products' || tab === 'sektorler') {
+        setActiveTab(tab === 'sektorler' ? 'products' : tab);
       }
     };
 
+    const handleHash = () => {
+      const hash = globalThis.location?.hash || '';
+      if (hash === '#products-tab' || hash === '#sektorler' || hash === '#products' || hash === '#industries') {
+        setActiveTab('products');
+      } else if (hash === '#solutions-tab' || hash === '#solutions' || hash === '#cozumler' || hash === '#traceability-solutions') {
+        setActiveTab('solutions');
+      }
+    };
+
+    handleHash();
     globalThis.addEventListener('open-solutions-tab', handleOpenSolutionsTab);
-    return () => globalThis.removeEventListener('open-solutions-tab', handleOpenSolutionsTab);
+    globalThis.addEventListener('hashchange', handleHash);
+    return () => {
+      globalThis.removeEventListener('open-solutions-tab', handleOpenSolutionsTab);
+      globalThis.removeEventListener('hashchange', handleHash);
+    };
   }, []);
 
   return (
     <section id="traceability-solutions" className="section-block bg-gradient-to-br from-white via-[#f9fbfd] to-white relative overflow-hidden">
+      {/* Anchor Aliases */}
+      <span id="solutions" className="absolute -top-24 pointer-events-none" />
+      <span id="cozumler" className="absolute -top-24 pointer-events-none" />
+      <span id="sektorler" className="absolute -top-24 pointer-events-none" />
+      <span id="products" className="absolute -top-24 pointer-events-none" />
+      <span id="products-tab" className="absolute -top-24 pointer-events-none" />
+
       {/* Background Pattern */}
       <div className="absolute inset-0 pattern-dots opacity-40"></div>
 
       <Container size="xl" className="relative z-10">
         <SectionHeader
-          title={t('sections.solutionsProductsTitle', 'Çözümler ve Ürünler')}
+          title={t('sections.solutionsProductsTitle', 'Çözümler ve Sektörler')}
           subtitle={t('sections.solutionsProductsSubtitle', 'İzlenebilirlik için eksiksiz hizmet ve ürün yelpazemiz')}
         />
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12" role="tablist" aria-label={t('sections.solutionsProductsTitle', 'Çözümler ve Ürünler')}>
+        <div className="flex flex-wrap justify-center gap-4 mb-12" role="tablist" aria-label={t('sections.solutionsProductsTitle', 'Çözümler ve Sektörler')}>
           <button
             type="button"
             onClick={() => setActiveTab('solutions')}
@@ -109,7 +130,7 @@ export const SolutionsTabs = ({ cmsSolutions, cmsSectors }) => {
                 : 'bg-white border border-gray-light text-inactive-gray hover:text-accent-blue hover:border-accent-blue shadow-soft'
             }`}
           >
-            {t('sections.productsTab', 'Produse')}
+            {t('sections.productsTab', 'Sektörler')}
           </button>
         </div>
 
@@ -163,15 +184,27 @@ export const SolutionsTabs = ({ cmsSolutions, cmsSectors }) => {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10 h-full flex flex-col items-center text-center">
-                  <div className="h-28 w-full flex items-center justify-center overflow-hidden mb-4">
+                  <div className="h-28 w-full flex items-center justify-center overflow-hidden mb-4 relative">
                     <img
-                      src={product.image}
+                      src={
+                        (() => {
+                          const idNum = Number(product.id);
+                          if (idNum === 1) return '/resmi/hybrid-02.png';
+                          if (idNum === 2) return '/resmi/a-01.png';
+                          if (idNum === 3) return '/resmi/bio-04.png';
+                          if (idNum === 4) return '/resmi/capsule-03.png';
+
+                          const s = String(product.slug || '');
+                          if (s.includes('hybrid') || s.includes('hibrit')) return '/resmi/hybrid-02.png';
+                          if (s.includes('a-plus') || s.includes('a-01')) return '/resmi/a-01.png';
+                          if (s.includes('organic') || s.includes('organik')) return '/resmi/bio-04.png';
+                          if (s.includes('capsule') || s.includes('kapsul')) return '/resmi/capsule-03.png';
+
+                          return product.image || '/resmi/hybrid-02.png';
+                        })()
+                      }
                       alt={product.title}
-                      className="h-24 w-auto object-contain"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.parentElement.querySelector('.fallback-product-icon')?.classList.remove('hidden');
-                      }}
+                      className="h-24 w-auto object-contain max-h-24"
                     />
                     <div className="fallback-product-icon hidden absolute inset-0 flex items-center justify-center text-5xl">
                       🎯

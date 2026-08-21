@@ -92,54 +92,125 @@ export const Header = ({ cmsGlobal }) => {
     return () => globalThis.removeEventListener('click', handleOutside);
   }, []);
 
-  const handleNavClick = (id) => {
-    const syncSolutionsTab = (tab) => {
-      const tabValue = tab === 'products' ? 'products' : 'solutions';
-      const section = document.querySelector('#traceability-solutions');
+  const anchorAliases = [
+    'solutions',
+    'cozumler',
+    'solutions-tab',
+    'sektorler',
+    'products',
+    'industries',
+    'products-tab',
+    'referans-projeler',
+    'reference-projects',
+    'portfolio',
+    'projects',
+    'projeler',
+    'proiecte-de-referinta',
+    'cozum-ortaklari',
+    'partners',
+    'solution-partners',
+    'strategic-partners',
+    'our-strategic-solution-partners',
+    'parteneri-de-solutii',
+    'technology-capabilities',
+    'teknoloji-yetkinlikleri',
+  ];
 
-      if (section) {
-        const y = section.getBoundingClientRect().top + globalThis.scrollY - 92;
-        globalThis.scrollTo({ top: y, behavior: 'smooth' });
+  const normalizeAnchorHref = (href, label = '') => {
+    const raw = (href || '').trim();
+    const clean = raw.replace(/^\//, '').replace(/^#/, '');
+    const l = (label || '').toLowerCase();
 
-        const url = new URL(globalThis.location.href);
-        url.searchParams.set('tab', tabValue);
-        url.hash = 'traceability-solutions';
-        globalThis.history.pushState(null, '', url.toString());
+    if (clean === 'portfolio' || clean === 'projects' || clean === 'projeler' || clean === 'referans-projeler' || clean === 'reference-projects' || clean === 'proiecte-de-referinta' || l.includes('referans') || l.includes('proiecte') || l.includes('portfolio')) {
+      return '#reference-projects';
+    }
+    if (clean === 'sektorler' || clean === 'products' || clean === 'industries' || clean === 'products-tab' || l.includes('sektör') || l.includes('industr') || l.includes('produse')) {
+      return '#products-tab';
+    }
+    if (clean === 'cozum-ortaklari' || clean === 'partners' || clean === 'solution-partners' || clean === 'strategic-partners' || clean === 'our-strategic-solution-partners' || clean === 'parteneri-de-solutii' || l.includes('ortak') || l.includes('partner')) {
+      return '#our-strategic-solution-partners';
+    }
+    if (clean === 'solutions' || clean === 'cozumler' || clean === 'solutions-tab' || l.includes('çözüm') || l.includes('solution') || l.includes('soluții')) {
+      return '#solutions-tab';
+    }
+    return href;
+  };
 
-        globalThis.dispatchEvent(new CustomEvent('open-solutions-tab', { detail: { tab: tabValue } }));
-        setIsOpen(false);
-        return true;
-      }
+  const isAnchorHref = (href) => {
+    const raw = (href || '').trim().replace(/^\//, '').replace(/^#/, '');
+    return (href || '').includes('#') || anchorAliases.includes(raw);
+  };
 
-      router.push(toLocalePath(`/?tab=${tabValue}#traceability-solutions`));
-      setIsOpen(false);
-      return true;
-    };
+  const handleNavClick = (href) => {
+    const raw = normalizeAnchorHref(href);
+    const isAnchor = isAnchorHref(raw);
 
-    if (id === '#solutions-tab') {
-      if (syncSolutionsTab('solutions')) {
-        return;
-      }
+    let hash = '';
+    if (raw.includes('#')) {
+      hash = raw.substring(raw.indexOf('#'));
+    } else if (isAnchor) {
+      hash = `#${raw.replace(/^\//, '')}`;
     }
 
-    if (id === '#products-tab') {
-      if (syncSolutionsTab('products')) {
-        return;
-      }
-    }
+    if (isAnchor && hash) {
+      const cleanId = hash.replace(/^#/, '');
 
-    const element = document.querySelector(id);
-    if (element) {
-      const y = element.getBoundingClientRect().top + globalThis.scrollY - 92;
-      globalThis.scrollTo({ top: y, behavior: 'smooth' });
-      // Update URL hash
-      globalThis.history.pushState(null, '', id);
+      const aliasMap = {
+        'products-tab': 'traceability-solutions',
+        'sektorler': 'traceability-solutions',
+        'products': 'traceability-solutions',
+        'industries': 'traceability-solutions',
+        'solutions-tab': 'traceability-solutions',
+        'solutions': 'traceability-solutions',
+        'cozumler': 'traceability-solutions',
+        'traceability-solutions': 'traceability-solutions',
+        'referans-projeler': 'reference-projects',
+        'proiecte-de-referinta': 'reference-projects',
+        'portfolio': 'reference-projects',
+        'reference-projects': 'reference-projects',
+        'projects': 'reference-projects',
+        'projeler': 'reference-projects',
+        'cozum-ortaklari': 'our-strategic-solution-partners',
+        'solution-partners': 'our-strategic-solution-partners',
+        'parteneri-de-solutii': 'our-strategic-solution-partners',
+        'partners': 'our-strategic-solution-partners',
+        'strategic-partners': 'our-strategic-solution-partners',
+        'our-strategic-solution-partners': 'our-strategic-solution-partners',
+        'technology-capabilities': 'technology-capabilities',
+        'teknoloji-yetkinlikleri': 'technology-capabilities',
+      };
+
+      const isProductTab = cleanId === 'products-tab' || cleanId === 'sektorler' || cleanId === 'products' || cleanId === 'industries';
+      const isSolutionTab = cleanId === 'solutions-tab' || cleanId === 'solutions' || cleanId === 'cozumler';
+
+      const targetId = aliasMap[cleanId] || cleanId;
+      const element = document.getElementById(targetId) || document.getElementById(cleanId);
+
+      if (isHomePage || element) {
+        if (isProductTab) {
+          globalThis.dispatchEvent(new CustomEvent('open-solutions-tab', { detail: { tab: 'products' } }));
+        } else if (isSolutionTab) {
+          globalThis.dispatchEvent(new CustomEvent('open-solutions-tab', { detail: { tab: 'solutions' } }));
+        }
+
+        if (element) {
+          const y = element.getBoundingClientRect().top + globalThis.scrollY - 92;
+          globalThis.scrollTo({ top: y, behavior: 'smooth' });
+          globalThis.history.pushState(null, '', `#${cleanId}`);
+          setIsOpen(false);
+          return;
+        }
+      }
+
+      // If not on homepage or section not found on page, go to homepage anchor
+      const tabParam = isProductTab ? '?tab=products' : (isSolutionTab ? '?tab=solutions' : '');
+      router.push(toLocalePath(`/${tabParam}${hash}`));
       setIsOpen(false);
       return;
     }
 
-    // If section is not on the current page, go to homepage anchor.
-    router.push(toLocalePath(`/${id}`));
+    // Normal page navigation
+    router.push(toLocalePath(raw));
     setIsOpen(false);
   };
 
@@ -147,15 +218,15 @@ export const Header = ({ cmsGlobal }) => {
   const navItems = (cmsGlobal?.headerNav && cmsGlobal.headerNav.length > 0)
     ? cmsGlobal.headerNav.map((item) => ({
         label: item.label,
-        href: item.href.startsWith('/') ? toLocalePath(item.href) : item.href,
+        href: normalizeAnchorHref(item.href, item.label),
       }))
     : [
-        { label: t('header.solutions', 'Çözümlerimiz'), href: '#solutions-tab' },
-        { label: t('header.industries', 'Ürünlerimiz'), href: '#products-tab' },
+        { label: t('header.solutions', 'Çözümler'), href: '#solutions-tab' },
+        { label: t('header.industries', 'Sektörler'), href: '#products-tab' },
         { label: t('header.projects', 'Referans Projeler'), href: '#reference-projects' },
         { label: t('header.partners', 'Çözüm Ortakları'), href: '#our-strategic-solution-partners' },
-        { label: t('header.contact', 'İletişim'), href: toLocalePath('/contact') },
-        { label: t('header.news', 'Blog'), href: toLocalePath('/blog') },
+        { label: t('header.contact', 'İletişim'), href: '/contact' },
+        { label: t('header.news', 'Blog'), href: '/blog' },
       ];
 
   const currentLangIndex = languageOptions.findIndex((option) => option.code === locale);
@@ -188,7 +259,7 @@ export const Header = ({ cmsGlobal }) => {
           <nav className="hidden lg:flex items-center gap-8 self-center">
             {navItems.map((item) => (
               <div key={item.label}>
-                {item.href.startsWith('#') ? (
+                {isAnchorHref(item.href) ? (
                   <button
                     type="button"
                     onClick={() => handleNavClick(item.href)}
@@ -200,7 +271,8 @@ export const Header = ({ cmsGlobal }) => {
                   </button>
                 ) : (
                   <Link
-                    href={item.href}
+                    href={toLocalePath(item.href)}
+                    onClick={() => setIsOpen(false)}
                     className={`text-sm font-semibold transition-colors hover:text-accent-blue ${
                       useTransparentHeader ? 'text-white' : 'text-primary-black'
                     }`}
@@ -308,7 +380,7 @@ export const Header = ({ cmsGlobal }) => {
           <div id="mobile-navigation" className="lg:hidden bg-white/98 backdrop-blur-md rounded-xl shadow-xl p-4 mb-4 border border-slate-blue/10 animate-slide-up max-h-[calc(100vh-5rem)] overflow-y-auto">
             {navItems.map((item) => (
               <div key={item.label} className="mb-3">
-                {item.href.startsWith('#') ? (
+                {isAnchorHref(item.href) ? (
                   <button
                     type="button"
                     onClick={() => handleNavClick(item.href)}
@@ -318,7 +390,8 @@ export const Header = ({ cmsGlobal }) => {
                   </button>
                 ) : (
                   <Link
-                    href={item.href}
+                    href={toLocalePath(item.href)}
+                    onClick={() => setIsOpen(false)}
                     className="block px-4 py-4 text-base text-primary-black font-semibold hover:bg-gray-light hover:bg-opacity-40 rounded-md transition-colors"
                   >
                     {item.label}

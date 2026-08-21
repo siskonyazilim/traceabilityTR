@@ -1,5 +1,6 @@
 import './globals.css'
 import 'font-awesome/css/font-awesome.min.css'
+import Script from 'next/script'
 import { Layout } from '../components/layout/Layout'
 import { LanguageProvider } from '../components/i18n/LanguageProvider'
 import { Kanit } from 'next/font/google'
@@ -98,9 +99,14 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      </head>
+      <body className={kanit.variable} suppressHydrationWarning>
         {/* ── Google Consent Mode v2 (KVKK & GDPR Uyumluluğu) ── */}
-        <script
+        <Script
           id="google-consent-mode"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -117,15 +123,18 @@ export default async function RootLayout({ children }) {
         />
 
         {/* ── ÇerezGo Script (GTM'den önce yer almalıdır) ── */}
-        <script
+        <Script
+          id="cerezgo-script"
+          strategy="afterInteractive"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
           data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM="
           data-id="nt"
         />
 
         {/* ── Google Tag Manager ── */}
-        <script
+        <Script
           id="google-tag-manager"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -134,11 +143,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WTGXXCML');`,
           }}
         />
-
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      </head>
-      <body className={kanit.variable} suppressHydrationWarning>
         <noscript>
           <iframe
             title="gtm-noscript"

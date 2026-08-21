@@ -61,33 +61,50 @@ export const Footer = ({ cmsGlobal }) => {
   };
 
   const handleSectionClick = (e, href) => {
-    // Only handle if we're on homepage and it's a hash link
-    if (isHomePage && href.startsWith('/#')) {
-      e.preventDefault();
-      const id = href.substring(1); // Remove the leading /
+    const isAnchor = href.includes('#');
+    if (!isAnchor) return;
 
-      // Special handling for products tab
-      if (id === '#products-tab') {
-        const section = document.querySelector('#traceability-solutions');
-        if (section) {
-          const y = section.getBoundingClientRect().top + globalThis.scrollY - 92;
-          globalThis.scrollTo({ top: y, behavior: 'smooth' });
-          globalThis.history.pushState(null, '', id);
-          setTimeout(() => {
-            const productsButton = document.getElementById('products-tab-button');
-            if (productsButton) {
-              productsButton.click();
-            }
-          }, 500);
-          return;
-        }
+    const hash = href.substring(href.indexOf('#'));
+    const cleanId = hash.replace(/^#/, '');
+
+    const aliasMap = {
+      'products-tab': 'traceability-solutions',
+      'sektorler': 'traceability-solutions',
+      'products': 'traceability-solutions',
+      'industries': 'traceability-solutions',
+      'solutions-tab': 'traceability-solutions',
+      'solutions': 'traceability-solutions',
+      'cozumler': 'traceability-solutions',
+      'traceability-solutions': 'traceability-solutions',
+      'referans-projeler': 'reference-projects',
+      'proiecte-de-referinta': 'reference-projects',
+      'portfolio': 'reference-projects',
+      'reference-projects': 'reference-projects',
+      'projects': 'reference-projects',
+      'cozum-ortaklari': 'our-strategic-solution-partners',
+      'solution-partners': 'our-strategic-solution-partners',
+      'parteneri-de-solutii': 'our-strategic-solution-partners',
+      'partners': 'our-strategic-solution-partners',
+      'strategic-partners': 'our-strategic-solution-partners',
+      'our-strategic-solution-partners': 'our-strategic-solution-partners',
+      'technology-capabilities': 'technology-capabilities',
+      'teknoloji-yetkinlikleri': 'technology-capabilities',
+    };
+
+    if (isHomePage) {
+      e.preventDefault();
+      if (cleanId === 'products-tab' || cleanId === 'sektorler' || cleanId === 'products') {
+        globalThis.dispatchEvent(new CustomEvent('open-solutions-tab', { detail: { tab: 'products' } }));
+      } else if (cleanId === 'solutions-tab' || cleanId === 'solutions' || cleanId === 'cozumler') {
+        globalThis.dispatchEvent(new CustomEvent('open-solutions-tab', { detail: { tab: 'solutions' } }));
       }
 
-      const element = document.querySelector(id);
+      const targetId = aliasMap[cleanId] || cleanId;
+      const element = document.getElementById(targetId) || document.getElementById(cleanId);
       if (element) {
         const y = element.getBoundingClientRect().top + globalThis.scrollY - 92;
         globalThis.scrollTo({ top: y, behavior: 'smooth' });
-        globalThis.history.pushState(null, '', id);
+        globalThis.history.pushState(null, '', `#${cleanId}`);
       }
     }
   };
@@ -99,23 +116,18 @@ export const Footer = ({ cmsGlobal }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10">
           {/* Brand */}
           <div>
-            <div className="mb-4">
-              <Link href="/" className="inline-flex min-h-[44px] items-center font-poppins text-2xl font-extrabold tracking-tight text-white transition-all duration-300 hover:text-accent-blue">
-                Traceability
-              </Link>
-            </div>
-            <p className="text-gray-light text-sm mb-5 leading-relaxed max-w-sm">
+            <Link href={toLocalePath('/')} className="font-poppins text-2xl font-extrabold tracking-tight text-white mb-4 block">
+              Traceability
+            </Link>
+            <p className="text-gray-light text-sm mb-6 leading-relaxed max-w-sm">
               {footerDescription}
             </p>
             <div className="flex items-center gap-3">
               <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <img src="/social/linkedin.svg" alt="LinkedIn" className="h-[18px] w-[18px]" />
+                <img src="/social/linkedin-icon-2.svg" alt="LinkedIn" className="h-4 w-4" />
               </a>
-              <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <img src="/social/youtube.svg" alt="YouTube" className="h-[18px] w-[18px]" />
-              </a>
-              <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
-                <img src="/social/twitter.svg" alt="X (Twitter)" className="h-[18px] w-[18px]" />
+              <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
+                <img src="/social/x-logo-twitter-new-brand-graphic-symbol-2023-png.webp" alt="X" className="h-4 w-4" />
               </a>
               <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="h-11 w-11 rounded-md border border-slate-blue/40 text-gray-light hover:text-accent-blue hover:border-accent-blue transition-all duration-300 flex items-center justify-center">
                 <img src="/social/instagram-2016-5.svg" alt="Instagram" className="h-[18px] w-[18px]" />
@@ -148,6 +160,15 @@ export const Footer = ({ cmsGlobal }) => {
                   className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm"
                 >
                   {t('footer.industries', 'Sektörler')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={toLocalePath('/#reference-projects')}
+                  onClick={(e) => handleSectionClick(e, '/#reference-projects')}
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center py-1 text-gray-light hover:text-accent-blue transition-colors text-sm"
+                >
+                  {t('header.projects', 'Referans Projeler')}
                 </Link>
               </li>
               <li>

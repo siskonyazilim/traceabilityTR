@@ -46,7 +46,11 @@ export default function TechnologyCapabilities({ cmsCapabilities }) {
   }, [cmsCapabilities, locale]);
 
   return (
-    <section className="section-block bg-gradient-to-br from-white via-[#f9fbfd] to-white relative overflow-hidden">
+    <section id="technology-capabilities" className="section-block bg-gradient-to-br from-white via-[#f9fbfd] to-white relative overflow-hidden">
+      {/* Anchor Aliases */}
+      <span id="teknoloji-yetkinlikleri" className="absolute -top-24 pointer-events-none" />
+      <span id="capabilities" className="absolute -top-24 pointer-events-none" />
+
       <div className="absolute inset-0 pattern-dots opacity-35"></div>
 
       <Container size="xl" className="relative z-10">

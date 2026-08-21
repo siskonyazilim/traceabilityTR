@@ -82,6 +82,13 @@ export const StrategicPartners = ({ cmsPartners }) => {
 
   return (
     <section id="our-strategic-solution-partners" className="section-block bg-gradient-to-br from-[#f6f7f8] via-white to-[#f6f7f8] relative overflow-hidden">
+      {/* Anchor Aliases */}
+      <span id="cozum-ortaklari" className="absolute -top-24 pointer-events-none" />
+      <span id="solution-partners" className="absolute -top-24 pointer-events-none" />
+      <span id="parteneri-de-solutii" className="absolute -top-24 pointer-events-none" />
+      <span id="partners" className="absolute -top-24 pointer-events-none" />
+      <span id="strategic-partners" className="absolute -top-24 pointer-events-none" />
+
       {/* Background Elements */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-accent-blue/5 rounded-md blur-3xl"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-secondary-blue/5 rounded-md blur-3xl"></div>
