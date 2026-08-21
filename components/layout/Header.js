@@ -247,12 +247,18 @@ export const Header = ({ cmsGlobal }) => {
           <Link
             href={toLocalePath('/')}
             onClick={() => setIsOpen(false)}
+            title={locale === 'tr' ? 'Traceability | Endüstriyel İzlenebilirlik & MES Çözümleri' : 'Traceability | Industrial Traceability & MES Solutions'}
             className={`font-poppins text-2xl sm:text-3xl font-extrabold tracking-tight leading-none transition-all duration-300 hover:tracking-normal self-center ${
               useTransparentHeader ? 'text-white' : 'text-primary-black'
             }`}
-            aria-label="Traceability"
+            aria-label={locale === 'tr' ? 'Traceability - Endüstriyel İzlenebilirlik, MES ve Akıllı Fabrika Çözümleri | Ana Sayfa' : 'Traceability - Industrial Traceability & MES Solutions | Home'}
           >
             Traceability
+            {locale === 'tr' && (
+              <span style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
+                | İzlenebilirlik
+              </span>
+            )}
           </Link>
 
           {/* Desktop Menu */}
