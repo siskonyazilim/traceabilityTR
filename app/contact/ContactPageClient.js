@@ -17,7 +17,7 @@ export default function ContactPageClient({ cmsContact }) {
 
   const officeList = [
     {
-       id: 1,
+      id: 1,
       name: t('contactPage.offices.brasov.name', 'România - Brașov'),
       address: t(
         'contactPage.offices.brasov.address',
@@ -109,20 +109,20 @@ export default function ContactPageClient({ cmsContact }) {
     setErrorMessage('');
 
     try {
-          const payload = {
-          firstName: data.firstName,
-          lastName: data.lastName,
-          phone: data.phone,
-          company: data.company,
-          email: data.email,
-          message: data.message,
-            
-          sourceSite: window.location.hostname,
+      const payload = {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        phone: data.phone,
+        company: data.company,
+        email: data.email,
+        message: data.message,
 
-          locale,
-          csrfToken,
-          submittedAt: formMountedAt.current,
-        };
+        sourceSite: window.location.hostname,
+
+        locale,
+        csrfToken,
+        submittedAt: formMountedAt.current,
+      };
 
       if (turnstileSiteKey && turnstileToken) {
         payload.turnstileToken = turnstileToken;
@@ -167,140 +167,140 @@ export default function ContactPageClient({ cmsContact }) {
     <div className="min-h-screen bg-dark-bg">
       <div className="pt-24 md:pt-28 bg-white rounded-t-3xl">
 
-      <Container size="xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="pt-4 md:pt-6 pb-14 md:pb-20"
-        >
-          <div className="mb-10 md:mb-12 rounded-md border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
-            <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">{t('contactPage.eyebrow', 'Contact')}</p>
-            <h1 className="text-2xl md:text-4xl font-semibold tracking-tight leading-[1.08]">{t('contactPage.heroTitle', 'İzlenebilirlik sürecinizi birlikte konuşalm')}</h1>
-          </div>
-        </motion.div>
-      </Container>
-
-      <Container size="xl">
-        <div className="pb-10 md:pb-14">
+        <Container size="xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-md p-6 md:p-10 lg:p-12 shadow-[0_14px_34px_rgba(10,10,43,0.08)]"
+            className="pt-4 md:pt-6 pb-14 md:pb-20"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-8 text-center">
-              {t('contactPage.formTitle', 'Trimitere Mesaj')}
-            </h2>
-
-            <form onSubmit={handleSubmit(onSubmit)} className="max-w-3xl mx-auto space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="firstName" className="block text-sm font-semibold text-primary-black mb-2">
-                  {t('contactPage.firstName', 'Prenume')} *
-                </label>
-                <input
-                  id="firstName"
-                  {...register('firstName', {
-                    required: t('contactPage.errors.firstNameRequired', 'Prenumele este necesar'),
-                    minLength: { value: 2, message: t('contactPage.errors.firstNameMin', 'Min 2 caractere') },
-                  })}
-                  type="text"
-                  aria-invalid={errors.firstName ? 'true' : 'false'}
-                  aria-describedby={errors.firstName ? 'firstName-error' : undefined}
-                  className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
-                  placeholder={t('contactPage.placeholders.firstName', 'Ion')}
-                />
-                {errors.firstName && (
-                  <span id="firstName-error" role="alert" className="text-accent-red text-sm">{errors.firstName.message}</span>
-                )}
-              </div>
-
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-semibold text-primary-black mb-2">
-                  {t('contactPage.lastName', 'Nume')} *
-                </label>
-                <input
-                  id="lastName"
-                  {...register('lastName', {
-                    required: t('contactPage.errors.lastNameRequired', 'Numele este necesar'),
-                    minLength: { value: 2, message: t('contactPage.errors.lastNameMin', 'Min 2 caractere') },
-                  })}
-                  type="text"
-                  aria-invalid={errors.lastName ? 'true' : 'false'}
-                  aria-describedby={errors.lastName ? 'lastName-error' : undefined}
-                  className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
-                  placeholder={t('contactPage.placeholders.lastName', 'Popescu')}
-                />
-                {errors.lastName && (
-                  <span id="lastName-error" role="alert" className="text-accent-red text-sm">{errors.lastName.message}</span>
-                )}
-              </div>
+            <div className="mb-10 md:mb-12 rounded-md border border-slate-200 bg-[radial-gradient(circle_at_85%_20%,_rgba(0,181,247,0.2)_0%,_rgba(0,181,247,0)_36%),linear-gradient(140deg,_#0a0a2b_0%,_#0019d2_58%,_#00b5f7_100%)] px-6 py-8 md:px-10 md:py-11 text-white shadow-[0_18px_44px_rgba(10,10,43,0.2)]">
+              <p className="text-xs md:text-sm uppercase tracking-[0.16em] text-white/80 font-semibold mb-3">{t('contactPage.eyebrow', 'Contact')}</p>
+              <h1 className="text-2xl md:text-4xl font-semibold tracking-tight leading-[1.08]">{t('contactPage.heroTitle', 'İzlenebilirlik sürecinizi birlikte konuşalm')}</h1>
             </div>
+          </motion.div>
+        </Container>
+
+        <Container size="xl">
+          <div className="pb-10 md:pb-14">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-gray-light bg-opacity-35 border border-gray-200 rounded-md p-6 md:p-10 lg:p-12 shadow-[0_14px_34px_rgba(10,10,43,0.08)]"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-black mb-8 text-center">
+                {t('contactPage.formTitle', 'Trimitere Mesaj')}
+              </h2>
+
+              <form onSubmit={handleSubmit(onSubmit)} className="max-w-3xl mx-auto space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-semibold text-primary-black mb-2">
+                      {t('contactPage.firstName', 'Prenume')} *
+                    </label>
+                    <input
+                      id="firstName"
+                      {...register('firstName', {
+                        required: t('contactPage.errors.firstNameRequired', 'Prenumele este necesar'),
+                        minLength: { value: 2, message: t('contactPage.errors.firstNameMin', 'Min 2 caractere') },
+                      })}
+                      type="text"
+                      aria-invalid={errors.firstName ? 'true' : 'false'}
+                      aria-describedby={errors.firstName ? 'firstName-error' : undefined}
+                      className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
+                      placeholder={t('contactPage.placeholders.firstName', 'Ion')}
+                    />
+                    {errors.firstName && (
+                      <span id="firstName-error" role="alert" className="text-accent-red text-sm">{errors.firstName.message}</span>
+                    )}
+                  </div>
+
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-semibold text-primary-black mb-2">
+                      {t('contactPage.lastName', 'Nume')} *
+                    </label>
+                    <input
+                      id="lastName"
+                      {...register('lastName', {
+                        required: t('contactPage.errors.lastNameRequired', 'Numele este necesar'),
+                        minLength: { value: 2, message: t('contactPage.errors.lastNameMin', 'Min 2 caractere') },
+                      })}
+                      type="text"
+                      aria-invalid={errors.lastName ? 'true' : 'false'}
+                      aria-describedby={errors.lastName ? 'lastName-error' : undefined}
+                      className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
+                      placeholder={t('contactPage.placeholders.lastName', 'Popescu')}
+                    />
+                    {errors.lastName && (
+                      <span id="lastName-error" role="alert" className="text-accent-red text-sm">{errors.lastName.message}</span>
+                    )}
+                  </div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-semibold text-primary-black mb-2"
-                >
-                  {t('contactPage.phone', 'Telefon')}
-                </label>
-
-                  <input
-                    id="phone"
-                  {...register('phone', {
-                    required: t(
-                      'contactPage.errors.phoneRequired',
-                      'Telefon numarası zorunludur'
-                    ),
-                  })}
-                    type="tel"
-                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
-                    placeholder={t(
-                    'contactPage.placeholders.phone',
-                    '+90 555 555 55 55'
-                  )}
-                  />
-
-                  {errors.phone && (
-                    <span className="text-accent-red text-sm">
-                      {errors.phone.message}
-                    </span>
-                  )}
-                </div>
-
-                <div>
                   <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-primary-black mb-2">
-                    {t('contactPage.email', 'Email')} *
-                  </label>
-                  <input
-                    id="email"
-                    {...register('email', {
-                      required: t('contactPage.errors.emailRequired', 'Email-ul este necesar'),
-                      pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: t('contactPage.errors.emailInvalid', 'Email invalid'),
-                      },
-                    })}
-                    type="email"
-                    aria-invalid={errors.email ? 'true' : 'false'}
-                    aria-describedby={errors.email ? 'email-error' : undefined}
-                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
-                    placeholder={t('contactPage.placeholders.email', 'email@example.com')}
-                  />
-                  {errors.email && (
-                    <span id="email-error" role="alert" className="text-accent-red text-sm">{errors.email.message}</span>
-                  )}
-                </div>
-                </div>
-              </div>
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-semibold text-primary-black mb-2"
+                    >
+                      {t('contactPage.phone', 'Telefon')}
+                    </label>
 
+                    <input
+                      id="phone"
+                      {...register('phone', {
+                        required: t(
+                          'contactPage.errors.phoneRequired',
+                          'Telefon numarası zorunludur'
+                        ),
+                      })}
+                      type="tel"
+                      className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
+                      placeholder={t(
+                        'contactPage.placeholders.phone',
+                        '+90 555 555 55 55'
+                      )}
+                    />
+
+                    {errors.phone && (
+                      <span className="text-accent-red text-sm">
+                        {errors.phone.message}
+                      </span>
+                    )}
+                  </div>
 
                   <div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-semibold text-primary-black mb-2">
+                        {t('contactPage.email', 'Email')} *
+                      </label>
+                      <input
+                        id="email"
+                        {...register('email', {
+                          required: t('contactPage.errors.emailRequired', 'Email-ul este necesar'),
+                          pattern: {
+                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                            message: t('contactPage.errors.emailInvalid', 'Email invalid'),
+                          },
+                        })}
+                        type="email"
+                        aria-invalid={errors.email ? 'true' : 'false'}
+                        aria-describedby={errors.email ? 'email-error' : undefined}
+                        className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white"
+                        placeholder={t('contactPage.placeholders.email', 'email@example.com')}
+                      />
+                      {errors.email && (
+                        <span id="email-error" role="alert" className="text-accent-red text-sm">{errors.email.message}</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+
+                <div>
                   <label
                     htmlFor="company"
                     className="block text-sm font-semibold text-primary-black mb-2"
@@ -310,7 +310,7 @@ export default function ContactPageClient({ cmsContact }) {
 
                   <input
                     id="company"
-                      {...register('company', {
+                    {...register('company', {
                       required: t(
                         'contactPage.errors.companyRequired',
                         'Şirket adı zorunludur'
@@ -335,185 +335,185 @@ export default function ContactPageClient({ cmsContact }) {
                   )}
                 </div>
 
-            {/* Honeypot */}
-            <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
-              <label htmlFor="_hp">Company</label>
-              <input id="_hp" {...register('_hp')} type="text" tabIndex={-1} autoComplete="off" />
-            </div>
+                {/* Honeypot */}
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
+                  <label htmlFor="_hp">Company</label>
+                  <input id="_hp" {...register('_hp')} type="text" tabIndex={-1} autoComplete="off" />
+                </div>
 
-            <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-primary-black mb-2">
-                {t('contactPage.message', 'Mesaj')} *
-              </label>
-              <textarea
-                id="message"
-                {...register('message', {
-                  required: t('contactPage.errors.messageRequired', 'Mesajul este necesar'),
-                  minLength: { value: 10, message: t('contactPage.errors.messageMin', 'Min 10 caractere') },
-                })}
-                rows="6"
-                aria-invalid={errors.message ? 'true' : 'false'}
-                aria-describedby={errors.message ? 'message-error' : undefined}
-                className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white resize-none"
-                placeholder={t('contactPage.placeholders.message', 'Mesajınızı buraya yazın...')}
-              />
-              {errors.message && (
-                <span id="message-error" role="alert" className="text-accent-red text-sm">{errors.message.message}</span>
-              )}
-            </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold text-primary-black mb-2">
+                    {t('contactPage.message', 'Mesaj')} *
+                  </label>
+                  <textarea
+                    id="message"
+                    {...register('message', {
+                      required: t('contactPage.errors.messageRequired', 'Mesajul este necesar'),
+                      minLength: { value: 10, message: t('contactPage.errors.messageMin', 'Min 10 caractere') },
+                    })}
+                    rows="6"
+                    aria-invalid={errors.message ? 'true' : 'false'}
+                    aria-describedby={errors.message ? 'message-error' : undefined}
+                    className="w-full px-4 py-3 border border-gray-text border-opacity-30 rounded-md focus:outline-none focus:border-accent-blue bg-white resize-none"
+                    placeholder={t('contactPage.placeholders.message', 'Mesajınızı buraya yazın...')}
+                  />
+                  {errors.message && (
+                    <span id="message-error" role="alert" className="text-accent-red text-sm">{errors.message.message}</span>
+                  )}
+                </div>
 
-            <div className="flex items-start gap-3 min-h-[44px]">
-              <input
-                id="privacy"
-                {...register('privacy', {
-                  required: t('contactPage.errors.privacyRequired', 'Gizlilik politikasını kabul etmelisiniz'),
-                })}
-                type="checkbox"
-                aria-invalid={errors.privacy ? 'true' : 'false'}
-                aria-describedby={errors.privacy ? 'privacy-error' : undefined}
-                className="peer sr-only"
-              />
-              <label htmlFor="privacy" className="flex min-h-[44px] items-start gap-3 text-sm text-gray-text leading-6 cursor-pointer">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-gray-text border-opacity-40 bg-white peer-checked:border-accent-blue peer-checked:bg-accent-blue peer-focus-visible:ring-2 peer-focus-visible:ring-accent-blue peer-focus-visible:ring-offset-1">
-                  <svg className="h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span>
-                  {t('contactPage.privacyText', 'Sunt de acord cu')} {' '}
-                  <Link href="/privacy-policy" className="text-accent-blue font-semibold hover:underline" onClick={(event) => event.stopPropagation()}>
-                    {t('contactPage.privacyPolicy', 'gizlilik politikasını')}
-                  </Link>
-                  {' '}*
-                </span>
-              </label>
-            </div>
-            {errors.privacy && (
-              <span id="privacy-error" role="alert" className="text-accent-red text-sm block">{errors.privacy.message}</span>
-            )}
+                <div className="flex items-start gap-3 min-h-[44px]">
+                  <input
+                    id="privacy"
+                    {...register('privacy', {
+                      required: t('contactPage.errors.privacyRequired', 'Gizlilik politikasını kabul etmelisiniz'),
+                    })}
+                    type="checkbox"
+                    aria-invalid={errors.privacy ? 'true' : 'false'}
+                    aria-describedby={errors.privacy ? 'privacy-error' : undefined}
+                    className="peer sr-only"
+                  />
+                  <label htmlFor="privacy" className="flex min-h-[44px] items-start gap-3 text-sm text-gray-text leading-6 cursor-pointer">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-gray-text border-opacity-40 bg-white peer-checked:border-accent-blue peer-checked:bg-accent-blue peer-focus-visible:ring-2 peer-focus-visible:ring-accent-blue peer-focus-visible:ring-offset-1">
+                      <svg className="h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span>
+                      {t('contactPage.privacyText', 'Sunt de acord cu')} {' '}
+                      <Link href="/privacy-policy" className="text-accent-blue font-semibold hover:underline" onClick={(event) => event.stopPropagation()}>
+                        {t('contactPage.privacyPolicy', 'gizlilik politikasını')}
+                      </Link>
+                      {' '}*
+                    </span>
+                  </label>
+                </div>
+                {errors.privacy && (
+                  <span id="privacy-error" role="alert" className="text-accent-red text-sm block">{errors.privacy.message}</span>
+                )}
 
-            {turnstileSiteKey && (
-              <div ref={turnstileRef} className="flex justify-center" />
-            )}
+                {turnstileSiteKey && (
+                  <div ref={turnstileRef} className="flex justify-center" />
+                )}
 
-            <div className="flex justify-center">
-              <Button
-                type="submit"
-                variant="solid"
-                size="lg"
-                className="bg-secondary-blue hover:bg-accent-blue text-white"
-                disabled={submitting}
-              >
-                {submitting
-                  ? t('contactPage.submitting', 'Se trimite...')
-                  : t('contactPage.submit', 'Trimite Mesaj')
-                }
-              </Button>
-            </div>
+                <div className="flex justify-center">
+                  <Button
+                    type="submit"
+                    variant="solid"
+                    size="lg"
+                    className="bg-secondary-blue hover:bg-accent-blue text-white"
+                    disabled={submitting}
+                  >
+                    {submitting
+                      ? t('contactPage.submitting', 'Se trimite...')
+                      : t('contactPage.submit', 'Trimite Mesaj')
+                    }
+                  </Button>
+                </div>
 
-            {submitted && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                role="status"
-                aria-live="polite"
-                className="bg-accent-green bg-opacity-20 border-2 border-accent-green text-accent-green px-4 py-3 rounded-md text-center font-semibold"
-              >
-                {t('contactPage.success', '✓ Mesajul dvs. a fost trimis cu succes!')}
-              </motion.div>
-            )}
+                {submitted && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    role="status"
+                    aria-live="polite"
+                    className="bg-accent-green bg-opacity-20 border-2 border-accent-green text-accent-green px-4 py-3 rounded-md text-center font-semibold"
+                  >
+                    {t('contactPage.success', '✓ Mesajul dvs. a fost trimis cu succes!')}
+                  </motion.div>
+                )}
 
-            {errorMessage && !submitted && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                role="alert"
-                aria-live="assertive"
-                className="bg-accent-red bg-opacity-10 border-2 border-accent-red text-accent-red px-4 py-3 rounded-md text-center font-semibold"
-              >
-                {errorMessage}
-              </motion.div>
-            )}
-            </form>
-          </motion.div>
-        </div>
-      </Container>
+                {errorMessage && !submitted && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    role="alert"
+                    aria-live="assertive"
+                    className="bg-accent-red bg-opacity-10 border-2 border-accent-red text-accent-red px-4 py-3 rounded-md text-center font-semibold"
+                  >
+                    {errorMessage}
+                  </motion.div>
+                )}
+              </form>
+            </motion.div>
+          </div>
+        </Container>
 
-      <Container size="xl">
-        <div className="pb-16 md:pb-24">
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary-black mb-10 md:mb-12 text-center">
-            {t('contactPage.officesTitle', 'Birourile Noastre')}
-          </h2>
+        <Container size="xl">
+          <div className="pb-16 md:pb-24">
+            <h2 className="text-2xl md:text-3xl font-semibold text-primary-black mb-10 md:mb-12 text-center">
+              {t('contactPage.officesTitle', 'Birourile Noastre')}
+            </h2>
 
-          <div className="grid grid-cols-1 gap-8 md:gap-10">
-            {offices.map((office, index) => (
-              <motion.div
-                key={office.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.06, duration: 0.25 }}
-                viewport={{ once: true }}
-                className="grid grid-cols-1 md:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-md overflow-hidden"
-              >
-                <div className="min-h-[320px] lg:min-h-[380px] bg-white p-6 md:p-8 lg:p-10 flex flex-col justify-center">
-                  <h3 className="text-xl md:text-2xl font-semibold text-primary-black mb-5 md:mb-6">
-                    {office.name}
-                  </h3>
+            <div className="grid grid-cols-1 gap-8 md:gap-10">
+              {offices.map((office, index) => (
+                <motion.div
+                  key={office.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.06, duration: 0.25 }}
+                  viewport={{ once: true }}
+                  className="grid grid-cols-1 md:grid-cols-2 border border-gray-200 shadow-sm bg-white rounded-md overflow-hidden"
+                >
+                  <div className="min-h-[320px] lg:min-h-[380px] bg-white p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+                    <h3 className="text-xl md:text-2xl font-semibold text-primary-black mb-5 md:mb-6">
+                      {office.name}
+                    </h3>
 
-                  <div className="w-full border-t border-primary-black border-opacity-20 mb-6 md:mb-8" />
+                    <div className="w-full border-t border-primary-black border-opacity-20 mb-6 md:mb-8" />
 
-                  <div className="space-y-4 md:space-y-5 text-primary-black">
-                    <div className="flex gap-3">
-                      <img
-                        src="/icon/icon-map-pin.svg"
-                        alt={t('contactPage.locationAlt', 'Konum')}
-                        className="w-5 h-5 flex-shrink-0 mt-1"
-                      />
-                      <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
-                        {office.address}
-                      </p>
-                    </div>
+                    <div className="space-y-4 md:space-y-5 text-primary-black">
+                      <div className="flex gap-3">
+                        <img
+                          src="/icon/icon-map-pin.svg"
+                          alt={t('contactPage.locationAlt', 'Konum')}
+                          className="w-5 h-5 flex-shrink-0 mt-1"
+                        />
+                        <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
+                          {office.address}
+                        </p>
+                      </div>
 
-                    {office.phone && (
+                      {office.phone && (
+                        <div className="flex gap-3 items-center">
+                          <IconPhone className="text-accent-blue flex-shrink-0" size={20} />
+                          <a
+                            href={`tel:${office.phone}`}
+                            className="text-base hover:text-accent-blue transition-colors"
+                          >
+                            {office.phone}
+                          </a>
+                        </div>
+                      )}
+
                       <div className="flex gap-3 items-center">
-                        <IconPhone className="text-accent-blue flex-shrink-0" size={20} />
+                        <IconMail className="text-accent-blue flex-shrink-0" size={20} />
                         <a
-                          href={`tel:${office.phone}`}
+                          href={`mailto:${office.email}`}
                           className="text-base hover:text-accent-blue transition-colors"
                         >
-                          {office.phone}
+                          {office.email}
                         </a>
                       </div>
-                    )}
-
-                    <div className="flex gap-3 items-center">
-                      <IconMail className="text-accent-blue flex-shrink-0" size={20} />
-                      <a
-                        href={`mailto:${office.email}`}
-                        className="text-base hover:text-accent-blue transition-colors"
-                      >
-                        {office.email}
-                      </a>
                     </div>
                   </div>
-                </div>
 
-                <div className="h-[320px] lg:h-[380px] bg-gray-light">
-                  <iframe
-                    title={`${office.name} ${t('contactPage.mapTitleSuffix', 'harita')}`}
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    allowFullScreen=""
-                    src={office.mapEmbedUrl || `https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
-                  />
-                </div>
-              </motion.div>
-            ))}
+                  <div className="h-[320px] lg:h-[380px] bg-gray-light">
+                    <iframe
+                      title={`${office.name} ${t('contactPage.mapTitleSuffix', 'harita')}`}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      allowFullScreen=""
+                      src={office.mapEmbedUrl || `https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=15&output=embed`}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
       </div>
     </div>
   );

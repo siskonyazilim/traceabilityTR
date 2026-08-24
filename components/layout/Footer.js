@@ -37,7 +37,7 @@ export const Footer = ({ cmsGlobal }) => {
   const footerDescription = cmsGlobal?.footerDescription
     || t('footer.brandDescription', 'Akıllı fabrikalar ve sürdürülebilir üretim için yenilikçi izlenebilirlik çözümleri.');
   const copyrightText = cmsGlobal?.copyrightText
-    || t('footer.copyright', '© 2026 Traceability. Tüm hakları saklıdır.');
+    || (locale === 'tr' ? '© 2026 İzlenebilirlik. Tüm hakları saklıdır.' : '© 2026 Traceability. Toate drepturile rezervate.');
 
   const toLocalePath = (targetPath) => {
     if (!targetPath) {

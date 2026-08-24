@@ -27,14 +27,14 @@ export async function generateMetadata() {
   if (isEn) {
     title = 'Industrial Traceability & MES Solutions for Smart Factories | Traceability';
   } else if (isTr) {
-    title = 'Endüstriyel İzlenebilirlik & MES Çözümleri | Akıllı Fabrikalar | Traceability';
+    title = 'Endüstriyel İzlenebilirlik & MES Çözümleri | Akıllı Fabrikalar | İzlenebilirlik';
   }
 
-  let description = 'Traceability.com.tr livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
+  let description = 'izlenebilirlik.com.tr livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
   if (isEn) {
-    description = 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.';
+    description = 'İzlenebilirlik delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.';
   } else if (isTr) {
-    description = 'Traceability; akıllı fabrikalar için uçtan uca izlenebilirlik çözümleri.';
+    description = 'İzlenebilirlik; akıllı fabrikalar için uçtan uca endüstriyel izlenebilirlik, MES ve otomasyon çözümleri: RFID, RTLS, WMS, Poka Yoke ve sistem entegrasyonu.';
   }
 
   let ogLocale = 'ro_RO';
