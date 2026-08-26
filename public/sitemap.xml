@@ -11,6 +11,10 @@
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog" />
   </url>
   <!-- Blog: TR (varsayÄ±lan, prefix'siz) -->
   <url>
@@ -270,12 +274,20 @@
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/contact" />
   </url>
   <url>
     <loc>https://izlenebilirlik.com.tr/cookie</loc>
     <lastmod>2026-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/cookie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/cookie" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/cookie" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/cookie" />
   </url>
   <!-- Blog: EN -->
   <!-- Referans Projeler: EN (/en/reference-projects/) -->
@@ -286,6 +298,10 @@
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio" />
   </url>
   <!-- Referans Projeler: TR (/portfolio/) -->
   <url>
@@ -414,7 +430,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/delphi-enjeksiyon-rampasi-bireysel-takibi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/delphi-monitorizare-individuala-rampa-injectie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/delphi-injection-rail-individual-tracking" />
     <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-monitorizare-individuala-rampa-injectie" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/delphi-enjeksiyon-rampasi-bireysel-takibi" />
   </url>
@@ -719,25 +735,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/whirlpool-barkod-kontrollu-ayristirma" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/privacy</loc>
-    <lastmod>2026-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://izlenebilirlik.com.tr/privacy-policy</loc>
     <lastmod>2026-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/privacy-policy" />
   </url>
 
-  <!-- Çözümler: TR (listing + detail) -->
-  <url>
-    <loc>https://izlenebilirlik.com.tr/solutions</loc>
-    <lastmod>2026-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- Çözümler: TR (detail sayfaları - listing page mevcut değil) -->
   <url>
     <loc>https://izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol</loc>
     <lastmod>2026-07-25</lastmod>
@@ -799,13 +808,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi"/>
   </url>
 
-  <!-- Çözüm Ortakları: TR (listing + detail) -->
-  <url>
-    <loc>https://izlenebilirlik.com.tr/solution-partners</loc>
-    <lastmod>2026-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Çözüm Ortakları: TR (detail sayfaları - listing page mevcut değil) -->
   <url>
     <loc>https://izlenebilirlik.com.tr/solution-partners/beckhoff</loc>
     <lastmod>2026-07-25</lastmod>

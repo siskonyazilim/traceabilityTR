@@ -48,7 +48,7 @@ export default function NotFound() {
                 <Link href="/blog" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
                   {t('header.news', 'Blog')}
                 </Link>
-                <Link href="/proiecte-de-referinta" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
+                <Link href="/portfolio" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
                   {t('sections.referenceProjectsTitle', 'Referans Projeler')}
                 </Link>
                 <Link href="/#traceability-solutions" className="px-4 py-2 text-sm rounded-md border border-slate-200 text-slate-600 hover:text-accent-blue hover:border-accent-blue transition-colors">
