@@ -25,6 +25,14 @@ const nextConfig = {
         hostname: '127.0.0.1',
         pathname: '/**',
       },
+      // Strapi Docker container iç hostname — sunucu iç ağından erişilebilir
+      // ** ile tüm alt hostname'leri (strapi-xxx gibi) kapsar
+      {
+        protocol: 'http',
+        hostname: '**',
+        port: '1337',
+        pathname: '/uploads/**',
+      },
     ],
   },
   // www → non-www yönlendirmesi Cloudflare tarafında yapılıyor.
