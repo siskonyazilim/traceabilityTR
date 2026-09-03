@@ -1,5 +1,6 @@
 import Container from '../../components/ui/Container';
 import { loadPolicyHtml } from '../../lib/policyDocuments';
+import { getPrivacyPolicyFromCMS } from '../../lib/cms/policyService';
 import { f } from '../../lib/i18n/sectionTranslations';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../../lib/i18n/requestLocale';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
@@ -54,8 +55,12 @@ export async function generateMetadata() {
 
 export default async function PrivacyPolicyPage() {
   const locale = await getRequestLocale();
-  const policyHtml = await loadPolicyHtml('privacy', locale);
-  const pageTitle = f(locale, 'privacyPolicyPage', 'title');
+
+  // Strapi'den önce dene, yoksa DOCX'ten oku
+  const cmsData = await getPrivacyPolicyFromCMS(locale);
+  const policyHtml = cmsData?.contentHtml || await loadPolicyHtml('privacy', locale);
+  const pageTitle = cmsData?.pageTitle || f(locale, 'privacyPolicyPage', 'title');
+  const eyebrow = cmsData?.eyebrow || f(locale, 'privacyPolicyPage', 'eyebrow');
   const org = getOrganizationSchema();
   const faqBundle = getAeoFaqBundle('policy', locale);
   const pageUrl = `${SITE_URL}${toLocalePath('/privacy-policy', locale)}`;
@@ -104,7 +109,7 @@ export default async function PrivacyPolicyPage() {
       <Container size="xl">
         <article className="w-full">
           <p className="text-xs uppercase tracking-[0.16em] text-secondary-blue font-semibold mb-3">
-            {f(locale, 'privacyPolicyPage', 'eyebrow')}
+            {eyebrow}
           </p>
           <h1 className="text-3xl md:text-5xl font-bold text-primary-black mb-8">{pageTitle}</h1>
 

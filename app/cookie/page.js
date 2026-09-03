@@ -1,5 +1,6 @@
 import Container from '../../components/ui/Container';
 import { loadPolicyHtml } from '../../lib/policyDocuments';
+import { getCookiePolicyFromCMS } from '../../lib/cms/policyService';
 import { f } from '../../lib/i18n/sectionTranslations';
 import { getRequestLocale, getRequestPathname, getLanguageAlternates } from '../../lib/i18n/requestLocale';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
@@ -54,7 +55,12 @@ export async function generateMetadata() {
 
 export default async function CookiePolicyPage() {
   const locale = await getRequestLocale();
-  const policyHtml = await loadPolicyHtml('cookie', locale);
+
+  // Strapi'den önce dene, yoksa DOCX'ten oku
+  const cmsData = await getCookiePolicyFromCMS(locale);
+  const policyHtml = cmsData?.contentHtml || await loadPolicyHtml('cookie', locale);
+  const pageTitle = cmsData?.pageTitle || f(locale, 'cookiePolicyPage', 'title');
+  const eyebrow = cmsData?.eyebrow || f(locale, 'cookiePolicyPage', 'eyebrow');
   const org = getOrganizationSchema();
   const faqBundle = getAeoFaqBundle('policy', locale);
 
@@ -104,10 +110,10 @@ export default async function CookiePolicyPage() {
       <Container size="xl">
         <article className="w-full">
           <p className="text-xs uppercase tracking-[0.16em] text-secondary-blue font-semibold mb-3">
-            {f(locale, 'cookiePolicyPage', 'eyebrow')}
+            {eyebrow}
           </p>
           <h1 className="text-3xl md:text-5xl font-bold text-primary-black mb-8">
-            {f(locale, 'cookiePolicyPage', 'title')}
+            {pageTitle}
           </h1>
 
           <div className="legal-doc" dangerouslySetInnerHTML={{ __html: policyHtml }} />
