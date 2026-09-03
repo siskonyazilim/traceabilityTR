@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import Link from 'next/link';
@@ -12,8 +12,8 @@ const heroVideoAssets = getHeroVideoAssets();
 const slides = [
   {
     id: 1,
-    title: 'Soluții de Trasabilitate End-to-End pentru Fabrici Inteligente',
-    subtitle: 'Procesul metodic de investiții echilibrează gestionarea riscurilor cu identificarea oportunităților, creând portofolii rezistente, concepute pentru a performa în ciclurile pieței.',
+    title: 'Solu╚¢ii de Trasabilitate End-to-End pentru Fabrici Inteligente',
+    subtitle: 'Procesul metodic de investi╚¢ii echilibreaz─â gestionarea riscurilor cu identificarea oportunit─â╚¢ilor, cre├ónd portofolii rezistente, concepute pentru a performa ├«n ciclurile pie╚¢ei.',
     color: 'from-accent-blue',
     video: heroVideoAssets[0].video,
     mobileVideo: heroVideoAssets[0].mobileVideo,
@@ -21,8 +21,8 @@ const slides = [
   },
   {
     id: 2,
-    title: 'Control în Timp Real, Zero Defecțiuni',
-    subtitle: 'Abordarea noastră adaptivă transformă provocările în oportunități, oferind valoare durabilă și rezultate excepționale pentru clienții noștri în diverse condiții economice.',
+    title: 'Control ├«n Timp Real, Zero Defec╚¢iuni',
+    subtitle: 'Abordarea noastr─â adaptiv─â transform─â provoc─ârile ├«n oportunit─â╚¢i, oferind valoare durabil─â ╚Öi rezultate excep╚¢ionale pentru clien╚¢ii no╚Ötri ├«n diverse condi╚¢ii economice.',
     color: 'from-accent-green',
     video: heroVideoAssets[1].video,
     mobileVideo: heroVideoAssets[1].mobileVideo,
@@ -31,7 +31,7 @@ const slides = [
   {
     id: 3,
     title: 'POKA YOKE',
-    subtitle: 'Lucrăm îndeaproape cu investitorii pentru a înțelege obiectivele acestora, creând soluții personalizate care abordează nevoile specifice, menținând în același timp angajamentul nostru față de excelență.',
+    subtitle: 'Lucr─âm ├«ndeaproape cu investitorii pentru a ├«n╚¢elege obiectivele acestora, cre├ónd solu╚¢ii personalizate care abordeaz─â nevoile specifice, men╚¢in├ónd ├«n acela╚Öi timp angajamentul nostru fa╚¢─â de excelen╚¢─â.',
     color: 'from-accent-yellow',
     video: heroVideoAssets[2].video,
     mobileVideo: heroVideoAssets[2].mobileVideo,
@@ -65,11 +65,9 @@ export const HeroSlider = ({ cmsSlides }) => {
   const [forceDesktopVideo, setForceDesktopVideo] = useState(false);
   const [videoFallbackSrc, setVideoFallbackSrc] = useState('');
   const [showImageFallback, setShowImageFallback] = useState(false);
-  // İlk slide için SSR poster görselini gizlemek için kullanılır (LCP sonrası)
-  const [posterLoaded, setPosterLoaded] = useState(false);
   const videoRef = useRef(null);
   const { locale, t } = useLanguage();
-  // CMS'den slayt gelirse kullan (video ve mobileVideo eksikse varsayılan video varlıklarıyla birleştir)
+  // CMS'den slayt gelirse kullan (video ve mobileVideo eksikse varsay─▒lan video varl─▒klar─▒yla birle┼ƒtir)
   const baseSlides = useMemo(() => {
     if (Array.isArray(cmsSlides) && cmsSlides.length > 0) {
       return cmsSlides.map((slide, index) => ({
@@ -131,7 +129,6 @@ export const HeroSlider = ({ cmsSlides }) => {
     setForceDesktopVideo(false);
     setVideoFallbackSrc('');
     setShowImageFallback(false);
-    setPosterLoaded(false); // Her slide değişiminde thumbnail tekrar gösterilsin
   }, [current]);
 
   useEffect(() => {
@@ -219,126 +216,79 @@ export const HeroSlider = ({ cmsSlides }) => {
 
   return (
     <div className="relative w-full overflow-hidden bg-black" style={{ height: '100svh', minHeight: '500px' }}>
-
-      {/* Tüm slide'lar her zaman DOM'da — geçiş opacity ile yapılır, siyah flash olmaz */}
-      {localizedSlides.map((slide, index) => {
-        const isActive = index === current;
-        const slideVideoAsset = heroVideoAssets[index];
-        const slideFallbackImage = fallbackImageBySlideId[slide.id] || fallbackImageBySlideId[1];
-        const isMobileSlide = Boolean(slide.mobileVideo) && !forceDesktopVideo && !videoFallbackSrc && slide.id !== 1;
-        const resolvedSlideVideo = (isActive && videoFallbackSrc) ? videoFallbackSrc : slide.video;
-
-        return (
+      {/* Active slide only for reduced network and CPU */}
+      <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
+        {showImageFallback ? (
           <div
-            key={slide.id}
-            className="absolute inset-0 w-full h-full"
-            style={{
-              opacity: isActive ? 1 : 0,
-              transition: 'opacity 800ms ease-in-out',
-              zIndex: isActive ? 10 : 0,
-              pointerEvents: isActive ? 'auto' : 'none',
-            }}
-          >
-            {/* Her slide'ın thumbnail'i her zaman arka planda — geçişte boşluk olmaz */}
-            <img
-              src={slide.thumbnailPath || slideFallbackImage}
-              alt=""
-              aria-hidden="true"
-              fetchpriority={index === 0 ? 'high' : 'low'}
-              decoding="async"
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{
-                opacity: (isActive && posterLoaded && !showImageFallback) ? 0 : 1,
-                transition: 'opacity 600ms ease',
-              }}
-            />
+            className="absolute inset-0 w-full h-full bg-center bg-cover"
+            style={{ backgroundImage: `url('${activeFallbackImage}')` }}
+            aria-hidden="true"
+          />
+        ) : null}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          playsInline
+          preload={current === 0 ? 'metadata' : 'none'}
+          poster={activeSlide.thumbnailPath || activeFallbackImage}
+          onLoadedData={ensureVideoPlayback}
+          onCanPlay={ensureVideoPlayback}
+          onEnded={handleNextSlide}
+          onStalled={recoverFromMobileStall}
+          onWaiting={recoverFromMobileStall}
+          onError={recoverFromMobileStall}
+          className={`absolute inset-0 w-full h-full object-cover ${showImageFallback ? 'opacity-0' : 'opacity-100'}`}
+        >
+          {useMobileSource ? (
+            <source src={activeSlide.mobileVideo} media="(max-width: 1023px)" type="video/webm" />
+          ) : null}
+          <source src={resolvedDesktopVideo} type="video/webm" />
+        </video>
 
-            {/* Fallback image — video yüklenemezse */}
-            {showImageFallback && isActive ? (
-              <img
-                src={slideFallbackImage}
-                alt=""
-                aria-hidden="true"
-                fetchpriority="high"
-                decoding="async"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : null}
+        <div className="absolute inset-0 bg-primary-black/35"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
 
-            {/* Video */}
-            {isActive ? (
-              <video
-                ref={videoRef}
-                autoPlay
-                muted
-                playsInline
-                preload="metadata"
-                poster={slide.thumbnailPath || slideFallbackImage}
-                onLoadedData={ensureVideoPlayback}
-                onCanPlay={() => { setPosterLoaded(true); ensureVideoPlayback(); }}
-                onEnded={handleNextSlide}
-                onStalled={recoverFromMobileStall}
-                onWaiting={recoverFromMobileStall}
-                onError={recoverFromMobileStall}
-                className={`absolute inset-0 w-full h-full object-cover ${showImageFallback ? 'opacity-0' : 'opacity-100'}`}
-                style={{ transition: 'opacity 400ms ease' }}
-              >
-                {isMobileSlide ? (
-                  <source src={slide.mobileVideo} media="(max-width: 1023px)" type="video/webm" />
-                ) : null}
-                <source src={resolvedSlideVideo} type="video/webm" />
-              </video>
-            ) : (
-              /* Aktif olmayan slide'lar için sadece poster görsel — video yok, kaynak israfı yok */
-              null
-            )}
-
-            <div className="absolute inset-0 bg-primary-black/35"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-black/40 via-primary-black/20 to-primary-black/45"></div>
-          </div>
-        );
-      })}
-
-      {/* Metin ve CTA — her zaman üstte (z-20'nin üzerinde) */}
-      <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-14 sm:pt-16" style={{ zIndex: 20 }}>
-        <div className="w-full max-w-5xl mx-auto text-center">
-          <h1
-            suppressHydrationWarning
-            className="text-white text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-[1.1] sm:leading-[1.02] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)] overflow-wrap-anywhere break-words px-2"
-            style={{ fontFamily: 'var(--font-kanit)', overflowWrap: 'break-word', wordBreak: 'break-word' }}
-          >
-            {activeSlide.title}
-          </h1>
-
-          <div className="text-white mt-4 sm:mt-6 sm:mt-7">
-            <p suppressHydrationWarning className="text-sm sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl lg:max-w-5xl mx-auto px-2">
-              {activeSlide.id === 1 ? (
-                <>
-                  <span className="block">{firstSlideSubtitleLines[0]}</span>
-                  {firstSlideSubtitleLines[1] ? <span className="block">{firstSlideSubtitleLines[1]}</span> : null}
-                </>
-              ) : (
-                activeSlide.subtitle
-              )}
-            </p>
-          </div>
-
-          <div className="mt-10">
-            <Button
-              as={Link}
-              href="/contact"
-              variant="solid"
-              size="lg"
-              className="bg-secondary-blue hover:bg-accent-blue text-white shadow-2xl"
+        <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 pt-14 sm:pt-16">
+          <div className="w-full max-w-5xl mx-auto text-center">
+            <h1
+              suppressHydrationWarning
+              className="text-white text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-[1.1] sm:leading-[1.02] tracking-tight uppercase [text-shadow:0_2px_14px_rgba(0,0,0,0.55)] overflow-wrap-anywhere break-words px-2"
+              style={{ fontFamily: 'var(--font-kanit)', overflowWrap: 'break-word', wordBreak: 'break-word' }}
             >
-              {t('hero.cta', 'Cere Oferta')}
-            </Button>
+              {activeSlide.title}
+            </h1>
+
+            <div className="text-white mt-4 sm:mt-6 sm:mt-7">
+              <p suppressHydrationWarning className="text-sm sm:text-lg lg:text-xl font-medium leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] max-w-3xl lg:max-w-5xl mx-auto px-2">
+                {activeSlide.id === 1 ? (
+                  <>
+                    <span className="block">{firstSlideSubtitleLines[0]}</span>
+                    {firstSlideSubtitleLines[1] ? <span className="block">{firstSlideSubtitleLines[1]}</span> : null}
+                  </>
+                ) : (
+                  activeSlide.subtitle
+                )}
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <Button
+                as={Link}
+                href="/contact"
+                variant="solid"
+                size="lg"
+                className="bg-secondary-blue hover:bg-accent-blue text-white shadow-2xl"
+              >
+                {t('hero.cta', 'Cere Oferta')}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-1 sm:gap-2 z-30 flex-wrap justify-center">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-1 sm:gap-2 z-10 flex-wrap justify-center">
         {localizedSlides.map((slide, index) => (
           <button
             type="button"
