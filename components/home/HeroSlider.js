@@ -17,6 +17,7 @@ const slides = [
     color: 'from-accent-blue',
     video: heroVideoAssets[0].video,
     mobileVideo: heroVideoAssets[0].mobileVideo,
+    thumbnailPath: heroVideoAssets[0].thumbnailPath,
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ const slides = [
     color: 'from-accent-green',
     video: heroVideoAssets[1].video,
     mobileVideo: heroVideoAssets[1].mobileVideo,
+    thumbnailPath: heroVideoAssets[1].thumbnailPath,
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const slides = [
     color: 'from-accent-yellow',
     video: heroVideoAssets[2].video,
     mobileVideo: heroVideoAssets[2].mobileVideo,
+    thumbnailPath: heroVideoAssets[2].thumbnailPath,
   },
 ];
 
@@ -73,6 +76,7 @@ export const HeroSlider = ({ cmsSlides }) => {
         id: index + 1,
         video: slide.video || slides[index]?.video || heroVideoAssets[index]?.video,
         mobileVideo: slide.mobileVideo || slides[index]?.mobileVideo || heroVideoAssets[index]?.mobileVideo,
+        thumbnailPath: slide.thumbnailPath || slides[index]?.thumbnailPath || heroVideoAssets[index]?.thumbnailPath,
       }));
     }
     return slides;
@@ -226,7 +230,8 @@ export const HeroSlider = ({ cmsSlides }) => {
           autoPlay
           muted
           playsInline
-          preload="auto"
+          preload={current === 0 ? 'metadata' : 'none'}
+          poster={activeSlide.thumbnailPath || activeFallbackImage}
           onLoadedData={ensureVideoPlayback}
           onCanPlay={ensureVideoPlayback}
           onEnded={handleNextSlide}
