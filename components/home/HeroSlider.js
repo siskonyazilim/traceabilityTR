@@ -65,6 +65,8 @@ export const HeroSlider = ({ cmsSlides }) => {
   const [forceDesktopVideo, setForceDesktopVideo] = useState(false);
   const [videoFallbackSrc, setVideoFallbackSrc] = useState('');
   const [showImageFallback, setShowImageFallback] = useState(false);
+  // İlk slide için SSR poster görselini gizlemek için kullanılır (LCP sonrası)
+  const [posterLoaded, setPosterLoaded] = useState(false);
   const videoRef = useRef(null);
   const { locale, t } = useLanguage();
   // CMS'den slayt gelirse kullan (video ve mobileVideo eksikse varsayılan video varlıklarıyla birleştir)
@@ -225,6 +227,18 @@ export const HeroSlider = ({ cmsSlides }) => {
             aria-hidden="true"
           />
         ) : null}
+        {/* LCP poster görsel — ilk slide için SSR'da render edilir, video hazır olunca gizlenir */}
+        {current === 0 && !showImageFallback ? (
+          <img
+            src={localizedSlides[0]?.thumbnailPath || heroVideoAssets[0]?.thumbnailPath}
+            alt=""
+            aria-hidden="true"
+            fetchpriority="high"
+            decoding="sync"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: posterLoaded ? 0 : 1, transition: 'opacity 0.4s ease' }}
+          />
+        ) : null}
         <video
           ref={videoRef}
           autoPlay
@@ -233,7 +247,7 @@ export const HeroSlider = ({ cmsSlides }) => {
           preload={current === 0 ? 'metadata' : 'none'}
           poster={activeSlide.thumbnailPath || activeFallbackImage}
           onLoadedData={ensureVideoPlayback}
-          onCanPlay={ensureVideoPlayback}
+          onCanPlay={() => { setPosterLoaded(true); ensureVideoPlayback(); }}
           onEnded={handleNextSlide}
           onStalled={recoverFromMobileStall}
           onWaiting={recoverFromMobileStall}

@@ -16,6 +16,10 @@ const heroVideoAbsoluteUrls = heroVideoAssets
   .map((asset) => toAbsoluteSiteUrl(asset.video, SITE_URL))
   .filter(Boolean);
 
+// İlk hero slide'n thumbnail'i — SSR preload için
+const firstHeroThumbPath = heroVideoAssets[0]?.thumbnailPath || '/images/video-thumbs/thumb-5389356-coll-wavebreak-warehouse.jpg';
+const firstHeroThumbAbsUrl = toAbsoluteSiteUrl(firstHeroThumbPath, SITE_URL);
+
 // Anlık CMS verisi için dinamik route
 export const dynamic = 'force-dynamic';
 
@@ -53,6 +57,10 @@ export async function generateMetadata() {
     title,
     description,
     alternates,
+    // İlk hero thumbnail'ini tarayıcıya en erken fırsatta indir — LCP görselini doğru olarak belirler
+    other: {
+      'link-preload-hero-thumb': `<${firstHeroThumbAbsUrl}>; rel="preload"; as="image"; fetchpriority="high"`,
+    },
     openGraph: {
       title,
       description,
@@ -61,6 +69,12 @@ export async function generateMetadata() {
       locale: ogLocale,
       videos: heroVideoAbsoluteUrls,
       images: [
+        {
+          url: firstHeroThumbAbsUrl,
+          width: 1920,
+          height: 1080,
+          alt: title,
+        },
         {
           url: 'https://izlenebilirlik.com.tr/og-image.png',
           width: 1200,
@@ -73,7 +87,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://izlenebilirlik.com.tr/og-image.png'],
+      images: [firstHeroThumbAbsUrl],
     },
   };
 }
