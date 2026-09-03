@@ -221,10 +221,13 @@ export const HeroSlider = ({ cmsSlides }) => {
       {/* Active slide only for reduced network and CPU */}
       <div key={activeSlide.id} className="absolute inset-0 w-full h-full">
         {showImageFallback ? (
-          <div
-            className="absolute inset-0 w-full h-full bg-center bg-cover"
-            style={{ backgroundImage: `url('${activeFallbackImage}')` }}
+          <img
+            src={activeFallbackImage}
+            alt=""
             aria-hidden="true"
+            fetchpriority="high"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         ) : null}
         {/* LCP poster görsel — ilk slide için SSR'da render edilir, video hazır olunca gizlenir */}

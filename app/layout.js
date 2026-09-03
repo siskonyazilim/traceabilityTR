@@ -122,19 +122,19 @@ export default async function RootLayout({ children }) {
           }}
         />
 
-        {/* ── ÇerezGo Script (GTM'den önce yer almalıdır) ── */}
+        {/* ── ÇerezGo Script — lazyOnload ile ana thread bloklanmaz ── */}
         <Script
           id="cerezgo-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
           data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM="
           data-id="nt"
         />
 
-        {/* ── Google Tag Manager ── */}
+        {/* ── Google Tag Manager — lazyOnload ile sayfa yüklendikten sonra başlar ── */}
         <Script
           id="google-tag-manager"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
