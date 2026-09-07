@@ -8,6 +8,7 @@ import Container from '../../components/ui/Container';
 import Button from '../../components/ui/Button';
 import { IconMail, IconPhone } from '../../components/ui/Icons';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
+import { toLocalePath } from '../../lib/i18n/dictionaries';
 
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -380,10 +381,33 @@ export default function ContactPageClient({ cmsContact }) {
                       </svg>
                     </span>
                     <span>
-                      {t('contactPage.privacyText', 'Sunt de acord cu')} {' '}
-                      <Link href="/privacy-policy" className="text-accent-blue font-semibold hover:underline" onClick={(event) => event.stopPropagation()}>
-                        {t('contactPage.privacyPolicy', 'gizlilik politikasını')}
-                      </Link>
+                      {locale === 'tr' ? (
+                        <>
+                          <Link
+                            href={toLocalePath('/privacy-policy', locale)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-accent-blue font-semibold hover:underline"
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            {t('contactPage.privacyPolicy', "KVKK ve Gizlilik Politikası'nı")}
+                          </Link>{' '}
+                          {t('contactPage.privacyText', 'kabul ediyorum.')}
+                        </>
+                      ) : (
+                        <>
+                          {t('contactPage.privacyText', 'Sunt de acord cu')}{' '}
+                          <Link
+                            href={toLocalePath('/privacy-policy', locale)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-accent-blue font-semibold hover:underline"
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            {t('contactPage.privacyPolicy', 'politica de confidențialitate')}
+                          </Link>
+                        </>
+                      )}
                       {' '}*
                     </span>
                   </label>
