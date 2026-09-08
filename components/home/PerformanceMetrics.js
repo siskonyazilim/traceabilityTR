@@ -54,12 +54,12 @@ const Counter = ({ end, duration = 2, label, suffix = '+' }) => {
   }, [isVisible, end, duration]);
 
   return (
-    <div ref={ref} className="text-center group">
-      <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent-blue mb-2 transition-all duration-300">
+    <div ref={ref} className="flex flex-col items-center justify-center text-center group">
+      <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent-blue mb-2 transition-all duration-300 tabular-nums">
         {count}
         <span>{suffix}</span>
       </div>
-      <p className="text-base sm:text-lg text-gray-light group-hover:text-white transition-colors duration-300">{label}</p>
+      <p className="text-base sm:text-lg text-gray-light group-hover:text-white transition-colors duration-300" style={{ transform: 'translateX(-18px)' }}>{label}</p>
     </div>
   );
 };
@@ -82,11 +82,11 @@ export const PerformanceMetrics = ({ cmsMetrics }) => {
   const metrics = (cmsMetricList && cmsMetricList.length > 0)
     ? cmsMetricList.map((m) => ({ end: m.value, label: m.label, suffix: m.suffix || '+' }))
     : [
-    { end: 500, label: labels[0], suffix: '+' },
-    { end: 40, label: labels[1], suffix: '+' },
-    { end: 60, label: labels[2], suffix: '+' },
-    { end: 90, label: labels[3], suffix: '+' },
-  ];
+      { end: 500, label: labels[0], suffix: '+' },
+      { end: 40, label: labels[1], suffix: '+' },
+      { end: 60, label: labels[2], suffix: '+' },
+      { end: 90, label: labels[3], suffix: '+' },
+    ];
 
   const handleScroll = () => {
     const element = document.querySelector('#reference-projects');
