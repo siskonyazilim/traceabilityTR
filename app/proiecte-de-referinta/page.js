@@ -17,14 +17,14 @@ export async function generateMetadata() {
 
   let title = 'Proiecte de Referință | Implementări de Trasabilitate cu Impact';
   if (isTr) {
-    title = 'Referans Projeler | Endüstriyel İzlenebilirlik Başarı Hikayeleri | Traceability';
+    title = 'Referans Projeler | Endüstriyel İzlenebilirlik Başarı Hikayeleri | İzlenebilirlik';
   } else if (isEn) {
     title = 'Reference Projects | Industrial Traceability Success Stories';
   }
 
   let description = 'Explorează proiecte reale de trasabilitate livrate de Traceability în automotive, alimentar și producție industrială, cu ROI măsurabil și îmbunătățiri de calitate.';
   if (isTr) {
-    description = 'Traceability tarafından otomotiv, gıda ve endüstriyel üretim sektörlerinde ölçülebilir ROI ve kalite kazanımlarıyla gerçekleştirilen izlenebilirlik projelerini inceleyin.';
+    description = 'Otomotiv, gıda ve endüstriyel üretim sektörlerinde ölçülebilir ROI ve kalite kazanımlarıyla gerçekleştirilen uçtan uca izlenebilirlik projelerini inceleyin.';
   } else if (isEn) {
     description = 'Explore real-world traceability projects delivered by Traceability across automotive, food and industrial manufacturing with measurable ROI and quality gains.';
   }
@@ -44,12 +44,12 @@ export async function generateMetadata() {
   }
 
   const alternates = {
-    canonical: `https://izlenebilirlik.com.tr${canonicalLocalePath}`,
+    canonical: `https://www.izlenebilirlik.com.tr${canonicalLocalePath}`,
     languages: {
-      'tr': 'https://izlenebilirlik.com.tr/portfolio',
-      'en': 'https://izlenebilirlik.com.tr/en/reference-projects',
-      'ro': 'https://izlenebilirlik.com.tr/ro/proiecte-de-referinta',
-      'x-default': 'https://izlenebilirlik.com.tr/portfolio',
+      'tr': 'https://www.izlenebilirlik.com.tr/portfolio',
+      'en': 'https://www.izlenebilirlik.com.tr/en/reference-projects',
+      'ro': 'https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta',
+      'x-default': 'https://www.izlenebilirlik.com.tr/portfolio',
     }
   };
 
@@ -65,7 +65,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://izlenebilirlik.com.tr/og-image.png',
+          url: 'https://www.izlenebilirlik.com.tr/og-image.png',
           width: 1200,
           height: 630,
           alt: title,
@@ -76,7 +76,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://izlenebilirlik.com.tr/og-image.png'],
+      images: ['https://www.izlenebilirlik.com.tr/og-image.png'],
     },
   };
 }

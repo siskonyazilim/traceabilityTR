@@ -19,14 +19,14 @@ export async function generateMetadata() {
 
   let title = 'Blog: Noutăți, Ghiduri și Tendințe în Trasabilitate | Traceability';
   if (isTr) {
-    title = 'Blog: İzlenebilirlik Trendleri ve Rehberler | Traceability';
+    title = 'Blog: İzlenebilirlik Trendleri ve Rehberler | İzlenebilirlik';
   } else if (isEn) {
     title = 'Blog: Industry Updates, Guides and Traceability Trends | Traceability';
   }
 
   let description = 'Descoperă articole Traceability despre trasabilitate industrială, MES, RFID, controlul calității și ghiduri practice pentru echipele de producție moderne.';
   if (isTr) {
-    description = 'Endüstriyel izlenebilirlik, MES, RFID, kalite kontrolü ve modern üretim ekipleri için pratik rehberler hakkında Traceability blog yazılarını keşfedin.';
+    description = 'Endüstriyel izlenebilirlik, MES, RFID, kalite kontrolü ve modern üretim ekipleri için pratik rehberler hakkında İzlenebilirlik blog yazılarını keşfedin.';
   } else if (isEn) {
     description = 'Explore Traceability blog articles about industrial traceability, MES, RFID, quality control and practical guides for modern manufacturing teams.';
   }
@@ -52,7 +52,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://izlenebilirlik.com.tr/og-image.png',
+          url: 'https://www.izlenebilirlik.com.tr/og-image.png',
           width: 1200,
           height: 630,
           alt: title,
@@ -63,7 +63,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://izlenebilirlik.com.tr/og-image.png'],
+      images: ['https://www.izlenebilirlik.com.tr/og-image.png'],
     },
   };
 }

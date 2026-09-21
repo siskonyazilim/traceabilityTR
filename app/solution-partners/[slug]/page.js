@@ -36,7 +36,8 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const title = `${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')} | Traceability`;
+  const brandSuffix = locale === 'tr' ? 'İzlenebilirlik' : 'Traceability';
+  const title = `${partner.name} | ${f(locale, 'partnerDetailPage', 'partnerSuffix')} | ${brandSuffix}`;
   const description = partner.description;
 
   let canonicalPath = `/solution-partners/${partner.slug}`;
@@ -47,12 +48,12 @@ export async function generateMetadata({ params }) {
   }
 
   const alternates = {
-    canonical: `https://izlenebilirlik.com.tr${canonicalPath}`,
+    canonical: `https://www.izlenebilirlik.com.tr${canonicalPath}`,
     languages: {
-      'tr': `https://izlenebilirlik.com.tr/solution-partners/${partner.slug}`,
-      'en': `https://izlenebilirlik.com.tr/en/solution-partners/${partner.slug}`,
-      'ro': `https://izlenebilirlik.com.tr/ro/parteneri-de-solutii/${partner.slug}`,
-      'x-default': `https://izlenebilirlik.com.tr/solution-partners/${partner.slug}`,
+      'tr': `https://www.izlenebilirlik.com.tr/solution-partners/${partner.slug}`,
+      'en': `https://www.izlenebilirlik.com.tr/en/solution-partners/${partner.slug}`,
+      'ro': `https://www.izlenebilirlik.com.tr/ro/parteneri-de-solutii/${partner.slug}`,
+      'x-default': `https://www.izlenebilirlik.com.tr/solution-partners/${partner.slug}`,
     }
   };
 
@@ -63,9 +64,9 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
-  let ogImage = 'https://izlenebilirlik.com.tr/og-image.png';
+  let ogImage = 'https://www.izlenebilirlik.com.tr/og-image.png';
   if (partner.logo) {
-    ogImage = partner.logo.startsWith('http') ? partner.logo : `https://izlenebilirlik.com.tr${partner.logo}`;
+    ogImage = partner.logo.startsWith('http') ? partner.logo : `https://www.izlenebilirlik.com.tr${partner.logo}`;
   }
 
   return {

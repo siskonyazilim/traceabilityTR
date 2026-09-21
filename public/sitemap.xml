@@ -1,873 +1,873 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://izlenebilirlik.com.tr/</loc>
+    <loc>https://www.izlenebilirlik.com.tr/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog" />
   </url>
-  <!-- Blog: TR (varsayÄ±lan, prefix'siz) -->
+  <!-- Blog: TR (varsayÃ„Â±lan, prefix'siz) -->
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/izlenebilirlikte-kullanilan-barkod-sistemleri</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/izlenebilirlikte-kullanilan-barkod-sistemleri</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/izlenebilirlikte-kullanilan-barkod-sistemleri" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/barcode-systems-used-in-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/sisteme-de-coduri-de-bare-utilizate-in-trasabilitate" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/izlenebilirlikte-kullanilan-barkod-sistemleri" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/izlenebilirlikte-kullanilan-barkod-sistemleri" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/barcode-systems-used-in-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/sisteme-de-coduri-de-bare-utilizate-in-trasabilitate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/izlenebilirlikte-kullanilan-barkod-sistemleri" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/bomi-group-camera-based-multi-code-reading-system" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/sistem-de-citire-multi-cod-bazat-pe-camere-bomi-group" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/bomi-group-camera-based-multi-code-reading-system" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/sistem-de-citire-multi-cod-bazat-pe-camere-bomi-group" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/chestny-znak-proseduru-rusyanin-dijital-izlenebilirlik-sistemi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/chestny-znak-proseduru-rusyanin-dijital-izlenebilirlik-sistemi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/chestny-znak-proseduru-rusyanin-dijital-izlenebilirlik-sistemi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/chestny-znak-procedure-russias-digital-traceability-system" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/procedura-chestny-znak-sistemul-digital-de-trasabilitate-al-rusiei" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/chestny-znak-proseduru-rusyanin-dijital-izlenebilirlik-sistemi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/chestny-znak-proseduru-rusyanin-dijital-izlenebilirlik-sistemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/chestny-znak-procedure-russias-digital-traceability-system" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/procedura-chestny-znak-sistemul-digital-de-trasabilitate-al-rusiei" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/chestny-znak-proseduru-rusyanin-dijital-izlenebilirlik-sistemi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/gida-izlenebilirligi-ve-standartlar</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/gida-izlenebilirligi-ve-standartlar</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/gida-izlenebilirligi-ve-standartlar" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/food-traceability-and-standards" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/trasabilitatea-alimentara-si-standarde" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/gida-izlenebilirligi-ve-standartlar" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/gida-izlenebilirligi-ve-standartlar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/food-traceability-and-standards" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/trasabilitatea-alimentara-si-standarde" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/gida-izlenebilirligi-ve-standartlar" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/bireysel-urun-izlenebilirligi-nasil-uygulanir</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/bireysel-urun-izlenebilirligi-nasil-uygulanir</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/bireysel-urun-izlenebilirligi-nasil-uygulanir" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/how-to-implement-individual-product-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/cum-se-implementeaza-trasabilitatea-individuala-a-produselor" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/bireysel-urun-izlenebilirligi-nasil-uygulanir" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/bireysel-urun-izlenebilirligi-nasil-uygulanir" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/how-to-implement-individual-product-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/cum-se-implementeaza-trasabilitatea-individuala-a-produselor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/bireysel-urun-izlenebilirligi-nasil-uygulanir" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/lojistik-seminerinde-iot-panosu-ve-izlenebilirlik-cozumleri</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/lojistik-seminerinde-iot-panosu-ve-izlenebilirlik-cozumleri</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/lojistik-seminerinde-iot-panosu-ve-izlenebilirlik-cozumleri" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/iot-dashboard-and-traceability-solutions-at-logistics-seminar" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/tablou-de-bord-iot-si-solutii-de-trasabilitate-la-seminarul-de-logistica" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/lojistik-seminerinde-iot-panosu-ve-izlenebilirlik-cozumleri" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/lojistik-seminerinde-iot-panosu-ve-izlenebilirlik-cozumleri" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/iot-dashboard-and-traceability-solutions-at-logistics-seminar" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/tablou-de-bord-iot-si-solutii-de-trasabilitate-la-seminarul-de-logistica" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/lojistik-seminerinde-iot-panosu-ve-izlenebilirlik-cozumleri" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/urun-izlenebilirliginin-onemi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/urun-izlenebilirliginin-onemi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/urun-izlenebilirliginin-onemi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/product-traceability-importance" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/importanta-trasabilitatii-produselor" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/urun-izlenebilirliginin-onemi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/urun-izlenebilirliginin-onemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/product-traceability-importance" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/importanta-trasabilitatii-produselor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/urun-izlenebilirliginin-onemi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/siskon-gelecegin-endustri-teknolojileri-fuarinda</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/siskon-gelecegin-endustri-teknolojileri-fuarinda</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/siskon-gelecegin-endustri-teknolojileri-fuarinda" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/siskon-at-the-future-industrial-technology-fair" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/siskon-la-targul-viitorului-tehnologiilor-industriale" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/siskon-gelecegin-endustri-teknolojileri-fuarinda" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/siskon-gelecegin-endustri-teknolojileri-fuarinda" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/siskon-at-the-future-industrial-technology-fair" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/siskon-la-targul-viitorului-tehnologiilor-industriale" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/siskon-gelecegin-endustri-teknolojileri-fuarinda" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/gida-izlenebilirliginin-son-tuketiciler-icin-onemi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/gida-izlenebilirliginin-son-tuketiciler-icin-onemi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/gida-izlenebilirliginin-son-tuketiciler-icin-onemi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/the-importance-of-food-traceability-for-end-consumers" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/importanta-trasabilitatii-alimentare-pentru-consumatorii-finali" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/gida-izlenebilirliginin-son-tuketiciler-icin-onemi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/gida-izlenebilirliginin-son-tuketiciler-icin-onemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/the-importance-of-food-traceability-for-end-consumers" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/importanta-trasabilitatii-alimentare-pentru-consumatorii-finali" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/gida-izlenebilirliginin-son-tuketiciler-icin-onemi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/endustri-4-0-etkinliginde-izlenebilirlik-sunumu</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/endustri-4-0-etkinliginde-izlenebilirlik-sunumu</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/endustri-4-0-etkinliginde-izlenebilirlik-sunumu" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/traceability-presentation-at-industry-4-0-event" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/prezentare-despre-trasabilitate-la-evenimentul-industrie-4-0" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/endustri-4-0-etkinliginde-izlenebilirlik-sunumu" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/endustri-4-0-etkinliginde-izlenebilirlik-sunumu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/traceability-presentation-at-industry-4-0-event" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/prezentare-despre-trasabilitate-la-evenimentul-industrie-4-0" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/endustri-4-0-etkinliginde-izlenebilirlik-sunumu" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/tusiad-sd2-endustride-dijital-donusume-onculuk-etmek</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/tusiad-sd2-endustride-dijital-donusume-onculuk-etmek</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/tusiad-sd2-endustride-dijital-donusume-onculuk-etmek" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/tusiad-sd2-pioneering-digital-transformation-in-industry" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/tusiad-sd2-pionier-in-transformarea-digitala-industriala" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/tusiad-sd2-endustride-dijital-donusume-onculuk-etmek" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/tusiad-sd2-endustride-dijital-donusume-onculuk-etmek" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/tusiad-sd2-pioneering-digital-transformation-in-industry" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/tusiad-sd2-pionier-in-transformarea-digitala-industriala" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/tusiad-sd2-endustride-dijital-donusume-onculuk-etmek" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/izlenebilirlik-sistemlerinin-faydalari-nelerdir</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/izlenebilirlik-sistemlerinin-faydalari-nelerdir</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/izlenebilirlik-sistemlerinin-faydalari-nelerdir" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/what-are-the-benefits-of-traceability-systems" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/care-sunt-beneficiile-sistemelor-de-trasabilitate" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/izlenebilirlik-sistemlerinin-faydalari-nelerdir" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/izlenebilirlik-sistemlerinin-faydalari-nelerdir" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/what-are-the-benefits-of-traceability-systems" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/care-sunt-beneficiile-sistemelor-de-trasabilitate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/izlenebilirlik-sistemlerinin-faydalari-nelerdir" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/izlenebilirlik-verisi-nedir-izlenebilirlik-tanimi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/izlenebilirlik-verisi-nedir-izlenebilirlik-tanimi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/izlenebilirlik-verisi-nedir-izlenebilirlik-tanimi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/what-are-traceability-data-definition-of-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/ce-sunt-datele-de-trasabilitate-definitia-trasabilitatii" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/izlenebilirlik-verisi-nedir-izlenebilirlik-tanimi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/izlenebilirlik-verisi-nedir-izlenebilirlik-tanimi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/what-are-traceability-data-definition-of-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/ce-sunt-datele-de-trasabilitate-definitia-trasabilitatii" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/izlenebilirlik-verisi-nedir-izlenebilirlik-tanimi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barkod-gecisi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barkod-gecisi</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barkod-gecisi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/gs1-sunrise-2027-2d-barcode-transition" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/gs1-sunrise-2027-tranzitia-la-coduri-de-bare-2d" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barkod-gecisi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barkod-gecisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/gs1-sunrise-2027-2d-barcode-transition" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/gs1-sunrise-2027-tranzitia-la-coduri-de-bare-2d" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/gs1-sunrise-2027-2d-barkod-gecisi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/blog/rfid-and-barcode-comparison" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/blog/comparatie-intre-rfid-si-codul-de-bare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/blog/rfid-and-barcode-comparison" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/blog/comparatie-intre-rfid-si-codul-de-bare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/blog/rfid-ve-barkod-karsilastirmasi" />
   </url>
-  <!-- Katalog Ürünleri: TR -->
+  <!-- Katalog ÃœrÃ¼nleri: TR -->
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/products/a-plus-plus-plus-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/products/a-plus-plus-plus-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/products/a-plus-plus-plus-izlenebilirlik" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/products/a-plus-plus-plus-track-and-trace" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/products/urmarire-si-trasabilitate-a-plus-plus-plus" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/products/a-plus-plus-plus-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/products/a-plus-plus-plus-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/products/a-plus-plus-plus-track-and-trace" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/products/urmarire-si-trasabilitate-a-plus-plus-plus" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/products/a-plus-plus-plus-izlenebilirlik" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/products/kapsul-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/products/kapsul-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/products/kapsul-izlenebilirlik" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/products/capsule-track-and-trace" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/products/urmarire-si-trasabilitate-capsula" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/products/kapsul-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/products/kapsul-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/products/capsule-track-and-trace" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/products/urmarire-si-trasabilitate-capsula" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/products/kapsul-izlenebilirlik" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/products/hibrit-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/products/hibrit-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/products/hibrit-izlenebilirlik" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/products/hybrid-track-and-trace" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/products/urmarire-si-trasabilitate-hibrida" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/products/hibrit-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/products/hibrit-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/products/hybrid-track-and-trace" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/products/urmarire-si-trasabilitate-hibrida" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/products/hibrit-izlenebilirlik" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/products/organik-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/products/organik-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/products/organik-izlenebilirlik" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/products/organic-track-and-trace" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/products/urmarire-si-trasabilitate-organica" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/products/organik-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/products/organik-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/products/organic-track-and-trace" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/products/urmarire-si-trasabilitate-organica" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/products/organik-izlenebilirlik" />
   </url>
-  <!-- Katalog Ã‡Ã¶zÃ¼mleri: TR -->
+  <!-- Katalog Ãƒâ€¡ÃƒÂ¶zÃƒÂ¼mleri: TR -->
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/solutions/lot-parti-takibi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/solutions/lot-parti-takibi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/solutions/lot-parti-takibi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/solutions/lot-batch-tracking" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/solutions/urmarirea-lotului-sau-partidei" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/solutions/lot-parti-takibi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/solutions/lot-parti-takibi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/solutions/lot-batch-tracking" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/solutions/urmarirea-lotului-sau-partidei" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/solutions/lot-parti-takibi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/solutions/pick-to-light</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/solutions/pick-to-light</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/solutions/pick-to-light" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/solutions/pick-to-light" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/solutions/pick-to-light" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/solutions/pick-to-light" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/solutions/pick-to-light" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/solutions/pick-to-light" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/solutions/pick-to-light" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/solutions/pick-to-light" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/solutions/gercek-zamanli-konum-belirleme</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/solutions/gercek-zamanli-konum-belirleme</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/solutions/gercek-zamanli-konum-belirleme" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/solutions/rtls-real-time-location" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/solutions/sisteme-de-localizare-in-timp-real" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/solutions/gercek-zamanli-konum-belirleme" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/solutions/gercek-zamanli-konum-belirleme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/solutions/rtls-real-time-location" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/solutions/sisteme-de-localizare-in-timp-real" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/solutions/gercek-zamanli-konum-belirleme" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/solutions/tek-urun-takibi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/solutions/tek-urun-takibi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/solutions/tek-urun-takibi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/solutions/single-product-tracking" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/solutions/urmarirea-unui-singur-produs" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/solutions/tek-urun-takibi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/solutions/tek-urun-takibi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/solutions/single-product-tracking" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/solutions/urmarirea-unui-singur-produs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/solutions/tek-urun-takibi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/solutions/entegrasyon</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/solutions/entegrasyon</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/solutions/entegrasyon" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/solutions/system-integration" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/solutions/integrare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/solutions/entegrasyon" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/solutions/entegrasyon" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/solutions/system-integration" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/solutions/integrare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/solutions/entegrasyon" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/catalog/solutions/depo-yonetim-sistemi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/catalog/solutions/depo-yonetim-sistemi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/catalog/solutions/depo-yonetim-sistemi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/catalog/solutions/warehouse-management-systems" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/catalog/solutions/sisteme-de-gestionare-a-depozitelor" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/catalog/solutions/depo-yonetim-sistemi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/catalog/solutions/depo-yonetim-sistemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/catalog/solutions/warehouse-management-systems" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/catalog/solutions/sisteme-de-gestionare-a-depozitelor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/catalog/solutions/depo-yonetim-sistemi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/contact</loc>
+    <loc>https://www.izlenebilirlik.com.tr/contact</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/contact" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/contact" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/contact" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/cookie</loc>
+    <loc>https://www.izlenebilirlik.com.tr/cookie</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/cookie" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/cookie" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/cookie" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/cookie" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/cookie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/cookie" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/cookie" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/cookie" />
   </url>
   <!-- Blog: EN -->
   <!-- Referans Projeler: EN (/en/reference-projects/) -->
-  <!-- Ã‡Ã¶zÃ¼m OrtaklarÄ±: EN -->
-  <!-- Ã‡Ã¶zÃ¼mler: EN -->
+  <!-- Ãƒâ€¡ÃƒÂ¶zÃƒÂ¼m OrtaklarÃ„Â±: EN -->
+  <!-- Ãƒâ€¡ÃƒÂ¶zÃƒÂ¼mler: EN -->
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio" />
   </url>
   <!-- Referans Projeler: TR (/portfolio/) -->
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/abalioglu-yag-sut-tozu-koli-palet-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/abalioglu-yag-sut-tozu-koli-palet-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/abalioglu-yag-sut-tozu-koli-palet-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/abalioglu-yag-milk-powder-carton-pallet-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/abalioglu-yag-trasabilitate-lapte-praf-cutie-palet" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/abalioglu-yag-sut-tozu-koli-palet-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/abalioglu-yag-sut-tozu-koli-palet-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/abalioglu-yag-milk-powder-carton-pallet-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/abalioglu-yag-trasabilitate-lapte-praf-cutie-palet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/abalioglu-yag-sut-tozu-koli-palet-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/ajinomoto-kemal-kukrer-blokzincir-entegreli-urun-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/ajinomoto-kemal-kukrer-blokzincir-entegreli-urun-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/ajinomoto-kemal-kukrer-blokzincir-entegreli-urun-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/ajinomoto-kemal-kukrer-trasabilitate-blockchain" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/ajinomoto-kemal-kukrer-blokzincir-entegreli-urun-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/ajinomoto-kemal-kukrer-blokzincir-entegreli-urun-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/ajinomoto-kemal-kukrer-blockchain-integrated-product-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/ajinomoto-kemal-kukrer-trasabilitate-blockchain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/ajinomoto-kemal-kukrer-blokzincir-entegreli-urun-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/bomi-group-camera-based-multi-code-reading-system-tr" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/bomi-group-sistem-de-citire-multi-cod-bazat-pe-camere" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/bomi-group-camera-based-multi-code-reading-system-tr" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/bomi-group-sistem-de-citire-multi-cod-bazat-pe-camere" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/bomi-group-kamera-tabanli-coklu-kod-okuma-sistemi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/borgwarner-lazer-markalama</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/borgwarner-lazer-markalama</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/borgwarner-lazer-markalama" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/borgwarner-laser-marking" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/borgwarner-marcare-laser" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/borgwarner-lazer-markalama" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/borgwarner-lazer-markalama" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/borgwarner-laser-marking" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/borgwarner-marcare-laser" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/borgwarner-lazer-markalama" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/bosch-araba-takip-rfid-gecisi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/bosch-araba-takip-rfid-gecisi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/bosch-araba-takip-rfid-gecisi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/bosch-trolley-tracking-rfid-gate" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/bosch-poarta-rfid-monitorizare-carucioare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/bosch-araba-takip-rfid-gecisi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/bosch-araba-takip-rfid-gecisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/bosch-trolley-tracking-rfid-gate" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/bosch-poarta-rfid-monitorizare-carucioare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/bosch-araba-takip-rfid-gecisi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/bsh-cam-raf-takibi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/bsh-cam-raf-takibi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/bsh-cam-raf-takibi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/bsh-glass-shelf-tracking" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/bsh-monitorizare-rafturi-sticla" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/bsh-cam-raf-takibi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/bsh-cam-raf-takibi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/bsh-glass-shelf-tracking" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/bsh-monitorizare-rafturi-sticla" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/bsh-cam-raf-takibi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/bsh-firin-kapisi-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/bsh-firin-kapisi-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/bsh-firin-kapisi-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/bsh-oven-door-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/bsh-trasabilitate-usa-cuptor" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/bsh-firin-kapisi-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/bsh-firin-kapisi-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/bsh-oven-door-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/bsh-trasabilitate-usa-cuptor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/bsh-firin-kapisi-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/bsh-montaj-hatti-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/bsh-montaj-hatti-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/bsh-montaj-hatti-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/bsh-assembly-line-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/bsh-trasabilitate-linie-de-asamblare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/bsh-montaj-hatti-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/bsh-montaj-hatti-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/bsh-assembly-line-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/bsh-trasabilitate-linie-de-asamblare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/bsh-montaj-hatti-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/bsh-tasiyici-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/bsh-tasiyici-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/bsh-tasiyici-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/bsh-carriers-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/bsh-trasabilitate-suporturi" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/bsh-tasiyici-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/bsh-tasiyici-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/bsh-carriers-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/bsh-trasabilitate-suporturi" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/bsh-tasiyici-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/candy-hoover-pisirici-hatlari-test-verisi-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/candy-hoover-pisirici-hatlari-test-verisi-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/candy-hoover-pisirici-hatlari-test-verisi-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/candy-hoover-test-data-cooker-lines-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/candy-hoover-trasabilitate-linii-aragazuri-date-test" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/candy-hoover-pisirici-hatlari-test-verisi-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/candy-hoover-pisirici-hatlari-test-verisi-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/candy-hoover-test-data-cooker-lines-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/candy-hoover-trasabilitate-linii-aragazuri-date-test" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/candy-hoover-pisirici-hatlari-test-verisi-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/candy-hoover-uretim-verimliligi-takibi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/candy-hoover-uretim-verimliligi-takibi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/candy-hoover-uretim-verimliligi-takibi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/candy-hoover-test-data-production-efficiency-tracking" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/candy-hoover-monitorizare-eficienta-productie" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/candy-hoover-uretim-verimliligi-takibi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/candy-hoover-uretim-verimliligi-takibi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/candy-hoover-test-data-production-efficiency-tracking" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/candy-hoover-monitorizare-eficienta-productie" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/candy-hoover-uretim-verimliligi-takibi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/delphi-bulut-izlenebilirlik-veri-entegrasyonu</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/delphi-bulut-izlenebilirlik-veri-entegrasyonu</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/delphi-bulut-izlenebilirlik-veri-entegrasyonu" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/delphi-cloud-traceability-data-integration" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-integrare-date-trasabilitate-in-cloud" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/delphi-bulut-izlenebilirlik-veri-entegrasyonu" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-bulut-izlenebilirlik-veri-entegrasyonu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/delphi-cloud-traceability-data-integration" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-integrare-date-trasabilitate-in-cloud" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-bulut-izlenebilirlik-veri-entegrasyonu" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/delphi-enjeksiyon-rampasi-bireysel-takibi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/delphi-enjeksiyon-rampasi-bireysel-takibi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/delphi-enjeksiyon-rampasi-bireysel-takibi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/delphi-injection-rail-individual-tracking" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-monitorizare-individuala-rampa-injectie" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/delphi-enjeksiyon-rampasi-bireysel-takibi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-enjeksiyon-rampasi-bireysel-takibi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/delphi-injection-rail-individual-tracking" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-monitorizare-individuala-rampa-injectie" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-enjeksiyon-rampasi-bireysel-takibi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/delphi-prototip-hatti-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/delphi-prototip-hatti-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/delphi-prototip-hatti-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/delphi-prototype-line-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-trasabilitate-linie-prototip" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/delphi-prototip-hatti-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-prototip-hatti-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/delphi-prototype-line-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-trasabilitate-linie-prototip" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-prototip-hatti-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/delphi-rfid-datamatrix-ray-montaj-entegrasyonu</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/delphi-rfid-datamatrix-ray-montaj-entegrasyonu</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/delphi-rfid-datamatrix-ray-montaj-entegrasyonu" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/delphi-rfid-datamatrix-rail-assembly-integration" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-integrare-asamblare-rampa-rfid-datamatrix" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/delphi-rfid-datamatrix-ray-montaj-entegrasyonu" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-rfid-datamatrix-ray-montaj-entegrasyonu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/delphi-rfid-datamatrix-rail-assembly-integration" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-integrare-asamblare-rampa-rfid-datamatrix" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-rfid-datamatrix-ray-montaj-entegrasyonu" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/delphi-takim-ucu-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/delphi-takim-ucu-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/delphi-takim-ucu-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/delphi-tool-tip-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-trasabilitate-varf-scula" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/delphi-takim-ucu-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-takim-ucu-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/delphi-tool-tip-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-trasabilitate-varf-scula" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-takim-ucu-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/delphi-technologies-depo-yonetimi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/delphi-technologies-depo-yonetimi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/delphi-technologies-depo-yonetimi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/delphi-technologies" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-technologies-managementul-depozitelor" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/delphi-technologies-depo-yonetimi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-technologies-depo-yonetimi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/delphi-technologies" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/delphi-technologies-managementul-depozitelor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/delphi-technologies-depo-yonetimi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/demir-dokum-dijital-kanbanli-rfid-gecisi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/demir-dokum-dijital-kanbanli-rfid-gecisi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/demir-dokum-dijital-kanbanli-rfid-gecisi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/turk-demir-dokum-rfid-gate-with-digital-kanban" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/demir-dokum-poarta-rfid-cu-kanban-digital" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/demir-dokum-dijital-kanbanli-rfid-gecisi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/demir-dokum-dijital-kanbanli-rfid-gecisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/turk-demir-dokum-rfid-gate-with-digital-kanban" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/demir-dokum-poarta-rfid-cu-kanban-digital" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/demir-dokum-dijital-kanbanli-rfid-gecisi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/duru-bulgur-urun-koli-palet-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/duru-bulgur-urun-koli-palet-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/duru-bulgur-urun-koli-palet-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/duru-bulgur-product-carton-pallet-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/duru-bulgur-trasabilitate-produs-cutie-palet" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/duru-bulgur-urun-koli-palet-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/duru-bulgur-urun-koli-palet-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/duru-bulgur-product-carton-pallet-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/duru-bulgur-trasabilitate-produs-cutie-palet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/duru-bulgur-urun-koli-palet-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/groupe-atlantic-busbar-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/groupe-atlantic-busbar-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/groupe-atlantic-busbar-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/groupe-atlantic-busbar-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/groupe-atlantic-trasabilitate-busbar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/groupe-atlantic-busbar-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/groupe-atlantic-busbar-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/groupe-atlantic-busbar-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/groupe-atlantic-trasabilitate-busbar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/groupe-atlantic-busbar-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/haier-ayristirma-hatti-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/haier-ayristirma-hatti-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/haier-ayristirma-hatti-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/haier-europe-sorting-line-installation-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/haier-trasabilitate-linie-de-sortare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/haier-ayristirma-hatti-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/haier-ayristirma-hatti-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/haier-europe-sorting-line-installation-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/haier-trasabilitate-linie-de-sortare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/haier-ayristirma-hatti-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/haier-montaj-hatti-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/haier-montaj-hatti-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/haier-montaj-hatti-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/haier-europe-assembly-line-installation-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/haier-trasabilitate-linie-de-asamblare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/haier-montaj-hatti-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/haier-montaj-hatti-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/haier-europe-assembly-line-installation-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/haier-trasabilitate-linie-de-asamblare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/haier-montaj-hatti-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/haier-tek-urun-izlenebilirligi-firin-montaj-hatti</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/haier-tek-urun-izlenebilirligi-firin-montaj-hatti</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/haier-tek-urun-izlenebilirligi-firin-montaj-hatti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/haier-europe-single-product-traceability-oven-assembly-line" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/haier-trasabilitate-individuala-linie-asamblare-cuptoare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/haier-tek-urun-izlenebilirligi-firin-montaj-hatti" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/haier-tek-urun-izlenebilirligi-firin-montaj-hatti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/haier-europe-single-product-traceability-oven-assembly-line" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/haier-trasabilitate-individuala-linie-asamblare-cuptoare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/haier-tek-urun-izlenebilirligi-firin-montaj-hatti" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/maxion-inci-celik-rfid-kalip-takibi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/maxion-inci-celik-rfid-kalip-takibi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/maxion-inci-celik-rfid-kalip-takibi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/maxion-inci-celik-rfid-mold-tracking" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/maxion-inci-celik-monitorizare-rfid-matrite" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/maxion-inci-celik-rfid-kalip-takibi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/maxion-inci-celik-rfid-kalip-takibi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/maxion-inci-celik-rfid-mold-tracking" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/maxion-inci-celik-monitorizare-rfid-matrite" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/maxion-inci-celik-rfid-kalip-takibi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/mey-diageo-takip-ve-lokalizasyon-projesi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/mey-diageo-takip-ve-lokalizasyon-projesi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/mey-diageo-takip-ve-lokalizasyon-projesi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/mey-diageo-tracking-and-localization-project" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/mey-diageo-proiect-de-urmarire-si-localizare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/mey-diageo-takip-ve-lokalizasyon-projesi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/mey-diageo-takip-ve-lokalizasyon-projesi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/mey-diageo-tracking-and-localization-project" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/mey-diageo-proiect-de-urmarire-si-localizare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/mey-diageo-takip-ve-lokalizasyon-projesi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/mey-icki-bandrol-kontrol-sistemi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/mey-icki-bandrol-kontrol-sistemi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/mey-icki-bandrol-kontrol-sistemi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/mey-icki-bandrol-control-system" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/mey-bauturi-sistem-de-control-banderole" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/mey-icki-bandrol-kontrol-sistemi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/mey-icki-bandrol-kontrol-sistemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/mey-icki-bandrol-control-system" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/mey-bauturi-sistem-de-control-banderole" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/mey-icki-bandrol-kontrol-sistemi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/nemak-parca-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/nemak-parca-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/nemak-parca-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/nemak-parts-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/nemak-trasabilitate-piese" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/nemak-parca-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/nemak-parca-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/nemak-parts-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/nemak-trasabilitate-piese" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/nemak-parca-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/nuhun-ankara-koli-palet-sevkiyat-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/nuhun-ankara-koli-palet-sevkiyat-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/nuhun-ankara-koli-palet-sevkiyat-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/nuhun-ankara-carton-pallet-shipment-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/nuhun-ankara-trasabilitate-cutie-palet-expediere" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/nuhun-ankara-koli-palet-sevkiyat-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/nuhun-ankara-koli-palet-sevkiyat-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/nuhun-ankara-carton-pallet-shipment-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/nuhun-ankara-trasabilitate-cutie-palet-expediere" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/nuhun-ankara-koli-palet-sevkiyat-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/orkide-kalite-kontrol-uygulamasi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/orkide-kalite-kontrol-uygulamasi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/orkide-kalite-kontrol-uygulamasi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/orkide-quality-control-application" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/orkide-aplicatie-controlul-calitatii" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/orkide-kalite-kontrol-uygulamasi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/orkide-kalite-kontrol-uygulamasi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/orkide-quality-control-application" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/orkide-aplicatie-controlul-calitatii" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/orkide-kalite-kontrol-uygulamasi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/philsa-filtre-takibi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/philsa-filtre-takibi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/philsa-filtre-takibi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/philsa-filter-tracking" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/philsa-monitorizare-filtre" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/philsa-filtre-takibi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/philsa-filtre-takibi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/philsa-filter-tracking" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/philsa-monitorizare-filtre" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/philsa-filtre-takibi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/phinia-datamatrix-kalite-derecelendirme-istasyonu</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/phinia-datamatrix-kalite-derecelendirme-istasyonu</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/phinia-datamatrix-kalite-derecelendirme-istasyonu" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/phinia-datamatrix-quality-grading-station" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-statie-gradare-calitate-datamatrix" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/phinia-datamatrix-kalite-derecelendirme-istasyonu" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-datamatrix-kalite-derecelendirme-istasyonu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/phinia-datamatrix-quality-grading-station" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-statie-gradare-calitate-datamatrix" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-datamatrix-kalite-derecelendirme-istasyonu" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/phinia-elektronik-kart-montaj-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/phinia-elektronik-kart-montaj-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/phinia-elektronik-kart-montaj-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/phinia-electronic-board-assembly-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-trasabilitate-asamblare-placi-electronice" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/phinia-elektronik-kart-montaj-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-elektronik-kart-montaj-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/phinia-electronic-board-assembly-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-trasabilitate-asamblare-placi-electronice" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-elektronik-kart-montaj-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/phinia-kaplama-hatti-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/phinia-kaplama-hatti-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/phinia-kaplama-hatti-izlenebilirlik" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/phinia-coating-line-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-trasabilitatea-liniei-de-acoperire" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/phinia-kaplama-hatti-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-kaplama-hatti-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/phinia-coating-line-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-trasabilitatea-liniei-de-acoperire" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-kaplama-hatti-izlenebilirlik" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/phinia-firin-prosesi-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/phinia-firin-prosesi-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/phinia-firin-prosesi-izlenebilirlik" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/phinia-oven-process-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-trasabilitatea-procesului-de-cuptor" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/phinia-firin-prosesi-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-firin-prosesi-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/phinia-oven-process-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-trasabilitatea-procesului-de-cuptor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-firin-prosesi-izlenebilirlik" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/phinia-lazer-markalama-makinesi-izlenebilirlik-entegrasyonu</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/phinia-lazer-markalama-makinesi-izlenebilirlik-entegrasyonu</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/phinia-lazer-markalama-makinesi-izlenebilirlik-entegrasyonu" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/phinia-laser-marking-machine-traceability-integration" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-integrare-trasabilitate-masina-marcare-laser" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/phinia-lazer-markalama-makinesi-izlenebilirlik-entegrasyonu" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-lazer-markalama-makinesi-izlenebilirlik-entegrasyonu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/phinia-laser-marking-machine-traceability-integration" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/phinia-integrare-trasabilitate-masina-marcare-laser" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/phinia-lazer-markalama-makinesi-izlenebilirlik-entegrasyonu" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/pmi-barkod-gecisi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/pmi-barkod-gecisi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/pmi-barkod-gecisi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/pmi-barcode-gate" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/pmi-poarta-cod-de-bare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/pmi-barkod-gecisi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/pmi-barkod-gecisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/pmi-barcode-gate" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/pmi-poarta-cod-de-bare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/pmi-barkod-gecisi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/pmi-embosser-rfid</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/pmi-embosser-rfid</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/pmi-embosser-rfid" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/pmi-embosser-rfid" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/pmi-embosser-rfid" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/pmi-embosser-rfid" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/pmi-embosser-rfid" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/pmi-embosser-rfid" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/pmi-embosser-rfid" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/pmi-embosser-rfid" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/pmi-paletleme-otomasyonu-otomatik-etiketleme</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/pmi-paletleme-otomasyonu-otomatik-etiketleme</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/pmi-paletleme-otomasyonu-otomatik-etiketleme" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/pmi-palletizing-automation-automatic-labeling" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/pmi-automatizare-paletizare-etichetare-automata" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/pmi-paletleme-otomasyonu-otomatik-etiketleme" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/pmi-paletleme-otomasyonu-otomatik-etiketleme" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/pmi-palletizing-automation-automatic-labeling" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/pmi-automatizare-paletizare-etichetare-automata" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/pmi-paletleme-otomasyonu-otomatik-etiketleme" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/stackpole-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/stackpole-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/stackpole-izlenebilirlik" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/stackpole-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/stackpole-trasabilitate" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/stackpole-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/stackpole-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/stackpole-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/stackpole-trasabilitate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/stackpole-izlenebilirlik" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/turk-tuborg-fici-ocr-izlenebilirligi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/turk-tuborg-fici-ocr-izlenebilirligi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/turk-tuborg-fici-ocr-izlenebilirligi" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/turk-tuborg-keg-ocr-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/turk-tuborg-trasabilitate-butoi-ocr" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/turk-tuborg-fici-ocr-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/turk-tuborg-fici-ocr-izlenebilirligi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/turk-tuborg-keg-ocr-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/turk-tuborg-trasabilitate-butoi-ocr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/turk-tuborg-fici-ocr-izlenebilirligi" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/turk-tuborg-otomatik-palet-etiketleme-ve-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/turk-tuborg-otomatik-palet-etiketleme-ve-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/turk-tuborg-otomatik-palet-etiketleme-ve-izlenebilirlik" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/turk-tuborg-automatic-pallet-labeling-traceability" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/turk-tuborg-etichetare-automata-paleti-si-trasabilitate" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/turk-tuborg-otomatik-palet-etiketleme-ve-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/turk-tuborg-otomatik-palet-etiketleme-ve-izlenebilirlik" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/turk-tuborg-automatic-pallet-labeling-traceability" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/turk-tuborg-etichetare-automata-paleti-si-trasabilitate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/turk-tuborg-otomatik-palet-etiketleme-ve-izlenebilirlik" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/vestel-otomatik-etiketleme-ve-dogrulama</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/vestel-otomatik-etiketleme-ve-dogrulama</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/vestel-otomatik-etiketleme-ve-dogrulama" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/vestel-automatic-labeling-verification" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/vestel-etichetare-automata-si-verificare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/vestel-otomatik-etiketleme-ve-dogrulama" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/vestel-otomatik-etiketleme-ve-dogrulama" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/vestel-automatic-labeling-verification" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/vestel-etichetare-automata-si-verificare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/vestel-otomatik-etiketleme-ve-dogrulama" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/portfolio/whirlpool-barkod-kontrollu-ayristirma</loc>
+    <loc>https://www.izlenebilirlik.com.tr/portfolio/whirlpool-barkod-kontrollu-ayristirma</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/portfolio/whirlpool-barkod-kontrollu-ayristirma" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/reference-projects/whirlpool-sorting-barcode-control" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/proiecte-de-referinta/whirlpool-sortare-control-cod-de-bare" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/portfolio/whirlpool-barkod-kontrollu-ayristirma" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/portfolio/whirlpool-barkod-kontrollu-ayristirma" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/reference-projects/whirlpool-sorting-barcode-control" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/whirlpool-sortare-control-cod-de-bare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/portfolio/whirlpool-barkod-kontrollu-ayristirma" />
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/privacy-policy</loc>
+    <loc>https://www.izlenebilirlik.com.tr/privacy-policy</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/privacy-policy" />
   </url>
 
 
-  <!-- Çözümler: TR (detail sayfaları - listing page mevcut değil) -->
+  <!-- Ã‡Ã¶zÃ¼mler: TR (detail sayfalarÄ± - listing page mevcut deÄŸil) -->
   <url>
-    <loc>https://izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/image-processing-quality-control"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/procesare-imagini-control-calitate"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solutions/image-processing-quality-control"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solutions/procesare-imagini-control-calitate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solutions/goruntu-isleme-kalite-kontrol"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/mes-erp-system-integration"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/integrare-sisteme-mes-erp"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solutions/mes-erp-system-integration"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solutions/integrare-sisteme-mes-erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solutions/mes-ve-erp-sistem-entegrasyonu"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/poka-yoke-error-proofing"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/poka-yoke"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solutions/poka-yoke-error-proofing"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solutions/poka-yoke"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solutions/poka-yoke-hata-onleme"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/rfid-traceability"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/rfid-trasabilitate"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solutions/rfid-traceability"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solutions/rfid-trasabilitate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solutions/rfid-izlenebilirlik"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/rtls-real-time-location"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/rtls-localizare"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solutions/rtls-real-time-location"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solutions/rtls-localizare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solutions/rtls-gercek-zamanli-konumlandirma"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solutions/wms-warehouse-management"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solutions/wms-depozit"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solutions/wms-warehouse-management"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solutions/wms-depozit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solutions/wms-depo-yonetim-sistemi"/>
   </url>
 
-  <!-- Çözüm Ortakları: TR (detail sayfaları - listing page mevcut değil) -->
+  <!-- Ã‡Ã¶zÃ¼m OrtaklarÄ±: TR (detail sayfalarÄ± - listing page mevcut deÄŸil) -->
   <url>
-    <loc>https://izlenebilirlik.com.tr/solution-partners/beckhoff</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solution-partners/beckhoff</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/beckhoff"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/beckhoff"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/beckhoff"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/beckhoff"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solution-partners/beckhoff"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solution-partners/beckhoff"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solution-partners/beckhoff"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solution-partners/beckhoff"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solution-partners/interroll</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solution-partners/interroll</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/interroll"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/interroll"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/interroll"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/interroll"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solution-partners/interroll"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solution-partners/interroll"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solution-partners/interroll"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solution-partners/interroll"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solution-partners/markem-imaje</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solution-partners/markem-imaje</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/markem-imaje"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/markem-imaje"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/markem-imaje"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/markem-imaje"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solution-partners/markem-imaje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solution-partners/markem-imaje"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solution-partners/markem-imaje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solution-partners/markem-imaje"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solution-partners/sewio</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solution-partners/sewio</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/sewio"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/sewio"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/sewio"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/sewio"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solution-partners/sewio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solution-partners/sewio"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solution-partners/sewio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solution-partners/sewio"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solution-partners/sick</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solution-partners/sick</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/sick"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/sick"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/sick"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/sick"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solution-partners/sick"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solution-partners/sick"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solution-partners/sick"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solution-partners/sick"/>
   </url>
   <url>
-    <loc>https://izlenebilirlik.com.tr/solution-partners/universal-robots</loc>
+    <loc>https://www.izlenebilirlik.com.tr/solution-partners/universal-robots</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://izlenebilirlik.com.tr/solution-partners/universal-robots"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://izlenebilirlik.com.tr/en/solution-partners/universal-robots"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://izlenebilirlik.com.tr/ro/solution-partners/universal-robots"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izlenebilirlik.com.tr/solution-partners/universal-robots"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.izlenebilirlik.com.tr/solution-partners/universal-robots"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.izlenebilirlik.com.tr/en/solution-partners/universal-robots"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.izlenebilirlik.com.tr/ro/solution-partners/universal-robots"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.izlenebilirlik.com.tr/solution-partners/universal-robots"/>
   </url>
 
 </urlset>

@@ -15,14 +15,14 @@ export async function generateMetadata() {
 
   let title = 'Contact Traceability | Consultanță Trasabilitate';
   if (isTr) {
-    title = 'İletişim | Endüstriyel İzlenebilirlik Danışmanlığı | Traceability';
+    title = 'İletişim | Endüstriyel İzlenebilirlik Danışmanlığı | İzlenebilirlik';
   } else if (isEn) {
     title = 'Contact Traceability | Industrial Traceability Consulting';
   }
 
   let description = 'Contactează Traceability pentru consultanță în trasabilitate industrială, integrare MES/ERP, implementare RFID și WMS adaptate proceselor tale de producție.';
   if (isTr) {
-    description = 'Endüstriyel izlenebilirlik danışmanlığı, MES/ERP entegrasyonu, RFID ve WMS uygulamaları için Traceability ile iletişime geçin.';
+    description = 'Endüstriyel izlenebilirlik danışmanlığı, MES/ERP entegrasyonu, RFID ve WMS uygulamaları için Siskon ile iletişime geçin.';
   } else if (isEn) {
     description = 'Contact Traceability for industrial traceability consulting, MES/ERP integration, RFID and WMS implementations tailored to your production processes.';
   }
@@ -48,7 +48,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://izlenebilirlik.com.tr/og-image.png',
+          url: 'https://www.izlenebilirlik.com.tr/og-image.png',
           width: 1200,
           height: 630,
           alt: title,
@@ -59,7 +59,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://izlenebilirlik.com.tr/og-image.png'],
+      images: ['https://www.izlenebilirlik.com.tr/og-image.png'],
     },
   };
 }

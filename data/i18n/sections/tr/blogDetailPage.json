@@ -1,7 +1,7 @@
 {
-  "notFoundTitle": "Makale Bulunamadı | Traceability Blog",
-  "notFoundDescription": "İstenen blog makalesi bulunamadı. Traceability blogunda en güncel izlenebilirlik makalelerini ve endüstriyel içgörüleri keşfedin.",
-  "blogSuffix": "Traceability Blog",
+  "notFoundTitle": "Makale Bulunamadı | İzlenebilirlik Blog",
+  "notFoundDescription": "İstenen blog makalesi bulunamadı. İzlenebilirlik blogunda en güncel makaleleri ve endüstriyel içgörüleri keşfedin.",
+  "blogSuffix": "İzlenebilirlik Blog",
   "quotePrefix": "Alıntı:",
   "backToBlog": "Bloga Dön",
   "writtenBy": "Yazan",

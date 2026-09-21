@@ -50,7 +50,7 @@ export async function generateMetadata() {
     title,
     description,
     keywords: 'endüstriyel izlenebilirlik, MES, endüstri 4.0, RFID, RTLS, WMS, POKA YOKE, akıllı fabrikalar, otomotiv, gıda, ilaç, kalite kontrol, depo yönetimi',
-    metadataBase: new URL('https://izlenebilirlik.com.tr'),
+    metadataBase: new URL('https://www.izlenebilirlik.com.tr'),
     manifest: '/site.webmanifest',
     icons: {
       icon: [
@@ -72,10 +72,10 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://izlenebilirlik.com.tr/og-image.png',
+          url: 'https://www.izlenebilirlik.com.tr/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'Traceability | Industrial Traceability & MES Solutions',
+          alt: 'İzlenebilirlik | Industrial Traceability & MES Solutions',
         },
       ],
     },
@@ -83,7 +83,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://izlenebilirlik.com.tr/og-image.png'],
+      images: ['https://www.izlenebilirlik.com.tr/og-image.png'],
     },
     alternates,
   };

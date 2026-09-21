@@ -71,12 +71,12 @@ export async function generateMetadata({ params }) {
   const canonicalPath = toLocalePath(`/blog/${getSlugForLocale(locale)}`, locale);
 
   const alternates = {
-    canonical: `https://izlenebilirlik.com.tr${canonicalPath}`,
+    canonical: `https://www.izlenebilirlik.com.tr${canonicalPath}`,
     languages: {
-      'tr': `https://izlenebilirlik.com.tr/blog/${getSlugForLocale('tr')}`,
-      'en': `https://izlenebilirlik.com.tr/en/blog/${getSlugForLocale('en')}`,
-      'ro': `https://izlenebilirlik.com.tr/ro/blog/${getSlugForLocale('ro')}`,
-      'x-default': `https://izlenebilirlik.com.tr/blog/${getSlugForLocale('tr')}`,
+      'tr': `https://www.izlenebilirlik.com.tr/blog/${getSlugForLocale('tr')}`,
+      'en': `https://www.izlenebilirlik.com.tr/en/blog/${getSlugForLocale('en')}`,
+      'ro': `https://www.izlenebilirlik.com.tr/ro/blog/${getSlugForLocale('ro')}`,
+      'x-default': `https://www.izlenebilirlik.com.tr/blog/${getSlugForLocale('tr')}`,
     }
   };
 
@@ -87,9 +87,9 @@ export async function generateMetadata({ params }) {
     openGraphLocale = 'en_US';
   }
 
-  let ogImage = 'https://izlenebilirlik.com.tr/og-image.png';
+  let ogImage = 'https://www.izlenebilirlik.com.tr/og-image.png';
   if (post.image) {
-    ogImage = post.image.startsWith('http') ? post.image : `https://izlenebilirlik.com.tr${post.image}`;
+    ogImage = post.image.startsWith('http') ? post.image : `https://www.izlenebilirlik.com.tr${post.image}`;
   }
 
   return {

@@ -1,20 +1,20 @@
 # Traceability - Turkish LLM Discovery
 
 language: tr
-site: https://izlenebilirlik.com.tr/
-sitemap: https://izlenebilirlik.com.tr/sitemap.xml
-robots: https://izlenebilirlik.com.tr/robots.txt
+site: https://www.izlenebilirlik.com.tr/
+sitemap: https://www.izlenebilirlik.com.tr/sitemap.xml
+robots: https://www.izlenebilirlik.com.tr/robots.txt
 
 primary-pages:
-- https://izlenebilirlik.com.tr/
-- https://izlenebilirlik.com.tr/blog
-- https://izlenebilirlik.com.tr/contact
-- https://izlenebilirlik.com.tr/proiecte-de-referinta
+- https://www.izlenebilirlik.com.tr/
+- https://www.izlenebilirlik.com.tr/blog
+- https://www.izlenebilirlik.com.tr/contact
+- https://www.izlenebilirlik.com.tr/proiecte-de-referinta
 
 content-sections:
-- blog: https://izlenebilirlik.com.tr/blog/{slug}
-- solution-details: https://izlenebilirlik.com.tr/solutions/{slug}
-- catalog-solutions: https://izlenebilirlik.com.tr/catalog/solutions/{slug}
-- catalog-products: https://izlenebilirlik.com.tr/catalog/products/{slug}
-- reference-projects: https://izlenebilirlik.com.tr/portfolio/{slug}
-- solution-partners: https://izlenebilirlik.com.tr/solution-partners/{slug}
+- blog: https://www.izlenebilirlik.com.tr/blog/{slug}
+- solution-details: https://www.izlenebilirlik.com.tr/solutions/{slug}
+- catalog-solutions: https://www.izlenebilirlik.com.tr/catalog/solutions/{slug}
+- catalog-products: https://www.izlenebilirlik.com.tr/catalog/products/{slug}
+- reference-projects: https://www.izlenebilirlik.com.tr/portfolio/{slug}
+- solution-partners: https://www.izlenebilirlik.com.tr/solution-partners/{slug}
