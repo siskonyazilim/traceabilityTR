@@ -4,7 +4,6 @@ Disallow: /tag/*/feed
 Disallow: /author/*
 Disallow: /*/page/*
 Disallow: /site.webmanifest
-Disallow: /_next/static/*
 Disallow: /favicon.ico
 Disallow: /cdn-cgi/*
 Disallow: /?feed=*
