@@ -127,7 +127,7 @@ export default async function RootLayout({ children }) {
           id="cerezgo-script"
           strategy="lazyOnload"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
-          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vED/oZUC1pSW3y6vNOMOcrRZW0pifWnwmCFjgwdyREdZUgJm1JLEsM="
+          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0vpKaPbTvt61DIB1C9ICfSdnEZ9wdEs7lN5IoDFNg6gdqhFdk9hLHp4="
           data-id="nt"
         />
 
@@ -140,13 +140,13 @@ export default async function RootLayout({ children }) {
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WTGXXCML');`,
+})(window,document,'script','dataLayer','GTM-547XQ7CS');`,
           }}
         />
         <noscript>
           <iframe
             title="gtm-noscript"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WTGXXCML"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-547XQ7CS"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
