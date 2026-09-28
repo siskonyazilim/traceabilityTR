@@ -71,12 +71,12 @@ export async function generateMetadata({ params }) {
   const canonicalPath = toLocalePath(`/blog/${getSlugForLocale(locale)}`, locale);
 
   const alternates = {
-    canonical: `https://www.izlenebilirlik.com.tr${canonicalPath}`,
+    canonical: `https://www.traceability.com.tr${canonicalPath}`,
     languages: {
-      'tr': `https://www.izlenebilirlik.com.tr/blog/${getSlugForLocale('tr')}`,
-      'en': `https://www.izlenebilirlik.com.tr/en/blog/${getSlugForLocale('en')}`,
-      'ro': `https://www.izlenebilirlik.com.tr/ro/blog/${getSlugForLocale('ro')}`,
-      'x-default': `https://www.izlenebilirlik.com.tr/blog/${getSlugForLocale('tr')}`,
+      'tr': `https://www.traceability.com.tr/blog/${getSlugForLocale('tr')}`,
+      'en': `https://www.traceability.com.tr/en/blog/${getSlugForLocale('en')}`,
+      'ro': `https://www.traceability.com.tr/ro/blog/${getSlugForLocale('ro')}`,
+      'x-default': `https://www.traceability.com.tr/blog/${getSlugForLocale('tr')}`,
     }
   };
 
@@ -87,9 +87,9 @@ export async function generateMetadata({ params }) {
     openGraphLocale = 'en_US';
   }
 
-  let ogImage = 'https://www.izlenebilirlik.com.tr/og-image.png';
+  let ogImage = 'https://www.traceability.com.tr/og-image.png';
   if (post.image) {
-    ogImage = post.image.startsWith('http') ? post.image : `https://www.izlenebilirlik.com.tr${post.image}`;
+    ogImage = post.image.startsWith('http') ? post.image : `https://www.traceability.com.tr${post.image}`;
   }
 
   return {

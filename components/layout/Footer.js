@@ -28,7 +28,7 @@ export const Footer = ({ cmsGlobal }) => {
 
   // CMS'den iletişim bilgileri
   const contactEmail = locale === 'tr'
-    ? (cmsGlobal?.emailTR || 'info@izlenebilirlik.com.tr')
+    ? (cmsGlobal?.emailTR || 'info@traceability.com.tr')
     : (cmsGlobal?.emailRO || 'info@traceability.ro');
   const phoneTR = cmsGlobal?.phoneNumberTR || '+90 232 245 00 76';
   const phoneRO = cmsGlobal?.phoneNumberRO || '+40 368 402 002';

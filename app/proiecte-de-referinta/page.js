@@ -44,12 +44,12 @@ export async function generateMetadata() {
   }
 
   const alternates = {
-    canonical: `https://www.izlenebilirlik.com.tr${canonicalLocalePath}`,
+    canonical: `https://www.traceability.com.tr${canonicalLocalePath}`,
     languages: {
-      'tr': 'https://www.izlenebilirlik.com.tr/portfolio',
-      'en': 'https://www.izlenebilirlik.com.tr/en/reference-projects',
-      'ro': 'https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta',
-      'x-default': 'https://www.izlenebilirlik.com.tr/portfolio',
+      'tr': 'https://www.traceability.com.tr/portfolio',
+      'en': 'https://www.traceability.com.tr/en/reference-projects',
+      'ro': 'https://www.traceability.com.tr/ro/proiecte-de-referinta',
+      'x-default': 'https://www.traceability.com.tr/portfolio',
     }
   };
 
@@ -65,7 +65,7 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://www.izlenebilirlik.com.tr/og-image.png',
+          url: 'https://www.traceability.com.tr/og-image.png',
           width: 1200,
           height: 630,
           alt: title,
@@ -76,7 +76,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://www.izlenebilirlik.com.tr/og-image.png'],
+      images: ['https://www.traceability.com.tr/og-image.png'],
     },
   };
 }

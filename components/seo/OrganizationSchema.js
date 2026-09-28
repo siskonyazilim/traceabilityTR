@@ -12,9 +12,9 @@
  * @see https://schema.org/Organization
  */
 
-export const ORGANIZATION_ID = 'https://www.izlenebilirlik.com.tr/#organization';
-export const SITE_URL = 'https://www.izlenebilirlik.com.tr';
-export const LOGO_URL = 'https://www.izlenebilirlik.com.tr/siskon-logo-header.svg';
+export const ORGANIZATION_ID = 'https://www.traceability.com.tr/#organization';
+export const SITE_URL = 'https://www.traceability.com.tr';
+export const LOGO_URL = 'https://www.traceability.com.tr/siskon-logo-header.svg';
 
 /**
  * Tam Organization schema nesnesi döndürür.
@@ -28,7 +28,7 @@ export function getOrganizationSchema() {
     'alternateName': [
       'Siskon Otomasyon ve Yazılım A.Ş.',
       'Siskon Romania SRL',
-      'izlenebilirlik.com.tr',
+      'traceability.com.tr',
     ],
     'url': SITE_URL,
     'logo': {

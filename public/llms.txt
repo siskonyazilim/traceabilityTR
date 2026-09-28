@@ -3,11 +3,11 @@
 This file describes machine-readable discovery endpoints for Traceability.
 
 ## Site
-- [Homepage](https://www.izlenebilirlik.com.tr/)
-- [Sitemap](https://www.izlenebilirlik.com.tr/sitemap.xml)
-- [Robots](https://www.izlenebilirlik.com.tr/robots.txt)
+- [Homepage](https://www.traceability.com.tr/)
+- [Sitemap](https://www.traceability.com.tr/sitemap.xml)
+- [Robots](https://www.traceability.com.tr/robots.txt)
 
 ## Language-Specific LLM Files
-- [Turkish](https://www.izlenebilirlik.com.tr/llm.tr.txt)
-- [English](https://www.izlenebilirlik.com.tr/llm.en.txt)
-- [Romanian](https://www.izlenebilirlik.com.tr/llm.ro.txt)
+- [Turkish](https://www.traceability.com.tr/llm.tr.txt)
+- [English](https://www.traceability.com.tr/llm.en.txt)
+- [Romanian](https://www.traceability.com.tr/llm.ro.txt)

@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://www.izlenebilirlik.com.tr/</loc>
+    <loc>https://www.traceability.com.tr/</loc>
     <video:video>
-      <video:thumbnail_loc>https://www.izlenebilirlik.com.tr/images/video-thumbs/thumb-5389356-coll-wavebreak-warehouse.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://www.traceability.com.tr/images/video-thumbs/thumb-5389356-coll-wavebreak-warehouse.jpg</video:thumbnail_loc>
       <video:title>Gerçek Zamanlı Kontrol, Sıfır Hata - Depo İzlenebilirliği</video:title>
       <video:description>Barkod ve RFID tabanlı doğrulamalarla depo ve üretim süreçlerinde hataları anında tespit eden endüstriyel izlenebilirlik çözümü.</video:description>
-      <video:content_loc>https://www.izlenebilirlik.com.tr/video/5389356-coll-wavebreak-warehouse-1920x1080.webm</video:content_loc>
+      <video:content_loc>https://www.traceability.com.tr/video/5389356-coll-wavebreak-warehouse-1920x1080.webm</video:content_loc>
       <video:duration>15</video:duration>
       <video:publication_date>2026-05-12T00:00:00+03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
       <video:live>no</video:live>
     </video:video>
     <video:video>
-      <video:thumbnail_loc>https://www.izlenebilirlik.com.tr/images/video-thumbs/thumb-dislidonus.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://www.traceability.com.tr/images/video-thumbs/thumb-dislidonus.jpg</video:thumbnail_loc>
       <video:title>Gerçek Zamanlı Kontrol, Sıfır Hata - Üretim Hattı İzlenebilirliği</video:title>
       <video:description>Üretim hattında dişli ve montaj süreçlerinin kamera ve sensör tabanlı doğrulamalarla izlenmesini sağlayan endüstriyel izlenebilirlik çözümü.</video:description>
-      <video:content_loc>https://www.izlenebilirlik.com.tr/video/Dislidonus.webm</video:content_loc>
+      <video:content_loc>https://www.traceability.com.tr/video/Dislidonus.webm</video:content_loc>
       <video:duration>15</video:duration>
       <video:publication_date>2026-06-14T00:00:00+03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
       <video:live>no</video:live>
     </video:video>
     <video:video>
-      <video:thumbnail_loc>https://www.izlenebilirlik.com.tr/images/video-thumbs/thumb-5356320-coll-wavebreak-indoors.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://www.traceability.com.tr/images/video-thumbs/thumb-5356320-coll-wavebreak-indoors.jpg</video:thumbnail_loc>
       <video:title>Gerçek Zamanlı Kontrol, Sıfır Hata - Laboratuvar ve Kalite Kontrol İzlenebilirliği</video:title>
       <video:description>Numune ve kalite kontrol süreçlerinde barkod okuma ile sağlanan uçtan uca izlenebilirlik ve doğrulama çözümü.</video:description>
-      <video:content_loc>https://www.izlenebilirlik.com.tr/video/5356320-coll-wavebreak-indoors-1920x1080.webm</video:content_loc>
+      <video:content_loc>https://www.traceability.com.tr/video/5356320-coll-wavebreak-indoors-1920x1080.webm</video:content_loc>
       <video:duration>15</video:duration>
       <video:publication_date>2026-07-21T00:00:00+03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>

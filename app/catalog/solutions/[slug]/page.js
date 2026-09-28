@@ -50,19 +50,19 @@ export async function generateMetadata({ params }) {
   const brandSuffix = locale === 'tr' ? 'İzlenebilirlik' : 'Traceability';
   const title = `${item.title} | ${brandSuffix}`;
   const description = item.summary || item.description;
-  let ogImage = 'https://www.izlenebilirlik.com.tr/og-image.png';
+  let ogImage = 'https://www.traceability.com.tr/og-image.png';
   if (item.image) {
-    ogImage = item.image.startsWith('http') ? item.image : `https://www.izlenebilirlik.com.tr${item.image}`;
+    ogImage = item.image.startsWith('http') ? item.image : `https://www.traceability.com.tr${item.image}`;
   }
   const localizedCatalogPath = toLocalePath(`/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, locale)}`, locale);
 
   const alternates = {
-    canonical: `https://www.izlenebilirlik.com.tr${localizedCatalogPath}`,
+    canonical: `https://www.traceability.com.tr${localizedCatalogPath}`,
     languages: {
-      'tr': `https://www.izlenebilirlik.com.tr/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'tr')}`,
-      'en': `https://www.izlenebilirlik.com.tr/en/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'en')}`,
-      'ro': `https://www.izlenebilirlik.com.tr/ro/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'ro')}`,
-      'x-default': `https://www.izlenebilirlik.com.tr/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'tr')}`,
+      'tr': `https://www.traceability.com.tr/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'tr')}`,
+      'en': `https://www.traceability.com.tr/en/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'en')}`,
+      'ro': `https://www.traceability.com.tr/ro/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'ro')}`,
+      'x-default': `https://www.traceability.com.tr/catalog/solutions/${getLocalizedSlug('catalogSolution', baseSlug, 'tr')}`,
     }
   };
 
@@ -119,9 +119,9 @@ export default async function CatalogSolutionDetailPage({ params }) {
   const relativeHomePath = '/';
   const relativeSolutionsPath = '/?tab=solutions#traceability-solutions';
 
-  const pageUrl = `https://www.izlenebilirlik.com.tr${toLocalePath(solutionPath, locale)}`;
-  const homeUrl = `https://www.izlenebilirlik.com.tr${toLocalePath(relativeHomePath, locale)}`;
-  const solutionsUrl = `https://www.izlenebilirlik.com.tr${toLocalePath(relativeSolutionsPath, locale)}`;
+  const pageUrl = `https://www.traceability.com.tr${toLocalePath(solutionPath, locale)}`;
+  const homeUrl = `https://www.traceability.com.tr${toLocalePath(relativeHomePath, locale)}`;
+  const solutionsUrl = `https://www.traceability.com.tr${toLocalePath(relativeSolutionsPath, locale)}`;
 
   const serviceTypeByLocale = {
     tr: "Endüstriyel İzlenebilirlik ve Otomasyon Sistemleri",

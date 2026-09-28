@@ -46,21 +46,21 @@ export async function generateMetadata({ params }) {
   const brandSuffix = locale === 'tr' ? 'İzlenebilirlik' : 'Traceability';
   const title = `${item.title} | ${brandSuffix}`;
   const description = item.summary || item.description;
-  let ogImage = 'https://www.izlenebilirlik.com.tr/og-image.png';
+  let ogImage = 'https://www.traceability.com.tr/og-image.png';
   if (item.image) {
-    ogImage = item.image.startsWith('http') ? item.image : `https://www.izlenebilirlik.com.tr${item.image}`;
+    ogImage = item.image.startsWith('http') ? item.image : `https://www.traceability.com.tr${item.image}`;
   }
 
   const localizedProductPath = '/catalog/products/' + getLocalizedSlug('catalogProduct', baseSlug, locale);
   const canonicalPath = toLocalePath(localizedProductPath, locale);
 
   const alternates = {
-    canonical: 'https://www.izlenebilirlik.com.tr' + canonicalPath,
+    canonical: 'https://www.traceability.com.tr' + canonicalPath,
     languages: {
-      'tr': `https://www.izlenebilirlik.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
-      'en': `https://www.izlenebilirlik.com.tr/en/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'en')}`,
-      'ro': `https://www.izlenebilirlik.com.tr/ro/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'ro')}`,
-      'x-default': `https://www.izlenebilirlik.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
+      'tr': `https://www.traceability.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
+      'en': `https://www.traceability.com.tr/en/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'en')}`,
+      'ro': `https://www.traceability.com.tr/ro/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'ro')}`,
+      'x-default': `https://www.traceability.com.tr/catalog/products/${getLocalizedSlug('catalogProduct', baseSlug, 'tr')}`,
     }
   };
 
@@ -117,9 +117,9 @@ export default async function CatalogProductDetailPage({ params }) {
   const relativeHomePath = '/';
   const relativeProductsPath = '/?tab=products#traceability-solutions';
 
-  const pageUrl = `https://www.izlenebilirlik.com.tr${toLocalePath(productPath, locale)}`;
-  const homeUrl = `https://www.izlenebilirlik.com.tr${toLocalePath(relativeHomePath, locale)}`;
-  const productsUrl = `https://www.izlenebilirlik.com.tr${toLocalePath(relativeProductsPath, locale)}`;
+  const pageUrl = `https://www.traceability.com.tr${toLocalePath(productPath, locale)}`;
+  const homeUrl = `https://www.traceability.com.tr${toLocalePath(relativeHomePath, locale)}`;
+  const productsUrl = `https://www.traceability.com.tr${toLocalePath(relativeProductsPath, locale)}`;
 
   const offerDescriptionByLocale = {
     tr: "Proje bazlı kurumsal fiyatlandırma için lütfen bizimle iletişime geçin.",
@@ -148,12 +148,12 @@ export default async function CatalogProductDetailPage({ params }) {
     ? features.slice(0, 5).join(', ') 
     : (withNavigation.summary || withNavigation.description);
 
-  let absoluteImage = 'https://www.izlenebilirlik.com.tr/og-image.png';
+  let absoluteImage = 'https://www.traceability.com.tr/og-image.png';
   if (withNavigation.image) {
     if (withNavigation.image.startsWith('http')) {
       absoluteImage = withNavigation.image;
     } else {
-      absoluteImage = `https://www.izlenebilirlik.com.tr${withNavigation.image}`;
+      absoluteImage = `https://www.traceability.com.tr${withNavigation.image}`;
     }
   }
 

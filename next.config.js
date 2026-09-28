@@ -12,7 +12,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'izlenebilirlik.com.tr',
+        hostname: 'traceability.com.tr',
         pathname: '/**',
       },
       {

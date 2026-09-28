@@ -27,14 +27,14 @@ export async function generateMetadata() {
   if (isEn) {
     title = 'Industrial Traceability & MES Solutions for Smart Factories | Traceability';
   } else if (isTr) {
-    title = 'Endüstriyel İzlenebilirlik & MES Çözümleri | Akıllı Fabrikalar | İzlenebilirlik';
+    title = 'Endüstriyel İzlenebilirlik & MES Çözümleri | Akıllı Fabrikalar | Traceability';
   }
 
-  let description = 'izlenebilirlik.com.tr livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
+  let description = 'traceability.com.tr livrează soluții de trasabilitate industrială, MES și automatizare pentru fabrici inteligente: RFID, RTLS, WMS, Poka Yoke și integrare end-to-end.';
   if (isEn) {
-    description = 'İzlenebilirlik delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.';
+    description = 'Traceability delivers industrial traceability, MES and smart manufacturing solutions: RFID, RTLS, WMS, Poka Yoke and end-to-end MES/ERP integration.';
   } else if (isTr) {
-    description = 'İzlenebilirlik; akıllı fabrikalar için uçtan uca endüstriyel izlenebilirlik, MES ve otomasyon çözümleri: RFID, RTLS, WMS, Poka Yoke ve sistem entegrasyonu.';
+    description = 'Traceability; akıllı fabrikalar için uçtan uca endüstriyel izlenebilirlik, MES ve otomasyon çözümleri: RFID, RTLS, WMS, Poka Yoke ve sistem entegrasyonu.';
   }
 
   let ogLocale = 'ro_RO';
@@ -50,7 +50,7 @@ export async function generateMetadata() {
     title,
     description,
     keywords: 'endüstriyel izlenebilirlik, MES, endüstri 4.0, RFID, RTLS, WMS, POKA YOKE, akıllı fabrikalar, otomotiv, gıda, ilaç, kalite kontrol, depo yönetimi',
-    metadataBase: new URL('https://www.izlenebilirlik.com.tr'),
+    metadataBase: new URL('https://www.traceability.com.tr'),
     manifest: '/site.webmanifest',
     icons: {
       icon: [
@@ -72,10 +72,10 @@ export async function generateMetadata() {
       locale: ogLocale,
       images: [
         {
-          url: 'https://www.izlenebilirlik.com.tr/og-image.png',
+          url: 'https://www.traceability.com.tr/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'İzlenebilirlik | Industrial Traceability & MES Solutions',
+          alt: 'Traceability | Industrial Traceability & MES Solutions',
         },
       ],
     },
@@ -83,7 +83,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://www.izlenebilirlik.com.tr/og-image.png'],
+      images: ['https://www.traceability.com.tr/og-image.png'],
     },
     alternates,
   };

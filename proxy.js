@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { SUPPORTED_LOCALES } from './lib/i18n/dictionaries';
 import { slugMappings } from './lib/i18n/slugMapping';
 
-// Bu proje izlenebilirlik.com.tr için — varsayılan (prefixsiz) dil 'tr'
+// Bu proje traceability.com.tr için — varsayılan (prefixsiz) dil 'tr'
 const DEFAULT_LOCALE = 'tr';
 
 function isBypassedPath(pathname) {

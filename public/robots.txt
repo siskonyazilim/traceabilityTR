@@ -55,5 +55,5 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://www.izlenebilirlik.com.tr/sitemap.xml
-Sitemap: https://www.izlenebilirlik.com.tr/video-sitemap.xml
+Sitemap: https://www.traceability.com.tr/sitemap.xml
+Sitemap: https://www.traceability.com.tr/video-sitemap.xml

@@ -105,7 +105,7 @@ export async function generateMetadata({ params }) {
   const description = project.description;
 
   const alternates = {
-    canonical: `https://www.izlenebilirlik.com.tr${
+    canonical: `https://www.traceability.com.tr${
       locale === 'en'
         ? `/en/reference-projects/${getLocalizedSlug('portfolio', baseSlug, 'en')}`
         : (locale === 'ro'
@@ -113,10 +113,10 @@ export async function generateMetadata({ params }) {
             : `/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`)
     }`,
     languages: {
-      'tr': `https://www.izlenebilirlik.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
-      'en': `https://www.izlenebilirlik.com.tr/en/reference-projects/${getLocalizedSlug('portfolio', baseSlug, 'en')}`,
-      'ro': `https://www.izlenebilirlik.com.tr/ro/proiecte-de-referinta/${getLocalizedSlug('portfolio', baseSlug, 'ro')}`,
-      'x-default': `https://www.izlenebilirlik.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
+      'tr': `https://www.traceability.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
+      'en': `https://www.traceability.com.tr/en/reference-projects/${getLocalizedSlug('portfolio', baseSlug, 'en')}`,
+      'ro': `https://www.traceability.com.tr/ro/proiecte-de-referinta/${getLocalizedSlug('portfolio', baseSlug, 'ro')}`,
+      'x-default': `https://www.traceability.com.tr/portfolio/${getLocalizedSlug('portfolio', baseSlug, 'tr')}`,
     }
   };
 
@@ -127,9 +127,9 @@ export async function generateMetadata({ params }) {
     ogLocale = 'en_US';
   }
 
-  let ogImage = 'https://www.izlenebilirlik.com.tr/og-image.png';
+  let ogImage = 'https://www.traceability.com.tr/og-image.png';
   if (project.image) {
-    ogImage = project.image.startsWith('http') ? project.image : `https://www.izlenebilirlik.com.tr${project.image}`;
+    ogImage = project.image.startsWith('http') ? project.image : `https://www.traceability.com.tr${project.image}`;
   }
 
   return {
@@ -211,9 +211,9 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     || (project.image?.includes('/Logos/') ? '/resmi/Factory.jpg' : project.image);
   const sliderImages = [featuredImage, ...(Array.isArray(project.gallery) ? project.gallery : [])];
 
-  const pageUrl = `https://www.izlenebilirlik.com.tr${toLocalePath(`/portfolio/${project.slug}`, locale)}`;
-  const homeUrl = `https://www.izlenebilirlik.com.tr${toLocalePath('/', locale)}`;
-  const projectsUrl = `https://www.izlenebilirlik.com.tr${localizedListPath}`;
+  const pageUrl = `https://www.traceability.com.tr${toLocalePath(`/portfolio/${project.slug}`, locale)}`;
+  const homeUrl = `https://www.traceability.com.tr${toLocalePath('/', locale)}`;
+  const projectsUrl = `https://www.traceability.com.tr${localizedListPath}`;
   const faqSchema = getReferenceDetailAeoFaqSchema(locale, pageUrl, project);
 
   const homeLabelByLocale = {
@@ -228,11 +228,11 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
     ro: "Proiecte de Referință",
   };
 
-  const absoluteMainImage = featuredImage.startsWith('http') ? featuredImage : `https://www.izlenebilirlik.com.tr${featuredImage}`;
+  const absoluteMainImage = featuredImage.startsWith('http') ? featuredImage : `https://www.traceability.com.tr${featuredImage}`;
   const absoluteGalleryImages = [
     absoluteMainImage,
     ...(Array.isArray(project.gallery) ? project.gallery : []).map(img => 
-      img.startsWith('http') ? img : `https://www.izlenebilirlik.com.tr${img}`
+      img.startsWith('http') ? img : `https://www.traceability.com.tr${img}`
     )
   ];
 
@@ -257,7 +257,7 @@ export default async function PortfolioDetailPage({ params, searchParams }) {
           "name": "Siskon Otomasyon ve Yazılım A.Ş.",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.izlenebilirlik.com.tr/siskon-logo-header.svg"
+            "url": "https://www.traceability.com.tr/siskon-logo-header.svg"
           }
         },
         "description": project.description,

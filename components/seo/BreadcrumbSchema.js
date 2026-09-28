@@ -23,7 +23,7 @@ export default function BreadcrumbSchema() {
       "@type": "ListItem",
       "position": 1,
       "name": "İzlenebilirlik",
-      "item": "https://www.izlenebilirlik.com.tr"
+      "item": "https://www.traceability.com.tr"
     }
   ];
 
@@ -43,7 +43,7 @@ export default function BreadcrumbSchema() {
       "@type": "ListItem",
       "position": index + 2,
       "name": name,
-      "item": `https://www.izlenebilirlik.com.tr${currentPath}`
+      "item": `https://www.traceability.com.tr${currentPath}`
     });
   });
 
