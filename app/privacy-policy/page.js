@@ -9,6 +9,10 @@ import { getOrganizationSchema, SITE_URL } from '../../components/seo/Organizati
 import AeoFaqSection from '../../components/seo/AeoFaqSection';
 import { getAeoFaqBundle, getAeoFaqSchema } from '../../lib/seo/aeoFaqs';
 
+// ISR: Sayfa 1 saatte bir arka planda yenilenir.
+// Her Googlebot crawl'ında SSR + Strapi round-trip yapılmasını önler.
+export const revalidate = 3600;
+
 export async function generateMetadata() {
   const locale = await getRequestLocale();
   const pathname = await getRequestPathname();
