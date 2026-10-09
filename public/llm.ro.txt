@@ -16,5 +16,5 @@ content-sections:
 - solution-details: https://www.traceability.com.tr/ro/solutions/{slug}
 - catalog-solutions: https://www.traceability.com.tr/ro/catalog/solutions/{slug}
 - catalog-products: https://www.traceability.com.tr/ro/catalog/products/{slug}
-- reference-projects: https://www.traceability.com.tr/ro/portfolio/{slug}
+- reference-projects: https://www.traceability.com.tr/ro/proiecte-de-referinta/{slug}
 - solution-partners: https://www.traceability.com.tr/ro/solution-partners/{slug}

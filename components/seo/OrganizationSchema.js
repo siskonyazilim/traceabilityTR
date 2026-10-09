@@ -53,7 +53,6 @@ export function getOrganizationSchema() {
         '@type': 'ContactPoint',
         'telephone': '+90-232-245-00-76',
         'contactType': 'customer service',
-        'contactOption': 'TollFree',
         'areaServed': 'TR',
         'availableLanguage': ['Turkish', 'English'],
         'hoursAvailable': {

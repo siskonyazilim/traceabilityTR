@@ -1,13 +1,27 @@
-# Traceability LLM Discovery Index
+# Traceability (Siskon)
 
-This file describes machine-readable discovery endpoints for Traceability.
+> Traceability, Siskon Otomasyon ve Yazılım A.Ş. (İzmir, Türkiye) ve Siskon Romania SRL (Brașov, Romanya) tarafından sunulan endüstriyel izlenebilirlik, MES ve akıllı fabrika çözümleridir. RFID, RTLS, WMS, Poka Yoke, görüntü işleme ve MES/ERP entegrasyonu ile otomotiv, beyaz eşya, gıda-içecek, ilaç ve elektronik sektörlerinde 200+ referans projeye sahiptir.
 
-## Site
-- [Homepage](https://www.traceability.com.tr/)
+Traceability (Siskon) provides industrial traceability, MES and smart-factory solutions: RFID, RTLS, WMS, Poka Yoke, machine vision and MES/ERP integration. Site languages: Turkish (default, no prefix), English (/en), Romanian (/ro).
+
+## Ana sayfalar / Main pages
+- [Anasayfa (TR)](https://www.traceability.com.tr/)
+- [Home (EN)](https://www.traceability.com.tr/en)
+- [Acasă (RO)](https://www.traceability.com.tr/ro)
+- [Referans Projeler (TR)](https://www.traceability.com.tr/portfolio)
+- [Reference Projects (EN)](https://www.traceability.com.tr/en/reference-projects)
+- [Proiecte de referință (RO)](https://www.traceability.com.tr/ro/proiecte-de-referinta)
+- [Blog (TR)](https://www.traceability.com.tr/blog)
+- [İletişim / Contact](https://www.traceability.com.tr/contact)
+
+## Çözümler / Solutions
+- [Katalog çözümleri (TR)](https://www.traceability.com.tr/catalog/solutions/lot-parti-takibi)
+- [Ürün kataloğu (TR)](https://www.traceability.com.tr/catalog/products/hibrit-izlenebilirlik)
+
+## Machine-readable files
 - [Sitemap](https://www.traceability.com.tr/sitemap.xml)
+- [Video sitemap](https://www.traceability.com.tr/video-sitemap.xml)
 - [Robots](https://www.traceability.com.tr/robots.txt)
-
-## Language-Specific LLM Files
-- [Turkish](https://www.traceability.com.tr/llm.tr.txt)
-- [English](https://www.traceability.com.tr/llm.en.txt)
-- [Romanian](https://www.traceability.com.tr/llm.ro.txt)
+- [LLM index (TR)](https://www.traceability.com.tr/llm.tr.txt)
+- [LLM index (EN)](https://www.traceability.com.tr/llm.en.txt)
+- [LLM index (RO)](https://www.traceability.com.tr/llm.ro.txt)

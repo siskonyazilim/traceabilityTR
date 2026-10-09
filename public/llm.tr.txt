@@ -9,7 +9,7 @@ primary-pages:
 - https://www.traceability.com.tr/
 - https://www.traceability.com.tr/blog
 - https://www.traceability.com.tr/contact
-- https://www.traceability.com.tr/proiecte-de-referinta
+- https://www.traceability.com.tr/portfolio
 
 content-sections:
 - blog: https://www.traceability.com.tr/blog/{slug}

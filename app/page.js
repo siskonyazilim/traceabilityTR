@@ -131,14 +131,6 @@ export default async function HomePage() {
         'description': 'Industrial Traceability & MES Solutions',
         'publisher': { '@id': org['@id'] },
         'inLanguage': ['tr', 'en', 'ro'],
-        'potentialAction': {
-          '@type': 'SearchAction',
-          'target': {
-            '@type': 'EntryPoint',
-            'urlTemplate': `${SITE_URL}/blog?q={search_term_string}`,
-          },
-          'query-input': 'required name=search_term_string',
-        },
       },
       {
         '@type': 'WebPage',
@@ -150,7 +142,6 @@ export default async function HomePage() {
         'breadcrumb': { '@id': `${SITE_URL}/#breadcrumb` },
         'inLanguage': ['tr', 'en', 'ro'],
         'datePublished': '2024-01-01T00:00:00+03:00',
-        'dateModified': new Date().toISOString(),
         'hasPart': homepageVideoObjects.map((videoObject) => ({ '@id': videoObject['@id'] })),
       },
       {
@@ -177,13 +168,6 @@ export default async function HomePage() {
         ],
         'availableLanguage': ['tr', 'en', 'ro'],
         'image': LOGO_URL,
-        'offers': {
-          '@type': 'Offer',
-          'priceCurrency': 'EUR',
-          'price': '0',
-          'availability': 'https://schema.org/InStock',
-          'description': 'Contact us for project-based enterprise pricing.',
-        },
       },
       {
         '@type': 'BreadcrumbList',

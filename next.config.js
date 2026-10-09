@@ -16,6 +16,11 @@ const nextConfig = {
         pathname: '/**',
       },
       {
+        protocol: 'https',
+        hostname: 'www.traceability.com.tr',
+        pathname: '/**',
+      },
+      {
         protocol: 'http',
         hostname: 'localhost',
         pathname: '/**',
@@ -27,7 +32,8 @@ const nextConfig = {
       },
     ],
   },
-  // www → non-www yönlendirmesi Cloudflare tarafında yapılıyor.
+  // Canonical host: https://www.traceability.com.tr
+  // non-www → www (301) yönlendirmesi Cloudflare tarafında yapılıyor.
   // Burada tekrar tanımlamak çift redirect zincirine yol açar ve
   // Google Search Console'da "Yönlendirmeli sayfa" hatasını tetikler.
 }
