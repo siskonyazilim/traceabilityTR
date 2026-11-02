@@ -354,9 +354,9 @@ export default function ContactPageClient({ cmsContact }) {
                     aria-describedby={errors.privacy ? 'privacy-error' : undefined}
                     className="peer sr-only"
                   />
-                  <label htmlFor="privacy" className="flex min-h-[44px] items-start gap-3 text-sm text-gray-text leading-6 cursor-pointer">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-gray-text border-opacity-40 bg-white peer-checked:border-accent-blue peer-checked:bg-accent-blue peer-focus-visible:ring-2 peer-focus-visible:ring-accent-blue peer-focus-visible:ring-offset-1">
-                      <svg className="h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <label htmlFor="privacy" className="flex min-h-[44px] items-start gap-3 text-sm text-gray-text leading-6 cursor-pointer peer-checked:[&>span:first-child]:border-accent-blue peer-checked:[&>span:first-child]:bg-accent-blue peer-checked:[&_svg]:opacity-100 peer-focus-visible:[&>span:first-child]:ring-2 peer-focus-visible:[&>span:first-child]:ring-accent-blue peer-focus-visible:[&>span:first-child]:ring-offset-1">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-gray-text border-opacity-40 bg-white">
+                      <svg className="h-3.5 w-3.5 text-white opacity-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
