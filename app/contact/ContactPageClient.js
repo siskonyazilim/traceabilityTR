@@ -9,6 +9,7 @@ import Button from '../../components/ui/Button';
 import { IconMail, IconPhone } from '../../components/ui/Icons';
 import { useLanguage } from '../../components/i18n/LanguageProvider';
 import { toLocalePath } from '../../lib/i18n/dictionaries';
+import TurnstileWidget from '../../components/ui/TurnstileWidget';
 
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -64,7 +65,6 @@ export default function ContactPageClient({ cmsContact }) {
   const [turnstileToken, setTurnstileToken] = useState('');
   const formMountedAt = useRef(Date.now());
   const turnstileRef = useRef(null);
-  const turnstileWidgetId = useRef(null);
 
   const fetchCsrfToken = useCallback(async () => {
     try {
@@ -80,32 +80,14 @@ export default function ContactPageClient({ cmsContact }) {
     fetchCsrfToken();
   }, [fetchCsrfToken]);
 
-  useEffect(() => {
-    if (!turnstileSiteKey || typeof window === 'undefined') return;
-
-    function renderTurnstile() {
-      if (turnstileRef.current && window.turnstile && turnstileWidgetId.current === null) {
-        turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: turnstileSiteKey,
-          callback: (token) => setTurnstileToken(token),
-          'expired-callback': () => setTurnstileToken(''),
-        });
-      }
-    }
-
-    if (!document.querySelector('script[src*="challenges.cloudflare.com/turnstile"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-      script.async = true;
-      script.defer = true;
-      script.onload = () => renderTurnstile();
-      document.head.appendChild(script);
-    } else if (window.turnstile) {
-      renderTurnstile();
-    }
-  }, []);
-
   const onSubmit = async (data) => {
+    if (turnstileSiteKey && !turnstileToken) {
+      setErrorMessage(
+        t('contactPage.errors.captchaMissing', 'Lütfen güvenlik doğrulamasını tamamlayın.')
+      );
+      return;
+    }
+
     setSubmitting(true);
     setErrorMessage('');
 
@@ -145,12 +127,10 @@ export default function ContactPageClient({ cmsContact }) {
         reset();
         formMountedAt.current = Date.now();
         fetchCsrfToken();
-        if (window.turnstile && turnstileWidgetId.current !== null) {
-          window.turnstile.reset(turnstileWidgetId.current);
-        }
-        setTurnstileToken('');
+        turnstileRef.current?.reset();
         setTimeout(() => setSubmitted(false), 3000);
       } else {
+        turnstileRef.current?.reset();
         setErrorMessage(
           result.message || t('contactPage.errors.submitFailed', 'Bir hata oluştu. Lütfen tekrar deneyin.')
         );
@@ -417,7 +397,9 @@ export default function ContactPageClient({ cmsContact }) {
                 )}
 
                 {turnstileSiteKey && (
-                  <div ref={turnstileRef} className="flex justify-center" />
+                  <div className="flex justify-center">
+                    <TurnstileWidget ref={turnstileRef} sitekey={turnstileSiteKey} onChange={setTurnstileToken} />
+                  </div>
                 )}
 
                 <div className="flex justify-center">

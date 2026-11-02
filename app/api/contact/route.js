@@ -143,33 +143,30 @@ export async function POST(request) {
 
   const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
   if (turnstileSecret) {
-    const turnstileToken = json.turnstileToken;
+    // Token'ı yazdırılabilir ASCII ile sınırla (undici ByteString hatalarını önler)
+    const turnstileToken = String(json.turnstileToken || '').replace(/[^ -~]/g, '').slice(0, 2048);
     if (!turnstileToken) {
       return Response.json(
         { ok: false, message: 'Turnstile token missing.', requestId },
         { status: 400 }
       );
     }
+
+    const verifyBody = new URLSearchParams({ secret: turnstileSecret, response: turnstileToken });
+    if (ip && ip !== 'unknown') verifyBody.set('remoteip', ip);
+
+    let verifyData;
     try {
       const verifyRes = await fetch(
         'https://challenges.cloudflare.com/turnstile/v0/siteverify',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams({
-            secret: turnstileSecret,
-            response: turnstileToken,
-            remoteip: ip,
-          }),
+          body: verifyBody,
+          signal: AbortSignal.timeout(10_000),
         }
       );
-      const verifyData = await verifyRes.json();
-      if (!verifyData.success) {
-        return Response.json(
-          { ok: false, message: 'Turnstile verification failed.', requestId },
-          { status: 403 }
-        );
-      }
+      verifyData = await verifyRes.json();
     } catch (err) {
       console.error('[contact-api] Turnstile verification error', {
         requestId,
@@ -177,9 +174,24 @@ export async function POST(request) {
       });
       return Response.json(
         { ok: false, message: 'Turnstile verification error.', requestId },
-        { status: 500 }
+        { status: 503 }
       );
     }
+
+    if (!verifyData?.success) {
+      console.warn('[contact-api] Turnstile failed', { requestId, codes: verifyData?.['error-codes'] });
+      return Response.json(
+        { ok: false, message: 'Turnstile verification failed.', requestId },
+        { status: 403 }
+      );
+    }
+  } else if (process.env.NODE_ENV === 'production') {
+    // Uretimde secret tanimli degilse form KAPALI kalir (sessizce atlanmaz); gelistirmede atlanir.
+    console.error('[contact-api] Turnstile not configured (TURNSTILE_SECRET_KEY missing)', { requestId });
+    return Response.json(
+      { ok: false, message: 'Service temporarily unavailable.', requestId },
+      { status: 503 }
+    );
   }
 
   const botScore = computeBotRisk({
