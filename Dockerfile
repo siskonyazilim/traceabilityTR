@@ -12,6 +12,10 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# NEXT_PUBLIC_* degiskenleri build sirasinda koda gomulur (Coolify build arg olarak verir)
+ARG NEXT_PUBLIC_TURNSTILE_SITE_KEY
+ENV NEXT_PUBLIC_TURNSTILE_SITE_KEY=$NEXT_PUBLIC_TURNSTILE_SITE_KEY
+
 RUN npm run build
 
 FROM base AS runner
