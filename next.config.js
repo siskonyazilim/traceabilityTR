@@ -5,12 +5,12 @@ const isDev = process.env.NODE_ENV !== 'production'
 // 'Content-Security-Policy' yapılarak zorunlu moda geçilebilir.
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://cdn.cerezgo.com https://www.googletagmanager.com https://*.google-analytics.com https://challenges.cloudflare.com`,
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://cdn.cerezgo.com https://www.googletagmanager.com https://*.google-analytics.com https://challenges.cloudflare.com https://static.cloudflareinsights.com`,
   "style-src 'self' 'unsafe-inline' https://cdn.cerezgo.com",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   "media-src 'self' https:",
-  "connect-src 'self' https://cdn.cerezgo.com https://*.cerezgo.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://challenges.cloudflare.com https://traceabilitydb.domainmanager.com.tr",
+  "connect-src 'self' https://cdn.cerezgo.com https://*.cerezgo.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://challenges.cloudflare.com https://cloudflareinsights.com",
   "frame-src 'self' https://www.google.com https://maps.google.com https://www.googletagmanager.com https://challenges.cloudflare.com",
   "frame-ancestors 'self'",
   "object-src 'none'",
