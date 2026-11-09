@@ -47,9 +47,12 @@ export default function ContactPageClient({ cmsContact }) {
   ];
 
   // CMS'den ofis verisi gelirse kullan, yoksa statik officeList
-  const offices = (cmsContact?.offices && cmsContact.offices.length > 0)
+  // RO dilinde .ro, TR/EN dillerinde .com.tr iletişim e-postası gösterilir
+  const contactEmail = locale === 'ro' ? 'info@traceability.ro' : 'info@traceability.com.tr';
+  const offices = ((cmsContact?.offices && cmsContact.offices.length > 0)
     ? cmsContact.offices
-    : (locale === 'tr' ? [officeList[1], officeList[0]] : officeList);
+    : (locale === 'tr' ? [officeList[1], officeList[0]] : officeList)
+  ).map((office) => ({ ...office, email: contactEmail }));
 
   const {
     register,
